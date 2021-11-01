@@ -1,0 +1,99 @@
+name: git-pot
+
+on:
+  schedule:
+    - cron: '38 1,7,13,19 * * *'
+  push:
+    branches:
+      - pot/CI
+
+jobs:
+  git-pot:
+    strategy:
+      matrix:
+        branch: [master, next, seen]
+    runs-on: ubuntu-latest
+    env:
+      AUTHOR_NAME: GotGit
+      AUTHOR_EMAIL: gotgit@qq.com
+      LOGIN_NAME: togtig
+    steps:
+      - name: clone ${{ matrix.branch }} branch of current repository
+        run: |
+          git -c protocol.version=2 clone \
+            --depth 1 \
+            --single-branch --branch pot/${{ matrix.branch }} \
+            https://github.com/${{ github.repository }} git-po &&
+          cd git-po &&
+          mkdir -p po &&
+          git config user.name "${{ env.AUTHOR_NAME }}" &&
+          git config user.email "${{ env.AUTHOR_EMAIL }}" &&
+          git config diff.gettext-uniq.cachetextconv true &&
+          git config diff.gettext-uniq.textconv "msguniq -i --no-location --strict -s" &&
+          printf "*.po  diff=gettext-uniq\n" >>.git/info/attributes &&
+          printf "*.pot diff=gettext-uniq\n" >>.git/info/attributes
+      - name: skip if the commit was already tested
+        id: skip-if-redundant
+        run: |
+          cd git-po &&
+          git -c protocol.version=2 ls-remote https://github.com/git/git.git \
+            refs/heads/${{ matrix.branch }} >last-check.tmp &&
+          if diff last-check last-check.tmp
+          then
+            echo ::set-output name=status::skip
+          else
+            mv last-check.tmp last-check
+            echo ::set-output name=status::no
+          fi
+      - name: install dependencies
+        if: steps.skip-if-redundant.outputs.status != 'skip'
+        run: |
+          if ! type xgettext
+          then
+            sudo apt-get update -q &&
+            sudo apt-get install -q -y gettext
+          fi
+      - name: clone git repository
+        if: steps.skip-if-redundant.outputs.status != 'skip'
+        run: |
+          git -c protocol.version=2 clone \
+            --depth 1 \
+            --single-branch --branch ${{ matrix.branch }} \
+            https://github.com/git/git.git git
+      - name: generate po/git.pot
+        if: steps.skip-if-redundant.outputs.status != 'skip'
+        run: |
+          make -C git pot &&
+          sed '/^"POT-Creation-Date: / d' git/po/git.pot >git-po/po/git.pot
+      - name: upload changes and report
+        run: |
+          report_msg="" &&
+          if test "${{ steps.skip-if-redundant.outputs.status }}" = "skip"
+          then
+            report_msg="** no new commits in ${{ matrix.branch }} of upstream **"
+          else
+            cd git-po &&
+            date=$(date "+%Y-%m-%d") &&
+            diff=${date}.diff &&
+            git diff -- po/git.pot >>"${diff}.tmp" &&
+            if test -s "${diff}.tmp"; then
+              if test -f "$diff"
+              then
+                cat "${diff}.tmp" >>"$diff"
+              else
+                mv "${diff}.tmp" "$diff"
+              fi &&
+              git add po/git.pot "$diff" last-check &&
+              git commit -m "l10n: ${{ matrix.branch }}: changes of git.pot in $diff" &&
+              report_msg="** changes of 'po/git.pot' is reported in $diff **"
+            else
+              echo >&2 "** po/git.pot is not changed **"
+              git add last-check &&
+              git commit -m "no l10n changes on $date" &&
+              report_msg="** nothing changed in 'po/git.pot' on $date **"
+            fi &&
+            git push \
+              https://${{ env.LOGIN_NAME }}:${{ secrets.LOGIN_TOKEN }}@github.com/${{ github.repository }} \
+              HEAD
+          fi &&
+          printf >&2 "\n$report_msg\n"
