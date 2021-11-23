@@ -1,9 +1,12 @@
 name: git-pot
 
 on:
+  ## The GitHub scheduler doesn’t work. Not know why
+  #schedule:
+  #  - cron: '51 0,12 * * *'
+
+  ## Trigger using manual event by an external schedule
   workflow_dispatch:
-  schedule:
-    - cron: '51 0,12 * * *'
   push:
     branches:
       - pot/CI
