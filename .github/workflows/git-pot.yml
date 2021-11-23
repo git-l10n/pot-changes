@@ -33,7 +33,7 @@ jobs:
           git config user.name "${{ env.AUTHOR_NAME }}" &&
           git config user.email "${{ env.AUTHOR_EMAIL }}" &&
           git config diff.gettext-uniq.cachetextconv true &&
-          git config diff.gettext-uniq.textconv "msguniq -i --no-location --strict -s" &&
+          git config diff.gettext-uniq.textconv "msguniq --indent --no-location --sort-output --no-wrap" &&
           printf "*.po  diff=gettext-uniq\n" >>.git/info/attributes &&
           printf "*.pot diff=gettext-uniq\n" >>.git/info/attributes
       - name: skip if the commit was already tested
