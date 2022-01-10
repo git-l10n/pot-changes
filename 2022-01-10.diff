@@ -1,0 +1,903 @@
+diff --git a/po/git.pot b/po/git.pot
+index ae11af5..3cdd0b8 100644
+--- a/po/git.pot
++++ b/po/git.pot
+@@ -37,11 +37,9 @@ msgid   "\n"
+         "\n"
+ msgstr  ""
+ 
+-#, c-format
+ msgid   "\n"
+         "After fixing the error cause you may try to fix up\n"
+-        "the remote tracking information by invoking\n"
+-        "\"git branch --set-upstream-to=%s%s%s\"."
++        "the remote tracking information by invoking:"
+ msgstr  ""
+ 
+ msgid   "\n"
+@@ -1089,6 +1087,10 @@ msgstr  ""
+ msgid   "'%s' already exists in the index and is not a submodule"
+ msgstr  ""
+ 
++#, c-format
++msgid   "'%s' and pathspec arguments cannot be used together"
++msgstr  ""
++
+ #, c-format
+ msgid   "'%s' appears as both a file and as a directory"
+ msgstr  ""
+@@ -1102,10 +1104,6 @@ msgstr  ""
+ msgid   "'%s' at main working tree is not the repository directory"
+ msgstr  ""
+ 
+-#, c-format
+-msgid   "'%s' cannot be used with %s"
+-msgstr  ""
+-
+ #, c-format
+ msgid   "'%s' cannot be used with '%s'"
+ msgstr  ""
+@@ -1297,6 +1295,10 @@ msgstr  ""
+ msgid   "'%s' or '%s' cannot be used with %s"
+ msgstr  ""
+ 
++#, c-format
++msgid   "'%s' outside a repository"
++msgstr  ""
++
+ #, c-format
+ msgid   "'%s' was deleted by the applypatch-msg hook"
+ msgstr  ""
+@@ -1526,10 +1528,6 @@ msgstr  ""
+ msgid   "*** Commands ***"
+ msgstr  ""
+ 
+-#, c-format
+-msgid   "-%c, -%c and --orphan are mutually exclusive"
+-msgstr  ""
+-
+ #, c-format
+ msgid   "---\n"
+         "To remove '%c' lines, make them ' ' lines (context).\n"
+@@ -1544,9 +1542,6 @@ msgid   "---\n"
+         "Lines starting with %s will be removed.\n"
+ msgstr  ""
+ 
+-msgid   "--3way outside a repository"
+-msgstr  ""
+-
+ msgid   "--[no-]exclude-standard cannot be used for tracked contents"
+ msgstr  ""
+ 
+@@ -1562,12 +1557,6 @@ msgstr  ""
+ msgid   "--add --delete doesn't make sense"
+ msgstr  ""
+ 
+-msgid   "--all and --mirror are incompatible"
+-msgstr  ""
+-
+-msgid   "--all and --tags are incompatible"
+-msgstr  ""
+-
+ msgid   "--all can't be combined with refspecs"
+ msgstr  ""
+ 
+@@ -1577,9 +1566,6 @@ msgstr  ""
+ msgid   "--anonymize-map token cannot be empty"
+ msgstr  ""
+ 
+-msgid   "--anonymize-map without --anonymize does not make sense"
+-msgstr  ""
+-
+ msgid   "--atomic can only be used when fetching from one remote"
+ msgstr  ""
+ 
+@@ -1587,13 +1573,6 @@ msgstr  ""
+ msgid   "--author '%s' is not 'Name <email>' and matches no existing author"
+ msgstr  ""
+ 
+-#, c-format
+-msgid   "--bare and --origin %s options are incompatible."
+-msgstr  ""
+-
+-msgid   "--bare and --separate-git-dir are incompatible."
+-msgstr  ""
+-
+ msgid   "--bisect-log requires 0 arguments"
+ msgstr  ""
+ 
+@@ -1609,24 +1588,12 @@ msgstr  ""
+ msgid   "--blob can only be used inside a git repository"
+ msgstr  ""
+ 
+-msgid   "--branch and --default are mutually exclusive"
+-msgstr  ""
+-
+ msgid   "--branch or --default required"
+ msgstr  ""
+ 
+-msgid   "--broken is incompatible with commit-ishes"
+-msgstr  ""
+-
+-msgid   "--cached and --files are mutually exclusive"
+-msgstr  ""
+-
+ msgid   "--cached or --untracked cannot be used with --no-index"
+ msgstr  ""
+ 
+-msgid   "--cached outside a repository"
+-msgstr  ""
+-
+ msgid   "--check does not make sense"
+ msgstr  ""
+ 
+@@ -1634,18 +1601,9 @@ msgstr  ""
+ msgid   "--chmod param '%s' must be either -x or +x"
+ msgstr  ""
+ 
+-msgid   "--column and --verbose are incompatible"
+-msgstr  ""
+-
+-msgid   "--column and -n are incompatible"
+-msgstr  ""
+-
+ msgid   "--command must be the first argument"
+ msgstr  ""
+ 
+-msgid   "--contains option is only allowed in list mode"
+-msgstr  ""
+-
+ msgid   "--contents and --reverse do not blend well."
+ msgstr  ""
+ 
+@@ -1655,12 +1613,6 @@ msgstr  ""
+ msgid   "--convert-graft-file takes no argument"
+ msgstr  ""
+ 
+-msgid   "--creation-factor requires --range-diff"
+-msgstr  ""
+-
+-msgid   "--deepen and --depth are mutually exclusive"
+-msgstr  ""
+-
+ msgid   "--default is only applicable to --get"
+ msgstr  ""
+ 
+@@ -1670,27 +1622,12 @@ msgstr  ""
+ msgid   "--delete doesn't make sense without any refs"
+ msgstr  ""
+ 
+-msgid   "--delete is incompatible with --all, --mirror and --tags"
+-msgstr  ""
+-
+ msgid   "--delete only accepts plain target ref names"
+ msgstr  ""
+ 
+-msgid   "--depth and --unshallow cannot be used together"
+-msgstr  ""
+-
+ msgid   "--depth is ignored in local clones; use file:// instead."
+ msgstr  ""
+ 
+-msgid   "--dir-diff is incompatible with --no-index"
+-msgstr  ""
+-
+-msgid   "--dirty is incompatible with commit-ishes"
+-msgstr  ""
+-
+-msgid   "--dry-run is incompatible with --interactive/--patch"
+-msgstr  ""
+-
+ msgid   "--dump-aliases incompatible with other options\n"
+ msgstr  ""
+ 
+@@ -1700,9 +1637,6 @@ msgstr  ""
+ msgid   "--filter is ignored in local clones; use file:// instead."
+ msgstr  ""
+ 
+-msgid   "--fix-thin cannot be used without --stdin"
+-msgstr  ""
+-
+ msgid   "--fixed-value only applies with 'value-pattern'"
+ msgstr  ""
+ 
+@@ -1716,48 +1650,21 @@ msgstr  ""
+ msgid   "--format=%.*s cannot be used with --python, --shell, --tcl"
+ msgstr  ""
+ 
+-msgid   "--geometric is incompatible with -A, -a"
+-msgstr  ""
+-
+ msgid   "--get-color and variable type are incoherent"
+ msgstr  ""
+ 
+ msgid   "--git-path requires an argument"
+ msgstr  ""
+ 
+-msgid   "--gui, --tool and --extcmd are mutually exclusive"
+-msgstr  ""
+-
+-msgid   "--index outside a repository"
+-msgstr  ""
+-
+-msgid   "--index-pack-args can only be used with --packfile"
+-msgstr  ""
+-
+ msgid   "--interdiff requires --cover-letter or single patch"
+ msgstr  ""
+ 
+-msgid   "--keep-unreachable and --unpack-unreachable are incompatible"
+-msgstr  ""
+-
+-msgid   "--keep-unreachable and -A are incompatible"
+-msgstr  ""
+-
+-msgid   "--left-only and --right-only are mutually exclusive"
+-msgstr  ""
+-
+ msgid   "--local can only be used inside a git repository"
+ msgstr  ""
+ 
+ msgid   "--local is ignored"
+ msgstr  ""
+ 
+-msgid   "--long and -z are incompatible"
+-msgstr  ""
+-
+-msgid   "--long is incompatible with --abbrev=0"
+-msgstr  ""
+-
+ msgid   "--max-pack-size cannot be used to build a pack for transfer"
+ msgstr  ""
+ 
+@@ -1770,12 +1677,6 @@ msgstr  ""
+ msgid   "--merge-base only works with two commits"
+ msgstr  ""
+ 
+-msgid   "--merged and --no-merged options are only allowed in list mode"
+-msgstr  ""
+-
+-msgid   "--mirror and --tags are incompatible"
+-msgstr  ""
+-
+ msgid   "--mirror can't be combined with refspecs"
+ msgstr  ""
+ 
+@@ -1792,9 +1693,6 @@ msgstr  ""
+ msgid   "--name-only is only applicable to --list or --get-regexp"
+ msgstr  ""
+ 
+-msgid   "--name-only, --name-status, --check and -s are mutually exclusive"
+-msgstr  ""
+-
+ msgid   "--name-status does not make sense"
+ msgstr  ""
+ 
+@@ -1804,9 +1702,6 @@ msgstr  ""
+ msgid   "--negotiate-only requires protocol v2"
+ msgstr  ""
+ 
+-msgid   "--no-contains option is only allowed in list mode"
+-msgstr  ""
+-
+ msgid   "--no-index or --untracked cannot be used with revs"
+ msgstr  ""
+ 
+@@ -1816,51 +1711,12 @@ msgstr  ""
+ msgid   "--non-matching is only valid with --verbose"
+ msgstr  ""
+ 
+-msgid   "--object-format cannot be used with --stdin"
+-msgstr  ""
+-
+ msgid   "--open-files-in-pager only works on the worktree"
+ msgstr  ""
+ 
+-msgid   "--packfile requires --index-pack-args"
+-msgstr  ""
+-
+-msgid   "--patch is incompatible with --{hard,mixed,soft}"
+-msgstr  ""
+-
+ msgid   "--path-format requires an argument"
+ msgstr  ""
+ 
+-msgid   "--pathspec-file-nul requires --pathspec-from-file"
+-msgstr  ""
+-
+-msgid   "--pathspec-from-file is incompatible with --detach"
+-msgstr  ""
+-
+-msgid   "--pathspec-from-file is incompatible with --edit"
+-msgstr  ""
+-
+-msgid   "--pathspec-from-file is incompatible with --interactive/--patch"
+-msgstr  ""
+-
+-msgid   "--pathspec-from-file is incompatible with --patch"
+-msgstr  ""
+-
+-msgid   "--pathspec-from-file is incompatible with --staged"
+-msgstr  ""
+-
+-msgid   "--pathspec-from-file is incompatible with pathspec arguments"
+-msgstr  ""
+-
+-msgid   "--pathspec-from-file with -a does not make sense"
+-msgstr  ""
+-
+-msgid   "--pickaxe-all and --find-object are mutually exclusive, use --pickaxe-all with -G and -S"
+-msgstr  ""
+-
+-msgid   "--points-at option is only allowed in list mode"
+-msgstr  ""
+-
+ msgid   "--prefix requires an argument"
+ msgstr  ""
+ 
+@@ -1882,18 +1738,9 @@ msgstr  ""
+ msgid   "--raw only makes sense with --edit"
+ msgstr  ""
+ 
+-msgid   "--reason requires --lock"
+-msgstr  ""
+-
+-msgid   "--reflog is incompatible with --all, --remotes, --independent or --merge-base"
+-msgstr  ""
+-
+ msgid   "--reflog option needs one branch name"
+ msgstr  ""
+ 
+-msgid   "--reject and --3way cannot be used together."
+-msgstr  ""
+-
+ msgid   "--reschedule-failed-exec requires --exec or --interactive"
+ msgstr  ""
+ 
+@@ -1909,9 +1756,6 @@ msgstr  ""
+ msgid   "--reverse and --first-parent together require specified latest commit"
+ msgstr  ""
+ 
+-msgid   "--separate-git-dir and --bare are mutually exclusive"
+-msgstr  ""
+-
+ msgid   "--separate-git-dir incompatible with bare repository"
+ msgstr  ""
+ 
+@@ -1921,34 +1765,18 @@ msgstr  ""
+ msgid   "--shallow-since is ignored in local clones; use file:// instead."
+ msgstr  ""
+ 
+-#, c-format
+-msgid   "--show-current-patch=%s is incompatible with --show-current-patch=%s"
+-msgstr  ""
+-
+ msgid   "--show-origin is only applicable to --get, --get-all, --get-regexp, and --list"
+ msgstr  ""
+ 
+-msgid   "--stateless-rpc requires multi_ack_detailed"
+-msgstr  ""
+-
+-msgid   "--stdin and --merge-base are mutually exclusive"
+-msgstr  ""
+-
+ msgid   "--stdin can only be used when fetching from one remote"
+ msgstr  ""
+ 
+ msgid   "--stdin requires a git repository"
+ msgstr  ""
+ 
+-msgid   "--stdout, --output, and --output-directory are mutually exclusive"
+-msgstr  ""
+-
+ msgid   "--strategy requires --merge or --interactive"
+ msgstr  ""
+ 
+-msgid   "--subject-prefix/--rfc and -k are mutually exclusive"
+-msgstr  ""
+-
+ msgid   "--thin cannot be used to build an indexable pack"
+ msgstr  ""
+ 
+@@ -1970,9 +1798,6 @@ msgstr  ""
+ msgid   "--untracked not supported with --recurse-submodules"
+ msgstr  ""
+ 
+-msgid   "--verbose and --porcelain are mutually exclusive"
+-msgstr  ""
+-
+ msgid   "--verify with no packfile name given"
+ msgstr  ""
+ 
+@@ -1984,30 +1809,15 @@ msgid   "--worktree cannot be used with multiple working trees unless the config
+         "section in \"git help worktree\" for details"
+ msgstr  ""
+ 
+-msgid   "-A and -u are mutually incompatible"
+-msgstr  ""
+-
+-msgid   "-G and --pickaxe-regex are mutually exclusive, use --pickaxe-regex with -S"
+-msgstr  ""
+-
+-msgid   "-G, -S and --find-object are mutually exclusive"
+-msgstr  ""
+-
+ msgid   "-L does not yet support diff formats besides -p and -s"
+ msgstr  ""
+ 
+ msgid   "-L<range>:<file> cannot be used with pathspec"
+ msgstr  ""
+ 
+-msgid   "-N can only be used with --mixed"
+-msgstr  ""
+-
+ msgid   "-NUM"
+ msgstr  ""
+ 
+-msgid   "-b, -B, and --detach are mutually exclusive"
+-msgstr  ""
+-
+ #, c-format
+ msgid   "-c expects a configuration string\n"
+ msgstr  ""
+@@ -2024,18 +1834,9 @@ msgstr  ""
+ msgid   "-g needs at least one argument"
+ msgstr  ""
+ 
+-msgid   "-n and -k are mutually exclusive"
+-msgstr  ""
+-
+-msgid   "-n option is only allowed in list mode"
+-msgstr  ""
+-
+ msgid   "-n requires an argument"
+ msgstr  ""
+ 
+-msgid   "-p and --overlay are mutually exclusive"
+-msgstr  ""
+-
+ msgid   "-x and -X cannot be used together"
+ msgstr  ""
+ 
+@@ -2550,38 +2351,6 @@ msgstr  ""
+ msgid   "Branch '%s' has no upstream information"
+ msgstr  ""
+ 
+-#, c-format
+-msgid   "Branch '%s' set up to track local branch '%s' by rebasing."
+-msgstr  ""
+-
+-#, c-format
+-msgid   "Branch '%s' set up to track local branch '%s'."
+-msgstr  ""
+-
+-#, c-format
+-msgid   "Branch '%s' set up to track local ref '%s' by rebasing."
+-msgstr  ""
+-
+-#, c-format
+-msgid   "Branch '%s' set up to track local ref '%s'."
+-msgstr  ""
+-
+-#, c-format
+-msgid   "Branch '%s' set up to track remote branch '%s' from '%s' by rebasing."
+-msgstr  ""
+-
+-#, c-format
+-msgid   "Branch '%s' set up to track remote branch '%s' from '%s'."
+-msgstr  ""
+-
+-#, c-format
+-msgid   "Branch '%s' set up to track remote ref '%s' by rebasing."
+-msgstr  ""
+-
+-#, c-format
+-msgid   "Branch '%s' set up to track remote ref '%s'."
+-msgstr  ""
+-
+ msgid   "Branch copy failed"
+ msgstr  ""
+ 
+@@ -2845,9 +2614,6 @@ msgstr  ""
+ msgid   "Cannot overwrite"
+ msgstr  ""
+ 
+-msgid   "Cannot pass both --import-marks and --import-marks-if-exists"
+-msgstr  ""
+-
+ #, c-format
+ msgid   "Cannot prepare timestamp regexp %s"
+ msgstr  ""
+@@ -4743,18 +4509,9 @@ msgstr  ""
+ msgid   "Only one of -c/-C/-F/--fixup can be used."
+ msgstr  ""
+ 
+-msgid   "Option --exec can only be used together with --remote"
+-msgstr  ""
+-
+-msgid   "Option --ignore-missing can only be used together with --dry-run"
+-msgstr  ""
+-
+ msgid   "Option -m cannot be combined with -c/-C/-F."
+ msgstr  ""
+ 
+-msgid   "Options --add-file and --remote cannot be used together"
+-msgstr  ""
+-
+ msgid   "Options --squash and --fixup cannot be used together"
+ msgstr  ""
+ 
+@@ -6570,12 +6327,6 @@ msgid   "You can fix this with 'git rebase --edit-todo' and then run 'git rebase
+         "Or you can abort the rebase with 'git rebase --abort'.\n"
+ msgstr  ""
+ 
+-msgid   "You cannot combine --squash with --commit."
+-msgstr  ""
+-
+-msgid   "You cannot combine --squash with --no-ff."
+-msgstr  ""
+-
+ msgid   "You cannot update a remote ref that points at a non-commit object,\n"
+         "or update a remote ref to make it point at a non-commit object,\n"
+         "without using the '--force' option.\n"
+@@ -7255,6 +7006,9 @@ msgstr  ""
+ msgid   "apply changes matching the given path"
+ msgstr  ""
+ 
++msgid   "apply options and merge options cannot be used together"
++msgstr  ""
++
+ msgid   "apply refspec to exported refs"
+ msgstr  ""
+ 
+@@ -7277,6 +7031,14 @@ msgstr  ""
+ msgid   "argument to --packfile must be a valid hash (got '%s')"
+ msgstr  ""
+ 
++#, c-format
++msgid   "asked to inherit tracking from '%s', but no merge configuration is set"
++msgstr  ""
++
++#, c-format
++msgid   "asked to inherit tracking from '%s', but no remote is set"
++msgstr  ""
++
+ msgid   "attach the patch"
+ msgstr  ""
+ 
+@@ -7629,6 +7391,18 @@ msgstr  ""
+ msgid   "branch '%s' not found."
+ msgstr  ""
+ 
++#, c-format
++msgid   "branch '%s' set up to track '%s' by rebasing."
++msgstr  ""
++
++#, c-format
++msgid   "branch '%s' set up to track '%s'."
++msgstr  ""
++
++#, c-format
++msgid   "branch '%s' set up to track:"
++msgstr  ""
++
+ msgid   "branch name required"
+ msgstr  ""
+ 
+@@ -7788,29 +7562,6 @@ msgstr  ""
+ msgid   "cannot close written %s file '%s'"
+ msgstr  ""
+ 
+-msgid   "cannot combine '--keep-base' with '--onto'"
+-msgstr  ""
+-
+-msgid   "cannot combine '--keep-base' with '--root'"
+-msgstr  ""
+-
+-msgid   "cannot combine '--root' with '--fork-point'"
+-msgstr  ""
+-
+-msgid   "cannot combine --exclude-promisor-objects and --missing"
+-msgstr  ""
+-
+-#, c-format
+-msgid   "cannot combine -m with --fixup:%s"
+-msgstr  ""
+-
+-msgid   "cannot combine apply options with merge options"
+-msgstr  ""
+-
+-#, c-format
+-msgid   "cannot combine reword option of --fixup with path '%s'"
+-msgstr  ""
+-
+ msgid   "cannot come back to cwd"
+ msgstr  ""
+ 
+@@ -7936,6 +7687,9 @@ msgstr  ""
+ msgid   "cannot have both --quiet and --verbose"
+ msgstr  ""
+ 
++msgid   "cannot inherit upstream tracking configuration of multiple refs when rebasing is requested"
++msgstr  ""
++
+ msgid   "cannot merge without a current revision"
+ msgstr  ""
+ 
+@@ -8016,10 +7770,6 @@ msgstr  ""
+ msgid   "cannot prune in a precious-objects repo"
+ msgstr  ""
+ 
+-#, c-format
+-msgid   "cannot read %s"
+-msgstr  ""
+-
+ #, c-format
+ msgid   "cannot read '%s'"
+ msgstr  ""
+@@ -10178,6 +9928,9 @@ msgstr  ""
+ msgid   "exhaustive rename detection was skipped due to too many files."
+ msgstr  ""
+ 
++msgid   "existing sparse-checkout patterns do not use cone mode"
++msgstr  ""
++
+ msgid   "exit immediately after advertising capabilities"
+ msgstr  ""
+ 
+@@ -11033,15 +10786,11 @@ msgid   "format.headers without value"
+ msgstr  ""
+ 
+ #, c-format
+-msgid   "format: %%(else) atom used more than once"
+-msgstr  ""
+-
+-#, c-format
+-msgid   "format: %%(else) atom used without a %%(then) atom"
++msgid   "format: %%(%s) atom used without a %%(%s) atom"
+ msgstr  ""
+ 
+ #, c-format
+-msgid   "format: %%(else) atom used without an %%(if) atom"
++msgid   "format: %%(else) atom used more than once"
+ msgstr  ""
+ 
+ #, c-format
+@@ -11052,10 +10801,6 @@ msgstr  ""
+ msgid   "format: %%(end) atom used without corresponding atom"
+ msgstr  ""
+ 
+-#, c-format
+-msgid   "format: %%(if) atom used without a %%(then) atom"
+-msgstr  ""
+-
+ #, c-format
+ msgid   "format: %%(then) atom used after %%(else)"
+ msgstr  ""
+@@ -11064,10 +10809,6 @@ msgstr  ""
+ msgid   "format: %%(then) atom used more than once"
+ msgstr  ""
+ 
+-#, c-format
+-msgid   "format: %%(then) atom used without an %%(if) atom"
+-msgstr  ""
+-
+ #, c-format
+ msgid   "found %u common ancestor:"
+ msgid_plural    "found %u common ancestors:"
+@@ -13330,7 +13071,8 @@ msgstr  ""
+ msgid   "mark the state of ref (or refs)"
+ msgstr  ""
+ 
+-msgid   "marked counting is incompatible with --objects"
++#, c-format
++msgid   "marked counting and '%s' cannot be used together"
+ msgstr  ""
+ 
+ msgid   "master branch"
+@@ -13775,15 +13517,7 @@ msgid   "no contacts specified"
+ msgstr  ""
+ 
+ #, c-format
+-msgid   "no directory given for --git-dir\n"
+-msgstr  ""
+-
+-#, c-format
+-msgid   "no directory given for --work-tree\n"
+-msgstr  ""
+-
+-#, c-format
+-msgid   "no directory given for -C\n"
++msgid   "no directory given for '%s' option\n"
+ msgstr  ""
+ 
+ msgid   "no email was given and auto-detection is disabled"
+@@ -14076,7 +13810,7 @@ msgid   "not sending a push certificate since the receiving end does not support
+ msgstr  ""
+ 
+ #, c-format
+-msgid   "not setting branch %s as its own upstream"
++msgid   "not setting branch '%s' as its own upstream"
+ msgstr  ""
+ 
+ msgid   "not setting upstream for a remote remote-tracking branch"
+@@ -14320,9 +14054,6 @@ msgstr  ""
+ msgid   "only found copies from modified paths due to too many files."
+ msgstr  ""
+ 
+-msgid   "only one -F or -m option is allowed."
+-msgstr  ""
+-
+ msgid   "only one action at a time"
+ msgstr  ""
+ 
+@@ -14399,10 +14130,18 @@ msgstr  ""
+ msgid   "option \"%s\" value \"%s\" is not valid for %s"
+ msgstr  ""
+ 
++#, c-format
++msgid   "option '%s' and commit-ishes cannot be used together"
++msgstr  ""
++
+ #, c-format
+ msgid   "option '%s' must come before non-option arguments"
+ msgstr  ""
+ 
++#, c-format
++msgid   "option `%s' expects \"%s\" or \"%s\""
++msgstr  ""
++
+ #, c-format
+ msgid   "option `%s' expects \"always\", \"auto\", or \"never\""
+ msgstr  ""
+@@ -14446,6 +14185,42 @@ msgstr  ""
+ msgid   "option=value"
+ msgstr  ""
+ 
++#, c-format
++msgid   "options '%s' and '%s %s' cannot be used together"
++msgstr  ""
++
++#, c-format
++msgid   "options '%s' and '%s' cannot be used together"
++msgstr  ""
++
++#, c-format
++msgid   "options '%s' and '%s' cannot be used together, use '%s' with '%s'"
++msgstr  ""
++
++#, c-format
++msgid   "options '%s' and '%s' cannot be used together, use '%s' with '%s' and '%s'"
++msgstr  ""
++
++#, c-format
++msgid   "options '%s' and '%s:%s' cannot be used together"
++msgstr  ""
++
++#, c-format
++msgid   "options '%s', '%s', '%s', and '%s' cannot be used together"
++msgstr  ""
++
++#, c-format
++msgid   "options '%s', '%s', and '%s' cannot be used together"
++msgstr  ""
++
++#, c-format
++msgid   "options '%s=%s' and '%s=%s' cannot be used together"
++msgstr  ""
++
++#, c-format
++msgid   "options '-%c', '-%c', and '%s' cannot be used together"
++msgstr  ""
++
+ msgid   "or do not fetch any tag at all (--no-tags)"
+ msgstr  ""
+ 
+@@ -15818,7 +15593,12 @@ msgstr  ""
+ msgid   "revision walk setup failed\n"
+ msgstr  ""
+ 
+-msgid   "reword option of --fixup is mutually exclusive with --patch/--interactive/--all/--include/--only"
++#, c-format
++msgid   "reword option of '%s' and '%s' cannot be used together"
++msgstr  ""
++
++#, c-format
++msgid   "reword option of '%s' and path '%s' cannot be used together"
+ msgstr  ""
+ 
+ msgid   "root"
+@@ -16011,6 +15791,9 @@ msgstr  ""
+ msgid   "set From address to <ident> (or committer ident if absent)"
+ msgstr  ""
+ 
++msgid   "set branch tracking configuration"
++msgstr  ""
++
+ msgid   "set compression level"
+ msgstr  ""
+ 
+@@ -16047,9 +15830,6 @@ msgstr  ""
+ msgid   "set upstream for git pull/status"
+ msgstr  ""
+ 
+-msgid   "set upstream info for new branch"
+-msgstr  ""
+-
+ msgid   "sets the submodule’s name to the given string instead of defaulting to its path"
+ msgstr  ""
+ 
+@@ -16346,6 +16126,9 @@ msgstr  ""
+ msgid   "show source"
+ msgstr  ""
+ 
++msgid   "show sparse directories in the presence of a sparse index"
++msgstr  ""
++
+ msgid   "show staged contents' object name in the output"
+ msgstr  ""
+ 
+@@ -16885,6 +16668,10 @@ msgstr  ""
+ msgid   "text"
+ msgstr  ""
+ 
++#, c-format
++msgid   "the '%s' option is only allowed in list mode"
++msgstr  ""
++
+ msgid   "the '--set-upstream' option is no longer supported. Please use '--track' or '--set-upstream-to' instead."
+ msgstr  ""
+ 
+@@ -16943,6 +16730,10 @@ msgstr  ""
+ msgid   "the object directory to store the graph"
+ msgstr  ""
+ 
++#, c-format
++msgid   "the option '%s' requires '%s'"
++msgstr  ""
++
+ #, c-format
+ msgid   "the original commit '%s' has a gpg signature"
+ msgstr  ""
+@@ -17974,30 +17765,6 @@ msgstr  ""
+ msgid   "unrecognized %%(%s) argument: %s"
+ msgstr  ""
+ 
+-#, c-format
+-msgid   "unrecognized %%(align) argument: %s"
+-msgstr  ""
+-
+-#, c-format
+-msgid   "unrecognized %%(contents) argument: %s"
+-msgstr  ""
+-
+-#, c-format
+-msgid   "unrecognized %%(if) argument: %s"
+-msgstr  ""
+-
+-#, c-format
+-msgid   "unrecognized %%(objectsize) argument: %s"
+-msgstr  ""
+-
+-#, c-format
+-msgid   "unrecognized %%(raw) argument: %s"
+-msgstr  ""
+-
+-#, c-format
+-msgid   "unrecognized %%(subject) argument: %s"
+-msgstr  ""
+-
+ #, c-format
+ msgid   "unrecognized --schedule argument '%s'"
+ msgstr  ""
+@@ -18014,10 +17781,6 @@ msgstr  ""
+ msgid   "unrecognized --type argument, %s"
+ msgstr  ""
+ 
+-#, c-format
+-msgid   "unrecognized argument '%s' in %%(%s)"
+-msgstr  ""
+-
+ #, c-format
+ msgid   "unrecognized argument: %s"
+ msgstr  ""
