@@ -22,7 +22,7 @@ jobs:
       AUTHOR_EMAIL: gotgit@qq.com
       LOGIN_NAME: togtig
     steps:
-      - name: clone ${{ matrix.branch }} branch of current repository
+      - name: clone pot/${{ matrix.branch }} branch of current repository
         run: |
           git -c protocol.version=2 clone \
             --depth 1 \
@@ -81,12 +81,7 @@ jobs:
             diff=${date}.diff &&
             git diff -- po/git.pot >>"${diff}.tmp" &&
             if test -s "${diff}.tmp"; then
-              if test -f "$diff"
-              then
-                cat "${diff}.tmp" >>"$diff"
-              else
-                mv "${diff}.tmp" "$diff"
-              fi &&
+              cat "${diff}.tmp" >>"$diff" &&
               git add po/git.pot "$diff" last-check &&
               git commit -m "l10n: ${{ matrix.branch }}: changes of git.pot in $diff" &&
               report_msg="** changes of 'po/git.pot' is reported in $diff **"
