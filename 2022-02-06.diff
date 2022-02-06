@@ -1,0 +1,448 @@
+diff --git a/po/git.pot b/po/git.pot
+index e87f09f..6a28345 100644
+--- a/po/git.pot
++++ b/po/git.pot
+@@ -1263,10 +1263,6 @@ msgstr  ""
+ msgid   "'%s' is not a valid term"
+ msgstr  ""
+ 
+-#, c-format
+-msgid   "'%s' is not a valid timestamp"
+-msgstr  ""
+-
+ #, c-format
+ msgid   "'%s' is not a working tree"
+ msgstr  ""
+@@ -1299,6 +1295,10 @@ msgstr  ""
+ msgid   "'%s' outside a repository"
+ msgstr  ""
+ 
++#, c-format
++msgid   "'%s' requires a batch mode"
++msgstr  ""
++
+ #, c-format
+ msgid   "'%s' was deleted by the applypatch-msg hook"
+ msgstr  ""
+@@ -1345,9 +1345,17 @@ msgstr  ""
+ msgid   "'%s.final' contains the composed email.\n"
+ msgstr  ""
+ 
++#, c-format
++msgid   "'%s=<%s>' needs '%s' or '%s'"
++msgstr  ""
++
+ msgid   "'' is not a valid term"
+ msgstr  ""
+ 
++#, c-format
++msgid   "'-%c' is incompatible with batch mode"
++msgstr  ""
++
+ msgid   "'GIT_AUTHOR_DATE' already given"
+ msgstr  ""
+ 
+@@ -1917,6 +1925,14 @@ msgstr  ""
+ msgid   "<object-id>"
+ msgstr  ""
+ 
++#, c-format
++msgid   "<object> required with '-%c'"
++msgstr  ""
++
++#, c-format
++msgid   "<object>:<path> required, only <object> '%s' given"
++msgstr  ""
++
+ msgid   "<param1,param2>..."
+ msgstr  ""
+ 
+@@ -1941,6 +1957,10 @@ msgstr  ""
+ msgid   "<rev-opts> are documented in git-rev-list(1)"
+ msgstr  ""
+ 
++#, c-format
++msgid   "<rev> required with '%s'"
++msgstr  ""
++
+ msgid   "<string>"
+ msgstr  ""
+ 
+@@ -1950,9 +1970,6 @@ msgstr  ""
+ msgid   "<text>"
+ msgstr  ""
+ 
+-msgid   "<type> can be one of: blob, tree, commit, tag"
+-msgstr  ""
+-
+ msgid   "<version>[,<offset>]"
+ msgstr  ""
+ 
+@@ -2320,6 +2337,9 @@ msgstr  ""
+ msgid   "Badly quoted content in file '%s': %s"
+ msgstr  ""
+ 
++msgid   "Batch objects requested on stdin (or --batch-all-objects)"
++msgstr  ""
++
+ msgid   "Bidirectional operation between a Subversion repository and Git"
+ msgstr  ""
+ 
+@@ -2671,6 +2691,9 @@ msgid   "Cannot update submodule:\n"
+         "%s"
+ msgstr  ""
+ 
++msgid   "Change or optimize batch output"
++msgstr  ""
++
+ #, c-format
+ msgid   "Changes from %s to %s:\n"
+ msgstr  ""
+@@ -2685,6 +2708,9 @@ msgstr  ""
+ msgid   "Changes to be committed:"
+ msgstr  ""
+ 
++msgid   "Check object existence or emit object contents"
++msgstr  ""
++
+ msgid   "Check the GPG signature of commits"
+ msgstr  ""
+ 
+@@ -3236,6 +3262,12 @@ msgstr  ""
+ msgid   "Dry-Sent %s\n"
+ msgstr  ""
+ 
++msgid   "Emit [broken] object attributes"
++msgstr  ""
++
++msgid   "Emit object (blob or tree) with conversion or filter (stand-alone, or with batch)"
++msgstr  ""
++
+ msgid   "Empty commit message."
+ msgstr  ""
+ 
+@@ -7261,6 +7293,9 @@ msgstr  ""
+ msgid   "base-commit"
+ msgstr  ""
+ 
++msgid   "batch modes take no arguments"
++msgstr  ""
++
+ msgid   "be more quiet"
+ msgstr  ""
+ 
+@@ -7332,9 +7367,6 @@ msgstr  ""
+ msgid   "bisecting only with a %s commit"
+ msgstr  ""
+ 
+-msgid   "blob"
+-msgstr  ""
+-
+ #, c-format
+ msgid   "blob expected for %s '%s'"
+ msgstr  ""
+@@ -7342,6 +7374,9 @@ msgstr  ""
+ msgid   "blob-id"
+ msgstr  ""
+ 
++msgid   "blob|tree"
++msgstr  ""
++
+ #, c-format
+ msgid   "bogus config parameter: %s"
+ msgstr  ""
+@@ -7993,6 +8028,9 @@ msgstr  ""
+ msgid   "check if - even missing - files are ignored in dry run"
+ msgstr  ""
+ 
++msgid   "check if <object> exists"
++msgstr  ""
++
+ msgid   "check if it is safe to write to the .gitmodules file"
+ msgstr  ""
+ 
+@@ -9446,6 +9484,9 @@ msgstr  ""
+ msgid   "display a diffstat of what changed upstream"
+ msgstr  ""
+ 
++msgid   "do not actually prune any entries"
++msgstr  ""
++
+ msgid   "do not apply config rules"
+ msgstr  ""
+ 
+@@ -9489,7 +9530,7 @@ msgstr  ""
+ msgid   "do not munge pathnames and use NULs as output field terminators in --raw or --numstat"
+ msgstr  ""
+ 
+-msgid   "do not order --batch-all-objects output"
++msgid   "do not order objects before emitting them"
+ msgstr  ""
+ 
+ msgid   "do not pack objects in promisor packfiles"
+@@ -9943,9 +9984,6 @@ msgstr  ""
+ msgid   "exit with exit code 2 if no matching refs are found"
+ msgstr  ""
+ 
+-msgid   "exit with zero when there's no error"
+-msgstr  ""
+-
+ #, c-format
+ msgid   "expansion of alias '%s' failed; '%s' is not a git command\n"
+ msgstr  ""
+@@ -10698,13 +10736,7 @@ msgstr  ""
+ msgid   "fmt"
+ msgstr  ""
+ 
+-msgid   "follow in-tree symlinks (used with --batch or --batch-check)"
+-msgstr  ""
+-
+-msgid   "for blob objects, run filters on object's content"
+-msgstr  ""
+-
+-msgid   "for blob objects, run textconv on object's content"
++msgid   "follow in-tree symlinks"
+ msgstr  ""
+ 
+ msgid   "for conflicts, use a union version"
+@@ -11057,10 +11089,22 @@ msgstr  ""
+ msgid   "git bundle verify [<options>] <file>"
+ msgstr  ""
+ 
+-msgid   "git cat-file (--batch[=<format>] | --batch-check[=<format>]) [--follow-symlinks] [--textconv | --filters]"
++msgid   "git cat-file (--batch | --batch-check) [--batch-all-objects]\n"
++        "             [--buffer] [--follow-symlinks] [--unordered]\n"
++        "             [--textconv | --filters]"
++msgstr  ""
++
++msgid   "git cat-file (--textconv | --filters)\n"
++        "             [<rev>:<path|tree-ish> | --path=<path|tree-ish> <rev>]"
+ msgstr  ""
+ 
+-msgid   "git cat-file (-t [--allow-unknown-type] | -s [--allow-unknown-type] | -e | -p | <type> | --textconv | --filters) [--path=<path>] <object>"
++msgid   "git cat-file (-e | -p) <object>"
++msgstr  ""
++
++msgid   "git cat-file (-t | -s) [--allow-unknown-type] <object>"
++msgstr  ""
++
++msgid   "git cat-file <type> <object>"
+ msgstr  ""
+ 
+ msgid   "git check-attr --stdin [-z] [-a | --all | <attr>...]"
+@@ -12662,6 +12706,10 @@ msgstr  ""
+ msgid   "invalid timestamp"
+ msgstr  ""
+ 
++#, c-format
++msgid   "invalid timestamp '%s' given to '--%s'"
++msgstr  ""
++
+ msgid   "invalid timezone offset"
+ msgstr  ""
+ 
+@@ -12805,6 +12853,9 @@ msgstr  ""
+ msgid   "lightweight"
+ msgstr  ""
+ 
++msgid   "like --batch, but don't emit <contents>"
++msgstr  ""
++
+ msgid   "like --refresh, but ignore assume-unchanged setting"
+ msgstr  ""
+ 
+@@ -12829,6 +12880,9 @@ msgstr  ""
+ msgid   "limit traversal to objects outside promisor packfiles"
+ msgstr  ""
+ 
++msgid   "limits processing to reflogs from the current worktree only."
++msgstr  ""
++
+ msgid   "limits the maximum delta depth"
+ msgstr  ""
+ 
+@@ -14097,6 +14151,10 @@ msgstr  ""
+ msgid   "only show untracked files in the stash"
+ msgstr  ""
+ 
++#, c-format
++msgid   "only two arguments allowed in <type> <object> mode, not %d"
++msgstr  ""
++
+ msgid   "only update entries that differ from HEAD"
+ msgstr  ""
+ 
+@@ -14570,6 +14628,9 @@ msgstr  ""
+ msgid   "pathspec '%s' is beyond a symbolic link"
+ msgstr  ""
+ 
++msgid   "path|tree-ish"
++msgstr  ""
++
+ msgid   "pattern"
+ msgstr  ""
+ 
+@@ -14670,7 +14731,7 @@ msgstr  ""
+ msgid   "pretend that paths removed since <tree-ish> are still present"
+ msgstr  ""
+ 
+-msgid   "pretty-print object's content"
++msgid   "pretty-print <object> content"
+ msgstr  ""
+ 
+ msgid   "prevent rename/copy detection if the number of rename/copy targets exceeds given limit"
+@@ -14707,6 +14768,9 @@ msgstr  ""
+ msgid   "print empty line between matches from different files"
+ msgstr  ""
+ 
++msgid   "print extra information on screen."
++msgstr  ""
++
+ msgid   "print list of useful guides"
+ msgstr  ""
+ 
+@@ -14800,6 +14864,9 @@ msgstr  ""
+ msgid   "process only line range <start>,<end> or function :<funcname>"
+ msgstr  ""
+ 
++msgid   "process the reflogs of all references"
++msgstr  ""
++
+ msgid   "produce the smallest possible diff"
+ msgstr  ""
+ 
+@@ -14855,6 +14922,15 @@ msgstr  ""
+ msgid   "protocol error: unexpected capabilities^{}"
+ msgstr  ""
+ 
++msgid   "prune any reflog entries that point to broken commits"
++msgstr  ""
++
++msgid   "prune entries older than <time> that are not reachable from the current tip of the branch"
++msgstr  ""
++
++msgid   "prune entries older than the specified time"
++msgstr  ""
++
+ msgid   "prune local tags no longer on remote and clobber changed tags"
+ msgstr  ""
+ 
+@@ -15601,6 +15677,9 @@ msgstr  ""
+ msgid   "reword option of '%s' and path '%s' cannot be used together"
+ msgstr  ""
+ 
++msgid   "rewrite the old SHA1 with the new SHA1 of the entry that now precedes it"
++msgstr  ""
++
+ msgid   "root"
+ msgstr  ""
+ 
+@@ -15621,6 +15700,9 @@ msgstr  ""
+ msgid   "run external text conversion filters when comparing binary files"
+ msgstr  ""
+ 
++msgid   "run filters on object's content"
++msgstr  ""
++
+ msgid   "run interactively"
+ msgstr  ""
+ 
+@@ -15630,6 +15712,9 @@ msgstr  ""
+ msgid   "run tasks based on the state of the repository"
+ msgstr  ""
+ 
++msgid   "run textconv on object's content"
++msgstr  ""
++
+ #, c-format
+ msgid   "run_command returned non-zero status for %s\n"
+         "."
+@@ -15904,9 +15989,6 @@ msgstr  ""
+ msgid   "show all changes in the changeset with -S or -G"
+ msgstr  ""
+ 
+-msgid   "show all objects with --batch or --batch-check"
+-msgstr  ""
+-
+ msgid   "show author email instead of name (Default: off)"
+ msgstr  ""
+ 
+@@ -15967,6 +16049,9 @@ msgstr  ""
+ msgid   "show files on the filesystem that need to be removed"
+ msgstr  ""
+ 
++msgid   "show full <object> or <rev> contents"
++msgstr  ""
++
+ msgid   "show full pre- and post-image object names on the \"index\" lines"
+ msgstr  ""
+ 
+@@ -15982,12 +16067,6 @@ msgstr  ""
+ msgid   "show in a format designed for machine consumption"
+ msgstr  ""
+ 
+-msgid   "show info about objects fed from the standard input"
+-msgstr  ""
+-
+-msgid   "show info and content of objects fed from the standard input"
+-msgstr  ""
+-
+ msgid   "show info page"
+ msgstr  ""
+ 
+@@ -16027,7 +16106,7 @@ msgstr  ""
+ msgid   "show object size"
+ msgstr  ""
+ 
+-msgid   "show object type"
++msgid   "show object type (one of 'blob', 'tree', 'commit', 'tag', ...)"
+ msgstr  ""
+ 
+ msgid   "show only <n> matched refs"
+@@ -16811,6 +16890,9 @@ msgstr  ""
+ msgid   "time"
+ msgstr  ""
+ 
++msgid   "timestamp"
++msgstr  ""
++
+ #, c-format
+ msgid   "timestamp too large for this system: %<PRIuMAX>"
+ msgstr  ""
+@@ -17916,6 +17998,9 @@ msgstr  ""
+ msgid   "update the info files from scratch"
+ msgstr  ""
+ 
++msgid   "update the reference to the value of the top reflog entry"
++msgstr  ""
++
+ msgid   "update tracked files"
+ msgstr  ""
+ 
+@@ -18039,13 +18124,13 @@ msgstr  ""
+ msgid   "use `diff.guitool` instead of `diff.tool`"
+ msgstr  ""
+ 
+-msgid   "use a bitmap index if available to speed up counting objects"
++msgid   "use a <path> for (--textconv | --filters); Not with 'batch'"
+ msgstr  ""
+ 
+-msgid   "use a diff3 based merge"
++msgid   "use a bitmap index if available to speed up counting objects"
+ msgstr  ""
+ 
+-msgid   "use a specific path for --textconv/--filters"
++msgid   "use a diff3 based merge"
+ msgstr  ""
+ 
+ msgid   "use a zealous diff3 based merge"
+@@ -18341,6 +18426,9 @@ msgstr  ""
+ msgid   "will not add file alias '%s' ('%s' already exists in index)"
+ msgstr  ""
+ 
++msgid   "with --batch[-check]: ignores stdin, batches all known objects"
++msgstr  ""
++
+ msgid   "with --get, use default value when missing entry"
+ msgstr  ""
+ 
