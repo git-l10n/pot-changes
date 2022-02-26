@@ -1,0 +1,565 @@
+diff --git a/po/git.pot b/po/git.pot
+index 3358fb2..ff39b52 100644
+--- a/po/git.pot
++++ b/po/git.pot
+@@ -240,6 +240,15 @@ msgstr  ""
+ msgid   "   or: %s"
+ msgstr  ""
+ 
++#. TRANSLATORS: This is line item of ambiguous object output
++#. from describe_ambiguous_object() above. For RTL languages
++#. you'll probably want to swap the "%s" and leading " " space
++#. around.
++#.
++#, c-format
++msgid   "  %s\n"
++msgstr  ""
++
+ msgid   "  (Once your working directory is clean, run \"git rebase --continue\")"
+ msgstr  ""
+ 
+@@ -650,6 +659,24 @@ msgstr  ""
+ msgid   "%s : incompatible with something else"
+ msgstr  ""
+ 
++#. TRANSLATORS: This is a line of ambiguous object
++#. output shown when we cannot look up or parse the
++#. object in question. E.g. "deadbeef [bad object]".
++#.
++#, c-format
++msgid   "%s [bad object]"
++msgstr  ""
++
++#. TRANSLATORS: This is a line of ambiguous
++#. tag object output where we couldn't parse
++#. the tag itself. E.g.:
++#. *
++#.    "deadbeef [bad tag, could not parse it]"
++#.
++#, c-format
++msgid   "%s [bad tag, could not parse it]"
++msgstr  ""
++
+ #, c-format
+ msgid   "%s already exists"
+ msgstr  ""
+@@ -658,10 +685,26 @@ msgstr  ""
+ msgid   "%s also locked %s"
+ msgstr  ""
+ 
++#. TRANSLATORS: This is a line of ambiguous <type>
++#. object output. E.g. "deadbeef blob".
++#.
++#, c-format
++msgid   "%s blob"
++msgstr  ""
++
+ #, c-format
+ msgid   "%s cannot be resolved to branch"
+ msgstr  ""
+ 
++#. TRANSLATORS: This is a line of ambiguous commit
++#. object output. E.g.:
++#. *
++#.    "deadbeef commit 2021-01-01 - Some Commit Message"
++#.
++#, c-format
++msgid   "%s commit %s - %s"
++msgstr  ""
++
+ #, c-format
+ msgid   "%s did not send all necessary objects\n"
+ msgstr  ""
+@@ -778,6 +821,21 @@ msgstr  ""
+ msgid   "%s scheduler is not available"
+ msgstr  ""
+ 
++#. TRANSLATORS: This is a line of ambiguous
++#. tag object output. E.g.:
++#. *
++#.    "deadbeef tag 2022-01-01 - Some Tag Message"
++#. *
++#. The second argument is the YYYY-MM-DD found
++#. in the tag.
++#. *
++#. The third argument is the "tag" string
++#. from object.c.
++#.
++#, c-format
++msgid   "%s tag %s - %s"
++msgstr  ""
++
+ #, c-format
+ msgid   "%s takes no value"
+ msgstr  ""
+@@ -794,6 +852,13 @@ msgstr  ""
+ msgid   "%s tracks both %s and %s"
+ msgstr  ""
+ 
++#. TRANSLATORS: This is a line of ambiguous <type>
++#. object output. E.g. "deadbeef tree".
++#.
++#, c-format
++msgid   "%s tree"
++msgstr  ""
++
+ #, c-format
+ msgid   "%s unexpectedly said: '%s'"
+ msgstr  ""
+@@ -1599,9 +1664,6 @@ msgstr  ""
+ msgid   "--branch or --default required"
+ msgstr  ""
+ 
+-msgid   "--cached or --untracked cannot be used with --no-index"
+-msgstr  ""
+-
+ msgid   "--check does not make sense"
+ msgstr  ""
+ 
+@@ -1806,9 +1868,6 @@ msgstr  ""
+ msgid   "--unshallow on a complete repository does not make sense"
+ msgstr  ""
+ 
+-msgid   "--untracked cannot be used with --cached"
+-msgstr  ""
+-
+ msgid   "--untracked not supported with --recurse-submodules"
+ msgstr  ""
+ 
+@@ -3983,26 +4042,6 @@ msgstr  ""
+ msgid   "Invalid update mode '%s' for submodule path '%s'"
+ msgstr  ""
+ 
+-#, c-format
+-msgid   "Invalid value for %s: %s"
+-msgstr  ""
+-
+-#, c-format
+-msgid   "Invalid value for --empty: %s"
+-msgstr  ""
+-
+-#, c-format
+-msgid   "Invalid value for --patch-format: %s"
+-msgstr  ""
+-
+-#, c-format
+-msgid   "Invalid value for --show-current-patch: %s"
+-msgstr  ""
+-
+-#, c-format
+-msgid   "Invalid value for pull.ff: %s"
+-msgstr  ""
+-
+ #, c-format
+ msgid   "It is not possible to %s because you have unmerged files."
+ msgstr  ""
+@@ -4551,18 +4590,6 @@ msgstr  ""
+ msgid   "Only one StGIT patch series can be applied at once"
+ msgstr  ""
+ 
+-msgid   "Only one of --include/--only/--all/--interactive/--patch can be used."
+-msgstr  ""
+-
+-msgid   "Only one of -c/-C/-F/--fixup can be used."
+-msgstr  ""
+-
+-msgid   "Option -m cannot be combined with -c/-C/-F."
+-msgstr  ""
+-
+-msgid   "Options --squash and --fixup cannot be used together"
+-msgstr  ""
+-
+ msgid   "Options related to fetching"
+ msgstr  ""
+ 
+@@ -5536,7 +5563,13 @@ msgid_plural    "The bundle requires these %d refs:"
+ msgstr[0]       ""
+ msgstr[1]       ""
+ 
+-msgid   "The candidates are:"
++#. TRANSLATORS: The argument is the list of ambiguous
++#. objects composed in show_ambiguous_object(). See
++#. its "TRANSLATORS" comments for details.
++#.
++#, c-format
++msgid   "The candidates are:\n"
++        "%s"
+ msgstr  ""
+ 
+ #, c-format
+@@ -6124,9 +6157,6 @@ msgid   "Using '%s' as the name for the initial branch. This default branch name
+         "\tgit branch -m <name>\n"
+ msgstr  ""
+ 
+-msgid   "Using both --reset-author and --author does not make sense"
+-msgstr  ""
+-
+ msgid   "Using index info to reconstruct a base tree..."
+ msgstr  ""
+ 
+@@ -7067,6 +7097,9 @@ msgstr  ""
+ msgid   "apply options and merge options cannot be used together"
+ msgstr  ""
+ 
++msgid   "apply partial clone filters to submodules"
++msgstr  ""
++
+ msgid   "apply refspec to exported refs"
+ msgstr  ""
+ 
+@@ -8325,10 +8358,6 @@ msgstr  ""
+ msgid   "config remote shorthand cannot begin with '/': %s"
+ msgstr  ""
+ 
+-#, c-format
+-msgid   "configuration fetch.output contains invalid value %s"
+-msgstr  ""
+-
+ msgid   "conflict style (merge, diff3, or zdiff3)"
+ msgstr  ""
+ 
+@@ -10176,6 +10205,10 @@ msgstr  ""
+ msgid   "failed to convert to a sparse-index"
+ msgstr  ""
+ 
++#, c-format
++msgid   "failed to copy '%s' to '%s'; sparse-checkout may not work correctly"
++msgstr  ""
++
+ #, c-format
+ msgid   "failed to copy file to '%s'"
+ msgstr  ""
+@@ -10184,6 +10217,10 @@ msgstr  ""
+ msgid   "failed to copy notes from '%s' to '%s'"
+ msgstr  ""
+ 
++#, c-format
++msgid   "failed to copy worktree config from '%s' to '%s'"
++msgstr  ""
++
+ msgid   "failed to create cover-letter file"
+ msgstr  ""
+ 
+@@ -10317,6 +10354,9 @@ msgstr  ""
+ msgid   "failed to initialize sparse-checkout"
+ msgstr  ""
+ 
++msgid   "failed to initialize worktree config"
++msgstr  ""
++
+ #, c-format
+ msgid   "failed to iterate over '%s'"
+ msgstr  ""
+@@ -10567,6 +10607,14 @@ msgstr  ""
+ msgid   "failed to unregister repository"
+ msgstr  ""
+ 
++#, c-format
++msgid   "failed to unset 'core.bare' in '%s'"
++msgstr  ""
++
++#, c-format
++msgid   "failed to unset 'core.worktree' in '%s'"
++msgstr  ""
++
+ #, c-format
+ msgid   "failed to update conflicted state in '%s'"
+ msgstr  ""
+@@ -11047,9 +11095,6 @@ msgstr  ""
+ msgid   "git apply: bad git-diff - inconsistent old filename on line %d"
+ msgstr  ""
+ 
+-msgid   "git archive --list"
+-msgstr  ""
+-
+ msgid   "git archive --remote <repo> [--exec <cmd>] --list"
+ msgstr  ""
+ 
+@@ -11075,9 +11120,6 @@ msgstr  ""
+ msgid   "git archive: protocol error"
+ msgstr  ""
+ 
+-msgid   "git bisect--helper --bisect-next"
+-msgstr  ""
+-
+ msgid   "git bisect--helper --bisect-replay <filename>"
+ msgstr  ""
+ 
+@@ -11099,12 +11141,6 @@ msgstr  ""
+ msgid   "git bisect--helper --bisect-state (good|old) [<rev>...]"
+ msgstr  ""
+ 
+-msgid   "git bisect--helper --bisect-terms [--term-good | --term-old | --term-bad | --term-new]"
+-msgstr  ""
+-
+-msgid   "git bisect--helper --bisect-visualize"
+-msgstr  ""
+-
+ msgid   "git blame [<options>] [<rev-opts>] [<rev>] [--] <file>"
+ msgstr  ""
+ 
+@@ -11241,9 +11277,6 @@ msgstr  ""
+ msgid   "git config [<options>]"
+ msgstr  ""
+ 
+-msgid   "git count-objects [-v] [-H | --human-readable]"
+-msgstr  ""
+-
+ msgid   "git describe [<options>] --dirty"
+ msgstr  ""
+ 
+@@ -11269,7 +11302,7 @@ msgstr  ""
+ msgid   "git env--helper --type=[bool|ulong] <options> <env-var>"
+ msgstr  ""
+ 
+-msgid   "git fast-export [rev-list-opts]"
++msgid   "git fast-export [<rev-list-opts>]"
+ msgstr  ""
+ 
+ msgid   "git fetch --all [<options>]"
+@@ -11333,9 +11366,6 @@ msgstr  ""
+ msgid   "git grep [<options>] [-e] <pattern> [<rev>...] [[--] <path>...]"
+ msgstr  ""
+ 
+-msgid   "git hash-object  --stdin-paths"
+-msgstr  ""
+-
+ msgid   "git hash-object [-t <type>] [-w] [--path=<file> | --no-filters] [--stdin] [--] <file>..."
+ msgstr  ""
+ 
+@@ -11343,12 +11373,6 @@ msgid   "git help [-a|--all] [--[no-]verbose]]\n"
+         "         [[-i|--info] [-m|--man] [-w|--web]] [<command>]"
+ msgstr  ""
+ 
+-msgid   "git help [-c|--config]"
+-msgstr  ""
+-
+-msgid   "git help [-g|--guides]"
+-msgstr  ""
+-
+ msgid   "git hook run [--ignore-missing] <hook-name> [-- <hook-args>]"
+ msgstr  ""
+ 
+@@ -11409,12 +11433,6 @@ msgstr  ""
+ msgid   "git merge-file [<options>] [-L <name1> [-L <orig> [-L <name2>]]] <file1> <orig-file> <file2>"
+ msgstr  ""
+ 
+-msgid   "git mktag"
+-msgstr  ""
+-
+-msgid   "git mktree [-z] [--missing] [--batch]"
+-msgstr  ""
+-
+ msgid   "git multi-pack-index [<options>] expire"
+ msgstr  ""
+ 
+@@ -11433,7 +11451,7 @@ msgstr  ""
+ msgid   "git name-rev [<options>] --all"
+ msgstr  ""
+ 
+-msgid   "git name-rev [<options>] --stdin"
++msgid   "git name-rev [<options>] --annotate-stdin"
+ msgstr  ""
+ 
+ msgid   "git name-rev [<options>] <commit>..."
+@@ -11487,18 +11505,9 @@ msgstr  ""
+ msgid   "git notes edit [<object>]"
+ msgstr  ""
+ 
+-msgid   "git notes get-ref"
+-msgstr  ""
+-
+-msgid   "git notes merge --abort [-v | -q]"
+-msgstr  ""
+-
+ msgid   "git notes merge --abort [<options>]"
+ msgstr  ""
+ 
+-msgid   "git notes merge --commit [-v | -q]"
+-msgstr  ""
+-
+ msgid   "git notes merge --commit [<options>]"
+ msgstr  ""
+ 
+@@ -11526,9 +11535,6 @@ msgstr  ""
+ msgid   "git prune [-n] [-v] [--progress] [--expire <time>] [--] [<head>...]"
+ msgstr  ""
+ 
+-msgid   "git prune-packed [-n | --dry-run] [-q | --quiet]"
+-msgstr  ""
+-
+ msgid   "git pull [<options>] [<repository> [<refspec>...]]"
+ msgstr  ""
+ 
+@@ -11547,9 +11553,6 @@ msgstr  ""
+ msgid   "git read-tree [(-m [--trivial] [--aggressive] | --reset | --prefix=<prefix>) [-u | -i]] [--no-sparse-checkout] [--index-output=<file>] (--empty | <tree-ish1> [<tree-ish2> [<tree-ish3>]])"
+ msgstr  ""
+ 
+-msgid   "git rebase --continue | --abort | --skip | --edit-todo"
+-msgstr  ""
+-
+ msgid   "git rebase [-i] [options] [--exec <cmd>] [--onto <newbase> | --keep-base] [<upstream> [<branch>]]"
+ msgstr  ""
+ 
+@@ -11559,9 +11562,6 @@ msgstr  ""
+ msgid   "git receive-pack <git-dir>"
+ msgstr  ""
+ 
+-msgid   "git reflog [ show | expire | delete | exists ]"
+-msgstr  ""
+-
+ msgid   "git reflog delete [--rewrite] [--updateref] [--dry-run | -n] [--verbose] <refs>..."
+ msgstr  ""
+ 
+@@ -11571,9 +11571,6 @@ msgstr  ""
+ msgid   "git reflog expire [--expire=<time>] [--expire-unreachable=<time>] [--rewrite] [--updateref] [--stale-fix] [--dry-run | -n] [--verbose] [--all] <refs>..."
+ msgstr  ""
+ 
+-msgid   "git remote [-v | --verbose]"
+-msgstr  ""
+-
+ msgid   "git remote [-v | --verbose] show [-n] <name>"
+ msgstr  ""
+ 
+@@ -11637,9 +11634,6 @@ msgstr  ""
+ msgid   "git replace [--format=<format>] [-l [<pattern>]]"
+ msgstr  ""
+ 
+-msgid   "git replace [-f] --convert-graft-file"
+-msgstr  ""
+-
+ msgid   "git replace [-f] --edit <object>"
+ msgstr  ""
+ 
+@@ -11731,18 +11725,6 @@ msgstr  ""
+ msgid   "git sparse-checkout add (--stdin | <patterns>)"
+ msgstr  ""
+ 
+-msgid   "git sparse-checkout disable"
+-msgstr  ""
+-
+-msgid   "git sparse-checkout init [--cone] [--[no-]sparse-index]"
+-msgstr  ""
+-
+-msgid   "git sparse-checkout list"
+-msgstr  ""
+-
+-msgid   "git sparse-checkout reapply [--[no-]cone] [--[no-]sparse-index]"
+-msgstr  ""
+-
+ msgid   "git sparse-checkout set [--[no-]cone] [--[no-]sparse-index] (--stdin | <patterns>)"
+ msgstr  ""
+ 
+@@ -11795,12 +11777,6 @@ msgstr  ""
+ msgid   "git status [<options>] [--] <pathspec>..."
+ msgstr  ""
+ 
+-msgid   "git stripspace [-c | --comment-lines]"
+-msgstr  ""
+-
+-msgid   "git stripspace [-s | --strip-comments]"
+-msgstr  ""
+-
+ msgid   "git submodule deinit [--quiet] [-f | --force] [--all | [--] [<path>...]]"
+ msgstr  ""
+ 
+@@ -11813,10 +11789,7 @@ msgstr  ""
+ msgid   "git submodule--helper add [<options>] [--] <repository> [<path>]"
+ msgstr  ""
+ 
+-msgid   "git submodule--helper clone [--prefix=<path>] [--quiet] [--reference <repository>] [--name <name>] [--depth <depth>] [--single-branch] --url <url> --path <path>"
+-msgstr  ""
+-
+-msgid   "git submodule--helper config --check-writeable"
++msgid   "git submodule--helper clone [--prefix=<path>] [--quiet] [--reference <repository>] [--name <name>] [--depth <depth>] [--single-branch] [--filter <filter-spec>]--url <url> --path <path>"
+ msgstr  ""
+ 
+ msgid   "git submodule--helper config --unset <name>"
+@@ -11896,9 +11869,6 @@ msgstr  ""
+ msgid   "git update-ref [<options>] -d <refname> [<old-val>]"
+ msgstr  ""
+ 
+-msgid   "git update-server-info [--force]"
+-msgstr  ""
+-
+ msgid   "git upload-pack [<options>] <dir>"
+ msgstr  ""
+ 
+@@ -12541,10 +12511,6 @@ msgstr  ""
+ msgid   "invalid characters in host name"
+ msgstr  ""
+ 
+-#, c-format
+-msgid   "invalid color '%s' in color.blame.repeatedLines"
+-msgstr  ""
+-
+ #, c-format
+ msgid   "invalid color value: %.*s"
+ msgstr  ""
+@@ -12792,21 +12758,11 @@ msgid   "invalid upstream '%s'"
+ msgstr  ""
+ 
+ #, c-format
+-msgid   "invalid value '%s' for lsrefs.unborn"
++msgid   "invalid value for '%s'"
+ msgstr  ""
+ 
+ #, c-format
+-msgid   "invalid value for %s"
+-msgstr  ""
+-
+-#, c-format
+-msgid   "invalid value for %s: %s"
+-msgstr  ""
+-
+-msgid   "invalid value for --missing"
+-msgstr  ""
+-
+-msgid   "invalid value for blame.coloring"
++msgid   "invalid value for '%s': '%s'"
+ msgstr  ""
+ 
+ msgid   "is the first one ancestor of the other?"
+@@ -17529,6 +17485,10 @@ msgid   "unable to select a comment character that is not used\n"
+         "in the current commit message"
+ msgstr  ""
+ 
++#, c-format
++msgid   "unable to set %s in '%s'"
++msgstr  ""
++
+ msgid   "unable to set SO_KEEPALIVE on socket"
+ msgstr  ""
+ 
+@@ -17581,6 +17541,10 @@ msgstr  ""
+ msgid   "unable to unquote C-style string '%s'"
+ msgstr  ""
+ 
++#, c-format
++msgid   "unable to unset %s in '%s'"
++msgstr  ""
++
+ #, c-format
+ msgid   "unable to update %s"
+ msgstr  ""
+@@ -17603,9 +17567,6 @@ msgid   "unable to update url base from redirection:\n"
+         "   redirect: %s"
+ msgstr  ""
+ 
+-msgid   "unable to upgrade repository format to enable worktreeConfig"
+-msgstr  ""
+-
+ msgid   "unable to upgrade repository format to support partial clone"
+ msgstr  ""
+ 
+@@ -17888,10 +17849,6 @@ msgstr  ""
+ msgid   "unknown value after ws-error-highlight=%.*s"
+ msgstr  ""
+ 
+-#, c-format
+-msgid   "unknown value for --diff-merges: %s"
+-msgstr  ""
+-
+ #, c-format
+ msgid   "unknown value for config '%s': %s"
+ msgstr  ""
