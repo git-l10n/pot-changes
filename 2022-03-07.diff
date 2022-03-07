@@ -1,0 +1,178 @@
+diff --git a/po/git.pot b/po/git.pot
+index ff39b52..017456e 100644
+--- a/po/git.pot
++++ b/po/git.pot
+@@ -1280,6 +1280,10 @@ msgstr  ""
+ msgid   "'%s' is not a commit and a branch '%s' cannot be created from it"
+ msgstr  ""
+ 
++#, c-format
++msgid   "'%s' is not a directory; to treat it as a directory anyway, rerun with --skip-checks"
++msgstr  ""
++
+ #, c-format
+ msgid   "'%s' is not a stash reference"
+ msgstr  ""
+@@ -3902,6 +3906,9 @@ msgstr  ""
+ msgid   "If you prefer to skip this patch, run \"%s --skip\" instead."
+ msgstr  ""
+ 
++msgid   "If you want to detach HEAD at the commit, try again with the --detach option."
++msgstr  ""
++
+ #, c-format
+ msgid   "If you want to keep it by creating a new branch, this may be a good time\n"
+         "to do so with:\n"
+@@ -4611,9 +4618,6 @@ msgstr  ""
+ msgid   "Output information on each ref"
+ msgstr  ""
+ 
+-msgid   "Output to a specific file"
+-msgstr  ""
+-
+ #, c-format
+ msgid   "Overwriting existing notes for object %s\n"
+ msgstr  ""
+@@ -7441,6 +7445,10 @@ msgstr  ""
+ msgid   "bogus count in %s"
+ msgstr  ""
+ 
++#, c-format
++msgid   "bogus exit code %d for good revision"
++msgstr  ""
++
+ #, c-format
+ msgid   "bogus format in %s"
+ msgstr  ""
+@@ -10608,11 +10616,7 @@ msgid   "failed to unregister repository"
+ msgstr  ""
+ 
+ #, c-format
+-msgid   "failed to unset 'core.bare' in '%s'"
+-msgstr  ""
+-
+-#, c-format
+-msgid   "failed to unset 'core.worktree' in '%s'"
++msgid   "failed to unset '%s' in '%s'"
+ msgstr  ""
+ 
+ #, c-format
+@@ -11722,10 +11726,10 @@ msgstr  ""
+ msgid   "git sparse-checkout (init|list|set|add|reapply|disable) <options>"
+ msgstr  ""
+ 
+-msgid   "git sparse-checkout add (--stdin | <patterns>)"
++msgid   "git sparse-checkout add [--skip-checks] (--stdin | <patterns>)"
+ msgstr  ""
+ 
+-msgid   "git sparse-checkout set [--[no-]cone] [--[no-]sparse-index] (--stdin | <patterns>)"
++msgid   "git sparse-checkout set [--[no-]cone] [--[no-]sparse-index] [--skip-checks] (--stdin | <patterns>)"
+ msgstr  ""
+ 
+ msgid   "git stash ( pop | apply ) [--index] [-q|--quiet] [<stash>]"
+@@ -12900,7 +12904,7 @@ msgstr  ""
+ msgid   "limit traversal to objects outside promisor packfiles"
+ msgstr  ""
+ 
+-msgid   "limits processing to reflogs from the current worktree only."
++msgid   "limits processing to reflogs from the current worktree only"
+ msgstr  ""
+ 
+ msgid   "limits the maximum delta depth"
+@@ -14340,6 +14344,9 @@ msgstr  ""
+ msgid   "output the distribution of relative amount of changes for each sub-directory"
+ msgstr  ""
+ 
++msgid   "output to a specific file"
++msgstr  ""
++
+ msgid   "override author for commit"
+ msgstr  ""
+ 
+@@ -14385,6 +14392,10 @@ msgstr  ""
+ msgid   "pack exceeds maximum allowed size"
+ msgstr  ""
+ 
++#, c-format
++msgid   "pack exceeds maximum allowed size (%s)"
++msgstr  ""
++
+ msgid   "pack for reuse when computing a multi-pack bitmap"
+ msgstr  ""
+ 
+@@ -14498,6 +14509,10 @@ msgstr  ""
+ msgid   "pass -m flag to git-mailinfo"
+ msgstr  ""
+ 
++#, c-format
++msgid   "pass a leading slash before paths such as '%s' if you want a single file (see NON-CONE PROBLEMS in the git-sparse-checkout manual)."
++msgstr  ""
++
+ msgid   "pass it through git-apply"
+ msgstr  ""
+ 
+@@ -14684,6 +14699,9 @@ msgstr  ""
+ msgid   "please make sure that the .gitmodules file is in the working tree"
+ msgstr  ""
+ 
++msgid   "please run from the toplevel directory in non-cone mode"
++msgstr  ""
++
+ msgid   "please stage your changes to .gitmodules or stash them to proceed"
+ msgstr  ""
+ 
+@@ -14788,7 +14806,7 @@ msgstr  ""
+ msgid   "print empty line between matches from different files"
+ msgstr  ""
+ 
+-msgid   "print extra information on screen."
++msgid   "print extra information on screen"
+ msgstr  ""
+ 
+ msgid   "print list of useful guides"
+@@ -16348,6 +16366,9 @@ msgstr  ""
+ msgid   "skip some commits for checkout"
+ msgstr  ""
+ 
++msgid   "skip some sanity checks on the given paths that might give false positives"
++msgstr  ""
++
+ msgid   "skip submodules with 'ignore_config' value set to 'all'"
+ msgstr  ""
+ 
+@@ -16406,6 +16427,15 @@ msgstr  ""
+ msgid   "specify bundle format version"
+ msgstr  ""
+ 
++msgid   "specify directories rather than patterns (no leading slash)"
++msgstr  ""
++
++msgid   "specify directories rather than patterns.  If your directory really has any of '*?[]\\' in it, pass --skip-checks"
++msgstr  ""
++
++msgid   "specify directories rather than patterns.  If your directory starts with a '!', pass --skip-checks"
++msgstr  ""
++
+ msgid   "specify fetch refmap"
+ msgstr  ""
+ 
+@@ -17570,6 +17600,10 @@ msgstr  ""
+ msgid   "unable to upgrade repository format to support partial clone"
+ msgstr  ""
+ 
++#, c-format
++msgid   "unable to verify '%s' on good revision"
++msgstr  ""
++
+ #, c-format
+ msgid   "unable to write %s"
+ msgstr  ""
+@@ -18107,7 +18141,7 @@ msgstr  ""
+ msgid   "use .gitattributes only from the index"
+ msgstr  ""
+ 
+-msgid   "use <cmd>... to automatically bisect."
++msgid   "use <cmd>... to automatically bisect"
+ msgstr  ""
+ 
+ msgid   "use <file>'s contents as the final image"
