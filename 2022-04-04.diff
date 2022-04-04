@@ -1,0 +1,471 @@
+diff --git a/po/git.pot b/po/git.pot
+index 7744d02..51f608c 100644
+--- a/po/git.pot
++++ b/po/git.pot
+@@ -233,6 +233,10 @@ msgstr  ""
+ msgid   "   or: %s"
+ msgstr  ""
+ 
++#. TRANSLATORS: This is a line listing a remote with duplicate
++#. refspecs in the advice message below. For RTL languages you'll
++#. probably want to swap the "%s" and leading "  " space around.
++#.
+ #. TRANSLATORS: This is line item of ambiguous object output
+ #. from describe_ambiguous_object() above. For RTL languages
+ #. you'll probably want to swap the "%s" and leading " " space
+@@ -1718,6 +1722,9 @@ msgstr  ""
+ msgid   "--follow requires exactly one pathspec"
+ msgstr  ""
+ 
++msgid   "--format can't be combined with other format-altering options"
++msgstr  ""
++
+ msgid   "--format cannot be used when not listing"
+ msgstr  ""
+ 
+@@ -3543,8 +3550,8 @@ msgstr  ""
+ msgid   "Failed to perform three-way merge...\n"
+ msgstr  ""
+ 
+-#, sh-format
+-msgid   "Failed to recurse into submodule path '$displaypath'"
++#, c-format
++msgid   "Failed to recurse into submodule path '%s'"
+ msgstr  ""
+ 
+ #, c-format
+@@ -5086,9 +5093,6 @@ msgstr  ""
+ msgid   "SHA1 COLLISION FOUND WITH %s !"
+ msgstr  ""
+ 
+-msgid   "SHA1 expected by superproject"
+-msgstr  ""
+-
+ #, perl-format
+ msgid   "STARTTLS failed! %s"
+ msgstr  ""
+@@ -5799,6 +5803,20 @@ msgid   "The upstream branch of your current branch does not match\n"
+         "%s"
+ msgstr  ""
+ 
++#. TRANSLATORS: The second argument is a \n-delimited list of
++#. duplicate refspecs, composed above.
++#.
++#, c-format
++msgid   "There are multiple remotes whose fetch refspecs map to the remote\n"
++        "tracking ref '%s':\n"
++        "%s\n"
++        "This is typically a configuration error.\n"
++        "\n"
++        "To support setting up tracking branches, ensure that\n"
++        "different remotes' fetch refspecs map into different\n"
++        "tracking namespaces."
++msgstr  ""
++
+ msgid   "There are no candidates for merging among the refs that you just fetched."
+ msgstr  ""
+ 
+@@ -5976,6 +5994,10 @@ msgstr  ""
+ msgid   "Unexpected tail checksum for %s (disk corruption?)"
+ msgstr  ""
+ 
++#, c-format
++msgid   "Unhandled subcommand '%s'"
++msgstr  ""
++
+ #, c-format
+ msgid   "Unimplemented pathspec magic '%c' in '%s'"
+ msgstr  ""
+@@ -7263,6 +7285,18 @@ msgstr  ""
+ msgid   "bad index version '%s'"
+ msgstr  ""
+ 
++#, c-format
++msgid   "bad ls-tree format: %%%.*s"
++msgstr  ""
++
++#, c-format
++msgid   "bad ls-tree format: element '%s' does not end in ')'"
++msgstr  ""
++
++#, c-format
++msgid   "bad ls-tree format: element '%s' does not start with '('"
++msgstr  ""
++
+ #, c-format
+ msgid   "bad mergetag in commit '%s'"
+ msgstr  ""
+@@ -8477,7 +8511,7 @@ msgstr  ""
+ msgid   "core.fsmonitor is unset; set it if you really want to enable fsmonitor"
+ msgstr  ""
+ 
+-msgid   "core.fsyncobjectfiles is deprecated; use core.fsync instead"
++msgid   "core.fsyncObjectFiles is deprecated; use core.fsync instead"
+ msgstr  ""
+ 
+ msgid   "core.splitIndex is set to false; remove or change it, if you really want to enable split index"
+@@ -8597,6 +8631,10 @@ msgstr  ""
+ msgid   "could not create file '%s'"
+ msgstr  ""
+ 
++#, c-format
++msgid   "could not create fsmonitor cookie '%s'"
++msgstr  ""
++
+ #, c-format
+ msgid   "could not create leading directories for '%s'"
+ msgstr  ""
+@@ -8729,6 +8767,10 @@ msgstr  ""
+ msgid   "could not get commit message of '%s'"
+ msgstr  ""
+ 
++#, c-format
++msgid   "could not get object info about '%s'"
++msgstr  ""
++
+ #, c-format
+ msgid   "could not get submodule directory for '%s'"
+ msgstr  ""
+@@ -8737,6 +8779,9 @@ msgstr  ""
+ msgid   "could not get type of object %s in pack %s"
+ msgstr  ""
+ 
++msgid   "could not initialize listener thread"
++msgstr  ""
++
+ msgid   "could not load pack"
+ msgstr  ""
+ 
+@@ -9081,6 +9126,10 @@ msgstr  ""
+ msgid   "could not save index tree"
+ msgstr  ""
+ 
++#, c-format
++msgid   "could not send '%s' command to fsmonitor--daemon"
++msgstr  ""
++
+ msgid   "could not send IPC command"
+ msgstr  ""
+ 
+@@ -9115,6 +9164,10 @@ msgstr  ""
+ msgid   "could not start 'git status' in submodule '%s'"
+ msgstr  ""
+ 
++#, c-format
++msgid   "could not start IPC thread pool on '%s'"
++msgstr  ""
++
+ msgid   "could not start `log`"
+ msgstr  ""
+ 
+@@ -9122,6 +9175,9 @@ msgstr  ""
+ msgid   "could not start accept_thread '%s'"
+ msgstr  ""
+ 
++msgid   "could not start fsmonitor listener thread"
++msgstr  ""
++
+ msgid   "could not start ls-files in .."
+ msgstr  ""
+ 
+@@ -9339,6 +9395,15 @@ msgstr  ""
+ msgid   "current working directory is untracked"
+ msgstr  ""
+ 
++msgid   "daemon failed to start"
++msgstr  ""
++
++msgid   "daemon not online yet"
++msgstr  ""
++
++msgid   "daemon terminated"
++msgstr  ""
++
+ #, c-format
+ msgid   "dangling %s %s"
+ msgstr  ""
+@@ -9461,9 +9526,6 @@ msgstr  ""
+ msgid   "depth for shallow clones"
+ msgstr  ""
+ 
+-msgid   "depth for shallow fetch"
+-msgstr  ""
+-
+ msgid   "dereference tags in the input (internal use)"
+ msgstr  ""
+ 
+@@ -9494,6 +9556,9 @@ msgstr  ""
+ msgid   "detach HEAD at named commit"
+ msgstr  ""
+ 
++msgid   "detach from console"
++msgstr  ""
++
+ msgid   "detached HEAD"
+ msgstr  ""
+ 
+@@ -11007,6 +11072,36 @@ msgstr  ""
+ msgid   "fsmonitor enabled"
+ msgstr  ""
+ 
++#, c-format
++msgid   "fsmonitor--daemon is already running '%s'"
++msgstr  ""
++
++msgid   "fsmonitor--daemon is not running"
++msgstr  ""
++
++msgid   "fsmonitor--daemon not supported on this platform"
++msgstr  ""
++
++#, c-format
++msgid   "fsmonitor-daemon is not watching '%s'\n"
++msgstr  ""
++
++#, c-format
++msgid   "fsmonitor-daemon is watching '%s'\n"
++msgstr  ""
++
++#, c-format
++msgid   "fsmonitor: cookie_result '%d' != SEEN"
++msgstr  ""
++
++#, c-format
++msgid   "fsmonitor_ipc__send_query: invalid path '%s'"
++msgstr  ""
++
++#, c-format
++msgid   "fsmonitor_ipc__send_query: unspecified error on '%s'"
++msgstr  ""
++
+ #, c-format
+ msgid   "fstat on %s failed"
+ msgstr  ""
+@@ -11396,6 +11491,18 @@ msgstr  ""
+ msgid   "git fsck [<options>] [<object>...]"
+ msgstr  ""
+ 
++msgid   "git fsmonitor--daemon run [<options>]"
++msgstr  ""
++
++msgid   "git fsmonitor--daemon start [<options>]"
++msgstr  ""
++
++msgid   "git fsmonitor--daemon status"
++msgstr  ""
++
++msgid   "git fsmonitor--daemon stop"
++msgstr  ""
++
+ msgid   "git gc [<options>]"
+ msgstr  ""
+ 
+@@ -11597,13 +11704,19 @@ msgstr  ""
+ msgid   "git receive-pack <git-dir>"
+ msgstr  ""
+ 
+-msgid   "git reflog delete [--rewrite] [--updateref] [--dry-run | -n] [--verbose] <refs>..."
++msgid   "git reflog [show] [<log-options>] [<ref>]"
++msgstr  ""
++
++msgid   "git reflog delete [--rewrite] [--updateref]\n"
++        "                  [--dry-run | -n] [--verbose] <ref>@{<specifier>}..."
+ msgstr  ""
+ 
+ msgid   "git reflog exists <ref>"
+ msgstr  ""
+ 
+-msgid   "git reflog expire [--expire=<time>] [--expire-unreachable=<time>] [--rewrite] [--updateref] [--stale-fix] [--dry-run | -n] [--verbose] [--all] <refs>..."
++msgid   "git reflog expire [--expire=<time>] [--expire-unreachable=<time>]\n"
++        "                  [--rewrite] [--updateref] [--stale-fix]\n"
++        "                  [--dry-run | -n] [--verbose] [--all [--single-worktree] | <refs>...]"
+ msgstr  ""
+ 
+ msgid   "git remote [-v | --verbose] show [-n] <name>"
+@@ -11851,9 +11964,6 @@ msgstr  ""
+ msgid   "git submodule--helper name <path>"
+ msgstr  ""
+ 
+-msgid   "git submodule--helper run-update-procedure [<options>] <path>"
+-msgstr  ""
+-
+ msgid   "git submodule--helper set-branch [-q|--quiet] (-b|--branch) <branch> <path>"
+ msgstr  ""
+ 
+@@ -11940,6 +12050,9 @@ msgstr  ""
+ msgid   "git worktree remove [<options>] <worktree>"
+ msgstr  ""
+ 
++msgid   "git worktree repair [<path>...]"
++msgstr  ""
++
+ msgid   "git worktree unlock <path>"
+ msgstr  ""
+ 
+@@ -12507,6 +12620,10 @@ msgstr  ""
+ msgid   "invalid '..' path segment"
+ msgstr  ""
+ 
++#, c-format
++msgid   "invalid 'ipc-threads' value (%d)"
++msgstr  ""
++
+ #, c-format
+ msgid   "invalid --decorate option: %s"
+ msgstr  ""
+@@ -12987,6 +13104,9 @@ msgstr  ""
+ msgid   "list only filenames"
+ msgstr  ""
+ 
++msgid   "list only objects"
++msgstr  ""
++
+ msgid   "list replace refs"
+ msgstr  ""
+ 
+@@ -13211,6 +13331,9 @@ msgstr  ""
+ msgid   "max length of output filename"
+ msgstr  ""
+ 
++msgid   "max seconds to wait for background daemon startup"
++msgstr  ""
++
+ msgid   "maximum length of delta chain allowed in the resulting pack"
+ msgstr  ""
+ 
+@@ -13951,7 +14074,7 @@ msgid   "not something we can merge in %s: %s"
+ msgstr  ""
+ 
+ #, c-format
+-msgid   "not tracking: ambiguous information for ref %s"
++msgid   "not tracking: ambiguous information for ref '%s'"
+ msgstr  ""
+ 
+ msgid   "not under version control"
+@@ -14411,9 +14534,6 @@ msgstr  ""
+ msgid   "override the up-to-date check"
+ msgstr  ""
+ 
+-msgid   "overrides update mode in case the repository is a fresh clone"
+-msgstr  ""
+-
+ #, c-format
+ msgid   "overwriting '%s'"
+ msgstr  ""
+@@ -15098,6 +15218,9 @@ msgstr  ""
+ msgid   "re-code metadata to this encoding"
+ msgstr  ""
+ 
++msgid   "re-fetch without negotiating common commits"
++msgstr  ""
++
+ #, c-format
+ msgid   "re-init: ignored --initial-branch=%s"
+ msgstr  ""
+@@ -15193,6 +15316,9 @@ msgstr  ""
+ msgid   "reading from '%s' beyond a symbolic link"
+ msgstr  ""
+ 
++msgid   "reading patches from stdin/tty..."
++msgstr  ""
++
+ msgid   "reason"
+ msgstr  ""
+ 
+@@ -15819,6 +15945,10 @@ msgstr  ""
+ msgid   "running %s\n"
+ msgstr  ""
+ 
++#, c-format
++msgid   "running fsmonitor-daemon in '%s'\n"
++msgstr  ""
++
+ #, c-format
+ msgid   "running trailer command '%s' failed"
+ msgstr  ""
+@@ -15996,9 +16126,6 @@ msgstr  ""
+ msgid   "set up tracking mode (see git-branch(1))"
+ msgstr  ""
+ 
+-msgid   "set up tracking mode (see git-pull(1))"
+-msgstr  ""
+-
+ msgid   "set upstream for git pull/fetch"
+ msgstr  ""
+ 
+@@ -16020,9 +16147,6 @@ msgstr  ""
+ msgid   "sfx"
+ msgstr  ""
+ 
+-msgid   "sha1"
+-msgstr  ""
+-
+ #, c-format
+ msgid   "sha1 information is lacking or useless (%s)."
+ msgstr  ""
+@@ -16585,6 +16709,10 @@ msgstr  ""
+ msgid   "start walk at commits listed by stdin"
+ msgstr  ""
+ 
++#, c-format
++msgid   "starting fsmonitor-daemon in '%s'\n"
++msgstr  ""
++
+ msgid   "stash failed"
+ msgstr  ""
+ 
+@@ -16713,9 +16841,6 @@ msgstr  ""
+ msgid   "suppress output for setting url of a submodule"
+ msgstr  ""
+ 
+-msgid   "suppress output for update by rebase or merge"
+-msgstr  ""
+-
+ msgid   "suppress output of entering each submodule command"
+ msgstr  ""
+ 
+@@ -16830,6 +16955,9 @@ msgstr  ""
+ msgid   "terminate input and output records by a NUL character"
+ msgstr  ""
+ 
++msgid   "terminate records with a NUL character"
++msgstr  ""
++
+ msgid   "terminate values with NUL byte"
+ msgstr  ""
+ 
+@@ -17105,6 +17233,9 @@ msgstr  ""
+ msgid   "transport: invalid depth option '%s'"
+ msgstr  ""
+ 
++msgid   "traverse submodules recursively"
++msgstr  ""
++
+ #, c-format
+ msgid   "traversed %lu commits\n"
+ msgstr  ""
+@@ -18210,6 +18341,9 @@ msgstr  ""
+ msgid   "use <n> digits to display object names"
+ msgstr  ""
+ 
++msgid   "use <n> ipc worker threads"
++msgstr  ""
++
+ msgid   "use <n> worker threads"
+ msgstr  ""
+ 
+@@ -18469,6 +18603,14 @@ msgstr  ""
+ msgid   "value is given this type"
+ msgstr  ""
+ 
++#, c-format
++msgid   "value of '%s' not bool or int: %d"
++msgstr  ""
++
++#, c-format
++msgid   "value of '%s' out of range: %d"
++msgstr  ""
++
+ #, c-format
+ msgid   "value of uploadpack.blobpackfileuri must be of the form '<object-hash> <pack-hash> <uri>' (got '%s')"
+ msgstr  ""
