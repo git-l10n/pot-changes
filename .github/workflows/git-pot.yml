@@ -15,7 +15,7 @@ jobs:
   git-pot:
     strategy:
       matrix:
-        branch: [master, next, seen]
+        branch: [main, next, seen]
     runs-on: ubuntu-latest
     env:
       AUTHOR_NAME: GotGit
@@ -32,10 +32,8 @@ jobs:
           mkdir -p po &&
           git config user.name "${{ env.AUTHOR_NAME }}" &&
           git config user.email "${{ env.AUTHOR_EMAIL }}" &&
-          git config diff.gettext-uniq.cachetextconv true &&
-          git config diff.gettext-uniq.textconv "msguniq --indent --no-location --sort-output --no-wrap" &&
-          printf "*.po  diff=gettext-uniq\n" >>.git/info/attributes &&
-          printf "*.pot diff=gettext-uniq\n" >>.git/info/attributes
+          git config diff.gettext-fmt.textconv "msgcat --indent --add-location=file --sort-by-file --no-wrap" &&
+          printf "*.pot diff=gettext-fmt\n" >>.git/info/attributes
       - name: skip if the commit was already tested
         id: skip-if-redundant
         run: |
@@ -81,6 +79,9 @@ jobs:
             diff=${date}.diff &&
             git diff -- po/git.pot >>"${diff}.tmp" &&
             if test -s "${diff}.tmp"; then
+              if test -s "$diff"; then
+                printf "\n\n########################################\n\n" >>"$diff"
+              fi &&
               cat "${diff}.tmp" >>"$diff" &&
               git add po/git.pot "$diff" last-check &&
               git commit -m "l10n: ${{ matrix.branch }}: changes of git.pot in $diff" &&
