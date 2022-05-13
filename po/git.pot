@@ -53,6 +53,7 @@ msgid "could not stage '%s'"
 msgstr ""
 
 #: add-interactive.c:709 add-interactive.c:898 reset.c:160 sequencer.c:3708
+#: builtin/stash.c:574
 msgid "could not write index"
 msgstr ""
 
@@ -790,14 +791,14 @@ msgstr ""
 #: builtin/diff-tree.c:155 builtin/difftool.c:733 builtin/fast-export.c:1245
 #: builtin/fetch.c:2141 builtin/fetch.c:2162 builtin/fetch.c:2167
 #: builtin/help.c:602 builtin/index-pack.c:1858 builtin/init-db.c:560
-#: builtin/log.c:1982 builtin/log.c:1984 builtin/ls-files.c:778
+#: builtin/log.c:1987 builtin/log.c:1989 builtin/ls-files.c:778
 #: builtin/merge-base.c:163 builtin/merge-base.c:169 builtin/merge.c:1409
 #: builtin/merge.c:1411 builtin/pack-objects.c:4098 builtin/push.c:592
 #: builtin/push.c:630 builtin/push.c:636 builtin/push.c:641
 #: builtin/rebase.c:1219 builtin/rebase.c:1221 builtin/rebase.c:1225
 #: builtin/repack.c:688 builtin/repack.c:719 builtin/reset.c:433
 #: builtin/reset.c:469 builtin/rev-list.c:537 builtin/show-branch.c:711
-#: builtin/stash.c:1696 builtin/stash.c:1699 builtin/submodule--helper.c:1328
+#: builtin/stash.c:1714 builtin/stash.c:1717 builtin/submodule--helper.c:1328
 #: builtin/submodule--helper.c:3053 builtin/tag.c:527 builtin/tag.c:573
 #: builtin/worktree.c:779
 #, c-format
@@ -1496,7 +1497,7 @@ msgstr ""
 msgid "archive format"
 msgstr ""
 
-#: archive.c:552 builtin/log.c:1822
+#: archive.c:552 builtin/log.c:1827
 msgid "prefix"
 msgstr ""
 
@@ -1562,8 +1563,8 @@ msgstr ""
 #: archive.c:580 fetch-pack.c:300 revision.c:2921 builtin/add.c:530
 #: builtin/add.c:562 builtin/checkout.c:1782 builtin/clone.c:1099
 #: builtin/clone.c:1102 builtin/commit.c:371 builtin/fast-export.c:1230
-#: builtin/index-pack.c:1854 builtin/log.c:2148 builtin/reset.c:442
-#: builtin/reset.c:500 builtin/rm.c:281 builtin/stash.c:1708
+#: builtin/index-pack.c:1854 builtin/log.c:2153 builtin/reset.c:442
+#: builtin/reset.c:500 builtin/rm.c:281 builtin/stash.c:1726
 #: builtin/worktree.c:580 builtin/worktree.c:781 http-fetch.c:144
 #: http-fetch.c:153
 #, c-format
@@ -1719,8 +1720,8 @@ msgstr ""
 
 #: blame.c:2817 bundle.c:231 midx.c:1058 ref-filter.c:2371 remote.c:2157
 #: sequencer.c:2347 sequencer.c:4871 submodule.c:913 builtin/commit.c:1118
-#: builtin/log.c:437 builtin/log.c:1068 builtin/log.c:1676 builtin/log.c:2104
-#: builtin/log.c:2395 builtin/merge.c:431 builtin/pack-objects.c:3381
+#: builtin/log.c:437 builtin/log.c:1073 builtin/log.c:1681 builtin/log.c:2109
+#: builtin/log.c:2400 builtin/merge.c:431 builtin/pack-objects.c:3381
 #: builtin/pack-objects.c:3781 builtin/pack-objects.c:3796
 #: builtin/shortlog.c:255
 msgid "revision walk setup failed"
@@ -1972,7 +1973,7 @@ msgstr ""
 msgid "ref '%s' is excluded by the rev-list options"
 msgstr ""
 
-#: bundle.c:533 builtin/log.c:211 builtin/log.c:1989 builtin/shortlog.c:400
+#: bundle.c:533 builtin/log.c:211 builtin/log.c:1994 builtin/shortlog.c:400
 #, c-format
 msgid "unrecognized argument: %s"
 msgstr ""
@@ -5027,7 +5028,7 @@ msgid "Could not parse object '%s'"
 msgstr ""
 
 #: merge-recursive.c:3841 builtin/merge.c:720 builtin/merge.c:912
-#: builtin/stash.c:489
+#: builtin/stash.c:490
 msgid "Unable to write index."
 msgstr ""
 
@@ -5037,7 +5038,7 @@ msgstr ""
 
 #: merge.c:102 rerere.c:705 builtin/am.c:1989 builtin/am.c:2023
 #: builtin/checkout.c:603 builtin/checkout.c:865 builtin/clone.c:714
-#: builtin/stash.c:269
+#: builtin/stash.c:270
 msgid "unable to write new index file"
 msgstr ""
 
@@ -5681,40 +5682,40 @@ msgstr ""
 msgid "path '%s' does not exist in '%.*s'"
 msgstr ""
 
-#: object-name.c:1837
+#: object-name.c:1838
 #, c-format
 msgid ""
 "path '%s' is in the index, but not at stage %d\n"
 "hint: Did you mean ':%d:%s'?"
 msgstr ""
 
-#: object-name.c:1853
+#: object-name.c:1855
 #, c-format
 msgid ""
 "path '%s' is in the index, but not '%s'\n"
 "hint: Did you mean ':%d:%s' aka ':%d:./%s'?"
 msgstr ""
 
-#: object-name.c:1861
+#: object-name.c:1863
 #, c-format
 msgid "path '%s' exists on disk, but not in the index"
 msgstr ""
 
-#: object-name.c:1863
+#: object-name.c:1865
 #, c-format
 msgid "path '%s' does not exist (neither on disk nor in the index)"
 msgstr ""
 
-#: object-name.c:1876
+#: object-name.c:1878
 msgid "relative path syntax can't be used outside working tree"
 msgstr ""
 
-#: object-name.c:1901
+#: object-name.c:1917
 #, c-format
 msgid "<object>:<path> required, only <object> '%s' given"
 msgstr ""
 
-#: object-name.c:2014
+#: object-name.c:2033
 #, c-format
 msgid "invalid object name '%.*s'."
 msgstr ""
@@ -6279,7 +6280,7 @@ msgstr ""
 msgid "unordered stage entries for '%s'"
 msgstr ""
 
-#: read-cache.c:2096 read-cache.c:2402 rerere.c:549 rerere.c:583 rerere.c:1096
+#: read-cache.c:2096 read-cache.c:2418 rerere.c:549 rerere.c:583 rerere.c:1096
 #: submodule.c:1831 builtin/add.c:586 builtin/check-ignore.c:183
 #: builtin/checkout.c:532 builtin/checkout.c:724 builtin/clean.c:1016
 #: builtin/commit.c:379 builtin/diff-tree.c:122 builtin/grep.c:521
@@ -6298,80 +6299,80 @@ msgstr ""
 msgid "unable to join load_cache_entries thread: %s"
 msgstr ""
 
-#: read-cache.c:2286
+#: read-cache.c:2302
 #, c-format
 msgid "%s: index file open failed"
 msgstr ""
 
-#: read-cache.c:2290
+#: read-cache.c:2306
 #, c-format
 msgid "%s: cannot stat the open index"
 msgstr ""
 
-#: read-cache.c:2294
+#: read-cache.c:2310
 #, c-format
 msgid "%s: index file smaller than expected"
 msgstr ""
 
-#: read-cache.c:2298
+#: read-cache.c:2314
 #, c-format
 msgid "%s: unable to map index file%s"
 msgstr ""
 
-#: read-cache.c:2341
+#: read-cache.c:2357
 #, c-format
 msgid "unable to create load_index_extensions thread: %s"
 msgstr ""
 
-#: read-cache.c:2368
+#: read-cache.c:2384
 #, c-format
 msgid "unable to join load_index_extensions thread: %s"
 msgstr ""
 
-#: read-cache.c:2414
+#: read-cache.c:2430
 #, c-format
 msgid "could not freshen shared index '%s'"
 msgstr ""
 
-#: read-cache.c:2473
+#: read-cache.c:2489
 #, c-format
 msgid "broken index, expect %s in %s, got %s"
 msgstr ""
 
-#: read-cache.c:3032
+#: read-cache.c:3048
 msgid "cannot write split index for a sparse index"
 msgstr ""
 
-#: read-cache.c:3114 strbuf.c:1192 wrapper.c:717 builtin/merge.c:1156
+#: read-cache.c:3130 strbuf.c:1192 wrapper.c:717 builtin/merge.c:1156
 #, c-format
 msgid "could not close '%s'"
 msgstr ""
 
-#: read-cache.c:3157
+#: read-cache.c:3173
 msgid "failed to convert to a sparse-index"
 msgstr ""
 
-#: read-cache.c:3228
+#: read-cache.c:3244
 #, c-format
 msgid "could not stat '%s'"
 msgstr ""
 
-#: read-cache.c:3241
+#: read-cache.c:3257
 #, c-format
 msgid "unable to open git dir: %s"
 msgstr ""
 
-#: read-cache.c:3253
+#: read-cache.c:3269
 #, c-format
 msgid "unable to unlink: %s"
 msgstr ""
 
-#: read-cache.c:3282
+#: read-cache.c:3298
 #, c-format
 msgid "cannot fix permission bits on '%s'"
 msgstr ""
 
-#: read-cache.c:3439
+#: read-cache.c:3455
 #, c-format
 msgid "%s: cannot drop to stage #0"
 msgstr ""
@@ -7143,7 +7144,7 @@ msgstr ""
 msgid "Recorded preimage for '%s'"
 msgstr ""
 
-#: rerere.c:866 submodule.c:2290 builtin/log.c:2050
+#: rerere.c:866 submodule.c:2290 builtin/log.c:2055
 #: builtin/submodule--helper.c:1786 builtin/submodule--helper.c:1833
 #, c-format
 msgid "could not create directory '%s'"
@@ -8165,7 +8166,7 @@ msgstr ""
 msgid "unable to set up work tree using invalid config"
 msgstr ""
 
-#: setup.c:425 builtin/rev-parse.c:895
+#: setup.c:425 builtin/rev-parse.c:898
 msgid "this operation must be run in a work tree"
 msgstr ""
 
@@ -8912,105 +8913,105 @@ msgstr ""
 msgid "too-short tree file"
 msgstr ""
 
-#: unpack-trees.c:118
+#: unpack-trees.c:119
 #, c-format
 msgid ""
 "Your local changes to the following files would be overwritten by checkout:\n"
 "%%sPlease commit your changes or stash them before you switch branches."
 msgstr ""
 
-#: unpack-trees.c:120
+#: unpack-trees.c:121
 #, c-format
 msgid ""
 "Your local changes to the following files would be overwritten by checkout:\n"
 "%%s"
 msgstr ""
 
-#: unpack-trees.c:123
+#: unpack-trees.c:124
 #, c-format
 msgid ""
 "Your local changes to the following files would be overwritten by merge:\n"
 "%%sPlease commit your changes or stash them before you merge."
 msgstr ""
 
-#: unpack-trees.c:125
+#: unpack-trees.c:126
 #, c-format
 msgid ""
 "Your local changes to the following files would be overwritten by merge:\n"
 "%%s"
 msgstr ""
 
-#: unpack-trees.c:128
+#: unpack-trees.c:129
 #, c-format
 msgid ""
 "Your local changes to the following files would be overwritten by %s:\n"
 "%%sPlease commit your changes or stash them before you %s."
 msgstr ""
 
-#: unpack-trees.c:130
+#: unpack-trees.c:131
 #, c-format
 msgid ""
 "Your local changes to the following files would be overwritten by %s:\n"
 "%%s"
 msgstr ""
 
-#: unpack-trees.c:135
+#: unpack-trees.c:136
 #, c-format
 msgid ""
 "Updating the following directories would lose untracked files in them:\n"
 "%s"
 msgstr ""
 
-#: unpack-trees.c:138
+#: unpack-trees.c:139
 #, c-format
 msgid ""
 "Refusing to remove the current working directory:\n"
 "%s"
 msgstr ""
 
-#: unpack-trees.c:142
+#: unpack-trees.c:143
 #, c-format
 msgid ""
 "The following untracked working tree files would be removed by checkout:\n"
 "%%sPlease move or remove them before you switch branches."
 msgstr ""
 
-#: unpack-trees.c:144
+#: unpack-trees.c:145
 #, c-format
 msgid ""
 "The following untracked working tree files would be removed by checkout:\n"
 "%%s"
 msgstr ""
 
-#: unpack-trees.c:147
+#: unpack-trees.c:148
 #, c-format
 msgid ""
 "The following untracked working tree files would be removed by merge:\n"
 "%%sPlease move or remove them before you merge."
 msgstr ""
 
-#: unpack-trees.c:149
+#: unpack-trees.c:150
 #, c-format
 msgid ""
 "The following untracked working tree files would be removed by merge:\n"
 "%%s"
 msgstr ""
 
-#: unpack-trees.c:152
+#: unpack-trees.c:153
 #, c-format
 msgid ""
 "The following untracked working tree files would be removed by %s:\n"
 "%%sPlease move or remove them before you %s."
 msgstr ""
 
-#: unpack-trees.c:154
+#: unpack-trees.c:155
 #, c-format
 msgid ""
 "The following untracked working tree files would be removed by %s:\n"
 "%%s"
 msgstr ""
 
-#: unpack-trees.c:160
+#: unpack-trees.c:161
 #, c-format
 msgid ""
 "The following untracked working tree files would be overwritten by "
@@ -9018,7 +9019,7 @@ msgid ""
 "%%sPlease move or remove them before you switch branches."
 msgstr ""
 
-#: unpack-trees.c:162
+#: unpack-trees.c:163
 #, c-format
 msgid ""
 "The following untracked working tree files would be overwritten by "
@@ -9026,47 +9027,47 @@ msgid ""
 "%%s"
 msgstr ""
 
-#: unpack-trees.c:165
+#: unpack-trees.c:166
 #, c-format
 msgid ""
 "The following untracked working tree files would be overwritten by merge:\n"
 "%%sPlease move or remove them before you merge."
 msgstr ""
 
-#: unpack-trees.c:167
+#: unpack-trees.c:168
 #, c-format
 msgid ""
 "The following untracked working tree files would be overwritten by merge:\n"
 "%%s"
 msgstr ""
 
-#: unpack-trees.c:170
+#: unpack-trees.c:171
 #, c-format
 msgid ""
 "The following untracked working tree files would be overwritten by %s:\n"
 "%%sPlease move or remove them before you %s."
 msgstr ""
 
-#: unpack-trees.c:172
+#: unpack-trees.c:173
 #, c-format
 msgid ""
 "The following untracked working tree files would be overwritten by %s:\n"
 "%%s"
 msgstr ""
 
-#: unpack-trees.c:180
+#: unpack-trees.c:181
 #, c-format
 msgid "Entry '%s' overlaps with '%s'.  Cannot bind."
 msgstr ""
 
-#: unpack-trees.c:183
+#: unpack-trees.c:184
 #, c-format
 msgid ""
 "Cannot update submodule:\n"
 "%s"
 msgstr ""
 
-#: unpack-trees.c:186
+#: unpack-trees.c:187
 #, c-format
 msgid ""
 "The following paths are not up to date and were left despite sparse "
@@ -9074,14 +9075,14 @@ msgid ""
 "%s"
 msgstr ""
 
-#: unpack-trees.c:188
+#: unpack-trees.c:189
 #, c-format
 msgid ""
 "The following paths are unmerged and were left despite sparse patterns:\n"
 "%s"
 msgstr ""
 
-#: unpack-trees.c:190
+#: unpack-trees.c:191
 #, c-format
 msgid ""
 "The following paths were already present and thus not updated despite sparse "
@@ -9089,34 +9090,34 @@ msgid ""
 "%s"
 msgstr ""
 
-#: unpack-trees.c:270
+#: unpack-trees.c:271
 #, c-format
 msgid "Aborting\n"
 msgstr ""
 
-#: unpack-trees.c:297
+#: unpack-trees.c:298
 #, c-format
 msgid ""
 "After fixing the above paths, you may want to run `git sparse-checkout "
 "reapply`.\n"
 msgstr ""
 
-#: unpack-trees.c:358
+#: unpack-trees.c:359
 msgid "Updating files"
 msgstr ""
 
-#: unpack-trees.c:390
+#: unpack-trees.c:391
 msgid ""
 "the following paths have collided (e.g. case-sensitive paths\n"
 "on a case-insensitive filesystem) and only one from the same\n"
 "colliding group is in the working tree:\n"
 msgstr ""
 
-#: unpack-trees.c:1664
+#: unpack-trees.c:1665
 msgid "Updating index flags"
 msgstr ""
 
-#: unpack-trees.c:2925
+#: unpack-trees.c:2931
 #, c-format
 msgid "worktree and untracked commit have duplicate entries: %s"
 msgstr ""
@@ -9852,7 +9853,7 @@ msgstr ""
 msgid "Unstaged changes after refreshing the index:"
 msgstr ""
 
-#: builtin/add.c:312 builtin/rev-parse.c:993
+#: builtin/add.c:312 builtin/rev-parse.c:996
 msgid "Could not read the index"
 msgstr ""
 
@@ -9889,7 +9890,7 @@ msgid "dry run"
 msgstr ""
 
 #: builtin/add.c:368 builtin/check-ignore.c:22 builtin/commit.c:1483
-#: builtin/count-objects.c:98 builtin/fsck.c:789 builtin/log.c:2346
+#: builtin/count-objects.c:98 builtin/fsck.c:789 builtin/log.c:2351
 #: builtin/mv.c:123 builtin/read-tree.c:120
 msgid "be verbose"
 msgstr ""
@@ -9994,7 +9995,7 @@ msgid "--chmod param '%s' must be either -x or +x"
 msgstr ""
 
 #: builtin/add.c:555 builtin/checkout.c:1770 builtin/commit.c:365
-#: builtin/reset.c:436 builtin/rm.c:275 builtin/stash.c:1702
+#: builtin/reset.c:436 builtin/rm.c:275 builtin/stash.c:1720
 #, c-format
 msgid "'%s' and pathspec arguments cannot be used together"
 msgstr ""
@@ -10248,7 +10249,7 @@ msgid "allow fall back on 3way merging if needed"
 msgstr ""
 
 #: builtin/am.c:2335 builtin/init-db.c:547 builtin/prune-packed.c:16
-#: builtin/repack.c:646 builtin/stash.c:946
+#: builtin/repack.c:646 builtin/stash.c:964
 msgid "be quiet"
 msgstr ""
 
@@ -10893,7 +10894,7 @@ msgstr ""
 msgid "ignore whitespace differences"
 msgstr ""
 
-#: builtin/blame.c:880 builtin/log.c:1870
+#: builtin/blame.c:880 builtin/log.c:1875
 msgid "rev"
 msgstr ""
 
@@ -12165,7 +12166,7 @@ msgstr ""
 msgid "perform a 3-way merge with the new branch"
 msgstr ""
 
-#: builtin/checkout.c:1556 builtin/log.c:1857 parse-options.h:354
+#: builtin/checkout.c:1556 builtin/log.c:1862 parse-options.h:354
 msgid "style"
 msgstr ""
 
@@ -12764,7 +12765,7 @@ msgid "working tree '%s' already exists."
 msgstr ""
 
 #: builtin/clone.c:984 builtin/clone.c:1005 builtin/difftool.c:256
-#: builtin/log.c:2045 builtin/worktree.c:350 builtin/worktree.c:382
+#: builtin/log.c:2050 builtin/worktree.c:350 builtin/worktree.c:382
 #, c-format
 msgid "could not create leading directories of '%s'"
 msgstr ""
@@ -12880,7 +12881,7 @@ msgid ""
 "paths] [--[no-]max-new-filters <n>] [--[no-]progress] <split options>"
 msgstr ""
 
-#: builtin/commit-graph.c:51 builtin/fetch.c:196 builtin/log.c:1826
+#: builtin/commit-graph.c:51 builtin/fetch.c:196 builtin/log.c:1831
 msgid "dir"
 msgstr ""
 
@@ -13000,7 +13001,7 @@ msgid "id of a parent commit object"
 msgstr ""
 
 #: builtin/commit-tree.c:112 builtin/commit.c:1626 builtin/merge.c:284
-#: builtin/notes.c:407 builtin/notes.c:573 builtin/stash.c:1666
+#: builtin/notes.c:407 builtin/notes.c:573 builtin/stash.c:1684
 #: builtin/tag.c:455
 msgid "message"
 msgstr ""
@@ -13465,7 +13466,7 @@ msgstr ""
 msgid "add custom trailer(s)"
 msgstr ""
 
-#: builtin/commit.c:1637 builtin/log.c:1801 builtin/merge.c:306
+#: builtin/commit.c:1637 builtin/log.c:1806 builtin/merge.c:306
 #: builtin/pull.c:147 builtin/revert.c:110
 msgid "add a Signed-off-by trailer"
 msgstr ""
@@ -14287,7 +14288,7 @@ msgstr ""
 msgid "skip output of blob data"
 msgstr ""
 
-#: builtin/fast-export.c:1196 builtin/log.c:1873
+#: builtin/fast-export.c:1196 builtin/log.c:1878
 msgid "refspec"
 msgstr ""
 
@@ -16458,351 +16459,351 @@ msgstr ""
 msgid "git show %s: bad file"
 msgstr ""
 
-#: builtin/log.c:622 builtin/log.c:715
+#: builtin/log.c:622 builtin/log.c:720
 #, c-format
 msgid "could not read object %s"
 msgstr ""
 
-#: builtin/log.c:740
+#: builtin/log.c:745
 #, c-format
 msgid "unknown type: %d"
 msgstr ""
 
-#: builtin/log.c:893
+#: builtin/log.c:898
 #, c-format
 msgid "%s: invalid cover from description mode"
 msgstr ""
 
-#: builtin/log.c:900
+#: builtin/log.c:905
 msgid "format.headers without value"
 msgstr ""
 
-#: builtin/log.c:1029
+#: builtin/log.c:1034
 #, c-format
 msgid "cannot open patch file %s"
 msgstr ""
 
-#: builtin/log.c:1046
+#: builtin/log.c:1051
 msgid "need exactly one range"
 msgstr ""
 
-#: builtin/log.c:1056
+#: builtin/log.c:1061
 msgid "not a range"
 msgstr ""
 
-#: builtin/log.c:1220
+#: builtin/log.c:1225
 msgid "cover letter needs email format"
 msgstr ""
 
-#: builtin/log.c:1226
+#: builtin/log.c:1231
 msgid "failed to create cover-letter file"
 msgstr ""
 
-#: builtin/log.c:1313
+#: builtin/log.c:1318
 #, c-format
 msgid "insane in-reply-to: %s"
 msgstr ""
 
-#: builtin/log.c:1340
+#: builtin/log.c:1345
 msgid "git format-patch [<options>] [<since> | <revision-range>]"
 msgstr ""
 
-#: builtin/log.c:1398
+#: builtin/log.c:1403
 msgid "two output directories?"
 msgstr ""
 
-#: builtin/log.c:1549 builtin/log.c:2377 builtin/log.c:2379 builtin/log.c:2391
+#: builtin/log.c:1554 builtin/log.c:2382 builtin/log.c:2384 builtin/log.c:2396
 #, c-format
 msgid "unknown commit %s"
 msgstr ""
 
-#: builtin/log.c:1560 builtin/replace.c:58 builtin/replace.c:207
+#: builtin/log.c:1565 builtin/replace.c:58 builtin/replace.c:207
 #: builtin/replace.c:210
 #, c-format
 msgid "failed to resolve '%s' as a valid ref"
 msgstr ""
 
-#: builtin/log.c:1569
+#: builtin/log.c:1574
 msgid "could not find exact merge base"
 msgstr ""
 
-#: builtin/log.c:1579
+#: builtin/log.c:1584
 msgid ""
 "failed to get upstream, if you want to record base commit automatically,\n"
 "please use git branch --set-upstream-to to track a remote branch.\n"
 "Or you could specify base commit by --base=<base-commit-id> manually"
 msgstr ""
 
-#: builtin/log.c:1602
+#: builtin/log.c:1607
 msgid "failed to find exact merge base"
 msgstr ""
 
-#: builtin/log.c:1619
+#: builtin/log.c:1624
 msgid "base commit should be the ancestor of revision list"
 msgstr ""
 
-#: builtin/log.c:1629
+#: builtin/log.c:1634
 msgid "base commit shouldn't be in revision list"
 msgstr ""
 
-#: builtin/log.c:1687
+#: builtin/log.c:1692
 msgid "cannot get patch id"
 msgstr ""
 
-#: builtin/log.c:1750
+#: builtin/log.c:1755
 msgid "failed to infer range-diff origin of current series"
 msgstr ""
 
-#: builtin/log.c:1752
+#: builtin/log.c:1757
 #, c-format
 msgid "using '%s' as range-diff origin of current series"
 msgstr ""
 
-#: builtin/log.c:1796
+#: builtin/log.c:1801
 msgid "use [PATCH n/m] even with a single patch"
 msgstr ""
 
-#: builtin/log.c:1799
+#: builtin/log.c:1804
 msgid "use [PATCH] even with multiple patches"
 msgstr ""
 
-#: builtin/log.c:1803
+#: builtin/log.c:1808
 msgid "print patches to standard out"
 msgstr ""
 
-#: builtin/log.c:1805
+#: builtin/log.c:1810
 msgid "generate a cover letter"
 msgstr ""
 
-#: builtin/log.c:1807
+#: builtin/log.c:1812
 msgid "use simple number sequence for output file names"
 msgstr ""
 
-#: builtin/log.c:1808
+#: builtin/log.c:1813
 msgid "sfx"
 msgstr ""
 
-#: builtin/log.c:1809
+#: builtin/log.c:1814
 msgid "use <sfx> instead of '.patch'"
 msgstr ""
 
-#: builtin/log.c:1811
+#: builtin/log.c:1816
 msgid "start numbering patches at <n> instead of 1"
 msgstr ""
 
-#: builtin/log.c:1812
+#: builtin/log.c:1817
 msgid "reroll-count"
 msgstr ""
 
-#: builtin/log.c:1813
+#: builtin/log.c:1818
 msgid "mark the series as Nth re-roll"
 msgstr ""
 
-#: builtin/log.c:1815
+#: builtin/log.c:1820
 msgid "max length of output filename"
 msgstr ""
 
-#: builtin/log.c:1817
+#: builtin/log.c:1822
 msgid "use [RFC PATCH] instead of [PATCH]"
 msgstr ""
 
-#: builtin/log.c:1820
+#: builtin/log.c:1825
 msgid "cover-from-description-mode"
 msgstr ""
 
-#: builtin/log.c:1821
+#: builtin/log.c:1826
 msgid "generate parts of a cover letter based on a branch's description"
 msgstr ""
 
-#: builtin/log.c:1823
+#: builtin/log.c:1828
 msgid "use [<prefix>] instead of [PATCH]"
 msgstr ""
 
-#: builtin/log.c:1826
+#: builtin/log.c:1831
 msgid "store resulting files in <dir>"
 msgstr ""
 
-#: builtin/log.c:1829
+#: builtin/log.c:1834
 msgid "don't strip/add [PATCH]"
 msgstr ""
 
-#: builtin/log.c:1832
+#: builtin/log.c:1837
 msgid "don't output binary diffs"
 msgstr ""
 
-#: builtin/log.c:1834
+#: builtin/log.c:1839
 msgid "output all-zero hash in From header"
 msgstr ""
 
-#: builtin/log.c:1836
+#: builtin/log.c:1841
 msgid "don't include a patch matching a commit upstream"
 msgstr ""
 
-#: builtin/log.c:1838
+#: builtin/log.c:1843
 msgid "show patch format instead of default (patch + stat)"
 msgstr ""
 
-#: builtin/log.c:1840
+#: builtin/log.c:1845
 msgid "Messaging"
 msgstr ""
 
-#: builtin/log.c:1841
+#: builtin/log.c:1846
 msgid "header"
 msgstr ""
 
-#: builtin/log.c:1842
+#: builtin/log.c:1847
 msgid "add email header"
 msgstr ""
 
-#: builtin/log.c:1843 builtin/log.c:1844
+#: builtin/log.c:1848 builtin/log.c:1849
 msgid "email"
 msgstr ""
 
-#: builtin/log.c:1843
+#: builtin/log.c:1848
 msgid "add To: header"
 msgstr ""
 
-#: builtin/log.c:1844
+#: builtin/log.c:1849
 msgid "add Cc: header"
 msgstr ""
 
-#: builtin/log.c:1845
+#: builtin/log.c:1850
 msgid "ident"
 msgstr ""
 
-#: builtin/log.c:1846
+#: builtin/log.c:1851
 msgid "set From address to <ident> (or committer ident if absent)"
 msgstr ""
 
-#: builtin/log.c:1848
+#: builtin/log.c:1853
 msgid "message-id"
 msgstr ""
 
-#: builtin/log.c:1849
+#: builtin/log.c:1854
 msgid "make first mail a reply to <message-id>"
 msgstr ""
 
-#: builtin/log.c:1850 builtin/log.c:1853
+#: builtin/log.c:1855 builtin/log.c:1858
 msgid "boundary"
 msgstr ""
 
-#: builtin/log.c:1851
+#: builtin/log.c:1856
 msgid "attach the patch"
 msgstr ""
 
-#: builtin/log.c:1854
+#: builtin/log.c:1859
 msgid "inline the patch"
 msgstr ""
 
-#: builtin/log.c:1858
+#: builtin/log.c:1863
 msgid "enable message threading, styles: shallow, deep"
 msgstr ""
 
-#: builtin/log.c:1860
+#: builtin/log.c:1865
 msgid "signature"
 msgstr ""
 
-#: builtin/log.c:1861
+#: builtin/log.c:1866
 msgid "add a signature"
 msgstr ""
 
-#: builtin/log.c:1862
+#: builtin/log.c:1867
 msgid "base-commit"
 msgstr ""
 
-#: builtin/log.c:1863
+#: builtin/log.c:1868
 msgid "add prerequisite tree info to the patch series"
 msgstr ""
 
-#: builtin/log.c:1866
+#: builtin/log.c:1871
 msgid "add a signature from a file"
 msgstr ""
 
-#: builtin/log.c:1867
+#: builtin/log.c:1872
 msgid "don't print the patch filenames"
 msgstr ""
 
-#: builtin/log.c:1869
+#: builtin/log.c:1874
 msgid "show progress while generating patches"
 msgstr ""
 
-#: builtin/log.c:1871
+#: builtin/log.c:1876
 msgid "show changes against <rev> in cover letter or single patch"
 msgstr ""
 
-#: builtin/log.c:1874
+#: builtin/log.c:1879
 msgid "show changes against <refspec> in cover letter or single patch"
 msgstr ""
 
-#: builtin/log.c:1876 builtin/range-diff.c:28
+#: builtin/log.c:1881 builtin/range-diff.c:28
 msgid "percentage by which creation is weighted"
 msgstr ""
 
-#: builtin/log.c:1967
+#: builtin/log.c:1972
 #, c-format
 msgid "invalid ident line: %s"
 msgstr ""
 
-#: builtin/log.c:1992
+#: builtin/log.c:1997
 msgid "--name-only does not make sense"
 msgstr ""
 
-#: builtin/log.c:1994
+#: builtin/log.c:1999
 msgid "--name-status does not make sense"
 msgstr ""
 
-#: builtin/log.c:1996
+#: builtin/log.c:2001
 msgid "--check does not make sense"
 msgstr ""
 
-#: builtin/log.c:1998
+#: builtin/log.c:2003
 msgid "--remerge-diff does not make sense"
 msgstr ""
 
-#: builtin/log.c:2137
+#: builtin/log.c:2142
 msgid "--interdiff requires --cover-letter or single patch"
 msgstr ""
 
-#: builtin/log.c:2141
+#: builtin/log.c:2146
 msgid "Interdiff:"
 msgstr ""
 
-#: builtin/log.c:2142
+#: builtin/log.c:2147
 #, c-format
 msgid "Interdiff against v%d:"
 msgstr ""
 
-#: builtin/log.c:2152
+#: builtin/log.c:2157
 msgid "--range-diff requires --cover-letter or single patch"
 msgstr ""
 
-#: builtin/log.c:2160
+#: builtin/log.c:2165
 msgid "Range-diff:"
 msgstr ""
 
-#: builtin/log.c:2161
+#: builtin/log.c:2166
 #, c-format
 msgid "Range-diff against v%d:"
 msgstr ""
 
-#: builtin/log.c:2172
+#: builtin/log.c:2177
 #, c-format
 msgid "unable to read signature file '%s'"
 msgstr ""
 
-#: builtin/log.c:2208
+#: builtin/log.c:2213
 msgid "Generating patches"
 msgstr ""
 
-#: builtin/log.c:2252
+#: builtin/log.c:2257
 msgid "failed to create output files"
 msgstr ""
 
-#: builtin/log.c:2312
+#: builtin/log.c:2317
 msgid "git cherry [-v] [<upstream> [<head> [<limit>]]]"
 msgstr ""
 
-#: builtin/log.c:2366
+#: builtin/log.c:2371
 #, c-format
 msgid ""
 "Could not find a tracked remote branch, please specify <upstream> manually.\n"
@@ -18163,7 +18164,7 @@ msgstr ""
 msgid "use notes from <notes-ref>"
 msgstr ""
 
-#: builtin/notes.c:1036 builtin/stash.c:1802
+#: builtin/notes.c:1036 builtin/stash.c:1823
 #, c-format
 msgid "unknown subcommand: %s"
 msgstr ""
@@ -18344,7 +18345,7 @@ msgstr ""
 msgid "not a rev '%s'"
 msgstr ""
 
-#: builtin/pack-objects.c:3766 builtin/rev-parse.c:1061
+#: builtin/pack-objects.c:3766 builtin/rev-parse.c:1064
 #, c-format
 msgid "bad revision '%s'"
 msgstr ""
@@ -20656,8 +20657,8 @@ msgstr ""
 msgid "Cannot do a %s reset in the middle of a merge."
 msgstr ""
 
-#: builtin/reset.c:402 builtin/stash.c:606 builtin/stash.c:669
-#: builtin/stash.c:693
+#: builtin/reset.c:402 builtin/stash.c:624 builtin/stash.c:687
+#: builtin/stash.c:711
 msgid "be quiet, only report errors"
 msgstr ""
 
@@ -20784,37 +20785,37 @@ msgstr ""
 msgid "not a gitdir '%s'"
 msgstr ""
 
-#: builtin/rev-parse.c:739
+#: builtin/rev-parse.c:742
 msgid "--git-path requires an argument"
 msgstr ""
 
-#: builtin/rev-parse.c:749
+#: builtin/rev-parse.c:752
 msgid "-n requires an argument"
 msgstr ""
 
-#: builtin/rev-parse.c:763
+#: builtin/rev-parse.c:766
 msgid "--path-format requires an argument"
 msgstr ""
 
-#: builtin/rev-parse.c:769
+#: builtin/rev-parse.c:772
 #, c-format
 msgid "unknown argument to --path-format: %s"
 msgstr ""
 
-#: builtin/rev-parse.c:776
+#: builtin/rev-parse.c:779
 msgid "--default requires an argument"
 msgstr ""
 
-#: builtin/rev-parse.c:782
+#: builtin/rev-parse.c:785
 msgid "--prefix requires an argument"
 msgstr ""
 
-#: builtin/rev-parse.c:851
+#: builtin/rev-parse.c:854
 #, c-format
 msgid "unknown mode for --abbrev-ref: %s"
 msgstr ""
 
-#: builtin/rev-parse.c:1023
+#: builtin/rev-parse.c:1026
 #, c-format
 msgid "unknown mode for --show-object-format: %s"
 msgstr ""
@@ -21375,27 +21376,27 @@ msgstr ""
 msgid "error while refreshing working directory"
 msgstr ""
 
-#: builtin/stash.c:24 builtin/stash.c:40
+#: builtin/stash.c:25 builtin/stash.c:41
 msgid "git stash list [<options>]"
 msgstr ""
 
-#: builtin/stash.c:25 builtin/stash.c:45
+#: builtin/stash.c:26 builtin/stash.c:46
 msgid "git stash show [<options>] [<stash>]"
 msgstr ""
 
-#: builtin/stash.c:26 builtin/stash.c:50
+#: builtin/stash.c:27 builtin/stash.c:51
 msgid "git stash drop [-q|--quiet] [<stash>]"
 msgstr ""
 
-#: builtin/stash.c:27
+#: builtin/stash.c:28
 msgid "git stash ( pop | apply ) [--index] [-q|--quiet] [<stash>]"
 msgstr ""
 
-#: builtin/stash.c:28 builtin/stash.c:65
+#: builtin/stash.c:29 builtin/stash.c:66
 msgid "git stash branch <branchname> [<stash>]"
 msgstr ""
 
-#: builtin/stash.c:30
+#: builtin/stash.c:31
 msgid ""
 "git stash [push [-p|--patch] [-S|--staged] [-k|--[no-]keep-index] [-q|--"
 "quiet]\n"
@@ -21404,62 +21405,62 @@ msgid ""
 "          [--] [<pathspec>...]]"
 msgstr ""
 
-#: builtin/stash.c:34
+#: builtin/stash.c:35
 msgid ""
 "git stash save [-p|--patch] [-S|--staged] [-k|--[no-]keep-index] [-q|--"
 "quiet]\n"
 "          [-u|--include-untracked] [-a|--all] [<message>]"
 msgstr ""
 
-#: builtin/stash.c:55
+#: builtin/stash.c:56
 msgid "git stash pop [--index] [-q|--quiet] [<stash>]"
 msgstr ""
 
-#: builtin/stash.c:60
+#: builtin/stash.c:61
 msgid "git stash apply [--index] [-q|--quiet] [<stash>]"
 msgstr ""
 
-#: builtin/stash.c:75
+#: builtin/stash.c:76
 msgid "git stash store [-m|--message <message>] [-q|--quiet] <commit>"
 msgstr ""
 
-#: builtin/stash.c:80
+#: builtin/stash.c:81
 msgid ""
 "git stash [push [-p|--patch] [-k|--[no-]keep-index] [-q|--quiet]\n"
 "          [-u|--include-untracked] [-a|--all] [-m|--message <message>]\n"
 "          [--] [<pathspec>...]]"
 msgstr ""
 
-#: builtin/stash.c:87
+#: builtin/stash.c:88
 msgid ""
 "git stash save [-p|--patch] [-k|--[no-]keep-index] [-q|--quiet]\n"
 "               [-u|--include-untracked] [-a|--all] [<message>]"
 msgstr ""
 
-#: builtin/stash.c:130
+#: builtin/stash.c:131
 #, c-format
 msgid "'%s' is not a stash-like commit"
 msgstr ""
 
-#: builtin/stash.c:150
+#: builtin/stash.c:151
 #, c-format
 msgid "Too many revisions specified:%s"
 msgstr ""
 
-#: builtin/stash.c:164
+#: builtin/stash.c:165
 msgid "No stash entries found."
 msgstr ""
 
-#: builtin/stash.c:178
+#: builtin/stash.c:179
 #, c-format
 msgid "%s is not a valid reference"
 msgstr ""
 
-#: builtin/stash.c:227
+#: builtin/stash.c:228
 msgid "git stash clear with arguments is unimplemented"
 msgstr ""
 
-#: builtin/stash.c:447
+#: builtin/stash.c:448
 #, c-format
 msgid ""
 "WARNING: Untracked file in way of tracked file!  Renaming\n"
@@ -21467,178 +21468,178 @@ msgid ""
 "         to make room.\n"
 msgstr ""
 
-#: builtin/stash.c:508
+#: builtin/stash.c:509
 msgid "cannot apply a stash in the middle of a merge"
 msgstr ""
 
-#: builtin/stash.c:519
+#: builtin/stash.c:520
 #, c-format
 msgid "could not generate diff %s^!."
 msgstr ""
 
-#: builtin/stash.c:526
+#: builtin/stash.c:527
 msgid "conflicts in index. Try without --index."
 msgstr ""
 
-#: builtin/stash.c:532
+#: builtin/stash.c:533
 msgid "could not save index tree"
 msgstr ""
 
-#: builtin/stash.c:552
+#: builtin/stash.c:554
 #, c-format
 msgid "Merging %s with %s"
 msgstr ""
 
-#: builtin/stash.c:562
+#: builtin/stash.c:580
 msgid "Index was not unstashed."
 msgstr ""
 
-#: builtin/stash.c:576
+#: builtin/stash.c:594
 msgid "could not restore untracked files from stash"
 msgstr ""
 
-#: builtin/stash.c:608 builtin/stash.c:695
+#: builtin/stash.c:626 builtin/stash.c:713
 msgid "attempt to recreate the index"
 msgstr ""
 
-#: builtin/stash.c:641
+#: builtin/stash.c:659
 #, c-format
 msgid "Dropped %s (%s)"
 msgstr ""
 
-#: builtin/stash.c:644
+#: builtin/stash.c:662
 #, c-format
 msgid "%s: Could not drop stash entry"
 msgstr ""
 
-#: builtin/stash.c:657
+#: builtin/stash.c:675
 #, c-format
 msgid "'%s' is not a stash reference"
 msgstr ""
 
-#: builtin/stash.c:707
+#: builtin/stash.c:725
 msgid "The stash entry is kept in case you need it again."
 msgstr ""
 
-#: builtin/stash.c:730
+#: builtin/stash.c:748
 msgid "No branch name specified"
 msgstr ""
 
-#: builtin/stash.c:809
+#: builtin/stash.c:827
 msgid "failed to parse tree"
 msgstr ""
 
-#: builtin/stash.c:820
+#: builtin/stash.c:838
 msgid "failed to unpack trees"
 msgstr ""
 
-#: builtin/stash.c:840
+#: builtin/stash.c:858
 msgid "include untracked files in the stash"
 msgstr ""
 
-#: builtin/stash.c:843
+#: builtin/stash.c:861
 msgid "only show untracked files in the stash"
 msgstr ""
 
-#: builtin/stash.c:930 builtin/stash.c:967
+#: builtin/stash.c:948 builtin/stash.c:985
 #, c-format
 msgid "Cannot update %s with %s"
 msgstr ""
 
-#: builtin/stash.c:948 builtin/stash.c:1667 builtin/stash.c:1739
+#: builtin/stash.c:966 builtin/stash.c:1685 builtin/stash.c:1757
 msgid "stash message"
 msgstr ""
 
-#: builtin/stash.c:958
+#: builtin/stash.c:976
 msgid "\"git stash store\" requires one <commit> argument"
 msgstr ""
 
-#: builtin/stash.c:1143
+#: builtin/stash.c:1161
 msgid "No staged changes"
 msgstr ""
 
-#: builtin/stash.c:1204
+#: builtin/stash.c:1222
 msgid "No changes selected"
 msgstr ""
 
-#: builtin/stash.c:1304
+#: builtin/stash.c:1322
 msgid "You do not have the initial commit yet"
 msgstr ""
 
-#: builtin/stash.c:1331
+#: builtin/stash.c:1349
 msgid "Cannot save the current index state"
 msgstr ""
 
-#: builtin/stash.c:1340
+#: builtin/stash.c:1358
 msgid "Cannot save the untracked files"
 msgstr ""
 
-#: builtin/stash.c:1351 builtin/stash.c:1370
+#: builtin/stash.c:1369 builtin/stash.c:1388
 msgid "Cannot save the current worktree state"
 msgstr ""
 
-#: builtin/stash.c:1361
+#: builtin/stash.c:1379
 msgid "Cannot save the current staged state"
 msgstr ""
 
-#: builtin/stash.c:1398
+#: builtin/stash.c:1416
 msgid "Cannot record working tree state"
 msgstr ""
 
-#: builtin/stash.c:1447
+#: builtin/stash.c:1465
 msgid "Can't use --patch and --include-untracked or --all at the same time"
 msgstr ""
 
-#: builtin/stash.c:1458
+#: builtin/stash.c:1476
 msgid "Can't use --staged and --include-untracked or --all at the same time"
 msgstr ""
 
-#: builtin/stash.c:1476
+#: builtin/stash.c:1494
 msgid "Did you forget to 'git add'?"
 msgstr ""
 
-#: builtin/stash.c:1491
+#: builtin/stash.c:1509
 msgid "No local changes to save"
 msgstr ""
 
-#: builtin/stash.c:1498
+#: builtin/stash.c:1516
 msgid "Cannot initialize stash"
 msgstr ""
 
-#: builtin/stash.c:1513
+#: builtin/stash.c:1531
 msgid "Cannot save the current status"
 msgstr ""
 
-#: builtin/stash.c:1518
+#: builtin/stash.c:1536
 #, c-format
 msgid "Saved working directory and index state %s"
 msgstr ""
 
-#: builtin/stash.c:1615
+#: builtin/stash.c:1633
 msgid "Cannot remove worktree changes"
 msgstr ""
 
-#: builtin/stash.c:1656 builtin/stash.c:1728
+#: builtin/stash.c:1674 builtin/stash.c:1746
 msgid "keep index"
 msgstr ""
 
-#: builtin/stash.c:1658 builtin/stash.c:1730
+#: builtin/stash.c:1676 builtin/stash.c:1748
 msgid "stash staged changes only"
 msgstr ""
 
-#: builtin/stash.c:1660 builtin/stash.c:1732
+#: builtin/stash.c:1678 builtin/stash.c:1750
 msgid "stash in patch mode"
 msgstr ""
 
-#: builtin/stash.c:1661 builtin/stash.c:1733
+#: builtin/stash.c:1679 builtin/stash.c:1751
 msgid "quiet mode"
 msgstr ""
 
-#: builtin/stash.c:1663 builtin/stash.c:1735
+#: builtin/stash.c:1681 builtin/stash.c:1753
 msgid "include untracked files in stash"
 msgstr ""
 
-#: builtin/stash.c:1665 builtin/stash.c:1737
+#: builtin/stash.c:1683 builtin/stash.c:1755
 msgid "include ignore files"
 msgstr ""
 
