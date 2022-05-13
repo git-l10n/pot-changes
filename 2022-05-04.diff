@@ -1,0 +1,500 @@
+diff --git a/po/git.pot b/po/git.pot
+index bba8a68..401466e 100644
+--- a/po/git.pot
++++ b/po/git.pot
+@@ -1,11 +1,11 @@
+ # SOME DESCRIPTIVE TITLE.
+ # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+-# This file is distributed under the same license as the PACKAGE package.
++# This file is distributed under the same license as the Git package.
+ # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+ #
+ #, fuzzy
+ msgid   ""
+-msgstr  "Project-Id-Version: PACKAGE VERSION\n"
++msgstr  "Project-Id-Version: Git\n"
+         "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
+         "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+         "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+@@ -244,10 +244,12 @@ msgstr  ""
+ msgid   "   or: %s"
+ msgstr  ""
+ 
++#. #-#-#-#-#  branch.c.po  #-#-#-#-#
+ #. TRANSLATORS: This is a line listing a remote with duplicate
+ #. refspecs in the advice message below. For RTL languages you'll
+ #. probably want to swap the "%s" and leading "  " space around.
+ #.
++#. #-#-#-#-#  object-name.c.po  #-#-#-#-#
+ #. TRANSLATORS: This is line item of ambiguous object output
+ #. from describe_ambiguous_object() above. For RTL languages
+ #. you'll probably want to swap the "%s" and leading " " space
+@@ -1808,6 +1810,9 @@ msgstr  ""
+ msgid   "--non-matching is only valid with --verbose"
+ msgstr  ""
+ 
++msgid   "--object-info requires protocol v2"
++msgstr  ""
++
+ msgid   "--open-files-in-pager only works on the worktree"
+ msgstr  ""
+ 
+@@ -2394,6 +2399,10 @@ msgstr  ""
+ msgid   "Available strategies are:"
+ msgstr  ""
+ 
++#, c-format
++msgid   "BHFI changed '%ls'"
++msgstr  ""
++
+ #, c-format
+ msgid   "BOM is prohibited in '%s' if encoded as %s"
+ msgstr  ""
+@@ -2973,6 +2982,10 @@ msgstr  ""
+ msgid   "Config file location"
+ msgstr  ""
+ 
++#, c-format
++msgid   "ConnectNamedPipe failed for '%s' (%lu)"
++msgstr  ""
++
+ #, c-format
+ msgid   "Context reduced to (%ld/%ld) to apply fragment at %d"
+ msgstr  ""
+@@ -3610,6 +3623,9 @@ msgstr  ""
+ msgid   "Failed to start emacsclient."
+ msgstr  ""
+ 
++msgid   "Failed to start the FSEventStream"
++msgstr  ""
++
+ msgid   "Failed to update main cache tree"
+ msgstr  ""
+ 
+@@ -3764,6 +3780,10 @@ msgstr  ""
+ msgid   "Get and set repository or global options"
+ msgstr  ""
+ 
++#, c-format
++msgid   "GetOverlappedResult failed on '%s' [GLE %ld]"
++msgstr  ""
++
+ msgid   "Git Repository Layout"
+ msgstr  ""
+ 
+@@ -3872,6 +3892,7 @@ msgid_plural    "Hunk #%d succeeded at %d (offset %d lines)."
+ msgstr[0]       ""
+ msgstr[1]       ""
+ 
++#. #-#-#-#-#  git-add--interactive.perl.po  #-#-#-#-#
+ #. TRANSLATORS: 'it' refers to the patch mentioned in the previous messages.
+ msgid   "If it does not apply cleanly, you will be given an opportunity to\n"
+         "edit again.  If all lines of the hunk are removed, then the edit is\n"
+@@ -4037,18 +4058,30 @@ msgstr  ""
+ msgid   "Invalid %s: '%s'"
+ msgstr  ""
+ 
++msgid   "Invalid back reference"
++msgstr  ""
++
+ #, c-format
+ msgid   "Invalid branch name: '%s'"
+ msgstr  ""
+ 
++msgid   "Invalid character class name"
++msgstr  ""
++
+ #, c-format
+ msgid   "Invalid cleanup mode %s"
+ msgstr  ""
+ 
++msgid   "Invalid collation character"
++msgstr  ""
++
+ #, c-format
+ msgid   "Invalid command: you're currently in a %s/%s bisect"
+ msgstr  ""
+ 
++msgid   "Invalid content of \\{\\}"
++msgstr  ""
++
+ #, c-format
+ msgid   "Invalid ignored mode '%s'"
+ msgstr  ""
+@@ -4069,6 +4102,15 @@ msgstr  ""
+ msgid   "Invalid pathspec magic '%.*s' in '%s'"
+ msgstr  ""
+ 
++msgid   "Invalid preceding regular expression"
++msgstr  ""
++
++msgid   "Invalid range end"
++msgstr  ""
++
++msgid   "Invalid regular expression"
++msgstr  ""
++
+ #, c-format
+ msgid   "Invalid untracked files mode '%s'"
+ msgstr  ""
+@@ -4226,6 +4268,9 @@ msgid   "Maybe you wanted to say 'git add .'?\n"
+         "\"git config advice.addEmptyPathspec false\""
+ msgstr  ""
+ 
++msgid   "Memory exhausted"
++msgstr  ""
++
+ msgid   "Merge options"
+ msgstr  ""
+ 
+@@ -4396,6 +4441,9 @@ msgstr  ""
+ msgid   "No local changes to save"
+ msgstr  ""
+ 
++msgid   "No match"
++msgstr  ""
++
+ #, c-format
+ msgid   "No merge message -- not updating HEAD\n"
+ msgstr  ""
+@@ -4440,6 +4488,9 @@ msgstr  ""
+ msgid   "No previous hunk\n"
+ msgstr  ""
+ 
++msgid   "No previous regular expression"
++msgstr  ""
++
+ msgid   "No rebase in progress?"
+ msgstr  ""
+ 
+@@ -4752,6 +4803,9 @@ msgstr  ""
+ msgid   "Please, commit your changes before merging."
+ msgstr  ""
+ 
++msgid   "Premature end of regular expression"
++msgstr  ""
++
+ msgid   "Prepare patches for e-mail submission"
+ msgstr  ""
+ 
+@@ -4855,6 +4909,10 @@ msgstr  ""
+ msgid   "Read, modify and delete symbolic refs"
+ msgstr  ""
+ 
++#, c-format
++msgid   "ReadDirectoryChangedW failed on '%s' [GLE %ld]"
++msgstr  ""
++
+ msgid   "Reads tree information into the index"
+ msgstr  ""
+ 
+@@ -4942,6 +5000,9 @@ msgstr  ""
+ msgid   "Register file contents in the working tree to the index"
+ msgstr  ""
+ 
++msgid   "Regular expression too big"
++msgstr  ""
++
+ #, c-format
+ msgid   "Reinitialized existing Git repository in %s%s\n"
+ msgstr  ""
+@@ -5444,6 +5505,9 @@ msgstr  ""
+ msgid   "Submodules changed but not updated:"
+ msgstr  ""
+ 
++msgid   "Success"
++msgstr  ""
++
+ #, c-format
+ msgid   "Successfully rebased and updated %s.\n"
+ msgstr  ""
+@@ -5891,6 +5955,9 @@ msgstr  ""
+ msgid   "Total %<PRIu32> (delta %<PRIu32>), reused %<PRIu32> (delta %<PRIu32>), pack-reused %<PRIu32>"
+ msgstr  ""
+ 
++msgid   "Trailing backslash"
++msgstr  ""
++
+ msgid   "Traversing cruft objects"
+ msgstr  ""
+ 
+@@ -5945,6 +6012,9 @@ msgid   "Unable to create '%s.lock': %s.\n"
+         "remove the file manually to continue."
+ msgstr  ""
+ 
++msgid   "Unable to create FSEventStream."
++msgstr  ""
++
+ msgid   "Unable to determine absolute path of git directory"
+ msgstr  ""
+ 
+@@ -6048,6 +6118,18 @@ msgstr  ""
+ msgid   "Unknown value for 'diff.submodule' config variable: '%s'"
+ msgstr  ""
+ 
++msgid   "Unmatched ( or \\("
++msgstr  ""
++
++msgid   "Unmatched ) or \\)"
++msgstr  ""
++
++msgid   "Unmatched [ or [^"
++msgstr  ""
++
++msgid   "Unmatched \\{"
++msgstr  ""
++
+ msgid   "Unmerged paths:"
+ msgstr  ""
+ 
+@@ -6628,12 +6710,14 @@ msgid   "Your current terms are %s for the old state\n"
+         "and %s for the new state.\n"
+ msgstr  ""
+ 
++#. #-#-#-#-#  add-patch.c.po  #-#-#-#-#
+ #. TRANSLATORS: do not translate [y/n]
+ #. The program will only accept that input at this point.
+ #. Consider translating (saying "no" discards!) as
+ #. (saying "n" for "no" discards!) if the translation
+ #. of the word "no" does not start with n.
+ #.
++#. #-#-#-#-#  git-add--interactive.perl.po  #-#-#-#-#
+ #. TRANSLATORS: do not translate [y/n]
+ #. The program will only accept that input
+ #. at this point.
+@@ -6722,6 +6806,26 @@ msgstr  ""
+ msgid   "[(amend|reword):]commit"
+ msgstr  ""
+ 
++#, c-format
++msgid   "[GLE %ld] could not convert path to UTF-8: '%.*ls'"
++msgstr  ""
++
++#, c-format
++msgid   "[GLE %ld] could not get longname of '%s'"
++msgstr  ""
++
++#, c-format
++msgid   "[GLE %ld] could not watch '%s'"
++msgstr  ""
++
++#, c-format
++msgid   "[GLE %ld] health thread could not open '%ls'"
++msgstr  ""
++
++#, c-format
++msgid   "[GLE %ld] health thread getting BHFI for '%ls'"
++msgstr  ""
++
+ msgid   "[deleted]"
+ msgstr  ""
+ 
+@@ -8651,6 +8755,10 @@ msgid   "could not convert the following graft(s):\n"
+         "%s"
+ msgstr  ""
+ 
++#, c-format
++msgid   "could not convert to wide characters: '%s'"
++msgstr  ""
++
+ #, c-format
+ msgid   "could not copy '%s' to '%s'"
+ msgstr  ""
+@@ -8675,6 +8783,10 @@ msgstr  ""
+ msgid   "could not create empty submodule directory %s"
+ msgstr  ""
+ 
++#, c-format
++msgid   "could not create fd from pipe for '%s'"
++msgstr  ""
++
+ #, c-format
+ msgid   "could not create file '%s'"
+ msgstr  ""
+@@ -9065,6 +9177,10 @@ msgstr  ""
+ msgid   "could not read commit message: %s"
+ msgstr  ""
+ 
++#, c-format
++msgid   "could not read directory changes [GLE %ld]"
++msgstr  ""
++
+ #, c-format
+ msgid   "could not read file '%s'"
+ msgstr  ""
+@@ -9255,6 +9371,10 @@ msgstr  ""
+ msgid   "could not start pack-objects to repack promisor objects"
+ msgstr  ""
+ 
++#, c-format
++msgid   "could not start thread[0] for '%s'"
++msgstr  ""
++
+ #, c-format
+ msgid   "could not start worker[0] for '%s'"
+ msgstr  ""
+@@ -9587,6 +9707,9 @@ msgstr  ""
+ msgid   "delta chain depth %d is too deep, forcing %d"
+ msgstr  ""
+ 
++msgid   "deltabase is currently not supported with remote-object-info"
++msgstr  ""
++
+ msgid   "deprecated: use annotate-stdin instead"
+ msgstr  ""
+ 
+@@ -10155,6 +10278,9 @@ msgstr  ""
+ msgid   "error reading %s"
+ msgstr  ""
+ 
++msgid   "error reading object info header"
++msgstr  ""
++
+ #, c-format
+ msgid   "error reading section header '%s'"
+ msgstr  ""
+@@ -10400,6 +10526,10 @@ msgstr  ""
+ msgid   "failed to copy '%s' to '%s'; sparse-checkout may not work correctly"
+ msgstr  ""
+ 
++#, c-format
++msgid   "failed to copy SID (%ld)"
++msgstr  ""
++
+ #, c-format
+ msgid   "failed to copy file to '%s'"
+ msgstr  ""
+@@ -10526,6 +10656,10 @@ msgstr  ""
+ msgid   "failed to get kernel name and information"
+ msgstr  ""
+ 
++#, c-format
++msgid   "failed to get owner for '%s' (%ld)"
++msgstr  ""
++
+ #, c-format
+ msgid   "failed to get the default remote for submodule '%s'"
+ msgstr  ""
+@@ -12324,6 +12458,10 @@ msgstr  ""
+ msgid   "header for %s too long, exceeds %d bytes"
+ msgstr  ""
+ 
++#, c-format
++msgid   "health thread wait failed [GLE %ld]"
++msgstr  ""
++
+ #, c-format
+ msgid   "helper %s does not support 'force'"
+ msgstr  ""
+@@ -13411,6 +13549,10 @@ msgstr  ""
+ msgid   "malformed object at '%s'"
+ msgstr  ""
+ 
++#, c-format
++msgid   "malformed object id '%s'"
++msgstr  ""
++
+ #, c-format
+ msgid   "malformed object name %s"
+ msgstr  ""
+@@ -13793,6 +13935,9 @@ msgstr  ""
+ msgid   "must supply remote when using --negotiate-only"
+ msgstr  ""
+ 
++msgid   "must supply valid remote when using --object-info"
++msgstr  ""
++
+ msgid   "n"
+ msgstr  ""
+ 
+@@ -14081,6 +14226,7 @@ msgstr  ""
+ msgid   "no terms defined"
+ msgstr  ""
+ 
++#. #-#-#-#-#  grep.c.po  #-#-#-#-#
+ #. TRANSLATORS: %s is the configuration
+ #. variable for tweaking threads, currently
+ #. grep.threads
+@@ -14397,6 +14543,9 @@ msgstr  ""
+ msgid   "object-info: expected flush after arguments"
+ msgstr  ""
+ 
++msgid   "objectsize:disk is currently not supported with remote-object-info"
++msgstr  ""
++
+ msgid   "octopus merge cannot be executed on top of a [new root]"
+ msgstr  ""
+ 
+@@ -14977,6 +15126,9 @@ msgstr  ""
+ msgid   "path too long (%d chars, SHA1: %s): %s"
+ msgstr  ""
+ 
++msgid   "path:content"
++msgstr  ""
++
+ #, c-format
+ msgid   "paths '%s ...' with -a does not make sense"
+ msgstr  ""
+@@ -16320,7 +16472,7 @@ msgstr  ""
+ msgid   "set upstream for git pull/status"
+ msgstr  ""
+ 
+-msgid   "sets the submodule’s name to the given string instead of defaulting to its path"
++msgid   "sets the submodule's name to the given string instead of defaulting to its path"
+ msgstr  ""
+ 
+ msgid   "setsid failed"
+@@ -17407,6 +17559,10 @@ msgstr  ""
+ msgid   "trailer(s) to add"
+ msgstr  ""
+ 
++#, c-format
++msgid   "trailing backslash: '%s"
++msgstr  ""
++
+ #, c-format
+ msgid   "transport '%s' not allowed"
+ msgstr  ""
+@@ -18057,6 +18213,10 @@ msgstr  ""
+ msgid   "unclosed quote"
+ msgstr  ""
+ 
++#, c-format
++msgid   "unclosed quote: '%s'"
++msgstr  ""
++
+ msgid   "unexpected 'ready' from remote"
+ msgstr  ""
+ 
+@@ -18097,6 +18257,10 @@ msgstr  ""
+ msgid   "unhandled branch.%s.rebase=%s; assuming 'true'"
+ msgstr  ""
+ 
++#, c-format
++msgid   "unhandled case in 'has_worktree_moved': %d"
++msgstr  ""
++
+ #, c-format
+ msgid   "unhandled object '%s' given."
+ msgstr  ""
+@@ -18830,6 +18994,10 @@ msgstr  ""
+ msgid   "virtual repository '%s' is incompatible with fsmonitor"
+ msgstr  ""
+ 
++#, c-format
++msgid   "wait for hEvent failed for '%s'"
++msgstr  ""
++
+ msgid   "warn if changes introduce conflict markers or whitespace errors"
+ msgstr  ""
+ 
+@@ -19036,6 +19204,9 @@ msgstr  ""
+ msgid   "wrong object type in link"
+ msgstr  ""
+ 
++msgid   "wrong protocol version. expected v2"
++msgstr  ""
++
+ #, c-format
+ msgid   "wrote %<PRIu32> objects while expecting %<PRIu32>"
+ msgstr  ""
