@@ -798,9 +798,9 @@ msgstr ""
 #: builtin/rebase.c:1219 builtin/rebase.c:1221 builtin/rebase.c:1225
 #: builtin/repack.c:688 builtin/repack.c:719 builtin/reset.c:433
 #: builtin/reset.c:469 builtin/rev-list.c:537 builtin/show-branch.c:711
-#: builtin/stash.c:1714 builtin/stash.c:1717 builtin/submodule--helper.c:1328
-#: builtin/submodule--helper.c:3053 builtin/tag.c:527 builtin/tag.c:573
-#: builtin/worktree.c:779
+#: builtin/show-branch.c:716 builtin/stash.c:1714 builtin/stash.c:1717
+#: builtin/submodule--helper.c:1328 builtin/submodule--helper.c:3053
+#: builtin/tag.c:527 builtin/tag.c:573 builtin/worktree.c:779
 #, c-format
 msgid "options '%s' and '%s' cannot be used together"
 msgstr ""
@@ -2192,80 +2192,80 @@ msgstr ""
 msgid "Merging commit-graph"
 msgstr ""
 
-#: commit-graph.c:2292
+#: commit-graph.c:2294
 msgid "attempting to write a commit-graph, but 'core.commitGraph' is disabled"
 msgstr ""
 
-#: commit-graph.c:2399
+#: commit-graph.c:2401
 msgid "too many commits to write graph"
 msgstr ""
 
-#: commit-graph.c:2497
+#: commit-graph.c:2499
 msgid "the commit-graph file has incorrect checksum and is likely corrupt"
 msgstr ""
 
-#: commit-graph.c:2507
+#: commit-graph.c:2509
 #, c-format
 msgid "commit-graph has incorrect OID order: %s then %s"
 msgstr ""
 
-#: commit-graph.c:2517 commit-graph.c:2532
+#: commit-graph.c:2519 commit-graph.c:2534
 #, c-format
 msgid "commit-graph has incorrect fanout value: fanout[%d] = %u != %u"
 msgstr ""
 
-#: commit-graph.c:2524
+#: commit-graph.c:2526
 #, c-format
 msgid "failed to parse commit %s from commit-graph"
 msgstr ""
 
-#: commit-graph.c:2542
+#: commit-graph.c:2544
 msgid "Verifying commits in commit graph"
 msgstr ""
 
-#: commit-graph.c:2557
+#: commit-graph.c:2559
 #, c-format
 msgid "failed to parse commit %s from object database for commit-graph"
 msgstr ""
 
-#: commit-graph.c:2564
+#: commit-graph.c:2566
 #, c-format
 msgid "root tree OID for commit %s in commit-graph is %s != %s"
 msgstr ""
 
-#: commit-graph.c:2574
+#: commit-graph.c:2576
 #, c-format
 msgid "commit-graph parent list for commit %s is too long"
 msgstr ""
 
-#: commit-graph.c:2583
+#: commit-graph.c:2585
 #, c-format
 msgid "commit-graph parent for %s is %s != %s"
 msgstr ""
 
-#: commit-graph.c:2597
+#: commit-graph.c:2599
 #, c-format
 msgid "commit-graph parent list for commit %s terminates early"
 msgstr ""
 
-#: commit-graph.c:2602
+#: commit-graph.c:2604
 #, c-format
 msgid ""
 "commit-graph has generation number zero for commit %s, but non-zero elsewhere"
 msgstr ""
 
-#: commit-graph.c:2606
+#: commit-graph.c:2608
 #, c-format
 msgid ""
 "commit-graph has non-zero generation number for commit %s, but zero elsewhere"
 msgstr ""
 
-#: commit-graph.c:2623
+#: commit-graph.c:2625
 #, c-format
 msgid "commit-graph generation for commit %s is %<PRIuMAX> < %<PRIuMAX>"
 msgstr ""
 
-#: commit-graph.c:2629
+#: commit-graph.c:2631
 #, c-format
 msgid "commit date for commit %s in commit-graph is %<PRIuMAX> != %<PRIuMAX>"
 msgstr ""
@@ -3873,32 +3873,32 @@ msgstr ""
 msgid "unable to write to remote"
 msgstr ""
 
-#: fetch-pack.c:397 fetch-pack.c:1460
+#: fetch-pack.c:397 fetch-pack.c:1463
 #, c-format
 msgid "invalid shallow line: %s"
 msgstr ""
 
-#: fetch-pack.c:403 fetch-pack.c:1466
+#: fetch-pack.c:403 fetch-pack.c:1469
 #, c-format
 msgid "invalid unshallow line: %s"
 msgstr ""
 
-#: fetch-pack.c:405 fetch-pack.c:1468
+#: fetch-pack.c:405 fetch-pack.c:1471
 #, c-format
 msgid "object not found: %s"
 msgstr ""
 
-#: fetch-pack.c:408 fetch-pack.c:1471
+#: fetch-pack.c:408 fetch-pack.c:1474
 #, c-format
 msgid "error in object: %s"
 msgstr ""
 
-#: fetch-pack.c:410 fetch-pack.c:1473
+#: fetch-pack.c:410 fetch-pack.c:1476
 #, c-format
 msgid "no shallow found: %s"
 msgstr ""
 
-#: fetch-pack.c:413 fetch-pack.c:1477
+#: fetch-pack.c:413 fetch-pack.c:1480
 #, c-format
 msgid "expected shallow/unshallow, got %s"
 msgstr ""
@@ -3999,11 +3999,11 @@ msgstr ""
 msgid "no common commits"
 msgstr ""
 
-#: fetch-pack.c:1151 fetch-pack.c:1506 builtin/clone.c:1168
+#: fetch-pack.c:1151 fetch-pack.c:1509 builtin/clone.c:1168
 msgid "source repository is shallow, reject to clone."
 msgstr ""
 
-#: fetch-pack.c:1157 fetch-pack.c:1705
+#: fetch-pack.c:1157 fetch-pack.c:1708
 msgid "git fetch-pack: fetch failed."
 msgstr ""
 
@@ -4025,13 +4025,8 @@ msgstr ""
 msgid "Server supports filter"
 msgstr ""
 
-#: fetch-pack.c:1358 fetch-pack.c:2087
+#: fetch-pack.c:1358 fetch-pack.c:2090
 msgid "unable to write request to remote"
-msgstr ""
-
-#: fetch-pack.c:1376
-#, c-format
-msgid "error reading section header '%s'"
 msgstr ""
 
 #: fetch-pack.c:1382
@@ -4039,12 +4034,17 @@ msgstr ""
 msgid "expected '%s', received '%s'"
 msgstr ""
 
-#: fetch-pack.c:1416
+#: fetch-pack.c:1385
+#, c-format
+msgid "expected '%s'"
+msgstr ""
+
+#: fetch-pack.c:1419
 #, c-format
 msgid "unexpected acknowledgment line: '%s'"
 msgstr ""
 
-#: fetch-pack.c:1421
+#: fetch-pack.c:1424
 #, c-format
 msgid "error processing acks: %d"
 msgstr ""
@@ -4052,7 +4052,7 @@ msgstr ""
 #. TRANSLATORS: The parameter will be 'ready', a protocol
 #. keyword.
 #.
-#: fetch-pack.c:1435
+#: fetch-pack.c:1438
 #, c-format
 msgid "expected packfile to be sent after '%s'"
 msgstr ""
@@ -4060,53 +4060,53 @@ msgstr ""
 #. TRANSLATORS: The parameter will be 'ready', a protocol
 #. keyword.
 #.
-#: fetch-pack.c:1441
+#: fetch-pack.c:1444
 #, c-format
 msgid "expected no other sections to be sent after no '%s'"
 msgstr ""
 
-#: fetch-pack.c:1482
+#: fetch-pack.c:1485
 #, c-format
 msgid "error processing shallow info: %d"
 msgstr ""
 
-#: fetch-pack.c:1531
+#: fetch-pack.c:1534
 #, c-format
 msgid "expected wanted-ref, got '%s'"
 msgstr ""
 
-#: fetch-pack.c:1536
+#: fetch-pack.c:1539
 #, c-format
 msgid "unexpected wanted-ref: '%s'"
 msgstr ""
 
-#: fetch-pack.c:1541
+#: fetch-pack.c:1544
 #, c-format
 msgid "error processing wanted refs: %d"
 msgstr ""
 
-#: fetch-pack.c:1571
+#: fetch-pack.c:1574
 msgid "git fetch-pack: expected response end packet"
 msgstr ""
 
-#: fetch-pack.c:1983
+#: fetch-pack.c:1986
 msgid "no matching remote head"
 msgstr ""
 
-#: fetch-pack.c:2006 builtin/clone.c:587
+#: fetch-pack.c:2009 builtin/clone.c:587
 msgid "remote did not send all necessary objects"
 msgstr ""
 
-#: fetch-pack.c:2109
+#: fetch-pack.c:2112
 msgid "unexpected 'ready' from remote"
 msgstr ""
 
-#: fetch-pack.c:2132
+#: fetch-pack.c:2135
 #, c-format
 msgid "no such remote ref %s"
 msgstr ""
 
-#: fetch-pack.c:2135
+#: fetch-pack.c:2138
 #, c-format
 msgid "Server does not allow request for unadvertised object %s"
 msgstr ""
@@ -5549,17 +5549,17 @@ msgstr ""
 msgid "unable to mmap %s"
 msgstr ""
 
-#: object-file.c:2628
+#: object-file.c:2632
 #, c-format
 msgid "unable to unpack header of %s"
 msgstr ""
 
-#: object-file.c:2633
+#: object-file.c:2637
 #, c-format
 msgid "unable to parse header of %s"
 msgstr ""
 
-#: object-file.c:2644
+#: object-file.c:2648
 #, c-format
 msgid "unable to unpack contents of %s"
 msgstr ""
@@ -7508,7 +7508,7 @@ msgstr ""
 msgid "HEAD %s is not a commit!"
 msgstr ""
 
-#: sequencer.c:1368 sequencer.c:1446 builtin/commit.c:1707
+#: sequencer.c:1368 sequencer.c:1446 builtin/commit.c:1708
 msgid "could not parse HEAD commit"
 msgstr ""
 
@@ -7534,7 +7534,7 @@ msgstr ""
 msgid "corrupt author: missing date information"
 msgstr ""
 
-#: sequencer.c:1544 builtin/am.c:1671 builtin/commit.c:1821 builtin/merge.c:921
+#: sequencer.c:1544 builtin/am.c:1671 builtin/commit.c:1823 builtin/merge.c:921
 #: builtin/merge.c:946 t/helper/test-fast-rebase.c:78
 msgid "failed to write commit object"
 msgstr ""
@@ -13531,36 +13531,36 @@ msgstr ""
 msgid "ok to record a change with an empty message"
 msgstr ""
 
-#: builtin/commit.c:1752
+#: builtin/commit.c:1754
 #, c-format
 msgid "Corrupt MERGE_HEAD file (%s)"
 msgstr ""
 
-#: builtin/commit.c:1759
+#: builtin/commit.c:1761
 msgid "could not read MERGE_MODE"
 msgstr ""
 
-#: builtin/commit.c:1780
+#: builtin/commit.c:1782
 #, c-format
 msgid "could not read commit message: %s"
 msgstr ""
 
-#: builtin/commit.c:1787
+#: builtin/commit.c:1789
 #, c-format
 msgid "Aborting commit due to empty commit message.\n"
 msgstr ""
 
-#: builtin/commit.c:1792
+#: builtin/commit.c:1794
 #, c-format
 msgid "Aborting commit; you did not edit the message.\n"
 msgstr ""
 
-#: builtin/commit.c:1803
+#: builtin/commit.c:1805
 #, c-format
 msgid "Aborting commit due to empty commit message body.\n"
 msgstr ""
 
-#: builtin/commit.c:1839
+#: builtin/commit.c:1840
 msgid ""
 "repository has been updated, but unable to write\n"
 "new_index file. Check that disk is not full and quota is\n"
@@ -21155,39 +21155,39 @@ msgstr ""
 msgid "show <n> most recent ref-log entries starting at base"
 msgstr ""
 
-#: builtin/show-branch.c:735
+#: builtin/show-branch.c:739
 msgid "no branches given, and HEAD is not valid"
 msgstr ""
 
-#: builtin/show-branch.c:738
+#: builtin/show-branch.c:742
 msgid "--reflog option needs one branch name"
 msgstr ""
 
-#: builtin/show-branch.c:741
+#: builtin/show-branch.c:745
 #, c-format
 msgid "only %d entry can be shown at one time."
 msgid_plural "only %d entries can be shown at one time."
 msgstr[0] ""
 msgstr[1] ""
 
-#: builtin/show-branch.c:745
+#: builtin/show-branch.c:749
 #, c-format
 msgid "no such ref %s"
 msgstr ""
 
-#: builtin/show-branch.c:831
+#: builtin/show-branch.c:835
 #, c-format
 msgid "cannot handle more than %d rev."
 msgid_plural "cannot handle more than %d revs."
 msgstr[0] ""
 msgstr[1] ""
 
-#: builtin/show-branch.c:835
+#: builtin/show-branch.c:839
 #, c-format
 msgid "'%s' is not a valid ref."
 msgstr ""
 
-#: builtin/show-branch.c:838
+#: builtin/show-branch.c:842
 #, c-format
 msgid "cannot find commit %s (%s)"
 msgstr ""
