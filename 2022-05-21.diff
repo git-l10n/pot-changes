@@ -1,0 +1,64 @@
+diff --git a/po/git.pot b/po/git.pot
+index da5c5f1..509721e 100644
+--- a/po/git.pot
++++ b/po/git.pot
+@@ -46,7 +46,7 @@ msgstr  ""
+ msgid   "could not stage '%s'"
+ msgstr  ""
+ 
+-#: add-interactive.c reset.c sequencer.c
++#: add-interactive.c builtin/stash.c reset.c sequencer.c
+ msgid   "could not write index"
+ msgstr  ""
+ 
+@@ -2577,6 +2577,21 @@ msgstr  ""
+ msgid   "Are you sure [Y/n]? "
+ msgstr  ""
+ 
++#: builtin/bisect--helper.c
++msgid   "status: waiting for both good and bad commits\n"
++msgstr  ""
++
++#: builtin/bisect--helper.c
++#, c-format
++msgid   "status: waiting for bad commit, %d good commit known\n"
++msgid_plural    "status: waiting for bad commit, %d good commits known\n"
++msgstr[0]       ""
++msgstr[1]       ""
++
++#: builtin/bisect--helper.c
++msgid   "status: waiting for good commit(s), bad commit known\n"
++msgstr  ""
++
+ #: builtin/bisect--helper.c
+ msgid   "no terms defined"
+ msgstr  ""
+@@ -16794,8 +16809,7 @@ msgstr  ""
+ 
+ #: convert.c
+ #, c-format
+-msgid   "CRLF will be replaced by LF in %s.\n"
+-        "The file will have its original line endings in your working directory"
++msgid   "in the working copy of '%s', CRLF will be replaced by LF the next time Git touches it"
+ msgstr  ""
+ 
+ #: convert.c
+@@ -16805,8 +16819,7 @@ msgstr  ""
+ 
+ #: convert.c
+ #, c-format
+-msgid   "LF will be replaced by CRLF in %s.\n"
+-        "The file will have its original line endings in your working directory"
++msgid   "in the working copy of '%s', LF will be replaced by CRLF the next time Git touches it"
+ msgstr  ""
+ 
+ #: convert.c
+@@ -18612,7 +18625,7 @@ msgid   "Unable to determine absolute path of git directory"
+ msgstr  ""
+ 
+ #: git.c
+-msgid   "git [--version] [--help] [-C <path>] [-c <name>=<value>]\n"
++msgid   "git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n"
+         "           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n"
+         "           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n"
+         "           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n"
