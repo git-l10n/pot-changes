@@ -142,3 +142,151 @@ index e0173bb..f0dac4e 100644
  #: builtin/revert.c
  msgid   "append commit name"
  msgstr  ""
+
+
+########################################
+
+diff --git a/po/git.pot b/po/git.pot
+index f0dac4e..e0173bb 100644
+--- a/po/git.pot
++++ b/po/git.pot
+@@ -2479,41 +2479,66 @@ msgid   "git archive: expected a flush"
+ msgstr  ""
+ 
+ #: builtin/bisect.c
+-msgid   "git bisect [help|start|bad|good|new|old|terms|skip|next|reset|visualize|view|replay|log|run]"
++msgid   "git bisect help\n"
++        "\tprint this long help message."
+ msgstr  ""
+ 
+ #: builtin/bisect.c
+-msgid   "git bisect [help|start|bad|good|new|old|terms|skip|next|reset|visualize|view|replay|log|run]\n"
+-        "\n"
+-        "git bisect help\n"
+-        "\tprint this long help message.\n"
+-        "git bisect start [--term-{new,bad}=<term> --term-{old,good}=<term>]\n"
++msgid   "git bisect start [--term-{new,bad}=<term> --term-{old,good}=<term>]\n"
+         "\t\t [--no-checkout] [--first-parent] [<bad> [<good>...]] [--] [<pathspec>...]\n"
+-        "\treset bisect state and start bisection.\n"
+-        "git bisect (bad|new) [<rev>]\n"
++        "\treset bisect state and start bisection."
++msgstr  ""
++
++#: builtin/bisect.c
++msgid   "git bisect (bad|new) [<rev>]\n"
+         "\tmark <rev> a known-bad revision/\n"
+-        "\t\ta revision after change in a given property.\n"
+-        "git bisect (good|old) [<rev>...]\n"
++        "\t\ta revision after change in a given property."
++msgstr  ""
++
++#: builtin/bisect.c
++msgid   "git bisect (good|old) [<rev>...]\n"
+         "\tmark <rev>... known-good revisions/\n"
+-        "\t\trevisions before change in a given property.\n"
+-        "git bisect terms [--term-good | --term-bad]\n"
+-        "\tshow the terms used for old and new commits (default: bad, good)\n"
+-        "git bisect skip [(<rev>|<range>)...]\n"
+-        "\tmark <rev>... untestable revisions.\n"
+-        "git bisect next\n"
+-        "\tfind next bisection to test and check it out.\n"
+-        "git bisect reset [<commit>]\n"
+-        "\tfinish bisection search and go back to commit.\n"
+-        "git bisect (visualize|view)\n"
+-        "\tshow bisect status in gitk.\n"
+-        "git bisect replay <logfile>\n"
+-        "\treplay bisection log.\n"
+-        "git bisect log\n"
+-        "\tshow bisect log.\n"
+-        "git bisect run <cmd>...\n"
+-        "\tuse <cmd>... to automatically bisect.\n"
+-        "\n"
+-        "Please use \"git help bisect\" to get the full man page."
++        "\t\trevisions before change in a given property."
++msgstr  ""
++
++#: builtin/bisect.c
++msgid   "git bisect terms [--term-good | --term-bad]\n"
++        "\tshow the terms used for old and new commits (default: bad, good)"
++msgstr  ""
++
++#: builtin/bisect.c
++msgid   "git bisect skip [(<rev>|<range>)...]\n"
++        "\tmark <rev>... untestable revisions."
++msgstr  ""
++
++#: builtin/bisect.c
++msgid   "git bisect next\n"
++        "\tfind next bisection to test and check it out."
++msgstr  ""
++
++#: builtin/bisect.c
++msgid   "git bisect reset [<commit>]\n"
++        "\tfinish bisection search and go back to commit."
++msgstr  ""
++
++#: builtin/bisect.c
++msgid   "git bisect (visualize|view)\n"
++        "\tshow bisect status in gitk."
++msgstr  ""
++
++#: builtin/bisect.c
++msgid   "git bisect replay <logfile>\n"
++        "\treplay bisection log."
++msgstr  ""
++
++#: builtin/bisect.c
++msgid   "git bisect log\n"
++        "\tshow bisect log."
++msgstr  ""
++
++#: builtin/bisect.c
++msgid   "git bisect run <cmd>...\n"
++        "\tuse <cmd>... to automatically bisect."
+ msgstr  ""
+ 
+ #: builtin/bisect.c
+@@ -2745,7 +2770,7 @@ msgstr  ""
+ 
+ #: builtin/bisect.c
+ #, c-format
+-msgid   "bisect run failed: exit code %d from %s is < 0 or >= 128"
++msgid   "bisect run failed: exit code %d from '%s' is < 0 or >= 128"
+ msgstr  ""
+ 
+ #: builtin/bisect.c
+@@ -2792,6 +2817,11 @@ msgstr  ""
+ msgid   "'log' requires 0 arguments"
+ msgstr  ""
+ 
++#: builtin/bisect.c builtin/cat-file.c
++#, c-format
++msgid   "unknown command: '%s'"
++msgstr  ""
++
+ #: builtin/blame.c
+ msgid   "git blame [<options>] [<rev-opts>] [<rev>] [--] <file>"
+ msgstr  ""
+@@ -3526,11 +3556,6 @@ msgstr  ""
+ msgid   "%s takes no arguments"
+ msgstr  ""
+ 
+-#: builtin/cat-file.c
+-#, c-format
+-msgid   "unknown command: '%s'"
+-msgstr  ""
+-
+ #: builtin/cat-file.c
+ msgid   "only one batch option may be specified"
+ msgstr  ""
+@@ -12949,10 +12974,6 @@ msgstr  ""
+ msgid   "option for merge strategy"
+ msgstr  ""
+ 
+-#: builtin/revert.c
+-msgid   "use the 'reference' format to refer to commits"
+-msgstr  ""
+-
+ #: builtin/revert.c
+ msgid   "append commit name"
+ msgstr  ""
