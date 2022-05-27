@@ -1,0 +1,278 @@
+diff --git a/po/git.pot b/po/git.pot
+index f5f4abf..78dfa60 100644
+--- a/po/git.pot
++++ b/po/git.pot
+@@ -1,15 +1,15 @@
+ # SOME DESCRIPTIVE TITLE.
+ # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+-# This file is distributed under the same license as the PACKAGE package.
++# This file is distributed under the same license as the Git package.
+ # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+ #
+ #, fuzzy
+ msgid   ""
+-msgstr  "Project-Id-Version: PACKAGE VERSION\n"
++msgstr  "Project-Id-Version: Git\n"
+         "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
+         "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+-        "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+-        "Language-Team: LANGUAGE <LL@li.org>\n"
++        "Last-Translator: make by the Makefile\n"
++        "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
+         "Language: \n"
+         "MIME-Version: 1.0\n"
+         "Content-Type: text/plain; charset=UTF-8\n"
+@@ -498,6 +498,7 @@ msgid   "---\n"
+         "Lines starting with %c will be removed.\n"
+ msgstr  ""
+ 
++#. #-#-#-#-#  git-add--interactive.perl.po  #-#-#-#-#
+ #. TRANSLATORS: 'it' refers to the patch mentioned in the previous messages.
+ #: add-patch.c git-add--interactive.perl
+ msgid   "If it does not apply cleanly, you will be given an opportunity to\n"
+@@ -513,12 +514,14 @@ msgstr  ""
+ msgid   "'git apply --cached' failed"
+ msgstr  ""
+ 
++#. #-#-#-#-#  add-patch.c.po  #-#-#-#-#
+ #. TRANSLATORS: do not translate [y/n]
+ #. The program will only accept that input at this point.
+ #. Consider translating (saying "no" discards!) as
+ #. (saying "n" for "no" discards!) if the translation
+ #. of the word "no" does not start with n.
+ #.
++#. #-#-#-#-#  git-add--interactive.perl.po  #-#-#-#-#
+ #. TRANSLATORS: do not translate [y/n]
+ #. The program will only accept that input
+ #. at this point.
+@@ -1698,10 +1701,12 @@ msgstr  ""
+ msgid   "not tracking: ambiguous information for ref '%s'"
+ msgstr  ""
+ 
++#. #-#-#-#-#  branch.c.po  #-#-#-#-#
+ #. TRANSLATORS: This is a line listing a remote with duplicate
+ #. refspecs in the advice message below. For RTL languages you'll
+ #. probably want to swap the "%s" and leading "  " space around.
+ #.
++#. #-#-#-#-#  object-name.c.po  #-#-#-#-#
+ #. TRANSLATORS: This is line item of ambiguous object output
+ #. from describe_ambiguous_object() above. For RTL languages
+ #. you'll probably want to swap the "%s" and leading " " space
+@@ -4619,7 +4624,7 @@ msgstr  ""
+ msgid   "failed to start iterator over '%s'"
+ msgstr  ""
+ 
+-#: builtin/clone.c
++#: builtin/clone.c compat/precompose_utf8.c
+ #, c-format
+ msgid   "failed to unlink '%s'"
+ msgstr  ""
+@@ -7468,6 +7473,7 @@ msgstr  ""
+ msgid   "invalid number of threads specified (%d) for %s"
+ msgstr  ""
+ 
++#. #-#-#-#-#  grep.c.po  #-#-#-#-#
+ #. TRANSLATORS: %s is the configuration
+ #. variable for tweaking threads, currently
+ #. grep.threads
+@@ -10255,6 +10261,11 @@ msgstr  ""
+ msgid   "could not find pack '%s'"
+ msgstr  ""
+ 
++#: builtin/pack-objects.c
++#, c-format
++msgid   "packfile %s cannot be accessed"
++msgstr  ""
++
+ #: builtin/pack-objects.c
+ #, c-format
+ msgid   "expected edge object ID, got garbage:\n"
+@@ -14172,7 +14183,7 @@ msgid   "borrow the objects from reference repositories"
+ msgstr  ""
+ 
+ #: builtin/submodule--helper.c
+-msgid   "sets the submodule’s name to the given string instead of defaulting to its path"
++msgid   "sets the submodule's name to the given string instead of defaulting to its path"
+ msgstr  ""
+ 
+ #: builtin/submodule--helper.c
+@@ -16081,15 +16092,135 @@ msgstr  ""
+ msgid   "no libc information available\n"
+ msgstr  ""
+ 
++#: compat/fsmonitor/fsm-listen-darwin.c
++msgid   "Unable to create FSEventStream."
++msgstr  ""
++
++#: compat/fsmonitor/fsm-listen-darwin.c
++msgid   "Failed to start the FSEventStream"
++msgstr  ""
++
++#: compat/fsmonitor/fsm-listen-win32.c
++#, c-format
++msgid   "[GLE %ld] could not convert path to UTF-8: '%.*ls'"
++msgstr  ""
++
++#: compat/fsmonitor/fsm-listen-win32.c
++#, c-format
++msgid   "could not convert to wide characters: '%s'"
++msgstr  ""
++
++#: compat/fsmonitor/fsm-listen-win32.c
++#, c-format
++msgid   "[GLE %ld] could not watch '%s'"
++msgstr  ""
++
++#: compat/fsmonitor/fsm-listen-win32.c
++#, c-format
++msgid   "ReadDirectoryChangedW failed on '%s' [GLE %ld]"
++msgstr  ""
++
++#: compat/fsmonitor/fsm-listen-win32.c
++#, c-format
++msgid   "GetOverlappedResult failed on '%s' [GLE %ld]"
++msgstr  ""
++
++#: compat/fsmonitor/fsm-listen-win32.c
++#, c-format
++msgid   "could not read directory changes [GLE %ld]"
++msgstr  ""
++
++#: compat/mingw.c
++#, c-format
++msgid   "failed to copy SID (%ld)"
++msgstr  ""
++
++#: compat/mingw.c
++#, c-format
++msgid   "failed to get owner for '%s' (%ld)"
++msgstr  ""
++
+ #: compat/obstack.c
+ msgid   "memory exhausted"
+ msgstr  ""
+ 
+-#: compat/simple-ipc/ipc-unix-socket.c
++#: compat/regex/regcomp.c
++msgid   "Success"
++msgstr  ""
++
++#: compat/regex/regcomp.c
++msgid   "No match"
++msgstr  ""
++
++#: compat/regex/regcomp.c
++msgid   "Invalid regular expression"
++msgstr  ""
++
++#: compat/regex/regcomp.c
++msgid   "Invalid collation character"
++msgstr  ""
++
++#: compat/regex/regcomp.c
++msgid   "Invalid character class name"
++msgstr  ""
++
++#: compat/regex/regcomp.c
++msgid   "Trailing backslash"
++msgstr  ""
++
++#: compat/regex/regcomp.c
++msgid   "Invalid back reference"
++msgstr  ""
++
++#: compat/regex/regcomp.c
++msgid   "Unmatched [ or [^"
++msgstr  ""
++
++#: compat/regex/regcomp.c
++msgid   "Unmatched ( or \\("
++msgstr  ""
++
++#: compat/regex/regcomp.c
++msgid   "Unmatched \\{"
++msgstr  ""
++
++#: compat/regex/regcomp.c
++msgid   "Invalid content of \\{\\}"
++msgstr  ""
++
++#: compat/regex/regcomp.c
++msgid   "Invalid range end"
++msgstr  ""
++
++#: compat/regex/regcomp.c
++msgid   "Memory exhausted"
++msgstr  ""
++
++#: compat/regex/regcomp.c
++msgid   "Invalid preceding regular expression"
++msgstr  ""
++
++#: compat/regex/regcomp.c
++msgid   "Premature end of regular expression"
++msgstr  ""
++
++#: compat/regex/regcomp.c
++msgid   "Regular expression too big"
++msgstr  ""
++
++#: compat/regex/regcomp.c
++msgid   "Unmatched ) or \\)"
++msgstr  ""
++
++#: compat/regex/regcomp.c
++msgid   "No previous regular expression"
++msgstr  ""
++
++#: compat/simple-ipc/ipc-unix-socket.c compat/simple-ipc/ipc-win32.c
+ msgid   "could not send IPC command"
+ msgstr  ""
+ 
+-#: compat/simple-ipc/ipc-unix-socket.c
++#: compat/simple-ipc/ipc-unix-socket.c compat/simple-ipc/ipc-win32.c
+ msgid   "could not read IPC response"
+ msgstr  ""
+ 
+@@ -16103,6 +16234,26 @@ msgstr  ""
+ msgid   "could not start worker[0] for '%s'"
+ msgstr  ""
+ 
++#: compat/simple-ipc/ipc-win32.c
++#, c-format
++msgid   "ConnectNamedPipe failed for '%s' (%lu)"
++msgstr  ""
++
++#: compat/simple-ipc/ipc-win32.c
++#, c-format
++msgid   "could not create fd from pipe for '%s'"
++msgstr  ""
++
++#: compat/simple-ipc/ipc-win32.c
++#, c-format
++msgid   "could not start thread[0] for '%s'"
++msgstr  ""
++
++#: compat/simple-ipc/ipc-win32.c
++#, c-format
++msgid   "wait for hEvent failed for '%s'"
++msgstr  ""
++
+ #: compat/terminal.c
+ msgid   "cannot resume in the background, please use 'fg' to resume"
+ msgstr  ""
+@@ -20288,7 +20439,13 @@ msgid   "multi-pack bitmap is missing required reverse index"
+ msgstr  ""
+ 
+ #: pack-bitmap.c
+-msgid   "load_reverse_index: could not open pack"
++#, c-format
++msgid   "could not open pack %s"
++msgstr  ""
++
++#: pack-bitmap.c
++#, c-format
++msgid   "preferred pack (%s) is invalid"
+ msgstr  ""
+ 
+ #: pack-bitmap.c
