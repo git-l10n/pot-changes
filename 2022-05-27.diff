@@ -1,0 +1,49 @@
+diff --git a/po/git.pot b/po/git.pot
+index 53a65bd..9263618 100644
+--- a/po/git.pot
++++ b/po/git.pot
+@@ -10733,7 +10733,14 @@ msgstr  ""
+ 
+ #: builtin/push.c
+ msgid   "\n"
+-        "To choose either option permanently, see push.default in 'git help config'."
++        "To choose either option permanently, see push.default in 'git help config'.\n"
++msgstr  ""
++
++#: builtin/push.c
++msgid   "\n"
++        "To avoid automatically configuring upstream branches when their name\n"
++        "doesn't match the local branch, see option 'simple' of branch.autosetupmerge\n"
++        "in 'git help config'.\n"
+ msgstr  ""
+ 
+ #: builtin/push.c
+@@ -10747,7 +10754,7 @@ msgid   "The upstream branch of your current branch does not match\n"
+         "To push to the branch of the same name on the remote, use\n"
+         "\n"
+         "    git push %s HEAD\n"
+-        "%s"
++        "%s%s"
+ msgstr  ""
+ 
+ #: builtin/push.c
+@@ -10759,12 +10766,19 @@ msgid   "You are not currently on a branch.\n"
+         "    git push %s HEAD:<name-of-remote-branch>\n"
+ msgstr  ""
+ 
++#: builtin/push.c
++msgid   "\n"
++        "To have this happen automatically for branches without a tracking\n"
++        "upstream, see 'push.autoSetupRemote' in 'git help config'.\n"
++msgstr  ""
++
+ #: builtin/push.c
+ #, c-format
+ msgid   "The current branch %s has no upstream branch.\n"
+         "To push the current branch and set the remote as upstream, use\n"
+         "\n"
+         "    git push --set-upstream %s %s\n"
++        "%s"
+ msgstr  ""
+ 
+ #: builtin/push.c
