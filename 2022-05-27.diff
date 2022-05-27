@@ -276,3 +276,191 @@ index f5f4abf..78dfa60 100644
  msgstr  ""
  
  #: pack-bitmap.c
+
+
+########################################
+
+diff --git a/po/git.pot b/po/git.pot
+index 78dfa60..64b7ff1 100644
+--- a/po/git.pot
++++ b/po/git.pot
+@@ -945,7 +945,7 @@ msgstr  ""
+ msgid   "cannot checkout %s"
+ msgstr  ""
+ 
+-#: apply.c midx.c pack-revindex.c setup.c
++#: apply.c midx.c pack-mtimes.c pack-revindex.c setup.c
+ #, c-format
+ msgid   "failed to read %s"
+ msgstr  ""
+@@ -7208,6 +7208,10 @@ msgstr  ""
+ msgid   "prune unreferenced objects"
+ msgstr  ""
+ 
++#: builtin/gc.c
++msgid   "pack unreferenced objects separately"
++msgstr  ""
++
+ #: builtin/gc.c
+ msgid   "be more thorough (increased runtime)"
+ msgstr  ""
+@@ -10266,6 +10270,18 @@ msgstr  ""
+ msgid   "packfile %s cannot be accessed"
+ msgstr  ""
+ 
++#: builtin/pack-objects.c
++msgid   "Enumerating cruft objects"
++msgstr  ""
++
++#: builtin/pack-objects.c
++msgid   "unable to add cruft objects"
++msgstr  ""
++
++#: builtin/pack-objects.c
++msgid   "Traversing cruft objects"
++msgstr  ""
++
+ #: builtin/pack-objects.c
+ #, c-format
+ msgid   "expected edge object ID, got garbage:\n"
+@@ -10278,6 +10294,10 @@ msgid   "expected object ID, got garbage:\n"
+         " %s"
+ msgstr  ""
+ 
++#: builtin/pack-objects.c reachable.c
++msgid   "could not load cruft pack .mtimes"
++msgstr  ""
++
+ #: builtin/pack-objects.c
+ msgid   "cannot open pack index"
+ msgstr  ""
+@@ -10411,6 +10431,14 @@ msgstr  ""
+ msgid   "unpack unreachable objects newer than <time>"
+ msgstr  ""
+ 
++#: builtin/pack-objects.c
++msgid   "create a cruft pack"
++msgstr  ""
++
++#: builtin/pack-objects.c
++msgid   "expire cruft objects older than <time>"
++msgstr  ""
++
+ #: builtin/pack-objects.c
+ msgid   "use the sparse reachability algorithm"
+ msgstr  ""
+@@ -10510,6 +10538,18 @@ msgstr  ""
+ msgid   "cannot use internal rev list with --stdin-packs"
+ msgstr  ""
+ 
++#: builtin/pack-objects.c
++msgid   "cannot use internal rev list with --cruft"
++msgstr  ""
++
++#: builtin/pack-objects.c
++msgid   "cannot use --stdin-packs with --cruft"
++msgstr  ""
++
++#: builtin/pack-objects.c
++msgid   "cannot use --max-pack-size with --cruft"
++msgstr  ""
++
+ #: builtin/pack-objects.c
+ msgid   "Enumerating objects"
+ msgstr  ""
+@@ -12183,6 +12223,18 @@ msgstr  ""
+ msgid   "same as -a, and turn unreachable objects loose"
+ msgstr  ""
+ 
++#: builtin/repack.c
++msgid   "same as -a, pack unreachable cruft objects separately"
++msgstr  ""
++
++#: builtin/repack.c
++msgid   "approxidate"
++msgstr  ""
++
++#: builtin/repack.c
++msgid   "with -C, expire objects older than this"
++msgstr  ""
++
+ #: builtin/repack.c
+ msgid   "remove redundant packs, and run git-prune-packed"
+ msgstr  ""
+@@ -12211,10 +12263,6 @@ msgstr  ""
+ msgid   "pass --delta-islands to git-pack-objects"
+ msgstr  ""
+ 
+-#: builtin/repack.c
+-msgid   "approxidate"
+-msgstr  ""
+-
+ #: builtin/repack.c
+ msgid   "with -A, do not loosen objects older than this"
+ msgstr  ""
+@@ -12271,6 +12319,11 @@ msgstr  ""
+ msgid   "Nothing new to pack."
+ msgstr  ""
+ 
++#: builtin/repack.c
++#, c-format
++msgid   "pack prefix %s does not begin with objdir %s"
++msgstr  ""
++
+ #: builtin/repack.c
+ #, c-format
+ msgid   "missing required file: %s"
+@@ -15130,6 +15183,10 @@ msgstr  ""
+ msgid   "final chunk has non-zero id %<PRIx32>"
+ msgstr  ""
+ 
++#: chunk-format.c
++msgid   "invalid hash version"
++msgstr  ""
++
+ #: color.c
+ #, c-format
+ msgid   "invalid color value: %.*s"
+@@ -15815,10 +15872,6 @@ msgstr  ""
+ msgid   "An overview of recommended workflows with Git"
+ msgstr  ""
+ 
+-#: commit-graph.c midx.c
+-msgid   "invalid hash version"
+-msgstr  ""
+-
+ #: commit-graph.c
+ msgid   "commit-graph file is too small"
+ msgstr  ""
+@@ -20453,6 +20506,31 @@ msgstr  ""
+ msgid   "could not find %s in pack %s at offset %<PRIuMAX>"
+ msgstr  ""
+ 
++#: pack-mtimes.c
++#, c-format
++msgid   "mtimes file %s is too small"
++msgstr  ""
++
++#: pack-mtimes.c
++#, c-format
++msgid   "mtimes file %s has unknown signature"
++msgstr  ""
++
++#: pack-mtimes.c
++#, c-format
++msgid   "mtimes file %s has unsupported version %<PRIu32>"
++msgstr  ""
++
++#: pack-mtimes.c
++#, c-format
++msgid   "mtimes file %s has unsupported hash id %<PRIu32>"
++msgstr  ""
++
++#: pack-mtimes.c
++#, c-format
++msgid   "mtimes file %s is corrupt"
++msgstr  ""
++
+ #: pack-revindex.c
+ #, c-format
+ msgid   "reverse-index file %s is too small"
