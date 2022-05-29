@@ -1,0 +1,276 @@
+diff --git a/po/git.pot b/po/git.pot
+index aa59659..d4dcb6d 100644
+--- a/po/git.pot
++++ b/po/git.pot
+@@ -4564,13 +4564,13 @@ msgstr  ""
+ msgid   "set config inside the new repository"
+ msgstr  ""
+ 
+-#: builtin/clone.c builtin/fetch.c builtin/ls-remote-bundle-uri.c
+-#: builtin/ls-remote.c builtin/pull.c builtin/push.c builtin/send-pack.c
++#: builtin/clone.c builtin/fetch.c builtin/ls-remote.c builtin/pull.c
++#: builtin/push.c builtin/send-pack.c
+ msgid   "option to transmit"
+ msgstr  ""
+ 
+-#: builtin/clone.c builtin/fetch.c builtin/ls-remote-bundle-uri.c
+-#: builtin/ls-remote.c builtin/pull.c builtin/push.c builtin/send-pack.c
++#: builtin/clone.c builtin/fetch.c builtin/ls-remote.c builtin/pull.c
++#: builtin/push.c builtin/send-pack.c
+ msgid   "server-specific"
+ msgstr  ""
+ 
+@@ -4594,14 +4594,6 @@ msgstr  ""
+ msgid   "initialize sparse-checkout file to include only files at root"
+ msgstr  ""
+ 
+-#: builtin/clone.c
+-msgid   "a URI for downloading bundles before fetching from origin remote"
+-msgstr  ""
+-
+-#: builtin/clone.c builtin/fetch.c
+-msgid   "uri"
+-msgstr  ""
+-
+ #: builtin/clone.c
+ #, c-format
+ msgid   "info: Could not add alternate for '%s': %s\n"
+@@ -4704,10 +4696,6 @@ msgstr  ""
+ msgid   "options '%s' and '%s %s' cannot be used together"
+ msgstr  ""
+ 
+-#: builtin/clone.c
+-msgid   "--bundle-uri is incompatible with --depth, --shallow-since, and --shallow-exclude"
+-msgstr  ""
+-
+ #: builtin/clone.c
+ #, c-format
+ msgid   "repository '%s' does not exist"
+@@ -4794,15 +4782,6 @@ msgstr  ""
+ msgid   "cannot clone from filtered bundle"
+ msgstr  ""
+ 
+-#: builtin/clone.c
+-#, c-format
+-msgid   "failed to fetch objects from bundle URI '%s'"
+-msgstr  ""
+-
+-#: builtin/clone.c
+-msgid   "failed to fetch advertised bundles"
+-msgstr  ""
+-
+ #: builtin/clone.c
+ msgid   "remote transport reported error"
+ msgstr  ""
+@@ -6337,10 +6316,6 @@ msgstr  ""
+ msgid   "git fetch --all [<options>]"
+ msgstr  ""
+ 
+-#: builtin/fetch.c
+-msgid   "git fetch --bundle-uri=<uri> [<options>]"
+-msgstr  ""
+-
+ #: builtin/fetch.c
+ msgid   "fetch.parallel cannot be negative"
+ msgstr  ""
+@@ -6477,10 +6452,6 @@ msgstr  ""
+ msgid   "accept refspecs from stdin"
+ msgstr  ""
+ 
+-#: builtin/fetch.c
+-msgid   "download bundle data from the given URI instead of from a remote"
+-msgstr  ""
+-
+ #: builtin/fetch.c
+ msgid   "couldn't find remote ref HEAD"
+ msgstr  ""
+@@ -8910,48 +8881,22 @@ msgstr  ""
+ msgid   "show sparse directories in the presence of a sparse index"
+ msgstr  ""
+ 
+-#: builtin/ls-remote-bundle-uri.c
+-msgid   "git ls-remote-bundle-uri <repository>"
++#: builtin/ls-remote.c
++msgid   "git ls-remote [--heads] [--tags] [--refs] [--upload-pack=<exec>]\n"
++        "              [-q | --quiet] [--exit-code] [--get-url]\n"
++        "              [--symref] [<repository> [<refs>...]]"
+ msgstr  ""
+ 
+-#: builtin/ls-remote-bundle-uri.c builtin/ls-remote.c
++#: builtin/ls-remote.c
+ msgid   "do not print remote URL"
+ msgstr  ""
+ 
+-#: builtin/ls-remote-bundle-uri.c
+-msgid   "limit to showing uri field"
+-msgstr  ""
+-
+-#: builtin/ls-remote-bundle-uri.c builtin/ls-remote.c builtin/rebase.c
++#: builtin/ls-remote.c builtin/rebase.c
+ msgid   "exec"
+ msgstr  ""
+ 
+-#: builtin/ls-remote-bundle-uri.c builtin/ls-remote.c
+-msgid   "path of git-upload-pack on the remote host"
+-msgstr  ""
+-
+-#: builtin/ls-remote-bundle-uri.c builtin/push.c
+-#, c-format
+-msgid   "bad repository '%s'"
+-msgstr  ""
+-
+-#: builtin/ls-remote-bundle-uri.c
+-msgid   "no remote configured to get bundle URIs from"
+-msgstr  ""
+-
+-#: builtin/ls-remote-bundle-uri.c
+-#, c-format
+-msgid   "remote '%s' has no configured URL"
+-msgstr  ""
+-
+-#: builtin/ls-remote-bundle-uri.c
+-msgid   "could not get the bundle-uri list"
+-msgstr  ""
+-
+ #: builtin/ls-remote.c
+-msgid   "git ls-remote [--heads] [--tags] [--refs] [--upload-pack=<exec>]\n"
+-        "              [-q | --quiet] [--exit-code] [--get-url]\n"
+-        "              [--symref] [<repository> [<refs>...]]"
++msgid   "path of git-upload-pack on the remote host"
+ msgstr  ""
+ 
+ #: builtin/ls-remote.c
+@@ -11068,6 +11013,11 @@ msgstr  ""
+ msgid   "--delete doesn't make sense without any refs"
+ msgstr  ""
+ 
++#: builtin/push.c
++#, c-format
++msgid   "bad repository '%s'"
++msgstr  ""
++
+ #: builtin/push.c
+ msgid   "No configured push destination.\n"
+         "Either specify the URL from the command-line or configure a remote repository using\n"
+@@ -15229,55 +15179,6 @@ msgstr  ""
+ msgid   "only useful for debugging"
+ msgstr  ""
+ 
+-#: bundle-uri.c
+-#, c-format
+-msgid   "bundle list at '%s' has no mode"
+-msgstr  ""
+-
+-#: bundle-uri.c
+-msgid   "failed to create temporary file"
+-msgstr  ""
+-
+-#: bundle-uri.c
+-msgid   "insufficient capabilities"
+-msgstr  ""
+-
+-#: bundle-uri.c
+-#, c-format
+-msgid   "unrecognized bundle mode from URI '%s'"
+-msgstr  ""
+-
+-#: bundle-uri.c
+-#, c-format
+-msgid   "exceeded bundle URI recursion limit (%d)"
+-msgstr  ""
+-
+-#: bundle-uri.c
+-#, c-format
+-msgid   "failed to unbundle %d bundles"
+-msgstr  ""
+-
+-#: bundle-uri.c
+-#, c-format
+-msgid   "bundle-uri: unexpected argument: '%s'"
+-msgstr  ""
+-
+-#: bundle-uri.c
+-msgid   "bundle-uri: expected flush after arguments"
+-msgstr  ""
+-
+-#: bundle-uri.c
+-msgid   "bundle-uri: got an empty line"
+-msgstr  ""
+-
+-#: bundle-uri.c
+-msgid   "bundle-uri: line is not of the form 'key=value'"
+-msgstr  ""
+-
+-#: bundle-uri.c
+-msgid   "bundle-uri: line has empty key or value"
+-msgstr  ""
+-
+ #: bundle.c
+ #, c-format
+ msgid   "unrecognized bundle hash algorithm: %s"
+@@ -15672,10 +15573,6 @@ msgstr  ""
+ msgid   "List references in a remote repository"
+ msgstr  ""
+ 
+-#: command-list.h
+-msgid   "List 'bundle-uri' in a remote repository"
+-msgstr  ""
+-
+ #: command-list.h
+ msgid   "List the contents of a tree object"
+ msgstr  ""
+@@ -16956,26 +16853,17 @@ msgstr  ""
+ 
+ #: connect.c
+ #, c-format
+-msgid   "error on bundle-uri response line %d: %s"
++msgid   "invalid ls-refs response: %s"
+ msgstr  ""
+ 
+ #: connect.c
+-msgid   "expected flush after bundle-uri listing"
++msgid   "expected flush after ref listing"
+ msgstr  ""
+ 
+ #: connect.c
+ msgid   "expected response end packet after ref listing"
+ msgstr  ""
+ 
+-#: connect.c
+-#, c-format
+-msgid   "invalid ls-refs response: %s"
+-msgstr  ""
+-
+-#: connect.c
+-msgid   "expected flush after ref listing"
+-msgstr  ""
+-
+ #: connect.c
+ #, c-format
+ msgid   "protocol '%s' is not supported"
+@@ -22006,10 +21894,6 @@ msgstr  ""
+ msgid   "http transport does not support %s"
+ msgstr  ""
+ 
+-#: remote-curl.c
+-msgid   "protocol error: expected '<url> <path>', missing space"
+-msgstr  ""
+-
+ #: remote-curl.c
+ msgid   "git-http-push failed"
+ msgstr  ""
+@@ -24076,14 +23960,6 @@ msgstr  ""
+ msgid   "failed to push all needed submodules"
+ msgstr  ""
+ 
+-#: transport.c
+-msgid   "bundle-uri operation not supported by protocol"
+-msgstr  ""
+-
+-#: transport.c
+-msgid   "could not retrieve server-advertised bundle-uri list"
+-msgstr  ""
+-
+ #: tree-walk.c
+ msgid   "too-short tree object"
+ msgstr  ""
