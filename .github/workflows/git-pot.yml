@@ -31,9 +31,7 @@ jobs:
           cd git-po &&
           mkdir -p po &&
           git config user.name "${{ env.AUTHOR_NAME }}" &&
-          git config user.email "${{ env.AUTHOR_EMAIL }}" &&
-          git config diff.gettext-fmt.textconv "msgcat --indent --add-location=file --sort-by-file --no-wrap" &&
-          printf "*.pot diff=gettext-fmt\n" >>.git/info/attributes
+          git config user.email "${{ env.AUTHOR_EMAIL }}"
       - name: skip if the commit was already tested
         id: skip-if-redundant
         run: |
@@ -65,8 +63,7 @@ jobs:
       - name: generate po/git.pot
         if: steps.skip-if-redundant.outputs.status != 'skip'
         run: |
-          make -C git pot &&
-          sed '/^"POT-Creation-Date: / d' git/po/git.pot >git-po/po/git.pot
+          make -C git pot
       - name: upload changes and report
         run: |
           report_msg="" &&
@@ -75,14 +72,18 @@ jobs:
             report_msg="** no new commits in ${{ matrix.branch }} of upstream **"
           else
             cd git-po &&
+            msgcat --add-location=file --sort-by-file --no-wrap po/git.pot |
+              sed -e '1,/^$/d' >po/git.pot.old &&
+            cp ../git/po/git.pot po/git.pot &&
+            msgcat --add-location=file --sort-by-file --no-wrap po/git.pot |
+              sed -e '1,/^$/d' >po/git.pot.new &&
             date=$(date "+%Y-%m-%d") &&
             diff=${date}.diff &&
-            git diff -- po/git.pot >>"${diff}.tmp" &&
-            if test -s "${diff}.tmp"; then
+            if ! diff -q po/git.pot.old po/git.pot.new; then
               if test -s "$diff"; then
                 printf "\n\n########################################\n\n" >>"$diff"
               fi &&
-              cat "${diff}.tmp" >>"$diff" &&
+              ( diff -u po/git.pot.old po/git.pot.new >>"$diff" || true ) &&
               git add po/git.pot "$diff" last-check &&
               git commit -m "l10n: ${{ matrix.branch }}: changes of git.pot in $diff" &&
               report_msg="** changes of 'po/git.pot' is reported in $diff **"
