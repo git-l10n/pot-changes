@@ -1,0 +1,131 @@
+--- po/git.pot.old	2022-06-01 23:20:35.214115865 +0000
++++ po/git.pot.new	2022-06-01 23:20:35.326123054 +0000
+@@ -1421,6 +1421,21 @@
+ msgstr ""
+ 
+ #: archive.c
++#, c-format
++msgid "unclosed quote: '%s'"
++msgstr ""
++
++#: archive.c
++#, c-format
++msgid "missing colon: '%s'"
++msgstr ""
++
++#: archive.c
++#, c-format
++msgid "empty file name: '%s'"
++msgstr ""
++
++#: archive.c
+ msgid "archive format"
+ msgstr ""
+ 
+@@ -1446,6 +1461,10 @@
+ msgid "add untracked file to archive"
+ msgstr ""
+ 
++#: archive.c
++msgid "path:content"
++msgstr ""
++
+ #: archive.c builtin/archive.c
+ msgid "write the archive to this file"
+ msgstr ""
+@@ -2455,7 +2474,7 @@
+ msgid "git apply [<options>] [<patch>...]"
+ msgstr ""
+ 
+-#: builtin/archive.c
++#: builtin/archive.c contrib/scalar/scalar.c
+ msgid "could not redirect output"
+ msgstr ""
+ 
+@@ -17000,6 +17019,11 @@
+ msgid "failed to close rev-list's stdin"
+ msgstr ""
+ 
++#: contrib/scalar/scalar.c worktree.c
++#, c-format
++msgid "'%s' does not exist"
++msgstr ""
++
+ #: contrib/scalar/scalar.c
+ msgid "need a working directory"
+ msgstr ""
+@@ -17026,6 +17050,26 @@
+ msgid "Scalar enlistments require a worktree"
+ msgstr ""
+ 
++#: contrib/scalar/scalar.c dir.c
++#, c-format
++msgid "could not open directory '%s'"
++msgstr ""
++
++#: contrib/scalar/scalar.c
++#, c-format
++msgid "skipping '%s', which is neither file nor directory"
++msgstr ""
++
++#: contrib/scalar/scalar.c
++#, c-format
++msgid "could not determine free disk size for '%s'"
++msgstr ""
++
++#: contrib/scalar/scalar.c
++#, c-format
++msgid "could not get info for '%s'"
++msgstr ""
++
+ #: contrib/scalar/scalar.c
+ #, c-format
+ msgid "remote HEAD is not a branch: '%.*s'"
+@@ -17097,6 +17141,23 @@
+ msgstr ""
+ 
+ #: contrib/scalar/scalar.c
++msgid "scalar diagnose [<enlistment>]"
++msgstr ""
++
++#: contrib/scalar/scalar.c
++#, c-format
++msgid "could not create directory for '%s'"
++msgstr ""
++
++#: contrib/scalar/scalar.c
++msgid "could not duplicate stdout"
++msgstr ""
++
++#: contrib/scalar/scalar.c
++msgid "failed to write archive"
++msgstr ""
++
++#: contrib/scalar/scalar.c
+ msgid "`scalar list` does not take arguments"
+ msgstr ""
+ 
+@@ -18039,11 +18100,6 @@
+ msgstr ""
+ 
+ #: dir.c
+-#, c-format
+-msgid "could not open directory '%s'"
+-msgstr ""
+-
+-#: dir.c
+ msgid "failed to get kernel name and information"
+ msgstr ""
+ 
+@@ -24275,11 +24331,6 @@
+ msgstr ""
+ 
+ #: worktree.c
+-#, c-format
+-msgid "'%s' does not exist"
+-msgstr ""
+-
+-#: worktree.c
+ #, c-format
+ msgid "'%s' is not a .git file, error code %d"
+ msgstr ""

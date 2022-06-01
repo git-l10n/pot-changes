@@ -8,6 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
+"POT-Creation-Date: 2022-06-01 23:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -782,7 +783,7 @@ msgstr ""
 msgid "unrecognized whitespace ignore option '%s'"
 msgstr ""
 
-#: apply.c:138 archive.c:584 builtin/add.c:512 builtin/add.c:514
+#: apply.c:138 archive.c:633 builtin/add.c:512 builtin/add.c:514
 #: builtin/add.c:520 builtin/add.c:532 builtin/branch.c:755
 #: builtin/checkout.c:472 builtin/checkout.c:475 builtin/checkout.c:1664
 #: builtin/checkout.c:1774 builtin/checkout.c:1777 builtin/clone.c:921
@@ -1440,76 +1441,91 @@ msgstr ""
 msgid "timestamp too large for this system: %<PRIuMAX>"
 msgstr ""
 
-#: archive.c:14
+#: archive.c:15
 msgid "git archive [<options>] <tree-ish> [<path>...]"
 msgstr ""
 
-#: archive.c:16
+#: archive.c:17
 msgid ""
 "git archive --remote <repo> [--exec <cmd>] [<options>] <tree-ish> [<path>...]"
 msgstr ""
 
-#: archive.c:17
+#: archive.c:18
 msgid "git archive --remote <repo> [--exec <cmd>] --list"
 msgstr ""
 
-#: archive.c:188 archive.c:341 builtin/gc.c:503 builtin/notes.c:238
+#: archive.c:189 archive.c:344 builtin/gc.c:503 builtin/notes.c:238
 #: builtin/tag.c:579
 #, c-format
 msgid "cannot read '%s'"
 msgstr ""
 
-#: archive.c:426 builtin/add.c:223 builtin/add.c:662 builtin/rm.c:334
+#: archive.c:436 builtin/add.c:223 builtin/add.c:662 builtin/rm.c:334
 #, c-format
 msgid "pathspec '%s' did not match any files"
 msgstr ""
 
-#: archive.c:450
+#: archive.c:460
 #, c-format
 msgid "no such ref: %.*s"
 msgstr ""
 
-#: archive.c:456
+#: archive.c:466
 #, c-format
 msgid "not a valid object name: %s"
 msgstr ""
 
-#: archive.c:469
+#: archive.c:479
 #, c-format
 msgid "not a tree object: %s"
 msgstr ""
 
-#: archive.c:481
+#: archive.c:491
 msgid "current working directory is untracked"
 msgstr ""
 
-#: archive.c:522
+#: archive.c:534
 #, c-format
 msgid "File not found: %s"
 msgstr ""
 
-#: archive.c:524
+#: archive.c:536
 #, c-format
 msgid "Not a regular file: %s"
 msgstr ""
 
+#: archive.c:545
+#, c-format
+msgid "unclosed quote: '%s'"
+msgstr ""
+
+#: archive.c:548
+#, c-format
+msgid "missing colon: '%s'"
+msgstr ""
+
 #: archive.c:551
+#, c-format
+msgid "empty file name: '%s'"
+msgstr ""
+
+#: archive.c:597
 msgid "fmt"
 msgstr ""
 
-#: archive.c:551
+#: archive.c:597
 msgid "archive format"
 msgstr ""
 
-#: archive.c:552 builtin/log.c:1834
+#: archive.c:598 builtin/log.c:1834
 msgid "prefix"
 msgstr ""
 
-#: archive.c:553
+#: archive.c:599
 msgid "prepend prefix to each pathname in the archive"
 msgstr ""
 
-#: archive.c:554 archive.c:557 builtin/blame.c:881 builtin/blame.c:885
+#: archive.c:600 archive.c:606 builtin/blame.c:881 builtin/blame.c:885
 #: builtin/blame.c:886 builtin/commit-tree.c:115 builtin/config.c:135
 #: builtin/fast-export.c:1181 builtin/fast-export.c:1183
 #: builtin/fast-export.c:1187 builtin/grep.c:936 builtin/hash-object.c:104
@@ -1518,53 +1534,57 @@ msgstr ""
 msgid "file"
 msgstr ""
 
-#: archive.c:555
+#: archive.c:601 archive.c:604
 msgid "add untracked file to archive"
 msgstr ""
 
-#: archive.c:558 builtin/archive.c:88
+#: archive.c:604
+msgid "path:content"
+msgstr ""
+
+#: archive.c:607 builtin/archive.c:88
 msgid "write the archive to this file"
 msgstr ""
 
-#: archive.c:560
+#: archive.c:609
 msgid "read .gitattributes in working directory"
 msgstr ""
 
-#: archive.c:561
+#: archive.c:610
 msgid "report archived files on stderr"
 msgstr ""
 
-#: archive.c:563
+#: archive.c:612
 msgid "set compression level"
 msgstr ""
 
-#: archive.c:566
+#: archive.c:615
 msgid "list supported archive formats"
 msgstr ""
 
-#: archive.c:568 builtin/archive.c:89 builtin/clone.c:122 builtin/clone.c:125
+#: archive.c:617 builtin/archive.c:89 builtin/clone.c:122 builtin/clone.c:125
 #: builtin/submodule--helper.c:1773 builtin/submodule--helper.c:2606
 msgid "repo"
 msgstr ""
 
-#: archive.c:569 builtin/archive.c:90
+#: archive.c:618 builtin/archive.c:90
 msgid "retrieve the archive from remote repository <repo>"
 msgstr ""
 
-#: archive.c:570 builtin/archive.c:91 builtin/difftool.c:708
+#: archive.c:619 builtin/archive.c:91 builtin/difftool.c:708
 #: builtin/notes.c:496
 msgid "command"
 msgstr ""
 
-#: archive.c:571 builtin/archive.c:92
+#: archive.c:620 builtin/archive.c:92
 msgid "path to the remote git-upload-archive command"
 msgstr ""
 
-#: archive.c:578
+#: archive.c:627
 msgid "Unexpected option --remote"
 msgstr ""
 
-#: archive.c:580 builtin/add.c:535 builtin/add.c:567 builtin/checkout.c:1783
+#: archive.c:629 builtin/add.c:535 builtin/add.c:567 builtin/checkout.c:1783
 #: builtin/clone.c:1099 builtin/clone.c:1102 builtin/commit.c:371
 #: builtin/fast-export.c:1230 builtin/index-pack.c:1854 builtin/log.c:2160
 #: builtin/reset.c:442 builtin/reset.c:500 builtin/rm.c:281
@@ -1574,16 +1594,16 @@ msgstr ""
 msgid "the option '%s' requires '%s'"
 msgstr ""
 
-#: archive.c:582
+#: archive.c:631
 msgid "Unexpected option --output"
 msgstr ""
 
-#: archive.c:606
+#: archive.c:655
 #, c-format
 msgid "Unknown archive format '%s'"
 msgstr ""
 
-#: archive.c:615
+#: archive.c:664
 #, c-format
 msgid "Argument not supported for format '%s': -%d"
 msgstr ""
@@ -2564,7 +2584,7 @@ msgstr ""
 msgid "git apply [<options>] [<patch>...]"
 msgstr ""
 
-#: builtin/archive.c:18
+#: builtin/archive.c:18 contrib/scalar/scalar.c:719
 msgid "could not redirect output"
 msgstr ""
 
@@ -4910,7 +4930,7 @@ msgstr ""
 msgid "Too many arguments."
 msgstr ""
 
-#: builtin/clone.c:905 contrib/scalar/scalar.c:413
+#: builtin/clone.c:905 contrib/scalar/scalar.c:510
 msgid "You must specify a repository to clone."
 msgstr ""
 
@@ -11033,7 +11053,7 @@ msgid "<remote>"
 msgstr ""
 
 #: builtin/pull.c:468 builtin/pull.c:483 builtin/pull.c:488
-#: contrib/scalar/scalar.c:374
+#: contrib/scalar/scalar.c:471
 msgid "<branch>"
 msgstr ""
 
@@ -17364,177 +17384,219 @@ msgstr ""
 msgid "failed to close rev-list's stdin"
 msgstr ""
 
-#: contrib/scalar/scalar.c:49
+#: contrib/scalar/scalar.c:51 worktree.c:327
+#, c-format
+msgid "'%s' does not exist"
+msgstr ""
+
+#: contrib/scalar/scalar.c:53
 msgid "need a working directory"
 msgstr ""
 
-#: contrib/scalar/scalar.c:86
+#: contrib/scalar/scalar.c:90
 msgid "could not find enlistment root"
 msgstr ""
 
-#: contrib/scalar/scalar.c:89 contrib/scalar/scalar.c:350
-#: contrib/scalar/scalar.c:435 contrib/scalar/scalar.c:578
+#: contrib/scalar/scalar.c:93 contrib/scalar/scalar.c:447
+#: contrib/scalar/scalar.c:532 contrib/scalar/scalar.c:865
 #, c-format
 msgid "could not switch to '%s'"
 msgstr ""
 
-#: contrib/scalar/scalar.c:179
+#: contrib/scalar/scalar.c:183
 #, c-format
 msgid "could not configure %s=%s"
 msgstr ""
 
-#: contrib/scalar/scalar.c:197
+#: contrib/scalar/scalar.c:201
 msgid "could not configure log.excludeDecoration"
 msgstr ""
 
-#: contrib/scalar/scalar.c:218
+#: contrib/scalar/scalar.c:222
 msgid "Scalar enlistments require a worktree"
 msgstr ""
 
-#: contrib/scalar/scalar.c:310
+#: contrib/scalar/scalar.c:276 dir.c:2419
+#, c-format
+msgid "could not open directory '%s'"
+msgstr ""
+
+#: contrib/scalar/scalar.c:293
+#, c-format
+msgid "skipping '%s', which is neither file nor directory"
+msgstr ""
+
+#: contrib/scalar/scalar.c:320 contrib/scalar/scalar.c:344
+#, c-format
+msgid "could not determine free disk size for '%s'"
+msgstr ""
+
+#: contrib/scalar/scalar.c:330
+#, c-format
+msgid "could not get info for '%s'"
+msgstr ""
+
+#: contrib/scalar/scalar.c:407
 #, c-format
 msgid "remote HEAD is not a branch: '%.*s'"
 msgstr ""
 
-#: contrib/scalar/scalar.c:316
+#: contrib/scalar/scalar.c:413
 msgid "failed to get default branch name from remote; using local default"
 msgstr ""
 
-#: contrib/scalar/scalar.c:329
+#: contrib/scalar/scalar.c:426
 msgid "failed to get default branch name"
 msgstr ""
 
-#: contrib/scalar/scalar.c:340
+#: contrib/scalar/scalar.c:437
 msgid "failed to unregister repository"
 msgstr ""
 
-#: contrib/scalar/scalar.c:355
+#: contrib/scalar/scalar.c:452
 msgid "failed to delete enlistment directory"
 msgstr ""
 
-#: contrib/scalar/scalar.c:375
+#: contrib/scalar/scalar.c:472
 msgid "branch to checkout after clone"
 msgstr ""
 
-#: contrib/scalar/scalar.c:377
+#: contrib/scalar/scalar.c:474
 msgid "when cloning, create full working directory"
 msgstr ""
 
-#: contrib/scalar/scalar.c:379
+#: contrib/scalar/scalar.c:476
 msgid "only download metadata for the branch that will be checked out"
 msgstr ""
 
-#: contrib/scalar/scalar.c:384
+#: contrib/scalar/scalar.c:481
 msgid "scalar clone [<options>] [--] <repo> [<dir>]"
 msgstr ""
 
-#: contrib/scalar/scalar.c:409
+#: contrib/scalar/scalar.c:506
 #, c-format
 msgid "cannot deduce worktree name from '%s'"
 msgstr ""
 
-#: contrib/scalar/scalar.c:418
+#: contrib/scalar/scalar.c:515
 #, c-format
 msgid "directory '%s' exists already"
 msgstr ""
 
-#: contrib/scalar/scalar.c:445
+#: contrib/scalar/scalar.c:542
 #, c-format
 msgid "failed to get default branch for '%s'"
 msgstr ""
 
-#: contrib/scalar/scalar.c:456
+#: contrib/scalar/scalar.c:553
 #, c-format
 msgid "could not configure remote in '%s'"
 msgstr ""
 
-#: contrib/scalar/scalar.c:465
+#: contrib/scalar/scalar.c:562
 #, c-format
 msgid "could not configure '%s'"
 msgstr ""
 
-#: contrib/scalar/scalar.c:468
+#: contrib/scalar/scalar.c:565
 msgid "partial clone failed; attempting full clone"
 msgstr ""
 
-#: contrib/scalar/scalar.c:472
+#: contrib/scalar/scalar.c:569
 msgid "could not configure for full clone"
 msgstr ""
 
-#: contrib/scalar/scalar.c:504
+#: contrib/scalar/scalar.c:681
+msgid "scalar diagnose [<enlistment>]"
+msgstr ""
+
+#: contrib/scalar/scalar.c:707
+#, c-format
+msgid "could not create directory for '%s'"
+msgstr ""
+
+#: contrib/scalar/scalar.c:713
+msgid "could not duplicate stdout"
+msgstr ""
+
+#: contrib/scalar/scalar.c:764
+msgid "failed to write archive"
+msgstr ""
+
+#: contrib/scalar/scalar.c:791
 msgid "`scalar list` does not take arguments"
 msgstr ""
 
-#: contrib/scalar/scalar.c:517
+#: contrib/scalar/scalar.c:804
 msgid "scalar register [<enlistment>]"
 msgstr ""
 
-#: contrib/scalar/scalar.c:544
+#: contrib/scalar/scalar.c:831
 msgid "reconfigure all registered enlistments"
 msgstr ""
 
-#: contrib/scalar/scalar.c:548
+#: contrib/scalar/scalar.c:835
 msgid "scalar reconfigure [--all | <enlistment>]"
 msgstr ""
 
-#: contrib/scalar/scalar.c:566
+#: contrib/scalar/scalar.c:853
 msgid "--all or <enlistment>, but not both"
 msgstr ""
 
-#: contrib/scalar/scalar.c:581
+#: contrib/scalar/scalar.c:868
 #, c-format
 msgid "git repository gone in '%s'"
 msgstr ""
 
-#: contrib/scalar/scalar.c:621
+#: contrib/scalar/scalar.c:908
 msgid ""
 "scalar run <task> [<enlistment>]\n"
 "Tasks:\n"
 msgstr ""
 
-#: contrib/scalar/scalar.c:639
+#: contrib/scalar/scalar.c:926
 #, c-format
 msgid "no such task: '%s'"
 msgstr ""
 
-#: contrib/scalar/scalar.c:689
+#: contrib/scalar/scalar.c:976
 msgid "scalar unregister [<enlistment>]"
 msgstr ""
 
-#: contrib/scalar/scalar.c:736
+#: contrib/scalar/scalar.c:1023
 msgid "scalar delete <enlistment>"
 msgstr ""
 
-#: contrib/scalar/scalar.c:751
+#: contrib/scalar/scalar.c:1038
 msgid "refusing to delete current working directory"
 msgstr ""
 
-#: contrib/scalar/scalar.c:766
+#: contrib/scalar/scalar.c:1053
 msgid "include Git version"
 msgstr ""
 
-#: contrib/scalar/scalar.c:768
+#: contrib/scalar/scalar.c:1055
 msgid "include Git's build options"
 msgstr ""
 
-#: contrib/scalar/scalar.c:772
+#: contrib/scalar/scalar.c:1059
 msgid "scalar verbose [-v | --verbose] [--build-options]"
 msgstr ""
 
-#: contrib/scalar/scalar.c:813
+#: contrib/scalar/scalar.c:1101
 msgid "-C requires a <directory>"
 msgstr ""
 
-#: contrib/scalar/scalar.c:815
+#: contrib/scalar/scalar.c:1103
 #, c-format
 msgid "could not change to '%s'"
 msgstr ""
 
-#: contrib/scalar/scalar.c:821
+#: contrib/scalar/scalar.c:1109
 msgid "-c requires a <key>=<value> argument"
 msgstr ""
 
-#: contrib/scalar/scalar.c:839
+#: contrib/scalar/scalar.c:1127
 msgid ""
 "scalar [-C <directory>] [-c <key>=<value>] <command> [<options>]\n"
 "\n"
@@ -18437,11 +18499,6 @@ msgstr ""
 #: dir.c:1212
 #, c-format
 msgid "cannot use %s as an exclude file"
-msgstr ""
-
-#: dir.c:2419
-#, c-format
-msgid "could not open directory '%s'"
 msgstr ""
 
 #: dir.c:2721
@@ -24100,11 +24157,6 @@ msgstr ""
 #: worktree.c:315
 #, c-format
 msgid "'%s' file does not contain absolute path to the working tree location"
-msgstr ""
-
-#: worktree.c:327
-#, c-format
-msgid "'%s' does not exist"
 msgstr ""
 
 #: worktree.c:333
