@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2022-06-01 23:20+0000\n"
+"POT-Creation-Date: 2022-06-03 05:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -802,7 +802,7 @@ msgstr ""
 #: builtin/rev-list.c:536 builtin/show-branch.c:711 builtin/show-branch.c:716
 #: builtin/stash.c:1746 builtin/stash.c:1749 builtin/submodule--helper.c:1217
 #: builtin/submodule--helper.c:2942 builtin/tag.c:527 builtin/tag.c:573
-#: builtin/worktree.c:779 parse-options.c:1129 range-diff.c:555 revision.c:2324
+#: builtin/worktree.c:779 parse-options.c:1121 range-diff.c:555 revision.c:2324
 #: revision.c:2328 revision.c:2337 revision.c:2342 revision.c:2570
 #: revision.c:2905 revision.c:2909 revision.c:2917 revision.c:2920
 #: revision.c:2922
@@ -1745,7 +1745,7 @@ msgstr ""
 #: builtin/pack-objects.c:3399 builtin/pack-objects.c:3557
 #: builtin/pack-objects.c:4039 builtin/pack-objects.c:4054
 #: builtin/shortlog.c:257 bundle.c:233 midx.c:1046 ref-filter.c:2371
-#: remote.c:2210 sequencer.c:2371 sequencer.c:4897 submodule.c:912
+#: remote.c:2209 sequencer.c:2371 sequencer.c:4897 submodule.c:912
 msgid "revision walk setup failed"
 msgstr ""
 
@@ -15539,7 +15539,7 @@ msgstr ""
 msgid "try to match the new branch name with a remote-tracking branch"
 msgstr ""
 
-#: builtin/worktree.c:578 diff.c:4675 parse-options.c:1125
+#: builtin/worktree.c:578 diff.c:4675 parse-options.c:1117
 #, c-format
 msgid "options '%s', '%s', and '%s' cannot be used together"
 msgstr ""
@@ -16717,7 +16717,7 @@ msgstr ""
 msgid "%s %s is not a commit!"
 msgstr ""
 
-#: commit.c:197
+#: commit.c:209
 msgid ""
 "Support for <GIT_DIR>/info/grafts is deprecated\n"
 "and will be removed in a future Git version.\n"
@@ -16729,27 +16729,27 @@ msgid ""
 "\"git config advice.graftFileDeprecated false\""
 msgstr ""
 
-#: commit.c:1249
+#: commit.c:1263
 #, c-format
 msgid "Commit %s has an untrusted GPG signature, allegedly by %s."
 msgstr ""
 
-#: commit.c:1253
+#: commit.c:1267
 #, c-format
 msgid "Commit %s has a bad GPG signature allegedly by %s."
 msgstr ""
 
-#: commit.c:1256
+#: commit.c:1270
 #, c-format
 msgid "Commit %s does not have a GPG signature."
 msgstr ""
 
-#: commit.c:1259
+#: commit.c:1273
 #, c-format
 msgid "Commit %s has a good GPG signature by %s\n"
 msgstr ""
 
-#: commit.c:1513
+#: commit.c:1527
 msgid ""
 "Warning: commit message did not conform to UTF-8.\n"
 "You may want to amend it after fixing the message, or set the config\n"
@@ -18024,7 +18024,7 @@ msgstr ""
 msgid "external diff died, stopping at %s"
 msgstr ""
 
-#: diff.c:4671 parse-options.c:1121
+#: diff.c:4671 parse-options.c:1113
 #, c-format
 msgid "options '%s', '%s', '%s', and '%s' cannot be used together"
 msgstr ""
@@ -20856,31 +20856,31 @@ msgstr ""
 msgid "did you mean `--%s` (with two dashes)?"
 msgstr ""
 
-#: parse-options.c:685 parse-options.c:1061
+#: parse-options.c:677 parse-options.c:1053
 #, c-format
 msgid "alias of --%s"
 msgstr ""
 
-#: parse-options.c:899
+#: parse-options.c:891
 #, c-format
 msgid "unknown option `%s'"
 msgstr ""
 
-#: parse-options.c:901
+#: parse-options.c:893
 #, c-format
 msgid "unknown switch `%c'"
 msgstr ""
 
-#: parse-options.c:903
+#: parse-options.c:895
 #, c-format
 msgid "unknown non-ascii option in string: `%s'"
 msgstr ""
 
-#: parse-options.c:927
+#: parse-options.c:919
 msgid "..."
 msgstr ""
 
-#: parse-options.c:941
+#: parse-options.c:933
 #, c-format
 msgid "usage: %s"
 msgstr ""
@@ -20888,7 +20888,7 @@ msgstr ""
 #. TRANSLATORS: the colon here should align with the
 #. one in "usage: %s" translation.
 #.
-#: parse-options.c:956
+#: parse-options.c:948
 #, c-format
 msgid "   or: %s"
 msgstr ""
@@ -20912,17 +20912,17 @@ msgstr ""
 #. translated) N_() usage string, which contained embedded
 #. newlines before we split it up.
 #.
-#: parse-options.c:977
+#: parse-options.c:969
 #, c-format
 msgid "%*s%s"
 msgstr ""
 
-#: parse-options.c:1000
+#: parse-options.c:992
 #, c-format
 msgid "    %s"
 msgstr ""
 
-#: parse-options.c:1047
+#: parse-options.c:1039
 msgid "-NUM"
 msgstr ""
 
@@ -21946,55 +21946,60 @@ msgstr ""
 msgid "remote-curl: unknown command '%s' from git"
 msgstr ""
 
-#: remote.c:64 remote.c:66
-#, c-format
-msgid "URL '%s' uses plaintext credentials"
-msgstr ""
-
-#: remote.c:453
+#: remote.c:406
 #, c-format
 msgid "config remote shorthand cannot begin with '/': %s"
 msgstr ""
 
-#: remote.c:501
+#: remote.c:454
 msgid "more than one receivepack given, using the first"
 msgstr ""
 
-#: remote.c:509
+#: remote.c:462
 msgid "more than one uploadpack given, using the first"
 msgstr ""
 
-#: remote.c:751
+#: remote.c:638
+#, c-format
+msgid "unrecognized value fetch.credentialsInURL: '%s'"
+msgstr ""
+
+#: remote.c:653 remote.c:655
+#, c-format
+msgid "URL '%s' uses plaintext credentials"
+msgstr ""
+
+#: remote.c:750
 #, c-format
 msgid "Cannot fetch both %s and %s to %s"
 msgstr ""
 
-#: remote.c:755
+#: remote.c:754
 #, c-format
 msgid "%s usually tracks %s, not %s"
 msgstr ""
 
-#: remote.c:759
+#: remote.c:758
 #, c-format
 msgid "%s tracks both %s and %s"
 msgstr ""
 
-#: remote.c:827
+#: remote.c:826
 #, c-format
 msgid "key '%s' of pattern had no '*'"
 msgstr ""
 
-#: remote.c:837
+#: remote.c:836
 #, c-format
 msgid "value '%s' of pattern has no '*'"
 msgstr ""
 
-#: remote.c:1244
+#: remote.c:1243
 #, c-format
 msgid "src refspec %s does not match any"
 msgstr ""
 
-#: remote.c:1249
+#: remote.c:1248
 #, c-format
 msgid "src refspec %s matches more than one"
 msgstr ""
@@ -22003,7 +22008,7 @@ msgstr ""
 #. <remote> <src>:<dst>" push, and "being pushed ('%s')" is
 #. the <src>.
 #.
-#: remote.c:1264
+#: remote.c:1263
 #, c-format
 msgid ""
 "The destination you provided is not a full refname (i.e.,\n"
@@ -22017,7 +22022,7 @@ msgid ""
 "Neither worked, so we gave up. You must fully qualify the ref."
 msgstr ""
 
-#: remote.c:1284
+#: remote.c:1283
 #, c-format
 msgid ""
 "The <src> part of the refspec is a commit object.\n"
@@ -22025,7 +22030,7 @@ msgid ""
 "'%s:refs/heads/%s'?"
 msgstr ""
 
-#: remote.c:1289
+#: remote.c:1288
 #, c-format
 msgid ""
 "The <src> part of the refspec is a tag object.\n"
@@ -22033,7 +22038,7 @@ msgid ""
 "'%s:refs/tags/%s'?"
 msgstr ""
 
-#: remote.c:1294
+#: remote.c:1293
 #, c-format
 msgid ""
 "The <src> part of the refspec is a tree object.\n"
@@ -22041,7 +22046,7 @@ msgid ""
 "'%s:refs/tags/%s'?"
 msgstr ""
 
-#: remote.c:1299
+#: remote.c:1298
 #, c-format
 msgid ""
 "The <src> part of the refspec is a blob object.\n"
@@ -22049,114 +22054,114 @@ msgid ""
 "'%s:refs/tags/%s'?"
 msgstr ""
 
-#: remote.c:1335
+#: remote.c:1334
 #, c-format
 msgid "%s cannot be resolved to branch"
 msgstr ""
 
-#: remote.c:1346
+#: remote.c:1345
 #, c-format
 msgid "unable to delete '%s': remote ref does not exist"
 msgstr ""
 
-#: remote.c:1358
+#: remote.c:1357
 #, c-format
 msgid "dst refspec %s matches more than one"
 msgstr ""
 
-#: remote.c:1365
+#: remote.c:1364
 #, c-format
 msgid "dst ref %s receives from more than one src"
 msgstr ""
 
-#: remote.c:1886 remote.c:1993
+#: remote.c:1885 remote.c:1992
 msgid "HEAD does not point to a branch"
 msgstr ""
 
-#: remote.c:1895
+#: remote.c:1894
 #, c-format
 msgid "no such branch: '%s'"
 msgstr ""
 
-#: remote.c:1898
+#: remote.c:1897
 #, c-format
 msgid "no upstream configured for branch '%s'"
 msgstr ""
 
-#: remote.c:1904
+#: remote.c:1903
 #, c-format
 msgid "upstream branch '%s' not stored as a remote-tracking branch"
 msgstr ""
 
-#: remote.c:1919
+#: remote.c:1918
 #, c-format
 msgid "push destination '%s' on remote '%s' has no local tracking branch"
 msgstr ""
 
-#: remote.c:1934
+#: remote.c:1933
 #, c-format
 msgid "branch '%s' has no remote for pushing"
 msgstr ""
 
-#: remote.c:1944
+#: remote.c:1943
 #, c-format
 msgid "push refspecs for '%s' do not include '%s'"
 msgstr ""
 
-#: remote.c:1957
+#: remote.c:1956
 msgid "push has no destination (push.default is 'nothing')"
 msgstr ""
 
-#: remote.c:1979
+#: remote.c:1978
 msgid "cannot resolve 'simple' push to a single destination"
 msgstr ""
 
-#: remote.c:2112
+#: remote.c:2111
 #, c-format
 msgid "couldn't find remote ref %s"
 msgstr ""
 
-#: remote.c:2125
+#: remote.c:2124
 #, c-format
 msgid "* Ignoring funny ref '%s' locally"
 msgstr ""
 
-#: remote.c:2289
+#: remote.c:2288
 #, c-format
 msgid "Your branch is based on '%s', but the upstream is gone.\n"
 msgstr ""
 
-#: remote.c:2293
+#: remote.c:2292
 msgid "  (use \"git branch --unset-upstream\" to fixup)\n"
 msgstr ""
 
-#: remote.c:2296
+#: remote.c:2295
 #, c-format
 msgid "Your branch is up to date with '%s'.\n"
 msgstr ""
 
-#: remote.c:2300
+#: remote.c:2299
 #, c-format
 msgid "Your branch and '%s' refer to different commits.\n"
 msgstr ""
 
-#: remote.c:2303
+#: remote.c:2302
 #, c-format
 msgid "  (use \"%s\" for details)\n"
 msgstr ""
 
-#: remote.c:2307
+#: remote.c:2306
 #, c-format
 msgid "Your branch is ahead of '%s' by %d commit.\n"
 msgid_plural "Your branch is ahead of '%s' by %d commits.\n"
 msgstr[0] ""
 msgstr[1] ""
 
-#: remote.c:2313
+#: remote.c:2312
 msgid "  (use \"git push\" to publish your local commits)\n"
 msgstr ""
 
-#: remote.c:2316
+#: remote.c:2315
 #, c-format
 msgid "Your branch is behind '%s' by %d commit, and can be fast-forwarded.\n"
 msgid_plural ""
@@ -22164,11 +22169,11 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: remote.c:2324
+#: remote.c:2323
 msgid "  (use \"git pull\" to update your local branch)\n"
 msgstr ""
 
-#: remote.c:2327
+#: remote.c:2326
 #, c-format
 msgid ""
 "Your branch and '%s' have diverged,\n"
@@ -22179,16 +22184,16 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: remote.c:2337
+#: remote.c:2336
 msgid "  (use \"git pull\" to merge the remote branch into yours)\n"
 msgstr ""
 
-#: remote.c:2529
+#: remote.c:2528
 #, c-format
 msgid "cannot parse expected object name '%s'"
 msgstr ""
 
-#: remote.c:2803
+#: remote.c:2802
 #, c-format
 msgid "cannot strip one component off url '%s'"
 msgstr ""
