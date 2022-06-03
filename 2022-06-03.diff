@@ -1,0 +1,453 @@
+--- po/git.pot.old	2022-06-03 23:20:34.503940638 +0000
++++ po/git.pot.new	2022-06-03 23:20:34.595944854 +0000
+@@ -492,6 +492,7 @@
+ "Lines starting with %c will be removed.\n"
+ msgstr ""
+ 
++#. #-#-#-#-#  git-add--interactive.perl.po  #-#-#-#-#
+ #. TRANSLATORS: 'it' refers to the patch mentioned in the previous messages.
+ #: add-patch.c git-add--interactive.perl
+ msgid ""
+@@ -508,12 +509,14 @@
+ msgid "'git apply --cached' failed"
+ msgstr ""
+ 
++#. #-#-#-#-#  add-patch.c.po  #-#-#-#-#
+ #. TRANSLATORS: do not translate [y/n]
+ #. The program will only accept that input at this point.
+ #. Consider translating (saying "no" discards!) as
+ #. (saying "n" for "no" discards!) if the translation
+ #. of the word "no" does not start with n.
+ #.
++#. #-#-#-#-#  git-add--interactive.perl.po  #-#-#-#-#
+ #. TRANSLATORS: do not translate [y/n]
+ #. The program will only accept that input
+ #. at this point.
+@@ -944,7 +947,7 @@
+ msgid "cannot checkout %s"
+ msgstr ""
+ 
+-#: apply.c midx.c pack-revindex.c setup.c
++#: apply.c midx.c pack-mtimes.c pack-revindex.c setup.c
+ #, c-format
+ msgid "failed to read %s"
+ msgstr ""
+@@ -1708,10 +1711,12 @@
+ msgid "not tracking: ambiguous information for ref '%s'"
+ msgstr ""
+ 
++#. #-#-#-#-#  branch.c.po  #-#-#-#-#
+ #. TRANSLATORS: This is a line listing a remote with duplicate
+ #. refspecs in the advice message below. For RTL languages you'll
+ #. probably want to swap the "%s" and leading "  " space around.
+ #.
++#. #-#-#-#-#  object-name.c.po  #-#-#-#-#
+ #. TRANSLATORS: This is line item of ambiguous object output
+ #. from describe_ambiguous_object() above. For RTL languages
+ #. you'll probably want to swap the "%s" and leading " " space
+@@ -4668,7 +4673,7 @@
+ msgid "failed to start iterator over '%s'"
+ msgstr ""
+ 
+-#: builtin/clone.c
++#: builtin/clone.c compat/precompose_utf8.c
+ #, c-format
+ msgid "failed to unlink '%s'"
+ msgstr ""
+@@ -7280,6 +7285,10 @@
+ msgstr ""
+ 
+ #: builtin/gc.c
++msgid "pack unreferenced objects separately"
++msgstr ""
++
++#: builtin/gc.c
+ msgid "be more thorough (increased runtime)"
+ msgstr ""
+ 
+@@ -7544,6 +7553,7 @@
+ msgid "invalid number of threads specified (%d) for %s"
+ msgstr ""
+ 
++#. #-#-#-#-#  grep.c.po  #-#-#-#-#
+ #. TRANSLATORS: %s is the configuration
+ #. variable for tweaking threads, currently
+ #. grep.threads
+@@ -10342,6 +10352,23 @@
+ 
+ #: builtin/pack-objects.c
+ #, c-format
++msgid "packfile %s cannot be accessed"
++msgstr ""
++
++#: builtin/pack-objects.c
++msgid "Enumerating cruft objects"
++msgstr ""
++
++#: builtin/pack-objects.c
++msgid "unable to add cruft objects"
++msgstr ""
++
++#: builtin/pack-objects.c
++msgid "Traversing cruft objects"
++msgstr ""
++
++#: builtin/pack-objects.c
++#, c-format
+ msgid ""
+ "expected edge object ID, got garbage:\n"
+ " %s"
+@@ -10354,6 +10381,10 @@
+ " %s"
+ msgstr ""
+ 
++#: builtin/pack-objects.c reachable.c
++msgid "could not load cruft pack .mtimes"
++msgstr ""
++
+ #: builtin/pack-objects.c
+ msgid "cannot open pack index"
+ msgstr ""
+@@ -10488,6 +10519,14 @@
+ msgstr ""
+ 
+ #: builtin/pack-objects.c
++msgid "create a cruft pack"
++msgstr ""
++
++#: builtin/pack-objects.c
++msgid "expire cruft objects older than <time>"
++msgstr ""
++
++#: builtin/pack-objects.c
+ msgid "use the sparse reachability algorithm"
+ msgstr ""
+ 
+@@ -10587,6 +10626,18 @@
+ msgstr ""
+ 
+ #: builtin/pack-objects.c
++msgid "cannot use internal rev list with --cruft"
++msgstr ""
++
++#: builtin/pack-objects.c
++msgid "cannot use --stdin-packs with --cruft"
++msgstr ""
++
++#: builtin/pack-objects.c
++msgid "cannot use --max-pack-size with --cruft"
++msgstr ""
++
++#: builtin/pack-objects.c
+ msgid "Enumerating objects"
+ msgstr ""
+ 
+@@ -12296,6 +12347,18 @@
+ msgstr ""
+ 
+ #: builtin/repack.c
++msgid "same as -a, pack unreachable cruft objects separately"
++msgstr ""
++
++#: builtin/repack.c
++msgid "approxidate"
++msgstr ""
++
++#: builtin/repack.c
++msgid "with -C, expire objects older than this"
++msgstr ""
++
++#: builtin/repack.c
+ msgid "remove redundant packs, and run git-prune-packed"
+ msgstr ""
+ 
+@@ -12324,10 +12387,6 @@
+ msgstr ""
+ 
+ #: builtin/repack.c
+-msgid "approxidate"
+-msgstr ""
+-
+-#: builtin/repack.c
+ msgid "with -A, do not loosen objects older than this"
+ msgstr ""
+ 
+@@ -12385,6 +12444,11 @@
+ 
+ #: builtin/repack.c
+ #, c-format
++msgid "pack prefix %s does not begin with objdir %s"
++msgstr ""
++
++#: builtin/repack.c
++#, c-format
+ msgid "missing required file: %s"
+ msgstr ""
+ 
+@@ -13691,11 +13755,6 @@
+ 
+ #: builtin/submodule--helper.c
+ #, c-format
+-msgid "cannot strip one component off url '%s'"
+-msgstr ""
+-
+-#: builtin/submodule--helper.c
+-#, c-format
+ msgid "could not look up configuration '%s'. Assuming this repository is its own authoritative upstream."
+ msgstr ""
+ 
+@@ -14320,7 +14379,7 @@
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "sets the submodule’s name to the given string instead of defaulting to its path"
++msgid "sets the submodule's name to the given string instead of defaulting to its path"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+@@ -15278,6 +15337,10 @@
+ msgid "final chunk has non-zero id %<PRIx32>"
+ msgstr ""
+ 
++#: chunk-format.c
++msgid "invalid hash version"
++msgstr ""
++
+ #: color.c
+ #, c-format
+ msgid "invalid color value: %.*s"
+@@ -15963,10 +16026,6 @@
+ msgid "An overview of recommended workflows with Git"
+ msgstr ""
+ 
+-#: commit-graph.c midx.c
+-msgid "invalid hash version"
+-msgstr ""
+-
+ #: commit-graph.c
+ msgid "commit-graph file is too small"
+ msgstr ""
+@@ -16242,15 +16301,135 @@
+ msgid "no libc information available\n"
+ msgstr ""
+ 
++#: compat/fsmonitor/fsm-listen-darwin.c
++msgid "Unable to create FSEventStream."
++msgstr ""
++
++#: compat/fsmonitor/fsm-listen-darwin.c
++msgid "Failed to start the FSEventStream"
++msgstr ""
++
++#: compat/fsmonitor/fsm-listen-win32.c
++#, c-format
++msgid "[GLE %ld] could not convert path to UTF-8: '%.*ls'"
++msgstr ""
++
++#: compat/fsmonitor/fsm-listen-win32.c
++#, c-format
++msgid "could not convert to wide characters: '%s'"
++msgstr ""
++
++#: compat/fsmonitor/fsm-listen-win32.c
++#, c-format
++msgid "[GLE %ld] could not watch '%s'"
++msgstr ""
++
++#: compat/fsmonitor/fsm-listen-win32.c
++#, c-format
++msgid "ReadDirectoryChangedW failed on '%s' [GLE %ld]"
++msgstr ""
++
++#: compat/fsmonitor/fsm-listen-win32.c
++#, c-format
++msgid "GetOverlappedResult failed on '%s' [GLE %ld]"
++msgstr ""
++
++#: compat/fsmonitor/fsm-listen-win32.c
++#, c-format
++msgid "could not read directory changes [GLE %ld]"
++msgstr ""
++
++#: compat/mingw.c
++#, c-format
++msgid "failed to copy SID (%ld)"
++msgstr ""
++
++#: compat/mingw.c
++#, c-format
++msgid "failed to get owner for '%s' (%ld)"
++msgstr ""
++
+ #: compat/obstack.c
+ msgid "memory exhausted"
+ msgstr ""
+ 
+-#: compat/simple-ipc/ipc-unix-socket.c
++#: compat/regex/regcomp.c
++msgid "Success"
++msgstr ""
++
++#: compat/regex/regcomp.c
++msgid "No match"
++msgstr ""
++
++#: compat/regex/regcomp.c
++msgid "Invalid regular expression"
++msgstr ""
++
++#: compat/regex/regcomp.c
++msgid "Invalid collation character"
++msgstr ""
++
++#: compat/regex/regcomp.c
++msgid "Invalid character class name"
++msgstr ""
++
++#: compat/regex/regcomp.c
++msgid "Trailing backslash"
++msgstr ""
++
++#: compat/regex/regcomp.c
++msgid "Invalid back reference"
++msgstr ""
++
++#: compat/regex/regcomp.c
++msgid "Unmatched [ or [^"
++msgstr ""
++
++#: compat/regex/regcomp.c
++msgid "Unmatched ( or \\("
++msgstr ""
++
++#: compat/regex/regcomp.c
++msgid "Unmatched \\{"
++msgstr ""
++
++#: compat/regex/regcomp.c
++msgid "Invalid content of \\{\\}"
++msgstr ""
++
++#: compat/regex/regcomp.c
++msgid "Invalid range end"
++msgstr ""
++
++#: compat/regex/regcomp.c
++msgid "Memory exhausted"
++msgstr ""
++
++#: compat/regex/regcomp.c
++msgid "Invalid preceding regular expression"
++msgstr ""
++
++#: compat/regex/regcomp.c
++msgid "Premature end of regular expression"
++msgstr ""
++
++#: compat/regex/regcomp.c
++msgid "Regular expression too big"
++msgstr ""
++
++#: compat/regex/regcomp.c
++msgid "Unmatched ) or \\)"
++msgstr ""
++
++#: compat/regex/regcomp.c
++msgid "No previous regular expression"
++msgstr ""
++
++#: compat/simple-ipc/ipc-unix-socket.c compat/simple-ipc/ipc-win32.c
+ msgid "could not send IPC command"
+ msgstr ""
+ 
+-#: compat/simple-ipc/ipc-unix-socket.c
++#: compat/simple-ipc/ipc-unix-socket.c compat/simple-ipc/ipc-win32.c
+ msgid "could not read IPC response"
+ msgstr ""
+ 
+@@ -16264,6 +16443,26 @@
+ msgid "could not start worker[0] for '%s'"
+ msgstr ""
+ 
++#: compat/simple-ipc/ipc-win32.c
++#, c-format
++msgid "ConnectNamedPipe failed for '%s' (%lu)"
++msgstr ""
++
++#: compat/simple-ipc/ipc-win32.c
++#, c-format
++msgid "could not create fd from pipe for '%s'"
++msgstr ""
++
++#: compat/simple-ipc/ipc-win32.c
++#, c-format
++msgid "could not start thread[0] for '%s'"
++msgstr ""
++
++#: compat/simple-ipc/ipc-win32.c
++#, c-format
++msgid "wait for hEvent failed for '%s'"
++msgstr ""
++
+ #: compat/terminal.c
+ msgid "cannot resume in the background, please use 'fg' to resume"
+ msgstr ""
+@@ -20505,7 +20704,13 @@
+ msgstr ""
+ 
+ #: pack-bitmap.c
+-msgid "load_reverse_index: could not open pack"
++#, c-format
++msgid "could not open pack %s"
++msgstr ""
++
++#: pack-bitmap.c
++#, c-format
++msgid "preferred pack (%s) is invalid"
+ msgstr ""
+ 
+ #: pack-bitmap.c
+@@ -20513,6 +20718,31 @@
+ msgid "could not find %s in pack %s at offset %<PRIuMAX>"
+ msgstr ""
+ 
++#: pack-mtimes.c
++#, c-format
++msgid "mtimes file %s is too small"
++msgstr ""
++
++#: pack-mtimes.c
++#, c-format
++msgid "mtimes file %s has unknown signature"
++msgstr ""
++
++#: pack-mtimes.c
++#, c-format
++msgid "mtimes file %s has unsupported version %<PRIu32>"
++msgstr ""
++
++#: pack-mtimes.c
++#, c-format
++msgid "mtimes file %s has unsupported hash id %<PRIu32>"
++msgstr ""
++
++#: pack-mtimes.c
++#, c-format
++msgid "mtimes file %s is corrupt"
++msgstr ""
++
+ #: pack-revindex.c
+ #, c-format
+ msgid "reverse-index file %s is too small"
+@@ -21951,6 +22181,11 @@
+ msgid "cannot parse expected object name '%s'"
+ msgstr ""
+ 
++#: remote.c
++#, c-format
++msgid "cannot strip one component off url '%s'"
++msgstr ""
++
+ #: replace-object.c
+ #, c-format
+ msgid "bad replace ref name: %s"
