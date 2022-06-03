@@ -1,0 +1,110 @@
+--- po/git.pot.old	2022-06-03 05:20:55.386563676 +0000
++++ po/git.pot.new	2022-06-03 05:20:55.486564253 +0000
+@@ -7214,10 +7214,23 @@
+ msgstr ""
+ 
+ #: builtin/fsmonitor--daemon.c
++msgid "could not start fsmonitor health thread"
++msgstr ""
++
++#: builtin/fsmonitor--daemon.c
+ msgid "could not initialize listener thread"
+ msgstr ""
+ 
+ #: builtin/fsmonitor--daemon.c
++msgid "could not initialize health thread"
++msgstr ""
++
++#: builtin/fsmonitor--daemon.c
++#, c-format
++msgid "could not cd home '%s'"
++msgstr ""
++
++#: builtin/fsmonitor--daemon.c
+ #, c-format
+ msgid "fsmonitor--daemon is already running '%s'"
+ msgstr ""
+@@ -16324,6 +16337,36 @@
+ msgid "no libc information available\n"
+ msgstr ""
+ 
++#: compat/fsmonitor/fsm-health-win32.c
++#, c-format
++msgid "[GLE %ld] health thread could not open '%ls'"
++msgstr ""
++
++#: compat/fsmonitor/fsm-health-win32.c
++#, c-format
++msgid "[GLE %ld] health thread getting BHFI for '%ls'"
++msgstr ""
++
++#: compat/fsmonitor/fsm-health-win32.c compat/fsmonitor/fsm-listen-win32.c
++#, c-format
++msgid "could not convert to wide characters: '%s'"
++msgstr ""
++
++#: compat/fsmonitor/fsm-health-win32.c
++#, c-format
++msgid "BHFI changed '%ls'"
++msgstr ""
++
++#: compat/fsmonitor/fsm-health-win32.c
++#, c-format
++msgid "unhandled case in 'has_worktree_moved': %d"
++msgstr ""
++
++#: compat/fsmonitor/fsm-health-win32.c
++#, c-format
++msgid "health thread wait failed [GLE %ld]"
++msgstr ""
++
+ #: compat/fsmonitor/fsm-listen-darwin.c
+ msgid "Unable to create FSEventStream."
+ msgstr ""
+@@ -16339,12 +16382,12 @@
+ 
+ #: compat/fsmonitor/fsm-listen-win32.c
+ #, c-format
+-msgid "could not convert to wide characters: '%s'"
++msgid "[GLE %ld] could not watch '%s'"
+ msgstr ""
+ 
+ #: compat/fsmonitor/fsm-listen-win32.c
+ #, c-format
+-msgid "[GLE %ld] could not watch '%s'"
++msgid "[GLE %ld] could not get longname of '%s'"
+ msgstr ""
+ 
+ #: compat/fsmonitor/fsm-listen-win32.c
+@@ -18419,6 +18462,31 @@
+ msgid "could not send '%s' command to fsmonitor--daemon"
+ msgstr ""
+ 
++#: fsmonitor-settings.c
++#, c-format
++msgid "bare repository '%s' is incompatible with fsmonitor"
++msgstr ""
++
++#: fsmonitor-settings.c
++#, c-format
++msgid "repository '%s' is incompatible with fsmonitor due to errors"
++msgstr ""
++
++#: fsmonitor-settings.c
++#, c-format
++msgid "remote repository '%s' is incompatible with fsmonitor"
++msgstr ""
++
++#: fsmonitor-settings.c
++#, c-format
++msgid "virtual repository '%s' is incompatible with fsmonitor"
++msgstr ""
++
++#: fsmonitor-settings.c
++#, c-format
++msgid "repository '%s' is incompatible with fsmonitor due to lack of Unix sockets"
++msgstr ""
++
+ #. TRANSLATORS: you can adjust this to align "git add -i" status menu
+ #: git-add--interactive.perl
+ #, perl-format
