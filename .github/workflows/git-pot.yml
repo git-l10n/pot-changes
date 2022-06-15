@@ -1,15 +1,15 @@
 name: git-pot
 
 on:
-  ## The GitHub scheduler doesn’t work. Not know why
-  #schedule:
-  #  - cron: '51 0,12 * * *'
-
+  ## schedule only works for pipeline yaml defined in default branch
+  schedule:
+    - cron: '51 3,10,15,21 * * *'
+      
   ## Trigger using manual event by an external schedule
   workflow_dispatch:
   push:
     branches:
-      - pot/CI
+      - main
 
 jobs:
   git-pot:
@@ -27,15 +27,15 @@ jobs:
           git -c protocol.version=2 clone \
             --depth 1 \
             --single-branch --branch pot/${{ matrix.branch }} \
-            https://github.com/${{ github.repository }} git-po &&
-          cd git-po &&
+            https://github.com/${{ github.repository }} pot-changes &&
+          cd pot-changes &&
           mkdir -p po &&
           git config user.name "${{ env.AUTHOR_NAME }}" &&
           git config user.email "${{ env.AUTHOR_EMAIL }}"
       - name: skip if the commit was already tested
         id: skip-if-redundant
         run: |
-          cd git-po &&
+          cd pot-changes &&
           git -c protocol.version=2 ls-remote https://github.com/git/git.git \
             refs/heads/${{ matrix.branch }} >last-check.tmp &&
           if diff last-check last-check.tmp
@@ -71,7 +71,7 @@ jobs:
           then
             report_msg="** no new commits in ${{ matrix.branch }} of upstream **"
           else
-            cd git-po &&
+            cd pot-changes &&
             msgcat --add-location=file --sort-by-file --no-wrap po/git.pot |
               sed -e '1,/^$/d' >po/git.pot.old &&
             cp ../git/po/git.pot po/git.pot &&
