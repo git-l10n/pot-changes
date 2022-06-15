@@ -1,0 +1,256 @@
+--- po/git.pot.old	2022-06-15 09:36:16.490144736 +0000
++++ po/git.pot.new	2022-06-15 09:36:16.586146052 +0000
+@@ -1421,6 +1421,21 @@
+ msgstr ""
+ 
+ #: archive.c
++#, c-format
++msgid "unclosed quote: '%s'"
++msgstr ""
++
++#: archive.c
++#, c-format
++msgid "missing colon: '%s'"
++msgstr ""
++
++#: archive.c
++#, c-format
++msgid "empty file name: '%s'"
++msgstr ""
++
++#: archive.c
+ msgid "archive format"
+ msgstr ""
+ 
+@@ -1446,6 +1461,10 @@
+ msgid "add untracked file to archive"
+ msgstr ""
+ 
++#: archive.c
++msgid "path:content"
++msgstr ""
++
+ #: archive.c builtin/archive.c
+ msgid "write the archive to this file"
+ msgstr ""
+@@ -2455,7 +2474,7 @@
+ msgid "git apply [<options>] [<patch>...]"
+ msgstr ""
+ 
+-#: builtin/archive.c
++#: builtin/archive.c contrib/scalar/scalar.c
+ msgid "could not redirect output"
+ msgstr ""
+ 
+@@ -7195,10 +7214,23 @@
+ msgstr ""
+ 
+ #: builtin/fsmonitor--daemon.c
++msgid "could not start fsmonitor health thread"
++msgstr ""
++
++#: builtin/fsmonitor--daemon.c
+ msgid "could not initialize listener thread"
+ msgstr ""
+ 
+ #: builtin/fsmonitor--daemon.c
++msgid "could not initialize health thread"
++msgstr ""
++
++#: builtin/fsmonitor--daemon.c
++#, c-format
++msgid "could not cd home '%s'"
++msgstr ""
++
++#: builtin/fsmonitor--daemon.c
+ #, c-format
+ msgid "fsmonitor--daemon is already running '%s'"
+ msgstr ""
+@@ -16301,6 +16333,36 @@
+ msgid "no libc information available\n"
+ msgstr ""
+ 
++#: compat/fsmonitor/fsm-health-win32.c
++#, c-format
++msgid "[GLE %ld] health thread could not open '%ls'"
++msgstr ""
++
++#: compat/fsmonitor/fsm-health-win32.c
++#, c-format
++msgid "[GLE %ld] health thread getting BHFI for '%ls'"
++msgstr ""
++
++#: compat/fsmonitor/fsm-health-win32.c compat/fsmonitor/fsm-listen-win32.c
++#, c-format
++msgid "could not convert to wide characters: '%s'"
++msgstr ""
++
++#: compat/fsmonitor/fsm-health-win32.c
++#, c-format
++msgid "BHFI changed '%ls'"
++msgstr ""
++
++#: compat/fsmonitor/fsm-health-win32.c
++#, c-format
++msgid "unhandled case in 'has_worktree_moved': %d"
++msgstr ""
++
++#: compat/fsmonitor/fsm-health-win32.c
++#, c-format
++msgid "health thread wait failed [GLE %ld]"
++msgstr ""
++
+ #: compat/fsmonitor/fsm-listen-darwin.c
+ msgid "Unable to create FSEventStream."
+ msgstr ""
+@@ -16316,12 +16378,12 @@
+ 
+ #: compat/fsmonitor/fsm-listen-win32.c
+ #, c-format
+-msgid "could not convert to wide characters: '%s'"
++msgid "[GLE %ld] could not watch '%s'"
+ msgstr ""
+ 
+ #: compat/fsmonitor/fsm-listen-win32.c
+ #, c-format
+-msgid "[GLE %ld] could not watch '%s'"
++msgid "[GLE %ld] could not get longname of '%s'"
+ msgstr ""
+ 
+ #: compat/fsmonitor/fsm-listen-win32.c
+@@ -16996,6 +17058,11 @@
+ msgid "failed to close rev-list's stdin"
+ msgstr ""
+ 
++#: contrib/scalar/scalar.c worktree.c
++#, c-format
++msgid "'%s' does not exist"
++msgstr ""
++
+ #: contrib/scalar/scalar.c
+ msgid "need a working directory"
+ msgstr ""
+@@ -17022,6 +17089,26 @@
+ msgid "Scalar enlistments require a worktree"
+ msgstr ""
+ 
++#: contrib/scalar/scalar.c dir.c
++#, c-format
++msgid "could not open directory '%s'"
++msgstr ""
++
++#: contrib/scalar/scalar.c
++#, c-format
++msgid "skipping '%s', which is neither file nor directory"
++msgstr ""
++
++#: contrib/scalar/scalar.c
++#, c-format
++msgid "could not determine free disk size for '%s'"
++msgstr ""
++
++#: contrib/scalar/scalar.c
++#, c-format
++msgid "could not get info for '%s'"
++msgstr ""
++
+ #: contrib/scalar/scalar.c
+ #, c-format
+ msgid "remote HEAD is not a branch: '%.*s'"
+@@ -17093,6 +17180,23 @@
+ msgstr ""
+ 
+ #: contrib/scalar/scalar.c
++msgid "scalar diagnose [<enlistment>]"
++msgstr ""
++
++#: contrib/scalar/scalar.c
++#, c-format
++msgid "could not create directory for '%s'"
++msgstr ""
++
++#: contrib/scalar/scalar.c
++msgid "could not duplicate stdout"
++msgstr ""
++
++#: contrib/scalar/scalar.c
++msgid "failed to write archive"
++msgstr ""
++
++#: contrib/scalar/scalar.c
+ msgid "`scalar list` does not take arguments"
+ msgstr ""
+ 
+@@ -18035,11 +18139,6 @@
+ msgstr ""
+ 
+ #: dir.c
+-#, c-format
+-msgid "could not open directory '%s'"
+-msgstr ""
+-
+-#: dir.c
+ msgid "failed to get kernel name and information"
+ msgstr ""
+ 
+@@ -18359,6 +18458,31 @@
+ msgid "could not send '%s' command to fsmonitor--daemon"
+ msgstr ""
+ 
++#: fsmonitor-settings.c
++#, c-format
++msgid "bare repository '%s' is incompatible with fsmonitor"
++msgstr ""
++
++#: fsmonitor-settings.c
++#, c-format
++msgid "repository '%s' is incompatible with fsmonitor due to errors"
++msgstr ""
++
++#: fsmonitor-settings.c
++#, c-format
++msgid "remote repository '%s' is incompatible with fsmonitor"
++msgstr ""
++
++#: fsmonitor-settings.c
++#, c-format
++msgid "virtual repository '%s' is incompatible with fsmonitor"
++msgstr ""
++
++#: fsmonitor-settings.c
++#, c-format
++msgid "repository '%s' is incompatible with fsmonitor due to lack of Unix sockets"
++msgstr ""
++
+ #. TRANSLATORS: you can adjust this to align "git add -i" status menu
+ #: git-add--interactive.perl
+ #, perl-format
+@@ -21960,6 +22084,16 @@
+ 
+ #: remote.c
+ #, c-format
++msgid "unrecognized value fetch.credentialsInURL: '%s'"
++msgstr ""
++
++#: remote.c
++#, c-format
++msgid "URL '%s' uses plaintext credentials"
++msgstr ""
++
++#: remote.c
++#, c-format
+ msgid "Cannot fetch both %s and %s to %s"
+ msgstr ""
+ 
+@@ -24271,11 +24405,6 @@
+ msgstr ""
+ 
+ #: worktree.c
+-#, c-format
+-msgid "'%s' does not exist"
+-msgstr ""
+-
+-#: worktree.c
+ #, c-format
+ msgid "'%s' is not a .git file, error code %d"
+ msgstr ""
