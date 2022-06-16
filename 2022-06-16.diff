@@ -1,0 +1,102 @@
+--- po/git.pot.old	2022-06-16 03:43:28.077007539 +0000
++++ po/git.pot.new	2022-06-16 03:43:28.201008198 +0000
+@@ -7093,6 +7093,11 @@
+ msgstr ""
+ 
+ #: builtin/fsck.c
++#, c-format
++msgid "%s: invalid sha1 pointer in resolve-undo"
++msgstr ""
++
++#: builtin/fsck.c
+ msgid "git fsck [<options>] [<object>...]"
+ msgstr ""
+ 
+@@ -10918,7 +10923,7 @@
+ msgid ""
+ "\n"
+ "To avoid automatically configuring upstream branches when their name\n"
+-"doesn't match the local branch, see option 'simple' of branch.autosetupmerge\n"
++"doesn't match the local branch, see option 'simple' of branch.autoSetupMerge\n"
+ "in 'git help config'.\n"
+ msgstr ""
+ 
+@@ -11468,7 +11473,7 @@
+ msgstr ""
+ 
+ #: builtin/rebase.c
+-msgid "(DEPRECATED) try to recreate merges instead of ignoring them"
++msgid "(REMOVED) was: try to recreate merges instead of ignoring them"
+ msgstr ""
+ 
+ #: builtin/rebase.c
+@@ -11528,7 +11533,17 @@
+ msgstr ""
+ 
+ #: builtin/rebase.c
+-msgid "--preserve-merges was replaced by --rebase-merges"
++msgid ""
++"`rebase --preserve-merges` (-p) is no longer supported.\n"
++"Use `git rebase --abort` to terminate current rebase.\n"
++"Or downgrade to v2.33, or earlier, to complete the rebase."
++msgstr ""
++
++#: builtin/rebase.c
++msgid ""
++"--preserve-merges was replaced by --rebase-merges\n"
++"Note: Your `pull.rebase` configuration may also be  set to 'preserve',\n"
++"which is no longer supported; use 'merges' instead"
+ msgstr ""
+ 
+ #: builtin/rebase.c
+@@ -13030,10 +13045,6 @@
+ msgstr ""
+ 
+ #: builtin/revert.c
+-msgid "use the 'reference' format to refer to commits"
+-msgstr ""
+-
+-#: builtin/revert.c
+ msgid "append commit name"
+ msgstr ""
+ 
+@@ -13050,6 +13061,10 @@
+ msgstr ""
+ 
+ #: builtin/revert.c
++msgid "use the 'reference' format to refer to commits"
++msgstr ""
++
++#: builtin/revert.c
+ msgid "revert failed"
+ msgstr ""
+ 
+@@ -22088,6 +22103,16 @@
+ 
+ #: remote.c
+ #, c-format
++msgid "unrecognized value fetch.credentialsInURL: '%s'"
++msgstr ""
++
++#: remote.c
++#, c-format
++msgid "URL '%s' uses plaintext credentials"
++msgstr ""
++
++#: remote.c
++#, c-format
+ msgid "Cannot fetch both %s and %s to %s"
+ msgstr ""
+ 
+@@ -22425,6 +22450,11 @@
+ msgstr ""
+ 
+ #: revision.c
++#, c-format
++msgid "resolve-undo records `%s` which is missing"
++msgstr ""
++
++#: revision.c
+ msgid "--unpacked=<packfile> no longer supported"
+ msgstr ""
+ 
