@@ -1,11 +1,17 @@
 name: git-pot
 
 on:
-  ## schedule only works for pipeline yaml defined in default branch
+  ## Schedule only works when the pipeline.yaml file is defined in default
+  ## branch.
+  ##
+  ## Must define the secret "PUSH_TOKEN" for this repository on GitHub.
+  ##
   schedule:
     - cron: '51 */1 * * *'
       
-  ## Trigger using manual event by an external schedule
+  ## We can also trigger using manual event by an external schedule, when
+  ## the schedule not works for some reasons, such as: the CI pipeline is
+  ## not in the default branch.
   workflow_dispatch:
   push:
     branches:
@@ -94,7 +100,7 @@ jobs:
               report_msg="** nothing changed in 'po/git.pot' on $date **"
             fi &&
             git push \
-              https://${{ env.LOGIN_NAME }}:${{ secrets.LOGIN_TOKEN }}@github.com/${{ github.repository }} \
+              https://${{ env.LOGIN_NAME }}:${{ secrets.PUSH_TOKEN }}@github.com/${{ github.repository }} \
               HEAD
           fi &&
           printf >&2 "\n$report_msg\n"
