@@ -1,0 +1,111 @@
+--- po/git.pot.old	2022-06-17 18:56:41.078003082 +0000
++++ po/git.pot.new	2022-06-17 18:56:41.174004154 +0000
+@@ -1335,6 +1335,11 @@
+ msgid "unsupported file mode: 0%o (SHA1: %s)"
+ msgstr ""
+ 
++#: archive-tar.c archive-zip.c builtin/pack-objects.c
++#, c-format
++msgid "deflate error (%d)"
++msgstr ""
++
+ #: archive-tar.c
+ #, c-format
+ msgid "unable to start '%s' filter"
+@@ -1359,11 +1364,6 @@
+ msgid "path too long (%d chars, SHA1: %s): %s"
+ msgstr ""
+ 
+-#: archive-zip.c builtin/pack-objects.c
+-#, c-format
+-msgid "deflate error (%d)"
+-msgstr ""
+-
+ #: archive-zip.c
+ #, c-format
+ msgid "timestamp too large for this system: %<PRIuMAX>"
+@@ -6568,11 +6568,7 @@
+ msgstr ""
+ 
+ #: builtin/fetch.c
+-msgid "can't fetch in current branch"
+-msgstr ""
+-
+-#: builtin/fetch.c
+-msgid "checked out in another worktree"
++msgid "can't fetch into checked-out branch"
+ msgstr ""
+ 
+ #: builtin/fetch.c
+@@ -7343,7 +7339,7 @@
+ 
+ #: builtin/gc.c
+ #, c-format
+-msgid "failed to parse gc.logexpiry value %s"
++msgid "failed to parse gc.logExpiry value %s"
+ msgstr ""
+ 
+ #: builtin/gc.c
+@@ -8219,7 +8215,7 @@
+ 
+ #: builtin/index-pack.c builtin/pack-objects.c
+ #, c-format
+-msgid "bad pack.indexversion=%<PRIu32>"
++msgid "bad pack.indexVersion=%<PRIu32>"
+ msgstr ""
+ 
+ #: builtin/index-pack.c
+@@ -12346,7 +12342,7 @@
+ #: builtin/repack.c
+ msgid ""
+ "Incremental repacks are incompatible with bitmap indexes.  Use\n"
+-"--no-write-bitmap-index or disable the pack.writebitmaps configuration."
++"--no-write-bitmap-index or disable the pack.writeBitmaps configuration."
+ msgstr ""
+ 
+ #: builtin/repack.c
+@@ -16341,7 +16337,7 @@
+ msgid ""
+ "Warning: commit message did not conform to UTF-8.\n"
+ "You may want to amend it after fixing the message, or set the config\n"
+-"variable i18n.commitencoding to the encoding your project uses.\n"
++"variable i18n.commitEncoding to the encoding your project uses.\n"
+ msgstr ""
+ 
+ #: compat/compiler.h
+@@ -19334,7 +19330,7 @@
+ msgstr ""
+ 
+ #: gpg-interface.c
+-msgid "user.signingkey needs to be set for ssh signing"
++msgid "user.signingKey needs to be set for ssh signing"
+ msgstr ""
+ 
+ #: gpg-interface.c
+@@ -19544,7 +19540,7 @@
+ 
+ #: http.c
+ #, c-format
+-msgid "negative value for http.postbuffer; defaulting to %d"
++msgid "negative value for http.postBuffer; defaulting to %d"
+ msgstr ""
+ 
+ #: http.c
+@@ -22103,7 +22099,7 @@
+ 
+ #: remote.c
+ #, c-format
+-msgid "unrecognized value transfer.credentialsInURL: '%s'"
++msgid "unrecognized value transfer.credentialsInUrl: '%s'"
+ msgstr ""
+ 
+ #: remote.c
+@@ -23563,7 +23559,7 @@
+ msgstr ""
+ 
+ #: submodule-config.c
+-msgid "negative values not allowed for submodule.fetchjobs"
++msgid "negative values not allowed for submodule.fetchJobs"
+ msgstr ""
+ 
+ #: submodule-config.c
