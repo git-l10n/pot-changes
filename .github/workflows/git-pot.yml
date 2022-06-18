@@ -92,36 +92,30 @@ jobs:
         run: |
           make -C git pot
       - name: upload changes and report
+        if: steps.skip-if-redundant.outputs.status != 'skip'
         run: |
           report_msg="" &&
-          if test "${{ steps.skip-if-redundant.outputs.status }}" = "skip"
-          then
-            report_msg="** no new commits in ${{ matrix.branch }} of upstream **"
+          cd pot-changes &&
+          msgcat --add-location=file --sort-by-file --no-wrap po/git.pot |
+            sed -e '1,/^$/d' >po/git.pot.old &&
+          cp ../git/po/git.pot po/git.pot &&
+          msgcat --add-location=file --sort-by-file --no-wrap po/git.pot |
+            sed -e '1,/^$/d' >po/git.pot.new &&
+          date=$(date "+%Y-%m-%d") &&
+          diff=${date}.diff &&
+          if ! diff -q po/git.pot.old po/git.pot.new; then
+            printf "\n\n#################### $(date -R) ####################\n\n" >>"$diff"
+            ( diff -u po/git.pot.old po/git.pot.new >>"$diff" || true ) &&
+            git add po/git.pot "$diff" .latest-footprint &&
+            git commit -m "l10n: ${{ matrix.branch }}: changes of git.pot in $diff" &&
+            report_msg="** changes of 'po/git.pot' is reported in $diff **"
           else
-            cd pot-changes &&
-            msgcat --add-location=file --sort-by-file --no-wrap po/git.pot |
-              sed -e '1,/^$/d' >po/git.pot.old &&
-            cp ../git/po/git.pot po/git.pot &&
-            msgcat --add-location=file --sort-by-file --no-wrap po/git.pot |
-              sed -e '1,/^$/d' >po/git.pot.new &&
-            date=$(date "+%Y-%m-%d") &&
-            diff=${date}.diff &&
-            if ! diff -q po/git.pot.old po/git.pot.new; then
-              if test -s "$diff"; then
-                printf "\n\n########################################\n\n" >>"$diff"
-              fi &&
-              ( diff -u po/git.pot.old po/git.pot.new >>"$diff" || true ) &&
-              git add po/git.pot "$diff" .latest-footprint &&
-              git commit -m "l10n: ${{ matrix.branch }}: changes of git.pot in $diff" &&
-              report_msg="** changes of 'po/git.pot' is reported in $diff **"
-            else
-              echo >&2 "** po/git.pot is not changed **"
-              git add .latest-footprint &&
-              git commit -m "no l10n changes on $date" &&
-              report_msg="** nothing changed in 'po/git.pot' on $date **"
-            fi &&
-            git push \
-              https://${{ env.LOGIN_NAME }}:${{ secrets.PUSH_TOKEN }}@github.com/${{ github.repository }} \
-              HEAD
+            echo >&2 "** po/git.pot is not changed **"
+            git add .latest-footprint &&
+            git commit -m "no l10n changes on $date" &&
+            report_msg="** nothing changed in 'po/git.pot' on $date **"
           fi &&
+          git push \
+            https://${{ env.LOGIN_NAME }}:${{ secrets.PUSH_TOKEN }}@github.com/${{ github.repository }} \
+            HEAD &&
           printf >&2 "\n$report_msg\n"
