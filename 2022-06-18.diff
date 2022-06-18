@@ -1,0 +1,585 @@
+
+
+#################### Sat, 18 Jun 2022 15:25:40 +0000 ####################
+
+--- po/git.pot.old	2022-06-18 15:25:40.605975550 +0000
++++ po/git.pot.new	2022-06-18 15:25:40.753986212 +0000
+@@ -1335,6 +1335,11 @@
+ msgid "unsupported file mode: 0%o (SHA1: %s)"
+ msgstr ""
+ 
++#: archive-tar.c archive-zip.c builtin/pack-objects.c
++#, c-format
++msgid "deflate error (%d)"
++msgstr ""
++
+ #: archive-tar.c
+ #, c-format
+ msgid "unable to start '%s' filter"
+@@ -1359,11 +1364,6 @@
+ msgid "path too long (%d chars, SHA1: %s): %s"
+ msgstr ""
+ 
+-#: archive-zip.c builtin/pack-objects.c
+-#, c-format
+-msgid "deflate error (%d)"
+-msgstr ""
+-
+ #: archive-zip.c
+ #, c-format
+ msgid "timestamp too large for this system: %<PRIuMAX>"
+@@ -4701,7 +4701,7 @@
+ msgid "Could not find remote branch %s to clone."
+ msgstr ""
+ 
+-#: builtin/clone.c fetch-pack.c
++#: builtin/clone.c
+ msgid "remote did not send all necessary objects"
+ msgstr ""
+ 
+@@ -6387,6 +6387,10 @@
+ msgstr ""
+ 
+ #: builtin/fetch.c
++msgid "git fetch --bundle-uri=<uri> [<options>]"
++msgstr ""
++
++#: builtin/fetch.c
+ msgid "fetch.parallel cannot be negative"
+ msgstr ""
+ 
+@@ -6523,6 +6527,14 @@
+ msgstr ""
+ 
+ #: builtin/fetch.c
++msgid "uri"
++msgstr ""
++
++#: builtin/fetch.c
++msgid "download bundle data from the given URI instead of from a remote"
++msgstr ""
++
++#: builtin/fetch.c
+ msgid "couldn't find remote ref HEAD"
+ msgstr ""
+ 
+@@ -6540,11 +6552,7 @@
+ msgstr ""
+ 
+ #: builtin/fetch.c
+-msgid "can't fetch in current branch"
+-msgstr ""
+-
+-#: builtin/fetch.c
+-msgid "checked out in another worktree"
++msgid "can't fetch into checked-out branch"
+ msgstr ""
+ 
+ #: builtin/fetch.c
+@@ -6601,7 +6609,7 @@
+ 
+ #: builtin/fetch.c
+ #, c-format
+-msgid "%s did not send all necessary objects\n"
++msgid "connectivity check failed after fetching from %s\n"
+ msgstr ""
+ 
+ #: builtin/fetch.c
+@@ -6825,7 +6833,7 @@
+ msgid "quote placeholders suitably for Tcl"
+ msgstr ""
+ 
+-#: builtin/for-each-ref.c
++#: builtin/for-each-ref.c builtin/show-ref.c
+ msgid "show only <n> matched refs"
+ msgstr ""
+ 
+@@ -7065,6 +7073,11 @@
+ msgstr ""
+ 
+ #: builtin/fsck.c
++#, c-format
++msgid "%s: invalid sha1 pointer in resolve-undo"
++msgstr ""
++
++#: builtin/fsck.c
+ msgid "git fsck [<options>] [<object>...]"
+ msgstr ""
+ 
+@@ -7310,7 +7323,7 @@
+ 
+ #: builtin/gc.c
+ #, c-format
+-msgid "failed to parse gc.logexpiry value %s"
++msgid "failed to parse gc.logExpiry value %s"
+ msgstr ""
+ 
+ #: builtin/gc.c
+@@ -8186,7 +8199,7 @@
+ 
+ #: builtin/index-pack.c builtin/pack-objects.c
+ #, c-format
+-msgid "bad pack.indexversion=%<PRIu32>"
++msgid "bad pack.indexVersion=%<PRIu32>"
+ msgstr ""
+ 
+ #: builtin/index-pack.c
+@@ -10922,7 +10935,7 @@
+ msgid ""
+ "\n"
+ "To avoid automatically configuring upstream branches when their name\n"
+-"doesn't match the local branch, see option 'simple' of branch.autosetupmerge\n"
++"doesn't match the local branch, see option 'simple' of branch.autoSetupMerge\n"
+ "in 'git help config'.\n"
+ msgstr ""
+ 
+@@ -11472,7 +11485,7 @@
+ msgstr ""
+ 
+ #: builtin/rebase.c
+-msgid "(DEPRECATED) try to recreate merges instead of ignoring them"
++msgid "(REMOVED) was: try to recreate merges instead of ignoring them"
+ msgstr ""
+ 
+ #: builtin/rebase.c
+@@ -11488,10 +11501,6 @@
+ msgstr ""
+ 
+ #: builtin/rebase.c
+-msgid "update local refs that point to commits that are being rebased"
+-msgstr ""
+-
+-#: builtin/rebase.c
+ msgid "add exec lines after each commit of the editable list"
+ msgstr ""
+ 
+@@ -11536,7 +11545,17 @@
+ msgstr ""
+ 
+ #: builtin/rebase.c
+-msgid "--preserve-merges was replaced by --rebase-merges"
++msgid ""
++"`rebase --preserve-merges` (-p) is no longer supported.\n"
++"Use `git rebase --abort` to terminate current rebase.\n"
++"Or downgrade to v2.33, or earlier, to complete the rebase."
++msgstr ""
++
++#: builtin/rebase.c
++msgid ""
++"--preserve-merges was replaced by --rebase-merges\n"
++"Note: Your `pull.rebase` configuration may also be set to 'preserve',\n"
++"which is no longer supported; use 'merges' instead"
+ msgstr ""
+ 
+ #: builtin/rebase.c
+@@ -12052,6 +12071,10 @@
+ msgstr ""
+ 
+ #: builtin/remote.c
++msgid " skipped"
++msgstr ""
++
++#: builtin/remote.c
+ msgid " stale (use 'git remote prune' to remove)"
+ msgstr ""
+ 
+@@ -12339,7 +12362,7 @@
+ #: builtin/repack.c
+ msgid ""
+ "Incremental repacks are incompatible with bitmap indexes.  Use\n"
+-"--no-write-bitmap-index or disable the pack.writebitmaps configuration."
++"--no-write-bitmap-index or disable the pack.writeBitmaps configuration."
+ msgstr ""
+ 
+ #: builtin/repack.c
+@@ -13395,6 +13418,16 @@
+ msgid "show refs from stdin that aren't in local repository"
+ msgstr ""
+ 
++#: builtin/show-ref.c
++#, c-format
++msgid "invalid --count argument: (`%d' < 0)"
++msgstr ""
++
++#: builtin/show-ref.c
++#, c-format
++msgid "--count is incompatible with %s"
++msgstr ""
++
+ #: builtin/sparse-checkout.c
+ msgid "git sparse-checkout (init|list|set|add|reapply|disable) <options>"
+ msgstr ""
+@@ -13869,7 +13902,7 @@
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "git submodule--helper list [--prefix=<path>] [<path>...]"
++msgid "git submodule list [--prefix=<path>] [<path>...]"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+@@ -13905,7 +13938,7 @@
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "git submodule--helper foreach [--quiet] [--recursive] [--] <command>"
++msgid "git submodule foreach [--quiet] [--recursive] [--] <command>"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+@@ -13933,7 +13966,7 @@
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "git submodule--helper init [<options>] [<path>]"
++msgid "git submodule init [<options>] [<path>]"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+@@ -13964,7 +13997,7 @@
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "git submodule--helper name <path>"
++msgid "git submodule name <path>"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+@@ -14009,7 +14042,7 @@
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "git submodule--helper summary [<options>] [<commit>] [--] [<path>]"
++msgid "git submodule summary [<options>] [<commit>] [--] [<path>]"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+@@ -14041,7 +14074,7 @@
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "git submodule--helper sync [--quiet] [--recursive] [<path>]"
++msgid "git submodule sync [--quiet] [--recursive] [<path>]"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+@@ -14158,12 +14191,7 @@
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "git submodule--helper clone [--prefix=<path>] [--quiet] [--reference <repository>] [--name <name>] [--depth <depth>] [--single-branch] [--filter <filter-spec>] --url <url> --path <path>"
+-msgstr ""
+-
+-#: builtin/submodule--helper.c
+-#, c-format
+-msgid "Invalid update mode '%s' for submodule path '%s'"
++msgid "git submodule clone [--prefix=<path>] [--quiet] [--reference <repository>] [--name <name>] [--depth <depth>] [--single-branch] [--filter <filter-spec>] --url <url> --path <path>"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+@@ -14309,7 +14337,15 @@
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "rebase, merge, checkout or none"
++msgid "use the 'checkout' update strategy (default)"
++msgstr ""
++
++#: builtin/submodule--helper.c
++msgid "use the 'merge' update strategy"
++msgstr ""
++
++#: builtin/submodule--helper.c
++msgid "use the 'rebase' update strategy"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+@@ -14329,11 +14365,11 @@
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "git submodule [--quiet] update [--init [--filter=<filter-spec>]] [--remote] [-N|--no-fetch] [-f|--force] [--checkout|--merge|--rebase] [--[no-]recommend-shallow] [--reference <repository>] [--recursive] [--[no-]single-branch] [--] [<path>...]"
++msgid "disallow cloning into non-empty directory, implies --init"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "bad value for update parameter"
++msgid "git submodule [--quiet] update [--init [--filter=<filter-spec>]] [--remote] [-N|--no-fetch] [-f|--force] [--checkout|--merge|--rebase] [--[no-]recommend-shallow] [--reference <repository>] [--recursive] [--[no-]single-branch] [--] [<path>...]"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+@@ -14341,7 +14377,7 @@
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "git submodule--helper absorb-git-dirs [<options>] [<path>...]"
++msgid "git submodule absorbgitdirs [<options>] [<path>...]"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+@@ -14353,11 +14389,11 @@
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "git submodule--helper config <name> [<value>]"
++msgid "git submodule config <name> [<value>]"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "git submodule--helper config --unset <name>"
++msgid "git submodule config --unset <name>"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+@@ -14369,7 +14405,7 @@
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "git submodule--helper set-url [--quiet] <path> <newurl>"
++msgid "git submodule set-url [--quiet] <path> <newurl>"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+@@ -14381,11 +14417,11 @@
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "git submodule--helper set-branch [-q|--quiet] (-d|--default) <path>"
++msgid "git submodule set-branch [-q|--quiet] (-d|--default) <path>"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "git submodule--helper set-branch [-q|--quiet] (-b|--branch) <branch> <path>"
++msgid "git submodule set-branch [-q|--quiet] (-b|--branch) <branch> <path>"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+@@ -14405,7 +14441,7 @@
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "git submodule--helper create-branch [-f|--force] [--create-reflog] [-q|--quiet] [-t|--track] [-n|--dry-run] <name> <start-oid> <start-name>"
++msgid "git submodule create-branch [-f|--force] [--create-reflog] [-q|--quiet] [-t|--track] [-n|--dry-run] <name> <start-oid> <start-name>"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+@@ -14489,7 +14525,7 @@
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "git submodule--helper add [<options>] [--] <repository> [<path>]"
++msgid "git submodule add [<options>] [--] <repository> [<path>]"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+@@ -14506,11 +14542,6 @@
+ msgid "'%s' is not a valid submodule name"
+ msgstr ""
+ 
+-#: builtin/submodule--helper.c git.c
+-#, c-format
+-msgid "%s doesn't support --super-prefix"
+-msgstr ""
+-
+ #: builtin/submodule--helper.c
+ #, c-format
+ msgid "'%s' is not a valid submodule--helper subcommand"
+@@ -14724,6 +14755,19 @@
+ msgstr ""
+ 
+ #: builtin/unpack-objects.c
++msgid "failed to write object in stream"
++msgstr ""
++
++#: builtin/unpack-objects.c
++#, c-format
++msgid "inflate returned (%d)"
++msgstr ""
++
++#: builtin/unpack-objects.c
++msgid "invalid blob object from stream"
++msgstr ""
++
++#: builtin/unpack-objects.c
+ msgid "Unpacking objects"
+ msgstr ""
+ 
+@@ -15338,6 +15382,24 @@
+ msgid "only useful for debugging"
+ msgstr ""
+ 
++#: bundle-uri.c
++msgid "failed to create temporary file"
++msgstr ""
++
++#: bundle-uri.c
++msgid "insufficient capabilities"
++msgstr ""
++
++#: bundle-uri.c
++#, c-format
++msgid "failed to download bundle from URI '%s'"
++msgstr ""
++
++#: bundle-uri.c
++#, c-format
++msgid "file at URI '%s' is not a bundle"
++msgstr ""
++
+ #: bundle.c
+ #, c-format
+ msgid "unrecognized bundle hash algorithm: %s"
+@@ -16396,7 +16458,7 @@
+ msgid ""
+ "Warning: commit message did not conform to UTF-8.\n"
+ "You may want to amend it after fixing the message, or set the config\n"
+-"variable i18n.commitencoding to the encoding your project uses.\n"
++"variable i18n.commitEncoding to the encoding your project uses.\n"
+ msgstr ""
+ 
+ #: compat/compiler.h
+@@ -18500,6 +18562,10 @@
+ msgstr ""
+ 
+ #: fetch-pack.c
++msgid "connectivity check failed after fetching from remote"
++msgstr ""
++
++#: fetch-pack.c
+ msgid "unexpected 'ready' from remote"
+ msgstr ""
+ 
+@@ -19300,6 +19366,11 @@
+ msgstr ""
+ 
+ #: git.c
++#, c-format
++msgid "%s doesn't support --super-prefix"
++msgstr ""
++
++#: git.c
+ msgid "write failure on standard output"
+ msgstr ""
+ 
+@@ -19389,7 +19460,7 @@
+ msgstr ""
+ 
+ #: gpg-interface.c
+-msgid "user.signingkey needs to be set for ssh signing"
++msgid "user.signingKey needs to be set for ssh signing"
+ msgstr ""
+ 
+ #: gpg-interface.c
+@@ -19599,7 +19670,7 @@
+ 
+ #: http.c
+ #, c-format
+-msgid "negative value for http.postbuffer; defaulting to %d"
++msgid "negative value for http.postBuffer; defaulting to %d"
+ msgstr ""
+ 
+ #: http.c
+@@ -20650,6 +20721,26 @@
+ 
+ #: object-file.c
+ #, c-format
++msgid "write stream object %ld != %<PRIuMAX>"
++msgstr ""
++
++#: object-file.c
++#, c-format
++msgid "unable to stream deflate new object (%d)"
++msgstr ""
++
++#: object-file.c
++#, c-format
++msgid "deflateEnd on stream object failed (%d)"
++msgstr ""
++
++#: object-file.c
++#, c-format
++msgid "unable to create directory %s"
++msgstr ""
++
++#: object-file.c
++#, c-format
+ msgid "cannot read object for %s"
+ msgstr ""
+ 
+@@ -20898,6 +20989,15 @@
+ msgstr ""
+ 
+ #: pack-bitmap.c
++msgid "cannot stat bitmap file"
++msgstr ""
++
++#: pack-bitmap.c
++#, c-format
++msgid "ignoring extra bitmap file: %s"
++msgstr ""
++
++#: pack-bitmap.c
+ msgid "multi-pack bitmap is missing required reverse index"
+ msgstr ""
+ 
+@@ -20912,6 +21012,14 @@
+ msgstr ""
+ 
+ #: pack-bitmap.c
++msgid "packfile is invalid"
++msgstr ""
++
++#: pack-bitmap.c
++msgid "bitmap header is invalid"
++msgstr ""
++
++#: pack-bitmap.c
+ #, c-format
+ msgid "could not find %s in pack %s at offset %<PRIuMAX>"
+ msgstr ""
+@@ -22123,6 +22231,15 @@
+ msgstr ""
+ 
+ #: remote-curl.c
++msgid "protocol error: expected '<url> <path>', missing space"
++msgstr ""
++
++#: remote-curl.c
++#, c-format
++msgid "failed to download file at URL '%s'"
++msgstr ""
++
++#: remote-curl.c
+ msgid "git-http-push failed"
+ msgstr ""
+ 
+@@ -22158,7 +22275,7 @@
+ 
+ #: remote.c
+ #, c-format
+-msgid "unrecognized value fetch.credentialsInURL: '%s'"
++msgid "unrecognized value transfer.credentialsInUrl: '%s'"
+ msgstr ""
+ 
+ #: remote.c
+@@ -22505,6 +22622,11 @@
+ msgstr ""
+ 
+ #: revision.c
++#, c-format
++msgid "resolve-undo records `%s` which is missing"
++msgstr ""
++
++#: revision.c
+ msgid "--unpacked=<packfile> no longer supported"
+ msgstr ""
+ 
+@@ -23618,7 +23740,7 @@
+ msgstr ""
+ 
+ #: submodule-config.c
+-msgid "negative values not allowed for submodule.fetchjobs"
++msgid "negative values not allowed for submodule.fetchJobs"
+ msgstr ""
+ 
+ #: submodule-config.c
