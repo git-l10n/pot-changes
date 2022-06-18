@@ -90,7 +90,13 @@ jobs:
       - name: generate po/git.pot
         if: steps.skip-if-redundant.outputs.status != 'skip'
         run: |
-          make -C git pot
+          make -C git pot &&
+          if test ! -f pot-changes/po/git.pot; then
+            cp git/po/git.pot pot-changes/po/git.pot &&
+            cd pot-changes &&
+            git add po/git.pot &&
+            git commit -m "Initialize po/git.pot"
+          fi
       - uses: actions/setup-go@v2
         if: steps.skip-if-redundant.outputs.status != 'skip'
         with:
