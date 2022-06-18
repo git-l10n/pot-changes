@@ -1,17 +1,19 @@
+# CI workflows for po/git.pot: generate "po/git.pot" from git.git
+# repository and show diffs on a daily basis.
+#
+# NOTE: must define the secret "PUSH_TOKEN" for this repository on GitHub.
+#
 name: git-pot
 
 on:
-  ## Schedule only works when the pipeline.yaml file is defined in default
-  ## branch.
-  ##
-  ## Must define the secret "PUSH_TOKEN" for this repository on GitHub.
-  ##
+  # Schedule only works when the pipeline.yaml file is defined in default
+  # branch, i.e. the "main" branch.
   schedule:
     - cron: '51 */1 * * *'
-      
-  ## We can also trigger using manual event by an external schedule, when
-  ## the schedule not works for some reasons, such as: the CI pipeline is
-  ## not in the default branch.
+
+  # We can also trigger using manual event by an external schedule, when
+  # the schedule not works for some reasons, such as: the CI pipeline is
+  # not defined in the default branch.
   workflow_dispatch:
   push:
     branches:
@@ -21,6 +23,7 @@ jobs:
   git-pot:
     strategy:
       matrix:
+        # Check the following branches of the git.git repository.
         branch: [main, next, seen]
     runs-on: ubuntu-latest
     env:
@@ -30,14 +33,32 @@ jobs:
     steps:
       - name: clone pot/${{ matrix.branch }} branch of current repository
         run: |
-          git -c protocol.version=2 clone \
-            --depth 1 \
-            --single-branch --branch pot/${{ matrix.branch }} \
-            https://github.com/${{ github.repository }} pot-changes &&
+          ( git -c protocol.version=2 clone \
+              --depth 1 \
+              --single-branch --branch pot/${{ matrix.branch }} \
+              https://github.com/${{ github.repository }} pot-changes ||
+            ( git init --initial-branch "pot/${{ matrix.branch }}" pot-changes &&
+              git -C pot-changes remote add origin \
+                https://github.com/${{ github.repository }}
+            )
+          ) &&
           cd pot-changes &&
-          mkdir -p po &&
           git config user.name "${{ env.AUTHOR_NAME }}" &&
-          git config user.email "${{ env.AUTHOR_EMAIL }}"
+          git config user.email "${{ env.AUTHOR_EMAIL }}" &&
+          mkdir -p po &&
+          if test ! -f README.md
+          then
+            echo "[![Build status](https://github.com/${{ github.repository }}/actions/workflows/git-pot.yml/badge.svg)](https://github.com/${{ github.repository }}/actions/workflows/git-pot.yml)" >README.md &&
+            echo >>README.md &&
+            echo "# Changes of \"po/git.pot\" in the ${{ matrix.branch }} branch" >>README.md &&
+            echo >>README.md &&
+            echo "This branch will be updated regularly by a robot. See:" >>README.md &&
+            echo >>README.md &&
+            echo " - \`po/git.pot\`: generated from the corresponding branch of the git.git repository." >>README.md &&
+            echo " - \`<YYYY-mm-dd>.diff\`: changes of \"po/git.pot\" since last update." >>README.md &&
+            git add README.md &&
+            git commit -m "doc: add README"
+          fi
       - name: skip if the commit was already tested
         id: skip-if-redundant
         run: |
