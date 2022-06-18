@@ -91,6 +91,13 @@ jobs:
         if: steps.skip-if-redundant.outputs.status != 'skip'
         run: |
           make -C git pot
+      - uses: actions/setup-go@v2
+        if: steps.skip-if-redundant.outputs.status != 'skip'
+        with:
+          go-version: '^1.18'
+      - name: Install git-po-helper
+        if: steps.skip-if-redundant.outputs.status != 'skip'
+        run: go install github.com/git-l10n/git-po-helper@main
       - name: upload changes and report
         if: steps.skip-if-redundant.outputs.status != 'skip'
         run: |
@@ -106,6 +113,11 @@ jobs:
           if ! diff -q po/git.pot.old po/git.pot.new; then
             printf "\n\n#################### $(date -R) ####################\n\n" >>"$diff"
             ( diff -u po/git.pot.old po/git.pot.new >>"$diff" || true ) &&
+            ( cd ../git && git-po-helper check-pot 2>&1 ) >check-pot.txt &&
+            if test -s check-pot.txt; then
+               printf -- "\n\n-------------------- git-po-helper check-pot --------------------\n\n" >>"$diff" &&
+               cat check-pot.txt >>"$diff"
+            fi &&
             git add po/git.pot "$diff" .latest-footprint &&
             git commit -m "l10n: ${{ matrix.branch }}: changes of git.pot in $diff" &&
             report_msg="** changes of 'po/git.pot' is reported in $diff **"
