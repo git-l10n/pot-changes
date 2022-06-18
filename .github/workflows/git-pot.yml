@@ -64,12 +64,12 @@ jobs:
         run: |
           cd pot-changes &&
           git -c protocol.version=2 ls-remote https://github.com/git/git.git \
-            refs/heads/${{ matrix.branch }} >last-check.tmp &&
-          if diff last-check last-check.tmp
+            refs/heads/${{ matrix.branch }} >.latest-footprint.tmp &&
+          if diff .latest-footprint .latest-footprint.tmp
           then
             echo ::set-output name=status::skip
           else
-            mv last-check.tmp last-check
+            mv .latest-footprint.tmp .latest-footprint
             echo ::set-output name=status::no
           fi
       - name: install dependencies
@@ -111,12 +111,12 @@ jobs:
                 printf "\n\n########################################\n\n" >>"$diff"
               fi &&
               ( diff -u po/git.pot.old po/git.pot.new >>"$diff" || true ) &&
-              git add po/git.pot "$diff" last-check &&
+              git add po/git.pot "$diff" .latest-footprint &&
               git commit -m "l10n: ${{ matrix.branch }}: changes of git.pot in $diff" &&
               report_msg="** changes of 'po/git.pot' is reported in $diff **"
             else
               echo >&2 "** po/git.pot is not changed **"
-              git add last-check &&
+              git add .latest-footprint &&
               git commit -m "no l10n changes on $date" &&
               report_msg="** nothing changed in 'po/git.pot' on $date **"
             fi &&
