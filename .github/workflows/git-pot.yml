@@ -31,7 +31,24 @@ jobs:
       AUTHOR_EMAIL: gotgit@qq.com
       LOGIN_NAME: togtig
     steps:
+      - name: skip if the commit was already tested
+        id: skip-if-redundant
+        run: |
+          git -c protocol.version=2 ls-remote https://github.com/git/git.git \
+            refs/heads/${{ matrix.branch }} >footprint.remote &&
+          (
+            wget -O footprint.last \
+              https://raw.githubusercontent.com/${{ github.repository }}/pot/${{ matrix.branch }}/.latest-footprint ||
+            true
+          ) &&
+          if diff footprint.remote footprint.last
+          then
+            echo ::set-output name=status::skip
+          else
+            echo ::set-output name=status::no
+          fi
       - name: clone pot/${{ matrix.branch }} branch of current repository
+        if: steps.skip-if-redundant.outputs.status != 'skip'
         run: |
           ( git -c protocol.version=2 clone \
               --depth 1 \
@@ -58,19 +75,6 @@ jobs:
             echo " - \`<YYYY-mm-dd>.diff\`: changes of \"po/git.pot\" since last update." >>README.md &&
             git add README.md &&
             git commit -m "doc: add README"
-          fi
-      - name: skip if the commit was already tested
-        id: skip-if-redundant
-        run: |
-          cd pot-changes &&
-          git -c protocol.version=2 ls-remote https://github.com/git/git.git \
-            refs/heads/${{ matrix.branch }} >.latest-footprint.tmp &&
-          if diff .latest-footprint .latest-footprint.tmp
-          then
-            echo ::set-output name=status::skip
-          else
-            mv .latest-footprint.tmp .latest-footprint
-            echo ::set-output name=status::no
           fi
       - name: install dependencies
         if: steps.skip-if-redundant.outputs.status != 'skip'
@@ -109,6 +113,7 @@ jobs:
         run: |
           report_msg="" &&
           cd pot-changes &&
+          mv ../footprint.remote .latest-footprint &&
           msgcat --add-location=file --sort-by-file --no-wrap po/git.pot |
             sed -e '1,/^$/d' >po/git.pot.old &&
           cp ../git/po/git.pot po/git.pot &&
