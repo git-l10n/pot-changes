@@ -1,0 +1,124 @@
+
+
+#################### Tue, 21 Jun 2022 19:57:46 +0000 ####################
+
+--- po/git.pot.old	2022-06-21 19:57:46.692609916 +0000
++++ po/git.pot.new	2022-06-21 19:57:46.784609336 +0000
+@@ -3,7 +3,7 @@
+ msgid "Huh (%s)?"
+ msgstr ""
+ 
+-#: add-interactive.c builtin/rebase.c reset.c sequencer.c
++#: add-interactive.c builtin/merge.c builtin/rebase.c reset.c sequencer.c
+ msgid "could not read index"
+ msgstr ""
+ 
+@@ -2374,8 +2374,8 @@
+ msgstr ""
+ 
+ #: builtin/am.c builtin/branch.c builtin/bugreport.c builtin/cat-file.c
+-#: builtin/for-each-ref.c builtin/ls-tree.c builtin/replace.c builtin/tag.c
+-#: builtin/verify-tag.c
++#: builtin/for-each-ref.c builtin/ls-files.c builtin/ls-tree.c
++#: builtin/replace.c builtin/tag.c builtin/verify-tag.c
+ msgid "format"
+ msgstr ""
+ 
+@@ -3283,8 +3283,8 @@
+ msgid "recurse through submodules"
+ msgstr ""
+ 
+-#: builtin/branch.c builtin/for-each-ref.c builtin/ls-tree.c builtin/tag.c
+-#: builtin/verify-tag.c
++#: builtin/branch.c builtin/for-each-ref.c builtin/ls-files.c builtin/ls-tree.c
++#: builtin/tag.c builtin/verify-tag.c
+ msgid "format to use for the output"
+ msgstr ""
+ 
+@@ -8863,6 +8863,21 @@
+ msgstr ""
+ 
+ #: builtin/ls-files.c
++#, c-format
++msgid "bad ls-files format: element '%s' does not start with '('"
++msgstr ""
++
++#: builtin/ls-files.c
++#, c-format
++msgid "bad ls-files format: element '%s'does not end in ')'"
++msgstr ""
++
++#: builtin/ls-files.c
++#, c-format
++msgid "bad ls-files format: %%%.*s"
++msgstr ""
++
++#: builtin/ls-files.c
+ msgid "git ls-files [<options>] [<file>...]"
+ msgstr ""
+ 
+@@ -8974,6 +8989,10 @@
+ msgid "show sparse directories in the presence of a sparse index"
+ msgstr ""
+ 
++#: builtin/ls-files.c
++msgid "ls-files --format cannot used with -s, -o, -k, --resolve-undo, --deduplicate, --debug"
++msgstr ""
++
+ #: builtin/ls-remote.c
+ msgid ""
+ "git ls-remote [--heads] [--tags] [--refs] [--upload-pack=<exec>]\n"
+@@ -9872,7 +9891,7 @@
+ msgstr ""
+ 
+ #: builtin/name-rev.c
+-msgid "deprecated: use annotate-stdin instead"
++msgid "deprecated: use --annotate-stdin instead"
+ msgstr ""
+ 
+ #: builtin/name-rev.c
+@@ -20998,6 +21017,10 @@
+ msgstr ""
+ 
+ #: pack-bitmap.c
++msgid "midx and bitmap checksum don't match"
++msgstr ""
++
++#: pack-bitmap.c
+ msgid "multi-pack bitmap is missing required reverse index"
+ msgstr ""
+ 
+@@ -21012,6 +21035,10 @@
+ msgstr ""
+ 
+ #: pack-bitmap.c
++msgid "cannot open midx bitmap file"
++msgstr ""
++
++#: pack-bitmap.c
+ msgid "packfile is invalid"
+ msgstr ""
+ 
+@@ -24603,6 +24630,22 @@
+ msgid "invalid '..' path segment"
+ msgstr ""
+ 
++#: usage.c
++msgid "usage: "
++msgstr ""
++
++#: usage.c
++msgid "fatal: "
++msgstr ""
++
++#: usage.c
++msgid "error: "
++msgstr ""
++
++#: usage.c
++msgid "warning: "
++msgstr ""
++
+ #: walker.c
+ msgid "Fetching objects"
+ msgstr ""
