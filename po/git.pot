@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2022-06-23 20:57+0000\n"
+"POT-Creation-Date: 2022-06-27 17:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -792,7 +792,7 @@ msgstr ""
 #: builtin/diff-tree.c:155 builtin/difftool.c:733 builtin/fast-export.c:1245
 #: builtin/fetch.c:2135 builtin/fetch.c:2156 builtin/fetch.c:2161
 #: builtin/help.c:602 builtin/index-pack.c:1858 builtin/init-db.c:560
-#: builtin/log.c:1994 builtin/log.c:1996 builtin/ls-files.c:896
+#: builtin/log.c:1994 builtin/log.c:1996 builtin/ls-files.c:891
 #: builtin/merge-base.c:163 builtin/merge-base.c:169 builtin/merge.c:1419
 #: builtin/merge.c:1421 builtin/pack-objects.c:4374 builtin/push.c:630
 #: builtin/push.c:668 builtin/push.c:674 builtin/push.c:679
@@ -1529,7 +1529,7 @@ msgstr ""
 #: builtin/blame.c:886 builtin/commit-tree.c:115 builtin/config.c:135
 #: builtin/fast-export.c:1181 builtin/fast-export.c:1183
 #: builtin/fast-export.c:1187 builtin/grep.c:936 builtin/hash-object.c:104
-#: builtin/ls-files.c:764 builtin/ls-files.c:767 builtin/notes.c:410
+#: builtin/ls-files.c:757 builtin/ls-files.c:760 builtin/notes.c:410
 #: builtin/notes.c:576 builtin/read-tree.c:115 parse-options.h:195
 msgid "file"
 msgstr ""
@@ -2483,7 +2483,7 @@ msgstr ""
 
 #: builtin/am.c:2385 builtin/branch.c:690 builtin/bugreport.c:109
 #: builtin/cat-file.c:971 builtin/cat-file.c:975 builtin/cat-file.c:979
-#: builtin/for-each-ref.c:41 builtin/ls-files.c:788 builtin/ls-tree.c:357
+#: builtin/for-each-ref.c:41 builtin/ls-files.c:781 builtin/ls-tree.c:357
 #: builtin/replace.c:555 builtin/tag.c:480 builtin/verify-tag.c:38
 msgid "format"
 msgstr ""
@@ -3402,11 +3402,11 @@ msgstr ""
 msgid "sorting and filtering are case insensitive"
 msgstr ""
 
-#: builtin/branch.c:689 builtin/ls-files.c:777
+#: builtin/branch.c:689 builtin/ls-files.c:770
 msgid "recurse through submodules"
 msgstr ""
 
-#: builtin/branch.c:690 builtin/for-each-ref.c:41 builtin/ls-files.c:789
+#: builtin/branch.c:690 builtin/for-each-ref.c:41 builtin/ls-files.c:782
 #: builtin/ls-tree.c:358 builtin/tag.c:481 builtin/verify-tag.c:38
 msgid "format to use for the output"
 msgstr ""
@@ -4602,7 +4602,7 @@ msgstr ""
 
 #: builtin/clean.c:932 builtin/describe.c:566 builtin/describe.c:568
 #: builtin/grep.c:938 builtin/log.c:185 builtin/log.c:187
-#: builtin/ls-files.c:761 builtin/name-rev.c:574 builtin/name-rev.c:576
+#: builtin/ls-files.c:754 builtin/name-rev.c:574 builtin/name-rev.c:576
 #: builtin/show-ref.c:173
 msgid "pattern"
 msgstr ""
@@ -9090,137 +9090,131 @@ msgid ""
 "Could not find a tracked remote branch, please specify <upstream> manually.\n"
 msgstr ""
 
-#: builtin/ls-files.c:269
+#: builtin/ls-files.c:276
 #, c-format
 msgid "bad ls-files format: element '%s' does not start with '('"
 msgstr ""
 
-#: builtin/ls-files.c:274
+#: builtin/ls-files.c:281
 #, c-format
 msgid "bad ls-files format: element '%s'does not end in ')'"
 msgstr ""
 
-#: builtin/ls-files.c:308
+#: builtin/ls-files.c:300
 #, c-format
 msgid "bad ls-files format: %%%.*s"
 msgstr ""
 
-#: builtin/ls-files.c:674
+#: builtin/ls-files.c:667
 msgid "git ls-files [<options>] [<file>...]"
 msgstr ""
 
-#: builtin/ls-files.c:728 builtin/merge-tree.c:499
+#: builtin/ls-files.c:721 builtin/merge-tree.c:499
 msgid "separate paths with the NUL character"
 msgstr ""
 
-#: builtin/ls-files.c:730
+#: builtin/ls-files.c:723
 msgid "identify the file status with tags"
 msgstr ""
 
-#: builtin/ls-files.c:732
+#: builtin/ls-files.c:725
 msgid "use lowercase letters for 'assume unchanged' files"
 msgstr ""
 
-#: builtin/ls-files.c:734
+#: builtin/ls-files.c:727
 msgid "use lowercase letters for 'fsmonitor clean' files"
 msgstr ""
 
-#: builtin/ls-files.c:736
+#: builtin/ls-files.c:729
 msgid "show cached files in the output (default)"
 msgstr ""
 
-#: builtin/ls-files.c:738
+#: builtin/ls-files.c:731
 msgid "show deleted files in the output"
 msgstr ""
 
-#: builtin/ls-files.c:740
+#: builtin/ls-files.c:733
 msgid "show modified files in the output"
 msgstr ""
 
-#: builtin/ls-files.c:742
+#: builtin/ls-files.c:735
 msgid "show other files in the output"
 msgstr ""
 
-#: builtin/ls-files.c:744
+#: builtin/ls-files.c:737
 msgid "show ignored files in the output"
 msgstr ""
 
-#: builtin/ls-files.c:747
+#: builtin/ls-files.c:740
 msgid "show staged contents' object name in the output"
 msgstr ""
 
-#: builtin/ls-files.c:749
+#: builtin/ls-files.c:742
 msgid "show files on the filesystem that need to be removed"
 msgstr ""
 
-#: builtin/ls-files.c:751
+#: builtin/ls-files.c:744
 msgid "show 'other' directories' names only"
 msgstr ""
 
-#: builtin/ls-files.c:753
+#: builtin/ls-files.c:746
 msgid "show line endings of files"
 msgstr ""
 
-#: builtin/ls-files.c:755
+#: builtin/ls-files.c:748
 msgid "don't show empty directories"
 msgstr ""
 
-#: builtin/ls-files.c:758
+#: builtin/ls-files.c:751
 msgid "show unmerged files in the output"
 msgstr ""
 
-#: builtin/ls-files.c:760
+#: builtin/ls-files.c:753
 msgid "show resolve-undo information"
 msgstr ""
 
-#: builtin/ls-files.c:762
+#: builtin/ls-files.c:755
 msgid "skip files matching pattern"
 msgstr ""
 
-#: builtin/ls-files.c:765
+#: builtin/ls-files.c:758
 msgid "read exclude patterns from <file>"
 msgstr ""
 
-#: builtin/ls-files.c:768
+#: builtin/ls-files.c:761
 msgid "read additional per-directory exclude patterns in <file>"
 msgstr ""
 
-#: builtin/ls-files.c:770
+#: builtin/ls-files.c:763
 msgid "add the standard git exclusions"
 msgstr ""
 
-#: builtin/ls-files.c:774
+#: builtin/ls-files.c:767
 msgid "make the output relative to the project top directory"
 msgstr ""
 
-#: builtin/ls-files.c:779
+#: builtin/ls-files.c:772
 msgid "if any <file> is not in the index, treat this as an error"
 msgstr ""
 
-#: builtin/ls-files.c:780
+#: builtin/ls-files.c:773
 msgid "tree-ish"
 msgstr ""
 
-#: builtin/ls-files.c:781
+#: builtin/ls-files.c:774
 msgid "pretend that paths removed since <tree-ish> are still present"
 msgstr ""
 
-#: builtin/ls-files.c:783
+#: builtin/ls-files.c:776
 msgid "show debugging data"
 msgstr ""
 
-#: builtin/ls-files.c:785
+#: builtin/ls-files.c:778
 msgid "suppress duplicate entries"
 msgstr ""
 
-#: builtin/ls-files.c:787
+#: builtin/ls-files.c:780
 msgid "show sparse directories in the presence of a sparse index"
-msgstr ""
-
-#: builtin/ls-files.c:818
-msgid ""
-"ls-files --format cannot used with -s, -o, -k, --resolve-undo, --"
-"deduplicate, --debug"
 msgstr ""
 
 #: builtin/ls-remote.c:9
