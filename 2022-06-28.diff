@@ -1,0 +1,137 @@
+
+
+#################### Tue, 28 Jun 2022 21:57:41 +0000 ####################
+
+--- po/git.pot.old	2022-06-28 21:57:41.773678144 +0000
++++ po/git.pot.new	2022-06-28 21:57:41.869679072 +0000
+@@ -2082,7 +2082,7 @@
+ msgid "could not open '%s' for reading"
+ msgstr ""
+ 
+-#: builtin/am.c builtin/rebase.c strbuf.c wrapper.c
++#: builtin/am.c builtin/rebase.c sequencer.c strbuf.c wrapper.c
+ #, c-format
+ msgid "could not open '%s' for writing"
+ msgstr ""
+@@ -11520,6 +11520,10 @@
+ msgstr ""
+ 
+ #: builtin/rebase.c
++msgid "update local refs that point to commits that are being rebased"
++msgstr ""
++
++#: builtin/rebase.c
+ msgid "add exec lines after each commit of the editable list"
+ msgstr ""
+ 
+@@ -13489,7 +13493,7 @@
+ msgid "toggle the use of a sparse index"
+ msgstr ""
+ 
+-#: builtin/sparse-checkout.c commit-graph.c midx.c
++#: builtin/sparse-checkout.c commit-graph.c midx.c sequencer.c
+ #, c-format
+ msgid "unable to create leading directories of %s"
+ msgstr ""
+@@ -13921,7 +13925,7 @@
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "git submodule list [--prefix=<path>] [<path>...]"
++msgid "git submodule--helper list [--prefix=<path>] [<path>...]"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+@@ -14016,7 +14020,7 @@
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "git submodule name <path>"
++msgid "git submodule--helper name <path>"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+@@ -14210,7 +14214,7 @@
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "git submodule clone [--prefix=<path>] [--quiet] [--reference <repository>] [--name <name>] [--depth <depth>] [--single-branch] [--filter <filter-spec>] --url <url> --path <path>"
++msgid "git submodule--helper clone [--prefix=<path>] [--quiet] [--reference <repository>] [--name <name>] [--depth <depth>] [--single-branch] [--filter <filter-spec>] --url <url> --path <path>"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+@@ -14408,11 +14412,11 @@
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "git submodule config <name> [<value>]"
++msgid "git submodule--helper config <name> [<value>]"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "git submodule config --unset <name>"
++msgid "git submodule--helper config --unset <name>"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+@@ -14460,7 +14464,7 @@
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "git submodule create-branch [-f|--force] [--create-reflog] [-q|--quiet] [-t|--track] [-n|--dry-run] <name> <start-oid> <start-name>"
++msgid "git submodule--helper create-branch [-f|--force] [--create-reflog] [-q|--quiet] [-t|--track] [-n|--dry-run] <name> <start-oid> <start-name>"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+@@ -14561,6 +14565,11 @@
+ msgid "'%s' is not a valid submodule name"
+ msgstr ""
+ 
++#: builtin/submodule--helper.c git.c
++#, c-format
++msgid "%s doesn't support --super-prefix"
++msgstr ""
++
+ #: builtin/submodule--helper.c
+ #, c-format
+ msgid "'%s' is not a valid submodule--helper subcommand"
+@@ -19385,11 +19394,6 @@
+ msgstr ""
+ 
+ #: git.c
+-#, c-format
+-msgid "%s doesn't support --super-prefix"
+-msgstr ""
+-
+-#: git.c
+ msgid "write failure on standard output"
+ msgstr ""
+ 
+@@ -21691,9 +21695,12 @@
+ "l, label <label> = label current HEAD with a name\n"
+ "t, reset <label> = reset HEAD to a label\n"
+ "m, merge [-C <commit> | -c <commit>] <label> [# <oneline>]\n"
+-".       create a merge commit using the original merge commit's\n"
+-".       message (or the oneline, if no original merge commit was\n"
+-".       specified); use -c <commit> to reword the commit message\n"
++"        create a merge commit using the original merge commit's\n"
++"        message (or the oneline, if no original merge commit was\n"
++"        specified); use -c <commit> to reword the commit message\n"
++"u, update-ref <ref> = track a placeholder for the <ref> to be updated\n"
++"                      to this position in the new commits. The <ref> is\n"
++"                      updated at the end of the rebase\n"
+ "\n"
+ "These lines can be re-ordered; they are executed from top to bottom.\n"
+ msgstr ""
+@@ -23510,6 +23517,11 @@
+ msgid "the script was already rearranged."
+ msgstr ""
+ 
++#: sequencer.c
++#, c-format
++msgid "update-refs file at '%s' is invalid"
++msgstr ""
++
+ #: setup.c
+ #, c-format
+ msgid "'%s' is outside repository at '%s'"
