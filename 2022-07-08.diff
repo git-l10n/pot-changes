@@ -1,0 +1,391 @@
+
+
+#################### Fri, 08 Jul 2022 22:57:40 +0000 ####################
+
+--- po/git.pot.old	2022-07-08 22:57:40.126656573 +0000
++++ po/git.pot.new	2022-07-08 22:57:40.246661274 +0000
+@@ -942,7 +942,7 @@
+ msgid "patch failed: %s:%ld"
+ msgstr ""
+ 
+-#: apply.c
++#: apply.c builtin/mv.c
+ #, c-format
+ msgid "cannot checkout %s"
+ msgstr ""
+@@ -7796,6 +7796,10 @@
+ msgstr ""
+ 
+ #: builtin/grep.c
++msgid "maximum number of results per file"
++msgstr ""
++
++#: builtin/grep.c
+ msgid "no pattern given"
+ msgstr ""
+ 
+@@ -8882,7 +8886,7 @@
+ msgid "git ls-files [<options>] [<file>...]"
+ msgstr ""
+ 
+-#: builtin/ls-files.c
++#: builtin/ls-files.c builtin/merge-tree.c
+ msgid "separate paths with the NUL character"
+ msgstr ""
+ 
+@@ -9266,6 +9270,50 @@
+ msgid "Merging %s with %s\n"
+ msgstr ""
+ 
++#: builtin/merge-tree.c builtin/merge.c
++msgid "not something we can merge"
++msgstr ""
++
++#: builtin/merge-tree.c builtin/merge.c
++msgid "refusing to merge unrelated histories"
++msgstr ""
++
++#: builtin/merge-tree.c
++msgid "failure to merge"
++msgstr ""
++
++#: builtin/merge-tree.c
++msgid "git merge-tree [--write-tree] [<options>] <branch1> <branch2>"
++msgstr ""
++
++#: builtin/merge-tree.c
++msgid "git merge-tree [--trivial-merge] <base-tree> <branch1> <branch2>"
++msgstr ""
++
++#: builtin/merge-tree.c
++msgid "do a real merge instead of a trivial merge"
++msgstr ""
++
++#: builtin/merge-tree.c
++msgid "do a trivial merge only"
++msgstr ""
++
++#: builtin/merge-tree.c
++msgid "also show informational/conflict messages"
++msgstr ""
++
++#: builtin/merge-tree.c
++msgid "list filenames without modes/oids/stages"
++msgstr ""
++
++#: builtin/merge-tree.c builtin/merge.c builtin/pull.c
++msgid "allow merging unrelated histories"
++msgstr ""
++
++#: builtin/merge-tree.c
++msgid "--trivial-merge is incompatible with all other options"
++msgstr ""
++
+ #: builtin/merge.c
+ msgid "git merge [<options>] [<commit>...]"
+ msgstr ""
+@@ -9371,10 +9419,6 @@
+ msgid "continue the current in-progress merge"
+ msgstr ""
+ 
+-#: builtin/merge.c builtin/pull.c
+-msgid "allow merging unrelated histories"
+-msgstr ""
+-
+ #: builtin/merge.c
+ msgid "bypass pre-merge-commit and commit-msg hooks"
+ msgstr ""
+@@ -9517,10 +9561,6 @@
+ msgstr ""
+ 
+ #: builtin/merge.c
+-msgid "not something we can merge"
+-msgstr ""
+-
+-#: builtin/merge.c
+ msgid "--abort expects no arguments"
+ msgstr ""
+ 
+@@ -9578,10 +9618,6 @@
+ msgstr ""
+ 
+ #: builtin/merge.c
+-msgid "refusing to merge unrelated histories"
+-msgstr ""
+-
+-#: builtin/merge.c
+ #, c-format
+ msgid "Updating %s..%s\n"
+ msgstr ""
+@@ -9768,6 +9804,10 @@
+ msgstr ""
+ 
+ #: builtin/mv.c
++msgid "destination exists"
++msgstr ""
++
++#: builtin/mv.c
+ msgid "can not move directory into itself"
+ msgstr ""
+ 
+@@ -9788,10 +9828,6 @@
+ msgstr ""
+ 
+ #: builtin/mv.c
+-msgid "destination exists"
+-msgstr ""
+-
+-#: builtin/mv.c
+ #, c-format
+ msgid "overwriting '%s'"
+ msgstr ""
+@@ -12055,6 +12091,10 @@
+ msgstr ""
+ 
+ #: builtin/remote.c
++msgid " skipped"
++msgstr ""
++
++#: builtin/remote.c
+ msgid " stale (use 'git remote prune' to remove)"
+ msgstr ""
+ 
+@@ -13846,7 +13886,7 @@
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "git submodule--helper foreach [--quiet] [--recursive] [--] <command>"
++msgid "git submodule foreach [--quiet] [--recursive] [--] <command>"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+@@ -13874,7 +13914,7 @@
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "git submodule--helper init [<options>] [<path>]"
++msgid "git submodule init [<options>] [<path>]"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+@@ -13950,7 +13990,7 @@
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "git submodule--helper summary [<options>] [<commit>] [--] [<path>]"
++msgid "git submodule summary [<options>] [<commit>] [--] [<path>]"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+@@ -13982,7 +14022,7 @@
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "git submodule--helper sync [--quiet] [--recursive] [<path>]"
++msgid "git submodule sync [--quiet] [--recursive] [<path>]"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+@@ -14104,11 +14144,6 @@
+ 
+ #: builtin/submodule--helper.c
+ #, c-format
+-msgid "Invalid update mode '%s' for submodule path '%s'"
+-msgstr ""
+-
+-#: builtin/submodule--helper.c
+-#, c-format
+ msgid "Invalid update mode '%s' configured for submodule path '%s'"
+ msgstr ""
+ 
+@@ -14250,7 +14285,15 @@
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "rebase, merge, checkout or none"
++msgid "use the 'checkout' update strategy (default)"
++msgstr ""
++
++#: builtin/submodule--helper.c
++msgid "use the 'merge' update strategy"
++msgstr ""
++
++#: builtin/submodule--helper.c
++msgid "use the 'rebase' update strategy"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+@@ -14270,11 +14313,11 @@
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "git submodule [--quiet] update [--init [--filter=<filter-spec>]] [--remote] [-N|--no-fetch] [-f|--force] [--checkout|--merge|--rebase] [--[no-]recommend-shallow] [--reference <repository>] [--recursive] [--[no-]single-branch] [--] [<path>...]"
++msgid "disallow cloning into non-empty directory, implies --init"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "bad value for update parameter"
++msgid "git submodule [--quiet] update [--init [--filter=<filter-spec>]] [--remote] [-N|--no-fetch] [-f|--force] [--checkout|--merge|--rebase] [--[no-]recommend-shallow] [--reference <repository>] [--recursive] [--[no-]single-branch] [--] [<path>...]"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+@@ -14282,7 +14325,7 @@
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "git submodule--helper absorb-git-dirs [<options>] [<path>...]"
++msgid "git submodule absorbgitdirs [<options>] [<path>...]"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+@@ -14310,7 +14353,7 @@
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "git submodule--helper set-url [--quiet] <path> <newurl>"
++msgid "git submodule set-url [--quiet] <path> <newurl>"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+@@ -14322,11 +14365,11 @@
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "git submodule--helper set-branch [-q|--quiet] (-d|--default) <path>"
++msgid "git submodule set-branch [-q|--quiet] (-d|--default) <path>"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "git submodule--helper set-branch [-q|--quiet] (-b|--branch) <branch> <path>"
++msgid "git submodule set-branch [-q|--quiet] (-b|--branch) <branch> <path>"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+@@ -14430,7 +14473,7 @@
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "git submodule--helper add [<options>] [--] <repository> [<path>]"
++msgid "git submodule add [<options>] [--] <repository> [<path>]"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+@@ -14665,6 +14708,19 @@
+ msgstr ""
+ 
+ #: builtin/unpack-objects.c
++msgid "failed to write object in stream"
++msgstr ""
++
++#: builtin/unpack-objects.c
++#, c-format
++msgid "inflate returned (%d)"
++msgstr ""
++
++#: builtin/unpack-objects.c
++msgid "invalid blob object from stream"
++msgstr ""
++
++#: builtin/unpack-objects.c
+ msgid "Unpacking objects"
+ msgstr ""
+ 
+@@ -15710,7 +15766,7 @@
+ msgstr ""
+ 
+ #: command-list.h
+-msgid "Show three-way merge without touching index"
++msgid "Perform merge without touching index or working tree"
+ msgstr ""
+ 
+ #: command-list.h
+@@ -19761,20 +19817,7 @@
+ 
+ #: merge-ort.c
+ #, c-format
+-msgid ""
+-"Failed to merge submodule %s, but a possible merge resolution exists:\n"
+-"%s\n"
+-msgstr ""
+-
+-#: merge-ort.c merge-recursive.c
+-#, c-format
+-msgid ""
+-"If this is correct simply add it to the index for example\n"
+-"by using:\n"
+-"\n"
+-"  git update-index --cacheinfo 160000 %s \"%s\"\n"
+-"\n"
+-"which will accept this suggestion.\n"
++msgid "Failed to merge submodule %s, but a possible merge resolution exists: %s"
+ msgstr ""
+ 
+ #: merge-ort.c
+@@ -19992,6 +20035,17 @@
+ 
+ #: merge-recursive.c
+ #, c-format
++msgid ""
++"If this is correct simply add it to the index for example\n"
++"by using:\n"
++"\n"
++"  git update-index --cacheinfo 160000 %s \"%s\"\n"
++"\n"
++"which will accept this suggestion.\n"
++msgstr ""
++
++#: merge-recursive.c
++#, c-format
+ msgid "Failed to merge submodule %s (multiple merges found)"
+ msgstr ""
+ 
+@@ -20591,6 +20645,26 @@
+ 
+ #: object-file.c
+ #, c-format
++msgid "write stream object %ld != %<PRIuMAX>"
++msgstr ""
++
++#: object-file.c
++#, c-format
++msgid "unable to stream deflate new object (%d)"
++msgstr ""
++
++#: object-file.c
++#, c-format
++msgid "deflateEnd on stream object failed (%d)"
++msgstr ""
++
++#: object-file.c
++#, c-format
++msgid "unable to create directory %s"
++msgstr ""
++
++#: object-file.c
++#, c-format
+ msgid "cannot read object for %s"
+ msgstr ""
+ 
+@@ -24410,6 +24484,22 @@
+ msgid "invalid '..' path segment"
+ msgstr ""
+ 
++#: usage.c
++msgid "usage: "
++msgstr ""
++
++#: usage.c
++msgid "fatal: "
++msgstr ""
++
++#: usage.c
++msgid "error: "
++msgstr ""
++
++#: usage.c
++msgid "warning: "
++msgstr ""
++
+ #: walker.c
+ msgid "Fetching objects"
+ msgstr ""
