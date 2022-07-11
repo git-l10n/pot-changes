@@ -1,0 +1,43 @@
+
+
+#################### Mon, 11 Jul 2022 23:58:05 +0000 ####################
+
+--- po/git.pot.old	2022-07-11 23:58:05.225162814 +0000
++++ po/git.pot.new	2022-07-11 23:58:05.325164143 +0000
+@@ -1335,6 +1335,11 @@
+ msgid "unsupported file mode: 0%o (SHA1: %s)"
+ msgstr ""
+ 
++#: archive-tar.c archive-zip.c builtin/pack-objects.c
++#, c-format
++msgid "deflate error (%d)"
++msgstr ""
++
+ #: archive-tar.c
+ #, c-format
+ msgid "unable to start '%s' filter"
+@@ -1359,11 +1364,6 @@
+ msgid "path too long (%d chars, SHA1: %s): %s"
+ msgstr ""
+ 
+-#: archive-zip.c builtin/pack-objects.c
+-#, c-format
+-msgid "deflate error (%d)"
+-msgstr ""
+-
+ #: archive-zip.c
+ #, c-format
+ msgid "timestamp too large for this system: %<PRIuMAX>"
+@@ -6568,11 +6568,7 @@
+ msgstr ""
+ 
+ #: builtin/fetch.c
+-msgid "can't fetch in current branch"
+-msgstr ""
+-
+-#: builtin/fetch.c
+-msgid "checked out in another worktree"
++msgid "can't fetch into checked-out branch"
+ msgstr ""
+ 
+ #: builtin/fetch.c
