@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2022-07-12 17:10+0000\n"
+"POT-Creation-Date: 2022-07-13 22:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -1989,7 +1989,7 @@ msgstr ""
 
 #: builtin/add.c:372 builtin/clean.c:927 builtin/fetch.c:175 builtin/mv.c:124
 #: builtin/prune-packed.c:14 builtin/pull.c:209 builtin/push.c:588
-#: builtin/remote.c:1462 builtin/rm.c:244 builtin/send-pack.c:194
+#: builtin/remote.c:1470 builtin/rm.c:244 builtin/send-pack.c:194
 msgid "dry run"
 msgstr ""
 
@@ -3023,7 +3023,7 @@ msgstr ""
 #: builtin/merge.c:301 builtin/multi-pack-index.c:117
 #: builtin/multi-pack-index.c:168 builtin/multi-pack-index.c:194
 #: builtin/multi-pack-index.c:222 builtin/pull.c:121 builtin/push.c:604
-#: builtin/remote.c:683 builtin/send-pack.c:202
+#: builtin/remote.c:687 builtin/send-pack.c:202
 msgid "force progress reporting"
 msgstr ""
 
@@ -3683,7 +3683,7 @@ msgstr ""
 msgid "Unbundling objects"
 msgstr ""
 
-#: builtin/bundle.c:220 builtin/remote.c:1766
+#: builtin/bundle.c:220 builtin/remote.c:1774
 #, c-format
 msgid "Unknown subcommand: %s"
 msgstr ""
@@ -4992,7 +4992,7 @@ msgid ""
 "able"
 msgstr ""
 
-#: builtin/clone.c:1118 builtin/remote.c:201 builtin/remote.c:721
+#: builtin/clone.c:1118 builtin/remote.c:201 builtin/remote.c:725
 #, c-format
 msgid "'%s' is not a valid remote name"
 msgstr ""
@@ -6856,7 +6856,7 @@ msgstr ""
 msgid "[deleted]"
 msgstr ""
 
-#: builtin/fetch.c:1416 builtin/remote.c:1153
+#: builtin/fetch.c:1416 builtin/remote.c:1160
 msgid "(none)"
 msgstr ""
 
@@ -7999,45 +7999,49 @@ msgstr ""
 msgid "allow calling of grep(1) (ignored by this build)"
 msgstr ""
 
-#: builtin/grep.c:1028
+#: builtin/grep.c:965
+msgid "maximum number of results per file"
+msgstr ""
+
+#: builtin/grep.c:1030
 msgid "no pattern given"
 msgstr ""
 
-#: builtin/grep.c:1064
+#: builtin/grep.c:1066
 msgid "--no-index or --untracked cannot be used with revs"
 msgstr ""
 
-#: builtin/grep.c:1072
+#: builtin/grep.c:1074
 #, c-format
 msgid "unable to resolve revision: %s"
 msgstr ""
 
-#: builtin/grep.c:1102
+#: builtin/grep.c:1104
 msgid "--untracked not supported with --recurse-submodules"
 msgstr ""
 
-#: builtin/grep.c:1106
+#: builtin/grep.c:1115
 msgid "invalid option combination, ignoring --threads"
 msgstr ""
 
-#: builtin/grep.c:1109 builtin/pack-objects.c:4360
+#: builtin/grep.c:1118 builtin/pack-objects.c:4360
 msgid "no threads support, ignoring --threads"
 msgstr ""
 
-#: builtin/grep.c:1112 builtin/index-pack.c:1584 builtin/pack-objects.c:3162
+#: builtin/grep.c:1121 builtin/index-pack.c:1584 builtin/pack-objects.c:3162
 #, c-format
 msgid "invalid number of threads specified (%d)"
 msgstr ""
 
-#: builtin/grep.c:1146
+#: builtin/grep.c:1155
 msgid "--open-files-in-pager only works on the worktree"
 msgstr ""
 
-#: builtin/grep.c:1179
+#: builtin/grep.c:1188
 msgid "--[no-]exclude-standard cannot be used for tracked contents"
 msgstr ""
 
-#: builtin/grep.c:1187
+#: builtin/grep.c:1196
 msgid "both --cached and trees are given"
 msgstr ""
 
@@ -9892,15 +9896,15 @@ msgstr ""
 msgid "unable to write tag file"
 msgstr ""
 
-#: builtin/mktree.c:154
+#: builtin/mktree.c:161
 msgid "input is NUL terminated"
 msgstr ""
 
-#: builtin/mktree.c:155 builtin/write-tree.c:26
+#: builtin/mktree.c:162 builtin/write-tree.c:26
 msgid "allow missing objects"
 msgstr ""
 
-#: builtin/mktree.c:156
+#: builtin/mktree.c:163
 msgid "allow creation of more than one tree"
 msgstr ""
 
@@ -10047,7 +10051,7 @@ msgstr ""
 msgid "Renaming %s to %s\n"
 msgstr ""
 
-#: builtin/mv.c:314 builtin/remote.c:812 builtin/repack.c:1023
+#: builtin/mv.c:314 builtin/remote.c:816 builtin/repack.c:1023
 #, c-format
 msgid "renaming '%s' failed"
 msgstr ""
@@ -12232,7 +12236,7 @@ msgstr ""
 msgid "specifying branches to track makes sense only with fetch mirrors"
 msgstr ""
 
-#: builtin/remote.c:196 builtin/remote.c:716
+#: builtin/remote.c:196 builtin/remote.c:720
 #, c-format
 msgid "remote %s already exists."
 msgstr ""
@@ -12253,30 +12257,30 @@ msgstr ""
 msgid "unhandled branch.%s.rebase=%s; assuming 'true'"
 msgstr ""
 
-#: builtin/remote.c:367
+#: builtin/remote.c:368
 #, c-format
 msgid "Could not get fetch map for refspec %s"
 msgstr ""
 
-#: builtin/remote.c:461 builtin/remote.c:469
+#: builtin/remote.c:465 builtin/remote.c:473
 msgid "(matching)"
 msgstr ""
 
-#: builtin/remote.c:473
+#: builtin/remote.c:477
 msgid "(delete)"
 msgstr ""
 
-#: builtin/remote.c:664
+#: builtin/remote.c:668
 #, c-format
 msgid "could not set '%s'"
 msgstr ""
 
-#: builtin/remote.c:666 builtin/remote.c:885 builtin/remote.c:893 config.c:3410
+#: builtin/remote.c:670 builtin/remote.c:889 builtin/remote.c:897 config.c:3410
 #, c-format
 msgid "could not unset '%s'"
 msgstr ""
 
-#: builtin/remote.c:669
+#: builtin/remote.c:673
 #, c-format
 msgid ""
 "The %s configuration remote.pushDefault in:\n"
@@ -12284,17 +12288,17 @@ msgid ""
 "now names the non-existent remote '%s'"
 msgstr ""
 
-#: builtin/remote.c:707 builtin/remote.c:866 builtin/remote.c:973
+#: builtin/remote.c:711 builtin/remote.c:870 builtin/remote.c:978
 #, c-format
 msgid "No such remote: '%s'"
 msgstr ""
 
-#: builtin/remote.c:726
+#: builtin/remote.c:730
 #, c-format
 msgid "Could not rename config section '%s' to '%s'"
 msgstr ""
 
-#: builtin/remote.c:746
+#: builtin/remote.c:750
 #, c-format
 msgid ""
 "Not updating non-default fetch refspec\n"
@@ -12302,21 +12306,21 @@ msgid ""
 "\tPlease update the configuration manually if necessary."
 msgstr ""
 
-#: builtin/remote.c:783
+#: builtin/remote.c:787
 msgid "Renaming remote references"
 msgstr ""
 
-#: builtin/remote.c:794
+#: builtin/remote.c:798
 #, c-format
 msgid "deleting '%s' failed"
 msgstr ""
 
-#: builtin/remote.c:832
+#: builtin/remote.c:836
 #, c-format
 msgid "creating '%s' failed"
 msgstr ""
 
-#: builtin/remote.c:912
+#: builtin/remote.c:916
 msgid ""
 "Note: A branch outside the refs/remotes/ hierarchy was not removed;\n"
 "to delete it, use:"
@@ -12326,118 +12330,122 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: builtin/remote.c:926
+#: builtin/remote.c:930
 #, c-format
 msgid "Could not remove config section '%s'"
 msgstr ""
 
-#: builtin/remote.c:1034
+#: builtin/remote.c:1039
 #, c-format
 msgid " new (next fetch will store in remotes/%s)"
 msgstr ""
 
-#: builtin/remote.c:1037
+#: builtin/remote.c:1042
 msgid " tracked"
 msgstr ""
 
-#: builtin/remote.c:1039
+#: builtin/remote.c:1044
+msgid " skipped"
+msgstr ""
+
+#: builtin/remote.c:1046
 msgid " stale (use 'git remote prune' to remove)"
 msgstr ""
 
-#: builtin/remote.c:1041
+#: builtin/remote.c:1048
 msgid " ???"
 msgstr ""
 
-#: builtin/remote.c:1082
+#: builtin/remote.c:1089
 #, c-format
 msgid "invalid branch.%s.merge; cannot rebase onto > 1 branch"
 msgstr ""
 
-#: builtin/remote.c:1091
+#: builtin/remote.c:1098
 #, c-format
 msgid "rebases interactively onto remote %s"
 msgstr ""
 
-#: builtin/remote.c:1093
+#: builtin/remote.c:1100
 #, c-format
 msgid "rebases interactively (with merges) onto remote %s"
 msgstr ""
 
-#: builtin/remote.c:1096
+#: builtin/remote.c:1103
 #, c-format
 msgid "rebases onto remote %s"
 msgstr ""
 
-#: builtin/remote.c:1100
+#: builtin/remote.c:1107
 #, c-format
 msgid " merges with remote %s"
 msgstr ""
 
-#: builtin/remote.c:1103
+#: builtin/remote.c:1110
 #, c-format
 msgid "merges with remote %s"
 msgstr ""
 
-#: builtin/remote.c:1106
+#: builtin/remote.c:1113
 #, c-format
 msgid "%-*s    and with remote %s\n"
 msgstr ""
 
-#: builtin/remote.c:1149
+#: builtin/remote.c:1156
 msgid "create"
 msgstr ""
 
-#: builtin/remote.c:1152
+#: builtin/remote.c:1159
 msgid "delete"
 msgstr ""
 
-#: builtin/remote.c:1156
+#: builtin/remote.c:1163
 msgid "up to date"
 msgstr ""
 
-#: builtin/remote.c:1159
+#: builtin/remote.c:1166
 msgid "fast-forwardable"
 msgstr ""
 
-#: builtin/remote.c:1162
-msgid "local out of date"
-msgstr ""
-
 #: builtin/remote.c:1169
-#, c-format
-msgid "    %-*s forces to %-*s (%s)"
-msgstr ""
-
-#: builtin/remote.c:1172
-#, c-format
-msgid "    %-*s pushes to %-*s (%s)"
+msgid "local out of date"
 msgstr ""
 
 #: builtin/remote.c:1176
 #, c-format
-msgid "    %-*s forces to %s"
+msgid "    %-*s forces to %-*s (%s)"
 msgstr ""
 
 #: builtin/remote.c:1179
 #, c-format
+msgid "    %-*s pushes to %-*s (%s)"
+msgstr ""
+
+#: builtin/remote.c:1183
+#, c-format
+msgid "    %-*s forces to %s"
+msgstr ""
+
+#: builtin/remote.c:1186
+#, c-format
 msgid "    %-*s pushes to %s"
 msgstr ""
 
-#: builtin/remote.c:1255
+#: builtin/remote.c:1262
 msgid "do not query remotes"
 msgstr ""
 
-#: builtin/remote.c:1276
+#: builtin/remote.c:1283
 #, c-format
 msgid "* remote %s"
 msgstr ""
 
-#: builtin/remote.c:1277
+#: builtin/remote.c:1284
 #, c-format
 msgid "  Fetch URL: %s"
 msgstr ""
 
-#: builtin/remote.c:1278 builtin/remote.c:1294 builtin/remote.c:1431
+#: builtin/remote.c:1285 builtin/remote.c:1301 builtin/remote.c:1439
 msgid "(no URL)"
 msgstr ""
 
@@ -12445,180 +12453,180 @@ msgstr ""
 #. with the one in " Fetch URL: %s"
 #. translation.
 #.
-#: builtin/remote.c:1292 builtin/remote.c:1294
+#: builtin/remote.c:1299 builtin/remote.c:1301
 #, c-format
 msgid "  Push  URL: %s"
 msgstr ""
 
-#: builtin/remote.c:1296 builtin/remote.c:1298 builtin/remote.c:1300
+#: builtin/remote.c:1303 builtin/remote.c:1305 builtin/remote.c:1307
 #, c-format
 msgid "  HEAD branch: %s"
 msgstr ""
 
-#: builtin/remote.c:1296
+#: builtin/remote.c:1303
 msgid "(not queried)"
 msgstr ""
 
-#: builtin/remote.c:1298
+#: builtin/remote.c:1305
 msgid "(unknown)"
 msgstr ""
 
-#: builtin/remote.c:1302
+#: builtin/remote.c:1309
 #, c-format
 msgid ""
 "  HEAD branch (remote HEAD is ambiguous, may be one of the following):\n"
 msgstr ""
 
-#: builtin/remote.c:1314
+#: builtin/remote.c:1322
 #, c-format
 msgid "  Remote branch:%s"
 msgid_plural "  Remote branches:%s"
 msgstr[0] ""
 msgstr[1] ""
 
-#: builtin/remote.c:1317 builtin/remote.c:1343
+#: builtin/remote.c:1325 builtin/remote.c:1351
 msgid " (status not queried)"
 msgstr ""
 
-#: builtin/remote.c:1326
+#: builtin/remote.c:1334
 msgid "  Local branch configured for 'git pull':"
 msgid_plural "  Local branches configured for 'git pull':"
 msgstr[0] ""
 msgstr[1] ""
 
-#: builtin/remote.c:1334
+#: builtin/remote.c:1342
 msgid "  Local refs will be mirrored by 'git push'"
 msgstr ""
 
-#: builtin/remote.c:1340
+#: builtin/remote.c:1348
 #, c-format
 msgid "  Local ref configured for 'git push'%s:"
 msgid_plural "  Local refs configured for 'git push'%s:"
 msgstr[0] ""
 msgstr[1] ""
 
-#: builtin/remote.c:1361
+#: builtin/remote.c:1369
 msgid "set refs/remotes/<name>/HEAD according to remote"
 msgstr ""
 
-#: builtin/remote.c:1363
+#: builtin/remote.c:1371
 msgid "delete refs/remotes/<name>/HEAD"
 msgstr ""
 
-#: builtin/remote.c:1377
+#: builtin/remote.c:1385
 msgid "Cannot determine remote HEAD"
 msgstr ""
 
-#: builtin/remote.c:1379
+#: builtin/remote.c:1387
 msgid "Multiple remote HEAD branches. Please choose one explicitly with:"
-msgstr ""
-
-#: builtin/remote.c:1389
-#, c-format
-msgid "Could not delete %s"
 msgstr ""
 
 #: builtin/remote.c:1397
 #, c-format
+msgid "Could not delete %s"
+msgstr ""
+
+#: builtin/remote.c:1405
+#, c-format
 msgid "Not a valid ref: %s"
 msgstr ""
 
-#: builtin/remote.c:1399
+#: builtin/remote.c:1407
 #, c-format
 msgid "Could not setup %s"
 msgstr ""
 
-#: builtin/remote.c:1417
+#: builtin/remote.c:1425
 #, c-format
 msgid " %s will become dangling!"
 msgstr ""
 
-#: builtin/remote.c:1418
+#: builtin/remote.c:1426
 #, c-format
 msgid " %s has become dangling!"
 msgstr ""
 
-#: builtin/remote.c:1427
+#: builtin/remote.c:1435
 #, c-format
 msgid "Pruning %s"
 msgstr ""
 
-#: builtin/remote.c:1428
+#: builtin/remote.c:1436
 #, c-format
 msgid "URL: %s"
 msgstr ""
 
-#: builtin/remote.c:1444
+#: builtin/remote.c:1452
 #, c-format
 msgid " * [would prune] %s"
 msgstr ""
 
-#: builtin/remote.c:1447
+#: builtin/remote.c:1455
 #, c-format
 msgid " * [pruned] %s"
 msgstr ""
 
-#: builtin/remote.c:1492
+#: builtin/remote.c:1500
 msgid "prune remotes after fetching"
 msgstr ""
 
-#: builtin/remote.c:1556 builtin/remote.c:1612 builtin/remote.c:1682
+#: builtin/remote.c:1564 builtin/remote.c:1620 builtin/remote.c:1690
 #, c-format
 msgid "No such remote '%s'"
 msgstr ""
 
-#: builtin/remote.c:1574
+#: builtin/remote.c:1582
 msgid "add branch"
 msgstr ""
 
-#: builtin/remote.c:1581
+#: builtin/remote.c:1589
 msgid "no remote specified"
 msgstr ""
 
-#: builtin/remote.c:1598
+#: builtin/remote.c:1606
 msgid "query push URLs rather than fetch URLs"
 msgstr ""
 
-#: builtin/remote.c:1600
+#: builtin/remote.c:1608
 msgid "return all URLs"
 msgstr ""
 
-#: builtin/remote.c:1630
+#: builtin/remote.c:1638
 #, c-format
 msgid "no URLs configured for remote '%s'"
 msgstr ""
 
-#: builtin/remote.c:1656
+#: builtin/remote.c:1664
 msgid "manipulate push URLs"
 msgstr ""
 
-#: builtin/remote.c:1658
+#: builtin/remote.c:1666
 msgid "add URL"
 msgstr ""
 
-#: builtin/remote.c:1660
+#: builtin/remote.c:1668
 msgid "delete URLs"
 msgstr ""
 
-#: builtin/remote.c:1667
+#: builtin/remote.c:1675
 msgid "--add --delete doesn't make sense"
-msgstr ""
-
-#: builtin/remote.c:1708
-#, c-format
-msgid "Invalid old URL pattern: %s"
 msgstr ""
 
 #: builtin/remote.c:1716
 #, c-format
+msgid "Invalid old URL pattern: %s"
+msgstr ""
+
+#: builtin/remote.c:1724
+#, c-format
 msgid "No such URL found: %s"
 msgstr ""
 
-#: builtin/remote.c:1718
+#: builtin/remote.c:1726
 msgid "Will not delete all non-push URLs"
 msgstr ""
 
-#: builtin/remote.c:1735
+#: builtin/remote.c:1743
 msgid "be verbose; must be placed before a subcommand"
 msgstr ""
 
@@ -22277,51 +22285,51 @@ msgstr ""
 msgid "cannot create async thread: %s"
 msgstr ""
 
-#: send-pack.c:150
-msgid "unexpected flush packet while reading remote unpack status"
-msgstr ""
-
 #: send-pack.c:152
-#, c-format
-msgid "unable to parse remote unpack status: %s"
+msgid "unexpected flush packet while reading remote unpack status"
 msgstr ""
 
 #: send-pack.c:154
 #, c-format
+msgid "unable to parse remote unpack status: %s"
+msgstr ""
+
+#: send-pack.c:156
+#, c-format
 msgid "remote unpack failed: %s"
 msgstr ""
 
-#: send-pack.c:378
+#: send-pack.c:380
 msgid "failed to sign the push certificate"
 msgstr ""
 
-#: send-pack.c:435
+#: send-pack.c:437
 msgid "send-pack: unable to fork off fetch subprocess"
 msgstr ""
 
-#: send-pack.c:457
+#: send-pack.c:459
 msgid "push negotiation failed; proceeding anyway with push"
 msgstr ""
 
-#: send-pack.c:528
+#: send-pack.c:534
 msgid "the receiving end does not support this repository's hash algorithm"
 msgstr ""
 
-#: send-pack.c:537
+#: send-pack.c:543
 msgid "the receiving end does not support --signed push"
 msgstr ""
 
-#: send-pack.c:539
+#: send-pack.c:545
 msgid ""
 "not sending a push certificate since the receiving end does not support --"
 "signed push"
 msgstr ""
 
-#: send-pack.c:546
+#: send-pack.c:552
 msgid "the receiving end does not support --atomic push"
 msgstr ""
 
-#: send-pack.c:551
+#: send-pack.c:557
 msgid "the receiving end does not support push options"
 msgstr ""
 
@@ -24230,6 +24238,22 @@ msgstr ""
 
 #: urlmatch.c:371
 msgid "invalid '..' path segment"
+msgstr ""
+
+#: usage.c:36
+msgid "usage: "
+msgstr ""
+
+#: usage.c:61
+msgid "fatal: "
+msgstr ""
+
+#: usage.c:81
+msgid "error: "
+msgstr ""
+
+#: usage.c:88
+msgid "warning: "
 msgstr ""
 
 #: walker.c:170
