@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2022-07-14 23:57+0000\n"
+"POT-Creation-Date: 2022-07-18 21:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -1588,7 +1588,7 @@ msgstr ""
 #: builtin/fast-export.c:1230 builtin/index-pack.c:1854 builtin/log.c:2160
 #: builtin/reset.c:442 builtin/reset.c:500 builtin/rm.c:281
 #: builtin/stash.c:1758 builtin/worktree.c:580 builtin/worktree.c:781
-#: fetch-pack.c:311 http-fetch.c:144 http-fetch.c:153 revision.c:2960
+#: fetch-pack.c:335 http-fetch.c:144 http-fetch.c:153 revision.c:2960
 #, c-format
 msgid "the option '%s' requires '%s'"
 msgstr ""
@@ -1728,38 +1728,39 @@ msgid_plural "Bisecting: %d revisions left to test after this %s\n"
 msgstr[0] ""
 msgstr[1] ""
 
-#: blame.c:2773
+#: blame.c:2761
 msgid "--contents and --reverse do not blend well."
 msgstr ""
 
-#: blame.c:2787
+#: blame.c:2775
 msgid "cannot use --contents with final commit object name"
 msgstr ""
 
-#: blame.c:2808
+#: blame.c:2796
 msgid "--reverse and --first-parent together require specified latest commit"
 msgstr ""
 
-#: blame.c:2817 builtin/commit.c:1118 builtin/log.c:444 builtin/log.c:1079
+#: blame.c:2805 builtin/commit.c:1118 builtin/log.c:444 builtin/log.c:1079
 #: builtin/log.c:1687 builtin/log.c:2116 builtin/log.c:2412 builtin/merge.c:439
 #: builtin/pack-objects.c:3407 builtin/pack-objects.c:3565
 #: builtin/pack-objects.c:4047 builtin/pack-objects.c:4062
-#: builtin/shortlog.c:257 bundle.c:233 midx.c:1046 ref-filter.c:2371
-#: remote.c:2208 sequencer.c:2410 sequencer.c:5164 submodule.c:912
+#: builtin/shortlog.c:257 bundle.c:233 midx.c:1046 pack-bitmap.c:1081
+#: pack-bitmap.c:1975 ref-filter.c:2371 remote.c:2186 sequencer.c:2410
+#: sequencer.c:5164 submodule.c:912
 msgid "revision walk setup failed"
 msgstr ""
 
-#: blame.c:2835
+#: blame.c:2823
 msgid ""
 "--reverse --first-parent together require range along first-parent chain"
 msgstr ""
 
-#: blame.c:2846
+#: blame.c:2834
 #, c-format
 msgid "no such path %s in %s"
 msgstr ""
 
-#: blame.c:2857
+#: blame.c:2845
 #, c-format
 msgid "cannot read blob %s for path %s"
 msgstr ""
@@ -4986,7 +4987,7 @@ msgstr ""
 msgid "--filter is ignored in local clones; use file:// instead."
 msgstr ""
 
-#: builtin/clone.c:1179 fetch-pack.c:1166 fetch-pack.c:1547
+#: builtin/clone.c:1179 fetch-pack.c:1193 fetch-pack.c:1567
 msgid "source repository is shallow, reject to clone."
 msgstr ""
 
@@ -5317,7 +5318,7 @@ msgstr ""
 msgid "malformed --author parameter"
 msgstr ""
 
-#: builtin/commit.c:649 ident.c:527
+#: builtin/commit.c:649 ident.c:529
 #, c-format
 msgid "invalid date format: %s"
 msgstr ""
@@ -9776,7 +9777,7 @@ msgstr ""
 msgid "Bad value '%s' in environment '%s'"
 msgstr ""
 
-#: builtin/merge.c:1164 read-cache.c:3128 strbuf.c:1192 wrapper.c:717
+#: builtin/merge.c:1164 read-cache.c:3128 strbuf.c:1192 wrapper.c:723
 #, c-format
 msgid "could not close '%s'"
 msgstr ""
@@ -10602,7 +10603,7 @@ msgstr ""
 msgid "Counting objects"
 msgstr ""
 
-#: builtin/pack-objects.c:2447 pack-bitmap.c:1320 pack-bitmap.c:1326
+#: builtin/pack-objects.c:2447 pack-bitmap.c:1333 pack-bitmap.c:1339
 #, c-format
 msgid "unable to get size of %s"
 msgstr ""
@@ -13212,7 +13213,7 @@ msgstr ""
 msgid "Could not write new index file."
 msgstr ""
 
-#: builtin/rev-list.c:91 pack-bitmap.c:2233
+#: builtin/rev-list.c:91
 #, c-format
 msgid "unable to get disk usage of %s"
 msgstr ""
@@ -16819,27 +16820,27 @@ msgid ""
 "\"git config advice.graftFileDeprecated false\""
 msgstr ""
 
-#: commit.c:1263
+#: commit.c:1255
 #, c-format
 msgid "Commit %s has an untrusted GPG signature, allegedly by %s."
 msgstr ""
 
-#: commit.c:1267
+#: commit.c:1259
 #, c-format
 msgid "Commit %s has a bad GPG signature allegedly by %s."
 msgstr ""
 
-#: commit.c:1270
+#: commit.c:1262
 #, c-format
 msgid "Commit %s does not have a GPG signature."
 msgstr ""
 
-#: commit.c:1273
+#: commit.c:1265
 #, c-format
 msgid "Commit %s has a good GPG signature by %s\n"
 msgstr ""
 
-#: commit.c:1527
+#: commit.c:1519
 msgid ""
 "Warning: commit message did not conform to UTF-8.\n"
 "You may want to amend it after fixing the message, or set the config\n"
@@ -16923,12 +16924,12 @@ msgstr ""
 msgid "could not read directory changes [GLE %ld]"
 msgstr ""
 
-#: compat/mingw.c:2665
+#: compat/mingw.c:2662
 #, c-format
 msgid "failed to copy SID (%ld)"
 msgstr ""
 
-#: compat/mingw.c:2727
+#: compat/mingw.c:2724
 #, c-format
 msgid "failed to get owner for '%s' (%ld)"
 msgstr ""
@@ -18752,195 +18753,195 @@ msgstr ""
 msgid "too many args to run %s"
 msgstr ""
 
-#: fetch-pack.c:205
+#: fetch-pack.c:206
 msgid "git fetch-pack: expected shallow list"
 msgstr ""
 
-#: fetch-pack.c:208
+#: fetch-pack.c:209
 msgid "git fetch-pack: expected a flush packet after shallow list"
 msgstr ""
 
-#: fetch-pack.c:219
+#: fetch-pack.c:220
 msgid "git fetch-pack: expected ACK/NAK, got a flush packet"
 msgstr ""
 
-#: fetch-pack.c:239
+#: fetch-pack.c:240
 #, c-format
 msgid "git fetch-pack: expected ACK/NAK, got '%s'"
 msgstr ""
 
-#: fetch-pack.c:250
+#: fetch-pack.c:251
 msgid "unable to write to remote"
 msgstr ""
 
-#: fetch-pack.c:408 fetch-pack.c:1501
+#: fetch-pack.c:304
+msgid "Server supports filter"
+msgstr ""
+
+#: fetch-pack.c:428 fetch-pack.c:1521
 #, c-format
 msgid "invalid shallow line: %s"
 msgstr ""
 
-#: fetch-pack.c:414 fetch-pack.c:1507
+#: fetch-pack.c:434 fetch-pack.c:1527
 #, c-format
 msgid "invalid unshallow line: %s"
 msgstr ""
 
-#: fetch-pack.c:416 fetch-pack.c:1509
+#: fetch-pack.c:436 fetch-pack.c:1529
 #, c-format
 msgid "object not found: %s"
 msgstr ""
 
-#: fetch-pack.c:419 fetch-pack.c:1512
+#: fetch-pack.c:439 fetch-pack.c:1532
 #, c-format
 msgid "error in object: %s"
 msgstr ""
 
-#: fetch-pack.c:421 fetch-pack.c:1514
+#: fetch-pack.c:441 fetch-pack.c:1534
 #, c-format
 msgid "no shallow found: %s"
 msgstr ""
 
-#: fetch-pack.c:424 fetch-pack.c:1518
+#: fetch-pack.c:444 fetch-pack.c:1538
 #, c-format
 msgid "expected shallow/unshallow, got %s"
 msgstr ""
 
-#: fetch-pack.c:464
+#: fetch-pack.c:484
 #, c-format
 msgid "got %s %d %s"
 msgstr ""
 
-#: fetch-pack.c:481
+#: fetch-pack.c:501
 #, c-format
 msgid "invalid commit %s"
 msgstr ""
 
-#: fetch-pack.c:512
+#: fetch-pack.c:532
 msgid "giving up"
 msgstr ""
 
-#: fetch-pack.c:525 progress.h:25
+#: fetch-pack.c:545 progress.h:25
 msgid "done"
 msgstr ""
 
-#: fetch-pack.c:537
+#: fetch-pack.c:557
 #, c-format
 msgid "got %s (%d) %s"
 msgstr ""
 
-#: fetch-pack.c:573
+#: fetch-pack.c:593
 #, c-format
 msgid "Marking %s as complete"
 msgstr ""
 
-#: fetch-pack.c:795
+#: fetch-pack.c:815
 #, c-format
 msgid "already have %s (%s)"
 msgstr ""
 
-#: fetch-pack.c:891
+#: fetch-pack.c:911
 msgid "fetch-pack: unable to fork off sideband demultiplexer"
 msgstr ""
 
-#: fetch-pack.c:899
+#: fetch-pack.c:919
 msgid "protocol error: bad pack header"
 msgstr ""
 
-#: fetch-pack.c:989
+#: fetch-pack.c:1009
 #, c-format
 msgid "fetch-pack: unable to fork off %s"
 msgstr ""
 
-#: fetch-pack.c:995
+#: fetch-pack.c:1015
 msgid "fetch-pack: invalid index-pack output"
 msgstr ""
 
-#: fetch-pack.c:1012
+#: fetch-pack.c:1032
 #, c-format
 msgid "%s failed"
 msgstr ""
 
-#: fetch-pack.c:1014
+#: fetch-pack.c:1034
 msgid "error in sideband demultiplexer"
 msgstr ""
 
-#: fetch-pack.c:1063
+#: fetch-pack.c:1090
 #, c-format
 msgid "Server version is %.*s"
 msgstr ""
 
-#: fetch-pack.c:1071 fetch-pack.c:1077 fetch-pack.c:1080 fetch-pack.c:1086
-#: fetch-pack.c:1090 fetch-pack.c:1094 fetch-pack.c:1098 fetch-pack.c:1102
-#: fetch-pack.c:1106 fetch-pack.c:1110 fetch-pack.c:1114 fetch-pack.c:1118
-#: fetch-pack.c:1124 fetch-pack.c:1130 fetch-pack.c:1135 fetch-pack.c:1140
+#: fetch-pack.c:1098 fetch-pack.c:1104 fetch-pack.c:1107 fetch-pack.c:1113
+#: fetch-pack.c:1117 fetch-pack.c:1121 fetch-pack.c:1125 fetch-pack.c:1129
+#: fetch-pack.c:1133 fetch-pack.c:1137 fetch-pack.c:1141 fetch-pack.c:1145
+#: fetch-pack.c:1151 fetch-pack.c:1157 fetch-pack.c:1162 fetch-pack.c:1167
 #, c-format
 msgid "Server supports %s"
 msgstr ""
 
-#: fetch-pack.c:1073
+#: fetch-pack.c:1100
 msgid "Server does not support shallow clients"
 msgstr ""
 
-#: fetch-pack.c:1133
+#: fetch-pack.c:1160
 msgid "Server does not support --shallow-since"
 msgstr ""
 
-#: fetch-pack.c:1138
+#: fetch-pack.c:1165
 msgid "Server does not support --shallow-exclude"
 msgstr ""
 
-#: fetch-pack.c:1142
+#: fetch-pack.c:1169
 msgid "Server does not support --deepen"
 msgstr ""
 
-#: fetch-pack.c:1144
+#: fetch-pack.c:1171
 msgid "Server does not support this repository's object format"
 msgstr ""
 
-#: fetch-pack.c:1157
+#: fetch-pack.c:1184
 msgid "no common commits"
 msgstr ""
 
-#: fetch-pack.c:1172 fetch-pack.c:1749
+#: fetch-pack.c:1199 fetch-pack.c:1769
 msgid "git fetch-pack: fetch failed."
 msgstr ""
 
-#: fetch-pack.c:1286
+#: fetch-pack.c:1313
 #, c-format
 msgid "mismatched algorithms: client %s; server %s"
 msgstr ""
 
-#: fetch-pack.c:1290
+#: fetch-pack.c:1317
 #, c-format
 msgid "the server does not support algorithm '%s'"
 msgstr ""
 
-#: fetch-pack.c:1314 fetch-pack.c:1396 fetch-pack.c:2140
+#: fetch-pack.c:1341 fetch-pack.c:1416 fetch-pack.c:2160
 msgid "unable to write request to remote"
 msgstr ""
 
-#: fetch-pack.c:1346
+#: fetch-pack.c:1373
 msgid "Server does not support shallow requests"
 msgstr ""
 
-#: fetch-pack.c:1353
-msgid "Server supports filter"
-msgstr ""
-
-#: fetch-pack.c:1420
+#: fetch-pack.c:1440
 #, c-format
 msgid "expected '%s', received '%s'"
 msgstr ""
 
-#: fetch-pack.c:1423
+#: fetch-pack.c:1443
 #, c-format
 msgid "expected '%s'"
 msgstr ""
 
-#: fetch-pack.c:1457
+#: fetch-pack.c:1477
 #, c-format
 msgid "unexpected acknowledgment line: '%s'"
 msgstr ""
 
-#: fetch-pack.c:1462
+#: fetch-pack.c:1482
 #, c-format
 msgid "error processing acks: %d"
 msgstr ""
@@ -18948,7 +18949,7 @@ msgstr ""
 #. TRANSLATORS: The parameter will be 'ready', a protocol
 #. keyword.
 #.
-#: fetch-pack.c:1476
+#: fetch-pack.c:1496
 #, c-format
 msgid "expected packfile to be sent after '%s'"
 msgstr ""
@@ -18956,53 +18957,53 @@ msgstr ""
 #. TRANSLATORS: The parameter will be 'ready', a protocol
 #. keyword.
 #.
-#: fetch-pack.c:1482
+#: fetch-pack.c:1502
 #, c-format
 msgid "expected no other sections to be sent after no '%s'"
 msgstr ""
 
-#: fetch-pack.c:1523
+#: fetch-pack.c:1543
 #, c-format
 msgid "error processing shallow info: %d"
 msgstr ""
 
-#: fetch-pack.c:1572
+#: fetch-pack.c:1592
 #, c-format
 msgid "expected wanted-ref, got '%s'"
 msgstr ""
 
-#: fetch-pack.c:1577
+#: fetch-pack.c:1597
 #, c-format
 msgid "unexpected wanted-ref: '%s'"
 msgstr ""
 
-#: fetch-pack.c:1582
+#: fetch-pack.c:1602
 #, c-format
 msgid "error processing wanted refs: %d"
 msgstr ""
 
-#: fetch-pack.c:1612
+#: fetch-pack.c:1632
 msgid "git fetch-pack: expected response end packet"
 msgstr ""
 
-#: fetch-pack.c:2027
+#: fetch-pack.c:2047
 msgid "no matching remote head"
 msgstr ""
 
-#: fetch-pack.c:2050
+#: fetch-pack.c:2070
 msgid "connectivity check failed after fetching from remote"
 msgstr ""
 
-#: fetch-pack.c:2162
+#: fetch-pack.c:2182
 msgid "unexpected 'ready' from remote"
 msgstr ""
 
-#: fetch-pack.c:2185
+#: fetch-pack.c:2205
 #, c-format
 msgid "no such remote ref %s"
 msgstr ""
 
-#: fetch-pack.c:2188
+#: fetch-pack.c:2208
 #, c-format
 msgid "Server does not allow request for unadvertised object %s"
 msgstr ""
@@ -19476,15 +19477,15 @@ msgid ""
 "   redirect: %s"
 msgstr ""
 
-#: ident.c:426
+#: ident.c:428
 msgid "Author identity unknown\n"
 msgstr ""
 
-#: ident.c:429
+#: ident.c:431
 msgid "Committer identity unknown\n"
 msgstr ""
 
-#: ident.c:435
+#: ident.c:437
 msgid ""
 "\n"
 "*** Please tell me who you are.\n"
@@ -19499,30 +19500,30 @@ msgid ""
 "\n"
 msgstr ""
 
-#: ident.c:470
+#: ident.c:472
 msgid "no email was given and auto-detection is disabled"
 msgstr ""
 
-#: ident.c:475
+#: ident.c:477
 #, c-format
 msgid "unable to auto-detect email address (got '%s')"
 msgstr ""
 
-#: ident.c:492
+#: ident.c:494
 msgid "no name was given and auto-detection is disabled"
 msgstr ""
 
-#: ident.c:498
+#: ident.c:500
 #, c-format
 msgid "unable to auto-detect name (got '%s')"
 msgstr ""
 
-#: ident.c:506
+#: ident.c:508
 #, c-format
 msgid "empty ident name (for <%s>) not allowed"
 msgstr ""
 
-#: ident.c:512
+#: ident.c:514
 #, c-format
 msgid "name consists only of disallowed characters: %s"
 msgstr ""
@@ -20844,54 +20845,144 @@ msgstr ""
 msgid "trying to write commit not in index"
 msgstr ""
 
-#: pack-bitmap.c:199
+#: pack-bitmap.c:148
+msgid "failed to load bitmap index (corrupted?)"
+msgstr ""
+
+#: pack-bitmap.c:170
+msgid "corrupted bitmap index (too small)"
+msgstr ""
+
+#: pack-bitmap.c:173
+msgid "corrupted bitmap index file (wrong header)"
+msgstr ""
+
+#: pack-bitmap.c:177
+#, c-format
+msgid "unsupported version '%d' for bitmap index file"
+msgstr ""
+
+#: pack-bitmap.c:191
+msgid "corrupted bitmap index file (too short to fit hash cache)"
+msgstr ""
+
+#: pack-bitmap.c:200
 msgid "corrupted bitmap index file (too short to fit lookup table)"
 msgstr ""
 
-#: pack-bitmap.c:236
+#: pack-bitmap.c:237
 #, c-format
-msgid "duplicate entry in bitmap index: %s"
+msgid "duplicate entry in bitmap index: '%s'"
 msgstr ""
 
-#: pack-bitmap.c:373
+#: pack-bitmap.c:281
+#, c-format
+msgid "corrupt ewah bitmap: truncated header for entry %d"
+msgstr ""
+
+#: pack-bitmap.c:288
+#, c-format
+msgid "corrupt ewah bitmap: commit index %u out of range"
+msgstr ""
+
+#: pack-bitmap.c:296
+msgid "corrupted bitmap pack index"
+msgstr ""
+
+#: pack-bitmap.c:302
+msgid "invalid XOR offset in bitmap pack index"
+msgstr ""
+
+#: pack-bitmap.c:349 pack-bitmap.c:429
+msgid "cannot fstat bitmap file"
+msgstr ""
+
+#: pack-bitmap.c:358 pack-bitmap.c:436
+#, c-format
+msgid "ignoring extra bitmap file: '%s'"
+msgstr ""
+
+#: pack-bitmap.c:375
+msgid "checksum doesn't match in MIDX and bitmap"
+msgstr ""
+
+#: pack-bitmap.c:380
 msgid "multi-pack bitmap is missing required reverse index"
 msgstr ""
 
-#: pack-bitmap.c:379
+#: pack-bitmap.c:386
 #, c-format
 msgid "could not open pack %s"
 msgstr ""
 
-#: pack-bitmap.c:385
+#: pack-bitmap.c:392
 #, c-format
 msgid "preferred pack (%s) is invalid"
 msgstr ""
 
-#: pack-bitmap.c:599
+#: pack-bitmap.c:612
 msgid "corrupt bitmap lookup table: triplet position out of index"
 msgstr ""
 
-#: pack-bitmap.c:703
+#: pack-bitmap.c:716
 msgid "corrupt bitmap lookup table: xor chain exceed entry count"
 msgstr ""
 
-#: pack-bitmap.c:714
+#: pack-bitmap.c:727
 #, c-format
 msgid "corrupt bitmap lookup table: commit index %u out of range"
 msgstr ""
 
-#: pack-bitmap.c:744 pack-bitmap.c:768
+#: pack-bitmap.c:757 pack-bitmap.c:781
 #, c-format
 msgid "corrupt ewah bitmap: truncated header for bitmap of commit \"%s\""
 msgstr ""
 
-#: pack-bitmap.c:2006
+#: pack-bitmap.c:1890
+#, c-format
+msgid "object '%s' not found in type bitmaps"
+msgstr ""
+
+#: pack-bitmap.c:1894
+#, c-format
+msgid "object '%s' does not have a unique type"
+msgstr ""
+
+#: pack-bitmap.c:1898
+#, c-format
+msgid "object '%s': real type '%s', expected: '%s'"
+msgstr ""
+
+#: pack-bitmap.c:1912 pack-bitmap.c:1927
+#, c-format
+msgid "object not in bitmap: '%s'"
+msgstr ""
+
+#: pack-bitmap.c:1944 pack-bitmap.c:2016 pack-bitmap.c:2020
 msgid "failed to load bitmap indexes"
 msgstr ""
 
-#: pack-bitmap.c:2197
+#: pack-bitmap.c:1947
+msgid "you must specify exactly one commit to test"
+msgstr ""
+
+#: pack-bitmap.c:1965
 #, c-format
-msgid "could not find %s in pack %s at offset %<PRIuMAX>"
+msgid "commit '%s' doesn't have an indexed bitmap"
+msgstr ""
+
+#: pack-bitmap.c:1993
+msgid "mismatch in bitmap results"
+msgstr ""
+
+#: pack-bitmap.c:2211
+#, c-format
+msgid "could not find '%s' in pack '%s' at offset %<PRIuMAX>"
+msgstr ""
+
+#: pack-bitmap.c:2247
+#, c-format
+msgid "unable to get disk usage of '%s'"
 msgstr ""
 
 #: pack-mtimes.c:46
@@ -20972,12 +21063,12 @@ msgstr ""
 msgid "packfile %s cannot be mapped%s"
 msgstr ""
 
-#: packfile.c:1939
+#: packfile.c:1927
 #, c-format
 msgid "offset before start of pack index for %s (corrupt index?)"
 msgstr ""
 
-#: packfile.c:1943
+#: packfile.c:1931
 #, c-format
 msgid "offset beyond end of pack index for %s (truncated index?)"
 msgstr ""
@@ -22144,60 +22235,60 @@ msgstr ""
 msgid "remote-curl: unknown command '%s' from git"
 msgstr ""
 
-#: remote.c:404
+#: remote.c:403
 #, c-format
 msgid "config remote shorthand cannot begin with '/': %s"
 msgstr ""
 
-#: remote.c:452
+#: remote.c:451
 msgid "more than one receivepack given, using the first"
 msgstr ""
 
-#: remote.c:460
+#: remote.c:459
 msgid "more than one uploadpack given, using the first"
 msgstr ""
 
-#: remote.c:636
+#: remote.c:635
 #, c-format
 msgid "unrecognized value transfer.credentialsInUrl: '%s'"
 msgstr ""
 
-#: remote.c:652 remote.c:654
+#: remote.c:651 remote.c:653
 #, c-format
 msgid "URL '%s' uses plaintext credentials"
 msgstr ""
 
-#: remote.c:749
+#: remote.c:748
 #, c-format
 msgid "Cannot fetch both %s and %s to %s"
 msgstr ""
 
-#: remote.c:753
+#: remote.c:752
 #, c-format
 msgid "%s usually tracks %s, not %s"
 msgstr ""
 
-#: remote.c:757
+#: remote.c:756
 #, c-format
 msgid "%s tracks both %s and %s"
 msgstr ""
 
-#: remote.c:825
+#: remote.c:824
 #, c-format
 msgid "key '%s' of pattern had no '*'"
 msgstr ""
 
-#: remote.c:835
+#: remote.c:834
 #, c-format
 msgid "value '%s' of pattern has no '*'"
 msgstr ""
 
-#: remote.c:1242
+#: remote.c:1220
 #, c-format
 msgid "src refspec %s does not match any"
 msgstr ""
 
-#: remote.c:1247
+#: remote.c:1225
 #, c-format
 msgid "src refspec %s matches more than one"
 msgstr ""
@@ -22206,7 +22297,7 @@ msgstr ""
 #. <remote> <src>:<dst>" push, and "being pushed ('%s')" is
 #. the <src>.
 #.
-#: remote.c:1262
+#: remote.c:1240
 #, c-format
 msgid ""
 "The destination you provided is not a full refname (i.e.,\n"
@@ -22220,7 +22311,7 @@ msgid ""
 "Neither worked, so we gave up. You must fully qualify the ref."
 msgstr ""
 
-#: remote.c:1282
+#: remote.c:1260
 #, c-format
 msgid ""
 "The <src> part of the refspec is a commit object.\n"
@@ -22228,7 +22319,7 @@ msgid ""
 "'%s:refs/heads/%s'?"
 msgstr ""
 
-#: remote.c:1287
+#: remote.c:1265
 #, c-format
 msgid ""
 "The <src> part of the refspec is a tag object.\n"
@@ -22236,7 +22327,7 @@ msgid ""
 "'%s:refs/tags/%s'?"
 msgstr ""
 
-#: remote.c:1292
+#: remote.c:1270
 #, c-format
 msgid ""
 "The <src> part of the refspec is a tree object.\n"
@@ -22244,7 +22335,7 @@ msgid ""
 "'%s:refs/tags/%s'?"
 msgstr ""
 
-#: remote.c:1297
+#: remote.c:1275
 #, c-format
 msgid ""
 "The <src> part of the refspec is a blob object.\n"
@@ -22252,114 +22343,114 @@ msgid ""
 "'%s:refs/tags/%s'?"
 msgstr ""
 
-#: remote.c:1333
+#: remote.c:1311
 #, c-format
 msgid "%s cannot be resolved to branch"
 msgstr ""
 
-#: remote.c:1344
+#: remote.c:1322
 #, c-format
 msgid "unable to delete '%s': remote ref does not exist"
 msgstr ""
 
-#: remote.c:1356
+#: remote.c:1334
 #, c-format
 msgid "dst refspec %s matches more than one"
 msgstr ""
 
-#: remote.c:1363
+#: remote.c:1341
 #, c-format
 msgid "dst ref %s receives from more than one src"
 msgstr ""
 
-#: remote.c:1884 remote.c:1991
+#: remote.c:1862 remote.c:1969
 msgid "HEAD does not point to a branch"
 msgstr ""
 
-#: remote.c:1893
+#: remote.c:1871
 #, c-format
 msgid "no such branch: '%s'"
 msgstr ""
 
-#: remote.c:1896
+#: remote.c:1874
 #, c-format
 msgid "no upstream configured for branch '%s'"
 msgstr ""
 
-#: remote.c:1902
+#: remote.c:1880
 #, c-format
 msgid "upstream branch '%s' not stored as a remote-tracking branch"
 msgstr ""
 
-#: remote.c:1917
+#: remote.c:1895
 #, c-format
 msgid "push destination '%s' on remote '%s' has no local tracking branch"
 msgstr ""
 
-#: remote.c:1932
+#: remote.c:1910
 #, c-format
 msgid "branch '%s' has no remote for pushing"
 msgstr ""
 
-#: remote.c:1942
+#: remote.c:1920
 #, c-format
 msgid "push refspecs for '%s' do not include '%s'"
 msgstr ""
 
-#: remote.c:1955
+#: remote.c:1933
 msgid "push has no destination (push.default is 'nothing')"
 msgstr ""
 
-#: remote.c:1977
+#: remote.c:1955
 msgid "cannot resolve 'simple' push to a single destination"
 msgstr ""
 
-#: remote.c:2110
+#: remote.c:2088
 #, c-format
 msgid "couldn't find remote ref %s"
 msgstr ""
 
-#: remote.c:2123
+#: remote.c:2101
 #, c-format
 msgid "* Ignoring funny ref '%s' locally"
 msgstr ""
 
-#: remote.c:2287
+#: remote.c:2265
 #, c-format
 msgid "Your branch is based on '%s', but the upstream is gone.\n"
 msgstr ""
 
-#: remote.c:2291
+#: remote.c:2269
 msgid "  (use \"git branch --unset-upstream\" to fixup)\n"
 msgstr ""
 
-#: remote.c:2294
+#: remote.c:2272
 #, c-format
 msgid "Your branch is up to date with '%s'.\n"
 msgstr ""
 
-#: remote.c:2298
+#: remote.c:2276
 #, c-format
 msgid "Your branch and '%s' refer to different commits.\n"
 msgstr ""
 
-#: remote.c:2301
+#: remote.c:2279
 #, c-format
 msgid "  (use \"%s\" for details)\n"
 msgstr ""
 
-#: remote.c:2305
+#: remote.c:2283
 #, c-format
 msgid "Your branch is ahead of '%s' by %d commit.\n"
 msgid_plural "Your branch is ahead of '%s' by %d commits.\n"
 msgstr[0] ""
 msgstr[1] ""
 
-#: remote.c:2311
+#: remote.c:2289
 msgid "  (use \"git push\" to publish your local commits)\n"
 msgstr ""
 
-#: remote.c:2314
+#: remote.c:2292
 #, c-format
 msgid "Your branch is behind '%s' by %d commit, and can be fast-forwarded.\n"
 msgid_plural ""
@@ -22367,11 +22458,11 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: remote.c:2322
+#: remote.c:2300
 msgid "  (use \"git pull\" to update your local branch)\n"
 msgstr ""
 
-#: remote.c:2325
+#: remote.c:2303
 #, c-format
 msgid ""
 "Your branch and '%s' have diverged,\n"
@@ -22382,16 +22473,16 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: remote.c:2335
+#: remote.c:2313
 msgid "  (use \"git pull\" to merge the remote branch into yours)\n"
 msgstr ""
 
-#: remote.c:2527
+#: remote.c:2505
 #, c-format
 msgid "cannot parse expected object name '%s'"
 msgstr ""
 
-#: remote.c:2800
+#: remote.c:2778
 #, c-format
 msgid "cannot strip one component off url '%s'"
 msgstr ""
@@ -22644,7 +22735,7 @@ msgid "could not lock '%s'"
 msgstr ""
 
 #: sequencer.c:491 sequencer.c:3149 sequencer.c:3354 sequencer.c:3368
-#: sequencer.c:3620 sequencer.c:5892 strbuf.c:1189 wrapper.c:715
+#: sequencer.c:3620 sequencer.c:5892 strbuf.c:1189 wrapper.c:721
 #, c-format
 msgid "could not write to '%s'"
 msgstr ""
@@ -23978,7 +24069,7 @@ msgstr ""
 msgid "could not read input file '%s'"
 msgstr ""
 
-#: trailer.c:1024 wrapper.c:760
+#: trailer.c:1024 wrapper.c:766
 #, c-format
 msgid "could not stat %s"
 msgstr ""
@@ -24677,12 +24768,12 @@ msgstr ""
 msgid "could not open '%s' for reading and writing"
 msgstr ""
 
-#: wrapper.c:416 wrapper.c:683
+#: wrapper.c:416 wrapper.c:689
 #, c-format
 msgid "unable to access '%s'"
 msgstr ""
 
-#: wrapper.c:691
+#: wrapper.c:697
 msgid "unable to get current working directory"
 msgstr ""
 

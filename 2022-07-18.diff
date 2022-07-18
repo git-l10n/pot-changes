@@ -1,0 +1,166 @@
+
+
+#################### Mon, 18 Jul 2022 21:58:24 +0000 ####################
+
+--- po/git.pot.old	2022-07-18 21:58:24.296524791 +0000
++++ po/git.pot.new	2022-07-18 21:58:24.388525963 +0000
+@@ -1661,8 +1661,8 @@
+ msgstr ""
+ 
+ #: blame.c builtin/commit.c builtin/log.c builtin/merge.c
+-#: builtin/pack-objects.c builtin/shortlog.c bundle.c midx.c ref-filter.c
+-#: remote.c sequencer.c submodule.c
++#: builtin/pack-objects.c builtin/shortlog.c bundle.c midx.c pack-bitmap.c
++#: ref-filter.c remote.c sequencer.c submodule.c
+ msgid "revision walk setup failed"
+ msgstr ""
+ 
+@@ -12918,7 +12918,7 @@
+ msgid "Could not write new index file."
+ msgstr ""
+ 
+-#: builtin/rev-list.c pack-bitmap.c
++#: builtin/rev-list.c
+ #, c-format
+ msgid "unable to get disk usage of %s"
+ msgstr ""
+@@ -18373,6 +18373,10 @@
+ msgstr ""
+ 
+ #: fetch-pack.c
++msgid "Server supports filter"
++msgstr ""
++
++#: fetch-pack.c
+ #, c-format
+ msgid "invalid shallow line: %s"
+ msgstr ""
+@@ -18518,10 +18522,6 @@
+ msgstr ""
+ 
+ #: fetch-pack.c
+-msgid "Server supports filter"
+-msgstr ""
+-
+-#: fetch-pack.c
+ #, c-format
+ msgid "expected '%s', received '%s'"
+ msgstr ""
+@@ -21048,12 +21048,64 @@
+ msgstr ""
+ 
+ #: pack-bitmap.c
++msgid "failed to load bitmap index (corrupted?)"
++msgstr ""
++
++#: pack-bitmap.c
++msgid "corrupted bitmap index (too small)"
++msgstr ""
++
++#: pack-bitmap.c
++msgid "corrupted bitmap index file (wrong header)"
++msgstr ""
++
++#: pack-bitmap.c
++#, c-format
++msgid "unsupported version '%d' for bitmap index file"
++msgstr ""
++
++#: pack-bitmap.c
++msgid "corrupted bitmap index file (too short to fit hash cache)"
++msgstr ""
++
++#: pack-bitmap.c
+ msgid "corrupted bitmap index file (too short to fit lookup table)"
+ msgstr ""
+ 
+ #: pack-bitmap.c
+ #, c-format
+-msgid "duplicate entry in bitmap index: %s"
++msgid "duplicate entry in bitmap index: '%s'"
++msgstr ""
++
++#: pack-bitmap.c
++#, c-format
++msgid "corrupt ewah bitmap: truncated header for entry %d"
++msgstr ""
++
++#: pack-bitmap.c
++#, c-format
++msgid "corrupt ewah bitmap: commit index %u out of range"
++msgstr ""
++
++#: pack-bitmap.c
++msgid "corrupted bitmap pack index"
++msgstr ""
++
++#: pack-bitmap.c
++msgid "invalid XOR offset in bitmap pack index"
++msgstr ""
++
++#: pack-bitmap.c
++msgid "cannot fstat bitmap file"
++msgstr ""
++
++#: pack-bitmap.c
++#, c-format
++msgid "ignoring extra bitmap file: '%s'"
++msgstr ""
++
++#: pack-bitmap.c
++msgid "checksum doesn't match in MIDX and bitmap"
+ msgstr ""
+ 
+ #: pack-bitmap.c
+@@ -21089,12 +21141,50 @@
+ msgstr ""
+ 
+ #: pack-bitmap.c
++#, c-format
++msgid "object '%s' not found in type bitmaps"
++msgstr ""
++
++#: pack-bitmap.c
++#, c-format
++msgid "object '%s' does not have a unique type"
++msgstr ""
++
++#: pack-bitmap.c
++#, c-format
++msgid "object '%s': real type '%s', expected: '%s'"
++msgstr ""
++
++#: pack-bitmap.c
++#, c-format
++msgid "object not in bitmap: '%s'"
++msgstr ""
++
++#: pack-bitmap.c
+ msgid "failed to load bitmap indexes"
+ msgstr ""
+ 
+ #: pack-bitmap.c
++msgid "you must specify exactly one commit to test"
++msgstr ""
++
++#: pack-bitmap.c
++#, c-format
++msgid "commit '%s' doesn't have an indexed bitmap"
++msgstr ""
++
++#: pack-bitmap.c
++msgid "mismatch in bitmap results"
++msgstr ""
++
++#: pack-bitmap.c
++#, c-format
++msgid "could not find '%s' in pack '%s' at offset %<PRIuMAX>"
++msgstr ""
++
++#: pack-bitmap.c
+ #, c-format
+-msgid "could not find %s in pack %s at offset %<PRIuMAX>"
++msgid "unable to get disk usage of '%s'"
+ msgstr ""
+ 
+ #: pack-mtimes.c
