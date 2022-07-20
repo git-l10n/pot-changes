@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2022-07-18 21:57+0000\n"
+"POT-Creation-Date: 2022-07-20 01:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -785,7 +785,7 @@ msgstr ""
 #: apply.c:138 archive.c:633 builtin/add.c:512 builtin/add.c:514
 #: builtin/add.c:520 builtin/add.c:532 builtin/branch.c:750
 #: builtin/checkout.c:472 builtin/checkout.c:475 builtin/checkout.c:1672
-#: builtin/checkout.c:1782 builtin/checkout.c:1785 builtin/clone.c:922
+#: builtin/checkout.c:1782 builtin/checkout.c:1785 builtin/clone.c:932
 #: builtin/commit.c:359 builtin/commit.c:362 builtin/commit.c:1200
 #: builtin/commit.c:1256 builtin/commit.c:1273 builtin/describe.c:594
 #: builtin/diff-tree.c:155 builtin/difftool.c:733 builtin/fast-export.c:1245
@@ -801,10 +801,10 @@ msgstr ""
 #: builtin/rev-list.c:536 builtin/show-branch.c:711 builtin/show-branch.c:716
 #: builtin/stash.c:1723 builtin/stash.c:1726 builtin/submodule--helper.c:1207
 #: builtin/submodule--helper.c:2927 builtin/tag.c:527 builtin/tag.c:573
-#: builtin/worktree.c:779 parse-options.c:1121 range-diff.c:555 revision.c:2324
-#: revision.c:2328 revision.c:2337 revision.c:2342 revision.c:2570
-#: revision.c:2905 revision.c:2909 revision.c:2917 revision.c:2920
-#: revision.c:2922
+#: builtin/worktree.c:779 parse-options.c:1121 range-diff.c:555 revision.c:2360
+#: revision.c:2364 revision.c:2373 revision.c:2378 revision.c:2606
+#: revision.c:2941 revision.c:2945 revision.c:2953 revision.c:2956
+#: revision.c:2958
 #, c-format
 msgid "options '%s' and '%s' cannot be used together"
 msgstr ""
@@ -1585,11 +1585,11 @@ msgid "Unexpected option --remote"
 msgstr ""
 
 #: archive.c:629 builtin/add.c:535 builtin/add.c:567 builtin/checkout.c:1791
-#: builtin/clone.c:1100 builtin/clone.c:1103 builtin/commit.c:371
+#: builtin/clone.c:1110 builtin/clone.c:1113 builtin/commit.c:371
 #: builtin/fast-export.c:1230 builtin/index-pack.c:1854 builtin/log.c:2160
 #: builtin/reset.c:442 builtin/reset.c:500 builtin/rm.c:281
 #: builtin/stash.c:1735 builtin/worktree.c:580 builtin/worktree.c:781
-#: fetch-pack.c:311 http-fetch.c:144 http-fetch.c:153 revision.c:2924
+#: fetch-pack.c:311 http-fetch.c:144 http-fetch.c:153 revision.c:2960
 #, c-format
 msgid "the option '%s' requires '%s'"
 msgstr ""
@@ -1993,7 +1993,7 @@ msgid "dry run"
 msgstr ""
 
 #: builtin/add.c:373 builtin/check-ignore.c:22 builtin/commit.c:1483
-#: builtin/count-objects.c:98 builtin/fsck.c:789 builtin/log.c:2363
+#: builtin/count-objects.c:98 builtin/fsck.c:827 builtin/log.c:2363
 #: builtin/mv.c:162 builtin/read-tree.c:120
 msgid "be verbose"
 msgstr ""
@@ -2253,7 +2253,7 @@ msgstr ""
 msgid "invalid ident line: %.*s"
 msgstr ""
 
-#: builtin/am.c:1370 builtin/checkout.c:783 builtin/clone.c:706
+#: builtin/am.c:1370 builtin/checkout.c:783 builtin/clone.c:715
 #: commit-graph.c:1102
 #, c-format
 msgid "unable to parse commit %s"
@@ -2373,7 +2373,7 @@ msgid ""
 msgstr ""
 
 #: builtin/am.c:1992 builtin/am.c:2026 builtin/checkout.c:603
-#: builtin/checkout.c:873 builtin/clone.c:715 builtin/stash.c:269 merge.c:102
+#: builtin/checkout.c:873 builtin/clone.c:724 builtin/stash.c:269 merge.c:102
 #: rerere.c:705
 msgid "unable to write new index file"
 msgstr ""
@@ -3461,7 +3461,7 @@ msgstr ""
 msgid "Failed to resolve HEAD as a valid ref."
 msgstr ""
 
-#: builtin/branch.c:713 builtin/clone.c:685
+#: builtin/branch.c:713 builtin/clone.c:694
 msgid "HEAD not found below refs/heads!"
 msgstr ""
 
@@ -4137,7 +4137,8 @@ msgstr ""
 msgid "HEAD is now at"
 msgstr ""
 
-#: builtin/checkout.c:959 builtin/clone.c:616 t/helper/test-fast-rebase.c:208
+#: builtin/checkout.c:959 builtin/clone.c:616 builtin/clone.c:642
+#: t/helper/test-fast-rebase.c:208
 msgid "unable to update HEAD"
 msgstr ""
 
@@ -4901,142 +4902,142 @@ msgstr ""
 msgid "unable to update %s"
 msgstr ""
 
-#: builtin/clone.c:652
+#: builtin/clone.c:661
 msgid "failed to initialize sparse-checkout"
 msgstr ""
 
-#: builtin/clone.c:675
-msgid "remote HEAD refers to nonexistent ref, unable to checkout.\n"
+#: builtin/clone.c:684
+msgid "remote HEAD refers to nonexistent ref, unable to checkout"
 msgstr ""
 
-#: builtin/clone.c:710
+#: builtin/clone.c:719
 msgid "unable to checkout working tree"
 msgstr ""
 
-#: builtin/clone.c:794
+#: builtin/clone.c:803
 msgid "unable to write parameters to config file"
 msgstr ""
 
-#: builtin/clone.c:857
+#: builtin/clone.c:866
 msgid "cannot repack to clean up"
 msgstr ""
 
-#: builtin/clone.c:859
+#: builtin/clone.c:868
 msgid "cannot unlink temporary alternates file"
 msgstr ""
 
-#: builtin/clone.c:902
+#: builtin/clone.c:912
 msgid "Too many arguments."
 msgstr ""
 
-#: builtin/clone.c:906 contrib/scalar/scalar.c:510
+#: builtin/clone.c:916 contrib/scalar/scalar.c:510
 msgid "You must specify a repository to clone."
 msgstr ""
 
-#: builtin/clone.c:919
+#: builtin/clone.c:929
 #, c-format
 msgid "options '%s' and '%s %s' cannot be used together"
 msgstr ""
 
-#: builtin/clone.c:936
+#: builtin/clone.c:946
 #, c-format
 msgid "repository '%s' does not exist"
 msgstr ""
 
-#: builtin/clone.c:940 builtin/fetch.c:2164
+#: builtin/clone.c:950 builtin/fetch.c:2164
 #, c-format
 msgid "depth %s is not a positive number"
 msgstr ""
 
-#: builtin/clone.c:950
+#: builtin/clone.c:960
 #, c-format
 msgid "destination path '%s' already exists and is not an empty directory."
 msgstr ""
 
-#: builtin/clone.c:956
+#: builtin/clone.c:966
 #, c-format
 msgid "repository path '%s' already exists and is not an empty directory."
 msgstr ""
 
-#: builtin/clone.c:970
+#: builtin/clone.c:980
 #, c-format
 msgid "working tree '%s' already exists."
 msgstr ""
 
-#: builtin/clone.c:985 builtin/clone.c:1006 builtin/difftool.c:256
+#: builtin/clone.c:995 builtin/clone.c:1016 builtin/difftool.c:256
 #: builtin/log.c:2057 builtin/worktree.c:350 builtin/worktree.c:382
 #, c-format
 msgid "could not create leading directories of '%s'"
 msgstr ""
 
-#: builtin/clone.c:990
+#: builtin/clone.c:1000
 #, c-format
 msgid "could not create work tree dir '%s'"
 msgstr ""
 
-#: builtin/clone.c:1010
+#: builtin/clone.c:1020
 #, c-format
 msgid "Cloning into bare repository '%s'...\n"
 msgstr ""
 
-#: builtin/clone.c:1012
+#: builtin/clone.c:1022
 #, c-format
 msgid "Cloning into '%s'...\n"
 msgstr ""
 
-#: builtin/clone.c:1041
+#: builtin/clone.c:1051
 msgid ""
 "clone --recursive is not compatible with both --reference and --reference-if-"
 "able"
 msgstr ""
 
-#: builtin/clone.c:1119 builtin/remote.c:201 builtin/remote.c:725
+#: builtin/clone.c:1129 builtin/remote.c:201 builtin/remote.c:725
 #, c-format
 msgid "'%s' is not a valid remote name"
 msgstr ""
 
-#: builtin/clone.c:1160
+#: builtin/clone.c:1170
 msgid "--depth is ignored in local clones; use file:// instead."
 msgstr ""
 
-#: builtin/clone.c:1162
+#: builtin/clone.c:1172
 msgid "--shallow-since is ignored in local clones; use file:// instead."
 msgstr ""
 
-#: builtin/clone.c:1164
+#: builtin/clone.c:1174
 msgid "--shallow-exclude is ignored in local clones; use file:// instead."
 msgstr ""
 
-#: builtin/clone.c:1166
+#: builtin/clone.c:1176
 msgid "--filter is ignored in local clones; use file:// instead."
 msgstr ""
 
-#: builtin/clone.c:1169 fetch-pack.c:1166 fetch-pack.c:1524
+#: builtin/clone.c:1179 fetch-pack.c:1166 fetch-pack.c:1524
 msgid "source repository is shallow, reject to clone."
 msgstr ""
 
-#: builtin/clone.c:1171
+#: builtin/clone.c:1181
 msgid "source repository is shallow, ignoring --local"
 msgstr ""
 
-#: builtin/clone.c:1176
+#: builtin/clone.c:1186
 msgid "--local is ignored"
 msgstr ""
 
-#: builtin/clone.c:1188
+#: builtin/clone.c:1198
 msgid "cannot clone from filtered bundle"
 msgstr ""
 
-#: builtin/clone.c:1268 builtin/clone.c:1327
+#: builtin/clone.c:1278 builtin/clone.c:1335
 msgid "remote transport reported error"
 msgstr ""
 
-#: builtin/clone.c:1280 builtin/clone.c:1292
+#: builtin/clone.c:1288
 #, c-format
 msgid "Remote branch %s not found in upstream %s"
 msgstr ""
 
-#: builtin/clone.c:1295
+#: builtin/clone.c:1298
 msgid "You appear to have cloned an empty repository."
 msgstr ""
 
@@ -7093,264 +7094,269 @@ msgstr ""
 msgid "missing --config=<config>"
 msgstr ""
 
-#: builtin/fsck.c:69 builtin/fsck.c:128 builtin/fsck.c:129
+#: builtin/fsck.c:70 builtin/fsck.c:129 builtin/fsck.c:130
 msgid "unknown"
 msgstr ""
 
 #. TRANSLATORS: e.g. error in tree 01bfda: <more explanation>
-#: builtin/fsck.c:78 builtin/fsck.c:100
+#: builtin/fsck.c:79 builtin/fsck.c:101
 #, c-format
 msgid "error in %s %s: %s"
 msgstr ""
 
 #. TRANSLATORS: e.g. warning in tree 01bfda: <more explanation>
-#: builtin/fsck.c:94
+#: builtin/fsck.c:95
 #, c-format
 msgid "warning in %s %s: %s"
 msgstr ""
 
-#: builtin/fsck.c:124 builtin/fsck.c:127
+#: builtin/fsck.c:125 builtin/fsck.c:128
 #, c-format
 msgid "broken link from %7s %s"
 msgstr ""
 
-#: builtin/fsck.c:136
+#: builtin/fsck.c:137
 msgid "wrong object type in link"
 msgstr ""
 
-#: builtin/fsck.c:152
+#: builtin/fsck.c:153
 #, c-format
 msgid ""
 "broken link from %7s %s\n"
 "              to %7s %s"
 msgstr ""
 
-#: builtin/fsck.c:189 builtin/prune.c:57 connected.c:109
+#: builtin/fsck.c:190 builtin/prune.c:57 connected.c:109
 msgid "Checking connectivity"
 msgstr ""
 
-#: builtin/fsck.c:264
+#: builtin/fsck.c:265
 #, c-format
 msgid "missing %s %s"
 msgstr ""
 
-#: builtin/fsck.c:291
+#: builtin/fsck.c:292
 #, c-format
 msgid "unreachable %s %s"
 msgstr ""
 
-#: builtin/fsck.c:311
+#: builtin/fsck.c:312
 #, c-format
 msgid "dangling %s %s"
 msgstr ""
 
-#: builtin/fsck.c:321
+#: builtin/fsck.c:322
 msgid "could not create lost-found"
 msgstr ""
 
-#: builtin/fsck.c:328 builtin/gc.c:1805 builtin/rebase.c:191
+#: builtin/fsck.c:329 builtin/gc.c:1805 builtin/rebase.c:191
 #: rebase-interactive.c:113 rerere.c:469 rerere.c:677 sequencer.c:3903
 #: sequencer.c:3929 sequencer.c:5715
 #, c-format
 msgid "could not write '%s'"
 msgstr ""
 
-#: builtin/fsck.c:332
+#: builtin/fsck.c:333
 #, c-format
 msgid "could not finish '%s'"
 msgstr ""
 
-#: builtin/fsck.c:349
+#: builtin/fsck.c:350
 #, c-format
 msgid "Checking %s"
 msgstr ""
 
-#: builtin/fsck.c:387
+#: builtin/fsck.c:388
 #, c-format
 msgid "Checking connectivity (%d objects)"
 msgstr ""
 
-#: builtin/fsck.c:406
+#: builtin/fsck.c:407
 #, c-format
 msgid "Checking %s %s"
 msgstr ""
 
-#: builtin/fsck.c:411
+#: builtin/fsck.c:412
 msgid "broken links"
 msgstr ""
 
-#: builtin/fsck.c:420
+#: builtin/fsck.c:421
 #, c-format
 msgid "root %s"
 msgstr ""
 
-#: builtin/fsck.c:428
+#: builtin/fsck.c:429
 #, c-format
 msgid "tagged %s %s (%s) in %s"
 msgstr ""
 
-#: builtin/fsck.c:457
+#: builtin/fsck.c:458
 #, c-format
 msgid "%s: object corrupt or missing"
 msgstr ""
 
-#: builtin/fsck.c:482
+#: builtin/fsck.c:483
 #, c-format
 msgid "%s: invalid reflog entry %s"
 msgstr ""
 
-#: builtin/fsck.c:496
+#: builtin/fsck.c:497
 #, c-format
 msgid "Checking reflog %s->%s"
 msgstr ""
 
-#: builtin/fsck.c:530
+#: builtin/fsck.c:531
 #, c-format
 msgid "%s: invalid sha1 pointer %s"
 msgstr ""
 
-#: builtin/fsck.c:537
+#: builtin/fsck.c:538
 #, c-format
 msgid "%s: not a commit"
 msgstr ""
 
-#: builtin/fsck.c:591
+#: builtin/fsck.c:592
 msgid "notice: No default references"
 msgstr ""
 
-#: builtin/fsck.c:621
+#: builtin/fsck.c:622
 #, c-format
 msgid "%s: hash-path mismatch, found at: %s"
 msgstr ""
 
-#: builtin/fsck.c:624
+#: builtin/fsck.c:625
 #, c-format
 msgid "%s: object corrupt or missing: %s"
 msgstr ""
 
-#: builtin/fsck.c:628
+#: builtin/fsck.c:629
 #, c-format
 msgid "%s: object is of unknown type '%s': %s"
 msgstr ""
 
-#: builtin/fsck.c:645
+#: builtin/fsck.c:646
 #, c-format
 msgid "%s: object could not be parsed: %s"
 msgstr ""
 
-#: builtin/fsck.c:665
+#: builtin/fsck.c:666
 #, c-format
 msgid "bad sha1 file: %s"
 msgstr ""
 
-#: builtin/fsck.c:686
+#: builtin/fsck.c:687
 msgid "Checking object directory"
 msgstr ""
 
-#: builtin/fsck.c:689
+#: builtin/fsck.c:690
 msgid "Checking object directories"
 msgstr ""
 
-#: builtin/fsck.c:705
+#: builtin/fsck.c:706
 #, c-format
 msgid "Checking %s link"
 msgstr ""
 
-#: builtin/fsck.c:710 builtin/index-pack.c:862
+#: builtin/fsck.c:711 builtin/index-pack.c:862
 #, c-format
 msgid "invalid %s"
 msgstr ""
 
-#: builtin/fsck.c:717
+#: builtin/fsck.c:718
 #, c-format
 msgid "%s points to something strange (%s)"
 msgstr ""
 
-#: builtin/fsck.c:723
+#: builtin/fsck.c:724
 #, c-format
 msgid "%s: detached HEAD points at nothing"
 msgstr ""
 
-#: builtin/fsck.c:727
+#: builtin/fsck.c:728
 #, c-format
 msgid "notice: %s points to an unborn branch (%s)"
 msgstr ""
 
-#: builtin/fsck.c:739
+#: builtin/fsck.c:740
 msgid "Checking cache tree"
 msgstr ""
 
-#: builtin/fsck.c:744
+#: builtin/fsck.c:745
 #, c-format
 msgid "%s: invalid sha1 pointer in cache-tree"
 msgstr ""
 
-#: builtin/fsck.c:753
+#: builtin/fsck.c:754
 msgid "non-tree in cache-tree"
 msgstr ""
 
 #: builtin/fsck.c:784
+#, c-format
+msgid "%s: invalid sha1 pointer in resolve-undo"
+msgstr ""
+
+#: builtin/fsck.c:822
 msgid "git fsck [<options>] [<object>...]"
 msgstr ""
 
-#: builtin/fsck.c:790
+#: builtin/fsck.c:828
 msgid "show unreachable objects"
 msgstr ""
 
-#: builtin/fsck.c:791
+#: builtin/fsck.c:829
 msgid "show dangling objects"
 msgstr ""
 
-#: builtin/fsck.c:792
+#: builtin/fsck.c:830
 msgid "report tags"
 msgstr ""
 
-#: builtin/fsck.c:793
+#: builtin/fsck.c:831
 msgid "report root nodes"
 msgstr ""
 
-#: builtin/fsck.c:794
+#: builtin/fsck.c:832
 msgid "make index objects head nodes"
 msgstr ""
 
-#: builtin/fsck.c:795
+#: builtin/fsck.c:833
 msgid "make reflogs head nodes (default)"
 msgstr ""
 
-#: builtin/fsck.c:796
+#: builtin/fsck.c:834
 msgid "also consider packs and alternate objects"
 msgstr ""
 
-#: builtin/fsck.c:797
+#: builtin/fsck.c:835
 msgid "check only connectivity"
 msgstr ""
 
-#: builtin/fsck.c:798 builtin/mktag.c:75
+#: builtin/fsck.c:836 builtin/mktag.c:75
 msgid "enable more strict checking"
 msgstr ""
 
-#: builtin/fsck.c:800
+#: builtin/fsck.c:838
 msgid "write dangling objects in .git/lost-found"
 msgstr ""
 
-#: builtin/fsck.c:801 builtin/prune.c:146
+#: builtin/fsck.c:839 builtin/prune.c:146
 msgid "show progress"
 msgstr ""
 
-#: builtin/fsck.c:802
+#: builtin/fsck.c:840
 msgid "show verbose names for reachable objects"
 msgstr ""
 
-#: builtin/fsck.c:862 builtin/index-pack.c:261
+#: builtin/fsck.c:900 builtin/index-pack.c:261
 msgid "Checking objects"
 msgstr ""
 
-#: builtin/fsck.c:890
+#: builtin/fsck.c:928
 #, c-format
 msgid "%s: object missing"
 msgstr ""
 
-#: builtin/fsck.c:901
+#: builtin/fsck.c:939
 #, c-format
 msgid "invalid parameter: expected sha1, got '%s'"
 msgstr ""
@@ -21683,17 +21689,17 @@ msgstr ""
 msgid "ignoring broken ref %s"
 msgstr ""
 
-#: ref-filter.c:2631
+#: ref-filter.c:2636
 #, c-format
 msgid "format: %%(end) atom missing"
 msgstr ""
 
-#: ref-filter.c:2742
+#: ref-filter.c:2747
 #, c-format
 msgid "malformed object name %s"
 msgstr ""
 
-#: ref-filter.c:2747
+#: ref-filter.c:2752
 #, c-format
 msgid "option `%s' must point to a commit"
 msgstr ""
@@ -21864,95 +21870,95 @@ msgstr ""
 msgid "redirecting to %s"
 msgstr ""
 
-#: remote-curl.c:649
+#: remote-curl.c:652
 msgid "shouldn't have EOF when not gentle on EOF"
 msgstr ""
 
-#: remote-curl.c:661
+#: remote-curl.c:664
 msgid "remote server sent unexpected response end packet"
 msgstr ""
 
-#: remote-curl.c:730
+#: remote-curl.c:733
 msgid "unable to rewind rpc post data - try increasing http.postBuffer"
 msgstr ""
 
-#: remote-curl.c:759
+#: remote-curl.c:762
 #, c-format
 msgid "remote-curl: bad line length character: %.4s"
 msgstr ""
 
-#: remote-curl.c:761
+#: remote-curl.c:764
 msgid "remote-curl: unexpected response end packet"
 msgstr ""
 
-#: remote-curl.c:837
+#: remote-curl.c:840
 #, c-format
 msgid "RPC failed; %s"
 msgstr ""
 
-#: remote-curl.c:877
+#: remote-curl.c:880
 msgid "cannot handle pushes this big"
 msgstr ""
 
-#: remote-curl.c:990
+#: remote-curl.c:997
 #, c-format
 msgid "cannot deflate request; zlib deflate error %d"
 msgstr ""
 
-#: remote-curl.c:994
+#: remote-curl.c:1001
 #, c-format
 msgid "cannot deflate request; zlib end error %d"
 msgstr ""
 
-#: remote-curl.c:1044
+#: remote-curl.c:1051
 #, c-format
 msgid "%d bytes of length header were received"
 msgstr ""
 
-#: remote-curl.c:1046
+#: remote-curl.c:1053
 #, c-format
 msgid "%d bytes of body are still expected"
 msgstr ""
 
-#: remote-curl.c:1135
+#: remote-curl.c:1145
 msgid "dumb http transport does not support shallow capabilities"
 msgstr ""
 
-#: remote-curl.c:1150
+#: remote-curl.c:1160
 msgid "fetch failed."
 msgstr ""
 
-#: remote-curl.c:1198
+#: remote-curl.c:1208
 msgid "cannot fetch by sha1 over smart http"
 msgstr ""
 
-#: remote-curl.c:1242 remote-curl.c:1248
+#: remote-curl.c:1252 remote-curl.c:1258
 #, c-format
 msgid "protocol error: expected sha/ref, got '%s'"
 msgstr ""
 
-#: remote-curl.c:1260 remote-curl.c:1378
+#: remote-curl.c:1270 remote-curl.c:1388
 #, c-format
 msgid "http transport does not support %s"
 msgstr ""
 
-#: remote-curl.c:1296
+#: remote-curl.c:1306
 msgid "git-http-push failed"
 msgstr ""
 
-#: remote-curl.c:1485
+#: remote-curl.c:1500
 msgid "remote-curl: usage: git remote-curl <remote> [<url>]"
 msgstr ""
 
-#: remote-curl.c:1517
+#: remote-curl.c:1532
 msgid "remote-curl: error reading command stream from git"
 msgstr ""
 
-#: remote-curl.c:1524
+#: remote-curl.c:1539
 msgid "remote-curl: fetch attempted without a local repo"
 msgstr ""
 
-#: remote-curl.c:1565
+#: remote-curl.c:1580
 #, c-format
 msgid "remote-curl: unknown command '%s' from git"
 msgstr ""
@@ -22319,24 +22325,29 @@ msgstr ""
 msgid "failed to find tree of %s"
 msgstr ""
 
-#: revision.c:2368
+#: revision.c:1723
+#, c-format
+msgid "resolve-undo records `%s` which is missing"
+msgstr ""
+
+#: revision.c:2404
 msgid "--unpacked=<packfile> no longer supported"
 msgstr ""
 
-#: revision.c:2722
+#: revision.c:2758
 msgid "your current branch appears to be broken"
 msgstr ""
 
-#: revision.c:2725
+#: revision.c:2761
 #, c-format
 msgid "your current branch '%s' does not have any commits yet"
 msgstr ""
 
-#: revision.c:2911
+#: revision.c:2947
 msgid "object filtering requires --objects"
 msgstr ""
 
-#: revision.c:2928
+#: revision.c:2964
 msgid "-L does not yet support diff formats besides -p and -s"
 msgstr ""
 
