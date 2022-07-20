@@ -139,3 +139,92 @@
  msgstr ""
  
  #: pack-mtimes.c
+
+
+#################### Wed, 20 Jul 2022 22:57:36 +0000 ####################
+
+--- po/git.pot.old	2022-07-20 22:57:36.834876561 +0000
++++ po/git.pot.new	2022-07-20 22:57:36.938876717 +0000
+@@ -2082,7 +2082,7 @@
+ msgid "could not open '%s' for reading"
+ msgstr ""
+ 
+-#: builtin/am.c builtin/rebase.c strbuf.c wrapper.c
++#: builtin/am.c builtin/rebase.c sequencer.c strbuf.c wrapper.c
+ #, c-format
+ msgid "could not open '%s' for writing"
+ msgstr ""
+@@ -11521,6 +11521,10 @@
+ msgstr ""
+ 
+ #: builtin/rebase.c
++msgid "update branches that point to commits that are being rebased"
++msgstr ""
++
++#: builtin/rebase.c
+ msgid "add exec lines after each commit of the editable list"
+ msgstr ""
+ 
+@@ -13480,7 +13484,7 @@
+ msgid "toggle the use of a sparse index"
+ msgstr ""
+ 
+-#: builtin/sparse-checkout.c commit-graph.c midx.c
++#: builtin/sparse-checkout.c commit-graph.c midx.c sequencer.c
+ #, c-format
+ msgid "unable to create leading directories of %s"
+ msgstr ""
+@@ -21693,9 +21697,12 @@
+ "l, label <label> = label current HEAD with a name\n"
+ "t, reset <label> = reset HEAD to a label\n"
+ "m, merge [-C <commit> | -c <commit>] <label> [# <oneline>]\n"
+-".       create a merge commit using the original merge commit's\n"
+-".       message (or the oneline, if no original merge commit was\n"
+-".       specified); use -c <commit> to reword the commit message\n"
++"        create a merge commit using the original merge commit's\n"
++"        message (or the oneline, if no original merge commit was\n"
++"        specified); use -c <commit> to reword the commit message\n"
++"u, update-ref <ref> = track a placeholder for the <ref> to be updated\n"
++"                      to this position in the new commits. The <ref> is\n"
++"                      updated at the end of the rebase\n"
+ "\n"
+ "These lines can be re-ordered; they are executed from top to bottom.\n"
+ msgstr ""
+@@ -23314,6 +23321,25 @@
+ msgstr ""
+ 
+ #: sequencer.c
++#, c-format
++msgid "another 'rebase' process appears to be running; '%s.lock' already exists"
++msgstr ""
++
++#: sequencer.c
++#, c-format
++msgid ""
++"Updated the following refs with %s:\n"
++"%s"
++msgstr ""
++
++#: sequencer.c
++#, c-format
++msgid ""
++"Failed to update the following refs with %s:\n"
++"%s"
++msgstr ""
++
++#: sequencer.c
+ msgid "Cannot autostash"
+ msgstr ""
+ 
+@@ -23503,6 +23529,11 @@
+ msgid "the script was already rearranged."
+ msgstr ""
+ 
++#: sequencer.c
++#, c-format
++msgid "update-refs file at '%s' is invalid"
++msgstr ""
++
+ #: setup.c
+ #, c-format
+ msgid "'%s' is outside repository at '%s'"
