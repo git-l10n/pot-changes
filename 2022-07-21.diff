@@ -1,0 +1,43 @@
+
+
+#################### Thu, 21 Jul 2022 23:57:41 +0000 ####################
+
+--- po/git.pot.old	2022-07-21 23:57:41.296624775 +0000
++++ po/git.pot.new	2022-07-21 23:57:41.396626094 +0000
+@@ -9621,6 +9621,13 @@
+ msgid "Updating %s..%s\n"
+ msgstr ""
+ 
++#: builtin/merge.c merge-ort-wrappers.c merge-recursive.c
++#, c-format
++msgid ""
++"Your local changes to the following files would be overwritten by merge:\n"
++"  %s"
++msgstr ""
++
+ #: builtin/merge.c
+ #, c-format
+ msgid "Trying really trivial in-index merge...\n"
+@@ -18901,7 +18908,7 @@
+ msgid "invalid argument %s, expecting --"
+ msgstr ""
+ 
+-#: git-merge-octopus.sh
++#: git-merge-octopus.sh git-merge-resolve.sh
+ msgid "Error: Your local changes to the following files would be overwritten by merge"
+ msgstr ""
+ 
+@@ -19876,13 +19883,6 @@
+ msgid "quoted CRLF detected"
+ msgstr ""
+ 
+-#: merge-ort-wrappers.c merge-recursive.c
+-#, c-format
+-msgid ""
+-"Your local changes to the following files would be overwritten by merge:\n"
+-"  %s"
+-msgstr ""
+-
+ #: merge-ort.c merge-recursive.c
+ #, c-format
+ msgid "Failed to merge submodule %s (not checked out)"
