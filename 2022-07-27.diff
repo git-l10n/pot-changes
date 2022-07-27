@@ -1,0 +1,129 @@
+
+
+#################### Wed, 27 Jul 2022 18:57:43 +0000 ####################
+
+--- po/git.pot.old	2022-07-27 18:57:43.511653174 +0000
++++ po/git.pot.new	2022-07-27 18:57:43.611654091 +0000
+@@ -3,7 +3,7 @@
+ msgid "Huh (%s)?"
+ msgstr ""
+ 
+-#: add-interactive.c builtin/rebase.c reset.c sequencer.c
++#: add-interactive.c builtin/merge.c builtin/rebase.c reset.c sequencer.c
+ msgid "could not read index"
+ msgstr ""
+ 
+@@ -2374,8 +2374,8 @@
+ msgstr ""
+ 
+ #: builtin/am.c builtin/branch.c builtin/bugreport.c builtin/cat-file.c
+-#: builtin/for-each-ref.c builtin/ls-tree.c builtin/replace.c builtin/tag.c
+-#: builtin/verify-tag.c
++#: builtin/for-each-ref.c builtin/ls-files.c builtin/ls-tree.c
++#: builtin/replace.c builtin/tag.c builtin/verify-tag.c
+ msgid "format"
+ msgstr ""
+ 
+@@ -3328,8 +3328,8 @@
+ msgid "recurse through submodules"
+ msgstr ""
+ 
+-#: builtin/branch.c builtin/for-each-ref.c builtin/ls-tree.c builtin/tag.c
+-#: builtin/verify-tag.c
++#: builtin/branch.c builtin/for-each-ref.c builtin/ls-files.c builtin/ls-tree.c
++#: builtin/tag.c builtin/verify-tag.c
+ msgid "format to use for the output"
+ msgstr ""
+ 
+@@ -3648,6 +3648,10 @@
+ msgid "allow -s and -t to work with broken/corrupt objects"
+ msgstr ""
+ 
++#: builtin/cat-file.c builtin/log.c
++msgid "use mail map file"
++msgstr ""
++
+ #: builtin/cat-file.c
+ msgid "Batch objects requested on stdin (or --batch-all-objects)"
+ msgstr ""
+@@ -8487,10 +8491,6 @@
+ msgstr ""
+ 
+ #: builtin/log.c
+-msgid "use mail map file"
+-msgstr ""
+-
+-#: builtin/log.c
+ msgid "only decorate refs that match <pattern>"
+ msgstr ""
+ 
+@@ -8883,6 +8883,21 @@
+ msgstr ""
+ 
+ #: builtin/ls-files.c
++#, c-format
++msgid "bad ls-files format: element '%s' does not start with '('"
++msgstr ""
++
++#: builtin/ls-files.c
++#, c-format
++msgid "bad ls-files format: element '%s'does not end in ')'"
++msgstr ""
++
++#: builtin/ls-files.c
++#, c-format
++msgid "bad ls-files format: %%%.*s"
++msgstr ""
++
++#: builtin/ls-files.c
+ msgid "git ls-files [<options>] [<file>...]"
+ msgstr ""
+ 
+@@ -8994,6 +9009,10 @@
+ msgid "show sparse directories in the presence of a sparse index"
+ msgstr ""
+ 
++#: builtin/ls-files.c
++msgid "--format cannot be used with -s, -o, -k, -t, --resolve-undo, --deduplicate, --eol"
++msgstr ""
++
+ #: builtin/ls-remote.c
+ msgid ""
+ "git ls-remote [--heads] [--tags] [--refs] [--upload-pack=<exec>]\n"
+@@ -9622,6 +9641,13 @@
+ msgid "Updating %s..%s\n"
+ msgstr ""
+ 
++#: builtin/merge.c merge-ort-wrappers.c merge-recursive.c
++#, c-format
++msgid ""
++"Your local changes to the following files would be overwritten by merge:\n"
++"  %s"
++msgstr ""
++
+ #: builtin/merge.c
+ #, c-format
+ msgid "Trying really trivial in-index merge...\n"
+@@ -18808,7 +18834,7 @@
+ msgid "invalid argument %s, expecting --"
+ msgstr ""
+ 
+-#: git-merge-octopus.sh
++#: git-merge-octopus.sh git-merge-resolve.sh
+ msgid "Error: Your local changes to the following files would be overwritten by merge"
+ msgstr ""
+ 
+@@ -19783,13 +19809,6 @@
+ msgid "quoted CRLF detected"
+ msgstr ""
+ 
+-#: merge-ort-wrappers.c merge-recursive.c
+-#, c-format
+-msgid ""
+-"Your local changes to the following files would be overwritten by merge:\n"
+-"  %s"
+-msgstr ""
+-
+ #: merge-ort.c merge-recursive.c
+ #, c-format
+ msgid "Failed to merge submodule %s (not checked out)"
