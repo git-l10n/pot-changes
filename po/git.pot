@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2022-07-29 22:57+0000\n"
+"POT-Creation-Date: 2022-08-01 23:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -211,7 +211,7 @@ msgid "unstaged"
 msgstr ""
 
 #: add-interactive.c:1157 apply.c:5043 apply.c:5046 builtin/am.c:2373
-#: builtin/am.c:2376 builtin/bugreport.c:107 builtin/clone.c:134
+#: builtin/am.c:2376 builtin/bugreport.c:376 builtin/clone.c:134
 #: builtin/fetch.c:154 builtin/merge.c:287 builtin/pull.c:195
 #: builtin/submodule--helper.c:1734 builtin/submodule--helper.c:1737
 #: builtin/submodule--helper.c:2611 builtin/submodule--helper.c:2800
@@ -2481,7 +2481,7 @@ msgstr ""
 msgid "n"
 msgstr ""
 
-#: builtin/am.c:2385 builtin/branch.c:690 builtin/bugreport.c:109
+#: builtin/am.c:2385 builtin/branch.c:690 builtin/bugreport.c:378
 #: builtin/cat-file.c:1040 builtin/cat-file.c:1044 builtin/cat-file.c:1049
 #: builtin/for-each-ref.c:41 builtin/ls-files.c:763 builtin/ls-tree.c:357
 #: builtin/replace.c:558 builtin/tag.c:480 builtin/verify-tag.c:38
@@ -2584,7 +2584,7 @@ msgstr ""
 msgid "git apply [<options>] [<patch>...]"
 msgstr ""
 
-#: builtin/archive.c:18 contrib/scalar/scalar.c:719
+#: builtin/archive.c:18 builtin/bugreport.c:290
 msgid "could not redirect output"
 msgstr ""
 
@@ -3504,32 +3504,32 @@ msgid ""
 "'--set-upstream-to' instead."
 msgstr ""
 
-#: builtin/bugreport.c:16
+#: builtin/bugreport.c:20
 msgid "git version:\n"
 msgstr ""
 
-#: builtin/bugreport.c:22
+#: builtin/bugreport.c:26
 #, c-format
 msgid "uname() failed with error '%s' (%d)\n"
 msgstr ""
 
-#: builtin/bugreport.c:32
+#: builtin/bugreport.c:36
 msgid "compiler info: "
 msgstr ""
 
-#: builtin/bugreport.c:35
+#: builtin/bugreport.c:39
 msgid "libc info: "
 msgstr ""
 
-#: builtin/bugreport.c:49
+#: builtin/bugreport.c:53
 msgid "not run from a git repository - no hooks to show\n"
 msgstr ""
 
-#: builtin/bugreport.c:62
-msgid "git bugreport [-o|--output-directory <file>] [-s|--suffix <format>]"
+#: builtin/bugreport.c:66
+msgid "git bugreport [<options>]"
 msgstr ""
 
-#: builtin/bugreport.c:69
+#: builtin/bugreport.c:73
 msgid ""
 "Thank you for filling out a Git bug report!\n"
 "Please answer the following questions to help us understand your issue.\n"
@@ -3548,33 +3548,83 @@ msgid ""
 "You can delete any lines you don't wish to share.\n"
 msgstr ""
 
-#: builtin/bugreport.c:108
-msgid "specify a destination for the bugreport file"
+#: builtin/bugreport.c:186
+#, c-format
+msgid "directory '%s' does not exist, will not be archived"
 msgstr ""
 
-#: builtin/bugreport.c:110
-msgid "specify a strftime format suffix for the filename"
+#: builtin/bugreport.c:192 dir.c:2440
+#, c-format
+msgid "could not open directory '%s'"
 msgstr ""
 
-#: builtin/bugreport.c:132
+#: builtin/bugreport.c:209
+#, c-format
+msgid "skipping '%s', which is neither file nor directory"
+msgstr ""
+
+#: builtin/bugreport.c:236 builtin/bugreport.c:260
+#, c-format
+msgid "could not determine free disk size for '%s'"
+msgstr ""
+
+#: builtin/bugreport.c:246
+#, c-format
+msgid "could not get info for '%s'"
+msgstr ""
+
+#: builtin/bugreport.c:284
+msgid "could not duplicate stdout"
+msgstr ""
+
+#: builtin/bugreport.c:335
+msgid "failed to write archive"
+msgstr ""
+
+#: builtin/bugreport.c:373
+msgid "generate a diagnostics zip archive"
+msgstr ""
+
+#: builtin/bugreport.c:375
+msgid "do not create a summary report"
+msgstr ""
+
+#: builtin/bugreport.c:377
+msgid "specify a destination for the bugreport file(s)"
+msgstr ""
+
+#: builtin/bugreport.c:379
+msgid "specify a strftime format suffix for the filename(s)"
+msgstr ""
+
+#: builtin/bugreport.c:387
+msgid "Nothing to do!"
+msgstr ""
+
+#: builtin/bugreport.c:407
 #, c-format
 msgid "could not create leading directories for '%s'"
 msgstr ""
 
-#: builtin/bugreport.c:139
+#: builtin/bugreport.c:420
+#, c-format
+msgid "unable to create diagnostics archive %s"
+msgstr ""
+
+#: builtin/bugreport.c:435
 msgid "System Info"
 msgstr ""
 
-#: builtin/bugreport.c:142
+#: builtin/bugreport.c:438
 msgid "Enabled Hooks"
 msgstr ""
 
-#: builtin/bugreport.c:149
+#: builtin/bugreport.c:445
 #, c-format
 msgid "unable to write to %s"
 msgstr ""
 
-#: builtin/bugreport.c:159
+#: builtin/bugreport.c:455
 #, c-format
 msgid "Created new report at '%s'.\n"
 msgstr ""
@@ -4913,7 +4963,7 @@ msgstr ""
 msgid "Too many arguments."
 msgstr ""
 
-#: builtin/clone.c:920 contrib/scalar/scalar.c:510
+#: builtin/clone.c:920 contrib/scalar/scalar.c:416
 msgid "You must specify a repository to clone."
 msgstr ""
 
@@ -11123,7 +11173,7 @@ msgid "<remote>"
 msgstr ""
 
 #: builtin/pull.c:468 builtin/pull.c:483 builtin/pull.c:488
-#: contrib/scalar/scalar.c:471
+#: contrib/scalar/scalar.c:377
 msgid "<branch>"
 msgstr ""
 
@@ -17658,219 +17708,186 @@ msgstr ""
 msgid "failed to close rev-list's stdin"
 msgstr ""
 
-#: contrib/scalar/scalar.c:51 worktree.c:327
+#: contrib/scalar/scalar.c:50 worktree.c:327
 #, c-format
 msgid "'%s' does not exist"
 msgstr ""
 
-#: contrib/scalar/scalar.c:53
+#: contrib/scalar/scalar.c:52
 msgid "need a working directory"
 msgstr ""
 
-#: contrib/scalar/scalar.c:90
+#: contrib/scalar/scalar.c:89
 msgid "could not find enlistment root"
 msgstr ""
 
-#: contrib/scalar/scalar.c:93 contrib/scalar/scalar.c:447
-#: contrib/scalar/scalar.c:532 contrib/scalar/scalar.c:864
+#: contrib/scalar/scalar.c:92 contrib/scalar/scalar.c:353
+#: contrib/scalar/scalar.c:438 contrib/scalar/scalar.c:607
 #, c-format
 msgid "could not switch to '%s'"
 msgstr ""
 
-#: contrib/scalar/scalar.c:183
+#: contrib/scalar/scalar.c:182
 #, c-format
 msgid "could not configure %s=%s"
 msgstr ""
 
-#: contrib/scalar/scalar.c:201
+#: contrib/scalar/scalar.c:200
 msgid "could not configure log.excludeDecoration"
 msgstr ""
 
-#: contrib/scalar/scalar.c:222
+#: contrib/scalar/scalar.c:221
 msgid "Scalar enlistments require a worktree"
 msgstr ""
 
-#: contrib/scalar/scalar.c:276 dir.c:2440
-#, c-format
-msgid "could not open directory '%s'"
-msgstr ""
-
-#: contrib/scalar/scalar.c:293
-#, c-format
-msgid "skipping '%s', which is neither file nor directory"
-msgstr ""
-
-#: contrib/scalar/scalar.c:320 contrib/scalar/scalar.c:344
-#, c-format
-msgid "could not determine free disk size for '%s'"
-msgstr ""
-
-#: contrib/scalar/scalar.c:330
-#, c-format
-msgid "could not get info for '%s'"
-msgstr ""
-
-#: contrib/scalar/scalar.c:407
+#: contrib/scalar/scalar.c:313
 #, c-format
 msgid "remote HEAD is not a branch: '%.*s'"
 msgstr ""
 
-#: contrib/scalar/scalar.c:413
+#: contrib/scalar/scalar.c:319
 msgid "failed to get default branch name from remote; using local default"
 msgstr ""
 
-#: contrib/scalar/scalar.c:426
+#: contrib/scalar/scalar.c:332
 msgid "failed to get default branch name"
 msgstr ""
 
-#: contrib/scalar/scalar.c:437
+#: contrib/scalar/scalar.c:343
 msgid "failed to unregister repository"
 msgstr ""
 
-#: contrib/scalar/scalar.c:452
+#: contrib/scalar/scalar.c:358
 msgid "failed to delete enlistment directory"
 msgstr ""
 
-#: contrib/scalar/scalar.c:472
+#: contrib/scalar/scalar.c:378
 msgid "branch to checkout after clone"
 msgstr ""
 
-#: contrib/scalar/scalar.c:474
+#: contrib/scalar/scalar.c:380
 msgid "when cloning, create full working directory"
 msgstr ""
 
-#: contrib/scalar/scalar.c:476
+#: contrib/scalar/scalar.c:382
 msgid "only download metadata for the branch that will be checked out"
 msgstr ""
 
-#: contrib/scalar/scalar.c:481
+#: contrib/scalar/scalar.c:387
 msgid "scalar clone [<options>] [--] <repo> [<dir>]"
 msgstr ""
 
-#: contrib/scalar/scalar.c:506
+#: contrib/scalar/scalar.c:412
 #, c-format
 msgid "cannot deduce worktree name from '%s'"
 msgstr ""
 
-#: contrib/scalar/scalar.c:515
+#: contrib/scalar/scalar.c:421
 #, c-format
 msgid "directory '%s' exists already"
 msgstr ""
 
-#: contrib/scalar/scalar.c:542
+#: contrib/scalar/scalar.c:448
 #, c-format
 msgid "failed to get default branch for '%s'"
 msgstr ""
 
-#: contrib/scalar/scalar.c:553
+#: contrib/scalar/scalar.c:459
 #, c-format
 msgid "could not configure remote in '%s'"
 msgstr ""
 
-#: contrib/scalar/scalar.c:562
+#: contrib/scalar/scalar.c:468
 #, c-format
 msgid "could not configure '%s'"
 msgstr ""
 
-#: contrib/scalar/scalar.c:565
+#: contrib/scalar/scalar.c:471
 msgid "partial clone failed; attempting full clone"
 msgstr ""
 
-#: contrib/scalar/scalar.c:569
+#: contrib/scalar/scalar.c:475
 msgid "could not configure for full clone"
 msgstr ""
 
-#: contrib/scalar/scalar.c:681
+#: contrib/scalar/scalar.c:510
 msgid "scalar diagnose [<enlistment>]"
 msgstr ""
 
-#: contrib/scalar/scalar.c:707
-#, c-format
-msgid "could not create directory for '%s'"
-msgstr ""
-
-#: contrib/scalar/scalar.c:713
-msgid "could not duplicate stdout"
-msgstr ""
-
-#: contrib/scalar/scalar.c:764
-msgid "failed to write archive"
-msgstr ""
-
-#: contrib/scalar/scalar.c:790
+#: contrib/scalar/scalar.c:533
 msgid "`scalar list` does not take arguments"
 msgstr ""
 
-#: contrib/scalar/scalar.c:803
+#: contrib/scalar/scalar.c:546
 msgid "scalar register [<enlistment>]"
 msgstr ""
 
-#: contrib/scalar/scalar.c:830
+#: contrib/scalar/scalar.c:573
 msgid "reconfigure all registered enlistments"
 msgstr ""
 
-#: contrib/scalar/scalar.c:834
+#: contrib/scalar/scalar.c:577
 msgid "scalar reconfigure [--all | <enlistment>]"
 msgstr ""
 
-#: contrib/scalar/scalar.c:852
+#: contrib/scalar/scalar.c:595
 msgid "--all or <enlistment>, but not both"
 msgstr ""
 
-#: contrib/scalar/scalar.c:867
+#: contrib/scalar/scalar.c:610
 #, c-format
 msgid "git repository gone in '%s'"
 msgstr ""
 
-#: contrib/scalar/scalar.c:907
+#: contrib/scalar/scalar.c:650
 msgid ""
 "scalar run <task> [<enlistment>]\n"
 "Tasks:\n"
 msgstr ""
 
-#: contrib/scalar/scalar.c:925
+#: contrib/scalar/scalar.c:668
 #, c-format
 msgid "no such task: '%s'"
 msgstr ""
 
-#: contrib/scalar/scalar.c:975
+#: contrib/scalar/scalar.c:718
 msgid "scalar unregister [<enlistment>]"
 msgstr ""
 
-#: contrib/scalar/scalar.c:1022
+#: contrib/scalar/scalar.c:765
 msgid "scalar delete <enlistment>"
 msgstr ""
 
-#: contrib/scalar/scalar.c:1037
+#: contrib/scalar/scalar.c:780
 msgid "refusing to delete current working directory"
 msgstr ""
 
-#: contrib/scalar/scalar.c:1052
+#: contrib/scalar/scalar.c:795
 msgid "include Git version"
 msgstr ""
 
-#: contrib/scalar/scalar.c:1054
+#: contrib/scalar/scalar.c:797
 msgid "include Git's build options"
 msgstr ""
 
-#: contrib/scalar/scalar.c:1058
+#: contrib/scalar/scalar.c:801
 msgid "scalar verbose [-v | --verbose] [--build-options]"
 msgstr ""
 
-#: contrib/scalar/scalar.c:1100
+#: contrib/scalar/scalar.c:843
 msgid "-C requires a <directory>"
 msgstr ""
 
-#: contrib/scalar/scalar.c:1102
+#: contrib/scalar/scalar.c:845
 #, c-format
 msgid "could not change to '%s'"
 msgstr ""
 
-#: contrib/scalar/scalar.c:1108
+#: contrib/scalar/scalar.c:851
 msgid "-c requires a <key>=<value> argument"
 msgstr ""
 
-#: contrib/scalar/scalar.c:1126
+#: contrib/scalar/scalar.c:869
 msgid ""
 "scalar [-C <directory>] [-c <key>=<value>] <command> [<options>]\n"
 "\n"
@@ -21463,25 +21480,25 @@ msgstr ""
 msgid "packet write failed: %s"
 msgstr ""
 
-#: pkt-line.c:358 pkt-line.c:359
+#: pkt-line.c:352 pkt-line.c:353
 msgid "read error"
 msgstr ""
 
-#: pkt-line.c:369 pkt-line.c:370
+#: pkt-line.c:363 pkt-line.c:364
 msgid "the remote end hung up unexpectedly"
 msgstr ""
 
-#: pkt-line.c:426 pkt-line.c:428
+#: pkt-line.c:420 pkt-line.c:422
 #, c-format
 msgid "protocol error: bad line length character: %.4s"
 msgstr ""
 
-#: pkt-line.c:443 pkt-line.c:445 pkt-line.c:451 pkt-line.c:453
+#: pkt-line.c:437 pkt-line.c:439 pkt-line.c:445 pkt-line.c:447
 #, c-format
 msgid "protocol error: bad line length %d"
 msgstr ""
 
-#: pkt-line.c:481 sideband.c:165
+#: pkt-line.c:475 sideband.c:165
 #, c-format
 msgid "remote error: %s"
 msgstr ""

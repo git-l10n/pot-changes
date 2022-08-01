@@ -1,0 +1,142 @@
+
+
+#################### Mon, 01 Aug 2022 23:57:38 +0000 ####################
+
+--- po/git.pot.old	2022-08-01 23:57:38.737565266 +0000
++++ po/git.pot.new	2022-08-01 23:57:38.841566644 +0000
+@@ -2474,7 +2474,7 @@
+ msgid "git apply [<options>] [<patch>...]"
+ msgstr ""
+ 
+-#: builtin/archive.c contrib/scalar/scalar.c
++#: builtin/archive.c builtin/bugreport.c
+ msgid "could not redirect output"
+ msgstr ""
+ 
+@@ -3398,7 +3398,7 @@
+ msgstr ""
+ 
+ #: builtin/bugreport.c
+-msgid "git bugreport [-o|--output-directory <file>] [-s|--suffix <format>]"
++msgid "git bugreport [<options>]"
+ msgstr ""
+ 
+ #: builtin/bugreport.c
+@@ -3421,11 +3421,56 @@
+ msgstr ""
+ 
+ #: builtin/bugreport.c
+-msgid "specify a destination for the bugreport file"
++#, c-format
++msgid "directory '%s' does not exist, will not be archived"
++msgstr ""
++
++#: builtin/bugreport.c dir.c
++#, c-format
++msgid "could not open directory '%s'"
+ msgstr ""
+ 
+ #: builtin/bugreport.c
+-msgid "specify a strftime format suffix for the filename"
++#, c-format
++msgid "skipping '%s', which is neither file nor directory"
++msgstr ""
++
++#: builtin/bugreport.c
++#, c-format
++msgid "could not determine free disk size for '%s'"
++msgstr ""
++
++#: builtin/bugreport.c
++#, c-format
++msgid "could not get info for '%s'"
++msgstr ""
++
++#: builtin/bugreport.c
++msgid "could not duplicate stdout"
++msgstr ""
++
++#: builtin/bugreport.c
++msgid "failed to write archive"
++msgstr ""
++
++#: builtin/bugreport.c
++msgid "generate a diagnostics zip archive"
++msgstr ""
++
++#: builtin/bugreport.c
++msgid "do not create a summary report"
++msgstr ""
++
++#: builtin/bugreport.c
++msgid "specify a destination for the bugreport file(s)"
++msgstr ""
++
++#: builtin/bugreport.c
++msgid "specify a strftime format suffix for the filename(s)"
++msgstr ""
++
++#: builtin/bugreport.c
++msgid "Nothing to do!"
+ msgstr ""
+ 
+ #: builtin/bugreport.c
+@@ -3434,6 +3479,11 @@
+ msgstr ""
+ 
+ #: builtin/bugreport.c
++#, c-format
++msgid "unable to create diagnostics archive %s"
++msgstr ""
++
++#: builtin/bugreport.c
+ msgid "System Info"
+ msgstr ""
+ 
+@@ -17319,26 +17369,6 @@
+ msgid "Scalar enlistments require a worktree"
+ msgstr ""
+ 
+-#: contrib/scalar/scalar.c dir.c
+-#, c-format
+-msgid "could not open directory '%s'"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-#, c-format
+-msgid "skipping '%s', which is neither file nor directory"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-#, c-format
+-msgid "could not determine free disk size for '%s'"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-#, c-format
+-msgid "could not get info for '%s'"
+-msgstr ""
+-
+ #: contrib/scalar/scalar.c
+ #, c-format
+ msgid "remote HEAD is not a branch: '%.*s'"
+@@ -17414,19 +17444,6 @@
+ msgstr ""
+ 
+ #: contrib/scalar/scalar.c
+-#, c-format
+-msgid "could not create directory for '%s'"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-msgid "could not duplicate stdout"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-msgid "failed to write archive"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+ msgid "`scalar list` does not take arguments"
+ msgstr ""
+ 
