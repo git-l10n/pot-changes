@@ -181,3 +181,101 @@
  #: diff-lib.c
  msgid "--merge-base does not work with ranges"
  msgstr ""
+
+
+#################### Thu, 04 Aug 2022 23:57:51 +0000 ####################
+
+--- po/git.pot.old	2022-08-04 23:57:51.198596517 +0000
++++ po/git.pot.new	2022-08-04 23:57:51.302598555 +0000
+@@ -16226,18 +16226,10 @@
+ msgstr ""
+ 
+ #: command-list.h
+-msgid "The multi-pack-index file format"
+-msgstr ""
+-
+-#: command-list.h
+ msgid "Git pack format"
+ msgstr ""
+ 
+ #: command-list.h
+-msgid "The cruft pack file format"
+-msgstr ""
+-
+-#: command-list.h
+ msgid "Git cryptographic signature formats"
+ msgstr ""
+ 
+@@ -20158,16 +20150,32 @@
+ msgid "Note: %s not up to date and in way of checking out conflicted version; old copy renamed to %s"
+ msgstr ""
+ 
++#. TRANSLATORS: This is line item of submodule conflict message
++#. from print_submodule_conflict_suggestion() below. For RTL
++#. languages, the following swap is suggested:
++#.      " - %s\n" -> "%s - \n"
++#.
+ #: merge-ort.c
+-msgid "Recursive merging with submodules currently only supports trivial cases."
++#, c-format
++msgid " - %s\n"
+ msgstr ""
+ 
++#. TRANSLATORS: This is line item of submodule conflict message
++#. from print_submodule_conflict_suggestion() below. For RTL
++#. languages, the following swap is suggested:
++#.      "   %s\n" -> "%s   \n"
++#.
+ #: merge-ort.c
+-msgid "Please manually handle the merging of each conflicted submodule."
++#, c-format
++msgid "   %s\n"
+ msgstr ""
+ 
+ #: merge-ort.c
+-msgid "This can be accomplished with the following steps:"
++#, c-format
++msgid ""
++"Recursive merging with submodules currently only supports trivial cases.\n"
++"Please manually handle the merging of each conflicted submodule.\n"
++"This can be accomplished with the following steps:"
+ msgstr ""
+ 
+ #. TRANSLATORS: This is a line of advice to resolve a merge conflict
+@@ -20177,21 +20185,9 @@
+ #.
+ #: merge-ort.c
+ #, c-format
+-msgid "go to submodule (%s), and either merge commit %s"
+-msgstr ""
+-
+-#: merge-ort.c
+-#, c-format
+-msgid " - %s"
+-msgstr ""
+-
+-#: merge-ort.c
+-msgid "or update to an existing commit which has merged those changes"
+-msgstr ""
+-
+-#: merge-ort.c
+-#, c-format
+-msgid "   %s"
++msgid ""
++"go to submodule (%s), and either merge commit %s\n"
++"or update to an existing commit which has merged those changes"
+ msgstr ""
+ 
+ #: merge-ort.c
+@@ -20199,11 +20195,6 @@
+ msgstr ""
+ 
+ #: merge-ort.c
+-#, c-format
+-msgid "       %s"
+-msgstr ""
+-
+-#: merge-ort.c
+ msgid "to record the above merge or update"
+ msgstr ""
+ 
