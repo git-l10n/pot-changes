@@ -1,0 +1,183 @@
+
+
+#################### Thu, 04 Aug 2022 05:20:55 +0000 ####################
+
+--- po/git.pot.old	2022-08-04 05:20:55.668248266 +0000
++++ po/git.pot.new	2022-08-04 05:20:55.792248150 +0000
+@@ -176,8 +176,8 @@
+ msgstr ""
+ 
+ #: add-interactive.c apply.c builtin/am.c builtin/bugreport.c builtin/clone.c
+-#: builtin/fetch.c builtin/merge.c builtin/pull.c builtin/submodule--helper.c
+-#: git-add--interactive.perl
++#: builtin/diagnose.c builtin/fetch.c builtin/merge.c builtin/pull.c
++#: builtin/submodule--helper.c git-add--interactive.perl
+ msgid "path"
+ msgstr ""
+ 
+@@ -2374,8 +2374,8 @@
+ msgstr ""
+ 
+ #: builtin/am.c builtin/branch.c builtin/bugreport.c builtin/cat-file.c
+-#: builtin/for-each-ref.c builtin/ls-files.c builtin/ls-tree.c
+-#: builtin/replace.c builtin/tag.c builtin/verify-tag.c
++#: builtin/diagnose.c builtin/for-each-ref.c builtin/ls-files.c
++#: builtin/ls-tree.c builtin/replace.c builtin/tag.c builtin/verify-tag.c
+ msgid "format"
+ msgstr ""
+ 
+@@ -2474,7 +2474,7 @@
+ msgid "git apply [<options>] [<patch>...]"
+ msgstr ""
+ 
+-#: builtin/archive.c builtin/bugreport.c
++#: builtin/archive.c diagnose.c
+ msgid "could not redirect output"
+ msgstr ""
+ 
+@@ -3398,7 +3398,7 @@
+ msgstr ""
+ 
+ #: builtin/bugreport.c
+-msgid "git bugreport [<options>]"
++msgid "git bugreport [-o|--output-directory <file>] [-s|--suffix <format>]"
+ msgstr ""
+ 
+ #: builtin/bugreport.c
+@@ -3421,44 +3421,15 @@
+ msgstr ""
+ 
+ #: builtin/bugreport.c
+-#, c-format
+-msgid "directory '%s' does not exist, will not be archived"
+-msgstr ""
+-
+-#: builtin/bugreport.c dir.c
+-#, c-format
+-msgid "could not open directory '%s'"
++msgid "diagnose mode must be either 'basic' or 'all'"
+ msgstr ""
+ 
+ #: builtin/bugreport.c
+-#, c-format
+-msgid "skipping '%s', which is neither file nor directory"
++msgid "(basic|all)"
+ msgstr ""
+ 
+ #: builtin/bugreport.c
+-#, c-format
+-msgid "could not determine free disk size for '%s'"
+-msgstr ""
+-
+-#: builtin/bugreport.c
+-#, c-format
+-msgid "could not get info for '%s'"
+-msgstr ""
+-
+-#: builtin/bugreport.c
+-msgid "could not duplicate stdout"
+-msgstr ""
+-
+-#: builtin/bugreport.c
+-msgid "failed to write archive"
+-msgstr ""
+-
+-#: builtin/bugreport.c
+-msgid "generate a diagnostics zip archive"
+-msgstr ""
+-
+-#: builtin/bugreport.c
+-msgid "do not create a summary report"
++msgid "create an additional zip archive of detailed diagnostics"
+ msgstr ""
+ 
+ #: builtin/bugreport.c
+@@ -3469,16 +3440,12 @@
+ msgid "specify a strftime format suffix for the filename(s)"
+ msgstr ""
+ 
+-#: builtin/bugreport.c
+-msgid "Nothing to do!"
+-msgstr ""
+-
+-#: builtin/bugreport.c
++#: builtin/bugreport.c builtin/diagnose.c
+ #, c-format
+ msgid "could not create leading directories for '%s'"
+ msgstr ""
+ 
+-#: builtin/bugreport.c
++#: builtin/bugreport.c builtin/diagnose.c
+ #, c-format
+ msgid "unable to create diagnostics archive %s"
+ msgstr ""
+@@ -6143,6 +6110,22 @@
+ msgid "option '%s' and commit-ishes cannot be used together"
+ msgstr ""
+ 
++#: builtin/diagnose.c
++msgid "git diagnose [-o|--output-directory <file>] [-s|--suffix <format>] [-a|--all]"
++msgstr ""
++
++#: builtin/diagnose.c
++msgid "specify a destination for the diagnostics archive"
++msgstr ""
++
++#: builtin/diagnose.c
++msgid "specify a strftime format suffix for the filename"
++msgstr ""
++
++#: builtin/diagnose.c
++msgid "collect complete diagnostic information"
++msgstr ""
++
+ #: builtin/diff-tree.c
+ msgid "--merge-base only works with two commits"
+ msgstr ""
+@@ -16613,6 +16596,16 @@
+ msgid "no libc information available\n"
+ msgstr ""
+ 
++#: compat/disk.h
++#, c-format
++msgid "could not determine free disk size for '%s'"
++msgstr ""
++
++#: compat/disk.h
++#, c-format
++msgid "could not get info for '%s'"
++msgstr ""
++
+ #: compat/fsmonitor/fsm-health-win32.c
+ #, c-format
+ msgid "[GLE %ld] health thread could not open '%ls'"
+@@ -17750,6 +17743,29 @@
+ msgid "Marked %d islands, done.\n"
+ msgstr ""
+ 
++#: diagnose.c
++#, c-format
++msgid "could not archive missing directory '%s'"
++msgstr ""
++
++#: diagnose.c dir.c
++#, c-format
++msgid "could not open directory '%s'"
++msgstr ""
++
++#: diagnose.c
++#, c-format
++msgid "skipping '%s', which is neither file nor directory"
++msgstr ""
++
++#: diagnose.c
++msgid "could not duplicate stdout"
++msgstr ""
++
++#: diagnose.c
++msgid "failed to write archive"
++msgstr ""
++
+ #: diff-lib.c
+ msgid "--merge-base does not work with ranges"
+ msgstr ""
