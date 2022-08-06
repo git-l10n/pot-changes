@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2022-08-05 22:57+0000\n"
+"POT-Creation-Date: 2022-08-06 01:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -764,6 +764,21 @@ msgid ""
 "\n"
 msgstr ""
 
+#: advice.c:272
+#, c-format
+msgid ""
+"The following paths have been moved outside the\n"
+"sparse-checkout definition but are not sparse due to local\n"
+"modifications.\n"
+msgstr ""
+
+#: advice.c:279
+msgid ""
+"To correct the sparsity of these paths, do the following:\n"
+"* Use \"git add --sparse <paths>\" to update the index\n"
+"* Use \"git sparse-checkout reapply\" to apply the sparsity rules"
+msgstr ""
+
 #: alias.c:50
 msgid "cmdline ends with \\"
 msgstr ""
@@ -1008,7 +1023,7 @@ msgstr ""
 msgid "patch failed: %s:%ld"
 msgstr ""
 
-#: apply.c:3385 builtin/mv.c:438
+#: apply.c:3385 builtin/mv.c:479
 #, c-format
 msgid "cannot checkout %s"
 msgstr ""
@@ -1268,7 +1283,7 @@ msgid_plural "%d lines applied after fixing whitespace errors."
 msgstr[0] ""
 msgstr[1] ""
 
-#: apply.c:5016 builtin/add.c:695 builtin/mv.c:447 builtin/rm.c:430
+#: apply.c:5016 builtin/add.c:695 builtin/mv.c:537 builtin/rm.c:430
 msgid "Unable to write new index file"
 msgstr ""
 
@@ -1986,7 +2001,7 @@ msgstr ""
 msgid "The following paths are ignored by one of your .gitignore files:\n"
 msgstr ""
 
-#: builtin/add.c:372 builtin/clean.c:927 builtin/fetch.c:175 builtin/mv.c:163
+#: builtin/add.c:372 builtin/clean.c:927 builtin/fetch.c:175 builtin/mv.c:165
 #: builtin/prune-packed.c:14 builtin/pull.c:209 builtin/push.c:588
 #: builtin/remote.c:1469 builtin/rm.c:244 builtin/send-pack.c:194
 msgid "dry run"
@@ -1994,7 +2009,7 @@ msgstr ""
 
 #: builtin/add.c:373 builtin/check-ignore.c:22 builtin/commit.c:1483
 #: builtin/count-objects.c:98 builtin/fsck.c:827 builtin/log.c:2426
-#: builtin/mv.c:162 builtin/read-tree.c:120
+#: builtin/mv.c:164 builtin/read-tree.c:120
 msgid "be verbose"
 msgstr ""
 
@@ -2046,7 +2061,7 @@ msgstr ""
 msgid "check if - even missing - files are ignored in dry run"
 msgstr ""
 
-#: builtin/add.c:390 builtin/mv.c:167 builtin/rm.c:251
+#: builtin/add.c:390 builtin/mv.c:169 builtin/rm.c:251
 msgid "allow updating entries outside of the sparse-checkout cone"
 msgstr ""
 
@@ -2117,7 +2132,7 @@ msgstr ""
 
 #: builtin/add.c:591 builtin/check-ignore.c:183 builtin/checkout.c:532
 #: builtin/checkout.c:745 builtin/clean.c:1016 builtin/commit.c:379
-#: builtin/diff-tree.c:122 builtin/grep.c:521 builtin/mv.c:187
+#: builtin/diff-tree.c:122 builtin/grep.c:521 builtin/mv.c:194
 #: builtin/reset.c:506 builtin/rm.c:293 builtin/submodule--helper.c:188
 #: builtin/submodule--helper.c:3233 read-cache.c:2094 read-cache.c:2418
 #: rerere.c:549 rerere.c:583 rerere.c:1096 submodule.c:1811
@@ -10055,94 +10070,98 @@ msgstr ""
 msgid "git mv [<options>] <source>... <destination>"
 msgstr ""
 
-#: builtin/mv.c:92
+#: builtin/mv.c:91
 #, c-format
 msgid "Directory %s is in index and no submodule?"
 msgstr ""
 
-#: builtin/mv.c:94
+#: builtin/mv.c:93
 msgid "Please stage your changes to .gitmodules or stash them to proceed"
 msgstr ""
 
-#: builtin/mv.c:112
+#: builtin/mv.c:111
 #, c-format
 msgid "%.*s is in index"
 msgstr ""
 
-#: builtin/mv.c:164
+#: builtin/mv.c:166
 msgid "force move/rename even if target exists"
 msgstr ""
 
-#: builtin/mv.c:166
+#: builtin/mv.c:168
 msgid "skip move/rename errors"
 msgstr ""
 
-#: builtin/mv.c:212
+#: builtin/mv.c:223
 #, c-format
 msgid "destination '%s' is not a directory"
 msgstr ""
 
-#: builtin/mv.c:224
+#: builtin/mv.c:241
 #, c-format
 msgid "Checking rename of '%s' to '%s'\n"
 msgstr ""
 
-#: builtin/mv.c:241 builtin/mv.c:246
+#: builtin/mv.c:258 builtin/mv.c:263
 msgid "bad source"
 msgstr ""
 
-#: builtin/mv.c:259 builtin/mv.c:325
+#: builtin/mv.c:276 builtin/mv.c:346
 msgid "destination exists"
 msgstr ""
 
-#: builtin/mv.c:267
+#: builtin/mv.c:284
 msgid "can not move directory into itself"
 msgstr ""
 
-#: builtin/mv.c:272
+#: builtin/mv.c:289
 msgid "cannot move directory over file"
 msgstr ""
 
-#: builtin/mv.c:287
+#: builtin/mv.c:304
 msgid "source directory is empty"
 msgstr ""
 
-#: builtin/mv.c:316
+#: builtin/mv.c:337
 msgid "not under version control"
 msgstr ""
 
-#: builtin/mv.c:320
+#: builtin/mv.c:341
 msgid "conflicted"
 msgstr ""
 
-#: builtin/mv.c:333
+#: builtin/mv.c:354 builtin/mv.c:376
 #, c-format
 msgid "overwriting '%s'"
 msgstr ""
 
-#: builtin/mv.c:336
+#: builtin/mv.c:357
 msgid "Cannot overwrite"
 msgstr ""
 
-#: builtin/mv.c:341
+#: builtin/mv.c:362
 msgid "multiple sources for the same target"
 msgstr ""
 
-#: builtin/mv.c:345
+#: builtin/mv.c:366
 msgid "destination directory does not exist"
 msgstr ""
 
-#: builtin/mv.c:375
+#: builtin/mv.c:373
+msgid "destination exists in the index"
+msgstr ""
+
+#: builtin/mv.c:408
 #, c-format
 msgid "%s, source=%s, destination=%s"
 msgstr ""
 
-#: builtin/mv.c:405
+#: builtin/mv.c:439
 #, c-format
 msgid "Renaming %s to %s\n"
 msgstr ""
 
-#: builtin/mv.c:412 builtin/remote.c:816 builtin/repack.c:1022
+#: builtin/mv.c:447 builtin/remote.c:816 builtin/repack.c:1022
 #, c-format
 msgid "renaming '%s' failed"
 msgstr ""
