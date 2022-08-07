@@ -1,0 +1,1352 @@
+
+
+#################### Sun, 07 Aug 2022 04:59:52 +0000 ####################
+
+--- po/git.pot.old	2022-08-07 04:59:52.079321806 +0000
++++ po/git.pot.new	2022-08-07 04:59:52.171321921 +0000
+@@ -176,8 +176,8 @@
+ msgstr ""
+ 
+ #: add-interactive.c apply.c builtin/am.c builtin/bugreport.c builtin/clone.c
+-#: builtin/diagnose.c builtin/fetch.c builtin/merge.c builtin/pull.c
+-#: builtin/submodule--helper.c git-add--interactive.perl
++#: builtin/fetch.c builtin/merge.c builtin/pull.c builtin/submodule--helper.c
++#: git-add--interactive.perl
+ msgid "path"
+ msgstr ""
+ 
+@@ -718,21 +718,6 @@
+ "\n"
+ msgstr ""
+ 
+-#: advice.c
+-#, c-format
+-msgid ""
+-"The following paths have been moved outside the\n"
+-"sparse-checkout definition but are not sparse due to local\n"
+-"modifications.\n"
+-msgstr ""
+-
+-#: advice.c
+-msgid ""
+-"To correct the sparsity of these paths, do the following:\n"
+-"* Use \"git add --sparse <paths>\" to update the index\n"
+-"* Use \"git sparse-checkout reapply\" to apply the sparsity rules"
+-msgstr ""
+-
+ #: alias.c
+ msgid "cmdline ends with \\"
+ msgstr ""
+@@ -1125,7 +1110,7 @@
+ msgid "unable to add cache entry for %s"
+ msgstr ""
+ 
+-#: apply.c builtin/bisect.c builtin/gc.c
++#: apply.c builtin/bisect--helper.c builtin/gc.c
+ #, c-format
+ msgid "failed to write to '%s'"
+ msgstr ""
+@@ -2307,7 +2292,7 @@
+ "Not rewinding to ORIG_HEAD"
+ msgstr ""
+ 
+-#: builtin/am.c builtin/bisect.c worktree.c
++#: builtin/am.c builtin/bisect--helper.c worktree.c
+ #, c-format
+ msgid "failed to read '%s'"
+ msgstr ""
+@@ -2389,8 +2374,8 @@
+ msgstr ""
+ 
+ #: builtin/am.c builtin/branch.c builtin/bugreport.c builtin/cat-file.c
+-#: builtin/diagnose.c builtin/for-each-ref.c builtin/ls-files.c
+-#: builtin/ls-tree.c builtin/replace.c builtin/tag.c builtin/verify-tag.c
++#: builtin/for-each-ref.c builtin/ls-files.c builtin/ls-tree.c
++#: builtin/replace.c builtin/tag.c builtin/verify-tag.c
+ msgid "format"
+ msgstr ""
+ 
+@@ -2489,7 +2474,7 @@
+ msgid "git apply [<options>] [<patch>...]"
+ msgstr ""
+ 
+-#: builtin/archive.c diagnose.c
++#: builtin/archive.c contrib/scalar/scalar.c
+ msgid "could not redirect output"
+ msgstr ""
+ 
+@@ -2514,122 +2499,111 @@
+ msgid "git archive: expected a flush"
+ msgstr ""
+ 
+-#: builtin/bisect.c
+-msgid "git bisect [help|start|bad|good|new|old|terms|skip|next|reset|visualize|view|replay|log|run]"
++#: builtin/bisect--helper.c
++msgid "git bisect--helper --bisect-reset [<commit>]"
+ msgstr ""
+ 
+-#: builtin/bisect.c
+-msgid ""
+-"git bisect [help|start|bad|good|new|old|terms|skip|next|reset|visualize|view|replay|log|run]\n"
+-"\n"
+-"git bisect help\n"
+-"\tprint this long help message.\n"
+-"git bisect start [--term-{new,bad}=<term> --term-{old,good}=<term>]\n"
+-"\t\t [--no-checkout] [--first-parent] [<bad> [<good>...]] [--] [<pathspec>...]\n"
+-"\treset bisect state and start bisection.\n"
+-"git bisect (bad|new) [<rev>]\n"
+-"\tmark <rev> a known-bad revision/\n"
+-"\t\ta revision after change in a given property.\n"
+-"git bisect (good|old) [<rev>...]\n"
+-"\tmark <rev>... known-good revisions/\n"
+-"\t\trevisions before change in a given property.\n"
+-"git bisect terms [--term-good | --term-bad]\n"
+-"\tshow the terms used for old and new commits (default: bad, good)\n"
+-"git bisect skip [(<rev>|<range>)...]\n"
+-"\tmark <rev>... untestable revisions.\n"
+-"git bisect next\n"
+-"\tfind next bisection to test and check it out.\n"
+-"git bisect reset [<commit>]\n"
+-"\tfinish bisection search and go back to commit.\n"
+-"git bisect (visualize|view)\n"
+-"\tshow bisect status in gitk.\n"
+-"git bisect replay <logfile>\n"
+-"\treplay bisection log.\n"
+-"git bisect log\n"
+-"\tshow bisect log.\n"
+-"git bisect run <cmd>...\n"
+-"\tuse <cmd>... to automatically bisect.\n"
+-"\n"
+-"Please use \"git help bisect\" to get the full man page."
++#: builtin/bisect--helper.c
++msgid "git bisect--helper --bisect-start [--term-{new,bad}=<term> --term-{old,good}=<term>] [--no-checkout] [--first-parent] [<bad> [<good>...]] [--] [<paths>...]"
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
++msgid "git bisect--helper --bisect-state (bad|new) [<rev>]"
++msgstr ""
++
++#: builtin/bisect--helper.c
++msgid "git bisect--helper --bisect-state (good|old) [<rev>...]"
++msgstr ""
++
++#: builtin/bisect--helper.c
++msgid "git bisect--helper --bisect-replay <filename>"
++msgstr ""
++
++#: builtin/bisect--helper.c
++msgid "git bisect--helper --bisect-skip [(<rev>|<range>)...]"
++msgstr ""
++
++#: builtin/bisect--helper.c
++msgid "git bisect--helper --bisect-run <cmd>..."
++msgstr ""
++
++#: builtin/bisect--helper.c
+ #, c-format
+ msgid "cannot open file '%s' in mode '%s'"
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ #, c-format
+ msgid "could not write to file '%s'"
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ #, c-format
+ msgid "cannot open file '%s' for reading"
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ #, c-format
+ msgid "'%s' is not a valid term"
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ #, c-format
+ msgid "can't use the builtin command '%s' as a term"
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ #, c-format
+ msgid "can't change the meaning of the term '%s'"
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ msgid "please use two different terms"
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ #, c-format
+ msgid "We are not bisecting.\n"
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ #, c-format
+ msgid "'%s' is not a valid commit"
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ #, c-format
+ msgid "could not check out original HEAD '%s'. Try 'git bisect reset <commit>'."
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ #, c-format
+ msgid "Bad bisect_write argument: %s"
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ #, c-format
+ msgid "couldn't get the oid of the rev '%s'"
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ #, c-format
+ msgid "couldn't open the file '%s'"
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ #, c-format
+ msgid "Invalid command: you're currently in a %s/%s bisect"
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ #, c-format
+ msgid ""
+ "You need to give me at least one %s and %s revision.\n"
+ "You can use \"git bisect %s\" and \"git bisect %s\" for that."
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ #, c-format
+ msgid ""
+ "You need to start by \"git bisect start\".\n"
+@@ -2637,7 +2611,7 @@
+ "You can use \"git bisect %s\" and \"git bisect %s\" for that."
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ #, c-format
+ msgid "bisecting only with a %s commit"
+ msgstr ""
+@@ -2646,85 +2620,89 @@
+ #. translation. The program will only accept English input
+ #. at this point.
+ #.
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ msgid "Are you sure [Y/n]? "
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ msgid "status: waiting for both good and bad commits\n"
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ #, c-format
+ msgid "status: waiting for bad commit, %d good commit known\n"
+ msgid_plural "status: waiting for bad commit, %d good commits known\n"
+ msgstr[0] ""
+ msgstr[1] ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ msgid "status: waiting for good commit(s), bad commit known\n"
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ msgid "no terms defined"
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ #, c-format
+ msgid ""
+ "Your current terms are %s for the old state\n"
+ "and %s for the new state.\n"
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ #, c-format
+ msgid ""
+ "invalid argument %s for 'git bisect terms'.\n"
+ "Supported options are: --term-good|--term-old and --term-bad|--term-new."
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ msgid "revision walk setup failed\n"
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ #, c-format
+ msgid "could not open '%s' for appending"
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ msgid "'' is not a valid term"
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ #, c-format
+ msgid "unrecognized option: '%s'"
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ #, c-format
+ msgid "'%s' does not appear to be a valid revision"
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ msgid "bad HEAD - I need a HEAD"
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ #, c-format
+ msgid "checking out '%s' failed. Try 'git bisect start <valid-branch>'."
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
++msgid "won't bisect on cg-seek'ed tree"
++msgstr ""
++
++#: builtin/bisect--helper.c
+ msgid "bad HEAD - strange symbolic ref"
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ #, c-format
+ msgid "invalid ref: '%s'"
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ msgid "You need to start by \"git bisect start\"\n"
+ msgstr ""
+ 
+@@ -2732,105 +2710,157 @@
+ #. translation. The program will only accept English input
+ #. at this point.
+ #.
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ msgid "Do you want me to do it for you [Y/n]? "
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
++msgid "Please call `--bisect-state` with at least one argument"
++msgstr ""
++
++#: builtin/bisect--helper.c
+ #, c-format
+ msgid "'git bisect %s' can take only one argument."
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ #, c-format
+ msgid "Bad rev input: %s"
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ #, c-format
+ msgid "Bad rev input (not a commit): %s"
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ msgid "We are not bisecting."
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ #, c-format
+ msgid "'%s'?? what are you talking about?"
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ #, c-format
+ msgid "cannot read file '%s' for replaying"
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ #, c-format
+ msgid "running %s\n"
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ msgid "bisect run failed: no command provided."
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ #, c-format
+ msgid "unable to verify '%s' on good revision"
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ #, c-format
+ msgid "bogus exit code %d for good revision"
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ #, c-format
+-msgid "bisect run failed: exit code %d from %s is < 0 or >= 128"
++msgid "bisect run failed: exit code %d from '%s' is < 0 or >= 128"
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ #, c-format
+ msgid "cannot open file '%s' for writing"
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ msgid "bisect run cannot continue any more"
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ #, c-format
+ msgid "bisect run success"
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ #, c-format
+ msgid "bisect found first bad commit"
+ msgstr ""
+ 
+-#: builtin/bisect.c
++#: builtin/bisect--helper.c
+ #, c-format
+-msgid "bisect run failed: 'git bisect %s' exited with error code %d"
++msgid "bisect run failed: 'git bisect--helper --bisect-state %s' exited with error code %d"
+ msgstr ""
+ 
+-#: builtin/bisect.c
+-msgid "'terms' requires 0 or 1 argument"
++#: builtin/bisect--helper.c
++msgid "reset the bisection state"
+ msgstr ""
+ 
+-#: builtin/bisect.c
+-msgid "'next' requires 0 arguments"
++#: builtin/bisect--helper.c
++msgid "check whether bad or good terms exist"
+ msgstr ""
+ 
+-#: builtin/bisect.c
+-msgid "'reset' requires either no argument or a commit"
++#: builtin/bisect--helper.c
++msgid "print out the bisect terms"
+ msgstr ""
+ 
+-#: builtin/bisect.c
+-msgid "no logfile given"
++#: builtin/bisect--helper.c
++msgid "start the bisect session"
++msgstr ""
++
++#: builtin/bisect--helper.c
++msgid "find the next bisection commit"
++msgstr ""
++
++#: builtin/bisect--helper.c
++msgid "mark the state of ref (or refs)"
++msgstr ""
++
++#: builtin/bisect--helper.c
++msgid "list the bisection steps so far"
++msgstr ""
++
++#: builtin/bisect--helper.c
++msgid "replay the bisection process from the given file"
++msgstr ""
++
++#: builtin/bisect--helper.c
++msgid "skip some commits for checkout"
++msgstr ""
++
++#: builtin/bisect--helper.c
++msgid "visualize the bisection"
++msgstr ""
++
++#: builtin/bisect--helper.c
++msgid "use <cmd>... to automatically bisect"
++msgstr ""
++
++#: builtin/bisect--helper.c
++msgid "no log for BISECT_WRITE"
++msgstr ""
++
++#: builtin/bisect--helper.c
++msgid "--bisect-reset requires either no argument or a commit"
++msgstr ""
++
++#: builtin/bisect--helper.c
++msgid "--bisect-terms requires 0 or 1 argument"
++msgstr ""
++
++#: builtin/bisect--helper.c
++msgid "--bisect-next requires 0 arguments"
+ msgstr ""
+ 
+-#: builtin/bisect.c
+-msgid "'log' requires 0 arguments"
++#: builtin/bisect--helper.c
++msgid "--bisect-log requires 0 arguments"
++msgstr ""
++
++#: builtin/bisect--helper.c
++msgid "no logfile given"
+ msgstr ""
+ 
+ #: builtin/blame.c
+@@ -3436,35 +3466,18 @@
+ msgstr ""
+ 
+ #: builtin/bugreport.c
+-msgid "diagnose mode must be either 'basic' or 'all'"
++msgid "specify a destination for the bugreport file"
+ msgstr ""
+ 
+ #: builtin/bugreport.c
+-msgid "(basic|all)"
+-msgstr ""
+-
+-#: builtin/bugreport.c
+-msgid "create an additional zip archive of detailed diagnostics"
+-msgstr ""
+-
+-#: builtin/bugreport.c
+-msgid "specify a destination for the bugreport file(s)"
++msgid "specify a strftime format suffix for the filename"
+ msgstr ""
+ 
+ #: builtin/bugreport.c
+-msgid "specify a strftime format suffix for the filename(s)"
+-msgstr ""
+-
+-#: builtin/bugreport.c builtin/diagnose.c
+ #, c-format
+ msgid "could not create leading directories for '%s'"
+ msgstr ""
+ 
+-#: builtin/bugreport.c builtin/diagnose.c
+-#, c-format
+-msgid "unable to create diagnostics archive %s"
+-msgstr ""
+-
+ #: builtin/bugreport.c
+ msgid "System Info"
+ msgstr ""
+@@ -3540,26 +3553,14 @@
+ msgid "Unbundling objects"
+ msgstr ""
+ 
+-#: builtin/cat-file.c merge-recursive.c
++#: builtin/bundle.c builtin/remote.c
+ #, c-format
+-msgid "cannot read object %s '%s'"
+-msgstr ""
+-
+-#: builtin/cat-file.c
+-msgid "must supply valid remote when using --object-info"
++msgid "Unknown subcommand: %s"
+ msgstr ""
+ 
+-#: builtin/cat-file.c
++#: builtin/cat-file.c merge-recursive.c
+ #, c-format
+-msgid "malformed object id '%s'"
+-msgstr ""
+-
+-#: builtin/cat-file.c
+-msgid "objectsize:disk is currently not supported with remote-object-info"
+-msgstr ""
+-
+-#: builtin/cat-file.c
+-msgid "deltabase is currently not supported with remote-object-info"
++msgid "cannot read object %s '%s'"
+ msgstr ""
+ 
+ #: builtin/cat-file.c
+@@ -4680,14 +4681,6 @@
+ msgstr ""
+ 
+ #: builtin/clone.c
+-msgid "a URI for downloading bundles before fetching from origin remote"
+-msgstr ""
+-
+-#: builtin/clone.c
+-msgid "uri"
+-msgstr ""
+-
+-#: builtin/clone.c
+ #, c-format
+ msgid "info: Could not add alternate for '%s': %s\n"
+ msgstr ""
+@@ -4744,7 +4737,7 @@
+ msgid "Could not find remote branch %s to clone."
+ msgstr ""
+ 
+-#: builtin/clone.c
++#: builtin/clone.c fetch-pack.c
+ msgid "remote did not send all necessary objects"
+ msgstr ""
+ 
+@@ -4791,10 +4784,6 @@
+ msgstr ""
+ 
+ #: builtin/clone.c
+-msgid "--bundle-uri is incompatible with --depth, --shallow-since, and --shallow-exclude"
+-msgstr ""
+-
+-#: builtin/clone.c
+ #, c-format
+ msgid "repository '%s' does not exist"
+ msgstr ""
+@@ -4881,11 +4870,6 @@
+ msgstr ""
+ 
+ #: builtin/clone.c
+-#, c-format
+-msgid "failed to fetch objects from bundle URI '%s'"
+-msgstr ""
+-
+-#: builtin/clone.c
+ msgid "remote transport reported error"
+ msgstr ""
+ 
+@@ -5023,6 +5007,11 @@
+ msgid "Collecting commits from input"
+ msgstr ""
+ 
++#: builtin/commit-graph.c builtin/multi-pack-index.c
++#, c-format
++msgid "unrecognized subcommand: %s"
++msgstr ""
++
+ #: builtin/commit-tree.c
+ msgid "git commit-tree [(-p <parent>)...] [-S[<keyid>]] [(-m <message>)...] [(-F <file>)...] <tree>"
+ msgstr ""
+@@ -6125,22 +6114,6 @@
+ msgid "option '%s' and commit-ishes cannot be used together"
+ msgstr ""
+ 
+-#: builtin/diagnose.c
+-msgid "git diagnose [-o|--output-directory <file>] [-s|--suffix <format>] [-a|--all]"
+-msgstr ""
+-
+-#: builtin/diagnose.c
+-msgid "specify a destination for the diagnostics archive"
+-msgstr ""
+-
+-#: builtin/diagnose.c
+-msgid "specify a strftime format suffix for the filename"
+-msgstr ""
+-
+-#: builtin/diagnose.c
+-msgid "collect complete diagnostic information"
+-msgstr ""
+-
+ #: builtin/diff-tree.c
+ msgid "--merge-base only works with two commits"
+ msgstr ""
+@@ -6660,7 +6633,7 @@
+ 
+ #: builtin/fetch.c
+ #, c-format
+-msgid "connectivity check failed after fetching from %s\n"
++msgid "%s did not send all necessary objects\n"
+ msgstr ""
+ 
+ #: builtin/fetch.c
+@@ -6884,7 +6857,7 @@
+ msgid "quote placeholders suitably for Tcl"
+ msgstr ""
+ 
+-#: builtin/for-each-ref.c builtin/show-ref.c
++#: builtin/for-each-ref.c
+ msgid "show only <n> matched refs"
+ msgstr ""
+ 
+@@ -7602,6 +7575,11 @@
+ msgid "git maintenance <subcommand> [<options>]"
+ msgstr ""
+ 
++#: builtin/gc.c
++#, c-format
++msgid "invalid subcommand: %s"
++msgstr ""
++
+ #: builtin/grep.c
+ msgid "git grep [<options>] [-e] <pattern> [<rev>...] [[--] <path>...]"
+ msgstr ""
+@@ -7936,19 +7914,11 @@
+ msgstr ""
+ 
+ #: builtin/help.c
+-msgid "print list of user-facing repository, command and file interfaces"
+-msgstr ""
+-
+-#: builtin/help.c
+-msgid "print list of file formats, protocols and other developer interfaces"
+-msgstr ""
+-
+-#: builtin/help.c
+ msgid "print all configuration variable names"
+ msgstr ""
+ 
+ #: builtin/help.c
+-msgid "git help [[-i|--info] [-m|--man] [-w|--web]] [<command>|<doc>]"
++msgid "git help [[-i|--info] [-m|--man] [-w|--web]] [<command>]"
+ msgstr ""
+ 
+ #: builtin/help.c
+@@ -8525,10 +8495,6 @@
+ msgstr ""
+ 
+ #: builtin/log.c
+-msgid "clear all previously-defined decoration filters"
+-msgstr ""
+-
+-#: builtin/log.c
+ msgid "only decorate refs that match <pattern>"
+ msgstr ""
+ 
+@@ -9909,10 +9875,6 @@
+ msgstr ""
+ 
+ #: builtin/mv.c
+-msgid "destination exists in the index"
+-msgstr ""
+-
+-#: builtin/mv.c
+ #, c-format
+ msgid "%s, source=%s, destination=%s"
+ msgstr ""
+@@ -10332,7 +10294,7 @@
+ msgid "use notes from <notes-ref>"
+ msgstr ""
+ 
+-#: builtin/notes.c builtin/remote.c parse-options.c
++#: builtin/notes.c builtin/stash.c
+ #, c-format
+ msgid "unknown subcommand: %s"
+ msgstr ""
+@@ -13510,16 +13472,6 @@
+ msgid "show refs from stdin that aren't in local repository"
+ msgstr ""
+ 
+-#: builtin/show-ref.c
+-#, c-format
+-msgid "invalid --count argument: (`%d' < 0)"
+-msgstr ""
+-
+-#: builtin/show-ref.c
+-#, c-format
+-msgid "--count is incompatible with %s"
+-msgstr ""
+-
+ #: builtin/sparse-checkout.c
+ msgid "git sparse-checkout (init|list|set|add|reapply|disable) <options>"
+ msgstr ""
+@@ -13679,14 +13631,6 @@
+ msgstr ""
+ 
+ #: builtin/stash.c
+-msgid "git stash export (--print | --to-ref <ref>) [<stash>...]"
+-msgstr ""
+-
+-#: builtin/stash.c
+-msgid "git stash import <commit>"
+-msgstr ""
+-
+-#: builtin/stash.c
+ msgid "git stash pop [--index] [-q|--quiet] [<stash>]"
+ msgstr ""
+ 
+@@ -13717,12 +13661,12 @@
+ msgstr ""
+ 
+ #: builtin/stash.c
+-msgid "No stash entries found."
++#, c-format
++msgid "Too many revisions specified:%s"
+ msgstr ""
+ 
+ #: builtin/stash.c
+-#, c-format
+-msgid "Too many revisions specified:%s"
++msgid "No stash entries found."
+ msgstr ""
+ 
+ #: builtin/stash.c
+@@ -13917,60 +13861,6 @@
+ msgid "include ignore files"
+ msgstr ""
+ 
+-#: builtin/stash.c
+-#, c-format
+-msgid "cannot parse commit %s"
+-msgstr ""
+-
+-#: builtin/stash.c
+-msgid "could not write commit"
+-msgstr ""
+-
+-#: builtin/stash.c
+-#, c-format
+-msgid "not a valid revision: %s"
+-msgstr ""
+-
+-#: builtin/stash.c
+-#, c-format
+-msgid "%s is not a valid exported stash commit"
+-msgstr ""
+-
+-#: builtin/stash.c
+-#, c-format
+-msgid "cannot read commit buffer for %s"
+-msgstr ""
+-
+-#: builtin/stash.c
+-#, c-format
+-msgid "cannot save the stash for %s"
+-msgstr ""
+-
+-#: builtin/stash.c
+-msgid "unable to write base commit"
+-msgstr ""
+-
+-#: builtin/stash.c
+-#, c-format
+-msgid "unable to find stash entry %s"
+-msgstr ""
+-
+-#: builtin/stash.c
+-msgid "print the object ID instead of writing it to a ref"
+-msgstr ""
+-
+-#: builtin/stash.c
+-msgid "save the data to the given ref"
+-msgstr ""
+-
+-#: builtin/stash.c
+-msgid "exactly one of --print and --to-ref is required"
+-msgstr ""
+-
+-#: builtin/stash.c
+-msgid "--to-ref requires an argument"
+-msgstr ""
+-
+ #: builtin/stripspace.c
+ msgid "skip and remove all lines starting with comment character"
+ msgstr ""
+@@ -13990,6 +13880,14 @@
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
++msgid "alternative anchor for relative paths"
++msgstr ""
++
++#: builtin/submodule--helper.c
++msgid "git submodule--helper list [--prefix=<path>] [<path>...]"
++msgstr ""
++
++#: builtin/submodule--helper.c
+ #, c-format
+ msgid "No url found for submodule path '%s' in .gitmodules"
+ msgstr ""
+@@ -14081,6 +13979,10 @@
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
++msgid "git submodule--helper name <path>"
++msgstr ""
++
++#: builtin/submodule--helper.c
+ #, c-format
+ msgid "* %s %s(blob)->%s(submodule)"
+ msgstr ""
+@@ -14247,10 +14149,6 @@
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "alternative anchor for relative paths"
+-msgstr ""
+-
+-#: builtin/submodule--helper.c
+ msgid "where the new submodule will be cloned to"
+ msgstr ""
+ 
+@@ -15471,29 +15369,6 @@
+ msgid "core.fsyncMethod = batch is unsupported on this platform"
+ msgstr ""
+ 
+-#: bundle-uri.c
+-msgid "failed to create temporary file"
+-msgstr ""
+-
+-#: bundle-uri.c
+-msgid "insufficient capabilities"
+-msgstr ""
+-
+-#: bundle-uri.c
+-#, c-format
+-msgid "failed to download bundle from URI '%s'"
+-msgstr ""
+-
+-#: bundle-uri.c
+-#, c-format
+-msgid "file at URI '%s' is not a bundle"
+-msgstr ""
+-
+-#: bundle-uri.c
+-#, c-format
+-msgid "failed to unbundle bundle from URI '%s'"
+-msgstr ""
+-
+ #: bundle.c
+ #, c-format
+ msgid "unrecognized bundle hash algorithm: %s"
+@@ -16229,30 +16104,6 @@
+ msgstr ""
+ 
+ #: command-list.h
+-msgid "The bundle file format"
+-msgstr ""
+-
+-#: command-list.h
+-msgid "Chunk-based file formats"
+-msgstr ""
+-
+-#: command-list.h
+-msgid "Git commit graph format"
+-msgstr ""
+-
+-#: command-list.h
+-msgid "Git index format"
+-msgstr ""
+-
+-#: command-list.h
+-msgid "Git pack format"
+-msgstr ""
+-
+-#: command-list.h
+-msgid "Git cryptographic signature formats"
+-msgstr ""
+-
+-#: command-list.h
+ msgid "A Git Glossary"
+ msgstr ""
+ 
+@@ -16281,26 +16132,6 @@
+ msgstr ""
+ 
+ #: command-list.h
+-msgid "Protocol v0 and v1 capabilities"
+-msgstr ""
+-
+-#: command-list.h
+-msgid "Things common to various protocols"
+-msgstr ""
+-
+-#: command-list.h
+-msgid "Git HTTP-based protocols"
+-msgstr ""
+-
+-#: command-list.h
+-msgid "How packs are transferred over-the-wire"
+-msgstr ""
+-
+-#: command-list.h
+-msgid "Git Wire Protocol, Version 2"
+-msgstr ""
+-
+-#: command-list.h
+ msgid "Helper programs to interact with remote repositories"
+ msgstr ""
+ 
+@@ -16607,16 +16438,6 @@
+ msgid "no libc information available\n"
+ msgstr ""
+ 
+-#: compat/disk.h
+-#, c-format
+-msgid "could not determine free disk size for '%s'"
+-msgstr ""
+-
+-#: compat/disk.h
+-#, c-format
+-msgid "could not get info for '%s'"
+-msgstr ""
+-
+ #: compat/fsmonitor/fsm-health-win32.c
+ #, c-format
+ msgid "[GLE %ld] health thread could not open '%ls'"
+@@ -17373,6 +17194,26 @@
+ msgid "Scalar enlistments require a worktree"
+ msgstr ""
+ 
++#: contrib/scalar/scalar.c dir.c
++#, c-format
++msgid "could not open directory '%s'"
++msgstr ""
++
++#: contrib/scalar/scalar.c
++#, c-format
++msgid "skipping '%s', which is neither file nor directory"
++msgstr ""
++
++#: contrib/scalar/scalar.c
++#, c-format
++msgid "could not determine free disk size for '%s'"
++msgstr ""
++
++#: contrib/scalar/scalar.c
++#, c-format
++msgid "could not get info for '%s'"
++msgstr ""
++
+ #: contrib/scalar/scalar.c
+ #, c-format
+ msgid "remote HEAD is not a branch: '%.*s'"
+@@ -17448,6 +17289,19 @@
+ msgstr ""
+ 
+ #: contrib/scalar/scalar.c
++#, c-format
++msgid "could not create directory for '%s'"
++msgstr ""
++
++#: contrib/scalar/scalar.c
++msgid "could not duplicate stdout"
++msgstr ""
++
++#: contrib/scalar/scalar.c
++msgid "failed to write archive"
++msgstr ""
++
++#: contrib/scalar/scalar.c
+ msgid "`scalar list` does not take arguments"
+ msgstr ""
+ 
+@@ -17754,29 +17608,6 @@
+ msgid "Marked %d islands, done.\n"
+ msgstr ""
+ 
+-#: diagnose.c
+-#, c-format
+-msgid "could not archive missing directory '%s'"
+-msgstr ""
+-
+-#: diagnose.c dir.c
+-#, c-format
+-msgid "could not open directory '%s'"
+-msgstr ""
+-
+-#: diagnose.c
+-#, c-format
+-msgid "skipping '%s', which is neither file nor directory"
+-msgstr ""
+-
+-#: diagnose.c
+-msgid "could not duplicate stdout"
+-msgstr ""
+-
+-#: diagnose.c
+-msgid "failed to write archive"
+-msgstr ""
+-
+ #: diff-lib.c
+ msgid "--merge-base does not work with ranges"
+ msgstr ""
+@@ -18628,11 +18459,11 @@
+ msgstr ""
+ 
+ #: fetch-pack.c
+-msgid "unable to write request to remote"
++msgid "Server does not support shallow requests"
+ msgstr ""
+ 
+ #: fetch-pack.c
+-msgid "Server does not support shallow requests"
++msgid "unable to write request to remote"
+ msgstr ""
+ 
+ #: fetch-pack.c
+@@ -18700,10 +18531,6 @@
+ msgstr ""
+ 
+ #: fetch-pack.c
+-msgid "connectivity check failed after fetching from remote"
+-msgstr ""
+-
+-#: fetch-pack.c
+ msgid "unexpected 'ready' from remote"
+ msgstr ""
+ 
+@@ -19687,14 +19514,6 @@
+ msgstr ""
+ 
+ #: help.c
+-msgid "User-facing repository, command and file interfaces"
+-msgstr ""
+-
+-#: help.c
+-msgid "Developer-facing file file formats, protocols and interfaces"
+-msgstr ""
+-
+-#: help.c
+ #, c-format
+ msgid "available git commands in '%s'"
+ msgstr ""
+@@ -19712,14 +19531,6 @@
+ msgstr ""
+ 
+ #: help.c
+-msgid "User-facing repository, command and file interfaces:"
+-msgstr ""
+-
+-#: help.c
+-msgid "File formats, protocols and other developer interfaces:"
+-msgstr ""
+-
+-#: help.c
+ msgid "External commands"
+ msgstr ""
+ 
+@@ -20006,11 +19817,6 @@
+ msgid "Failed to merge submodule %s (not checked out)"
+ msgstr ""
+ 
+-#: merge-ort.c
+-#, c-format
+-msgid "Failed to merge submodule %s (no merge base)"
+-msgstr ""
+-
+ #: merge-ort.c merge-recursive.c
+ #, c-format
+ msgid "Failed to merge submodule %s (commits not present)"
+@@ -20164,62 +19970,6 @@
+ msgid "Note: %s not up to date and in way of checking out conflicted version; old copy renamed to %s"
+ msgstr ""
+ 
+-#. TRANSLATORS: This is line item of submodule conflict message
+-#. from print_submodule_conflict_suggestion() below. For RTL
+-#. languages, the following swap is suggested:
+-#.      " - %s\n" -> "%s - \n"
+-#.
+-#: merge-ort.c
+-#, c-format
+-msgid " - %s\n"
+-msgstr ""
+-
+-#. TRANSLATORS: This is line item of submodule conflict message
+-#. from print_submodule_conflict_suggestion() below. For RTL
+-#. languages, the following swap is suggested:
+-#.      "   %s\n" -> "%s   \n"
+-#.
+-#: merge-ort.c
+-#, c-format
+-msgid "   %s\n"
+-msgstr ""
+-
+-#: merge-ort.c
+-#, c-format
+-msgid ""
+-"Recursive merging with submodules currently only supports trivial cases.\n"
+-"Please manually handle the merging of each conflicted submodule.\n"
+-"This can be accomplished with the following steps:"
+-msgstr ""
+-
+-#. TRANSLATORS: This is a line of advice to resolve a merge conflict
+-#. in a submodule. The second argument is the abbreviated id of the
+-#. commit that needs to be merged.
+-#. E.g. - go to submodule (sub), and either merge commit abc1234"
+-#.
+-#: merge-ort.c
+-#, c-format
+-msgid ""
+-"go to submodule (%s), and either merge commit %s\n"
+-"or update to an existing commit which has merged those changes"
+-msgstr ""
+-
+-#: merge-ort.c
+-msgid "come back to superproject and run:"
+-msgstr ""
+-
+-#: merge-ort.c
+-msgid "to record the above merge or update"
+-msgstr ""
+-
+-#: merge-ort.c
+-msgid "resolve any other conflicts in the superproject"
+-msgstr ""
+-
+-#: merge-ort.c
+-msgid "commit the resulting index in the superproject"
+-msgstr ""
+-
+ #. TRANSLATORS: The %s arguments are: 1) tree hash of a merge
+ #. base, and 2-3) the trees for the two trees we're merging.
+ #.
+@@ -21184,10 +20934,6 @@
+ msgid "hash mismatch %s"
+ msgstr ""
+ 
+-#: pack-bitmap-write.c
+-msgid "trying to write commit not in index"
+-msgstr ""
+-
+ #: pack-bitmap.c
+ msgid "failed to load bitmap index (corrupted?)"
+ msgstr ""
+@@ -21210,10 +20956,6 @@
+ msgstr ""
+ 
+ #: pack-bitmap.c
+-msgid "corrupted bitmap index file (too short to fit lookup table)"
+-msgstr ""
+-
+-#: pack-bitmap.c
+ #, c-format
+ msgid "duplicate entry in bitmap index: '%s'"
+ msgstr ""
+@@ -21264,24 +21006,6 @@
+ msgstr ""
+ 
+ #: pack-bitmap.c
+-msgid "corrupt bitmap lookup table: triplet position out of index"
+-msgstr ""
+-
+-#: pack-bitmap.c
+-msgid "corrupt bitmap lookup table: xor chain exceed entry count"
+-msgstr ""
+-
+-#: pack-bitmap.c
+-#, c-format
+-msgid "corrupt bitmap lookup table: commit index %u out of range"
+-msgstr ""
+-
+-#: pack-bitmap.c
+-#, c-format
+-msgid "corrupt ewah bitmap: truncated header for bitmap of commit \"%s\""
+-msgstr ""
+-
+-#: pack-bitmap.c
+ #, c-format
+ msgid "object '%s' not found in type bitmaps"
+ msgstr ""
+@@ -21482,10 +21206,6 @@
+ msgstr ""
+ 
+ #: parse-options.c
+-msgid "need a subcommand"
+-msgstr ""
+-
+-#: parse-options.c
+ #, c-format
+ msgid "unknown option `%s'"
+ msgstr ""
+@@ -22542,15 +22262,6 @@
+ msgstr ""
+ 
+ #: remote-curl.c
+-msgid "protocol error: expected '<url> <path>', missing space"
+-msgstr ""
+-
+-#: remote-curl.c
+-#, c-format
+-msgid "failed to download file at URL '%s'"
+-msgstr ""
+-
+-#: remote-curl.c
+ msgid "git-http-push failed"
+ msgstr ""
+ 
+@@ -23975,20 +23686,12 @@
+ msgstr ""
+ 
+ #: setup.c
+-msgid ""
+-"\n"
+-"\n"
+-"Set the environment variable GIT_TEST_DEBUG_UNSAFE_DIRECTORIES=true and run\n"
+-"again for more information."
+-msgstr ""
+-
+-#: setup.c
+ #, c-format
+ msgid ""
+ "detected dubious ownership in repository at '%s'\n"
+ "To add an exception for this directory, call:\n"
+ "\n"
+-"\tgit config --global --add safe.directory %s%s"
++"\tgit config --global --add safe.directory %s"
+ msgstr ""
+ 
+ #: setup.c
+@@ -24486,10 +24189,6 @@
+ msgstr ""
+ 
+ #: transport-helper.c
+-msgid "--object-info requires protocol v2"
+-msgstr ""
+-
+-#: transport-helper.c
+ msgid "'option' without a matching 'ok/error' directive"
+ msgstr ""
+ 
+@@ -24630,10 +24329,6 @@
+ msgstr ""
+ 
+ #: transport.c
+-msgid "wrong protocol version. expected v2"
+-msgstr ""
+-
+-#: transport.c
+ msgid "server does not support wait-for-done"
+ msgstr ""
+ 
