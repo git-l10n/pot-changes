@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2022-08-08 15:58+0000\n"
+"POT-Creation-Date: 2022-08-08 20:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -812,7 +812,7 @@ msgstr ""
 #: builtin/push.c:668 builtin/push.c:674 builtin/push.c:679
 #: builtin/rebase.c:1233 builtin/rebase.c:1235 builtin/rebase.c:1239
 #: builtin/repack.c:810 builtin/repack.c:816 builtin/repack.c:818
-#: builtin/repack.c:857 builtin/reset.c:433 builtin/reset.c:469
+#: builtin/repack.c:857 builtin/reset.c:351 builtin/reset.c:387
 #: builtin/rev-list.c:536 builtin/show-branch.c:711 builtin/show-branch.c:716
 #: builtin/stash.c:1746 builtin/stash.c:1749 builtin/submodule--helper.c:1192
 #: builtin/submodule--helper.c:2959 builtin/tag.c:527 builtin/tag.c:573
@@ -1283,7 +1283,7 @@ msgid_plural "%d lines applied after fixing whitespace errors."
 msgstr[0] ""
 msgstr[1] ""
 
-#: apply.c:5016 builtin/add.c:695 builtin/mv.c:537 builtin/rm.c:430
+#: apply.c:5016 builtin/add.c:695 builtin/mv.c:537 builtin/rm.c:433
 msgid "Unable to write new index file"
 msgstr ""
 
@@ -1474,7 +1474,7 @@ msgstr ""
 msgid "cannot read '%s'"
 msgstr ""
 
-#: archive.c:436 builtin/add.c:223 builtin/add.c:662 builtin/rm.c:334
+#: archive.c:436 builtin/add.c:223 builtin/add.c:662 builtin/rm.c:337
 #, c-format
 msgid "pathspec '%s' did not match any files"
 msgstr ""
@@ -1601,7 +1601,7 @@ msgstr ""
 #: archive.c:629 builtin/add.c:535 builtin/add.c:567 builtin/checkout.c:1792
 #: builtin/clone.c:1117 builtin/clone.c:1120 builtin/commit.c:371
 #: builtin/fast-export.c:1230 builtin/index-pack.c:1854 builtin/log.c:2223
-#: builtin/reset.c:442 builtin/reset.c:500 builtin/rm.c:281
+#: builtin/reset.c:360 builtin/reset.c:418 builtin/rm.c:281
 #: builtin/stash.c:1758 builtin/worktree.c:580 builtin/worktree.c:781
 #: fetch-pack.c:335 http-fetch.c:144 http-fetch.c:153 revision.c:2962
 #, c-format
@@ -2017,7 +2017,7 @@ msgstr ""
 msgid "interactive picking"
 msgstr ""
 
-#: builtin/add.c:376 builtin/checkout.c:1609 builtin/reset.c:417
+#: builtin/add.c:376 builtin/checkout.c:1609 builtin/reset.c:335
 msgid "select hunks interactively"
 msgstr ""
 
@@ -2113,7 +2113,7 @@ msgid "--chmod param '%s' must be either -x or +x"
 msgstr ""
 
 #: builtin/add.c:560 builtin/checkout.c:1780 builtin/commit.c:365
-#: builtin/reset.c:436 builtin/rm.c:275 builtin/stash.c:1752
+#: builtin/reset.c:354 builtin/rm.c:275 builtin/stash.c:1752
 #, c-format
 msgid "'%s' and pathspec arguments cannot be used together"
 msgstr ""
@@ -2133,7 +2133,7 @@ msgstr ""
 #: builtin/add.c:591 builtin/check-ignore.c:183 builtin/checkout.c:532
 #: builtin/checkout.c:745 builtin/clean.c:1016 builtin/commit.c:379
 #: builtin/diff-tree.c:122 builtin/grep.c:521 builtin/mv.c:194
-#: builtin/reset.c:506 builtin/rm.c:293 builtin/submodule--helper.c:188
+#: builtin/reset.c:424 builtin/rm.c:295 builtin/submodule--helper.c:188
 #: builtin/submodule--helper.c:3233 read-cache.c:2099 read-cache.c:2423
 #: rerere.c:549 rerere.c:583 rerere.c:1096 submodule.c:1811
 msgid "index file corrupt"
@@ -2393,8 +2393,8 @@ msgstr ""
 msgid "unable to write new index file"
 msgstr ""
 
-#: builtin/am.c:2042 builtin/am.c:2046 builtin/am.c:2058 builtin/reset.c:455
-#: builtin/reset.c:463
+#: builtin/am.c:2042 builtin/am.c:2046 builtin/am.c:2058 builtin/reset.c:373
+#: builtin/reset.c:381
 #, c-format
 msgid "Could not parse object '%s'."
 msgstr ""
@@ -11704,7 +11704,7 @@ msgstr ""
 msgid "ignoring invalid allow_rerere_autoupdate: '%s'"
 msgstr ""
 
-#: builtin/rebase.c:566 builtin/rebase.c:1338 builtin/rm.c:409 sequencer.c:388
+#: builtin/rebase.c:566 builtin/rebase.c:1338 builtin/rm.c:412 sequencer.c:388
 #: sequencer.c:5014
 #, c-format
 msgid "could not remove '%s'"
@@ -13211,81 +13211,81 @@ msgstr ""
 msgid "HEAD is now at %s"
 msgstr ""
 
-#: builtin/reset.c:304
+#: builtin/reset.c:222
 #, c-format
 msgid "Cannot do a %s reset in the middle of a merge."
 msgstr ""
 
-#: builtin/reset.c:402 builtin/stash.c:646 builtin/stash.c:715
+#: builtin/reset.c:320 builtin/stash.c:646 builtin/stash.c:715
 #: builtin/stash.c:738
 msgid "be quiet, only report errors"
 msgstr ""
 
-#: builtin/reset.c:404
+#: builtin/reset.c:322
 msgid "skip refreshing the index after reset"
 msgstr ""
 
-#: builtin/reset.c:406
+#: builtin/reset.c:324
 msgid "reset HEAD and index"
 msgstr ""
 
-#: builtin/reset.c:407
+#: builtin/reset.c:325
 msgid "reset only HEAD"
 msgstr ""
 
-#: builtin/reset.c:409 builtin/reset.c:411
+#: builtin/reset.c:327 builtin/reset.c:329
 msgid "reset HEAD, index and working tree"
 msgstr ""
 
-#: builtin/reset.c:413
+#: builtin/reset.c:331
 msgid "reset HEAD but keep local changes"
 msgstr ""
 
-#: builtin/reset.c:419
+#: builtin/reset.c:337
 msgid "record only the fact that removed paths will be added later"
 msgstr ""
 
-#: builtin/reset.c:452
+#: builtin/reset.c:370
 #, c-format
 msgid "Failed to resolve '%s' as a valid revision."
 msgstr ""
 
-#: builtin/reset.c:460
+#: builtin/reset.c:378
 #, c-format
 msgid "Failed to resolve '%s' as a valid tree."
 msgstr ""
 
-#: builtin/reset.c:479
+#: builtin/reset.c:397
 msgid "--mixed with paths is deprecated; use 'git reset -- <paths>' instead."
 msgstr ""
 
-#: builtin/reset.c:481
+#: builtin/reset.c:399
 #, c-format
 msgid "Cannot do %s reset with paths."
 msgstr ""
 
-#: builtin/reset.c:496
+#: builtin/reset.c:414
 #, c-format
 msgid "%s reset is not allowed in a bare repository"
 msgstr ""
 
-#: builtin/reset.c:527
+#: builtin/reset.c:445
 msgid "Unstaged changes after reset:"
 msgstr ""
 
-#: builtin/reset.c:530
+#: builtin/reset.c:448
 #, c-format
 msgid ""
 "It took %.2f seconds to refresh the index after reset.  You can use\n"
 "'--no-refresh' to avoid this."
 msgstr ""
 
-#: builtin/reset.c:547
+#: builtin/reset.c:465
 #, c-format
 msgid "Could not reset index file to revision '%s'."
 msgstr ""
 
-#: builtin/reset.c:552
+#: builtin/reset.c:470
 msgid "Could not write new index file."
 msgstr ""
 
@@ -13544,16 +13544,16 @@ msgstr ""
 msgid "No pathspec was given. Which files should I remove?"
 msgstr ""
 
-#: builtin/rm.c:315
+#: builtin/rm.c:318
 msgid "please stage your changes to .gitmodules or stash them to proceed"
 msgstr ""
 
-#: builtin/rm.c:337
+#: builtin/rm.c:340
 #, c-format
 msgid "not removing '%s' recursively without -r"
 msgstr ""
 
-#: builtin/rm.c:385
+#: builtin/rm.c:388
 #, c-format
 msgid "git rm: unable to remove %s"
 msgstr ""
@@ -23776,61 +23776,53 @@ msgstr ""
 msgid "failed to stat '%*s%s%s'"
 msgstr ""
 
-#: setup.c:1449
+#: setup.c:1452
 msgid "Unable to read current working directory"
 msgstr ""
 
-#: setup.c:1458 setup.c:1464
+#: setup.c:1461 setup.c:1467
 #, c-format
 msgid "cannot change to '%s'"
 msgstr ""
 
-#: setup.c:1469
+#: setup.c:1472
 #, c-format
 msgid "not a git repository (or any of the parent directories): %s"
 msgstr ""
 
-#: setup.c:1475
+#: setup.c:1478
 #, c-format
 msgid ""
 "not a git repository (or any parent up to mount point %s)\n"
 "Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set)."
 msgstr ""
 
-#: setup.c:1488
-msgid ""
-"\n"
-"\n"
-"Set the environment variable GIT_TEST_DEBUG_UNSAFE_DIRECTORIES=true and run\n"
-"again for more information."
-msgstr ""
-
-#: setup.c:1495
+#: setup.c:1489
 #, c-format
 msgid ""
 "detected dubious ownership in repository at '%s'\n"
-"To add an exception for this directory, call:\n"
+"%sTo add an exception for this directory, call:\n"
 "\n"
-"\tgit config --global --add safe.directory %s%s"
+"\tgit config --global --add safe.directory %s"
 msgstr ""
 
-#: setup.c:1505
+#: setup.c:1500
 #, c-format
 msgid "cannot use bare repository '%s' (safe.bareRepository is '%s')"
 msgstr ""
 
-#: setup.c:1631
+#: setup.c:1627
 #, c-format
 msgid ""
 "problem with core.sharedRepository filemode value (0%.3o).\n"
 "The owner of files must always have read and write permissions."
 msgstr ""
 
-#: setup.c:1693
+#: setup.c:1689
 msgid "fork failed"
 msgstr ""
 
-#: setup.c:1698
+#: setup.c:1694
 msgid "setsid failed"
 msgstr ""
 
