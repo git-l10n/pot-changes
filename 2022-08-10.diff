@@ -1,0 +1,81 @@
+
+
+#################### Wed, 10 Aug 2022 23:57:46 +0000 ####################
+
+--- po/git.pot.old	2022-08-10 23:57:46.172165263 +0000
++++ po/git.pot.new	2022-08-10 23:57:46.296172778 +0000
+@@ -3413,7 +3413,7 @@
+ msgstr ""
+ 
+ #: builtin/bugreport.c
+-msgid "git bugreport [-o|--output-directory <file>] [-s|--suffix <format>]"
++msgid "git bugreport [-o|--output-directory <file>] [-s|--suffix <format>] [--diagnose[=<mode>]"
+ msgstr ""
+ 
+ #: builtin/bugreport.c
+@@ -3435,16 +3435,13 @@
+ "You can delete any lines you don't wish to share.\n"
+ msgstr ""
+ 
+-#: builtin/bugreport.c
+-msgid "diagnose mode must be either 'basic' or 'all'"
+-msgstr ""
+-
+-#: builtin/bugreport.c
+-msgid "(basic|all)"
++#: builtin/bugreport.c builtin/commit.c builtin/fast-export.c builtin/rebase.c
++#: parse-options.h
++msgid "mode"
+ msgstr ""
+ 
+ #: builtin/bugreport.c
+-msgid "create an additional zip archive of detailed diagnostics"
++msgid "create an additional zip archive of detailed diagnostics (default 'stats')"
+ msgstr ""
+ 
+ #: builtin/bugreport.c
+@@ -5414,10 +5411,6 @@
+ msgid "terminate entries with NUL"
+ msgstr ""
+ 
+-#: builtin/commit.c builtin/fast-export.c builtin/rebase.c parse-options.h
+-msgid "mode"
+-msgstr ""
+-
+ #: builtin/commit.c
+ msgid "show untracked files, optional modes: all, normal, no. (Default: all)"
+ msgstr ""
+@@ -6126,7 +6119,7 @@
+ msgstr ""
+ 
+ #: builtin/diagnose.c
+-msgid "git diagnose [-o|--output-directory <file>] [-s|--suffix <format>] [-a|--all]"
++msgid "git diagnose [-o|--output-directory <path>] [-s|--suffix <format>] [--mode=<mode>]"
+ msgstr ""
+ 
+ #: builtin/diagnose.c
+@@ -6138,7 +6131,11 @@
+ msgstr ""
+ 
+ #: builtin/diagnose.c
+-msgid "collect complete diagnostic information"
++msgid "(stats|all)"
++msgstr ""
++
++#: builtin/diagnose.c
++msgid "specify the content of the diagnostic archive"
+ msgstr ""
+ 
+ #: builtin/diff-tree.c
+@@ -17755,6 +17752,11 @@
+ msgstr ""
+ 
+ #: diagnose.c
++#, c-format
++msgid "invalid --%s value '%s'"
++msgstr ""
++
++#: diagnose.c
+ #, c-format
+ msgid "could not archive missing directory '%s'"
+ msgstr ""

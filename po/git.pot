@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2022-08-08 20:57+0000\n"
+"POT-Creation-Date: 2022-08-10 23:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -211,8 +211,8 @@ msgid "unstaged"
 msgstr ""
 
 #: add-interactive.c:1157 apply.c:5043 apply.c:5046 builtin/am.c:2373
-#: builtin/am.c:2376 builtin/bugreport.c:135 builtin/clone.c:134
-#: builtin/diagnose.c:22 builtin/fetch.c:154 builtin/merge.c:287
+#: builtin/am.c:2376 builtin/bugreport.c:113 builtin/clone.c:134
+#: builtin/diagnose.c:21 builtin/fetch.c:154 builtin/merge.c:287
 #: builtin/pull.c:195 builtin/submodule--helper.c:1757
 #: builtin/submodule--helper.c:1760 builtin/submodule--helper.c:2636
 #: builtin/submodule--helper.c:2825 git-add--interactive.perl:213
@@ -1023,7 +1023,7 @@ msgstr ""
 msgid "patch failed: %s:%ld"
 msgstr ""
 
-#: apply.c:3385 builtin/mv.c:479
+#: apply.c:3385 builtin/mv.c:495
 #, c-format
 msgid "cannot checkout %s"
 msgstr ""
@@ -1283,7 +1283,7 @@ msgid_plural "%d lines applied after fixing whitespace errors."
 msgstr[0] ""
 msgstr[1] ""
 
-#: apply.c:5016 builtin/add.c:695 builtin/mv.c:537 builtin/rm.c:433
+#: apply.c:5016 builtin/add.c:695 builtin/mv.c:553 builtin/rm.c:433
 msgid "Unable to write new index file"
 msgstr ""
 
@@ -2496,9 +2496,9 @@ msgstr ""
 msgid "n"
 msgstr ""
 
-#: builtin/am.c:2385 builtin/branch.c:690 builtin/bugreport.c:137
+#: builtin/am.c:2385 builtin/branch.c:690 builtin/bugreport.c:115
 #: builtin/cat-file.c:1040 builtin/cat-file.c:1044 builtin/cat-file.c:1049
-#: builtin/diagnose.c:24 builtin/for-each-ref.c:41 builtin/ls-files.c:763
+#: builtin/diagnose.c:23 builtin/for-each-ref.c:41 builtin/ls-files.c:763
 #: builtin/ls-tree.c:357 builtin/replace.c:558 builtin/tag.c:480
 #: builtin/verify-tag.c:38
 msgid "format"
@@ -2600,7 +2600,7 @@ msgstr ""
 msgid "git apply [<options>] [<patch>...]"
 msgstr ""
 
-#: builtin/archive.c:18 diagnose.c:150
+#: builtin/archive.c:18 diagnose.c:186
 msgid "could not redirect output"
 msgstr ""
 
@@ -3520,32 +3520,34 @@ msgid ""
 "'--set-upstream-to' instead."
 msgstr ""
 
-#: builtin/bugreport.c:22
+#: builtin/bugreport.c:17
 msgid "git version:\n"
 msgstr ""
 
-#: builtin/bugreport.c:28
+#: builtin/bugreport.c:23
 #, c-format
 msgid "uname() failed with error '%s' (%d)\n"
 msgstr ""
 
-#: builtin/bugreport.c:38
+#: builtin/bugreport.c:33
 msgid "compiler info: "
 msgstr ""
 
-#: builtin/bugreport.c:41
+#: builtin/bugreport.c:36
 msgid "libc info: "
 msgstr ""
 
-#: builtin/bugreport.c:55
+#: builtin/bugreport.c:50
 msgid "not run from a git repository - no hooks to show\n"
 msgstr ""
 
-#: builtin/bugreport.c:68
-msgid "git bugreport [-o|--output-directory <file>] [-s|--suffix <format>]"
+#: builtin/bugreport.c:63
+msgid ""
+"git bugreport [-o|--output-directory <file>] [-s|--suffix <format>] [--"
+"diagnose[=<mode>]"
 msgstr ""
 
-#: builtin/bugreport.c:75
+#: builtin/bugreport.c:70
 msgid ""
 "Thank you for filling out a Git bug report!\n"
 "Please answer the following questions to help us understand your issue.\n"
@@ -3564,50 +3566,49 @@ msgid ""
 "You can delete any lines you don't wish to share.\n"
 msgstr ""
 
-#: builtin/bugreport.c:112
-msgid "diagnose mode must be either 'basic' or 'all'"
+#: builtin/bugreport.c:110 builtin/commit.c:1501 builtin/commit.c:1505
+#: builtin/commit.c:1668 builtin/fast-export.c:1172 builtin/fast-export.c:1175
+#: builtin/fast-export.c:1178 builtin/rebase.c:1149 parse-options.h:387
+msgid "mode"
 msgstr ""
 
-#: builtin/bugreport.c:132
-msgid "(basic|all)"
+#: builtin/bugreport.c:111
+msgid ""
+"create an additional zip archive of detailed diagnostics (default 'stats')"
 msgstr ""
 
-#: builtin/bugreport.c:133
-msgid "create an additional zip archive of detailed diagnostics"
-msgstr ""
-
-#: builtin/bugreport.c:136
+#: builtin/bugreport.c:114
 msgid "specify a destination for the bugreport file(s)"
 msgstr ""
 
-#: builtin/bugreport.c:138
+#: builtin/bugreport.c:116
 msgid "specify a strftime format suffix for the filename(s)"
 msgstr ""
 
-#: builtin/bugreport.c:161 builtin/diagnose.c:50
+#: builtin/bugreport.c:139 builtin/diagnose.c:49
 #, c-format
 msgid "could not create leading directories for '%s'"
 msgstr ""
 
-#: builtin/bugreport.c:174 builtin/diagnose.c:56
+#: builtin/bugreport.c:152 builtin/diagnose.c:55
 #, c-format
 msgid "unable to create diagnostics archive %s"
 msgstr ""
 
-#: builtin/bugreport.c:182
+#: builtin/bugreport.c:160
 msgid "System Info"
 msgstr ""
 
-#: builtin/bugreport.c:185
+#: builtin/bugreport.c:163
 msgid "Enabled Hooks"
 msgstr ""
 
-#: builtin/bugreport.c:192
+#: builtin/bugreport.c:170
 #, c-format
 msgid "unable to write to %s"
 msgstr ""
 
-#: builtin/bugreport.c:202
+#: builtin/bugreport.c:180
 #, c-format
 msgid "Created new report at '%s'.\n"
 msgstr ""
@@ -5593,12 +5594,6 @@ msgstr ""
 msgid "terminate entries with NUL"
 msgstr ""
 
-#: builtin/commit.c:1501 builtin/commit.c:1505 builtin/commit.c:1668
-#: builtin/fast-export.c:1172 builtin/fast-export.c:1175
-#: builtin/fast-export.c:1178 builtin/rebase.c:1149 parse-options.h:387
-msgid "mode"
-msgstr ""
-
 #: builtin/commit.c:1502 builtin/commit.c:1668
 msgid "show untracked files, optional modes: all, normal, no. (Default: all)"
 msgstr ""
@@ -6314,21 +6309,26 @@ msgstr ""
 msgid "option '%s' and commit-ishes cannot be used together"
 msgstr ""
 
-#: builtin/diagnose.c:7
+#: builtin/diagnose.c:6
 msgid ""
-"git diagnose [-o|--output-directory <file>] [-s|--suffix <format>] [-a|--all]"
+"git diagnose [-o|--output-directory <path>] [-s|--suffix <format>] [--"
+"mode=<mode>]"
 msgstr ""
 
-#: builtin/diagnose.c:23
+#: builtin/diagnose.c:22
 msgid "specify a destination for the diagnostics archive"
 msgstr ""
 
-#: builtin/diagnose.c:25
+#: builtin/diagnose.c:24
 msgid "specify a strftime format suffix for the filename"
 msgstr ""
 
-#: builtin/diagnose.c:27
-msgid "collect complete diagnostic information"
+#: builtin/diagnose.c:25
+msgid "(stats|all)"
+msgstr ""
+
+#: builtin/diagnose.c:26
+msgid "specify the content of the diagnostic archive"
 msgstr ""
 
 #: builtin/diff-tree.c:157
@@ -10097,71 +10097,71 @@ msgstr ""
 msgid "destination '%s' is not a directory"
 msgstr ""
 
-#: builtin/mv.c:241
+#: builtin/mv.c:251
 #, c-format
 msgid "Checking rename of '%s' to '%s'\n"
 msgstr ""
 
-#: builtin/mv.c:258 builtin/mv.c:263
+#: builtin/mv.c:268 builtin/mv.c:273
 msgid "bad source"
 msgstr ""
 
-#: builtin/mv.c:276 builtin/mv.c:346
+#: builtin/mv.c:286 builtin/mv.c:356
 msgid "destination exists"
 msgstr ""
 
-#: builtin/mv.c:284
+#: builtin/mv.c:294
 msgid "can not move directory into itself"
 msgstr ""
 
-#: builtin/mv.c:289
+#: builtin/mv.c:299
 msgid "cannot move directory over file"
 msgstr ""
 
-#: builtin/mv.c:304
+#: builtin/mv.c:314
 msgid "source directory is empty"
 msgstr ""
 
-#: builtin/mv.c:337
+#: builtin/mv.c:347
 msgid "not under version control"
 msgstr ""
 
-#: builtin/mv.c:341
+#: builtin/mv.c:351
 msgid "conflicted"
 msgstr ""
 
-#: builtin/mv.c:354 builtin/mv.c:376
+#: builtin/mv.c:364 builtin/mv.c:386
 #, c-format
 msgid "overwriting '%s'"
 msgstr ""
 
-#: builtin/mv.c:357
+#: builtin/mv.c:367
 msgid "Cannot overwrite"
 msgstr ""
 
-#: builtin/mv.c:362
+#: builtin/mv.c:372
 msgid "multiple sources for the same target"
 msgstr ""
 
-#: builtin/mv.c:366
+#: builtin/mv.c:376
 msgid "destination directory does not exist"
 msgstr ""
 
-#: builtin/mv.c:373
+#: builtin/mv.c:383
 msgid "destination exists in the index"
 msgstr ""
 
-#: builtin/mv.c:408
+#: builtin/mv.c:418
 #, c-format
 msgid "%s, source=%s, destination=%s"
 msgstr ""
 
-#: builtin/mv.c:439
+#: builtin/mv.c:449
 #, c-format
 msgid "Renaming %s to %s\n"
 msgstr ""
 
-#: builtin/mv.c:447 builtin/remote.c:816 builtin/repack.c:1022
+#: builtin/mv.c:457 builtin/remote.c:816 builtin/repack.c:1022
 #, c-format
 msgid "renaming '%s' failed"
 msgstr ""
@@ -17728,7 +17728,7 @@ msgid "could not find enlistment root"
 msgstr ""
 
 #: contrib/scalar/scalar.c:91 contrib/scalar/scalar.c:352
-#: contrib/scalar/scalar.c:437 contrib/scalar/scalar.c:606
+#: contrib/scalar/scalar.c:437 contrib/scalar/scalar.c:605
 #, c-format
 msgid "could not switch to '%s'"
 msgstr ""
@@ -17820,80 +17820,80 @@ msgstr ""
 msgid "scalar diagnose [<enlistment>]"
 msgstr ""
 
-#: contrib/scalar/scalar.c:532
+#: contrib/scalar/scalar.c:531
 msgid "`scalar list` does not take arguments"
 msgstr ""
 
-#: contrib/scalar/scalar.c:545
+#: contrib/scalar/scalar.c:544
 msgid "scalar register [<enlistment>]"
 msgstr ""
 
-#: contrib/scalar/scalar.c:572
+#: contrib/scalar/scalar.c:571
 msgid "reconfigure all registered enlistments"
 msgstr ""
 
-#: contrib/scalar/scalar.c:576
+#: contrib/scalar/scalar.c:575
 msgid "scalar reconfigure [--all | <enlistment>]"
 msgstr ""
 
-#: contrib/scalar/scalar.c:594
+#: contrib/scalar/scalar.c:593
 msgid "--all or <enlistment>, but not both"
 msgstr ""
 
-#: contrib/scalar/scalar.c:609
+#: contrib/scalar/scalar.c:608
 #, c-format
 msgid "git repository gone in '%s'"
 msgstr ""
 
-#: contrib/scalar/scalar.c:649
+#: contrib/scalar/scalar.c:648
 msgid ""
 "scalar run <task> [<enlistment>]\n"
 "Tasks:\n"
 msgstr ""
 
-#: contrib/scalar/scalar.c:667
+#: contrib/scalar/scalar.c:666
 #, c-format
 msgid "no such task: '%s'"
 msgstr ""
 
-#: contrib/scalar/scalar.c:717
+#: contrib/scalar/scalar.c:716
 msgid "scalar unregister [<enlistment>]"
 msgstr ""
 
-#: contrib/scalar/scalar.c:764
+#: contrib/scalar/scalar.c:763
 msgid "scalar delete <enlistment>"
 msgstr ""
 
-#: contrib/scalar/scalar.c:779
+#: contrib/scalar/scalar.c:778
 msgid "refusing to delete current working directory"
 msgstr ""
 
-#: contrib/scalar/scalar.c:794
+#: contrib/scalar/scalar.c:793
 msgid "include Git version"
 msgstr ""
 
-#: contrib/scalar/scalar.c:796
+#: contrib/scalar/scalar.c:795
 msgid "include Git's build options"
 msgstr ""
 
-#: contrib/scalar/scalar.c:800
+#: contrib/scalar/scalar.c:799
 msgid "scalar verbose [-v | --verbose] [--build-options]"
 msgstr ""
 
-#: contrib/scalar/scalar.c:842
+#: contrib/scalar/scalar.c:841
 msgid "-C requires a <directory>"
 msgstr ""
 
-#: contrib/scalar/scalar.c:844
+#: contrib/scalar/scalar.c:843
 #, c-format
 msgid "could not change to '%s'"
 msgstr ""
 
-#: contrib/scalar/scalar.c:850
+#: contrib/scalar/scalar.c:849
 msgid "-c requires a <key>=<value> argument"
 msgstr ""
 
-#: contrib/scalar/scalar.c:868
+#: contrib/scalar/scalar.c:867
 msgid ""
 "scalar [-C <directory>] [-c <key>=<value>] <command> [<options>]\n"
 "\n"
@@ -18137,26 +18137,31 @@ msgstr ""
 msgid "Marked %d islands, done.\n"
 msgstr ""
 
-#: diagnose.c:100
+#: diagnose.c:38
+#, c-format
+msgid "invalid --%s value '%s'"
+msgstr ""
+
+#: diagnose.c:131
 #, c-format
 msgid "could not archive missing directory '%s'"
 msgstr ""
 
-#: diagnose.c:103 dir.c:2440
+#: diagnose.c:134 dir.c:2440
 #, c-format
 msgid "could not open directory '%s'"
 msgstr ""
 
-#: diagnose.c:121
+#: diagnose.c:152
 #, c-format
 msgid "skipping '%s', which is neither file nor directory"
 msgstr ""
 
-#: diagnose.c:144
+#: diagnose.c:180
 msgid "could not duplicate stdout"
 msgstr ""
 
-#: diagnose.c:197
+#: diagnose.c:233
 msgid "failed to write archive"
 msgstr ""
 
@@ -24527,7 +24532,7 @@ msgstr ""
 msgid "empty filename in tree entry"
 msgstr ""
 
-#: tree-walk.c:118
+#: tree-walk.c:122
 msgid "too-short tree file"
 msgstr ""
 
