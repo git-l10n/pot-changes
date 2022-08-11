@@ -1,0 +1,256 @@
+
+
+#################### Thu, 11 Aug 2022 01:20:59 +0000 ####################
+
+--- po/git.pot.old	2022-08-11 01:20:59.811525882 +0000
++++ po/git.pot.new	2022-08-11 01:20:59.911527859 +0000
+@@ -1125,7 +1125,7 @@
+ msgid "unable to add cache entry for %s"
+ msgstr ""
+ 
+-#: apply.c builtin/bisect.c builtin/gc.c
++#: apply.c builtin/bisect.c builtin/gc.c merge-strategies.c
+ #, c-format
+ msgid "failed to write to '%s'"
+ msgstr ""
+@@ -2287,8 +2287,8 @@
+ "You might run `git rm` on a file to accept \"deleted by them\" for it."
+ msgstr ""
+ 
+-#: builtin/am.c builtin/checkout.c builtin/clone.c builtin/stash.c merge.c
+-#: rerere.c
++#: builtin/am.c builtin/checkout.c builtin/clone.c builtin/stash.c
++#: merge-strategies.c merge.c rerere.c
+ msgid "unable to write new index file"
+ msgstr ""
+ 
+@@ -4365,7 +4365,7 @@
+ msgid "git clean [-d] [-f] [-i] [-n] [-q] [-e <pattern>] [-x | -X] [--] <paths>..."
+ msgstr ""
+ 
+-#: builtin/clean.c
++#: builtin/clean.c merge-strategies.c
+ #, c-format
+ msgid "Removing %s\n"
+ msgstr ""
+@@ -9293,6 +9293,26 @@
+ msgid "set labels for file1/orig-file/file2"
+ msgstr ""
+ 
++#: builtin/merge-index.c
++#, c-format
++msgid "git merge-index: unknown internal program %s"
++msgstr ""
++
++#: builtin/merge-one-file.c
++#, c-format
++msgid "invalid '%s' mode: expected nothing, got '%c'"
++msgstr ""
++
++#: builtin/merge-one-file.c
++#, c-format
++msgid "invalid '%s' mode: %o"
++msgstr ""
++
++#: builtin/merge-one-file.c
++#, c-format
++msgid "no '%s' object id given, but a mode was still given."
++msgstr ""
++
+ #: builtin/merge-recursive.c
+ #, c-format
+ msgid "unknown option %s"
+@@ -9676,7 +9696,7 @@
+ msgid "Updating %s..%s\n"
+ msgstr ""
+ 
+-#: builtin/merge.c merge-ort-wrappers.c merge-recursive.c
++#: builtin/merge.c merge-ort-wrappers.c merge-recursive.c merge-strategies.c
+ #, c-format
+ msgid ""
+ "Your local changes to the following files would be overwritten by merge:\n"
+@@ -14901,6 +14921,11 @@
+ msgid " OK"
+ msgstr ""
+ 
++#: builtin/update-index.c merge-strategies.c
++#, c-format
++msgid "Invalid path '%s'"
++msgstr ""
++
+ #: builtin/update-index.c
+ msgid "git update-index [<options>] [--] [<file>...]"
+ msgstr ""
+@@ -19017,42 +19042,6 @@
+ msgid "invalid argument %s, expecting --"
+ msgstr ""
+ 
+-#: git-merge-octopus.sh git-merge-resolve.sh
+-msgid "Error: Your local changes to the following files would be overwritten by merge"
+-msgstr ""
+-
+-#: git-merge-octopus.sh
+-msgid "Automated merge did not work."
+-msgstr ""
+-
+-#: git-merge-octopus.sh
+-msgid "Should not be doing an octopus."
+-msgstr ""
+-
+-#: git-merge-octopus.sh
+-#, sh-format
+-msgid "Unable to find common commit with $pretty_name"
+-msgstr ""
+-
+-#: git-merge-octopus.sh
+-#, sh-format
+-msgid "Already up to date with $pretty_name"
+-msgstr ""
+-
+-#: git-merge-octopus.sh
+-#, sh-format
+-msgid "Fast-forwarding to: $pretty_name"
+-msgstr ""
+-
+-#: git-merge-octopus.sh
+-#, sh-format
+-msgid "Trying simple merge with $pretty_name"
+-msgstr ""
+-
+-#: git-merge-octopus.sh
+-msgid "Simple merge did not work, trying automatic merge."
+-msgstr ""
+-
+ #: git-send-email.perl
+ msgid "local zone differs from GMT by a non-minute interval\n"
+ msgstr ""
+@@ -20045,7 +20034,7 @@
+ "%s"
+ msgstr ""
+ 
+-#: merge-ort.c merge-recursive.c
++#: merge-ort.c merge-recursive.c merge-strategies.c
+ msgid "Failed to execute internal merge"
+ msgstr ""
+ 
+@@ -20476,6 +20465,120 @@
+ msgid "Could not parse object '%s'"
+ msgstr ""
+ 
++#: merge-strategies.c
++#, c-format
++msgid "%s: cannot checkout file"
++msgstr ""
++
++#: merge-strategies.c
++#, c-format
++msgid "File %s deleted on one branch but had its permissions changed on the other."
++msgstr ""
++
++#: merge-strategies.c
++#, c-format
++msgid "%s: Not merging symbolic link changes."
++msgstr ""
++
++#: merge-strategies.c
++#, c-format
++msgid "%s: Not merging conflicting submodule changes."
++msgstr ""
++
++#: merge-strategies.c
++#, c-format
++msgid "Auto-merging %s\n"
++msgstr ""
++
++#: merge-strategies.c
++#, c-format
++msgid "Added %s in both, but differently.\n"
++msgstr ""
++
++#: merge-strategies.c
++#, c-format
++msgid "content conflict in %s"
++msgstr ""
++
++#: merge-strategies.c
++#, c-format
++msgid "permission conflict: %o->%o,%o in %s"
++msgstr ""
++
++#: merge-strategies.c
++#, c-format
++msgid "failed to open file '%s'"
++msgstr ""
++
++#: merge-strategies.c
++#, c-format
++msgid "Adding %s\n"
++msgstr ""
++
++#: merge-strategies.c
++#, c-format
++msgid "untracked %s is overwritten by the merge."
++msgstr ""
++
++#: merge-strategies.c
++#, c-format
++msgid "File %s added identically in both branches, but permissions conflict %o->%o."
++msgstr ""
++
++#: merge-strategies.c
++#, c-format
++msgid "%s: Not handling case %s -> %s -> %s"
++msgstr ""
++
++#: merge-strategies.c
++#, c-format
++msgid "%s is not in the cache"
++msgstr ""
++
++#: merge-strategies.c
++msgid "merge program failed"
++msgstr ""
++
++#: merge-strategies.c
++msgid "Trying simple merge."
++msgstr ""
++
++#: merge-strategies.c
++msgid "Simple merge failed, trying Automatic merge."
++msgstr ""
++
++#: merge-strategies.c
++#, c-format
++msgid "Fast-forwarding to: %s\n"
++msgstr ""
++
++#: merge-strategies.c
++#, c-format
++msgid "Trying simple merge with %s\n"
++msgstr ""
++
++#: merge-strategies.c
++msgid "Simple merge did not work, trying automatic merge."
++msgstr ""
++
++#: merge-strategies.c
++#, c-format
++msgid "Unable to find common commit with %s"
++msgstr ""
++
++#: merge-strategies.c
++#, c-format
++msgid "Already up to date with %s\n"
++msgstr ""
++
++#: merge-strategies.c
++msgid "Automated merge did not work."
++msgstr ""
++
++#: merge-strategies.c
++msgid "Should not be doing an octopus."
++msgstr ""
++
+ #: merge.c
+ msgid "failed to read the cache"
+ msgstr ""
