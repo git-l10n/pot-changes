@@ -1,0 +1,81 @@
+
+
+#################### Fri, 12 Aug 2022 21:57:34 +0000 ####################
+
+--- po/git.pot.old	2022-08-12 21:57:34.549970819 +0000
++++ po/git.pot.new	2022-08-12 21:57:34.653971363 +0000
+@@ -19885,6 +19885,11 @@
+ msgid "Failed to merge submodule %s (not checked out)"
+ msgstr ""
+ 
++#: merge-ort.c
++#, c-format
++msgid "Failed to merge submodule %s (no merge base)"
++msgstr ""
++
+ #: merge-ort.c merge-recursive.c
+ #, c-format
+ msgid "Failed to merge submodule %s (commits not present)"
+@@ -20038,6 +20043,62 @@
+ msgid "Note: %s not up to date and in way of checking out conflicted version; old copy renamed to %s"
+ msgstr ""
+ 
++#. TRANSLATORS: This is line item of submodule conflict message
++#. from print_submodule_conflict_suggestion() below. For RTL
++#. languages, the following swap is suggested:
++#.      " - %s\n" -> "%s - \n"
++#.
++#: merge-ort.c
++#, c-format
++msgid " - %s\n"
++msgstr ""
++
++#. TRANSLATORS: This is line item of submodule conflict message
++#. from print_submodule_conflict_suggestion() below. For RTL
++#. languages, the following swap is suggested:
++#.      "   %s\n" -> "%s   \n"
++#.
++#: merge-ort.c
++#, c-format
++msgid "   %s\n"
++msgstr ""
++
++#: merge-ort.c
++#, c-format
++msgid ""
++"Recursive merging with submodules currently only supports trivial cases.\n"
++"Please manually handle the merging of each conflicted submodule.\n"
++"This can be accomplished with the following steps:"
++msgstr ""
++
++#. TRANSLATORS: This is a line of advice to resolve a merge conflict
++#. in a submodule. The second argument is the abbreviated id of the
++#. commit that needs to be merged.
++#. E.g. - go to submodule (sub), and either merge commit abc1234"
++#.
++#: merge-ort.c
++#, c-format
++msgid ""
++"go to submodule (%s), and either merge commit %s\n"
++"or update to an existing commit which has merged those changes"
++msgstr ""
++
++#: merge-ort.c
++msgid "come back to superproject and run:"
++msgstr ""
++
++#: merge-ort.c
++msgid "to record the above merge or update"
++msgstr ""
++
++#: merge-ort.c
++msgid "resolve any other conflicts in the superproject"
++msgstr ""
++
++#: merge-ort.c
++msgid "commit the resulting index in the superproject"
++msgstr ""
++
+ #. TRANSLATORS: The %s arguments are: 1) tree hash of a merge
+ #. base, and 2-3) the trees for the two trees we're merging.
+ #.
