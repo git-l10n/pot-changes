@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2022-08-15 20:57+0000\n"
+"POT-Creation-Date: 2022-08-17 22:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -764,6 +764,21 @@ msgid ""
 "\n"
 msgstr ""
 
+#: advice.c:272
+#, c-format
+msgid ""
+"The following paths have been moved outside the\n"
+"sparse-checkout definition but are not sparse due to local\n"
+"modifications.\n"
+msgstr ""
+
+#: advice.c:279
+msgid ""
+"To correct the sparsity of these paths, do the following:\n"
+"* Use \"git add --sparse <paths>\" to update the index\n"
+"* Use \"git sparse-checkout reapply\" to apply the sparsity rules"
+msgstr ""
+
 #: alias.c:50
 msgid "cmdline ends with \\"
 msgstr ""
@@ -1008,7 +1023,7 @@ msgstr ""
 msgid "patch failed: %s:%ld"
 msgstr ""
 
-#: apply.c:3360 builtin/mv.c:438
+#: apply.c:3360 builtin/mv.c:495
 #, c-format
 msgid "cannot checkout %s"
 msgstr ""
@@ -1269,7 +1284,7 @@ msgid_plural "%d lines applied after fixing whitespace errors."
 msgstr[0] ""
 msgstr[1] ""
 
-#: apply.c:4975 builtin/add.c:695 builtin/mv.c:447 builtin/rm.c:433
+#: apply.c:4975 builtin/add.c:695 builtin/mv.c:553 builtin/rm.c:433
 msgid "Unable to write new index file"
 msgstr ""
 
@@ -1589,7 +1604,7 @@ msgstr ""
 #: builtin/fast-export.c:1230 builtin/index-pack.c:1854 builtin/log.c:2171
 #: builtin/reset.c:360 builtin/reset.c:418 builtin/rm.c:281
 #: builtin/stash.c:1735 builtin/worktree.c:580 builtin/worktree.c:781
-#: fetch-pack.c:335 http-fetch.c:144 http-fetch.c:153 revision.c:2962
+#: fetch-pack.c:336 http-fetch.c:144 http-fetch.c:153 revision.c:2962
 #, c-format
 msgid "the option '%s' requires '%s'"
 msgstr ""
@@ -1987,7 +2002,7 @@ msgstr ""
 msgid "The following paths are ignored by one of your .gitignore files:\n"
 msgstr ""
 
-#: builtin/add.c:372 builtin/clean.c:927 builtin/fetch.c:175 builtin/mv.c:163
+#: builtin/add.c:372 builtin/clean.c:927 builtin/fetch.c:175 builtin/mv.c:165
 #: builtin/prune-packed.c:14 builtin/pull.c:209 builtin/push.c:588
 #: builtin/remote.c:1469 builtin/rm.c:244 builtin/send-pack.c:194
 msgid "dry run"
@@ -1995,7 +2010,7 @@ msgstr ""
 
 #: builtin/add.c:373 builtin/check-ignore.c:22 builtin/commit.c:1483
 #: builtin/count-objects.c:98 builtin/fsck.c:827 builtin/log.c:2374
-#: builtin/mv.c:162 builtin/read-tree.c:120
+#: builtin/mv.c:164 builtin/read-tree.c:120
 msgid "be verbose"
 msgstr ""
 
@@ -2047,7 +2062,7 @@ msgstr ""
 msgid "check if - even missing - files are ignored in dry run"
 msgstr ""
 
-#: builtin/add.c:390 builtin/mv.c:167 builtin/rm.c:251
+#: builtin/add.c:390 builtin/mv.c:169 builtin/rm.c:251
 msgid "allow updating entries outside of the sparse-checkout cone"
 msgstr ""
 
@@ -2118,7 +2133,7 @@ msgstr ""
 
 #: builtin/add.c:591 builtin/check-ignore.c:183 builtin/checkout.c:532
 #: builtin/checkout.c:745 builtin/clean.c:1016 builtin/commit.c:379
-#: builtin/diff-tree.c:122 builtin/grep.c:521 builtin/mv.c:187
+#: builtin/diff-tree.c:122 builtin/grep.c:521 builtin/mv.c:194
 #: builtin/reset.c:424 builtin/rm.c:295 builtin/submodule--helper.c:200
 #: builtin/submodule--helper.c:3195 read-cache.c:2099 read-cache.c:2423
 #: rerere.c:549 rerere.c:583 rerere.c:1096 submodule.c:1832
@@ -2175,13 +2190,13 @@ msgid "fseek failed"
 msgstr ""
 
 #: builtin/am.c:757 builtin/am.c:849 builtin/rebase.c:701 sequencer.c:884
-#: wrapper.c:219 wrapper.c:389
+#: wrapper.c:197 wrapper.c:367
 #, c-format
 msgid "could not open '%s' for reading"
 msgstr ""
 
 #: builtin/am.c:766 builtin/rebase.c:655 sequencer.c:4153 strbuf.c:1187
-#: wrapper.c:217 wrapper.c:387
+#: wrapper.c:195 wrapper.c:365
 #, c-format
 msgid "could not open '%s' for writing"
 msgstr ""
@@ -4903,7 +4918,7 @@ msgstr ""
 msgid "Could not find remote branch %s to clone."
 msgstr ""
 
-#: builtin/clone.c:588 fetch-pack.c:2044
+#: builtin/clone.c:588 fetch-pack.c:2080
 msgid "remote did not send all necessary objects"
 msgstr ""
 
@@ -5022,7 +5037,7 @@ msgstr ""
 msgid "--filter is ignored in local clones; use file:// instead."
 msgstr ""
 
-#: builtin/clone.c:1179 fetch-pack.c:1193 fetch-pack.c:1544
+#: builtin/clone.c:1179 fetch-pack.c:1213 fetch-pack.c:1566
 msgid "source repository is shallow, reject to clone."
 msgstr ""
 
@@ -9814,7 +9829,7 @@ msgstr ""
 msgid "Bad value '%s' in environment '%s'"
 msgstr ""
 
-#: builtin/merge.c:1168 read-cache.c:3135 strbuf.c:1192 wrapper.c:723
+#: builtin/merge.c:1168 read-cache.c:3135 strbuf.c:1192 wrapper.c:701
 #, c-format
 msgid "could not close '%s'"
 msgstr ""
@@ -10042,94 +10057,98 @@ msgstr ""
 msgid "git mv [<options>] <source>... <destination>"
 msgstr ""
 
-#: builtin/mv.c:92
+#: builtin/mv.c:91
 #, c-format
 msgid "Directory %s is in index and no submodule?"
 msgstr ""
 
-#: builtin/mv.c:94
+#: builtin/mv.c:93
 msgid "Please stage your changes to .gitmodules or stash them to proceed"
 msgstr ""
 
-#: builtin/mv.c:112
+#: builtin/mv.c:111
 #, c-format
 msgid "%.*s is in index"
 msgstr ""
 
-#: builtin/mv.c:164
+#: builtin/mv.c:166
 msgid "force move/rename even if target exists"
 msgstr ""
 
-#: builtin/mv.c:166
+#: builtin/mv.c:168
 msgid "skip move/rename errors"
 msgstr ""
 
-#: builtin/mv.c:212
+#: builtin/mv.c:223
 #, c-format
 msgid "destination '%s' is not a directory"
 msgstr ""
 
-#: builtin/mv.c:224
+#: builtin/mv.c:251
 #, c-format
 msgid "Checking rename of '%s' to '%s'\n"
 msgstr ""
 
-#: builtin/mv.c:241 builtin/mv.c:246
+#: builtin/mv.c:268 builtin/mv.c:273
 msgid "bad source"
 msgstr ""
 
-#: builtin/mv.c:259 builtin/mv.c:325
+#: builtin/mv.c:286 builtin/mv.c:356
 msgid "destination exists"
 msgstr ""
 
-#: builtin/mv.c:267
+#: builtin/mv.c:294
 msgid "can not move directory into itself"
 msgstr ""
 
-#: builtin/mv.c:272
+#: builtin/mv.c:299
 msgid "cannot move directory over file"
 msgstr ""
 
-#: builtin/mv.c:287
+#: builtin/mv.c:314
 msgid "source directory is empty"
 msgstr ""
 
-#: builtin/mv.c:316
+#: builtin/mv.c:347
 msgid "not under version control"
 msgstr ""
 
-#: builtin/mv.c:320
+#: builtin/mv.c:351
 msgid "conflicted"
 msgstr ""
 
-#: builtin/mv.c:333
+#: builtin/mv.c:364 builtin/mv.c:386
 #, c-format
 msgid "overwriting '%s'"
 msgstr ""
 
-#: builtin/mv.c:336
+#: builtin/mv.c:367
 msgid "Cannot overwrite"
 msgstr ""
 
-#: builtin/mv.c:341
+#: builtin/mv.c:372
 msgid "multiple sources for the same target"
 msgstr ""
 
-#: builtin/mv.c:345
+#: builtin/mv.c:376
 msgid "destination directory does not exist"
 msgstr ""
 
-#: builtin/mv.c:375
+#: builtin/mv.c:383
+msgid "destination exists in the index"
+msgstr ""
+
+#: builtin/mv.c:418
 #, c-format
 msgid "%s, source=%s, destination=%s"
 msgstr ""
 
-#: builtin/mv.c:405
+#: builtin/mv.c:449
 #, c-format
 msgid "Renaming %s to %s\n"
 msgstr ""
 
-#: builtin/mv.c:412 builtin/remote.c:816 builtin/repack.c:1022
+#: builtin/mv.c:457 builtin/remote.c:816 builtin/repack.c:1022
 #, c-format
 msgid "renaming '%s' failed"
 msgstr ""
@@ -18795,170 +18814,170 @@ msgstr ""
 msgid "Server supports filter"
 msgstr ""
 
-#: fetch-pack.c:428 fetch-pack.c:1498
+#: fetch-pack.c:429 fetch-pack.c:1520
 #, c-format
 msgid "invalid shallow line: %s"
 msgstr ""
 
-#: fetch-pack.c:434 fetch-pack.c:1504
+#: fetch-pack.c:435 fetch-pack.c:1526
 #, c-format
 msgid "invalid unshallow line: %s"
 msgstr ""
 
-#: fetch-pack.c:436 fetch-pack.c:1506
+#: fetch-pack.c:437 fetch-pack.c:1528
 #, c-format
 msgid "object not found: %s"
 msgstr ""
 
-#: fetch-pack.c:439 fetch-pack.c:1509
+#: fetch-pack.c:440 fetch-pack.c:1531
 #, c-format
 msgid "error in object: %s"
 msgstr ""
 
-#: fetch-pack.c:441 fetch-pack.c:1511
+#: fetch-pack.c:442 fetch-pack.c:1533
 #, c-format
 msgid "no shallow found: %s"
 msgstr ""
 
-#: fetch-pack.c:444 fetch-pack.c:1515
+#: fetch-pack.c:445 fetch-pack.c:1537
 #, c-format
 msgid "expected shallow/unshallow, got %s"
 msgstr ""
 
-#: fetch-pack.c:484
+#: fetch-pack.c:495
 #, c-format
 msgid "got %s %d %s"
 msgstr ""
 
-#: fetch-pack.c:501
+#: fetch-pack.c:515
 #, c-format
 msgid "invalid commit %s"
 msgstr ""
 
-#: fetch-pack.c:532
+#: fetch-pack.c:550
 msgid "giving up"
 msgstr ""
 
-#: fetch-pack.c:545 progress.h:25
+#: fetch-pack.c:565 progress.h:25
 msgid "done"
 msgstr ""
 
-#: fetch-pack.c:557
+#: fetch-pack.c:577
 #, c-format
 msgid "got %s (%d) %s"
 msgstr ""
 
-#: fetch-pack.c:593
+#: fetch-pack.c:613
 #, c-format
 msgid "Marking %s as complete"
 msgstr ""
 
-#: fetch-pack.c:815
+#: fetch-pack.c:835
 #, c-format
 msgid "already have %s (%s)"
 msgstr ""
 
-#: fetch-pack.c:911
+#: fetch-pack.c:931
 msgid "fetch-pack: unable to fork off sideband demultiplexer"
 msgstr ""
 
-#: fetch-pack.c:919
+#: fetch-pack.c:939
 msgid "protocol error: bad pack header"
 msgstr ""
 
-#: fetch-pack.c:1009
+#: fetch-pack.c:1029
 #, c-format
 msgid "fetch-pack: unable to fork off %s"
 msgstr ""
 
-#: fetch-pack.c:1015
+#: fetch-pack.c:1035
 msgid "fetch-pack: invalid index-pack output"
 msgstr ""
 
-#: fetch-pack.c:1032
+#: fetch-pack.c:1052
 #, c-format
 msgid "%s failed"
 msgstr ""
 
-#: fetch-pack.c:1034
+#: fetch-pack.c:1054
 msgid "error in sideband demultiplexer"
 msgstr ""
 
-#: fetch-pack.c:1090
+#: fetch-pack.c:1110
 #, c-format
 msgid "Server version is %.*s"
 msgstr ""
 
-#: fetch-pack.c:1098 fetch-pack.c:1104 fetch-pack.c:1107 fetch-pack.c:1113
-#: fetch-pack.c:1117 fetch-pack.c:1121 fetch-pack.c:1125 fetch-pack.c:1129
-#: fetch-pack.c:1133 fetch-pack.c:1137 fetch-pack.c:1141 fetch-pack.c:1145
-#: fetch-pack.c:1151 fetch-pack.c:1157 fetch-pack.c:1162 fetch-pack.c:1167
+#: fetch-pack.c:1118 fetch-pack.c:1124 fetch-pack.c:1127 fetch-pack.c:1133
+#: fetch-pack.c:1137 fetch-pack.c:1141 fetch-pack.c:1145 fetch-pack.c:1149
+#: fetch-pack.c:1153 fetch-pack.c:1157 fetch-pack.c:1161 fetch-pack.c:1165
+#: fetch-pack.c:1171 fetch-pack.c:1177 fetch-pack.c:1182 fetch-pack.c:1187
 #, c-format
 msgid "Server supports %s"
 msgstr ""
 
-#: fetch-pack.c:1100
+#: fetch-pack.c:1120
 msgid "Server does not support shallow clients"
 msgstr ""
 
-#: fetch-pack.c:1160
+#: fetch-pack.c:1180
 msgid "Server does not support --shallow-since"
 msgstr ""
 
-#: fetch-pack.c:1165
+#: fetch-pack.c:1185
 msgid "Server does not support --shallow-exclude"
 msgstr ""
 
-#: fetch-pack.c:1169
+#: fetch-pack.c:1189
 msgid "Server does not support --deepen"
 msgstr ""
 
-#: fetch-pack.c:1171
+#: fetch-pack.c:1191
 msgid "Server does not support this repository's object format"
 msgstr ""
 
-#: fetch-pack.c:1184
+#: fetch-pack.c:1204
 msgid "no common commits"
 msgstr ""
 
-#: fetch-pack.c:1199 fetch-pack.c:1743
+#: fetch-pack.c:1219 fetch-pack.c:1779
 msgid "git fetch-pack: fetch failed."
 msgstr ""
 
-#: fetch-pack.c:1313
+#: fetch-pack.c:1333
 #, c-format
 msgid "mismatched algorithms: client %s; server %s"
 msgstr ""
 
-#: fetch-pack.c:1317
+#: fetch-pack.c:1337
 #, c-format
 msgid "the server does not support algorithm '%s'"
 msgstr ""
 
-#: fetch-pack.c:1350
+#: fetch-pack.c:1370
 msgid "Server does not support shallow requests"
 msgstr ""
 
-#: fetch-pack.c:1393 fetch-pack.c:2125
+#: fetch-pack.c:1415 fetch-pack.c:2173
 msgid "unable to write request to remote"
 msgstr ""
 
-#: fetch-pack.c:1417
+#: fetch-pack.c:1439
 #, c-format
 msgid "expected '%s', received '%s'"
 msgstr ""
 
-#: fetch-pack.c:1420
+#: fetch-pack.c:1442
 #, c-format
 msgid "expected '%s'"
 msgstr ""
 
-#: fetch-pack.c:1454
+#: fetch-pack.c:1476
 #, c-format
 msgid "unexpected acknowledgment line: '%s'"
 msgstr ""
 
-#: fetch-pack.c:1459
+#: fetch-pack.c:1481
 #, c-format
 msgid "error processing acks: %d"
 msgstr ""
@@ -18966,7 +18985,7 @@ msgstr ""
 #. TRANSLATORS: The parameter will be 'ready', a protocol
 #. keyword.
 #.
-#: fetch-pack.c:1473
+#: fetch-pack.c:1495
 #, c-format
 msgid "expected packfile to be sent after '%s'"
 msgstr ""
@@ -18974,49 +18993,49 @@ msgstr ""
 #. TRANSLATORS: The parameter will be 'ready', a protocol
 #. keyword.
 #.
-#: fetch-pack.c:1479
+#: fetch-pack.c:1501
 #, c-format
 msgid "expected no other sections to be sent after no '%s'"
 msgstr ""
 
-#: fetch-pack.c:1520
+#: fetch-pack.c:1542
 #, c-format
 msgid "error processing shallow info: %d"
 msgstr ""
 
-#: fetch-pack.c:1569
+#: fetch-pack.c:1591
 #, c-format
 msgid "expected wanted-ref, got '%s'"
 msgstr ""
 
-#: fetch-pack.c:1574
+#: fetch-pack.c:1596
 #, c-format
 msgid "unexpected wanted-ref: '%s'"
 msgstr ""
 
-#: fetch-pack.c:1579
+#: fetch-pack.c:1601
 #, c-format
 msgid "error processing wanted refs: %d"
 msgstr ""
 
-#: fetch-pack.c:1609
+#: fetch-pack.c:1631
 msgid "git fetch-pack: expected response end packet"
 msgstr ""
 
-#: fetch-pack.c:2021
+#: fetch-pack.c:2057
 msgid "no matching remote head"
 msgstr ""
 
-#: fetch-pack.c:2147
+#: fetch-pack.c:2195
 msgid "unexpected 'ready' from remote"
 msgstr ""
 
-#: fetch-pack.c:2170
+#: fetch-pack.c:2224
 #, c-format
 msgid "no such remote ref %s"
 msgstr ""
 
-#: fetch-pack.c:2173
+#: fetch-pack.c:2227
 #, c-format
 msgid "Server does not allow request for unadvertised object %s"
 msgstr ""
@@ -22628,7 +22647,7 @@ msgstr ""
 msgid "-L does not yet support diff formats besides -p and -s"
 msgstr ""
 
-#: run-command.c:1264
+#: run-command.c:1265
 #, c-format
 msgid "cannot create async thread: %s"
 msgstr ""
@@ -22740,7 +22759,7 @@ msgid "could not lock '%s'"
 msgstr ""
 
 #: sequencer.c:493 sequencer.c:3151 sequencer.c:3356 sequencer.c:3370
-#: sequencer.c:3622 sequencer.c:5890 strbuf.c:1189 wrapper.c:721
+#: sequencer.c:3622 sequencer.c:5890 strbuf.c:1189 wrapper.c:699
 #, c-format
 msgid "could not write to '%s'"
 msgstr ""
@@ -24066,7 +24085,7 @@ msgstr ""
 msgid "could not read input file '%s'"
 msgstr ""
 
-#: trailer.c:1024 wrapper.c:766
+#: trailer.c:1024 wrapper.c:744
 #, c-format
 msgid "could not stat %s"
 msgstr ""
@@ -24743,22 +24762,22 @@ msgstr ""
 msgid "could not setenv '%s'"
 msgstr ""
 
-#: wrapper.c:213
+#: wrapper.c:191
 #, c-format
 msgid "unable to create '%s'"
 msgstr ""
 
-#: wrapper.c:215 wrapper.c:385
+#: wrapper.c:193 wrapper.c:363
 #, c-format
 msgid "could not open '%s' for reading and writing"
 msgstr ""
 
-#: wrapper.c:416 wrapper.c:689
+#: wrapper.c:394 wrapper.c:667
 #, c-format
 msgid "unable to access '%s'"
 msgstr ""
 
-#: wrapper.c:697
+#: wrapper.c:675
 msgid "unable to get current working directory"
 msgstr ""
 
