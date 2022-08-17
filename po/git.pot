@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2022-08-16 19:57+0000\n"
+"POT-Creation-Date: 2022-08-17 20:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -816,10 +816,10 @@ msgstr ""
 #: builtin/rev-list.c:550 builtin/show-branch.c:711 builtin/show-branch.c:716
 #: builtin/stash.c:1723 builtin/stash.c:1726 builtin/submodule--helper.c:1192
 #: builtin/submodule--helper.c:2959 builtin/tag.c:527 builtin/tag.c:573
-#: builtin/worktree.c:779 parse-options.c:1223 range-diff.c:555 revision.c:2360
-#: revision.c:2364 revision.c:2373 revision.c:2378 revision.c:2606
-#: revision.c:2943 revision.c:2947 revision.c:2955 revision.c:2958
-#: revision.c:2960
+#: builtin/worktree.c:779 parse-options.c:1223 range-diff.c:555 revision.c:2386
+#: revision.c:2390 revision.c:2399 revision.c:2404 revision.c:2632
+#: revision.c:2969 revision.c:2973 revision.c:2981 revision.c:2984
+#: revision.c:2986
 #, c-format
 msgid "options '%s' and '%s' cannot be used together"
 msgstr ""
@@ -1604,7 +1604,7 @@ msgstr ""
 #: builtin/fast-export.c:1230 builtin/index-pack.c:1854 builtin/log.c:2223
 #: builtin/reset.c:360 builtin/reset.c:418 builtin/rm.c:281
 #: builtin/stash.c:1735 builtin/worktree.c:580 builtin/worktree.c:781
-#: fetch-pack.c:336 http-fetch.c:144 http-fetch.c:153 revision.c:2962
+#: fetch-pack.c:336 http-fetch.c:144 http-fetch.c:153 revision.c:2988
 #, c-format
 msgid "the option '%s' requires '%s'"
 msgstr ""
@@ -2190,13 +2190,13 @@ msgid "fseek failed"
 msgstr ""
 
 #: builtin/am.c:757 builtin/am.c:849 builtin/rebase.c:701 sequencer.c:885
-#: wrapper.c:219 wrapper.c:389
+#: wrapper.c:197 wrapper.c:367
 #, c-format
 msgid "could not open '%s' for reading"
 msgstr ""
 
 #: builtin/am.c:766 builtin/rebase.c:655 sequencer.c:4164 strbuf.c:1187
-#: wrapper.c:217 wrapper.c:387
+#: wrapper.c:195 wrapper.c:365
 #, c-format
 msgid "could not open '%s' for writing"
 msgstr ""
@@ -4948,7 +4948,7 @@ msgstr ""
 msgid "Too many arguments."
 msgstr ""
 
-#: builtin/clone.c:920 contrib/scalar/scalar.c:484
+#: builtin/clone.c:920 contrib/scalar/scalar.c:450
 msgid "You must specify a repository to clone."
 msgstr ""
 
@@ -9863,7 +9863,7 @@ msgstr ""
 msgid "Bad value '%s' in environment '%s'"
 msgstr ""
 
-#: builtin/merge.c:1175 read-cache.c:3170 strbuf.c:1192 wrapper.c:723
+#: builtin/merge.c:1175 read-cache.c:3170 strbuf.c:1192 wrapper.c:701
 #, c-format
 msgid "could not close '%s'"
 msgstr ""
@@ -11199,7 +11199,7 @@ msgid "<remote>"
 msgstr ""
 
 #: builtin/pull.c:468 builtin/pull.c:483 builtin/pull.c:488
-#: contrib/scalar/scalar.c:445
+#: contrib/scalar/scalar.c:411
 msgid "<branch>"
 msgstr ""
 
@@ -17707,8 +17707,8 @@ msgstr ""
 msgid "could not find enlistment root"
 msgstr ""
 
-#: contrib/scalar/scalar.c:93 contrib/scalar/scalar.c:421
-#: contrib/scalar/scalar.c:506 contrib/scalar/scalar.c:674
+#: contrib/scalar/scalar.c:93 contrib/scalar/scalar.c:387
+#: contrib/scalar/scalar.c:472 contrib/scalar/scalar.c:640
 #, c-format
 msgid "could not switch to '%s'"
 msgstr ""
@@ -17726,164 +17726,182 @@ msgstr ""
 msgid "Scalar enlistments require a worktree"
 msgstr ""
 
-#: contrib/scalar/scalar.c:264
-#, c-format
-msgid "could not start the FSMonitor daemon: %s"
+#: contrib/scalar/scalar.c:268
+msgid "could not add enlistment"
 msgstr ""
 
-#: contrib/scalar/scalar.c:291
-#, c-format
-msgid "could not stop the FSMonitor daemon: %s"
+#: contrib/scalar/scalar.c:271
+msgid "could not set recommended config"
 msgstr ""
 
-#: contrib/scalar/scalar.c:381
+#: contrib/scalar/scalar.c:274
+msgid "could not turn on maintenance"
+msgstr ""
+
+#: contrib/scalar/scalar.c:277
+msgid "could not start the FSMonitor daemon"
+msgstr ""
+
+#: contrib/scalar/scalar.c:287
+msgid "could not turn off maintenance"
+msgstr ""
+
+#: contrib/scalar/scalar.c:290
+msgid "could not remove enlistment"
+msgstr ""
+
+#: contrib/scalar/scalar.c:293
+msgid "could not stop the FSMonitor daemon"
+msgstr ""
+
+#: contrib/scalar/scalar.c:347
 #, c-format
 msgid "remote HEAD is not a branch: '%.*s'"
 msgstr ""
 
-#: contrib/scalar/scalar.c:387
+#: contrib/scalar/scalar.c:353
 msgid "failed to get default branch name from remote; using local default"
 msgstr ""
 
-#: contrib/scalar/scalar.c:400
+#: contrib/scalar/scalar.c:366
 msgid "failed to get default branch name"
 msgstr ""
 
-#: contrib/scalar/scalar.c:411
+#: contrib/scalar/scalar.c:377
 msgid "failed to unregister repository"
 msgstr ""
 
-#: contrib/scalar/scalar.c:426
+#: contrib/scalar/scalar.c:392
 msgid "failed to delete enlistment directory"
 msgstr ""
 
-#: contrib/scalar/scalar.c:446
+#: contrib/scalar/scalar.c:412
 msgid "branch to checkout after clone"
 msgstr ""
 
-#: contrib/scalar/scalar.c:448
+#: contrib/scalar/scalar.c:414
 msgid "when cloning, create full working directory"
 msgstr ""
 
-#: contrib/scalar/scalar.c:450
+#: contrib/scalar/scalar.c:416
 msgid "only download metadata for the branch that will be checked out"
 msgstr ""
 
-#: contrib/scalar/scalar.c:455
+#: contrib/scalar/scalar.c:421
 msgid "scalar clone [<options>] [--] <repo> [<dir>]"
 msgstr ""
 
-#: contrib/scalar/scalar.c:480
+#: contrib/scalar/scalar.c:446
 #, c-format
 msgid "cannot deduce worktree name from '%s'"
 msgstr ""
 
-#: contrib/scalar/scalar.c:489
+#: contrib/scalar/scalar.c:455
 #, c-format
 msgid "directory '%s' exists already"
 msgstr ""
 
-#: contrib/scalar/scalar.c:516
+#: contrib/scalar/scalar.c:482
 #, c-format
 msgid "failed to get default branch for '%s'"
 msgstr ""
 
-#: contrib/scalar/scalar.c:527
+#: contrib/scalar/scalar.c:493
 #, c-format
 msgid "could not configure remote in '%s'"
 msgstr ""
 
-#: contrib/scalar/scalar.c:536
+#: contrib/scalar/scalar.c:502
 #, c-format
 msgid "could not configure '%s'"
 msgstr ""
 
-#: contrib/scalar/scalar.c:539
+#: contrib/scalar/scalar.c:505
 msgid "partial clone failed; attempting full clone"
 msgstr ""
 
-#: contrib/scalar/scalar.c:543
+#: contrib/scalar/scalar.c:509
 msgid "could not configure for full clone"
 msgstr ""
 
-#: contrib/scalar/scalar.c:578
+#: contrib/scalar/scalar.c:544
 msgid "scalar diagnose [<enlistment>]"
 msgstr ""
 
-#: contrib/scalar/scalar.c:600
+#: contrib/scalar/scalar.c:566
 msgid "`scalar list` does not take arguments"
 msgstr ""
 
-#: contrib/scalar/scalar.c:613
+#: contrib/scalar/scalar.c:579
 msgid "scalar register [<enlistment>]"
 msgstr ""
 
-#: contrib/scalar/scalar.c:640
+#: contrib/scalar/scalar.c:606
 msgid "reconfigure all registered enlistments"
 msgstr ""
 
-#: contrib/scalar/scalar.c:644
+#: contrib/scalar/scalar.c:610
 msgid "scalar reconfigure [--all | <enlistment>]"
 msgstr ""
 
-#: contrib/scalar/scalar.c:662
+#: contrib/scalar/scalar.c:628
 msgid "--all or <enlistment>, but not both"
 msgstr ""
 
-#: contrib/scalar/scalar.c:677
+#: contrib/scalar/scalar.c:643
 #, c-format
 msgid "git repository gone in '%s'"
 msgstr ""
 
-#: contrib/scalar/scalar.c:717
+#: contrib/scalar/scalar.c:683
 msgid ""
 "scalar run <task> [<enlistment>]\n"
 "Tasks:\n"
 msgstr ""
 
-#: contrib/scalar/scalar.c:735
+#: contrib/scalar/scalar.c:701
 #, c-format
 msgid "no such task: '%s'"
 msgstr ""
 
-#: contrib/scalar/scalar.c:785
+#: contrib/scalar/scalar.c:751
 msgid "scalar unregister [<enlistment>]"
 msgstr ""
 
-#: contrib/scalar/scalar.c:832
+#: contrib/scalar/scalar.c:798
 msgid "scalar delete <enlistment>"
 msgstr ""
 
-#: contrib/scalar/scalar.c:847
+#: contrib/scalar/scalar.c:813
 msgid "refusing to delete current working directory"
 msgstr ""
 
-#: contrib/scalar/scalar.c:862
+#: contrib/scalar/scalar.c:828
 msgid "include Git version"
 msgstr ""
 
-#: contrib/scalar/scalar.c:864
+#: contrib/scalar/scalar.c:830
 msgid "include Git's build options"
 msgstr ""
 
-#: contrib/scalar/scalar.c:868
+#: contrib/scalar/scalar.c:834
 msgid "scalar verbose [-v | --verbose] [--build-options]"
 msgstr ""
 
-#: contrib/scalar/scalar.c:910
+#: contrib/scalar/scalar.c:876
 msgid "-C requires a <directory>"
 msgstr ""
 
-#: contrib/scalar/scalar.c:912
+#: contrib/scalar/scalar.c:878
 #, c-format
 msgid "could not change to '%s'"
 msgstr ""
 
-#: contrib/scalar/scalar.c:918
+#: contrib/scalar/scalar.c:884
 msgid "-c requires a <key>=<value> argument"
 msgstr ""
 
-#: contrib/scalar/scalar.c:936
+#: contrib/scalar/scalar.c:902
 msgid ""
 "scalar [-C <directory>] [-c <key>=<value>] <command> [<options>]\n"
 "\n"
@@ -19952,66 +19970,38 @@ msgid ""
 "copy renamed to %s"
 msgstr ""
 
-#. TRANSLATORS: This is line item of submodule conflict message
-#. from print_submodule_conflict_suggestion() below. For RTL
-#. languages, the following swap is suggested:
-#.      " - %s\n" -> "%s - \n"
+#. TRANSLATORS: This is a line of advice to resolve a merge
+#. conflict in a submodule. The first argument is the submodule
+#. name, and the second argument is the abbreviated id of the
+#. commit that needs to be merged.  For example:
+#.  - go to submodule (mysubmodule), and either merge commit abc1234"
 #.
-#: merge-ort.c:4498
+#: merge-ort.c:4512
 #, c-format
-msgid " - %s\n"
+msgid ""
+" - go to submodule (%s), and either merge commit %s\n"
+"   or update to an existing commit which has merged those changes\n"
 msgstr ""
 
-#. TRANSLATORS: This is line item of submodule conflict message
-#. from print_submodule_conflict_suggestion() below. For RTL
-#. languages, the following swap is suggested:
-#.      "   %s\n" -> "%s   \n"
-#.
-#: merge-ort.c:4506
-#, c-format
-msgid "   %s\n"
-msgstr ""
-
-#: merge-ort.c:4535
+#: merge-ort.c:4523
 #, c-format
 msgid ""
 "Recursive merging with submodules currently only supports trivial cases.\n"
 "Please manually handle the merging of each conflicted submodule.\n"
-"This can be accomplished with the following steps:"
-msgstr ""
-
-#. TRANSLATORS: This is a line of advice to resolve a merge conflict
-#. in a submodule. The second argument is the abbreviated id of the
-#. commit that needs to be merged.
-#. E.g. - go to submodule (sub), and either merge commit abc1234"
-#.
-#: merge-ort.c:4549
-#, c-format
-msgid ""
-"go to submodule (%s), and either merge commit %s\n"
-"or update to an existing commit which has merged those changes"
-msgstr ""
-
-#: merge-ort.c:4557
-msgid "come back to superproject and run:"
-msgstr ""
-
-#: merge-ort.c:4559
-msgid "to record the above merge or update"
-msgstr ""
-
-#: merge-ort.c:4564
-msgid "resolve any other conflicts in the superproject"
-msgstr ""
-
-#: merge-ort.c:4569
-msgid "commit the resulting index in the superproject"
+"This can be accomplished with the following steps:\n"
+"%s - come back to superproject and run:\n"
+"\n"
+"      git add %s\n"
+"\n"
+"   to record the above merge or update\n"
+" - resolve any other conflicts in the superproject\n"
+" - commit the resulting index in the superproject\n"
 msgstr ""
 
 #. TRANSLATORS: The %s arguments are: 1) tree hash of a merge
 #. base, and 2-3) the trees for the two trees we're merging.
 #.
-#: merge-ort.c:4966
+#: merge-ort.c:4928
 #, c-format
 msgid "collecting merge info failed for trees %s, %s, %s"
 msgstr ""
@@ -22865,29 +22855,34 @@ msgstr ""
 msgid "failed to find tree of %s"
 msgstr ""
 
-#: revision.c:1723
+#: revision.c:1733
 #, c-format
 msgid "resolve-undo records `%s` which is missing"
 msgstr ""
 
-#: revision.c:2404
+#: revision.c:2301
+#, c-format
+msgid "could not get commit for ancestry-path argument %s"
+msgstr ""
+
+#: revision.c:2430
 msgid "--unpacked=<packfile> no longer supported"
 msgstr ""
 
-#: revision.c:2758
+#: revision.c:2784
 msgid "your current branch appears to be broken"
 msgstr ""
 
-#: revision.c:2761
+#: revision.c:2787
 #, c-format
 msgid "your current branch '%s' does not have any commits yet"
 msgstr ""
 
-#: revision.c:2949
+#: revision.c:2975
 msgid "object filtering requires --objects"
 msgstr ""
 
-#: revision.c:2966
+#: revision.c:2992
 msgid "-L does not yet support diff formats besides -p and -s"
 msgstr ""
 
@@ -23003,7 +22998,7 @@ msgid "could not lock '%s'"
 msgstr ""
 
 #: sequencer.c:494 sequencer.c:3162 sequencer.c:3367 sequencer.c:3381
-#: sequencer.c:3633 sequencer.c:5901 strbuf.c:1189 wrapper.c:721
+#: sequencer.c:3633 sequencer.c:5901 strbuf.c:1189 wrapper.c:699
 #, c-format
 msgid "could not write to '%s'"
 msgstr ""
@@ -24329,7 +24324,7 @@ msgstr ""
 msgid "could not read input file '%s'"
 msgstr ""
 
-#: trailer.c:1024 wrapper.c:766
+#: trailer.c:1024 wrapper.c:744
 #, c-format
 msgid "could not stat %s"
 msgstr ""
@@ -25014,22 +25009,22 @@ msgstr ""
 msgid "could not setenv '%s'"
 msgstr ""
 
-#: wrapper.c:213
+#: wrapper.c:191
 #, c-format
 msgid "unable to create '%s'"
 msgstr ""
 
-#: wrapper.c:215 wrapper.c:385
+#: wrapper.c:193 wrapper.c:363
 #, c-format
 msgid "could not open '%s' for reading and writing"
 msgstr ""
 
-#: wrapper.c:416 wrapper.c:689
+#: wrapper.c:394 wrapper.c:667
 #, c-format
 msgid "unable to access '%s'"
 msgstr ""
 
-#: wrapper.c:697
+#: wrapper.c:675
 msgid "unable to get current working directory"
 msgstr ""
 
