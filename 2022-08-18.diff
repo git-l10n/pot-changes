@@ -1,0 +1,385 @@
+
+
+#################### Thu, 18 Aug 2022 23:57:32 +0000 ####################
+
+--- po/git.pot.old	2022-08-18 23:57:32.479521418 +0000
++++ po/git.pot.new	2022-08-18 23:57:32.583523785 +0000
+@@ -176,8 +176,8 @@
+ msgstr ""
+ 
+ #: add-interactive.c apply.c builtin/am.c builtin/bugreport.c builtin/clone.c
+-#: builtin/fetch.c builtin/merge.c builtin/pull.c builtin/submodule--helper.c
+-#: git-add--interactive.perl
++#: builtin/diagnose.c builtin/fetch.c builtin/merge.c builtin/pull.c
++#: builtin/submodule--helper.c git-add--interactive.perl
+ msgid "path"
+ msgstr ""
+ 
+@@ -2389,8 +2389,8 @@
+ msgstr ""
+ 
+ #: builtin/am.c builtin/branch.c builtin/bugreport.c builtin/cat-file.c
+-#: builtin/for-each-ref.c builtin/ls-files.c builtin/ls-tree.c
+-#: builtin/replace.c builtin/tag.c builtin/verify-tag.c
++#: builtin/diagnose.c builtin/for-each-ref.c builtin/ls-files.c
++#: builtin/ls-tree.c builtin/replace.c builtin/tag.c builtin/verify-tag.c
+ msgid "format"
+ msgstr ""
+ 
+@@ -2489,7 +2489,7 @@
+ msgid "git apply [<options>] [<patch>...]"
+ msgstr ""
+ 
+-#: builtin/archive.c contrib/scalar/scalar.c
++#: builtin/archive.c diagnose.c
+ msgid "could not redirect output"
+ msgstr ""
+ 
+@@ -3458,7 +3458,7 @@
+ msgstr ""
+ 
+ #: builtin/bugreport.c
+-msgid "git bugreport [-o|--output-directory <file>] [-s|--suffix <format>]"
++msgid "git bugreport [-o|--output-directory <file>] [-s|--suffix <format>] [--diagnose[=<mode>]"
+ msgstr ""
+ 
+ #: builtin/bugreport.c
+@@ -3480,19 +3480,33 @@
+ "You can delete any lines you don't wish to share.\n"
+ msgstr ""
+ 
++#: builtin/bugreport.c builtin/commit.c builtin/fast-export.c builtin/rebase.c
++#: parse-options.h
++msgid "mode"
++msgstr ""
++
+ #: builtin/bugreport.c
+-msgid "specify a destination for the bugreport file"
++msgid "create an additional zip archive of detailed diagnostics (default 'stats')"
+ msgstr ""
+ 
+ #: builtin/bugreport.c
+-msgid "specify a strftime format suffix for the filename"
++msgid "specify a destination for the bugreport file(s)"
+ msgstr ""
+ 
+ #: builtin/bugreport.c
++msgid "specify a strftime format suffix for the filename(s)"
++msgstr ""
++
++#: builtin/bugreport.c builtin/diagnose.c
+ #, c-format
+ msgid "could not create leading directories for '%s'"
+ msgstr ""
+ 
++#: builtin/bugreport.c builtin/diagnose.c
++#, c-format
++msgid "unable to create diagnostics archive %s"
++msgstr ""
++
+ #: builtin/bugreport.c
+ msgid "System Info"
+ msgstr ""
+@@ -4696,6 +4710,14 @@
+ msgstr ""
+ 
+ #: builtin/clone.c
++msgid "a URI for downloading bundles before fetching from origin remote"
++msgstr ""
++
++#: builtin/clone.c
++msgid "uri"
++msgstr ""
++
++#: builtin/clone.c
+ #, c-format
+ msgid "info: Could not add alternate for '%s': %s\n"
+ msgstr ""
+@@ -4799,6 +4821,10 @@
+ msgstr ""
+ 
+ #: builtin/clone.c
++msgid "--bundle-uri is incompatible with --depth, --shallow-since, and --shallow-exclude"
++msgstr ""
++
++#: builtin/clone.c
+ #, c-format
+ msgid "repository '%s' does not exist"
+ msgstr ""
+@@ -4885,6 +4911,11 @@
+ msgstr ""
+ 
+ #: builtin/clone.c
++#, c-format
++msgid "failed to fetch objects from bundle URI '%s'"
++msgstr ""
++
++#: builtin/clone.c
+ msgid "remote transport reported error"
+ msgstr ""
+ 
+@@ -5418,10 +5449,6 @@
+ msgid "terminate entries with NUL"
+ msgstr ""
+ 
+-#: builtin/commit.c builtin/fast-export.c builtin/rebase.c parse-options.h
+-msgid "mode"
+-msgstr ""
+-
+ #: builtin/commit.c
+ msgid "show untracked files, optional modes: all, normal, no. (Default: all)"
+ msgstr ""
+@@ -6129,6 +6156,26 @@
+ msgid "option '%s' and commit-ishes cannot be used together"
+ msgstr ""
+ 
++#: builtin/diagnose.c
++msgid "git diagnose [-o|--output-directory <path>] [-s|--suffix <format>] [--mode=<mode>]"
++msgstr ""
++
++#: builtin/diagnose.c
++msgid "specify a destination for the diagnostics archive"
++msgstr ""
++
++#: builtin/diagnose.c
++msgid "specify a strftime format suffix for the filename"
++msgstr ""
++
++#: builtin/diagnose.c
++msgid "(stats|all)"
++msgstr ""
++
++#: builtin/diagnose.c
++msgid "specify the content of the diagnostic archive"
++msgstr ""
++
+ #: builtin/diff-tree.c
+ msgid "--merge-base only works with two commits"
+ msgstr ""
+@@ -15401,6 +15448,29 @@
+ msgid "core.fsyncMethod = batch is unsupported on this platform"
+ msgstr ""
+ 
++#: bundle-uri.c
++msgid "failed to create temporary file"
++msgstr ""
++
++#: bundle-uri.c
++msgid "insufficient capabilities"
++msgstr ""
++
++#: bundle-uri.c
++#, c-format
++msgid "failed to download bundle from URI '%s'"
++msgstr ""
++
++#: bundle-uri.c
++#, c-format
++msgid "file at URI '%s' is not a bundle"
++msgstr ""
++
++#: bundle-uri.c
++#, c-format
++msgid "failed to unbundle bundle from URI '%s'"
++msgstr ""
++
+ #: bundle.c
+ #, c-format
+ msgid "unrecognized bundle hash algorithm: %s"
+@@ -16514,6 +16584,16 @@
+ msgid "no libc information available\n"
+ msgstr ""
+ 
++#: compat/disk.h
++#, c-format
++msgid "could not determine free disk size for '%s'"
++msgstr ""
++
++#: compat/disk.h
++#, c-format
++msgid "could not get info for '%s'"
++msgstr ""
++
+ #: compat/fsmonitor/fsm-health-win32.c
+ #, c-format
+ msgid "[GLE %ld] health thread could not open '%ls'"
+@@ -17280,26 +17360,6 @@
+ msgid "Scalar enlistments require a worktree"
+ msgstr ""
+ 
+-#: contrib/scalar/scalar.c dir.c
+-#, c-format
+-msgid "could not open directory '%s'"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-#, c-format
+-msgid "skipping '%s', which is neither file nor directory"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-#, c-format
+-msgid "could not determine free disk size for '%s'"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-#, c-format
+-msgid "could not get info for '%s'"
+-msgstr ""
+-
+ #: contrib/scalar/scalar.c
+ #, c-format
+ msgid "remote HEAD is not a branch: '%.*s'"
+@@ -17375,19 +17435,6 @@
+ msgstr ""
+ 
+ #: contrib/scalar/scalar.c
+-#, c-format
+-msgid "could not create directory for '%s'"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-msgid "could not duplicate stdout"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-msgid "failed to write archive"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+ msgid "`scalar list` does not take arguments"
+ msgstr ""
+ 
+@@ -17694,6 +17741,39 @@
+ msgid "Marked %d islands, done.\n"
+ msgstr ""
+ 
++#: diagnose.c
++#, c-format
++msgid "invalid --%s value '%s'"
++msgstr ""
++
++#: diagnose.c
++#, c-format
++msgid "could not archive missing directory '%s'"
++msgstr ""
++
++#: diagnose.c dir.c
++#, c-format
++msgid "could not open directory '%s'"
++msgstr ""
++
++#: diagnose.c
++#, c-format
++msgid "skipping '%s', which is neither file nor directory"
++msgstr ""
++
++#: diagnose.c
++msgid "could not duplicate stdout"
++msgstr ""
++
++#: diagnose.c
++#, c-format
++msgid "could not add directory '%s' to archiver"
++msgstr ""
++
++#: diagnose.c
++msgid "failed to write archive"
++msgstr ""
++
+ #: diff-lib.c
+ msgid "--merge-base does not work with ranges"
+ msgstr ""
+@@ -20077,24 +20157,17 @@
+ msgid "Note: %s not up to date and in way of checking out conflicted version; old copy renamed to %s"
+ msgstr ""
+ 
+-#. TRANSLATORS: This is line item of submodule conflict message
+-#. from print_submodule_conflict_suggestion() below. For RTL
+-#. languages, the following swap is suggested:
+-#.      " - %s\n" -> "%s - \n"
++#. TRANSLATORS: This is a line of advice to resolve a merge
++#. conflict in a submodule. The first argument is the submodule
++#. name, and the second argument is the abbreviated id of the
++#. commit that needs to be merged.  For example:
++#.  - go to submodule (mysubmodule), and either merge commit abc1234"
+ #.
+ #: merge-ort.c
+ #, c-format
+-msgid " - %s\n"
+-msgstr ""
+-
+-#. TRANSLATORS: This is line item of submodule conflict message
+-#. from print_submodule_conflict_suggestion() below. For RTL
+-#. languages, the following swap is suggested:
+-#.      "   %s\n" -> "%s   \n"
+-#.
+-#: merge-ort.c
+-#, c-format
+-msgid "   %s\n"
++msgid ""
++" - go to submodule (%s), and either merge commit %s\n"
++"   or update to an existing commit which has merged those changes\n"
+ msgstr ""
+ 
+ #: merge-ort.c
+@@ -20102,35 +20175,14 @@
+ msgid ""
+ "Recursive merging with submodules currently only supports trivial cases.\n"
+ "Please manually handle the merging of each conflicted submodule.\n"
+-"This can be accomplished with the following steps:"
+-msgstr ""
+-
+-#. TRANSLATORS: This is a line of advice to resolve a merge conflict
+-#. in a submodule. The second argument is the abbreviated id of the
+-#. commit that needs to be merged.
+-#. E.g. - go to submodule (sub), and either merge commit abc1234"
+-#.
+-#: merge-ort.c
+-#, c-format
+-msgid ""
+-"go to submodule (%s), and either merge commit %s\n"
+-"or update to an existing commit which has merged those changes"
+-msgstr ""
+-
+-#: merge-ort.c
+-msgid "come back to superproject and run:"
+-msgstr ""
+-
+-#: merge-ort.c
+-msgid "to record the above merge or update"
+-msgstr ""
+-
+-#: merge-ort.c
+-msgid "resolve any other conflicts in the superproject"
+-msgstr ""
+-
+-#: merge-ort.c
+-msgid "commit the resulting index in the superproject"
++"This can be accomplished with the following steps:\n"
++"%s - come back to superproject and run:\n"
++"\n"
++"      git add %s\n"
++"\n"
++"   to record the above merge or update\n"
++" - resolve any other conflicts in the superproject\n"
++" - commit the resulting index in the superproject\n"
+ msgstr ""
+ 
+ #. TRANSLATORS: The %s arguments are: 1) tree hash of a merge
+@@ -22425,6 +22477,15 @@
+ msgstr ""
+ 
+ #: remote-curl.c
++msgid "protocol error: expected '<url> <path>', missing space"
++msgstr ""
++
++#: remote-curl.c
++#, c-format
++msgid "failed to download file at URL '%s'"
++msgstr ""
++
++#: remote-curl.c
+ msgid "git-http-push failed"
+ msgstr ""
+ 
