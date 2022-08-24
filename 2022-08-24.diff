@@ -1,0 +1,125 @@
+
+
+#################### Wed, 24 Aug 2022 22:58:01 +0000 ####################
+
+--- po/git.pot.old	2022-08-24 22:58:01.257818037 +0000
++++ po/git.pot.new	2022-08-24 22:58:01.377820005 +0000
+@@ -4878,6 +4878,10 @@
+ msgstr ""
+ 
+ #: builtin/clone.c
++msgid "failed to initialize the repo, skipping bundle URI"
++msgstr ""
++
++#: builtin/clone.c
+ #, c-format
+ msgid "failed to fetch objects from bundle URI '%s'"
+ msgstr ""
+@@ -11305,12 +11309,12 @@
+ msgstr ""
+ 
+ #: builtin/range-diff.c
+-#, c-format
+-msgid "not a commit range: '%s'"
++msgid "single arg format must be symmetric range"
+ msgstr ""
+ 
+ #: builtin/range-diff.c
+-msgid "single arg format must be symmetric range"
++#, c-format
++msgid "not a commit range: '%s'"
+ msgstr ""
+ 
+ #: builtin/range-diff.c
+@@ -13951,15 +13955,12 @@
+ 
+ #: builtin/submodule--helper.c
+ #, c-format
+-msgid "could not look up configuration '%s'. Assuming this repository is its own authoritative upstream."
+-msgstr ""
+-
+-#: builtin/submodule--helper.c
+-msgid "alternative anchor for relative paths"
++msgid "could not get a repository handle for submodule '%s'"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "git submodule--helper list [--prefix=<path>] [<path>...]"
++#, c-format
++msgid "could not look up configuration '%s'. Assuming this repository is its own authoritative upstream."
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+@@ -14054,10 +14055,6 @@
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "git submodule--helper name <path>"
+-msgstr ""
+-
+-#: builtin/submodule--helper.c
+ #, c-format
+ msgid "* %s %s(blob)->%s(submodule)"
+ msgstr ""
+@@ -14118,11 +14115,6 @@
+ 
+ #: builtin/submodule--helper.c
+ #, c-format
+-msgid "failed to get the default remote for submodule '%s'"
+-msgstr ""
+-
+-#: builtin/submodule--helper.c
+-#, c-format
+ msgid "failed to update remote for submodule '%s'"
+ msgstr ""
+ 
+@@ -14190,6 +14182,11 @@
+ 
+ #: builtin/submodule--helper.c
+ #, c-format
++msgid "could not get a repository handle for gitdir '%s'"
++msgstr ""
++
++#: builtin/submodule--helper.c
++#, c-format
+ msgid "submodule '%s' cannot add alternate: %s"
+ msgstr ""
+ 
+@@ -14224,6 +14221,10 @@
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
++msgid "alternative anchor for relative paths"
++msgstr ""
++
++#: builtin/submodule--helper.c
+ msgid "where the new submodule will be cloned to"
+ msgstr ""
+ 
+@@ -14337,12 +14338,12 @@
+ 
+ #: builtin/submodule--helper.c
+ #, c-format
+-msgid "Submodule (%s) branch configured to inherit branch from superproject, but the superproject is not on any branch"
++msgid "could not initialize submodule at path '%s'"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+ #, c-format
+-msgid "could not get a repository handle for submodule '%s'"
++msgid "Submodule (%s) branch configured to inherit branch from superproject, but the superproject is not on any branch"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+@@ -18763,6 +18764,11 @@
+ msgstr ""
+ 
+ #: fsmonitor-ipc.c
++#, c-format
++msgid "Invalid path: %s"
++msgstr ""
++
++#: fsmonitor-ipc.c
+ #, c-format
+ msgid "fsmonitor_ipc__send_query: invalid path '%s'"
+ msgstr ""
