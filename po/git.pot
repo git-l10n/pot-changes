@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2022-08-24 23:59+0000\n"
+"POT-Creation-Date: 2022-08-25 22:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -1188,7 +1188,7 @@ msgstr ""
 msgid "unable to add cache entry for %s"
 msgstr ""
 
-#: apply.c:4382 builtin/bisect.c:606 builtin/gc.c:2273 builtin/gc.c:2308
+#: apply.c:4382 builtin/bisect.c:606 builtin/gc.c:2301 builtin/gc.c:2336
 #: merge-strategies.c:143
 #, c-format
 msgid "failed to write to '%s'"
@@ -1999,7 +1999,7 @@ msgstr ""
 
 #: builtin/add.c:372 builtin/clean.c:927 builtin/fetch.c:175 builtin/mv.c:165
 #: builtin/prune-packed.c:14 builtin/pull.c:209 builtin/push.c:588
-#: builtin/remote.c:1473 builtin/rm.c:244 builtin/send-pack.c:194
+#: builtin/remote.c:1476 builtin/rm.c:244 builtin/send-pack.c:194
 msgid "dry run"
 msgstr ""
 
@@ -6894,7 +6894,7 @@ msgstr ""
 msgid "[deleted]"
 msgstr ""
 
-#: builtin/fetch.c:1417 builtin/remote.c:1164
+#: builtin/fetch.c:1417 builtin/remote.c:1166
 msgid "(none)"
 msgstr ""
 
@@ -7188,7 +7188,7 @@ msgstr ""
 msgid "could not create lost-found"
 msgstr ""
 
-#: builtin/fsck.c:329 builtin/gc.c:1806 builtin/rebase.c:192
+#: builtin/fsck.c:329 builtin/gc.c:1834 builtin/rebase.c:192
 #: rebase-interactive.c:116 rerere.c:469 rerere.c:677 sequencer.c:3955
 #: sequencer.c:3981 sequencer.c:6120
 #, c-format
@@ -7709,107 +7709,119 @@ msgstr ""
 msgid "use at most one of --auto and --schedule=<frequency>"
 msgstr ""
 
-#: builtin/gc.c:1492
+#: builtin/gc.c:1470
+msgid "git maintenance register"
+msgstr ""
+
+#: builtin/gc.c:1506
 msgid "failed to run 'git config'"
 msgstr ""
 
-#: builtin/gc.c:1644
+#: builtin/gc.c:1528
+msgid "git maintenance unregister"
+msgstr ""
+
+#: builtin/gc.c:1672
 #, c-format
 msgid "failed to expand path '%s'"
 msgstr ""
 
-#: builtin/gc.c:1671 builtin/gc.c:1709
+#: builtin/gc.c:1699 builtin/gc.c:1737
 msgid "failed to start launchctl"
 msgstr ""
 
-#: builtin/gc.c:1784 builtin/gc.c:2252
+#: builtin/gc.c:1812 builtin/gc.c:2280
 #, c-format
 msgid "failed to create directories for '%s'"
 msgstr ""
 
-#: builtin/gc.c:1811
+#: builtin/gc.c:1839
 #, c-format
 msgid "failed to bootstrap service %s"
 msgstr ""
 
-#: builtin/gc.c:1904
+#: builtin/gc.c:1932
 msgid "failed to create temp xml file"
 msgstr ""
 
-#: builtin/gc.c:1994
+#: builtin/gc.c:2022
 msgid "failed to start schtasks"
 msgstr ""
 
-#: builtin/gc.c:2078
+#: builtin/gc.c:2106
 msgid "failed to run 'crontab -l'; your system might not support 'cron'"
 msgstr ""
 
-#: builtin/gc.c:2095
+#: builtin/gc.c:2123
 msgid "failed to run 'crontab'; your system might not support 'cron'"
 msgstr ""
 
-#: builtin/gc.c:2099
+#: builtin/gc.c:2127
 msgid "failed to open stdin of 'crontab'"
 msgstr ""
 
-#: builtin/gc.c:2141
+#: builtin/gc.c:2169
 msgid "'crontab' died"
 msgstr ""
 
-#: builtin/gc.c:2206
+#: builtin/gc.c:2234
 msgid "failed to start systemctl"
 msgstr ""
 
-#: builtin/gc.c:2216
+#: builtin/gc.c:2244
 msgid "failed to run systemctl"
 msgstr ""
 
-#: builtin/gc.c:2225 builtin/gc.c:2230 builtin/worktree.c:63
+#: builtin/gc.c:2253 builtin/gc.c:2258 builtin/worktree.c:63
 #: builtin/worktree.c:1024
 #, c-format
 msgid "failed to delete '%s'"
 msgstr ""
 
-#: builtin/gc.c:2278 builtin/gc.c:2313 rerere.c:482
+#: builtin/gc.c:2306 builtin/gc.c:2341 rerere.c:482
 #, c-format
 msgid "failed to flush '%s'"
 msgstr ""
 
-#: builtin/gc.c:2410
+#: builtin/gc.c:2438
 #, c-format
 msgid "unrecognized --scheduler argument '%s'"
 msgstr ""
 
-#: builtin/gc.c:2435
+#: builtin/gc.c:2463
 msgid "neither systemd timers nor crontab are available"
 msgstr ""
 
-#: builtin/gc.c:2450
+#: builtin/gc.c:2478
 #, c-format
 msgid "%s scheduler is not available"
 msgstr ""
 
-#: builtin/gc.c:2464
+#: builtin/gc.c:2492
 msgid "another process is scheduling background maintenance"
 msgstr ""
 
-#: builtin/gc.c:2486
+#: builtin/gc.c:2514
 msgid "git maintenance start [--scheduler=<scheduler>]"
 msgstr ""
 
-#: builtin/gc.c:2495
+#: builtin/gc.c:2523
 msgid "scheduler"
 msgstr ""
 
-#: builtin/gc.c:2496
+#: builtin/gc.c:2524
 msgid "scheduler to trigger git maintenance run"
 msgstr ""
 
-#: builtin/gc.c:2510
+#: builtin/gc.c:2539
 msgid "failed to add repo to global config"
 msgstr ""
 
-#: builtin/gc.c:2520
+#: builtin/gc.c:2544
+msgid "git maintenance stop"
+msgstr ""
+
+#: builtin/gc.c:2561
 msgid "git maintenance <subcommand> [<options>]"
 msgstr ""
 
@@ -10613,7 +10625,7 @@ msgstr ""
 msgid "use notes from <notes-ref>"
 msgstr ""
 
-#: builtin/notes.c:1019 builtin/remote.c:1769
+#: builtin/notes.c:1019 builtin/remote.c:1775
 #, c-format
 msgid "unknown subcommand: %s"
 msgstr ""
@@ -12415,7 +12427,7 @@ msgstr ""
 msgid "could not set '%s'"
 msgstr ""
 
-#: builtin/remote.c:673 builtin/remote.c:892 builtin/remote.c:900 config.c:3459
+#: builtin/remote.c:673 builtin/remote.c:894 builtin/remote.c:902 config.c:3459
 #, c-format
 msgid "could not unset '%s'"
 msgstr ""
@@ -12428,7 +12440,7 @@ msgid ""
 "now names the non-existent remote '%s'"
 msgstr ""
 
-#: builtin/remote.c:714 builtin/remote.c:873 builtin/remote.c:982
+#: builtin/remote.c:714 builtin/remote.c:875 builtin/remote.c:984
 #, c-format
 msgid "No such remote: '%s'"
 msgstr ""
@@ -12460,7 +12472,7 @@ msgstr ""
 msgid "creating '%s' failed"
 msgstr ""
 
-#: builtin/remote.c:919
+#: builtin/remote.c:921
 msgid ""
 "Note: A branch outside the refs/remotes/ hierarchy was not removed;\n"
 "to delete it, use:"
@@ -12470,122 +12482,122 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: builtin/remote.c:933
+#: builtin/remote.c:935
 #, c-format
 msgid "Could not remove config section '%s'"
 msgstr ""
 
-#: builtin/remote.c:1043
+#: builtin/remote.c:1045
 #, c-format
 msgid " new (next fetch will store in remotes/%s)"
 msgstr ""
 
-#: builtin/remote.c:1046
+#: builtin/remote.c:1048
 msgid " tracked"
 msgstr ""
 
-#: builtin/remote.c:1048
+#: builtin/remote.c:1050
 msgid " skipped"
 msgstr ""
 
-#: builtin/remote.c:1050
+#: builtin/remote.c:1052
 msgid " stale (use 'git remote prune' to remove)"
 msgstr ""
 
-#: builtin/remote.c:1052
+#: builtin/remote.c:1054
 msgid " ???"
 msgstr ""
 
-#: builtin/remote.c:1093
+#: builtin/remote.c:1095
 #, c-format
 msgid "invalid branch.%s.merge; cannot rebase onto > 1 branch"
 msgstr ""
 
-#: builtin/remote.c:1102
+#: builtin/remote.c:1104
 #, c-format
 msgid "rebases interactively onto remote %s"
 msgstr ""
 
-#: builtin/remote.c:1104
+#: builtin/remote.c:1106
 #, c-format
 msgid "rebases interactively (with merges) onto remote %s"
 msgstr ""
 
-#: builtin/remote.c:1107
+#: builtin/remote.c:1109
 #, c-format
 msgid "rebases onto remote %s"
 msgstr ""
 
-#: builtin/remote.c:1111
+#: builtin/remote.c:1113
 #, c-format
 msgid " merges with remote %s"
 msgstr ""
 
-#: builtin/remote.c:1114
+#: builtin/remote.c:1116
 #, c-format
 msgid "merges with remote %s"
 msgstr ""
 
-#: builtin/remote.c:1117
+#: builtin/remote.c:1119
 #, c-format
 msgid "%-*s    and with remote %s\n"
 msgstr ""
 
-#: builtin/remote.c:1160
+#: builtin/remote.c:1162
 msgid "create"
 msgstr ""
 
-#: builtin/remote.c:1163
+#: builtin/remote.c:1165
 msgid "delete"
 msgstr ""
 
-#: builtin/remote.c:1167
+#: builtin/remote.c:1169
 msgid "up to date"
 msgstr ""
 
-#: builtin/remote.c:1170
+#: builtin/remote.c:1172
 msgid "fast-forwardable"
 msgstr ""
 
-#: builtin/remote.c:1173
+#: builtin/remote.c:1175
 msgid "local out of date"
 msgstr ""
 
-#: builtin/remote.c:1180
+#: builtin/remote.c:1182
 #, c-format
 msgid "    %-*s forces to %-*s (%s)"
 msgstr ""
 
-#: builtin/remote.c:1183
+#: builtin/remote.c:1185
 #, c-format
 msgid "    %-*s pushes to %-*s (%s)"
 msgstr ""
 
-#: builtin/remote.c:1187
+#: builtin/remote.c:1189
 #, c-format
 msgid "    %-*s forces to %s"
 msgstr ""
 
-#: builtin/remote.c:1190
+#: builtin/remote.c:1192
 #, c-format
 msgid "    %-*s pushes to %s"
 msgstr ""
 
-#: builtin/remote.c:1265
+#: builtin/remote.c:1267
 msgid "do not query remotes"
 msgstr ""
 
-#: builtin/remote.c:1286
+#: builtin/remote.c:1289
 #, c-format
 msgid "* remote %s"
 msgstr ""
 
-#: builtin/remote.c:1287
+#: builtin/remote.c:1290
 #, c-format
 msgid "  Fetch URL: %s"
 msgstr ""
 
-#: builtin/remote.c:1288 builtin/remote.c:1304 builtin/remote.c:1442
+#: builtin/remote.c:1291 builtin/remote.c:1307 builtin/remote.c:1445
 msgid "(no URL)"
 msgstr ""
 
@@ -12593,180 +12605,180 @@ msgstr ""
 #. with the one in " Fetch URL: %s"
 #. translation.
 #.
-#: builtin/remote.c:1302 builtin/remote.c:1304
+#: builtin/remote.c:1305 builtin/remote.c:1307
 #, c-format
 msgid "  Push  URL: %s"
 msgstr ""
 
-#: builtin/remote.c:1306 builtin/remote.c:1308 builtin/remote.c:1310
+#: builtin/remote.c:1309 builtin/remote.c:1311 builtin/remote.c:1313
 #, c-format
 msgid "  HEAD branch: %s"
 msgstr ""
 
-#: builtin/remote.c:1306
+#: builtin/remote.c:1309
 msgid "(not queried)"
 msgstr ""
 
-#: builtin/remote.c:1308
+#: builtin/remote.c:1311
 msgid "(unknown)"
 msgstr ""
 
-#: builtin/remote.c:1312
+#: builtin/remote.c:1315
 #, c-format
 msgid ""
 "  HEAD branch (remote HEAD is ambiguous, may be one of the following):\n"
 msgstr ""
 
-#: builtin/remote.c:1325
+#: builtin/remote.c:1328
 #, c-format
 msgid "  Remote branch:%s"
 msgid_plural "  Remote branches:%s"
 msgstr[0] ""
 msgstr[1] ""
 
-#: builtin/remote.c:1328 builtin/remote.c:1354
+#: builtin/remote.c:1331 builtin/remote.c:1357
 msgid " (status not queried)"
 msgstr ""
 
-#: builtin/remote.c:1337
+#: builtin/remote.c:1340
 msgid "  Local branch configured for 'git pull':"
 msgid_plural "  Local branches configured for 'git pull':"
 msgstr[0] ""
 msgstr[1] ""
 
-#: builtin/remote.c:1345
+#: builtin/remote.c:1348
 msgid "  Local refs will be mirrored by 'git push'"
 msgstr ""
 
-#: builtin/remote.c:1351
+#: builtin/remote.c:1354
 #, c-format
 msgid "  Local ref configured for 'git push'%s:"
 msgid_plural "  Local refs configured for 'git push'%s:"
 msgstr[0] ""
 msgstr[1] ""
 
-#: builtin/remote.c:1372
+#: builtin/remote.c:1375
 msgid "set refs/remotes/<name>/HEAD according to remote"
 msgstr ""
 
-#: builtin/remote.c:1374
+#: builtin/remote.c:1377
 msgid "delete refs/remotes/<name>/HEAD"
 msgstr ""
 
-#: builtin/remote.c:1388
+#: builtin/remote.c:1391
 msgid "Cannot determine remote HEAD"
 msgstr ""
 
-#: builtin/remote.c:1390
+#: builtin/remote.c:1393
 msgid "Multiple remote HEAD branches. Please choose one explicitly with:"
 msgstr ""
 
-#: builtin/remote.c:1400
+#: builtin/remote.c:1403
 #, c-format
 msgid "Could not delete %s"
 msgstr ""
 
-#: builtin/remote.c:1408
+#: builtin/remote.c:1411
 #, c-format
 msgid "Not a valid ref: %s"
 msgstr ""
 
-#: builtin/remote.c:1410
+#: builtin/remote.c:1413
 #, c-format
 msgid "Could not setup %s"
 msgstr ""
 
-#: builtin/remote.c:1428
+#: builtin/remote.c:1431
 #, c-format
 msgid " %s will become dangling!"
 msgstr ""
 
-#: builtin/remote.c:1429
+#: builtin/remote.c:1432
 #, c-format
 msgid " %s has become dangling!"
 msgstr ""
 
-#: builtin/remote.c:1438
+#: builtin/remote.c:1441
 #, c-format
 msgid "Pruning %s"
 msgstr ""
 
-#: builtin/remote.c:1439
+#: builtin/remote.c:1442
 #, c-format
 msgid "URL: %s"
 msgstr ""
 
-#: builtin/remote.c:1455
+#: builtin/remote.c:1458
 #, c-format
 msgid " * [would prune] %s"
 msgstr ""
 
-#: builtin/remote.c:1458
+#: builtin/remote.c:1461
 #, c-format
 msgid " * [pruned] %s"
 msgstr ""
 
-#: builtin/remote.c:1503
+#: builtin/remote.c:1506
 msgid "prune remotes after fetching"
 msgstr ""
 
-#: builtin/remote.c:1567 builtin/remote.c:1623 builtin/remote.c:1693
+#: builtin/remote.c:1571 builtin/remote.c:1628 builtin/remote.c:1699
 #, c-format
 msgid "No such remote '%s'"
 msgstr ""
 
-#: builtin/remote.c:1585
+#: builtin/remote.c:1589
 msgid "add branch"
 msgstr ""
 
-#: builtin/remote.c:1592
+#: builtin/remote.c:1596
 msgid "no remote specified"
 msgstr ""
 
-#: builtin/remote.c:1609
+#: builtin/remote.c:1613
 msgid "query push URLs rather than fetch URLs"
 msgstr ""
 
-#: builtin/remote.c:1611
+#: builtin/remote.c:1615
 msgid "return all URLs"
 msgstr ""
 
-#: builtin/remote.c:1641
+#: builtin/remote.c:1646
 #, c-format
 msgid "no URLs configured for remote '%s'"
 msgstr ""
 
-#: builtin/remote.c:1667
+#: builtin/remote.c:1672
 msgid "manipulate push URLs"
 msgstr ""
 
-#: builtin/remote.c:1669
+#: builtin/remote.c:1674
 msgid "add URL"
 msgstr ""
 
-#: builtin/remote.c:1671
+#: builtin/remote.c:1676
 msgid "delete URLs"
 msgstr ""
 
-#: builtin/remote.c:1678
+#: builtin/remote.c:1684
 msgid "--add --delete doesn't make sense"
 msgstr ""
 
-#: builtin/remote.c:1719
+#: builtin/remote.c:1725
 #, c-format
 msgid "Invalid old URL pattern: %s"
 msgstr ""
 
-#: builtin/remote.c:1727
+#: builtin/remote.c:1733
 #, c-format
 msgid "No such URL found: %s"
 msgstr ""
 
-#: builtin/remote.c:1729
+#: builtin/remote.c:1735
 msgid "Will not delete all non-push URLs"
 msgstr ""
 
-#: builtin/remote.c:1747
+#: builtin/remote.c:1753
 msgid "be verbose; must be placed before a subcommand"
 msgstr ""
 
