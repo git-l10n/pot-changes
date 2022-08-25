@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2022-08-18 23:57+0000\n"
+"POT-Creation-Date: 2022-08-25 22:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -211,11 +211,12 @@ msgid "unstaged"
 msgstr ""
 
 #: add-interactive.c:1157 apply.c:5002 apply.c:5005 builtin/am.c:2373
-#: builtin/am.c:2376 builtin/bugreport.c:107 builtin/clone.c:132
-#: builtin/fetch.c:154 builtin/merge.c:287 builtin/pull.c:195
-#: builtin/submodule--helper.c:277 builtin/submodule--helper.c:1754
-#: builtin/submodule--helper.c:1757 builtin/submodule--helper.c:2583
-#: builtin/submodule--helper.c:2767 git-add--interactive.perl:213
+#: builtin/am.c:2376 builtin/bugreport.c:113 builtin/clone.c:132
+#: builtin/diagnose.c:21 builtin/fetch.c:154 builtin/merge.c:287
+#: builtin/pull.c:195 builtin/submodule--helper.c:277
+#: builtin/submodule--helper.c:1754 builtin/submodule--helper.c:1757
+#: builtin/submodule--helper.c:2583 builtin/submodule--helper.c:2767
+#: git-add--interactive.perl:213
 msgid "path"
 msgstr ""
 
@@ -1589,7 +1590,7 @@ msgstr ""
 #: builtin/fast-export.c:1230 builtin/index-pack.c:1854 builtin/log.c:2171
 #: builtin/reset.c:360 builtin/reset.c:418 builtin/rm.c:281
 #: builtin/stash.c:1735 builtin/worktree.c:580 builtin/worktree.c:781
-#: fetch-pack.c:335 http-fetch.c:144 http-fetch.c:153 revision.c:2962
+#: fetch-pack.c:336 http-fetch.c:144 http-fetch.c:153 revision.c:2962
 #, c-format
 msgid "the option '%s' requires '%s'"
 msgstr ""
@@ -2175,13 +2176,13 @@ msgid "fseek failed"
 msgstr ""
 
 #: builtin/am.c:757 builtin/am.c:849 builtin/rebase.c:701 sequencer.c:884
-#: wrapper.c:219 wrapper.c:389
+#: wrapper.c:197 wrapper.c:367
 #, c-format
 msgid "could not open '%s' for reading"
 msgstr ""
 
 #: builtin/am.c:766 builtin/rebase.c:655 sequencer.c:4153 strbuf.c:1187
-#: wrapper.c:217 wrapper.c:387
+#: wrapper.c:195 wrapper.c:365
 #, c-format
 msgid "could not open '%s' for writing"
 msgstr ""
@@ -2482,10 +2483,11 @@ msgstr ""
 msgid "n"
 msgstr ""
 
-#: builtin/am.c:2385 builtin/branch.c:690 builtin/bugreport.c:109
+#: builtin/am.c:2385 builtin/branch.c:690 builtin/bugreport.c:115
 #: builtin/cat-file.c:917 builtin/cat-file.c:921 builtin/cat-file.c:926
-#: builtin/for-each-ref.c:41 builtin/ls-files.c:763 builtin/ls-tree.c:357
-#: builtin/replace.c:555 builtin/tag.c:480 builtin/verify-tag.c:38
+#: builtin/diagnose.c:23 builtin/for-each-ref.c:41 builtin/ls-files.c:763
+#: builtin/ls-tree.c:357 builtin/replace.c:555 builtin/tag.c:480
+#: builtin/verify-tag.c:38
 msgid "format"
 msgstr ""
 
@@ -2585,7 +2587,7 @@ msgstr ""
 msgid "git apply [<options>] [<patch>...]"
 msgstr ""
 
-#: builtin/archive.c:18 contrib/scalar/scalar.c:719
+#: builtin/archive.c:18 diagnose.c:198
 msgid "could not redirect output"
 msgstr ""
 
@@ -3551,32 +3553,34 @@ msgid ""
 "'--set-upstream-to' instead."
 msgstr ""
 
-#: builtin/bugreport.c:16
+#: builtin/bugreport.c:17
 msgid "git version:\n"
 msgstr ""
 
-#: builtin/bugreport.c:22
+#: builtin/bugreport.c:23
 #, c-format
 msgid "uname() failed with error '%s' (%d)\n"
 msgstr ""
 
-#: builtin/bugreport.c:32
+#: builtin/bugreport.c:33
 msgid "compiler info: "
 msgstr ""
 
-#: builtin/bugreport.c:35
+#: builtin/bugreport.c:36
 msgid "libc info: "
 msgstr ""
 
-#: builtin/bugreport.c:49
+#: builtin/bugreport.c:50
 msgid "not run from a git repository - no hooks to show\n"
 msgstr ""
 
-#: builtin/bugreport.c:62
-msgid "git bugreport [-o|--output-directory <file>] [-s|--suffix <format>]"
+#: builtin/bugreport.c:63
+msgid ""
+"git bugreport [-o|--output-directory <file>] [-s|--suffix <format>] [--"
+"diagnose[=<mode>]"
 msgstr ""
 
-#: builtin/bugreport.c:69
+#: builtin/bugreport.c:70
 msgid ""
 "Thank you for filling out a Git bug report!\n"
 "Please answer the following questions to help us understand your issue.\n"
@@ -3595,33 +3599,49 @@ msgid ""
 "You can delete any lines you don't wish to share.\n"
 msgstr ""
 
-#: builtin/bugreport.c:108
-msgid "specify a destination for the bugreport file"
+#: builtin/bugreport.c:110 builtin/commit.c:1501 builtin/commit.c:1505
+#: builtin/commit.c:1668 builtin/fast-export.c:1172 builtin/fast-export.c:1175
+#: builtin/fast-export.c:1178 builtin/rebase.c:1149 parse-options.h:368
+msgid "mode"
 msgstr ""
 
-#: builtin/bugreport.c:110
-msgid "specify a strftime format suffix for the filename"
+#: builtin/bugreport.c:111
+msgid ""
+"create an additional zip archive of detailed diagnostics (default 'stats')"
 msgstr ""
 
-#: builtin/bugreport.c:132
+#: builtin/bugreport.c:114
+msgid "specify a destination for the bugreport file(s)"
+msgstr ""
+
+#: builtin/bugreport.c:116
+msgid "specify a strftime format suffix for the filename(s)"
+msgstr ""
+
+#: builtin/bugreport.c:139 builtin/diagnose.c:49
 #, c-format
 msgid "could not create leading directories for '%s'"
 msgstr ""
 
-#: builtin/bugreport.c:139
+#: builtin/bugreport.c:152 builtin/diagnose.c:55
+#, c-format
+msgid "unable to create diagnostics archive %s"
+msgstr ""
+
+#: builtin/bugreport.c:160
 msgid "System Info"
 msgstr ""
 
-#: builtin/bugreport.c:142
+#: builtin/bugreport.c:163
 msgid "Enabled Hooks"
 msgstr ""
 
-#: builtin/bugreport.c:149
+#: builtin/bugreport.c:170
 #, c-format
 msgid "unable to write to %s"
 msgstr ""
 
-#: builtin/bugreport.c:159
+#: builtin/bugreport.c:180
 #, c-format
 msgid "Created new report at '%s'.\n"
 msgstr ""
@@ -4903,7 +4923,7 @@ msgstr ""
 msgid "Could not find remote branch %s to clone."
 msgstr ""
 
-#: builtin/clone.c:588 fetch-pack.c:2044
+#: builtin/clone.c:588 fetch-pack.c:2080
 msgid "remote did not send all necessary objects"
 msgstr ""
 
@@ -4940,7 +4960,7 @@ msgstr ""
 msgid "Too many arguments."
 msgstr ""
 
-#: builtin/clone.c:916 contrib/scalar/scalar.c:510
+#: builtin/clone.c:916 contrib/scalar/scalar.c:415
 msgid "You must specify a repository to clone."
 msgstr ""
 
@@ -5022,7 +5042,7 @@ msgstr ""
 msgid "--filter is ignored in local clones; use file:// instead."
 msgstr ""
 
-#: builtin/clone.c:1179 fetch-pack.c:1193 fetch-pack.c:1544
+#: builtin/clone.c:1179 fetch-pack.c:1213 fetch-pack.c:1566
 msgid "source repository is shallow, reject to clone."
 msgstr ""
 
@@ -5579,12 +5599,6 @@ msgstr ""
 
 #: builtin/commit.c:1499 builtin/commit.c:1665
 msgid "terminate entries with NUL"
-msgstr ""
-
-#: builtin/commit.c:1501 builtin/commit.c:1505 builtin/commit.c:1668
-#: builtin/fast-export.c:1172 builtin/fast-export.c:1175
-#: builtin/fast-export.c:1178 builtin/rebase.c:1149 parse-options.h:368
-msgid "mode"
 msgstr ""
 
 #: builtin/commit.c:1502 builtin/commit.c:1668
@@ -6300,6 +6314,28 @@ msgstr ""
 #: builtin/describe.c:675 builtin/describe.c:677
 #, c-format
 msgid "option '%s' and commit-ishes cannot be used together"
+msgstr ""
+
+#: builtin/diagnose.c:6
+msgid ""
+"git diagnose [-o|--output-directory <path>] [-s|--suffix <format>] [--"
+"mode=<mode>]"
+msgstr ""
+
+#: builtin/diagnose.c:22
+msgid "specify a destination for the diagnostics archive"
+msgstr ""
+
+#: builtin/diagnose.c:24
+msgid "specify a strftime format suffix for the filename"
+msgstr ""
+
+#: builtin/diagnose.c:25
+msgid "(stats|all)"
+msgstr ""
+
+#: builtin/diagnose.c:26
+msgid "specify the content of the diagnostic archive"
 msgstr ""
 
 #: builtin/diff-tree.c:157
@@ -9814,7 +9850,7 @@ msgstr ""
 msgid "Bad value '%s' in environment '%s'"
 msgstr ""
 
-#: builtin/merge.c:1168 read-cache.c:3135 strbuf.c:1192 wrapper.c:723
+#: builtin/merge.c:1168 read-cache.c:3135 strbuf.c:1192 wrapper.c:701
 #, c-format
 msgid "could not close '%s'"
 msgstr ""
@@ -11145,7 +11181,7 @@ msgid "<remote>"
 msgstr ""
 
 #: builtin/pull.c:468 builtin/pull.c:483 builtin/pull.c:488
-#: contrib/scalar/scalar.c:471
+#: contrib/scalar/scalar.c:376
 msgid "<branch>"
 msgstr ""
 
@@ -14885,7 +14921,7 @@ msgstr ""
 msgid "'%s' is not a valid submodule name"
 msgstr ""
 
-#: builtin/submodule--helper.c:3396 git.c:454 git.c:730
+#: builtin/submodule--helper.c:3396 git.c:454 git.c:731
 #, c-format
 msgid "%s doesn't support --super-prefix"
 msgstr ""
@@ -16862,6 +16898,16 @@ msgstr ""
 msgid "no libc information available\n"
 msgstr ""
 
+#: compat/disk.h:18 compat/disk.h:40
+#, c-format
+msgid "could not determine free disk size for '%s'"
+msgstr ""
+
+#: compat/disk.h:28
+#, c-format
+msgid "could not get info for '%s'"
+msgstr ""
+
 #: compat/fsmonitor/fsm-health-win32.c:56
 #, c-format
 msgid "[GLE %ld] health thread could not open '%ls'"
@@ -17590,219 +17636,186 @@ msgstr ""
 msgid "failed to close rev-list's stdin"
 msgstr ""
 
-#: contrib/scalar/scalar.c:51 worktree.c:327
+#: contrib/scalar/scalar.c:49 worktree.c:327
 #, c-format
 msgid "'%s' does not exist"
 msgstr ""
 
-#: contrib/scalar/scalar.c:53
+#: contrib/scalar/scalar.c:51
 msgid "need a working directory"
 msgstr ""
 
-#: contrib/scalar/scalar.c:90
+#: contrib/scalar/scalar.c:88
 msgid "could not find enlistment root"
 msgstr ""
 
-#: contrib/scalar/scalar.c:93 contrib/scalar/scalar.c:447
-#: contrib/scalar/scalar.c:532 contrib/scalar/scalar.c:864
+#: contrib/scalar/scalar.c:91 contrib/scalar/scalar.c:352
+#: contrib/scalar/scalar.c:437 contrib/scalar/scalar.c:605
 #, c-format
 msgid "could not switch to '%s'"
 msgstr ""
 
-#: contrib/scalar/scalar.c:183
+#: contrib/scalar/scalar.c:181
 #, c-format
 msgid "could not configure %s=%s"
 msgstr ""
 
-#: contrib/scalar/scalar.c:201
+#: contrib/scalar/scalar.c:199
 msgid "could not configure log.excludeDecoration"
 msgstr ""
 
-#: contrib/scalar/scalar.c:222
+#: contrib/scalar/scalar.c:220
 msgid "Scalar enlistments require a worktree"
 msgstr ""
 
-#: contrib/scalar/scalar.c:276 dir.c:2440
-#, c-format
-msgid "could not open directory '%s'"
-msgstr ""
-
-#: contrib/scalar/scalar.c:293
-#, c-format
-msgid "skipping '%s', which is neither file nor directory"
-msgstr ""
-
-#: contrib/scalar/scalar.c:320 contrib/scalar/scalar.c:344
-#, c-format
-msgid "could not determine free disk size for '%s'"
-msgstr ""
-
-#: contrib/scalar/scalar.c:330
-#, c-format
-msgid "could not get info for '%s'"
-msgstr ""
-
-#: contrib/scalar/scalar.c:407
+#: contrib/scalar/scalar.c:312
 #, c-format
 msgid "remote HEAD is not a branch: '%.*s'"
 msgstr ""
 
-#: contrib/scalar/scalar.c:413
+#: contrib/scalar/scalar.c:318
 msgid "failed to get default branch name from remote; using local default"
 msgstr ""
 
-#: contrib/scalar/scalar.c:426
+#: contrib/scalar/scalar.c:331
 msgid "failed to get default branch name"
 msgstr ""
 
-#: contrib/scalar/scalar.c:437
+#: contrib/scalar/scalar.c:342
 msgid "failed to unregister repository"
 msgstr ""
 
-#: contrib/scalar/scalar.c:452
+#: contrib/scalar/scalar.c:357
 msgid "failed to delete enlistment directory"
 msgstr ""
 
-#: contrib/scalar/scalar.c:472
+#: contrib/scalar/scalar.c:377
 msgid "branch to checkout after clone"
 msgstr ""
 
-#: contrib/scalar/scalar.c:474
+#: contrib/scalar/scalar.c:379
 msgid "when cloning, create full working directory"
 msgstr ""
 
-#: contrib/scalar/scalar.c:476
+#: contrib/scalar/scalar.c:381
 msgid "only download metadata for the branch that will be checked out"
 msgstr ""
 
-#: contrib/scalar/scalar.c:481
+#: contrib/scalar/scalar.c:386
 msgid "scalar clone [<options>] [--] <repo> [<dir>]"
 msgstr ""
 
-#: contrib/scalar/scalar.c:506
+#: contrib/scalar/scalar.c:411
 #, c-format
 msgid "cannot deduce worktree name from '%s'"
 msgstr ""
 
-#: contrib/scalar/scalar.c:515
+#: contrib/scalar/scalar.c:420
 #, c-format
 msgid "directory '%s' exists already"
 msgstr ""
 
-#: contrib/scalar/scalar.c:542
+#: contrib/scalar/scalar.c:447
 #, c-format
 msgid "failed to get default branch for '%s'"
 msgstr ""
 
-#: contrib/scalar/scalar.c:553
+#: contrib/scalar/scalar.c:458
 #, c-format
 msgid "could not configure remote in '%s'"
 msgstr ""
 
-#: contrib/scalar/scalar.c:562
+#: contrib/scalar/scalar.c:467
 #, c-format
 msgid "could not configure '%s'"
 msgstr ""
 
-#: contrib/scalar/scalar.c:565
+#: contrib/scalar/scalar.c:470
 msgid "partial clone failed; attempting full clone"
 msgstr ""
 
-#: contrib/scalar/scalar.c:569
+#: contrib/scalar/scalar.c:474
 msgid "could not configure for full clone"
 msgstr ""
 
-#: contrib/scalar/scalar.c:681
+#: contrib/scalar/scalar.c:509
 msgid "scalar diagnose [<enlistment>]"
 msgstr ""
 
-#: contrib/scalar/scalar.c:707
-#, c-format
-msgid "could not create directory for '%s'"
-msgstr ""
-
-#: contrib/scalar/scalar.c:713
-msgid "could not duplicate stdout"
-msgstr ""
-
-#: contrib/scalar/scalar.c:764
-msgid "failed to write archive"
-msgstr ""
-
-#: contrib/scalar/scalar.c:790
+#: contrib/scalar/scalar.c:531
 msgid "`scalar list` does not take arguments"
 msgstr ""
 
-#: contrib/scalar/scalar.c:803
+#: contrib/scalar/scalar.c:544
 msgid "scalar register [<enlistment>]"
 msgstr ""
 
-#: contrib/scalar/scalar.c:830
+#: contrib/scalar/scalar.c:571
 msgid "reconfigure all registered enlistments"
 msgstr ""
 
-#: contrib/scalar/scalar.c:834
+#: contrib/scalar/scalar.c:575
 msgid "scalar reconfigure [--all | <enlistment>]"
 msgstr ""
 
-#: contrib/scalar/scalar.c:852
+#: contrib/scalar/scalar.c:593
 msgid "--all or <enlistment>, but not both"
 msgstr ""
 
-#: contrib/scalar/scalar.c:867
+#: contrib/scalar/scalar.c:608
 #, c-format
 msgid "git repository gone in '%s'"
 msgstr ""
 
-#: contrib/scalar/scalar.c:907
+#: contrib/scalar/scalar.c:648
 msgid ""
 "scalar run <task> [<enlistment>]\n"
 "Tasks:\n"
 msgstr ""
 
-#: contrib/scalar/scalar.c:925
+#: contrib/scalar/scalar.c:666
 #, c-format
 msgid "no such task: '%s'"
 msgstr ""
 
-#: contrib/scalar/scalar.c:975
+#: contrib/scalar/scalar.c:716
 msgid "scalar unregister [<enlistment>]"
 msgstr ""
 
-#: contrib/scalar/scalar.c:1022
+#: contrib/scalar/scalar.c:763
 msgid "scalar delete <enlistment>"
 msgstr ""
 
-#: contrib/scalar/scalar.c:1037
+#: contrib/scalar/scalar.c:778
 msgid "refusing to delete current working directory"
 msgstr ""
 
-#: contrib/scalar/scalar.c:1052
+#: contrib/scalar/scalar.c:793
 msgid "include Git version"
 msgstr ""
 
-#: contrib/scalar/scalar.c:1054
+#: contrib/scalar/scalar.c:795
 msgid "include Git's build options"
 msgstr ""
 
-#: contrib/scalar/scalar.c:1058
+#: contrib/scalar/scalar.c:799
 msgid "scalar verbose [-v | --verbose] [--build-options]"
 msgstr ""
 
-#: contrib/scalar/scalar.c:1100
+#: contrib/scalar/scalar.c:841
 msgid "-C requires a <directory>"
 msgstr ""
 
-#: contrib/scalar/scalar.c:1102
+#: contrib/scalar/scalar.c:843
 #, c-format
 msgid "could not change to '%s'"
 msgstr ""
 
-#: contrib/scalar/scalar.c:1108
+#: contrib/scalar/scalar.c:849
 msgid "-c requires a <key>=<value> argument"
 msgstr ""
 
-#: contrib/scalar/scalar.c:1126
+#: contrib/scalar/scalar.c:867
 msgid ""
 "scalar [-C <directory>] [-c <key>=<value>] <command> [<options>]\n"
 "\n"
@@ -18044,6 +18057,39 @@ msgstr ""
 #: delta-islands.c:467
 #, c-format
 msgid "Marked %d islands, done.\n"
+msgstr ""
+
+#: diagnose.c:43
+#, c-format
+msgid "invalid --%s value '%s'"
+msgstr ""
+
+#: diagnose.c:136
+#, c-format
+msgid "could not archive missing directory '%s'"
+msgstr ""
+
+#: diagnose.c:139 dir.c:2440
+#, c-format
+msgid "could not open directory '%s'"
+msgstr ""
+
+#: diagnose.c:157
+#, c-format
+msgid "skipping '%s', which is neither file nor directory"
+msgstr ""
+
+#: diagnose.c:192
+msgid "could not duplicate stdout"
+msgstr ""
+
+#: diagnose.c:233
+#, c-format
+msgid "could not add directory '%s' to archiver"
+msgstr ""
+
+#: diagnose.c:249
+msgid "failed to write archive"
 msgstr ""
 
 #: diff-lib.c:566
@@ -18785,170 +18831,170 @@ msgstr ""
 msgid "Server supports filter"
 msgstr ""
 
-#: fetch-pack.c:428 fetch-pack.c:1498
+#: fetch-pack.c:429 fetch-pack.c:1520
 #, c-format
 msgid "invalid shallow line: %s"
 msgstr ""
 
-#: fetch-pack.c:434 fetch-pack.c:1504
+#: fetch-pack.c:435 fetch-pack.c:1526
 #, c-format
 msgid "invalid unshallow line: %s"
 msgstr ""
 
-#: fetch-pack.c:436 fetch-pack.c:1506
+#: fetch-pack.c:437 fetch-pack.c:1528
 #, c-format
 msgid "object not found: %s"
 msgstr ""
 
-#: fetch-pack.c:439 fetch-pack.c:1509
+#: fetch-pack.c:440 fetch-pack.c:1531
 #, c-format
 msgid "error in object: %s"
 msgstr ""
 
-#: fetch-pack.c:441 fetch-pack.c:1511
+#: fetch-pack.c:442 fetch-pack.c:1533
 #, c-format
 msgid "no shallow found: %s"
 msgstr ""
 
-#: fetch-pack.c:444 fetch-pack.c:1515
+#: fetch-pack.c:445 fetch-pack.c:1537
 #, c-format
 msgid "expected shallow/unshallow, got %s"
 msgstr ""
 
-#: fetch-pack.c:484
+#: fetch-pack.c:495
 #, c-format
 msgid "got %s %d %s"
 msgstr ""
 
-#: fetch-pack.c:501
+#: fetch-pack.c:515
 #, c-format
 msgid "invalid commit %s"
 msgstr ""
 
-#: fetch-pack.c:532
+#: fetch-pack.c:550
 msgid "giving up"
 msgstr ""
 
-#: fetch-pack.c:545 progress.h:25
+#: fetch-pack.c:565 progress.h:25
 msgid "done"
 msgstr ""
 
-#: fetch-pack.c:557
+#: fetch-pack.c:577
 #, c-format
 msgid "got %s (%d) %s"
 msgstr ""
 
-#: fetch-pack.c:593
+#: fetch-pack.c:613
 #, c-format
 msgid "Marking %s as complete"
 msgstr ""
 
-#: fetch-pack.c:815
+#: fetch-pack.c:835
 #, c-format
 msgid "already have %s (%s)"
 msgstr ""
 
-#: fetch-pack.c:911
+#: fetch-pack.c:931
 msgid "fetch-pack: unable to fork off sideband demultiplexer"
 msgstr ""
 
-#: fetch-pack.c:919
+#: fetch-pack.c:939
 msgid "protocol error: bad pack header"
 msgstr ""
 
-#: fetch-pack.c:1009
+#: fetch-pack.c:1029
 #, c-format
 msgid "fetch-pack: unable to fork off %s"
 msgstr ""
 
-#: fetch-pack.c:1015
+#: fetch-pack.c:1035
 msgid "fetch-pack: invalid index-pack output"
 msgstr ""
 
-#: fetch-pack.c:1032
+#: fetch-pack.c:1052
 #, c-format
 msgid "%s failed"
 msgstr ""
 
-#: fetch-pack.c:1034
+#: fetch-pack.c:1054
 msgid "error in sideband demultiplexer"
 msgstr ""
 
-#: fetch-pack.c:1090
+#: fetch-pack.c:1110
 #, c-format
 msgid "Server version is %.*s"
 msgstr ""
 
-#: fetch-pack.c:1098 fetch-pack.c:1104 fetch-pack.c:1107 fetch-pack.c:1113
-#: fetch-pack.c:1117 fetch-pack.c:1121 fetch-pack.c:1125 fetch-pack.c:1129
-#: fetch-pack.c:1133 fetch-pack.c:1137 fetch-pack.c:1141 fetch-pack.c:1145
-#: fetch-pack.c:1151 fetch-pack.c:1157 fetch-pack.c:1162 fetch-pack.c:1167
+#: fetch-pack.c:1118 fetch-pack.c:1124 fetch-pack.c:1127 fetch-pack.c:1133
+#: fetch-pack.c:1137 fetch-pack.c:1141 fetch-pack.c:1145 fetch-pack.c:1149
+#: fetch-pack.c:1153 fetch-pack.c:1157 fetch-pack.c:1161 fetch-pack.c:1165
+#: fetch-pack.c:1171 fetch-pack.c:1177 fetch-pack.c:1182 fetch-pack.c:1187
 #, c-format
 msgid "Server supports %s"
 msgstr ""
 
-#: fetch-pack.c:1100
+#: fetch-pack.c:1120
 msgid "Server does not support shallow clients"
 msgstr ""
 
-#: fetch-pack.c:1160
+#: fetch-pack.c:1180
 msgid "Server does not support --shallow-since"
 msgstr ""
 
-#: fetch-pack.c:1165
+#: fetch-pack.c:1185
 msgid "Server does not support --shallow-exclude"
 msgstr ""
 
-#: fetch-pack.c:1169
+#: fetch-pack.c:1189
 msgid "Server does not support --deepen"
 msgstr ""
 
-#: fetch-pack.c:1171
+#: fetch-pack.c:1191
 msgid "Server does not support this repository's object format"
 msgstr ""
 
-#: fetch-pack.c:1184
+#: fetch-pack.c:1204
 msgid "no common commits"
 msgstr ""
 
-#: fetch-pack.c:1199 fetch-pack.c:1743
+#: fetch-pack.c:1219 fetch-pack.c:1779
 msgid "git fetch-pack: fetch failed."
 msgstr ""
 
-#: fetch-pack.c:1313
+#: fetch-pack.c:1333
 #, c-format
 msgid "mismatched algorithms: client %s; server %s"
 msgstr ""
 
-#: fetch-pack.c:1317
+#: fetch-pack.c:1337
 #, c-format
 msgid "the server does not support algorithm '%s'"
 msgstr ""
 
-#: fetch-pack.c:1350
+#: fetch-pack.c:1370
 msgid "Server does not support shallow requests"
 msgstr ""
 
-#: fetch-pack.c:1393 fetch-pack.c:2125
+#: fetch-pack.c:1415 fetch-pack.c:2173
 msgid "unable to write request to remote"
 msgstr ""
 
-#: fetch-pack.c:1417
+#: fetch-pack.c:1439
 #, c-format
 msgid "expected '%s', received '%s'"
 msgstr ""
 
-#: fetch-pack.c:1420
+#: fetch-pack.c:1442
 #, c-format
 msgid "expected '%s'"
 msgstr ""
 
-#: fetch-pack.c:1454
+#: fetch-pack.c:1476
 #, c-format
 msgid "unexpected acknowledgment line: '%s'"
 msgstr ""
 
-#: fetch-pack.c:1459
+#: fetch-pack.c:1481
 #, c-format
 msgid "error processing acks: %d"
 msgstr ""
@@ -18956,7 +19002,7 @@ msgstr ""
 #. TRANSLATORS: The parameter will be 'ready', a protocol
 #. keyword.
 #.
-#: fetch-pack.c:1473
+#: fetch-pack.c:1495
 #, c-format
 msgid "expected packfile to be sent after '%s'"
 msgstr ""
@@ -18964,49 +19010,49 @@ msgstr ""
 #. TRANSLATORS: The parameter will be 'ready', a protocol
 #. keyword.
 #.
-#: fetch-pack.c:1479
+#: fetch-pack.c:1501
 #, c-format
 msgid "expected no other sections to be sent after no '%s'"
 msgstr ""
 
-#: fetch-pack.c:1520
+#: fetch-pack.c:1542
 #, c-format
 msgid "error processing shallow info: %d"
 msgstr ""
 
-#: fetch-pack.c:1569
+#: fetch-pack.c:1591
 #, c-format
 msgid "expected wanted-ref, got '%s'"
 msgstr ""
 
-#: fetch-pack.c:1574
+#: fetch-pack.c:1596
 #, c-format
 msgid "unexpected wanted-ref: '%s'"
 msgstr ""
 
-#: fetch-pack.c:1579
+#: fetch-pack.c:1601
 #, c-format
 msgid "error processing wanted refs: %d"
 msgstr ""
 
-#: fetch-pack.c:1609
+#: fetch-pack.c:1631
 msgid "git fetch-pack: expected response end packet"
 msgstr ""
 
-#: fetch-pack.c:2021
+#: fetch-pack.c:2057
 msgid "no matching remote head"
 msgstr ""
 
-#: fetch-pack.c:2147
+#: fetch-pack.c:2195
 msgid "unexpected 'ready' from remote"
 msgstr ""
 
-#: fetch-pack.c:2170
+#: fetch-pack.c:2224
 #, c-format
 msgid "no such remote ref %s"
 msgstr ""
 
-#: fetch-pack.c:2173
+#: fetch-pack.c:2227
 #, c-format
 msgid "Server does not allow request for unadvertised object %s"
 msgstr ""
@@ -19144,29 +19190,29 @@ msgstr ""
 msgid "close failed on standard output"
 msgstr ""
 
-#: git.c:839
+#: git.c:840
 #, c-format
 msgid "alias loop detected: expansion of '%s' does not terminate:%s"
 msgstr ""
 
-#: git.c:889
+#: git.c:890
 #, c-format
 msgid "cannot handle %s as a builtin"
 msgstr ""
 
-#: git.c:904
+#: git.c:905
 #, c-format
 msgid ""
 "usage: %s\n"
 "\n"
 msgstr ""
 
-#: git.c:924
+#: git.c:925
 #, c-format
 msgid "expansion of alias '%s' failed; '%s' is not a git command\n"
 msgstr ""
 
-#: git.c:936
+#: git.c:937
 #, c-format
 msgid "failed to run command '%s': %s\n"
 msgstr ""
@@ -19640,73 +19686,78 @@ msgstr ""
 msgid "quoted CRLF detected"
 msgstr ""
 
-#: merge-ort.c:1762 merge-recursive.c:1215
+#: merge-ort.c:1783 merge-recursive.c:1215
 #, c-format
 msgid "Failed to merge submodule %s (not checked out)"
 msgstr ""
 
-#: merge-ort.c:1772 merge-recursive.c:1222
+#: merge-ort.c:1792
+#, c-format
+msgid "Failed to merge submodule %s (no merge base)"
+msgstr ""
+
+#: merge-ort.c:1802 merge-recursive.c:1222
 #, c-format
 msgid "Failed to merge submodule %s (commits not present)"
 msgstr ""
 
-#: merge-ort.c:1782 merge-recursive.c:1229
+#: merge-ort.c:1813 merge-recursive.c:1229
 #, c-format
 msgid "Failed to merge submodule %s (commits don't follow merge-base)"
 msgstr ""
 
-#: merge-ort.c:1793 merge-ort.c:1802
+#: merge-ort.c:1824 merge-ort.c:1833
 #, c-format
 msgid "Note: Fast-forwarding submodule %s to %s"
 msgstr ""
 
-#: merge-ort.c:1826
+#: merge-ort.c:1857
 #, c-format
 msgid "Failed to merge submodule %s"
 msgstr ""
 
-#: merge-ort.c:1834
+#: merge-ort.c:1865
 #, c-format
 msgid ""
 "Failed to merge submodule %s, but a possible merge resolution exists: %s"
 msgstr ""
 
-#: merge-ort.c:1845
+#: merge-ort.c:1876
 #, c-format
 msgid ""
 "Failed to merge submodule %s, but multiple possible merges exist:\n"
 "%s"
 msgstr ""
 
-#: merge-ort.c:2071 merge-recursive.c:1376
+#: merge-ort.c:2118 merge-recursive.c:1376
 msgid "Failed to execute internal merge"
 msgstr ""
 
-#: merge-ort.c:2076 merge-recursive.c:1381
+#: merge-ort.c:2123 merge-recursive.c:1381
 #, c-format
 msgid "Unable to add %s to database"
 msgstr ""
 
-#: merge-ort.c:2084 merge-recursive.c:1414
+#: merge-ort.c:2131 merge-recursive.c:1414
 #, c-format
 msgid "Auto-merging %s"
 msgstr ""
 
-#: merge-ort.c:2224 merge-recursive.c:2136
+#: merge-ort.c:2271 merge-recursive.c:2136
 #, c-format
 msgid ""
 "CONFLICT (implicit dir rename): Existing file/dir at %s in the way of "
 "implicit directory rename(s) putting the following path(s) there: %s."
 msgstr ""
 
-#: merge-ort.c:2236 merge-recursive.c:2146
+#: merge-ort.c:2283 merge-recursive.c:2146
 #, c-format
 msgid ""
 "CONFLICT (implicit dir rename): Cannot map more than one path to %s; "
 "implicit directory renames tried to put these paths there: %s"
 msgstr ""
 
-#: merge-ort.c:2295
+#: merge-ort.c:2342
 #, c-format
 msgid ""
 "CONFLICT (directory rename split): Unclear where to rename %s to; it was "
@@ -19714,47 +19765,47 @@ msgid ""
 "majority of the files."
 msgstr ""
 
-#: merge-ort.c:2477 merge-recursive.c:2482
+#: merge-ort.c:2524 merge-recursive.c:2482
 #, c-format
 msgid ""
 "WARNING: Avoiding applying %s -> %s rename to %s, because %s itself was "
 "renamed."
 msgstr ""
 
-#: merge-ort.c:2619 merge-recursive.c:3265
+#: merge-ort.c:2666 merge-recursive.c:3265
 #, c-format
 msgid ""
 "Path updated: %s added in %s inside a directory that was renamed in %s; "
 "moving it to %s."
 msgstr ""
 
-#: merge-ort.c:2627 merge-recursive.c:3272
+#: merge-ort.c:2674 merge-recursive.c:3272
 #, c-format
 msgid ""
 "Path updated: %s renamed to %s in %s, inside a directory that was renamed in "
 "%s; moving it to %s."
 msgstr ""
 
-#: merge-ort.c:2641 merge-recursive.c:3268
+#: merge-ort.c:2688 merge-recursive.c:3268
 #, c-format
 msgid ""
 "CONFLICT (file location): %s added in %s inside a directory that was renamed "
 "in %s, suggesting it should perhaps be moved to %s."
 msgstr ""
 
-#: merge-ort.c:2650 merge-recursive.c:3275
+#: merge-ort.c:2697 merge-recursive.c:3275
 #, c-format
 msgid ""
 "CONFLICT (file location): %s renamed to %s in %s, inside a directory that "
 "was renamed in %s, suggesting it should perhaps be moved to %s."
 msgstr ""
 
-#: merge-ort.c:2807
+#: merge-ort.c:2854
 #, c-format
 msgid "CONFLICT (rename/rename): %s renamed to %s in %s and to %s in %s."
 msgstr ""
 
-#: merge-ort.c:2903
+#: merge-ort.c:2950
 #, c-format
 msgid ""
 "CONFLICT (rename involved in collision): rename of %s -> %s has content "
@@ -19762,77 +19813,105 @@ msgid ""
 "markers."
 msgstr ""
 
-#: merge-ort.c:2923 merge-ort.c:2948
+#: merge-ort.c:2970 merge-ort.c:2995
 #, c-format
 msgid "CONFLICT (rename/delete): %s renamed to %s in %s, but deleted in %s."
 msgstr ""
 
-#: merge-ort.c:3431 merge-recursive.c:3026
+#: merge-ort.c:3478 merge-recursive.c:3026
 #, c-format
 msgid "cannot read object %s"
 msgstr ""
 
-#: merge-ort.c:3434 merge-recursive.c:3029
+#: merge-ort.c:3481 merge-recursive.c:3029
 #, c-format
 msgid "object %s is not a blob"
 msgstr ""
 
-#: merge-ort.c:3864
+#: merge-ort.c:3911
 #, c-format
 msgid ""
 "CONFLICT (file/directory): directory in the way of %s from %s; moving it to "
 "%s instead."
 msgstr ""
 
-#: merge-ort.c:3947
+#: merge-ort.c:3994
 #, c-format
 msgid ""
 "CONFLICT (distinct types): %s had different types on each side; renamed both "
 "of them so each can be recorded somewhere."
 msgstr ""
 
-#: merge-ort.c:3956
+#: merge-ort.c:4003
 #, c-format
 msgid ""
 "CONFLICT (distinct types): %s had different types on each side; renamed one "
 "of them so each can be recorded somewhere."
 msgstr ""
 
-#: merge-ort.c:4041 merge-recursive.c:3105
+#: merge-ort.c:4088 merge-recursive.c:3105
 msgid "content"
 msgstr ""
 
-#: merge-ort.c:4043 merge-recursive.c:3109
+#: merge-ort.c:4090 merge-recursive.c:3109
 msgid "add/add"
 msgstr ""
 
-#: merge-ort.c:4045 merge-recursive.c:3154
+#: merge-ort.c:4092 merge-recursive.c:3154
 msgid "submodule"
 msgstr ""
 
-#: merge-ort.c:4048 merge-recursive.c:3155
+#: merge-ort.c:4095 merge-recursive.c:3155
 #, c-format
 msgid "CONFLICT (%s): Merge conflict in %s"
 msgstr ""
 
-#: merge-ort.c:4093
+#: merge-ort.c:4140
 #, c-format
 msgid ""
 "CONFLICT (modify/delete): %s deleted in %s and modified in %s.  Version %s "
 "of %s left in tree."
 msgstr ""
 
-#: merge-ort.c:4390
+#: merge-ort.c:4437
 #, c-format
 msgid ""
 "Note: %s not up to date and in way of checking out conflicted version; old "
 "copy renamed to %s"
 msgstr ""
 
+#. TRANSLATORS: This is a line of advice to resolve a merge
+#. conflict in a submodule. The first argument is the submodule
+#. name, and the second argument is the abbreviated id of the
+#. commit that needs to be merged.  For example:
+#.  - go to submodule (mysubmodule), and either merge commit abc1234"
+#.
+#: merge-ort.c:4512
+#, c-format
+msgid ""
+" - go to submodule (%s), and either merge commit %s\n"
+"   or update to an existing commit which has merged those changes\n"
+msgstr ""
+
+#: merge-ort.c:4523
+#, c-format
+msgid ""
+"Recursive merging with submodules currently only supports trivial cases.\n"
+"Please manually handle the merging of each conflicted submodule.\n"
+"This can be accomplished with the following steps:\n"
+"%s - come back to superproject and run:\n"
+"\n"
+"      git add %s\n"
+"\n"
+"   to record the above merge or update\n"
+" - resolve any other conflicts in the superproject\n"
+" - commit the resulting index in the superproject\n"
+msgstr ""
+
 #. TRANSLATORS: The %s arguments are: 1) tree hash of a merge
 #. base, and 2-3) the trees for the two trees we're merging.
 #.
-#: merge-ort.c:4821
+#: merge-ort.c:4928
 #, c-format
 msgid "collecting merge info failed for trees %s, %s, %s"
 msgstr ""
@@ -22557,7 +22636,7 @@ msgstr ""
 msgid "-L does not yet support diff formats besides -p and -s"
 msgstr ""
 
-#: run-command.c:1264
+#: run-command.c:1265
 #, c-format
 msgid "cannot create async thread: %s"
 msgstr ""
@@ -22669,7 +22748,7 @@ msgid "could not lock '%s'"
 msgstr ""
 
 #: sequencer.c:493 sequencer.c:3151 sequencer.c:3356 sequencer.c:3370
-#: sequencer.c:3622 sequencer.c:5890 strbuf.c:1189 wrapper.c:721
+#: sequencer.c:3622 sequencer.c:5890 strbuf.c:1189 wrapper.c:699
 #, c-format
 msgid "could not write to '%s'"
 msgstr ""
@@ -23995,7 +24074,7 @@ msgstr ""
 msgid "could not read input file '%s'"
 msgstr ""
 
-#: trailer.c:1024 wrapper.c:766
+#: trailer.c:1024 wrapper.c:744
 #, c-format
 msgid "could not stat %s"
 msgstr ""
@@ -24672,22 +24751,22 @@ msgstr ""
 msgid "could not setenv '%s'"
 msgstr ""
 
-#: wrapper.c:213
+#: wrapper.c:191
 #, c-format
 msgid "unable to create '%s'"
 msgstr ""
 
-#: wrapper.c:215 wrapper.c:385
+#: wrapper.c:193 wrapper.c:363
 #, c-format
 msgid "could not open '%s' for reading and writing"
 msgstr ""
 
-#: wrapper.c:416 wrapper.c:689
+#: wrapper.c:394 wrapper.c:667
 #, c-format
 msgid "unable to access '%s'"
 msgstr ""
 
-#: wrapper.c:697
+#: wrapper.c:675
 msgid "unable to get current working directory"
 msgstr ""
 
