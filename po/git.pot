@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2022-08-25 22:57+0000\n"
+"POT-Creation-Date: 2022-08-26 19:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -2486,7 +2486,7 @@ msgstr ""
 #: builtin/fmt-merge-msg.c:21 builtin/grep.c:920 builtin/merge.c:264
 #: builtin/pull.c:143 builtin/pull.c:205 builtin/pull.c:222
 #: builtin/rebase.c:1087 builtin/repack.c:779 builtin/repack.c:783
-#: builtin/repack.c:785 builtin/show-branch.c:650 builtin/show-ref.c:167
+#: builtin/repack.c:785 builtin/show-branch.c:650 builtin/show-ref.c:165
 #: builtin/tag.c:446 parse-options.h:171 parse-options.h:192
 #: parse-options.h:369
 msgid "n"
@@ -4638,7 +4638,7 @@ msgstr ""
 #: builtin/clean.c:932 builtin/describe.c:567 builtin/describe.c:569
 #: builtin/grep.c:938 builtin/log.c:246 builtin/log.c:248
 #: builtin/ls-files.c:736 builtin/name-rev.c:575 builtin/name-rev.c:577
-#: builtin/show-ref.c:174
+#: builtin/show-ref.c:172
 msgid "pattern"
 msgstr ""
 
@@ -7089,7 +7089,7 @@ msgstr ""
 msgid "quote placeholders suitably for Tcl"
 msgstr ""
 
-#: builtin/for-each-ref.c:40 builtin/show-ref.c:176
+#: builtin/for-each-ref.c:40
 msgid "show only <n> matched refs"
 msgstr ""
 
@@ -11597,16 +11597,22 @@ msgstr ""
 msgid "only emit output related to the second range"
 msgstr ""
 
-#: builtin/range-diff.c:65
-msgid "single arg format must be symmetric range"
+#: builtin/range-diff.c:74 builtin/range-diff.c:78 builtin/range-diff.c:82
+#, c-format
+msgid "not a revision: '%s'"
 msgstr ""
 
-#: builtin/range-diff.c:95 builtin/range-diff.c:99
+#: builtin/range-diff.c:98 builtin/range-diff.c:102
 #, c-format
 msgid "not a commit range: '%s'"
 msgstr ""
 
-#: builtin/range-diff.c:117
+#: builtin/range-diff.c:120
+#, c-format
+msgid "not a symmetric range: '%s'"
+msgstr ""
+
+#: builtin/range-diff.c:143
 msgid "need two commit ranges"
 msgstr ""
 
@@ -13825,46 +13831,36 @@ msgstr ""
 msgid "git show-ref --exclude-existing[=<pattern>]"
 msgstr ""
 
-#: builtin/show-ref.c:157
+#: builtin/show-ref.c:155
 msgid "only show tags (can be combined with heads)"
 msgstr ""
 
-#: builtin/show-ref.c:158
+#: builtin/show-ref.c:156
 msgid "only show heads (can be combined with tags)"
 msgstr ""
 
-#: builtin/show-ref.c:159
+#: builtin/show-ref.c:157
 msgid "stricter reference checking, requires exact ref path"
 msgstr ""
 
-#: builtin/show-ref.c:162 builtin/show-ref.c:164
+#: builtin/show-ref.c:160 builtin/show-ref.c:162
 msgid "show the HEAD reference, even if it would be filtered out"
 msgstr ""
 
-#: builtin/show-ref.c:166
+#: builtin/show-ref.c:164
 msgid "dereference tags into object IDs"
 msgstr ""
 
-#: builtin/show-ref.c:168
+#: builtin/show-ref.c:166
 msgid "only show SHA1 hash using <n> digits"
 msgstr ""
 
-#: builtin/show-ref.c:172
+#: builtin/show-ref.c:170
 msgid "do not print results to stdout (useful with --verify)"
 msgstr ""
 
-#: builtin/show-ref.c:174
+#: builtin/show-ref.c:172
 msgid "show refs from stdin that aren't in local repository"
-msgstr ""
-
-#: builtin/show-ref.c:191
-#, c-format
-msgid "invalid --count argument: (`%d' < 0)"
-msgstr ""
-
-#: builtin/show-ref.c:194 builtin/show-ref.c:196
-#, c-format
-msgid "--count is incompatible with %s"
 msgstr ""
 
 #: builtin/sparse-checkout.c:23
