@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2022-08-29 21:57+0000\n"
+"POT-Creation-Date: 2022-08-30 17:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -1538,7 +1538,7 @@ msgstr ""
 #: archive.c:601 archive.c:607 builtin/blame.c:881 builtin/blame.c:885
 #: builtin/blame.c:886 builtin/commit-tree.c:115 builtin/config.c:135
 #: builtin/fast-export.c:1181 builtin/fast-export.c:1183
-#: builtin/fast-export.c:1187 builtin/grep.c:936 builtin/hash-object.c:104
+#: builtin/fast-export.c:1187 builtin/grep.c:943 builtin/hash-object.c:104
 #: builtin/ls-files.c:739 builtin/ls-files.c:742 builtin/notes.c:410
 #: builtin/notes.c:576 builtin/read-tree.c:115 parse-options.h:207
 msgid "file"
@@ -2128,7 +2128,7 @@ msgstr ""
 
 #: builtin/add.c:591 builtin/check-ignore.c:183 builtin/checkout.c:532
 #: builtin/checkout.c:745 builtin/clean.c:1016 builtin/commit.c:379
-#: builtin/diff-tree.c:122 builtin/grep.c:521 builtin/mv.c:194
+#: builtin/diff-tree.c:122 builtin/grep.c:523 builtin/mv.c:194
 #: builtin/reset.c:424 builtin/rm.c:295 builtin/submodule--helper.c:200
 #: builtin/submodule--helper.c:3269 read-cache.c:2134 read-cache.c:2458
 #: rerere.c:549 rerere.c:583 rerere.c:1096 submodule.c:1835
@@ -2483,7 +2483,7 @@ msgid "pass it through git-apply"
 msgstr ""
 
 #: builtin/am.c:2379 builtin/commit.c:1514 builtin/fmt-merge-msg.c:18
-#: builtin/fmt-merge-msg.c:21 builtin/grep.c:920 builtin/merge.c:264
+#: builtin/fmt-merge-msg.c:21 builtin/grep.c:927 builtin/merge.c:264
 #: builtin/pull.c:143 builtin/pull.c:205 builtin/pull.c:222
 #: builtin/rebase.c:1087 builtin/repack.c:779 builtin/repack.c:783
 #: builtin/repack.c:785 builtin/show-branch.c:650 builtin/show-ref.c:165
@@ -4668,7 +4668,7 @@ msgid "remove whole directories"
 msgstr ""
 
 #: builtin/clean.c:932 builtin/describe.c:567 builtin/describe.c:569
-#: builtin/grep.c:938 builtin/log.c:247 builtin/log.c:249
+#: builtin/grep.c:945 builtin/log.c:247 builtin/log.c:249
 #: builtin/ls-files.c:736 builtin/name-rev.c:575 builtin/name-rev.c:577
 #: builtin/show-ref.c:172
 msgid "pattern"
@@ -4784,7 +4784,7 @@ msgstr ""
 msgid "path to git-upload-pack on the remote"
 msgstr ""
 
-#: builtin/clone.c:137 builtin/fetch.c:182 builtin/grep.c:877
+#: builtin/clone.c:137 builtin/fetch.c:182 builtin/grep.c:884
 #: builtin/pull.c:213
 msgid "depth"
 msgstr ""
@@ -6390,7 +6390,7 @@ msgstr ""
 msgid "Not a git repository"
 msgstr ""
 
-#: builtin/diff.c:537 builtin/grep.c:700
+#: builtin/diff.c:537 builtin/grep.c:707
 #, c-format
 msgid "invalid object '%s' given."
 msgstr ""
@@ -6872,7 +6872,7 @@ msgstr ""
 msgid "non-fast-forward"
 msgstr ""
 
-#: builtin/fetch.c:1028 builtin/fetch.c:1450 builtin/grep.c:774
+#: builtin/fetch.c:1028 builtin/fetch.c:1450 builtin/grep.c:781
 #: sequencer.c:3251
 #, c-format
 msgid "cannot open '%s'"
@@ -7869,12 +7869,12 @@ msgstr ""
 msgid "git grep [<options>] [-e] <pattern> [<rev>...] [[--] <path>...]"
 msgstr ""
 
-#: builtin/grep.c:241
+#: builtin/grep.c:243
 #, c-format
 msgid "grep: failed to create thread: %s"
 msgstr ""
 
-#: builtin/grep.c:295
+#: builtin/grep.c:297
 #, c-format
 msgid "invalid number of threads specified (%d) for %s"
 msgstr ""
@@ -7884,254 +7884,258 @@ msgstr ""
 #. variable for tweaking threads, currently
 #. grep.threads
 #.
-#: builtin/grep.c:303 builtin/index-pack.c:1587 builtin/index-pack.c:1791
+#: builtin/grep.c:305 builtin/index-pack.c:1587 builtin/index-pack.c:1791
 #: builtin/pack-objects.c:3174
 #, c-format
 msgid "no threads support, ignoring %s"
 msgstr ""
 
-#: builtin/grep.c:490 builtin/grep.c:619 builtin/grep.c:659
+#: builtin/grep.c:492 builtin/grep.c:626 builtin/grep.c:666
 #, c-format
 msgid "unable to read tree (%s)"
 msgstr ""
 
-#: builtin/grep.c:674
+#: builtin/grep.c:681
 #, c-format
 msgid "unable to grep from object of type %s"
 msgstr ""
 
-#: builtin/grep.c:754
+#: builtin/grep.c:761
 #, c-format
 msgid "switch `%c' expects a numerical value"
 msgstr ""
 
-#: builtin/grep.c:852
+#: builtin/grep.c:859
 msgid "search in index instead of in the work tree"
 msgstr ""
 
-#: builtin/grep.c:854
+#: builtin/grep.c:861
 msgid "find in contents not managed by git"
 msgstr ""
 
-#: builtin/grep.c:856
+#: builtin/grep.c:863
 msgid "search in both tracked and untracked files"
 msgstr ""
 
-#: builtin/grep.c:858
+#: builtin/grep.c:865
 msgid "ignore files specified via '.gitignore'"
 msgstr ""
 
-#: builtin/grep.c:860
+#: builtin/grep.c:867
 msgid "recursively search in each submodule"
 msgstr ""
 
-#: builtin/grep.c:863
+#: builtin/grep.c:870
 msgid "show non-matching lines"
 msgstr ""
 
-#: builtin/grep.c:865
+#: builtin/grep.c:872
 msgid "case insensitive matching"
 msgstr ""
 
-#: builtin/grep.c:867
+#: builtin/grep.c:874
 msgid "match patterns only at word boundaries"
 msgstr ""
 
-#: builtin/grep.c:869
+#: builtin/grep.c:876
 msgid "process binary files as text"
 msgstr ""
 
-#: builtin/grep.c:871
+#: builtin/grep.c:878
 msgid "don't match patterns in binary files"
 msgstr ""
 
-#: builtin/grep.c:874
+#: builtin/grep.c:881
 msgid "process binary files with textconv filters"
 msgstr ""
 
-#: builtin/grep.c:876
+#: builtin/grep.c:883
 msgid "search in subdirectories (default)"
 msgstr ""
 
-#: builtin/grep.c:878
+#: builtin/grep.c:885
 msgid "descend at most <depth> levels"
 msgstr ""
 
-#: builtin/grep.c:882
+#: builtin/grep.c:889
 msgid "use extended POSIX regular expressions"
 msgstr ""
 
-#: builtin/grep.c:885
+#: builtin/grep.c:892
 msgid "use basic POSIX regular expressions (default)"
 msgstr ""
 
-#: builtin/grep.c:888
+#: builtin/grep.c:895
 msgid "interpret patterns as fixed strings"
 msgstr ""
 
-#: builtin/grep.c:891
+#: builtin/grep.c:898
 msgid "use Perl-compatible regular expressions"
 msgstr ""
 
-#: builtin/grep.c:894
+#: builtin/grep.c:901
 msgid "show line numbers"
 msgstr ""
 
-#: builtin/grep.c:895
+#: builtin/grep.c:902
 msgid "show column number of first match"
 msgstr ""
 
-#: builtin/grep.c:896
+#: builtin/grep.c:903
 msgid "don't show filenames"
 msgstr ""
 
-#: builtin/grep.c:897
+#: builtin/grep.c:904
 msgid "show filenames"
 msgstr ""
 
-#: builtin/grep.c:899
+#: builtin/grep.c:906
 msgid "show filenames relative to top directory"
 msgstr ""
 
-#: builtin/grep.c:901
+#: builtin/grep.c:908
 msgid "show only filenames instead of matching lines"
 msgstr ""
 
-#: builtin/grep.c:903
+#: builtin/grep.c:910
 msgid "synonym for --files-with-matches"
 msgstr ""
 
-#: builtin/grep.c:906
+#: builtin/grep.c:913
 msgid "show only the names of files without match"
 msgstr ""
 
-#: builtin/grep.c:908
+#: builtin/grep.c:915
 msgid "print NUL after filenames"
 msgstr ""
 
-#: builtin/grep.c:911
+#: builtin/grep.c:918
 msgid "show only matching parts of a line"
 msgstr ""
 
-#: builtin/grep.c:913
+#: builtin/grep.c:920
 msgid "show the number of matches instead of matching lines"
 msgstr ""
 
-#: builtin/grep.c:914
+#: builtin/grep.c:921
 msgid "highlight matches"
 msgstr ""
 
-#: builtin/grep.c:916
+#: builtin/grep.c:923
 msgid "print empty line between matches from different files"
 msgstr ""
 
-#: builtin/grep.c:918
+#: builtin/grep.c:925
 msgid "show filename only once above matches from same file"
 msgstr ""
 
-#: builtin/grep.c:921
+#: builtin/grep.c:928
 msgid "show <n> context lines before and after matches"
 msgstr ""
 
-#: builtin/grep.c:924
+#: builtin/grep.c:931
 msgid "show <n> context lines before matches"
 msgstr ""
 
-#: builtin/grep.c:926
+#: builtin/grep.c:933
 msgid "show <n> context lines after matches"
 msgstr ""
 
-#: builtin/grep.c:928
+#: builtin/grep.c:935
 msgid "use <n> worker threads"
 msgstr ""
 
-#: builtin/grep.c:929
+#: builtin/grep.c:936
 msgid "shortcut for -C NUM"
 msgstr ""
 
-#: builtin/grep.c:932
+#: builtin/grep.c:939
 msgid "show a line with the function name before matches"
 msgstr ""
 
-#: builtin/grep.c:934
+#: builtin/grep.c:941
 msgid "show the surrounding function"
 msgstr ""
 
-#: builtin/grep.c:937
+#: builtin/grep.c:944
 msgid "read patterns from file"
 msgstr ""
 
-#: builtin/grep.c:939
+#: builtin/grep.c:946
 msgid "match <pattern>"
 msgstr ""
 
-#: builtin/grep.c:941
+#: builtin/grep.c:948
 msgid "combine patterns specified with -e"
 msgstr ""
 
-#: builtin/grep.c:953
+#: builtin/grep.c:960
 msgid "indicate hit with exit status without output"
 msgstr ""
 
-#: builtin/grep.c:955
+#: builtin/grep.c:962
 msgid "show only matches from files that match all patterns"
 msgstr ""
 
-#: builtin/grep.c:958
+#: builtin/grep.c:965
 msgid "pager"
 msgstr ""
 
-#: builtin/grep.c:958
+#: builtin/grep.c:965
 msgid "show matching files in the pager"
 msgstr ""
 
-#: builtin/grep.c:962
+#: builtin/grep.c:969
 msgid "allow calling of grep(1) (ignored by this build)"
 msgstr ""
 
-#: builtin/grep.c:965
+#: builtin/grep.c:972
 msgid "maximum number of results per file"
 msgstr ""
 
-#: builtin/grep.c:1030
+#: builtin/grep.c:974
+msgid "search the contents of files outside the sparse-checkout definition"
+msgstr ""
+
+#: builtin/grep.c:1044
 msgid "no pattern given"
 msgstr ""
 
-#: builtin/grep.c:1066
+#: builtin/grep.c:1080
 msgid "--no-index or --untracked cannot be used with revs"
 msgstr ""
 
-#: builtin/grep.c:1074
+#: builtin/grep.c:1088
 #, c-format
 msgid "unable to resolve revision: %s"
 msgstr ""
 
-#: builtin/grep.c:1104
+#: builtin/grep.c:1118
 msgid "--untracked not supported with --recurse-submodules"
 msgstr ""
 
-#: builtin/grep.c:1115
+#: builtin/grep.c:1129
 msgid "invalid option combination, ignoring --threads"
 msgstr ""
 
-#: builtin/grep.c:1118 builtin/pack-objects.c:4370
+#: builtin/grep.c:1132 builtin/pack-objects.c:4370
 msgid "no threads support, ignoring --threads"
 msgstr ""
 
-#: builtin/grep.c:1121 builtin/index-pack.c:1584 builtin/pack-objects.c:3171
+#: builtin/grep.c:1135 builtin/index-pack.c:1584 builtin/pack-objects.c:3171
 #, c-format
 msgid "invalid number of threads specified (%d)"
 msgstr ""
 
-#: builtin/grep.c:1155
+#: builtin/grep.c:1169
 msgid "--open-files-in-pager only works on the worktree"
 msgstr ""
 
-#: builtin/grep.c:1188
+#: builtin/grep.c:1202
 msgid "--[no-]exclude-standard cannot be used for tracked contents"
 msgstr ""
 
-#: builtin/grep.c:1196
+#: builtin/grep.c:1210
 msgid "both --cached and trees are given"
 msgstr ""
 
