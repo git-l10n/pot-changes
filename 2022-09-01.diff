@@ -1,0 +1,189 @@
+
+
+#################### Thu, 01 Sep 2022 21:58:07 +0000 ####################
+
+--- po/git.pot.old	2022-09-01 21:58:07.480453101 +0000
++++ po/git.pot.new	2022-09-01 21:58:07.584454891 +0000
+@@ -3567,11 +3567,6 @@
+ msgid "Unbundling objects"
+ msgstr ""
+ 
+-#: builtin/bundle.c builtin/remote.c
+-#, c-format
+-msgid "Unknown subcommand: %s"
+-msgstr ""
+-
+ #: builtin/cat-file.c merge-recursive.c
+ #, c-format
+ msgid "cannot read object %s '%s'"
+@@ -4695,6 +4690,14 @@
+ msgstr ""
+ 
+ #: builtin/clone.c
++msgid "a URI for downloading bundles before fetching from origin remote"
++msgstr ""
++
++#: builtin/clone.c
++msgid "uri"
++msgstr ""
++
++#: builtin/clone.c
+ #, c-format
+ msgid "info: Could not add alternate for '%s': %s\n"
+ msgstr ""
+@@ -4798,6 +4801,10 @@
+ msgstr ""
+ 
+ #: builtin/clone.c
++msgid "--bundle-uri is incompatible with --depth, --shallow-since, and --shallow-exclude"
++msgstr ""
++
++#: builtin/clone.c
+ #, c-format
+ msgid "repository '%s' does not exist"
+ msgstr ""
+@@ -4884,6 +4891,15 @@
+ msgstr ""
+ 
+ #: builtin/clone.c
++msgid "failed to initialize the repo, skipping bundle URI"
++msgstr ""
++
++#: builtin/clone.c
++#, c-format
++msgid "failed to fetch objects from bundle URI '%s'"
++msgstr ""
++
++#: builtin/clone.c
+ msgid "remote transport reported error"
+ msgstr ""
+ 
+@@ -5021,11 +5037,6 @@
+ msgid "Collecting commits from input"
+ msgstr ""
+ 
+-#: builtin/commit-graph.c builtin/multi-pack-index.c
+-#, c-format
+-msgid "unrecognized subcommand: %s"
+-msgstr ""
+-
+ #: builtin/commit-tree.c
+ msgid "git commit-tree [(-p <parent>)...] [-S[<keyid>]] [(-m <message>)...] [(-F <file>)...] <tree>"
+ msgstr ""
+@@ -7503,10 +7514,18 @@
+ msgstr ""
+ 
+ #: builtin/gc.c
++msgid "git maintenance register"
++msgstr ""
++
++#: builtin/gc.c
+ msgid "failed to run 'git config'"
+ msgstr ""
+ 
+ #: builtin/gc.c
++msgid "git maintenance unregister"
++msgstr ""
++
++#: builtin/gc.c
+ #, c-format
+ msgid "failed to expand path '%s'"
+ msgstr ""
+@@ -7602,12 +7621,11 @@
+ msgstr ""
+ 
+ #: builtin/gc.c
+-msgid "git maintenance <subcommand> [<options>]"
++msgid "git maintenance stop"
+ msgstr ""
+ 
+ #: builtin/gc.c
+-#, c-format
+-msgid "invalid subcommand: %s"
++msgid "git maintenance <subcommand> [<options>]"
+ msgstr ""
+ 
+ #: builtin/grep.c
+@@ -9734,6 +9752,11 @@
+ msgid "Automatic merge went well; stopped before committing as requested\n"
+ msgstr ""
+ 
++#: builtin/merge.c
++#, c-format
++msgid "When finished, apply stashed changes with `git stash pop`\n"
++msgstr ""
++
+ #: builtin/mktag.c
+ #, c-format
+ msgid "warning: tag input does not pass fsck: %s"
+@@ -10336,7 +10359,7 @@
+ msgid "use notes from <notes-ref>"
+ msgstr ""
+ 
+-#: builtin/notes.c builtin/stash.c
++#: builtin/notes.c builtin/remote.c
+ #, c-format
+ msgid "unknown subcommand: %s"
+ msgstr ""
+@@ -15416,6 +15439,29 @@
+ msgid "core.fsyncMethod = batch is unsupported on this platform"
+ msgstr ""
+ 
++#: bundle-uri.c
++msgid "failed to create temporary file"
++msgstr ""
++
++#: bundle-uri.c
++msgid "insufficient capabilities"
++msgstr ""
++
++#: bundle-uri.c
++#, c-format
++msgid "failed to download bundle from URI '%s'"
++msgstr ""
++
++#: bundle-uri.c
++#, c-format
++msgid "file at URI '%s' is not a bundle"
++msgstr ""
++
++#: bundle-uri.c
++#, c-format
++msgid "failed to unbundle bundle from URI '%s'"
++msgstr ""
++
+ #: bundle.c
+ #, c-format
+ msgid "unrecognized bundle hash algorithm: %s"
+@@ -21376,6 +21422,15 @@
+ 
+ #: parse-options.c
+ #, c-format
++msgid "unknown subcommand: `%s'"
++msgstr ""
++
++#: parse-options.c
++msgid "need a subcommand"
++msgstr ""
++
++#: parse-options.c
++#, c-format
+ msgid "unknown option `%s'"
+ msgstr ""
+ 
+@@ -22431,6 +22486,15 @@
+ msgstr ""
+ 
+ #: remote-curl.c
++msgid "protocol error: expected '<url> <path>', missing space"
++msgstr ""
++
++#: remote-curl.c
++#, c-format
++msgid "failed to download file at URL '%s'"
++msgstr ""
++
++#: remote-curl.c
+ msgid "git-http-push failed"
+ msgstr ""
+ 
