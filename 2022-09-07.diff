@@ -1,0 +1,586 @@
+
+
+#################### Wed, 07 Sep 2022 21:57:52 +0000 ####################
+
+--- po/git.pot.old	2022-09-07 21:57:52.374908299 +0000
++++ po/git.pot.new	2022-09-07 21:57:52.478908347 +0000
+@@ -2851,6 +2851,10 @@
+ msgstr ""
+ 
+ #: builtin/blame.c
++msgid "git annotate [<options>] [<rev-opts>] [<rev>] [--] <file>"
++msgstr ""
++
++#: builtin/blame.c
+ msgid "<rev-opts> are documented in git-rev-list(1)"
+ msgstr ""
+ 
+@@ -3004,6 +3008,11 @@
+ 
+ #: builtin/blame.c
+ #, c-format
++msgid "failed to parse -L argument '%s'"
++msgstr ""
++
++#: builtin/blame.c
++#, c-format
+ msgid "file %s has only %lu line"
+ msgid_plural "file %s has only %lu lines"
+ msgstr[0] ""
+@@ -3426,7 +3435,9 @@
+ msgstr ""
+ 
+ #: builtin/bugreport.c
+-msgid "git bugreport [-o|--output-directory <file>] [-s|--suffix <format>] [--diagnose[=<mode>]"
++msgid ""
++"git bugreport [(-o | --output-directory) <path>] [(-s | --suffix) <format>]\n"
++"              [--diagnose[=<mode>]]"
+ msgstr ""
+ 
+ #: builtin/bugreport.c
+@@ -3494,11 +3505,13 @@
+ msgstr ""
+ 
+ #: builtin/bundle.c
+-msgid "git bundle create [<options>] <file> <git-rev-list args>"
++msgid ""
++"git bundle create [-q | --quiet | --progress | --all-progress] [--all-progress-implied]\n"
++"                  [--version=<version>] <file> <git-rev-list-args>"
+ msgstr ""
+ 
+ #: builtin/bundle.c
+-msgid "git bundle verify [<options>] <file>"
++msgid "git bundle verify [-q | --quiet] <file>"
+ msgstr ""
+ 
+ #: builtin/bundle.c
+@@ -3506,7 +3519,7 @@
+ msgstr ""
+ 
+ #: builtin/bundle.c
+-msgid "git bundle unbundle <file> [<refname>...]"
++msgid "git bundle unbundle [--progress] <file> [<refname>...]"
+ msgstr ""
+ 
+ #: builtin/bundle.c builtin/pack-objects.c
+@@ -3615,7 +3628,7 @@
+ msgid ""
+ "git cat-file (--batch | --batch-check | --batch-command) [--batch-all-objects]\n"
+ "             [--buffer] [--follow-symlinks] [--unordered]\n"
+-"             [--textconv | --filters]"
++"             [--textconv | --filters] [-z]"
+ msgstr ""
+ 
+ #: builtin/cat-file.c
+@@ -4370,7 +4383,7 @@
+ msgstr ""
+ 
+ #: builtin/clean.c
+-msgid "git clean [-d] [-f] [-i] [-n] [-q] [-e <pattern>] [-x | -X] [--] <paths>..."
++msgid "git clean [-d] [-f] [-i] [-n] [-q] [-e <pattern>] [-x | -X] [--] [<pathspec>...]"
+ msgstr ""
+ 
+ #: builtin/clean.c merge-strategies.c
+@@ -4944,11 +4957,15 @@
+ msgstr ""
+ 
+ #: builtin/commit-graph.c
+-msgid "git commit-graph verify [--object-dir <objdir>] [--shallow] [--[no-]progress]"
++msgid "git commit-graph verify [--object-dir <dir>] [--shallow] [--[no-]progress]"
+ msgstr ""
+ 
+ #: builtin/commit-graph.c
+-msgid "git commit-graph write [--object-dir <objdir>] [--append] [--split[=<strategy>]] [--reachable|--stdin-packs|--stdin-commits] [--changed-paths] [--[no-]max-new-filters <n>] [--[no-]progress] <split options>"
++msgid ""
++"git commit-graph write [--object-dir <dir>] [--append]\n"
++"                       [--split[=<strategy>]] [--reachable|--stdin-packs|--stdin-commits]\n"
++"                       [--changed-paths] [--[no-]max-new-filters <n>] [--[no-]progress]\n"
++"                       <split options>"
+ msgstr ""
+ 
+ #: builtin/commit-graph.c builtin/fetch.c builtin/log.c
+@@ -5037,7 +5054,13 @@
+ msgstr ""
+ 
+ #: builtin/commit-tree.c
+-msgid "git commit-tree [(-p <parent>)...] [-S[<keyid>]] [(-m <message>)...] [(-F <file>)...] <tree>"
++msgid "git commit-tree <tree> [(-p <parent>)...]"
++msgstr ""
++
++#: builtin/commit-tree.c
++msgid ""
++"git commit-tree [(-p <parent>)...] [-S[<keyid>]] [(-m <message>)...]\n"
++"                [(-F <file>)...] <tree>"
+ msgstr ""
+ 
+ #: builtin/commit-tree.c
+@@ -5095,11 +5118,19 @@
+ msgstr ""
+ 
+ #: builtin/commit.c
+-msgid "git commit [<options>] [--] <pathspec>..."
++msgid ""
++"git commit [-a | --interactive | --patch] [-s] [-v] [-u<mode>] [--amend]\n"
++"           [--dry-run] [(-c | -C | --squash) <commit> | --fixup [(amend|reword):]<commit>)]\n"
++"           [-F <file> | -m <msg>] [--reset-author] [--allow-empty]\n"
++"           [--allow-empty-message] [--no-verify] [-e] [--author=<author>]\n"
++"           [--date=<date>] [--cleanup=<mode>] [--[no-]status]\n"
++"           [-i | -o] [--pathspec-from-file=<file> [--pathspec-file-nul]]\n"
++"           [(--trailer <token>[(=|:)<value>])...] [-S[<keyid>]]\n"
++"           [--] [<pathspec>...]"
+ msgstr ""
+ 
+ #: builtin/commit.c
+-msgid "git status [<options>] [--] <pathspec>..."
++msgid "git status [<options>] [--] [<pathspec>...]"
+ msgstr ""
+ 
+ #: builtin/commit.c
+@@ -5984,11 +6015,15 @@
+ msgstr ""
+ 
+ #: builtin/describe.c
+-msgid "git describe [<options>] [<commit-ish>...]"
++msgid "git describe [--all] [--tags] [--contains] [--abbrev=<n>] [<commit-ish>...]"
+ msgstr ""
+ 
+ #: builtin/describe.c
+-msgid "git describe [<options>] --dirty"
++msgid "git describe [--all] [--tags] [--contains] [--abbrev=<n>] --dirty[=<mark>]"
++msgstr ""
++
++#: builtin/describe.c
++msgid "git describe <blob>"
+ msgstr ""
+ 
+ #: builtin/describe.c
+@@ -6135,7 +6170,9 @@
+ msgstr ""
+ 
+ #: builtin/diagnose.c
+-msgid "git diagnose [-o|--output-directory <path>] [-s|--suffix <format>] [--mode=<mode>]"
++msgid ""
++"git diagnose [(-o | --output-directory) <path>] [(-s | --suffix) <format>]\n"
++"             [--mode=<mode>]"
+ msgstr ""
+ 
+ #: builtin/diagnose.c
+@@ -6926,7 +6963,7 @@
+ msgstr ""
+ 
+ #: builtin/for-each-repo.c
+-msgid "git for-each-repo --config=<config> <command-args>"
++msgid "git for-each-repo --config=<config> [--] <arguments>"
+ msgstr ""
+ 
+ #: builtin/for-each-repo.c
+@@ -7142,7 +7179,11 @@
+ msgstr ""
+ 
+ #: builtin/fsck.c
+-msgid "git fsck [<options>] [<object>...]"
++msgid ""
++"git fsck [--tags] [--root] [--unreachable] [--cache] [--no-reflogs]\n"
++"         [--[no-]full] [--strict] [--verbose] [--lost-found]\n"
++"         [--[no-]dangling] [--[no-]progress] [--connectivity-only]\n"
++"         [--[no-]name-objects] [<object>...]"
+ msgstr ""
+ 
+ #: builtin/fsck.c
+@@ -7905,7 +7946,13 @@
+ msgstr ""
+ 
+ #: builtin/hash-object.c
+-msgid "git hash-object [-t <type>] [-w] [--path=<file> | --no-filters] [--stdin] [--] <file>..."
++msgid ""
++"git hash-object [-t <type>] [-w] [--path=<file>|--no-filters]\n"
++"                [--stdin [--literally]] [--] <file>..."
++msgstr ""
++
++#: builtin/hash-object.c
++msgid "git hash-object [-t <type>] [-w] --stdin-paths [--no-filters]"
+ msgstr ""
+ 
+ #: builtin/hash-object.c
+@@ -8433,7 +8480,11 @@
+ msgstr ""
+ 
+ #: builtin/init-db.c
+-msgid "git init [-q | --quiet] [--bare] [--template=<template-directory>] [--shared[=<permissions>]] [<directory>]"
++msgid ""
++"git init [-q | --quiet] [--bare] [--template=<template-directory>]\n"
++"         [--separate-git-dir <git-dir>] [--object-format=<format>]\n"
++"         [-b <branch-name> | --initial-branch=<branch-name>]\n"
++"         [--shared[=<permissions>]] [<directory>]"
+ msgstr ""
+ 
+ #: builtin/init-db.c
+@@ -8481,7 +8532,10 @@
+ msgstr ""
+ 
+ #: builtin/interpret-trailers.c
+-msgid "git interpret-trailers [--in-place] [--trim-empty] [(--trailer <token>[(=|:)<value>])...] [<file>...]"
++msgid ""
++"git interpret-trailers [--in-place] [--trim-empty]\n"
++"                       [(--trailer <token>[(=|:)<value>])...]\n"
++"                       [--parse] [<file>...]"
+ msgstr ""
+ 
+ #: builtin/interpret-trailers.c
+@@ -9091,7 +9145,7 @@
+ #: builtin/ls-remote.c
+ msgid ""
+ "git ls-remote [--heads] [--tags] [--refs] [--upload-pack=<exec>]\n"
+-"              [-q | --quiet] [--exit-code] [--get-url]\n"
++"              [-q | --quiet] [--exit-code] [--get-url] [--sort=<key>]\n"
+ "              [--symref] [<repository> [<refs>...]]"
+ msgstr ""
+ 
+@@ -9262,11 +9316,11 @@
+ msgstr ""
+ 
+ #: builtin/merge-base.c
+-msgid "git merge-base --independent <commit>..."
++msgid "git merge-base --is-ancestor <commit> <commit>"
+ msgstr ""
+ 
+ #: builtin/merge-base.c
+-msgid "git merge-base --is-ancestor <commit> <commit>"
++msgid "git merge-base --independent <commit>..."
+ msgstr ""
+ 
+ #: builtin/merge-base.c
+@@ -10394,17 +10448,17 @@
+ msgid "use notes from <notes-ref>"
+ msgstr ""
+ 
+-#: builtin/notes.c builtin/remote.c
++#: builtin/notes.c builtin/remote.c parse-options.c
+ #, c-format
+-msgid "unknown subcommand: %s"
++msgid "unknown subcommand: `%s'"
+ msgstr ""
+ 
+ #: builtin/pack-objects.c
+-msgid "git pack-objects --stdout [<options>...] [< <ref-list> | < <object-list>]"
++msgid "git pack-objects --stdout [<options>] [< <ref-list> | < <object-list>]"
+ msgstr ""
+ 
+ #: builtin/pack-objects.c
+-msgid "git pack-objects [<options>...] <base-name> [< <ref-list> | < <object-list>]"
++msgid "git pack-objects [<options>] <base-name> [< <ref-list> | < <object-list>]"
+ msgstr ""
+ 
+ #: builtin/pack-objects.c
+@@ -10855,7 +10909,7 @@
+ msgstr ""
+ 
+ #: builtin/pack-refs.c
+-msgid "git pack-refs [<options>]"
++msgid "git pack-refs [--all] [--no-prune]"
+ msgstr ""
+ 
+ #: builtin/pack-refs.c
+@@ -11364,7 +11418,10 @@
+ msgstr ""
+ 
+ #: builtin/read-tree.c
+-msgid "git read-tree [(-m [--trivial] [--aggressive] | --reset | --prefix=<prefix>) [-u | -i]] [--no-sparse-checkout] [--index-output=<file>] (--empty | <tree-ish1> [<tree-ish2> [<tree-ish3>]])"
++msgid ""
++"git read-tree [(-m [--trivial] [--aggressive] | --reset | --prefix=<prefix>)\n"
++"              [-u | -i]] [--index-output=<file>] [--no-sparse-checkout]\n"
++"              (--empty | <tree-ish1> [<tree-ish2> [<tree-ish3>]])"
+ msgstr ""
+ 
+ #: builtin/read-tree.c
+@@ -12908,7 +12965,7 @@
+ msgstr ""
+ 
+ #: builtin/rerere.c
+-msgid "git rerere [clear | forget <path>... | status | remaining | diff | gc]"
++msgid "git rerere [clear | forget <pathspec>... | diff | status | remaining | gc]"
+ msgstr ""
+ 
+ #: builtin/rerere.c
+@@ -13164,19 +13221,21 @@
+ msgstr ""
+ 
+ #: builtin/revert.c
+-msgid "git revert [<options>] <commit-ish>..."
++msgid "git revert [--[no-]edit] [-n] [-m parent-number] [-s] [-S[<keyid>]] <commit>..."
+ msgstr ""
+ 
+ #: builtin/revert.c
+-msgid "git revert <subcommand>"
++msgid "git revert (--continue | --skip | --abort | --quit)"
+ msgstr ""
+ 
+ #: builtin/revert.c
+-msgid "git cherry-pick [<options>] <commit-ish>..."
++msgid ""
++"git cherry-pick [--edit] [-n] [-m <parent-number>] [-s] [-x] [--ff]\n"
++"                [-S[<keyid>]] <commit>..."
+ msgstr ""
+ 
+ #: builtin/revert.c
+-msgid "git cherry-pick <subcommand>"
++msgid "git cherry-pick (--continue | --skip | --abort | --quit)"
+ msgstr ""
+ 
+ #: builtin/revert.c
+@@ -13258,7 +13317,10 @@
+ msgstr ""
+ 
+ #: builtin/rm.c
+-msgid "git rm [<options>] [--] <file>..."
++msgid ""
++"git rm [-f | --force] [-n] [-r] [--cached] [--ignore-unmatch]\n"
++"       [--quiet] [--pathspec-from-file=<file> [--pathspec-file-nul]]\n"
++"       [--] [<pathspec>...]"
+ msgstr ""
+ 
+ #: builtin/rm.c
+@@ -13338,6 +13400,7 @@
+ "git send-pack [--mirror] [--dry-run] [--force]\n"
+ "              [--receive-pack=<git-receive-pack>]\n"
+ "              [--verbose] [--thin] [--atomic]\n"
++"              [--[no-]signed|--signed=(true|false|if-asked)]\n"
+ "              [<host>:]<directory> (--all | <ref>...)"
+ msgstr ""
+ 
+@@ -13419,7 +13482,8 @@
+ "git show-branch [-a | --all] [-r | --remotes] [--topo-order | --date-order]\n"
+ "                [--current] [--color[=<when>] | --no-color] [--sparse]\n"
+ "                [--more=<n> | --list | --independent | --merge-base]\n"
+-"                [--no-name | --sha1-name] [--topics] [(<rev> | <glob>)...]"
++"                [--no-name | --sha1-name] [--topics]\n"
++"                [(<rev> | <glob>)...]"
+ msgstr ""
+ 
+ #: builtin/show-branch.c
+@@ -13548,7 +13612,10 @@
+ msgstr ""
+ 
+ #: builtin/show-ref.c
+-msgid "git show-ref [-q | --quiet] [--verify] [--head] [-d | --dereference] [-s | --hash[=<n>]] [--abbrev[=<n>]] [--tags] [--heads] [--] [<pattern>...]"
++msgid ""
++"git show-ref [-q | --quiet] [--verify] [--head] [-d | --dereference]\n"
++"             [-s | --hash[=<n>]] [--abbrev[=<n>]] [--tags]\n"
++"             [--heads] [--] [<pattern>...]"
+ msgstr ""
+ 
+ #: builtin/show-ref.c
+@@ -13588,7 +13655,7 @@
+ msgstr ""
+ 
+ #: builtin/sparse-checkout.c
+-msgid "git sparse-checkout (init|list|set|add|reapply|disable) <options>"
++msgid "git sparse-checkout (init | list | set | add | reapply | disable) [<options>]"
+ msgstr ""
+ 
+ #: builtin/sparse-checkout.c
+@@ -13712,62 +13779,49 @@
+ msgstr ""
+ 
+ #: builtin/stash.c
+-msgid "git stash list [<options>]"
+-msgstr ""
+-
+-#: builtin/stash.c
+-msgid "git stash show [<options>] [<stash>]"
+-msgstr ""
+-
+-#: builtin/stash.c
+-msgid "git stash drop [-q|--quiet] [<stash>]"
++msgid "git stash list [<log-options>]"
+ msgstr ""
+ 
+ #: builtin/stash.c
+-msgid "git stash ( pop | apply ) [--index] [-q|--quiet] [<stash>]"
++msgid "git stash show [-u | --include-untracked | --only-untracked] [<diff-options>] [<stash>]"
+ msgstr ""
+ 
+ #: builtin/stash.c
+-msgid "git stash branch <branchname> [<stash>]"
++msgid "git stash drop [-q | --quiet] [<stash>]"
+ msgstr ""
+ 
+ #: builtin/stash.c
+-msgid ""
+-"git stash [push [-p|--patch] [-S|--staged] [-k|--[no-]keep-index] [-q|--quiet]\n"
+-"          [-u|--include-untracked] [-a|--all] [-m|--message <message>]\n"
+-"          [--pathspec-from-file=<file> [--pathspec-file-nul]]\n"
+-"          [--] [<pathspec>...]]"
++msgid "git stash pop [--index] [-q | --quiet] [<stash>]"
+ msgstr ""
+ 
+ #: builtin/stash.c
+-msgid ""
+-"git stash save [-p|--patch] [-S|--staged] [-k|--[no-]keep-index] [-q|--quiet]\n"
+-"          [-u|--include-untracked] [-a|--all] [<message>]"
++msgid "git stash apply [--index] [-q | --quiet] [<stash>]"
+ msgstr ""
+ 
+ #: builtin/stash.c
+-msgid "git stash pop [--index] [-q|--quiet] [<stash>]"
++msgid "git stash branch <branchname> [<stash>]"
+ msgstr ""
+ 
+ #: builtin/stash.c
+-msgid "git stash apply [--index] [-q|--quiet] [<stash>]"
++msgid "git stash store [(-m | --message) <message>] [-q | --quiet] <commit>"
+ msgstr ""
+ 
+ #: builtin/stash.c
+-msgid "git stash store [-m|--message <message>] [-q|--quiet] <commit>"
++msgid ""
++"git stash [push [-p | --patch] [-S | --staged] [-k | --[no-]keep-index] [-q | --quiet]\n"
++"          [-u | --include-untracked] [-a | --all] [(-m | --message) <message>]\n"
++"          [--pathspec-from-file=<file> [--pathspec-file-nul]]\n"
++"          [--] [<pathspec>...]]"
+ msgstr ""
+ 
+ #: builtin/stash.c
+ msgid ""
+-"git stash [push [-p|--patch] [-k|--[no-]keep-index] [-q|--quiet]\n"
+-"          [-u|--include-untracked] [-a|--all] [-m|--message <message>]\n"
+-"          [--] [<pathspec>...]]"
++"git stash save [-p | --patch] [-S | --staged] [-k | --[no-]keep-index] [-q | --quiet]\n"
++"          [-u | --include-untracked] [-a | --all] [<message>]"
+ msgstr ""
+ 
+ #: builtin/stash.c
+-msgid ""
+-"git stash save [-p|--patch] [-k|--[no-]keep-index] [-q|--quiet]\n"
+-"               [-u|--include-untracked] [-a|--all] [<message>]"
++msgid "git stash create [<message>]"
+ msgstr ""
+ 
+ #: builtin/stash.c
+@@ -14643,11 +14697,15 @@
+ msgstr ""
+ 
+ #: builtin/symbolic-ref.c
+-msgid "git symbolic-ref [<options>] <name> [<ref>]"
++msgid "git symbolic-ref [-m <reason>] <name> <ref>"
++msgstr ""
++
++#: builtin/symbolic-ref.c
++msgid "git symbolic-ref [-q] [--short] <name>"
+ msgstr ""
+ 
+ #: builtin/symbolic-ref.c
+-msgid "git symbolic-ref -d [-q] <name>"
++msgid "git symbolic-ref --delete [-q] <name>"
+ msgstr ""
+ 
+ #: builtin/symbolic-ref.c
+@@ -14672,8 +14730,8 @@
+ 
+ #: builtin/tag.c
+ msgid ""
+-"git tag [-a | -s | -u <key-id>] [-f] [-m <msg> | -F <file>]\n"
+-"        <tagname> [<head>]"
++"git tag [-a | -s | -u <key-id>] [-f] [-m <msg> | -F <file>] [-e]\n"
++"        <tagname> [<commit> | <object>]"
+ msgstr ""
+ 
+ #: builtin/tag.c
+@@ -14682,8 +14740,10 @@
+ 
+ #: builtin/tag.c
+ msgid ""
+-"git tag -l [-n[<num>]] [--contains <commit>] [--no-contains <commit>] [--points-at <object>]\n"
+-"        [--format=<format>] [--merged <commit>] [--no-merged <commit>] [<pattern>...]"
++"git tag [-n[<num>]] -l [--contains <commit>] [--no-contains <commit>]\n"
++"        [--points-at <object>] [--column[=<options>] | --no-column]\n"
++"[--create-reflog] [--sort=<key>] [--format=<format>]\n"
++"[--merged <commit>] [--no-merged <commit>] [<pattern>...]"
+ msgstr ""
+ 
+ #: builtin/tag.c
+@@ -15133,7 +15193,9 @@
+ msgstr ""
+ 
+ #: builtin/upload-pack.c
+-msgid "git upload-pack [<options>] <dir>"
++msgid ""
++"git-upload-pack [--[no-]strict] [--timeout=<n>] [--stateless-rpc]\n"
++"                [--advertise-refs] <directory>"
+ msgstr ""
+ 
+ #: builtin/upload-pack.c t/helper/test-serve-v2.c
+@@ -15165,7 +15227,7 @@
+ msgstr ""
+ 
+ #: builtin/verify-pack.c
+-msgid "git verify-pack [-v | --verbose] [-s | --stat-only] <pack>..."
++msgid "git verify-pack [-v | --verbose] [-s | --stat-only] [--] <pack>.idx..."
+ msgstr ""
+ 
+ #: builtin/verify-pack.c
+@@ -15185,15 +15247,17 @@
+ msgstr ""
+ 
+ #: builtin/worktree.c
+-msgid "git worktree add [<options>] <path> [<commit-ish>]"
++msgid ""
++"git worktree add [-f] [--detach] [--checkout] [--lock [--reason <string>]]\n"
++"                 [-b <new-branch>] <path> [<commit-ish>]"
+ msgstr ""
+ 
+ #: builtin/worktree.c
+-msgid "git worktree list [<options>]"
++msgid "git worktree list [-v | --porcelain [-z]]"
+ msgstr ""
+ 
+ #: builtin/worktree.c
+-msgid "git worktree lock [<options>] <path>"
++msgid "git worktree lock [--reason <string>] <worktree>"
+ msgstr ""
+ 
+ #: builtin/worktree.c
+@@ -15201,11 +15265,11 @@
+ msgstr ""
+ 
+ #: builtin/worktree.c
+-msgid "git worktree prune [<options>]"
++msgid "git worktree prune [-n] [-v] [--expire <expire>]"
+ msgstr ""
+ 
+ #: builtin/worktree.c
+-msgid "git worktree remove [<options>] <worktree>"
++msgid "git worktree remove [-f] <worktree>"
+ msgstr ""
+ 
+ #: builtin/worktree.c
+@@ -15213,7 +15277,7 @@
+ msgstr ""
+ 
+ #: builtin/worktree.c
+-msgid "git worktree unlock <path>"
++msgid "git worktree unlock <worktree>"
+ msgstr ""
+ 
+ #: builtin/worktree.c
+@@ -19624,7 +19688,7 @@
+ msgstr[1] ""
+ 
+ #: help.c
+-msgid "git version [<options>]"
++msgid "git version [--build-options]"
+ msgstr ""
+ 
+ #: help.c
+@@ -21409,11 +21473,6 @@
+ msgstr ""
+ 
+ #: parse-options.c
+-#, c-format
+-msgid "unknown subcommand: `%s'"
+-msgstr ""
+-
+-#: parse-options.c
+ msgid "need a subcommand"
+ msgstr ""
+ 
