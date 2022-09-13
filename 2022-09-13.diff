@@ -1,0 +1,138 @@
+
+
+#################### Tue, 13 Sep 2022 20:58:03 +0000 ####################
+
+--- po/git.pot.old	2022-09-13 20:58:03.677587817 +0000
++++ po/git.pot.new	2022-09-13 20:58:03.781589243 +0000
+@@ -10362,9 +10362,9 @@
+ msgid "use notes from <notes-ref>"
+ msgstr ""
+ 
+-#: builtin/notes.c builtin/remote.c
++#: builtin/notes.c builtin/remote.c parse-options.c
+ #, c-format
+-msgid "unknown subcommand: %s"
++msgid "unknown subcommand: `%s'"
+ msgstr ""
+ 
+ #: builtin/pack-objects.c
+@@ -13067,6 +13067,10 @@
+ msgstr ""
+ 
+ #: builtin/rev-parse.c
++msgid "missing opt-spec before option flags"
++msgstr ""
++
++#: builtin/rev-parse.c
+ msgid "Needed a single revision"
+ msgstr ""
+ 
+@@ -13955,15 +13959,12 @@
+ 
+ #: builtin/submodule--helper.c
+ #, c-format
+-msgid "could not look up configuration '%s'. Assuming this repository is its own authoritative upstream."
+-msgstr ""
+-
+-#: builtin/submodule--helper.c
+-msgid "alternative anchor for relative paths"
++msgid "could not get a repository handle for submodule '%s'"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "git submodule--helper list [--prefix=<path>] [<path>...]"
++#, c-format
++msgid "could not look up configuration '%s'. Assuming this repository is its own authoritative upstream."
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+@@ -14058,10 +14059,6 @@
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+-msgid "git submodule--helper name <path>"
+-msgstr ""
+-
+-#: builtin/submodule--helper.c
+ #, c-format
+ msgid "* %s %s(blob)->%s(submodule)"
+ msgstr ""
+@@ -14122,11 +14119,6 @@
+ 
+ #: builtin/submodule--helper.c
+ #, c-format
+-msgid "failed to get the default remote for submodule '%s'"
+-msgstr ""
+-
+-#: builtin/submodule--helper.c
+-#, c-format
+ msgid "failed to update remote for submodule '%s'"
+ msgstr ""
+ 
+@@ -14194,6 +14186,11 @@
+ 
+ #: builtin/submodule--helper.c
+ #, c-format
++msgid "could not get a repository handle for gitdir '%s'"
++msgstr ""
++
++#: builtin/submodule--helper.c
++#, c-format
+ msgid "submodule '%s' cannot add alternate: %s"
+ msgstr ""
+ 
+@@ -14228,6 +14225,10 @@
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
++msgid "alternative anchor for relative paths"
++msgstr ""
++
++#: builtin/submodule--helper.c
+ msgid "where the new submodule will be cloned to"
+ msgstr ""
+ 
+@@ -14341,12 +14342,12 @@
+ 
+ #: builtin/submodule--helper.c
+ #, c-format
+-msgid "Submodule (%s) branch configured to inherit branch from superproject, but the superproject is not on any branch"
++msgid "could not initialize submodule at path '%s'"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+ #, c-format
+-msgid "could not get a repository handle for submodule '%s'"
++msgid "Submodule (%s) branch configured to inherit branch from superproject, but the superproject is not on any branch"
+ msgstr ""
+ 
+ #: builtin/submodule--helper.c
+@@ -16662,6 +16663,16 @@
+ msgid "could not read directory changes [GLE %ld]"
+ msgstr ""
+ 
++#: compat/fsmonitor/fsm-settings-win32.c
++#, c-format
++msgid "[GLE %ld] unable to open for read '%ls'"
++msgstr ""
++
++#: compat/fsmonitor/fsm-settings-win32.c
++#, c-format
++msgid "[GLE %ld] unable to get protocol information for '%ls'"
++msgstr ""
++
+ #: compat/mingw.c
+ #, c-format
+ msgid "failed to copy SID (%ld)"
+@@ -21456,11 +21467,6 @@
+ msgstr ""
+ 
+ #: parse-options.c
+-#, c-format
+-msgid "unknown subcommand: `%s'"
+-msgstr ""
+-
+-#: parse-options.c
+ msgid "need a subcommand"
+ msgstr ""
+ 
