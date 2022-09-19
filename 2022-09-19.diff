@@ -1,0 +1,509 @@
+
+
+#################### Mon, 19 Sep 2022 22:57:46 +0000 ####################
+
+--- po/git.pot.old	2022-09-19 22:57:46.026471477 +0000
++++ po/git.pot.new	2022-09-19 22:57:46.150472475 +0000
+@@ -733,6 +733,21 @@
+ "\n"
+ msgstr ""
+ 
++#: advice.c
++#, c-format
++msgid ""
++"The following paths have been moved outside the\n"
++"sparse-checkout definition but are not sparse due to local\n"
++"modifications.\n"
++msgstr ""
++
++#: advice.c
++msgid ""
++"To correct the sparsity of these paths, do the following:\n"
++"* Use \"git add --sparse <paths>\" to update the index\n"
++"* Use \"git sparse-checkout reapply\" to apply the sparsity rules"
++msgstr ""
++
+ #: alias.c
+ msgid "cmdline ends with \\"
+ msgstr ""
+@@ -4806,7 +4821,7 @@
+ msgid "Too many arguments."
+ msgstr ""
+ 
+-#: builtin/clone.c contrib/scalar/scalar.c
++#: builtin/clone.c scalar.c
+ msgid "You must specify a repository to clone."
+ msgstr ""
+ 
+@@ -8976,7 +8991,7 @@
+ 
+ #: builtin/ls-files.c
+ #, c-format
+-msgid "bad ls-files format: element '%s'does not end in ')'"
++msgid "bad ls-files format: element '%s' does not end in ')'"
+ msgstr ""
+ 
+ #: builtin/ls-files.c
+@@ -9963,6 +9978,10 @@
+ msgstr ""
+ 
+ #: builtin/mv.c
++msgid "destination exists in the index"
++msgstr ""
++
++#: builtin/mv.c
+ #, c-format
+ msgid "%s, source=%s, destination=%s"
+ msgstr ""
+@@ -10952,7 +10971,7 @@
+ msgid "See git-pull(1) for details."
+ msgstr ""
+ 
+-#: builtin/pull.c contrib/scalar/scalar.c
++#: builtin/pull.c scalar.c
+ msgid "<branch>"
+ msgstr ""
+ 
+@@ -16330,6 +16349,10 @@
+ msgid "An overview of recommended workflows with Git"
+ msgstr ""
+ 
++#: command-list.h
++msgid "A tool for managing large Git repositories"
++msgstr ""
++
+ #: commit-graph.c
+ msgid "commit-graph file is too small"
+ msgstr ""
+@@ -17350,215 +17373,6 @@
+ msgid "failed to close rev-list's stdin"
+ msgstr ""
+ 
+-#: contrib/scalar/scalar.c worktree.c
+-#, c-format
+-msgid "'%s' does not exist"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-#, c-format
+-msgid "could not switch to '%s'"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-msgid "need a working directory"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-msgid "Scalar enlistments require a worktree"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-#, c-format
+-msgid "could not configure %s=%s"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-msgid "could not configure log.excludeDecoration"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-msgid "could not add enlistment"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-msgid "could not set recommended config"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-msgid "could not turn on maintenance"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-msgid "could not start the FSMonitor daemon"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-msgid "could not turn off maintenance"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-msgid "could not remove enlistment"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-#, c-format
+-msgid "remote HEAD is not a branch: '%.*s'"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-msgid "failed to get default branch name from remote; using local default"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-msgid "failed to get default branch name"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-msgid "failed to unregister repository"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-msgid "failed to stop the FSMonitor daemon"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-msgid "failed to delete enlistment directory"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-msgid "branch to checkout after clone"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-msgid "when cloning, create full working directory"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-msgid "only download metadata for the branch that will be checked out"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-msgid "scalar clone [<options>] [--] <repo> [<dir>]"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-#, c-format
+-msgid "cannot deduce worktree name from '%s'"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-#, c-format
+-msgid "directory '%s' exists already"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-#, c-format
+-msgid "failed to get default branch for '%s'"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-#, c-format
+-msgid "could not configure remote in '%s'"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-#, c-format
+-msgid "could not configure '%s'"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-msgid "partial clone failed; attempting full clone"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-msgid "could not configure for full clone"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-msgid "scalar diagnose [<enlistment>]"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-msgid "`scalar list` does not take arguments"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-msgid "scalar register [<enlistment>]"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-msgid "reconfigure all registered enlistments"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-msgid "scalar reconfigure [--all | <enlistment>]"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-msgid "--all or <enlistment>, but not both"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-#, c-format
+-msgid "git repository gone in '%s'"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-msgid ""
+-"scalar run <task> [<enlistment>]\n"
+-"Tasks:\n"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-#, c-format
+-msgid "no such task: '%s'"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-msgid "scalar unregister [<enlistment>]"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-msgid "scalar delete <enlistment>"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-msgid "refusing to delete current working directory"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-msgid "include Git version"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-msgid "include Git's build options"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-msgid "scalar verbose [-v | --verbose] [--build-options]"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-msgid "-C requires a <directory>"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-#, c-format
+-msgid "could not change to '%s'"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-msgid "-c requires a <key>=<value> argument"
+-msgstr ""
+-
+-#: contrib/scalar/scalar.c
+-msgid ""
+-"scalar [-C <directory>] [-c <key>=<value>] <command> [<options>]\n"
+-"\n"
+-"Commands:\n"
+-msgstr ""
+-
+ #: convert.c
+ #, c-format
+ msgid "illegal crlf_action %d"
+@@ -22953,6 +22767,215 @@
+ msgid "cannot create async thread: %s"
+ msgstr ""
+ 
++#: scalar.c worktree.c
++#, c-format
++msgid "'%s' does not exist"
++msgstr ""
++
++#: scalar.c
++#, c-format
++msgid "could not switch to '%s'"
++msgstr ""
++
++#: scalar.c
++msgid "need a working directory"
++msgstr ""
++
++#: scalar.c
++msgid "Scalar enlistments require a worktree"
++msgstr ""
++
++#: scalar.c
++#, c-format
++msgid "could not configure %s=%s"
++msgstr ""
++
++#: scalar.c
++msgid "could not configure log.excludeDecoration"
++msgstr ""
++
++#: scalar.c
++msgid "could not add enlistment"
++msgstr ""
++
++#: scalar.c
++msgid "could not set recommended config"
++msgstr ""
++
++#: scalar.c
++msgid "could not turn on maintenance"
++msgstr ""
++
++#: scalar.c
++msgid "could not start the FSMonitor daemon"
++msgstr ""
++
++#: scalar.c
++msgid "could not turn off maintenance"
++msgstr ""
++
++#: scalar.c
++msgid "could not remove enlistment"
++msgstr ""
++
++#: scalar.c
++#, c-format
++msgid "remote HEAD is not a branch: '%.*s'"
++msgstr ""
++
++#: scalar.c
++msgid "failed to get default branch name from remote; using local default"
++msgstr ""
++
++#: scalar.c
++msgid "failed to get default branch name"
++msgstr ""
++
++#: scalar.c
++msgid "failed to unregister repository"
++msgstr ""
++
++#: scalar.c
++msgid "failed to stop the FSMonitor daemon"
++msgstr ""
++
++#: scalar.c
++msgid "failed to delete enlistment directory"
++msgstr ""
++
++#: scalar.c
++msgid "branch to checkout after clone"
++msgstr ""
++
++#: scalar.c
++msgid "when cloning, create full working directory"
++msgstr ""
++
++#: scalar.c
++msgid "only download metadata for the branch that will be checked out"
++msgstr ""
++
++#: scalar.c
++msgid "scalar clone [<options>] [--] <repo> [<dir>]"
++msgstr ""
++
++#: scalar.c
++#, c-format
++msgid "cannot deduce worktree name from '%s'"
++msgstr ""
++
++#: scalar.c
++#, c-format
++msgid "directory '%s' exists already"
++msgstr ""
++
++#: scalar.c
++#, c-format
++msgid "failed to get default branch for '%s'"
++msgstr ""
++
++#: scalar.c
++#, c-format
++msgid "could not configure remote in '%s'"
++msgstr ""
++
++#: scalar.c
++#, c-format
++msgid "could not configure '%s'"
++msgstr ""
++
++#: scalar.c
++msgid "partial clone failed; attempting full clone"
++msgstr ""
++
++#: scalar.c
++msgid "could not configure for full clone"
++msgstr ""
++
++#: scalar.c
++msgid "scalar diagnose [<enlistment>]"
++msgstr ""
++
++#: scalar.c
++msgid "`scalar list` does not take arguments"
++msgstr ""
++
++#: scalar.c
++msgid "scalar register [<enlistment>]"
++msgstr ""
++
++#: scalar.c
++msgid "reconfigure all registered enlistments"
++msgstr ""
++
++#: scalar.c
++msgid "scalar reconfigure [--all | <enlistment>]"
++msgstr ""
++
++#: scalar.c
++msgid "--all or <enlistment>, but not both"
++msgstr ""
++
++#: scalar.c
++#, c-format
++msgid "git repository gone in '%s'"
++msgstr ""
++
++#: scalar.c
++msgid ""
++"scalar run <task> [<enlistment>]\n"
++"Tasks:\n"
++msgstr ""
++
++#: scalar.c
++#, c-format
++msgid "no such task: '%s'"
++msgstr ""
++
++#: scalar.c
++msgid "scalar unregister [<enlistment>]"
++msgstr ""
++
++#: scalar.c
++msgid "scalar delete <enlistment>"
++msgstr ""
++
++#: scalar.c
++msgid "refusing to delete current working directory"
++msgstr ""
++
++#: scalar.c
++msgid "include Git version"
++msgstr ""
++
++#: scalar.c
++msgid "include Git's build options"
++msgstr ""
++
++#: scalar.c
++msgid "scalar verbose [-v | --verbose] [--build-options]"
++msgstr ""
++
++#: scalar.c
++msgid "-C requires a <directory>"
++msgstr ""
++
++#: scalar.c
++#, c-format
++msgid "could not change to '%s'"
++msgstr ""
++
++#: scalar.c
++msgid "-c requires a <key>=<value> argument"
++msgstr ""
++
++#: scalar.c
++msgid ""
++"scalar [-C <directory>] [-c <key>=<value>] <command> [<options>]\n"
++"\n"
++"Commands:\n"
++msgstr ""
++
+ #: send-pack.c
+ msgid "unexpected flush packet while reading remote unpack status"
+ msgstr ""
