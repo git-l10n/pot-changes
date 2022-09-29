@@ -114,18 +114,26 @@ jobs:
           report_msg="" &&
           cd pot-changes &&
           mv ../footprint.remote .latest-footprint &&
-          msgcat --add-location=file --sort-by-file --no-wrap po/git.pot |
-            sed -e '1,/^$/d' >po/git.pot.old &&
+          mkdir -p po/ &&
+          if test -f po/git.pot
+          then
+            msgcat --no-location --sort-output --no-wrap po/git.pot |
+              sed -e '1,/^$/d' >po/git.pot.old
+          else
+              touch po/git.pot.old
+          fi &&
           cp ../git/po/git.pot po/git.pot &&
-          msgcat --add-location=file --sort-by-file --no-wrap po/git.pot |
+          msgcat --no-location --sort-output --no-wrap po/git.pot |
             sed -e '1,/^$/d' >po/git.pot.new &&
           date=$(date "+%Y-%m-%d") &&
           diff=${date}.diff &&
-          if ! diff -q po/git.pot.old po/git.pot.new; then
+          if ! diff -q po/git.pot.old po/git.pot.new
+          then
             printf "\n\n#################### $(date -R) ####################\n\n" >>"$diff"
             ( diff -u po/git.pot.old po/git.pot.new >>"$diff" || true ) &&
-            ( cd ../git && git-po-helper check-pot 2>&1 ) >check-pot.txt &&
-            if test -s check-pot.txt; then
+            ( cd ../git && git-po-helper check-pot 2>&1 || true ) >check-pot.txt &&
+            if test -s check-pot.txt
+            then
                printf -- "\n\n-------------------- git-po-helper check-pot --------------------\n\n" >>"$diff" &&
                cat check-pot.txt >>"$diff"
             fi &&
@@ -135,7 +143,7 @@ jobs:
           else
             echo >&2 "** po/git.pot is not changed **"
             git add .latest-footprint &&
-            git commit -m "no l10n changes on $date" &&
+            ( git commit -m "no l10n changes on $date" || true ) &&
             report_msg="** nothing changed in 'po/git.pot' on $date **"
           fi &&
           git push \
