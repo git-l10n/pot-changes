@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2022-09-27 20:59+0000\n"
+"POT-Creation-Date: 2022-09-29 00:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -1208,8 +1208,8 @@ msgstr ""
 msgid "unable to add cache entry for %s"
 msgstr ""
 
-#: apply.c:4382 builtin/bisect--helper.c:582 builtin/gc.c:2302
-#: builtin/gc.c:2337
+#: apply.c:4382 builtin/bisect--helper.c:582 builtin/gc.c:2338
+#: builtin/gc.c:2373
 #, c-format
 msgid "failed to write to '%s'"
 msgstr ""
@@ -2150,7 +2150,7 @@ msgstr ""
 #: builtin/checkout.c:745 builtin/clean.c:1016 builtin/commit.c:379
 #: builtin/diff-tree.c:122 builtin/grep.c:521 builtin/mv.c:194
 #: builtin/reset.c:424 builtin/rm.c:295 builtin/submodule--helper.c:200
-#: builtin/submodule--helper.c:3236 read-cache.c:2099 read-cache.c:2423
+#: builtin/submodule--helper.c:3236 read-cache.c:2122 read-cache.c:2446
 #: rerere.c:549 rerere.c:583 rerere.c:1096 submodule.c:1833
 msgid "index file corrupt"
 msgstr ""
@@ -4992,7 +4992,7 @@ msgstr ""
 msgid "Too many arguments."
 msgstr ""
 
-#: builtin/clone.c:920 scalar.c:448
+#: builtin/clone.c:920 scalar.c:451
 msgid "You must specify a repository to clone."
 msgstr ""
 
@@ -6101,7 +6101,7 @@ msgstr ""
 msgid "--worktree can only be used inside a git repository"
 msgstr ""
 
-#: builtin/config.c:686
+#: builtin/config.c:686 builtin/gc.c:1510 builtin/gc.c:1567
 msgid "$HOME not set"
 msgstr ""
 
@@ -7228,7 +7228,7 @@ msgstr ""
 msgid "could not create lost-found"
 msgstr ""
 
-#: builtin/fsck.c:331 builtin/gc.c:1828 builtin/rebase.c:192
+#: builtin/fsck.c:331 builtin/gc.c:1864 builtin/rebase.c:192
 #: rebase-interactive.c:116 rerere.c:469 rerere.c:677 sequencer.c:3944
 #: sequencer.c:3970 sequencer.c:6109
 #, c-format
@@ -7741,111 +7741,126 @@ msgstr ""
 msgid "use at most one of --auto and --schedule=<frequency>"
 msgstr ""
 
-#: builtin/gc.c:1500
-msgid "failed to run 'git config'"
+#: builtin/gc.c:1518
+#, c-format
+msgid "unable to add '%s' value of '%s'"
 msgstr ""
 
-#: builtin/gc.c:1666
+#: builtin/gc.c:1536
+msgid "return success even if repository was not registered"
+msgstr ""
+
+#: builtin/gc.c:1576
+#, c-format
+msgid "unable to unset '%s' value of '%s'"
+msgstr ""
+
+#: builtin/gc.c:1579
+#, c-format
+msgid "repository '%s' is not registered"
+msgstr ""
+
+#: builtin/gc.c:1702
 #, c-format
 msgid "failed to expand path '%s'"
 msgstr ""
 
-#: builtin/gc.c:1693 builtin/gc.c:1731
+#: builtin/gc.c:1729 builtin/gc.c:1767
 msgid "failed to start launchctl"
 msgstr ""
 
-#: builtin/gc.c:1806 builtin/gc.c:2281
+#: builtin/gc.c:1842 builtin/gc.c:2317
 #, c-format
 msgid "failed to create directories for '%s'"
 msgstr ""
 
-#: builtin/gc.c:1833
+#: builtin/gc.c:1869
 #, c-format
 msgid "failed to bootstrap service %s"
 msgstr ""
 
-#: builtin/gc.c:1926
+#: builtin/gc.c:1962
 msgid "failed to create temp xml file"
 msgstr ""
 
-#: builtin/gc.c:2016
+#: builtin/gc.c:2052
 msgid "failed to start schtasks"
 msgstr ""
 
-#: builtin/gc.c:2101
+#: builtin/gc.c:2137
 msgid "failed to run 'crontab -l'; your system might not support 'cron'"
 msgstr ""
 
-#: builtin/gc.c:2108
+#: builtin/gc.c:2144
 msgid "failed to create crontab temporary file"
 msgstr ""
 
-#: builtin/gc.c:2113
+#: builtin/gc.c:2149
 msgid "failed to open temporary file"
 msgstr ""
 
-#: builtin/gc.c:2163
+#: builtin/gc.c:2199
 msgid "failed to run 'crontab'; your system might not support 'cron'"
 msgstr ""
 
-#: builtin/gc.c:2168
+#: builtin/gc.c:2204
 msgid "'crontab' died"
 msgstr ""
 
-#: builtin/gc.c:2235
+#: builtin/gc.c:2271
 msgid "failed to start systemctl"
 msgstr ""
 
-#: builtin/gc.c:2245
+#: builtin/gc.c:2281
 msgid "failed to run systemctl"
 msgstr ""
 
-#: builtin/gc.c:2254 builtin/gc.c:2259 builtin/worktree.c:63
+#: builtin/gc.c:2290 builtin/gc.c:2295 builtin/worktree.c:63
 #: builtin/worktree.c:1024
 #, c-format
 msgid "failed to delete '%s'"
 msgstr ""
 
-#: builtin/gc.c:2307 builtin/gc.c:2342 rerere.c:482
+#: builtin/gc.c:2343 builtin/gc.c:2378 rerere.c:482
 #, c-format
 msgid "failed to flush '%s'"
 msgstr ""
 
-#: builtin/gc.c:2439
+#: builtin/gc.c:2475
 #, c-format
 msgid "unrecognized --scheduler argument '%s'"
 msgstr ""
 
-#: builtin/gc.c:2464
+#: builtin/gc.c:2500
 msgid "neither systemd timers nor crontab are available"
 msgstr ""
 
-#: builtin/gc.c:2479
+#: builtin/gc.c:2515
 #, c-format
 msgid "%s scheduler is not available"
 msgstr ""
 
-#: builtin/gc.c:2493
+#: builtin/gc.c:2529
 msgid "another process is scheduling background maintenance"
 msgstr ""
 
-#: builtin/gc.c:2515
+#: builtin/gc.c:2551
 msgid "git maintenance start [--scheduler=<scheduler>]"
 msgstr ""
 
-#: builtin/gc.c:2524
+#: builtin/gc.c:2560
 msgid "scheduler"
 msgstr ""
 
-#: builtin/gc.c:2525
+#: builtin/gc.c:2561
 msgid "scheduler to trigger git maintenance run"
 msgstr ""
 
-#: builtin/gc.c:2540
+#: builtin/gc.c:2576
 msgid "failed to add repo to global config"
 msgstr ""
 
-#: builtin/gc.c:2562
+#: builtin/gc.c:2598
 msgid "git maintenance <subcommand> [<options>]"
 msgstr ""
 
@@ -9882,7 +9897,7 @@ msgstr ""
 msgid "Bad value '%s' in environment '%s'"
 msgstr ""
 
-#: builtin/merge.c:1169 read-cache.c:3135 strbuf.c:1192 wrapper.c:701
+#: builtin/merge.c:1169 read-cache.c:3158 strbuf.c:1192 wrapper.c:701
 #, c-format
 msgid "could not close '%s'"
 msgstr ""
@@ -11221,7 +11236,7 @@ msgstr ""
 msgid "<remote>"
 msgstr ""
 
-#: builtin/pull.c:468 builtin/pull.c:483 builtin/pull.c:488 scalar.c:409
+#: builtin/pull.c:468 builtin/pull.c:483 builtin/pull.c:488 scalar.c:412
 msgid "<branch>"
 msgstr ""
 
@@ -21472,109 +21487,109 @@ msgstr ""
 msgid "ignoring %.4s extension"
 msgstr ""
 
-#: read-cache.c:1907
+#: read-cache.c:1918
 #, c-format
 msgid "unknown index entry format 0x%08x"
 msgstr ""
 
-#: read-cache.c:1923
+#: read-cache.c:1934
 #, c-format
 msgid "malformed name field in the index, near path '%s'"
 msgstr ""
 
-#: read-cache.c:1978
+#: read-cache.c:2001
 msgid "unordered stage entries in index"
 msgstr ""
 
-#: read-cache.c:1981
+#: read-cache.c:2004
 #, c-format
 msgid "multiple stage entries for merged file '%s'"
 msgstr ""
 
-#: read-cache.c:1984
+#: read-cache.c:2007
 #, c-format
 msgid "unordered stage entries for '%s'"
 msgstr ""
 
-#: read-cache.c:2243
+#: read-cache.c:2266
 #, c-format
 msgid "unable to create load_cache_entries thread: %s"
 msgstr ""
 
-#: read-cache.c:2256
+#: read-cache.c:2279
 #, c-format
 msgid "unable to join load_cache_entries thread: %s"
 msgstr ""
 
-#: read-cache.c:2307
+#: read-cache.c:2330
 #, c-format
 msgid "%s: index file open failed"
 msgstr ""
 
-#: read-cache.c:2311
+#: read-cache.c:2334
 #, c-format
 msgid "%s: cannot stat the open index"
 msgstr ""
 
-#: read-cache.c:2315
+#: read-cache.c:2338
 #, c-format
 msgid "%s: index file smaller than expected"
 msgstr ""
 
-#: read-cache.c:2319
+#: read-cache.c:2342
 #, c-format
 msgid "%s: unable to map index file%s"
 msgstr ""
 
-#: read-cache.c:2362
+#: read-cache.c:2385
 #, c-format
 msgid "unable to create load_index_extensions thread: %s"
 msgstr ""
 
-#: read-cache.c:2389
+#: read-cache.c:2412
 #, c-format
 msgid "unable to join load_index_extensions thread: %s"
 msgstr ""
 
-#: read-cache.c:2435
+#: read-cache.c:2458
 #, c-format
 msgid "could not freshen shared index '%s'"
 msgstr ""
 
-#: read-cache.c:2494
+#: read-cache.c:2517
 #, c-format
 msgid "broken index, expect %s in %s, got %s"
 msgstr ""
 
-#: read-cache.c:3053
+#: read-cache.c:3076
 msgid "cannot write split index for a sparse index"
 msgstr ""
 
-#: read-cache.c:3178
+#: read-cache.c:3201
 msgid "failed to convert to a sparse-index"
 msgstr ""
 
-#: read-cache.c:3249
+#: read-cache.c:3272
 #, c-format
 msgid "could not stat '%s'"
 msgstr ""
 
-#: read-cache.c:3262
+#: read-cache.c:3285
 #, c-format
 msgid "unable to open git dir: %s"
 msgstr ""
 
-#: read-cache.c:3274
+#: read-cache.c:3297
 #, c-format
 msgid "unable to unlink: %s"
 msgstr ""
 
-#: read-cache.c:3303
+#: read-cache.c:3326
 #, c-format
 msgid "cannot fix permission bits on '%s'"
 msgstr ""
 
-#: read-cache.c:3460
+#: read-cache.c:3483
 #, c-format
 msgid "%s: cannot drop to stage #0"
 msgstr ""
@@ -22589,7 +22604,7 @@ msgstr ""
 msgid "'%s' does not exist"
 msgstr ""
 
-#: scalar.c:39 scalar.c:51 scalar.c:379 scalar.c:470 scalar.c:638
+#: scalar.c:39 scalar.c:51 scalar.c:382 scalar.c:473 scalar.c:641
 #, c-format
 msgid "could not switch to '%s'"
 msgstr ""
@@ -22598,7 +22613,7 @@ msgstr ""
 msgid "need a working directory"
 msgstr ""
 
-#: scalar.c:58 scalar.c:218
+#: scalar.c:58 scalar.c:221
 msgid "Scalar enlistments require a worktree"
 msgstr ""
 
@@ -22611,182 +22626,182 @@ msgstr ""
 msgid "could not configure log.excludeDecoration"
 msgstr ""
 
-#: scalar.c:258
+#: scalar.c:261
 msgid "could not add enlistment"
 msgstr ""
 
-#: scalar.c:261
+#: scalar.c:264
 msgid "could not set recommended config"
 msgstr ""
 
-#: scalar.c:264
+#: scalar.c:267
 msgid "could not turn on maintenance"
 msgstr ""
 
-#: scalar.c:267
+#: scalar.c:270
 msgid "could not start the FSMonitor daemon"
 msgstr ""
 
-#: scalar.c:278
+#: scalar.c:281
 msgid "could not turn off maintenance"
 msgstr ""
 
-#: scalar.c:281
+#: scalar.c:284
 msgid "could not remove enlistment"
 msgstr ""
 
-#: scalar.c:335
+#: scalar.c:338
 #, c-format
 msgid "remote HEAD is not a branch: '%.*s'"
 msgstr ""
 
-#: scalar.c:341
+#: scalar.c:344
 msgid "failed to get default branch name from remote; using local default"
 msgstr ""
 
-#: scalar.c:354
+#: scalar.c:357
 msgid "failed to get default branch name"
 msgstr ""
 
-#: scalar.c:367
+#: scalar.c:370
 msgid "failed to unregister repository"
 msgstr ""
 
-#: scalar.c:387
+#: scalar.c:390
 msgid "failed to stop the FSMonitor daemon"
 msgstr ""
 
-#: scalar.c:390
+#: scalar.c:393
 msgid "failed to delete enlistment directory"
 msgstr ""
 
-#: scalar.c:410
+#: scalar.c:413
 msgid "branch to checkout after clone"
 msgstr ""
 
-#: scalar.c:412
+#: scalar.c:415
 msgid "when cloning, create full working directory"
 msgstr ""
 
-#: scalar.c:414
+#: scalar.c:417
 msgid "only download metadata for the branch that will be checked out"
 msgstr ""
 
-#: scalar.c:419
+#: scalar.c:422
 msgid "scalar clone [<options>] [--] <repo> [<dir>]"
 msgstr ""
 
-#: scalar.c:444
+#: scalar.c:447
 #, c-format
 msgid "cannot deduce worktree name from '%s'"
 msgstr ""
 
-#: scalar.c:453
+#: scalar.c:456
 #, c-format
 msgid "directory '%s' exists already"
 msgstr ""
 
-#: scalar.c:480
+#: scalar.c:483
 #, c-format
 msgid "failed to get default branch for '%s'"
 msgstr ""
 
-#: scalar.c:491
+#: scalar.c:494
 #, c-format
 msgid "could not configure remote in '%s'"
 msgstr ""
 
-#: scalar.c:500
+#: scalar.c:503
 #, c-format
 msgid "could not configure '%s'"
 msgstr ""
 
-#: scalar.c:503
+#: scalar.c:506
 msgid "partial clone failed; attempting full clone"
 msgstr ""
 
-#: scalar.c:507
+#: scalar.c:510
 msgid "could not configure for full clone"
 msgstr ""
 
-#: scalar.c:542
+#: scalar.c:545
 msgid "scalar diagnose [<enlistment>]"
 msgstr ""
 
-#: scalar.c:564
+#: scalar.c:567
 msgid "`scalar list` does not take arguments"
 msgstr ""
 
-#: scalar.c:577
+#: scalar.c:580
 msgid "scalar register [<enlistment>]"
 msgstr ""
 
-#: scalar.c:604
+#: scalar.c:607
 msgid "reconfigure all registered enlistments"
 msgstr ""
 
-#: scalar.c:608
+#: scalar.c:611
 msgid "scalar reconfigure [--all | <enlistment>]"
 msgstr ""
 
-#: scalar.c:626
+#: scalar.c:629
 msgid "--all or <enlistment>, but not both"
 msgstr ""
 
-#: scalar.c:641
+#: scalar.c:644
 #, c-format
 msgid "git repository gone in '%s'"
 msgstr ""
 
-#: scalar.c:681
+#: scalar.c:684
 msgid ""
 "scalar run <task> [<enlistment>]\n"
 "Tasks:\n"
 msgstr ""
 
-#: scalar.c:699
+#: scalar.c:702
 #, c-format
 msgid "no such task: '%s'"
 msgstr ""
 
-#: scalar.c:749
+#: scalar.c:752
 msgid "scalar unregister [<enlistment>]"
 msgstr ""
 
-#: scalar.c:796
+#: scalar.c:799
 msgid "scalar delete <enlistment>"
 msgstr ""
 
-#: scalar.c:811
+#: scalar.c:814
 msgid "refusing to delete current working directory"
 msgstr ""
 
-#: scalar.c:845
+#: scalar.c:848
 msgid "include Git version"
 msgstr ""
 
-#: scalar.c:847
+#: scalar.c:850
 msgid "include Git's build options"
 msgstr ""
 
-#: scalar.c:851
+#: scalar.c:854
 msgid "scalar verbose [-v | --verbose] [--build-options]"
 msgstr ""
 
-#: scalar.c:894
+#: scalar.c:897
 msgid "-C requires a <directory>"
 msgstr ""
 
-#: scalar.c:896
+#: scalar.c:899
 #, c-format
 msgid "could not change to '%s'"
 msgstr ""
 
-#: scalar.c:902
+#: scalar.c:905
 msgid "-c requires a <key>=<value> argument"
 msgstr ""
 
-#: scalar.c:920
+#: scalar.c:923
 msgid ""
 "scalar [-C <directory>] [-c <key>=<value>] <command> [<options>]\n"
 "\n"
