@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2022-10-08 00:33+0000\n"
+"POT-Creation-Date: 2022-10-09 22:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -3289,12 +3289,12 @@ msgstr ""
 msgid "Invalid branch name: '%s'"
 msgstr ""
 
-#: builtin/branch.c:538 builtin/branch.c:815 builtin/branch.c:866
+#: builtin/branch.c:538 builtin/branch.c:815 builtin/branch.c:865
 #, c-format
 msgid "No commit on branch '%s' yet."
 msgstr ""
 
-#: builtin/branch.c:540 builtin/branch.c:818
+#: builtin/branch.c:540 builtin/branch.c:816
 #, c-format
 msgid "No branch named '%s'."
 msgstr ""
@@ -3492,7 +3492,7 @@ msgstr ""
 msgid "--recurse-submodules can only be used to create branches"
 msgstr ""
 
-#: builtin/branch.c:769 builtin/branch.c:828 builtin/branch.c:837
+#: builtin/branch.c:769 builtin/branch.c:827 builtin/branch.c:836
 msgid "branch name required"
 msgstr ""
 
@@ -3500,58 +3500,58 @@ msgstr ""
 msgid "Cannot give description to detached HEAD"
 msgstr ""
 
-#: builtin/branch.c:810
+#: builtin/branch.c:809
 msgid "cannot edit description of more than one branch"
 msgstr ""
 
-#: builtin/branch.c:834
+#: builtin/branch.c:833
 msgid "too many branches for a copy operation"
 msgstr ""
 
-#: builtin/branch.c:843
+#: builtin/branch.c:842
 msgid "too many arguments for a rename operation"
 msgstr ""
 
-#: builtin/branch.c:854
+#: builtin/branch.c:853
 msgid "too many arguments to set new upstream"
 msgstr ""
 
-#: builtin/branch.c:858
+#: builtin/branch.c:857
 #, c-format
 msgid ""
 "could not set upstream of HEAD to %s when it does not point to any branch."
 msgstr ""
 
-#: builtin/branch.c:861 builtin/branch.c:890
+#: builtin/branch.c:860 builtin/branch.c:889
 #, c-format
 msgid "no such branch '%s'"
 msgstr ""
 
-#: builtin/branch.c:867
+#: builtin/branch.c:866
 #, c-format
 msgid "branch '%s' does not exist"
 msgstr ""
 
-#: builtin/branch.c:884
+#: builtin/branch.c:883
 msgid "too many arguments to unset upstream"
 msgstr ""
 
-#: builtin/branch.c:888
+#: builtin/branch.c:887
 msgid "could not unset upstream of HEAD when it does not point to any branch."
 msgstr ""
 
-#: builtin/branch.c:894
+#: builtin/branch.c:893
 #, c-format
 msgid "Branch '%s' has no upstream information"
 msgstr ""
 
-#: builtin/branch.c:908
+#: builtin/branch.c:907
 msgid ""
 "The -a, and -r, options to 'git branch' do not take a branch name.\n"
 "Did you mean to use: -a|-r --list <pattern>?"
 msgstr ""
 
-#: builtin/branch.c:912
+#: builtin/branch.c:911
 msgid ""
 "the '--set-upstream' option is no longer supported. Please use '--track' or "
 "'--set-upstream-to' instead."
@@ -15035,7 +15035,7 @@ msgid "git symbolic-ref [-m <reason>] <name> <ref>"
 msgstr ""
 
 #: builtin/symbolic-ref.c:9
-msgid "git symbolic-ref [-q] [--short] <name>"
+msgid "git symbolic-ref [-q] [--short] [--no-recurse] <name>"
 msgstr ""
 
 #: builtin/symbolic-ref.c:10
@@ -17112,7 +17112,7 @@ msgstr ""
 msgid "health thread wait failed [GLE %ld]"
 msgstr ""
 
-#: compat/fsmonitor/fsm-ipc-darwin.c:48
+#: compat/fsmonitor/fsm-ipc-unix.c:48
 #, c-format
 msgid "Invalid path: %s"
 msgstr ""
@@ -17123,6 +17123,18 @@ msgstr ""
 
 #: compat/fsmonitor/fsm-listen-darwin.c:499
 msgid "Failed to start the FSEventStream"
+msgstr ""
+
+#: compat/fsmonitor/fsm-listen-linux.c:423
+msgid "closing inotify file descriptor failed"
+msgstr ""
+
+#: compat/fsmonitor/fsm-listen-linux.c:541
+msgid "reading inotify message stream failed"
+msgstr ""
+
+#: compat/fsmonitor/fsm-listen-linux.c:629
+msgid "polling inotify message stream failed"
 msgstr ""
 
 #: compat/fsmonitor/fsm-listen-win32.c:104
@@ -17173,6 +17185,17 @@ msgstr ""
 #: compat/fsmonitor/fsm-path-utils-darwin.c:114
 #, c-format
 msgid "closedir('%s') failed"
+msgstr ""
+
+#: compat/fsmonitor/fsm-path-utils-linux.c:48
+#, c-format
+msgid "setmntent('%s') failed"
+msgstr ""
+
+#: compat/fsmonitor/fsm-path-utils-linux.c:63
+#: compat/fsmonitor/fsm-path-utils-linux.c:110
+#, c-format
+msgid "statvfs('%s') failed"
 msgstr ""
 
 #: compat/fsmonitor/fsm-path-utils-win32.c:19
@@ -18091,7 +18114,7 @@ msgstr ""
 msgid "could not archive missing directory '%s'"
 msgstr ""
 
-#: diagnose.c:175 dir.c:2438
+#: diagnose.c:175 dir.c:2436
 #, c-format
 msgid "could not open directory '%s'"
 msgstr ""
@@ -18751,55 +18774,55 @@ msgstr ""
 msgid "pathspec '%s' did not match any file(s) known to git"
 msgstr ""
 
-#: dir.c:733 dir.c:762 dir.c:775
+#: dir.c:731 dir.c:760 dir.c:773
 #, c-format
 msgid "unrecognized pattern: '%s'"
 msgstr ""
 
-#: dir.c:790 dir.c:804
+#: dir.c:788 dir.c:802
 #, c-format
 msgid "unrecognized negative pattern: '%s'"
 msgstr ""
 
-#: dir.c:820
+#: dir.c:818
 #, c-format
 msgid "your sparse-checkout file may have issues: pattern '%s' is repeated"
 msgstr ""
 
-#: dir.c:828
+#: dir.c:826
 msgid "disabling cone pattern matching"
 msgstr ""
 
-#: dir.c:1212
+#: dir.c:1210
 #, c-format
 msgid "cannot use %s as an exclude file"
 msgstr ""
 
-#: dir.c:2740
+#: dir.c:2738
 msgid "failed to get kernel name and information"
 msgstr ""
 
-#: dir.c:2877
+#: dir.c:2875
 msgid "untracked cache is disabled on this system or location"
 msgstr ""
 
-#: dir.c:3165 dir.c:3203
+#: dir.c:3163 dir.c:3201
 msgid ""
 "No directory name could be guessed.\n"
 "Please specify a directory on the command line"
 msgstr ""
 
-#: dir.c:3891
+#: dir.c:3889
 #, c-format
 msgid "index file corrupt in repo %s"
 msgstr ""
 
-#: dir.c:3938 dir.c:3943
+#: dir.c:3936 dir.c:3941
 #, c-format
 msgid "could not create directories for %s"
 msgstr ""
 
-#: dir.c:3972
+#: dir.c:3970
 #, c-format
 msgid "could not migrate git directory from '%s' to '%s'"
 msgstr ""
@@ -19223,19 +19246,19 @@ msgstr ""
 msgid "cannot handle %s as a builtin"
 msgstr ""
 
-#: git.c:908
+#: git.c:904
 #, c-format
 msgid ""
 "usage: %s\n"
 "\n"
 msgstr ""
 
-#: git.c:928
+#: git.c:930
 #, c-format
 msgid "expansion of alias '%s' failed; '%s' is not a git command\n"
 msgstr ""
 
-#: git.c:940
+#: git.c:942
 #, c-format
 msgid "failed to run command '%s': %s\n"
 msgstr ""
