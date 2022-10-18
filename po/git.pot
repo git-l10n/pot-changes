@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2022-10-17 23:00+0000\n"
+"POT-Creation-Date: 2022-10-18 17:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -794,12 +794,20 @@ msgid ""
 "* Use \"git sparse-checkout reapply\" to apply the sparsity rules"
 msgstr ""
 
-#: alias.c:50
+#: alias.c:51
 msgid "cmdline ends with \\"
 msgstr ""
 
-#: alias.c:51
+#: alias.c:52
 msgid "unclosed quote"
+msgstr ""
+
+#: alias.c:53 builtin/cat-file.c:1019 builtin/notes.c:374 builtin/notes.c:429
+#: builtin/notes.c:507 builtin/notes.c:519 builtin/notes.c:596
+#: builtin/notes.c:663 builtin/notes.c:813 builtin/notes.c:965
+#: builtin/notes.c:987 builtin/prune-packed.c:25 builtin/receive-pack.c:2484
+#: builtin/tag.c:592
+msgid "too many arguments"
 msgstr ""
 
 #: apply.c:70
@@ -815,7 +823,7 @@ msgstr ""
 #: apply.c:138 archive.c:632 builtin/add.c:512 builtin/add.c:514
 #: builtin/add.c:520 builtin/add.c:532 builtin/branch.c:759
 #: builtin/checkout.c:472 builtin/checkout.c:475 builtin/checkout.c:1673
-#: builtin/checkout.c:1783 builtin/checkout.c:1786 builtin/clone.c:933
+#: builtin/checkout.c:1783 builtin/checkout.c:1786 builtin/clone.c:935
 #: builtin/commit.c:359 builtin/commit.c:362 builtin/commit.c:1200
 #: builtin/commit.c:1256 builtin/commit.c:1273 builtin/describe.c:595
 #: builtin/diff-tree.c:155 builtin/difftool.c:733 builtin/fast-export.c:1245
@@ -1615,7 +1623,7 @@ msgid "Unexpected option --remote"
 msgstr ""
 
 #: archive.c:628 builtin/add.c:535 builtin/add.c:567 builtin/checkout.c:1792
-#: builtin/clone.c:1114 builtin/clone.c:1117 builtin/commit.c:371
+#: builtin/clone.c:1116 builtin/clone.c:1119 builtin/commit.c:371
 #: builtin/fast-export.c:1230 builtin/index-pack.c:1854 builtin/log.c:2233
 #: builtin/reset.c:360 builtin/reset.c:418 builtin/rm.c:281
 #: builtin/stash.c:1738 builtin/worktree.c:580 builtin/worktree.c:781
@@ -2284,7 +2292,7 @@ msgstr ""
 msgid "invalid ident line: %.*s"
 msgstr ""
 
-#: builtin/am.c:1370 builtin/checkout.c:784 builtin/clone.c:719
+#: builtin/am.c:1370 builtin/checkout.c:784 builtin/clone.c:721
 #: commit-graph.c:1107
 #, c-format
 msgid "unable to parse commit %s"
@@ -2404,7 +2412,7 @@ msgid ""
 msgstr ""
 
 #: builtin/am.c:1992 builtin/am.c:2026 builtin/checkout.c:603
-#: builtin/checkout.c:874 builtin/clone.c:728 builtin/stash.c:269 merge.c:102
+#: builtin/checkout.c:874 builtin/clone.c:730 builtin/stash.c:269 merge.c:102
 #: rerere.c:705
 msgid "unable to write new index file"
 msgstr ""
@@ -3503,7 +3511,7 @@ msgstr ""
 msgid "Failed to resolve HEAD as a valid ref."
 msgstr ""
 
-#: builtin/branch.c:722 builtin/clone.c:698
+#: builtin/branch.c:722 builtin/clone.c:700
 msgid "HEAD not found below refs/heads!"
 msgstr ""
 
@@ -3923,14 +3931,6 @@ msgstr ""
 msgid "<object> required with '-%c'"
 msgstr ""
 
-#: builtin/cat-file.c:1019 builtin/notes.c:374 builtin/notes.c:429
-#: builtin/notes.c:507 builtin/notes.c:519 builtin/notes.c:596
-#: builtin/notes.c:663 builtin/notes.c:813 builtin/notes.c:965
-#: builtin/notes.c:987 builtin/prune-packed.c:25 builtin/receive-pack.c:2484
-#: builtin/tag.c:592
-msgid "too many arguments"
-msgstr ""
-
 #: builtin/cat-file.c:1023
 #, c-format
 msgid "only two arguments allowed in <type> <object> mode, not %d"
@@ -4191,7 +4191,7 @@ msgstr ""
 msgid "HEAD is now at"
 msgstr ""
 
-#: builtin/checkout.c:960 builtin/clone.c:620 builtin/clone.c:646
+#: builtin/checkout.c:960 builtin/clone.c:622 builtin/clone.c:648
 #: t/helper/test-fast-rebase.c:206
 msgid "unable to update HEAD"
 msgstr ""
@@ -4913,203 +4913,208 @@ msgstr ""
 msgid "%s exists and is not a directory"
 msgstr ""
 
-#: builtin/clone.c:332
+#: builtin/clone.c:330
 #, c-format
 msgid "failed to start iterator over '%s'"
 msgstr ""
 
-#: builtin/clone.c:357 compat/precompose_utf8.c:58
+#: builtin/clone.c:344
+#, c-format
+msgid "symlink '%s' exists, refusing to clone with --local"
+msgstr ""
+
+#: builtin/clone.c:359 compat/precompose_utf8.c:58
 #, c-format
 msgid "failed to unlink '%s'"
 msgstr ""
 
-#: builtin/clone.c:363
+#: builtin/clone.c:365
 #, c-format
 msgid "failed to create link '%s'"
 msgstr ""
 
-#: builtin/clone.c:367
+#: builtin/clone.c:369
 #, c-format
 msgid "failed to copy file to '%s'"
 msgstr ""
 
-#: builtin/clone.c:372
+#: builtin/clone.c:374
 #, c-format
 msgid "failed to iterate over '%s'"
 msgstr ""
 
-#: builtin/clone.c:399
+#: builtin/clone.c:401
 #, c-format
 msgid "done.\n"
 msgstr ""
 
-#: builtin/clone.c:413
+#: builtin/clone.c:415
 msgid ""
 "Clone succeeded, but checkout failed.\n"
 "You can inspect what was checked out with 'git status'\n"
 "and retry with 'git restore --source=HEAD :/'\n"
 msgstr ""
 
-#: builtin/clone.c:490
+#: builtin/clone.c:492
 #, c-format
 msgid "Could not find remote branch %s to clone."
 msgstr ""
 
-#: builtin/clone.c:592 fetch-pack.c:2084
+#: builtin/clone.c:594 fetch-pack.c:2084
 msgid "remote did not send all necessary objects"
 msgstr ""
 
-#: builtin/clone.c:608
+#: builtin/clone.c:610
 #, c-format
 msgid "unable to update %s"
 msgstr ""
 
-#: builtin/clone.c:665
+#: builtin/clone.c:667
 msgid "failed to initialize sparse-checkout"
 msgstr ""
 
-#: builtin/clone.c:688
+#: builtin/clone.c:690
 msgid "remote HEAD refers to nonexistent ref, unable to checkout"
 msgstr ""
 
-#: builtin/clone.c:723
+#: builtin/clone.c:725
 msgid "unable to checkout working tree"
 msgstr ""
 
-#: builtin/clone.c:807
+#: builtin/clone.c:809
 msgid "unable to write parameters to config file"
 msgstr ""
 
-#: builtin/clone.c:870
+#: builtin/clone.c:872
 msgid "cannot repack to clean up"
 msgstr ""
 
-#: builtin/clone.c:872
+#: builtin/clone.c:874
 msgid "cannot unlink temporary alternates file"
 msgstr ""
 
-#: builtin/clone.c:916
+#: builtin/clone.c:918
 msgid "Too many arguments."
 msgstr ""
 
-#: builtin/clone.c:920 scalar.c:451
+#: builtin/clone.c:922 scalar.c:451
 msgid "You must specify a repository to clone."
 msgstr ""
 
-#: builtin/clone.c:938
+#: builtin/clone.c:940
 msgid ""
 "--bundle-uri is incompatible with --depth, --shallow-since, and --shallow-"
 "exclude"
 msgstr ""
 
-#: builtin/clone.c:950
+#: builtin/clone.c:952
 #, c-format
 msgid "repository '%s' does not exist"
 msgstr ""
 
-#: builtin/clone.c:954 builtin/fetch.c:2179
+#: builtin/clone.c:956 builtin/fetch.c:2179
 #, c-format
 msgid "depth %s is not a positive number"
 msgstr ""
 
-#: builtin/clone.c:964
+#: builtin/clone.c:966
 #, c-format
 msgid "destination path '%s' already exists and is not an empty directory."
 msgstr ""
 
-#: builtin/clone.c:970
+#: builtin/clone.c:972
 #, c-format
 msgid "repository path '%s' already exists and is not an empty directory."
 msgstr ""
 
-#: builtin/clone.c:984
+#: builtin/clone.c:986
 #, c-format
 msgid "working tree '%s' already exists."
 msgstr ""
 
-#: builtin/clone.c:999 builtin/clone.c:1020 builtin/difftool.c:256
+#: builtin/clone.c:1001 builtin/clone.c:1022 builtin/difftool.c:256
 #: builtin/log.c:2130 builtin/worktree.c:350 builtin/worktree.c:382
 #, c-format
 msgid "could not create leading directories of '%s'"
 msgstr ""
 
-#: builtin/clone.c:1004
+#: builtin/clone.c:1006
 #, c-format
 msgid "could not create work tree dir '%s'"
 msgstr ""
 
-#: builtin/clone.c:1024
+#: builtin/clone.c:1026
 #, c-format
 msgid "Cloning into bare repository '%s'...\n"
 msgstr ""
 
-#: builtin/clone.c:1026
+#: builtin/clone.c:1028
 #, c-format
 msgid "Cloning into '%s'...\n"
 msgstr ""
 
-#: builtin/clone.c:1055
+#: builtin/clone.c:1057
 msgid ""
 "clone --recursive is not compatible with both --reference and --reference-if-"
 "able"
 msgstr ""
 
-#: builtin/clone.c:1133 builtin/remote.c:201 builtin/remote.c:728
+#: builtin/clone.c:1135 builtin/remote.c:201 builtin/remote.c:728
 #, c-format
 msgid "'%s' is not a valid remote name"
 msgstr ""
 
-#: builtin/clone.c:1174
+#: builtin/clone.c:1176
 msgid "--depth is ignored in local clones; use file:// instead."
 msgstr ""
 
-#: builtin/clone.c:1176
+#: builtin/clone.c:1178
 msgid "--shallow-since is ignored in local clones; use file:// instead."
 msgstr ""
 
-#: builtin/clone.c:1178
+#: builtin/clone.c:1180
 msgid "--shallow-exclude is ignored in local clones; use file:// instead."
 msgstr ""
 
-#: builtin/clone.c:1180
+#: builtin/clone.c:1182
 msgid "--filter is ignored in local clones; use file:// instead."
 msgstr ""
 
-#: builtin/clone.c:1183 fetch-pack.c:1217 fetch-pack.c:1570
+#: builtin/clone.c:1185 fetch-pack.c:1217 fetch-pack.c:1570
 msgid "source repository is shallow, reject to clone."
 msgstr ""
 
-#: builtin/clone.c:1185
+#: builtin/clone.c:1187
 msgid "source repository is shallow, ignoring --local"
 msgstr ""
 
-#: builtin/clone.c:1190
+#: builtin/clone.c:1192
 msgid "--local is ignored"
 msgstr ""
 
-#: builtin/clone.c:1202
+#: builtin/clone.c:1204
 msgid "cannot clone from filtered bundle"
 msgstr ""
 
-#: builtin/clone.c:1246
+#: builtin/clone.c:1248
 msgid "failed to initialize the repo, skipping bundle URI"
 msgstr ""
 
-#: builtin/clone.c:1248
+#: builtin/clone.c:1250
 #, c-format
 msgid "failed to fetch objects from bundle URI '%s'"
 msgstr ""
 
-#: builtin/clone.c:1294 builtin/clone.c:1351
+#: builtin/clone.c:1296 builtin/clone.c:1353
 msgid "remote transport reported error"
 msgstr ""
 
-#: builtin/clone.c:1304
+#: builtin/clone.c:1306
 #, c-format
 msgid "Remote branch %s not found in upstream %s"
 msgstr ""
 
-#: builtin/clone.c:1314
+#: builtin/clone.c:1316
 msgid "You appear to have cloned an empty repository."
 msgstr ""
 
@@ -24358,7 +24363,7 @@ msgstr ""
 msgid "invalid remote service path"
 msgstr ""
 
-#: transport-helper.c:661 transport.c:1506
+#: transport-helper.c:661 transport.c:1505
 msgid "operation not supported by protocol"
 msgstr ""
 
@@ -24528,23 +24533,23 @@ msgstr ""
 msgid "unknown value for config '%s': %s"
 msgstr ""
 
-#: transport.c:1047
+#: transport.c:1046
 #, c-format
 msgid "transport '%s' not allowed"
 msgstr ""
 
-#: transport.c:1096
+#: transport.c:1095
 msgid "git-over-rsync is no longer supported"
 msgstr ""
 
-#: transport.c:1200
+#: transport.c:1199
 #, c-format
 msgid ""
 "The following submodule paths contain changes that can\n"
 "not be found on any remote:\n"
 msgstr ""
 
-#: transport.c:1204
+#: transport.c:1203
 #, c-format
 msgid ""
 "\n"
@@ -24560,11 +24565,11 @@ msgid ""
 "\n"
 msgstr ""
 
-#: transport.c:1212
+#: transport.c:1211
 msgid "Aborting."
 msgstr ""
 
-#: transport.c:1363
+#: transport.c:1362
 msgid "failed to push all needed submodules"
 msgstr ""
 
