@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2022-10-21 21:57+0000\n"
+"POT-Creation-Date: 2022-10-22 00:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -834,8 +834,8 @@ msgstr ""
 #: builtin/merge.c:1431 builtin/pack-objects.c:4384 builtin/push.c:630
 #: builtin/push.c:668 builtin/push.c:674 builtin/push.c:679
 #: builtin/rebase.c:1224 builtin/rebase.c:1226 builtin/rebase.c:1242
-#: builtin/repack.c:839 builtin/repack.c:845 builtin/repack.c:847
-#: builtin/repack.c:886 builtin/reset.c:351 builtin/reset.c:387
+#: builtin/repack.c:809 builtin/repack.c:815 builtin/repack.c:817
+#: builtin/repack.c:856 builtin/reset.c:351 builtin/reset.c:387
 #: builtin/rev-list.c:551 builtin/show-branch.c:712 builtin/show-branch.c:717
 #: builtin/stash.c:1749 builtin/stash.c:1752 builtin/submodule--helper.c:1186
 #: builtin/submodule--helper.c:3031 builtin/tag.c:529 builtin/tag.c:575
@@ -1783,7 +1783,7 @@ msgstr ""
 #: builtin/log.c:1757 builtin/log.c:2190 builtin/log.c:2486 builtin/merge.c:442
 #: builtin/pack-objects.c:3408 builtin/pack-objects.c:3566
 #: builtin/pack-objects.c:4049 builtin/pack-objects.c:4064
-#: builtin/shortlog.c:263 bundle.c:234 midx.c:1114 pack-bitmap.c:1107
+#: builtin/shortlog.c:267 bundle.c:234 midx.c:1114 pack-bitmap.c:1107
 #: pack-bitmap.c:2000 ref-filter.c:2373 remote.c:2189 sequencer.c:2423
 #: sequencer.c:5178 submodule.c:913
 msgid "revision walk setup failed"
@@ -2464,7 +2464,7 @@ msgid "allow fall back on 3way merging if needed"
 msgstr ""
 
 #: builtin/am.c:2338 builtin/init-db.c:550 builtin/prune-packed.c:16
-#: builtin/repack.c:797 builtin/stash.c:1000
+#: builtin/repack.c:767 builtin/stash.c:1000
 msgid "be quiet"
 msgstr ""
 
@@ -2513,8 +2513,8 @@ msgstr ""
 #: builtin/am.c:2379 builtin/commit.c:1521 builtin/fmt-merge-msg.c:18
 #: builtin/fmt-merge-msg.c:21 builtin/grep.c:957 builtin/merge.c:264
 #: builtin/pull.c:143 builtin/pull.c:205 builtin/pull.c:222
-#: builtin/rebase.c:1071 builtin/repack.c:808 builtin/repack.c:812
-#: builtin/repack.c:814 builtin/show-branch.c:651 builtin/show-ref.c:167
+#: builtin/rebase.c:1071 builtin/repack.c:778 builtin/repack.c:782
+#: builtin/repack.c:784 builtin/show-branch.c:651 builtin/show-ref.c:167
 #: builtin/tag.c:448 parse-options.h:171 parse-options.h:192
 #: parse-options.h:369
 msgid "n"
@@ -4758,7 +4758,7 @@ msgstr ""
 
 #: builtin/clone.c:131 builtin/column.c:27 builtin/fmt-merge-msg.c:27
 #: builtin/init-db.c:553 builtin/merge-file.c:48 builtin/merge.c:291
-#: builtin/pack-objects.c:4253 builtin/repack.c:820
+#: builtin/pack-objects.c:4253 builtin/repack.c:790
 #: builtin/submodule--helper.c:3365 t/helper/test-simple-ipc.c:595
 #: t/helper/test-simple-ipc.c:597
 msgid "name"
@@ -5426,7 +5426,7 @@ msgstr ""
 msgid "could not lookup commit %s"
 msgstr ""
 
-#: builtin/commit.c:769 builtin/shortlog.c:448
+#: builtin/commit.c:769 builtin/shortlog.c:452
 #, c-format
 msgid "(reading log message from standard input)\n"
 msgstr ""
@@ -8813,7 +8813,7 @@ msgstr ""
 msgid "invalid --decorate option: %s"
 msgstr ""
 
-#: builtin/log.c:238 diff.c:5416
+#: builtin/log.c:238 diff.c:5431
 msgid "suppress diff output"
 msgstr ""
 
@@ -8843,7 +8843,7 @@ msgid ""
 "<file>"
 msgstr ""
 
-#: builtin/log.c:273 builtin/log.c:2075 builtin/shortlog.c:430 bundle.c:540
+#: builtin/log.c:273 builtin/log.c:2075 builtin/shortlog.c:434 bundle.c:540
 #, c-format
 msgid "unrecognized argument: %s"
 msgstr ""
@@ -10263,7 +10263,7 @@ msgstr ""
 msgid "Renaming %s to %s\n"
 msgstr ""
 
-#: builtin/mv.c:457 builtin/remote.c:821 builtin/repack.c:1051
+#: builtin/mv.c:457 builtin/remote.c:821 builtin/repack.c:1020
 #, c-format
 msgid "renaming '%s' failed"
 msgstr ""
@@ -12876,162 +12876,162 @@ msgid ""
 "--no-write-bitmap-index or disable the pack.writeBitmaps configuration."
 msgstr ""
 
-#: builtin/repack.c:230
+#: builtin/repack.c:192
 msgid "could not start pack-objects to repack promisor objects"
 msgstr ""
 
-#: builtin/repack.c:305 builtin/repack.c:743 builtin/repack.c:985
+#: builtin/repack.c:271 builtin/repack.c:711 builtin/repack.c:955
 msgid "repack: Expecting full hex object ID lines only from pack-objects."
 msgstr ""
 
-#: builtin/repack.c:329
+#: builtin/repack.c:295
 msgid "could not finish pack-objects to repack promisor objects"
 msgstr ""
 
-#: builtin/repack.c:341
+#: builtin/repack.c:307
 #, c-format
 msgid "cannot open index for %s"
 msgstr ""
 
-#: builtin/repack.c:424
+#: builtin/repack.c:390
 #, c-format
 msgid "pack %s too large to consider in geometric progression"
 msgstr ""
 
-#: builtin/repack.c:457 builtin/repack.c:464 builtin/repack.c:469
+#: builtin/repack.c:423 builtin/repack.c:430 builtin/repack.c:435
 #, c-format
 msgid "pack %s too large to roll up"
 msgstr ""
 
-#: builtin/repack.c:549
+#: builtin/repack.c:515
 #, c-format
 msgid "could not open tempfile %s for writing"
 msgstr ""
 
-#: builtin/repack.c:567
+#: builtin/repack.c:533
 msgid "could not close refs snapshot tempfile"
 msgstr ""
 
-#: builtin/repack.c:685
+#: builtin/repack.c:651
 #, c-format
 msgid "could not remove stale bitmap: %s"
 msgstr ""
 
-#: builtin/repack.c:780
+#: builtin/repack.c:750
 msgid "pack everything in a single pack"
 msgstr ""
 
-#: builtin/repack.c:782
+#: builtin/repack.c:752
 msgid "same as -a, and turn unreachable objects loose"
 msgstr ""
 
-#: builtin/repack.c:785
+#: builtin/repack.c:755
 msgid "same as -a, pack unreachable cruft objects separately"
 msgstr ""
 
-#: builtin/repack.c:787 builtin/repack.c:804
+#: builtin/repack.c:757 builtin/repack.c:774
 msgid "approxidate"
 msgstr ""
 
-#: builtin/repack.c:788
+#: builtin/repack.c:758
 msgid "with -C, expire objects older than this"
 msgstr ""
 
-#: builtin/repack.c:790
+#: builtin/repack.c:760
 msgid "remove redundant packs, and run git-prune-packed"
 msgstr ""
 
-#: builtin/repack.c:792
+#: builtin/repack.c:762
 msgid "pass --no-reuse-delta to git-pack-objects"
 msgstr ""
 
-#: builtin/repack.c:794
+#: builtin/repack.c:764
 msgid "pass --no-reuse-object to git-pack-objects"
 msgstr ""
 
-#: builtin/repack.c:796
+#: builtin/repack.c:766
 msgid "do not run git-update-server-info"
 msgstr ""
 
-#: builtin/repack.c:799
+#: builtin/repack.c:769
 msgid "pass --local to git-pack-objects"
 msgstr ""
 
-#: builtin/repack.c:801
+#: builtin/repack.c:771
 msgid "write bitmap index"
 msgstr ""
 
-#: builtin/repack.c:803
+#: builtin/repack.c:773
 msgid "pass --delta-islands to git-pack-objects"
 msgstr ""
 
-#: builtin/repack.c:805
+#: builtin/repack.c:775
 msgid "with -A, do not loosen objects older than this"
 msgstr ""
 
-#: builtin/repack.c:807
+#: builtin/repack.c:777
 msgid "with -a, repack unreachable objects"
 msgstr ""
 
-#: builtin/repack.c:809
+#: builtin/repack.c:779
 msgid "size of the window used for delta compression"
 msgstr ""
 
-#: builtin/repack.c:810 builtin/repack.c:816
+#: builtin/repack.c:780 builtin/repack.c:786
 msgid "bytes"
 msgstr ""
 
-#: builtin/repack.c:811
+#: builtin/repack.c:781
 msgid "same as the above, but limit memory size instead of entries count"
 msgstr ""
 
-#: builtin/repack.c:813
+#: builtin/repack.c:783
 msgid "limits the maximum delta depth"
 msgstr ""
 
-#: builtin/repack.c:815
+#: builtin/repack.c:785
 msgid "limits the maximum number of threads"
 msgstr ""
 
-#: builtin/repack.c:817
+#: builtin/repack.c:787
 msgid "maximum size of each packfile"
 msgstr ""
 
-#: builtin/repack.c:819
+#: builtin/repack.c:789
 msgid "repack objects in packs marked with .keep"
 msgstr ""
 
-#: builtin/repack.c:821
+#: builtin/repack.c:791
 msgid "do not repack this pack"
 msgstr ""
 
-#: builtin/repack.c:823
+#: builtin/repack.c:793
 msgid "find a geometric progression with factor <N>"
 msgstr ""
 
-#: builtin/repack.c:825
+#: builtin/repack.c:795
 msgid "write a multi-pack index of the resulting packs"
 msgstr ""
 
-#: builtin/repack.c:835
+#: builtin/repack.c:805
 msgid "cannot delete packs in a precious-objects repo"
 msgstr ""
 
-#: builtin/repack.c:994
+#: builtin/repack.c:965
 msgid "Nothing new to pack."
 msgstr ""
 
-#: builtin/repack.c:999
+#: builtin/repack.c:970
 #, c-format
 msgid "pack prefix %s does not begin with objdir %s"
 msgstr ""
 
-#: builtin/repack.c:1053
+#: builtin/repack.c:1022
 #, c-format
 msgid "missing required file: %s"
 msgstr ""
 
-#: builtin/repack.c:1055
+#: builtin/repack.c:1024
 #, c-format
 msgid "could not unlink: %s"
 msgstr ""
@@ -13744,44 +13744,44 @@ msgstr ""
 msgid "using %s with stdin is not supported"
 msgstr ""
 
-#: builtin/shortlog.c:338
+#: builtin/shortlog.c:342
 #, c-format
 msgid "unknown group type: %s"
 msgstr ""
 
-#: builtin/shortlog.c:380
+#: builtin/shortlog.c:384
 msgid "group by committer rather than author"
 msgstr ""
 
-#: builtin/shortlog.c:383
+#: builtin/shortlog.c:387
 msgid "sort output according to the number of commits per author"
 msgstr ""
 
-#: builtin/shortlog.c:385
+#: builtin/shortlog.c:389
 msgid "suppress commit descriptions, only provides commit count"
 msgstr ""
 
-#: builtin/shortlog.c:387
+#: builtin/shortlog.c:391
 msgid "show the email address of each author"
 msgstr ""
 
-#: builtin/shortlog.c:388
+#: builtin/shortlog.c:392
 msgid "<w>[,<i1>[,<i2>]]"
 msgstr ""
 
-#: builtin/shortlog.c:389
+#: builtin/shortlog.c:393
 msgid "linewrap output"
 msgstr ""
 
-#: builtin/shortlog.c:391
+#: builtin/shortlog.c:395
 msgid "field"
 msgstr ""
 
-#: builtin/shortlog.c:392
+#: builtin/shortlog.c:396
 msgid "group by field"
 msgstr ""
 
-#: builtin/shortlog.c:425
+#: builtin/shortlog.c:429
 msgid "too many arguments given outside repository"
 msgstr ""
 
@@ -15787,7 +15787,7 @@ msgstr ""
 msgid "try to match the new branch name with a remote-tracking branch"
 msgstr ""
 
-#: builtin/worktree.c:637 diff.c:4712 parse-options.c:1219
+#: builtin/worktree.c:637 diff.c:4727 parse-options.c:1219
 #, c-format
 msgid "options '%s', '%s', and '%s' cannot be used together"
 msgstr ""
@@ -18231,548 +18231,548 @@ msgid ""
 "%s"
 msgstr ""
 
-#: diff.c:4313
+#: diff.c:4328
 #, c-format
 msgid "external diff died, stopping at %s"
 msgstr ""
 
-#: diff.c:4708 parse-options.c:1215
+#: diff.c:4723 parse-options.c:1215
 #, c-format
 msgid "options '%s', '%s', '%s', and '%s' cannot be used together"
 msgstr ""
 
-#: diff.c:4716
+#: diff.c:4731
 #, c-format
 msgid "options '%s' and '%s' cannot be used together, use '%s' with '%s'"
 msgstr ""
 
-#: diff.c:4720
+#: diff.c:4735
 #, c-format
 msgid ""
 "options '%s' and '%s' cannot be used together, use '%s' with '%s' and '%s'"
 msgstr ""
 
-#: diff.c:4800
+#: diff.c:4815
 msgid "--follow requires exactly one pathspec"
 msgstr ""
 
-#: diff.c:4854
+#: diff.c:4869
 #, c-format
 msgid "invalid --stat value: %s"
 msgstr ""
 
-#: diff.c:4859 diff.c:4864 diff.c:4869 diff.c:4874 diff.c:5350
+#: diff.c:4874 diff.c:4879 diff.c:4884 diff.c:4889 diff.c:5365
 #: parse-options.c:217 parse-options.c:221
 #, c-format
 msgid "%s expects a numerical value"
 msgstr ""
 
-#: diff.c:4891
+#: diff.c:4906
 #, c-format
 msgid ""
 "Failed to parse --dirstat/-X option parameter:\n"
 "%s"
 msgstr ""
 
-#: diff.c:4924
+#: diff.c:4939
 #, c-format
 msgid "unknown change class '%c' in --diff-filter=%s"
 msgstr ""
 
-#: diff.c:4948
+#: diff.c:4963
 #, c-format
 msgid "unknown value after ws-error-highlight=%.*s"
 msgstr ""
 
-#: diff.c:4962
+#: diff.c:4977
 #, c-format
 msgid "unable to resolve '%s'"
 msgstr ""
 
-#: diff.c:5012 diff.c:5018
+#: diff.c:5027 diff.c:5033
 #, c-format
 msgid "%s expects <n>/<m> form"
 msgstr ""
 
-#: diff.c:5030
+#: diff.c:5045
 #, c-format
 msgid "%s expects a character, got '%s'"
 msgstr ""
 
-#: diff.c:5051
+#: diff.c:5066
 #, c-format
 msgid "bad --color-moved argument: %s"
 msgstr ""
 
-#: diff.c:5070
+#: diff.c:5085
 #, c-format
 msgid "invalid mode '%s' in --color-moved-ws"
 msgstr ""
 
-#: diff.c:5110
+#: diff.c:5125
 msgid ""
 "option diff-algorithm accepts \"myers\", \"minimal\", \"patience\" and "
 "\"histogram\""
 msgstr ""
 
-#: diff.c:5146 diff.c:5166
+#: diff.c:5161 diff.c:5181
 #, c-format
 msgid "invalid argument to %s"
 msgstr ""
 
-#: diff.c:5270
+#: diff.c:5285
 #, c-format
 msgid "invalid regex given to -I: '%s'"
 msgstr ""
 
-#: diff.c:5319
+#: diff.c:5334
 #, c-format
 msgid "failed to parse --submodule option parameter: '%s'"
 msgstr ""
 
-#: diff.c:5375
+#: diff.c:5390
 #, c-format
 msgid "bad --word-diff argument: %s"
 msgstr ""
 
-#: diff.c:5411
+#: diff.c:5426
 msgid "Diff output format options"
 msgstr ""
 
-#: diff.c:5413 diff.c:5419
+#: diff.c:5428 diff.c:5434
 msgid "generate patch"
 msgstr ""
 
-#: diff.c:5421 diff.c:5535 diff.c:5542
+#: diff.c:5436 diff.c:5550 diff.c:5557
 msgid "<n>"
 msgstr ""
 
-#: diff.c:5422 diff.c:5425
+#: diff.c:5437 diff.c:5440
 msgid "generate diffs with <n> lines context"
 msgstr ""
 
-#: diff.c:5427
+#: diff.c:5442
 msgid "generate the diff in raw format"
 msgstr ""
 
-#: diff.c:5430
+#: diff.c:5445
 msgid "synonym for '-p --raw'"
 msgstr ""
 
-#: diff.c:5434
+#: diff.c:5449
 msgid "synonym for '-p --stat'"
 msgstr ""
 
-#: diff.c:5438
+#: diff.c:5453
 msgid "machine friendly --stat"
 msgstr ""
 
-#: diff.c:5441
+#: diff.c:5456
 msgid "output only the last line of --stat"
 msgstr ""
 
-#: diff.c:5443 diff.c:5451
+#: diff.c:5458 diff.c:5466
 msgid "<param1,param2>..."
 msgstr ""
 
-#: diff.c:5444
+#: diff.c:5459
 msgid ""
 "output the distribution of relative amount of changes for each sub-directory"
 msgstr ""
 
-#: diff.c:5448
+#: diff.c:5463
 msgid "synonym for --dirstat=cumulative"
 msgstr ""
 
-#: diff.c:5452
+#: diff.c:5467
 msgid "synonym for --dirstat=files,param1,param2..."
 msgstr ""
 
-#: diff.c:5456
+#: diff.c:5471
 msgid "warn if changes introduce conflict markers or whitespace errors"
 msgstr ""
 
-#: diff.c:5459
+#: diff.c:5474
 msgid "condensed summary such as creations, renames and mode changes"
 msgstr ""
 
-#: diff.c:5462
+#: diff.c:5477
 msgid "show only names of changed files"
 msgstr ""
 
-#: diff.c:5465
+#: diff.c:5480
 msgid "show only names and status of changed files"
 msgstr ""
 
-#: diff.c:5467
+#: diff.c:5482
 msgid "<width>[,<name-width>[,<count>]]"
 msgstr ""
 
-#: diff.c:5468
+#: diff.c:5483
 msgid "generate diffstat"
 msgstr ""
 
-#: diff.c:5470 diff.c:5473 diff.c:5476
+#: diff.c:5485 diff.c:5488 diff.c:5491
 msgid "<width>"
 msgstr ""
 
-#: diff.c:5471
+#: diff.c:5486
 msgid "generate diffstat with a given width"
 msgstr ""
 
-#: diff.c:5474
+#: diff.c:5489
 msgid "generate diffstat with a given name width"
 msgstr ""
 
-#: diff.c:5477
+#: diff.c:5492
 msgid "generate diffstat with a given graph width"
 msgstr ""
 
-#: diff.c:5479
+#: diff.c:5494
 msgid "<count>"
 msgstr ""
 
-#: diff.c:5480
+#: diff.c:5495
 msgid "generate diffstat with limited lines"
 msgstr ""
 
-#: diff.c:5483
+#: diff.c:5498
 msgid "generate compact summary in diffstat"
 msgstr ""
 
-#: diff.c:5486
+#: diff.c:5501
 msgid "output a binary diff that can be applied"
 msgstr ""
 
-#: diff.c:5489
+#: diff.c:5504
 msgid "show full pre- and post-image object names on the \"index\" lines"
 msgstr ""
 
-#: diff.c:5491
+#: diff.c:5506
 msgid "show colored diff"
 msgstr ""
 
-#: diff.c:5492
+#: diff.c:5507
 msgid "<kind>"
 msgstr ""
 
-#: diff.c:5493
+#: diff.c:5508
 msgid ""
 "highlight whitespace errors in the 'context', 'old' or 'new' lines in the "
 "diff"
 msgstr ""
 
-#: diff.c:5496
+#: diff.c:5511
 msgid ""
 "do not munge pathnames and use NULs as output field terminators in --raw or "
 "--numstat"
 msgstr ""
 
-#: diff.c:5499 diff.c:5502 diff.c:5505 diff.c:5614
+#: diff.c:5514 diff.c:5517 diff.c:5520 diff.c:5629
 msgid "<prefix>"
 msgstr ""
 
-#: diff.c:5500
+#: diff.c:5515
 msgid "show the given source prefix instead of \"a/\""
 msgstr ""
 
-#: diff.c:5503
+#: diff.c:5518
 msgid "show the given destination prefix instead of \"b/\""
 msgstr ""
 
-#: diff.c:5506
+#: diff.c:5521
 msgid "prepend an additional prefix to every line of output"
 msgstr ""
 
-#: diff.c:5509
+#: diff.c:5524
 msgid "do not show any source or destination prefix"
 msgstr ""
 
-#: diff.c:5512
+#: diff.c:5527
 msgid "show context between diff hunks up to the specified number of lines"
 msgstr ""
 
-#: diff.c:5516 diff.c:5521 diff.c:5526
+#: diff.c:5531 diff.c:5536 diff.c:5541
 msgid "<char>"
 msgstr ""
 
-#: diff.c:5517
+#: diff.c:5532
 msgid "specify the character to indicate a new line instead of '+'"
 msgstr ""
 
-#: diff.c:5522
+#: diff.c:5537
 msgid "specify the character to indicate an old line instead of '-'"
 msgstr ""
 
-#: diff.c:5527
+#: diff.c:5542
 msgid "specify the character to indicate a context instead of ' '"
 msgstr ""
 
-#: diff.c:5530
+#: diff.c:5545
 msgid "Diff rename options"
 msgstr ""
 
-#: diff.c:5531
+#: diff.c:5546
 msgid "<n>[/<m>]"
 msgstr ""
 
-#: diff.c:5532
+#: diff.c:5547
 msgid "break complete rewrite changes into pairs of delete and create"
 msgstr ""
 
-#: diff.c:5536
+#: diff.c:5551
 msgid "detect renames"
 msgstr ""
 
-#: diff.c:5540
+#: diff.c:5555
 msgid "omit the preimage for deletes"
 msgstr ""
 
-#: diff.c:5543
+#: diff.c:5558
 msgid "detect copies"
 msgstr ""
 
-#: diff.c:5547
+#: diff.c:5562
 msgid "use unmodified files as source to find copies"
 msgstr ""
 
-#: diff.c:5549
+#: diff.c:5564
 msgid "disable rename detection"
 msgstr ""
 
-#: diff.c:5552
+#: diff.c:5567
 msgid "use empty blobs as rename source"
 msgstr ""
 
-#: diff.c:5554
+#: diff.c:5569
 msgid "continue listing the history of a file beyond renames"
 msgstr ""
 
-#: diff.c:5557
+#: diff.c:5572
 msgid ""
 "prevent rename/copy detection if the number of rename/copy targets exceeds "
 "given limit"
 msgstr ""
 
-#: diff.c:5559
+#: diff.c:5574
 msgid "Diff algorithm options"
 msgstr ""
 
-#: diff.c:5561
+#: diff.c:5576
 msgid "produce the smallest possible diff"
 msgstr ""
 
-#: diff.c:5564
+#: diff.c:5579
 msgid "ignore whitespace when comparing lines"
 msgstr ""
 
-#: diff.c:5567
+#: diff.c:5582
 msgid "ignore changes in amount of whitespace"
 msgstr ""
 
-#: diff.c:5570
+#: diff.c:5585
 msgid "ignore changes in whitespace at EOL"
 msgstr ""
 
-#: diff.c:5573
+#: diff.c:5588
 msgid "ignore carrier-return at the end of line"
 msgstr ""
 
-#: diff.c:5576
+#: diff.c:5591
 msgid "ignore changes whose lines are all blank"
 msgstr ""
 
-#: diff.c:5578 diff.c:5600 diff.c:5603 diff.c:5648
+#: diff.c:5593 diff.c:5615 diff.c:5618 diff.c:5663
 msgid "<regex>"
 msgstr ""
 
-#: diff.c:5579
+#: diff.c:5594
 msgid "ignore changes whose all lines match <regex>"
 msgstr ""
 
-#: diff.c:5582
+#: diff.c:5597
 msgid "heuristic to shift diff hunk boundaries for easy reading"
 msgstr ""
 
-#: diff.c:5585
+#: diff.c:5600
 msgid "generate diff using the \"patience diff\" algorithm"
 msgstr ""
 
-#: diff.c:5589
+#: diff.c:5604
 msgid "generate diff using the \"histogram diff\" algorithm"
 msgstr ""
 
-#: diff.c:5591
+#: diff.c:5606
 msgid "<algorithm>"
 msgstr ""
 
-#: diff.c:5592
+#: diff.c:5607
 msgid "choose a diff algorithm"
 msgstr ""
 
-#: diff.c:5594
+#: diff.c:5609
 msgid "<text>"
 msgstr ""
 
-#: diff.c:5595
+#: diff.c:5610
 msgid "generate diff using the \"anchored diff\" algorithm"
 msgstr ""
 
-#: diff.c:5597 diff.c:5606 diff.c:5609
+#: diff.c:5612 diff.c:5621 diff.c:5624
 msgid "<mode>"
 msgstr ""
 
-#: diff.c:5598
+#: diff.c:5613
 msgid "show word diff, using <mode> to delimit changed words"
 msgstr ""
 
-#: diff.c:5601
+#: diff.c:5616
 msgid "use <regex> to decide what a word is"
 msgstr ""
 
-#: diff.c:5604
+#: diff.c:5619
 msgid "equivalent to --word-diff=color --word-diff-regex=<regex>"
 msgstr ""
 
-#: diff.c:5607
+#: diff.c:5622
 msgid "moved lines of code are colored differently"
 msgstr ""
 
-#: diff.c:5610
+#: diff.c:5625
 msgid "how white spaces are ignored in --color-moved"
 msgstr ""
 
-#: diff.c:5613
+#: diff.c:5628
 msgid "Other diff options"
 msgstr ""
 
-#: diff.c:5615
+#: diff.c:5630
 msgid "when run from subdir, exclude changes outside and show relative paths"
 msgstr ""
 
-#: diff.c:5619
+#: diff.c:5634
 msgid "treat all files as text"
 msgstr ""
 
-#: diff.c:5621
+#: diff.c:5636
 msgid "swap two inputs, reverse the diff"
 msgstr ""
 
-#: diff.c:5623
+#: diff.c:5638
 msgid "exit with 1 if there were differences, 0 otherwise"
 msgstr ""
 
-#: diff.c:5625
+#: diff.c:5640
 msgid "disable all output of the program"
 msgstr ""
 
-#: diff.c:5627
+#: diff.c:5642
 msgid "allow an external diff helper to be executed"
 msgstr ""
 
-#: diff.c:5629
+#: diff.c:5644
 msgid "run external text conversion filters when comparing binary files"
 msgstr ""
 
-#: diff.c:5631
+#: diff.c:5646
 msgid "<when>"
 msgstr ""
 
-#: diff.c:5632
+#: diff.c:5647
 msgid "ignore changes to submodules in the diff generation"
 msgstr ""
 
-#: diff.c:5635
+#: diff.c:5650
 msgid "<format>"
 msgstr ""
 
-#: diff.c:5636
+#: diff.c:5651
 msgid "specify how differences in submodules are shown"
 msgstr ""
 
-#: diff.c:5640
+#: diff.c:5655
 msgid "hide 'git add -N' entries from the index"
 msgstr ""
 
-#: diff.c:5643
+#: diff.c:5658
 msgid "treat 'git add -N' entries as real in the index"
 msgstr ""
 
-#: diff.c:5645
+#: diff.c:5660
 msgid "<string>"
 msgstr ""
 
-#: diff.c:5646
+#: diff.c:5661
 msgid ""
 "look for differences that change the number of occurrences of the specified "
 "string"
 msgstr ""
 
-#: diff.c:5649
+#: diff.c:5664
 msgid ""
 "look for differences that change the number of occurrences of the specified "
 "regex"
 msgstr ""
 
-#: diff.c:5652
+#: diff.c:5667
 msgid "show all changes in the changeset with -S or -G"
 msgstr ""
 
-#: diff.c:5655
+#: diff.c:5670
 msgid "treat <string> in -S as extended POSIX regular expression"
 msgstr ""
 
-#: diff.c:5658
+#: diff.c:5673
 msgid "control the order in which files appear in the output"
 msgstr ""
 
-#: diff.c:5659 diff.c:5662
+#: diff.c:5674 diff.c:5677
 msgid "<path>"
 msgstr ""
 
-#: diff.c:5660
+#: diff.c:5675
 msgid "show the change in the specified path first"
 msgstr ""
 
-#: diff.c:5663
+#: diff.c:5678
 msgid "skip the output to the specified path"
 msgstr ""
 
-#: diff.c:5665
+#: diff.c:5680
 msgid "<object-id>"
 msgstr ""
 
-#: diff.c:5666
+#: diff.c:5681
 msgid ""
 "look for differences that change the number of occurrences of the specified "
 "object"
 msgstr ""
 
-#: diff.c:5668
+#: diff.c:5683
 msgid "[(A|C|D|M|R|T|U|X|B)...[*]]"
 msgstr ""
 
-#: diff.c:5669
+#: diff.c:5684
 msgid "select files by diff type"
 msgstr ""
 
-#: diff.c:5671
+#: diff.c:5686
 msgid "<file>"
 msgstr ""
 
-#: diff.c:5672
+#: diff.c:5687
 msgid "output to a specific file"
 msgstr ""
 
-#: diff.c:6356
+#: diff.c:6371
 msgid "exhaustive rename detection was skipped due to too many files."
 msgstr ""
 
-#: diff.c:6359
+#: diff.c:6374
 msgid "only found copies from modified paths due to too many files."
 msgstr ""
 
-#: diff.c:6362
+#: diff.c:6377
 #, c-format
 msgid ""
 "you may want to set your %s variable to at least %d and retry the command."
@@ -19566,39 +19566,39 @@ msgstr ""
 msgid "not a git repository"
 msgstr ""
 
-#: http.c:425
+#: http.c:426
 #, c-format
 msgid "negative value for http.postBuffer; defaulting to %d"
 msgstr ""
 
-#: http.c:446
+#: http.c:447
 msgid "Delegation control is not supported with cURL < 7.22.0"
 msgstr ""
 
-#: http.c:455
+#: http.c:456
 msgid "Public key pinning not supported with cURL < 7.39.0"
 msgstr ""
 
-#: http.c:917
+#: http.c:918
 msgid "CURLSSLOPT_NO_REVOKE not supported with cURL < 7.44.0"
 msgstr ""
 
-#: http.c:1118
+#: http.c:1119
 #, c-format
 msgid "Unsupported SSL backend '%s'. Supported SSL backends:"
 msgstr ""
 
-#: http.c:1125
+#: http.c:1126
 #, c-format
 msgid "Could not set SSL backend to '%s': cURL was built without SSL backends"
 msgstr ""
 
-#: http.c:1129
+#: http.c:1130
 #, c-format
 msgid "Could not set SSL backend to '%s': already set"
 msgstr ""
 
-#: http.c:2010
+#: http.c:2011
 #, c-format
 msgid ""
 "unable to update url base from redirection:\n"
@@ -24395,6 +24395,11 @@ msgstr ""
 
 #: t/helper/test-fast-rebase.c:149
 msgid "error preparing revisions"
+msgstr ""
+
+#: t/helper/test-http-server.c:335
+#, c-format
+msgid "could not send '%s'"
 msgstr ""
 
 #: t/helper/test-reach.c:154
