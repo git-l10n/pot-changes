@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2022-10-23 21:57+0000\n"
+"POT-Creation-Date: 2022-10-24 22:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -834,8 +834,8 @@ msgstr ""
 #: builtin/merge.c:1431 builtin/pack-objects.c:4384 builtin/push.c:630
 #: builtin/push.c:668 builtin/push.c:674 builtin/push.c:679
 #: builtin/rebase.c:1224 builtin/rebase.c:1226 builtin/rebase.c:1242
-#: builtin/repack.c:809 builtin/repack.c:815 builtin/repack.c:817
-#: builtin/repack.c:856 builtin/reset.c:351 builtin/reset.c:387
+#: builtin/repack.c:826 builtin/repack.c:832 builtin/repack.c:834
+#: builtin/repack.c:873 builtin/reset.c:351 builtin/reset.c:387
 #: builtin/rev-list.c:551 builtin/show-branch.c:712 builtin/show-branch.c:717
 #: builtin/stash.c:1749 builtin/stash.c:1752 builtin/submodule--helper.c:1186
 #: builtin/submodule--helper.c:3031 builtin/tag.c:529 builtin/tag.c:575
@@ -2464,7 +2464,7 @@ msgid "allow fall back on 3way merging if needed"
 msgstr ""
 
 #: builtin/am.c:2338 builtin/init-db.c:550 builtin/prune-packed.c:16
-#: builtin/repack.c:767 builtin/stash.c:1000
+#: builtin/repack.c:782 builtin/stash.c:1000
 msgid "be quiet"
 msgstr ""
 
@@ -2513,8 +2513,8 @@ msgstr ""
 #: builtin/am.c:2379 builtin/commit.c:1521 builtin/fmt-merge-msg.c:18
 #: builtin/fmt-merge-msg.c:21 builtin/grep.c:957 builtin/merge.c:264
 #: builtin/pull.c:143 builtin/pull.c:205 builtin/pull.c:222
-#: builtin/rebase.c:1071 builtin/repack.c:778 builtin/repack.c:782
-#: builtin/repack.c:784 builtin/show-branch.c:651 builtin/show-ref.c:167
+#: builtin/rebase.c:1071 builtin/repack.c:793 builtin/repack.c:797
+#: builtin/repack.c:799 builtin/show-branch.c:651 builtin/show-ref.c:167
 #: builtin/tag.c:448 parse-options.h:171 parse-options.h:192
 #: parse-options.h:369
 msgid "n"
@@ -4758,7 +4758,7 @@ msgstr ""
 
 #: builtin/clone.c:131 builtin/column.c:27 builtin/fmt-merge-msg.c:27
 #: builtin/init-db.c:553 builtin/merge-file.c:48 builtin/merge.c:291
-#: builtin/pack-objects.c:4253 builtin/repack.c:790
+#: builtin/pack-objects.c:4253 builtin/repack.c:805
 #: builtin/submodule--helper.c:3365 t/helper/test-simple-ipc.c:595
 #: t/helper/test-simple-ipc.c:597
 msgid "name"
@@ -5145,6 +5145,7 @@ msgid ""
 msgstr ""
 
 #: builtin/commit-graph.c:51 builtin/fetch.c:198 builtin/log.c:1908
+#: builtin/repack.c:811
 msgid "dir"
 msgstr ""
 
@@ -12875,11 +12876,11 @@ msgstr ""
 msgid "be verbose; must be placed before a subcommand"
 msgstr ""
 
-#: builtin/repack.c:38
+#: builtin/repack.c:37
 msgid "git repack [<options>]"
 msgstr ""
 
-#: builtin/repack.c:43
+#: builtin/repack.c:42
 msgid ""
 "Incremental repacks are incompatible with bitmap indexes.  Use\n"
 "--no-write-bitmap-index or disable the pack.writeBitmaps configuration."
@@ -12889,7 +12890,7 @@ msgstr ""
 msgid "could not start pack-objects to repack promisor objects"
 msgstr ""
 
-#: builtin/repack.c:271 builtin/repack.c:711 builtin/repack.c:955
+#: builtin/repack.c:271 builtin/repack.c:719 builtin/repack.c:972
 msgid "repack: Expecting full hex object ID lines only from pack-objects."
 msgstr ""
 
@@ -12926,126 +12927,130 @@ msgstr ""
 msgid "could not remove stale bitmap: %s"
 msgstr ""
 
-#: builtin/repack.c:750
+#: builtin/repack.c:765
 msgid "pack everything in a single pack"
 msgstr ""
 
-#: builtin/repack.c:752
+#: builtin/repack.c:767
 msgid "same as -a, and turn unreachable objects loose"
 msgstr ""
 
-#: builtin/repack.c:755
+#: builtin/repack.c:770
 msgid "same as -a, pack unreachable cruft objects separately"
 msgstr ""
 
-#: builtin/repack.c:757 builtin/repack.c:774
+#: builtin/repack.c:772 builtin/repack.c:789
 msgid "approxidate"
 msgstr ""
 
-#: builtin/repack.c:758
+#: builtin/repack.c:773
 msgid "with -C, expire objects older than this"
 msgstr ""
 
-#: builtin/repack.c:760
+#: builtin/repack.c:775
 msgid "remove redundant packs, and run git-prune-packed"
 msgstr ""
 
-#: builtin/repack.c:762
+#: builtin/repack.c:777
 msgid "pass --no-reuse-delta to git-pack-objects"
 msgstr ""
 
-#: builtin/repack.c:764
+#: builtin/repack.c:779
 msgid "pass --no-reuse-object to git-pack-objects"
 msgstr ""
 
-#: builtin/repack.c:766
+#: builtin/repack.c:781
 msgid "do not run git-update-server-info"
 msgstr ""
 
-#: builtin/repack.c:769
+#: builtin/repack.c:784
 msgid "pass --local to git-pack-objects"
 msgstr ""
 
-#: builtin/repack.c:771
+#: builtin/repack.c:786
 msgid "write bitmap index"
 msgstr ""
 
-#: builtin/repack.c:773
+#: builtin/repack.c:788
 msgid "pass --delta-islands to git-pack-objects"
 msgstr ""
 
-#: builtin/repack.c:775
+#: builtin/repack.c:790
 msgid "with -A, do not loosen objects older than this"
 msgstr ""
 
-#: builtin/repack.c:777
+#: builtin/repack.c:792
 msgid "with -a, repack unreachable objects"
 msgstr ""
 
-#: builtin/repack.c:779
+#: builtin/repack.c:794
 msgid "size of the window used for delta compression"
 msgstr ""
 
-#: builtin/repack.c:780 builtin/repack.c:786
+#: builtin/repack.c:795 builtin/repack.c:801
 msgid "bytes"
 msgstr ""
 
-#: builtin/repack.c:781
+#: builtin/repack.c:796
 msgid "same as the above, but limit memory size instead of entries count"
 msgstr ""
 
-#: builtin/repack.c:783
+#: builtin/repack.c:798
 msgid "limits the maximum delta depth"
 msgstr ""
 
-#: builtin/repack.c:785
+#: builtin/repack.c:800
 msgid "limits the maximum number of threads"
 msgstr ""
 
-#: builtin/repack.c:787
+#: builtin/repack.c:802
 msgid "maximum size of each packfile"
 msgstr ""
 
-#: builtin/repack.c:789
+#: builtin/repack.c:804
 msgid "repack objects in packs marked with .keep"
 msgstr ""
 
-#: builtin/repack.c:791
+#: builtin/repack.c:806
 msgid "do not repack this pack"
 msgstr ""
 
-#: builtin/repack.c:793
+#: builtin/repack.c:808
 msgid "find a geometric progression with factor <N>"
 msgstr ""
 
-#: builtin/repack.c:795
+#: builtin/repack.c:810
 msgid "write a multi-pack index of the resulting packs"
 msgstr ""
 
-#: builtin/repack.c:805
+#: builtin/repack.c:812
+msgid "pack prefix to store a pack containing pruned objects"
+msgstr ""
+
+#: builtin/repack.c:822
 msgid "cannot delete packs in a precious-objects repo"
 msgstr ""
 
-#: builtin/repack.c:965
+#: builtin/repack.c:982
 msgid "Nothing new to pack."
 msgstr ""
 
-#: builtin/repack.c:970
+#: builtin/repack.c:987
 #, c-format
 msgid "pack prefix %s does not begin with objdir %s"
 msgstr ""
 
-#: builtin/repack.c:1020
+#: builtin/repack.c:1071
 #, c-format
 msgid "renaming pack to '%s' failed"
 msgstr ""
 
-#: builtin/repack.c:1022
+#: builtin/repack.c:1073
 #, c-format
 msgid "pack-objects did not write a '%s' file for pack %s-%s"
 msgstr ""
 
-#: builtin/repack.c:1025
+#: builtin/repack.c:1076
 #, c-format
 msgid "could not unlink: %s"
 msgstr ""
