@@ -1,0 +1,683 @@
+
+
+#################### Thu, 27 Oct 2022 23:57:55 +0000 ####################
+
+--- po/git.pot.old	2022-10-27 23:57:55.600729858 +0000
++++ po/git.pot.new	2022-10-27 23:57:55.700731651 +0000
+@@ -819,10 +819,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "%s is not in the cache"
+-msgstr ""
+-
+-#, c-format
+ msgid "%s is okay\n"
+ msgstr ""
+ 
+@@ -967,18 +963,6 @@
+ msgid "%s: Could not drop stash entry"
+ msgstr ""
+ 
+-#, c-format
+-msgid "%s: Not handling case %s -> %s -> %s"
+-msgstr ""
+-
+-#, c-format
+-msgid "%s: Not merging conflicting submodule changes."
+-msgstr ""
+-
+-#, c-format
+-msgid "%s: Not merging symbolic link changes."
+-msgstr ""
+-
+ #. TRANSLATORS: %s will be "revert", "cherry-pick" or
+ #. "rebase".
+ #.
+@@ -1007,10 +991,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "%s: cannot checkout file"
+-msgstr ""
+-
+-#, c-format
+ msgid "%s: cannot drop to stage #0"
+ msgstr ""
+ 
+@@ -1494,6 +1474,9 @@
+ msgid "'%s=<%s>' needs '%s' or '%s'"
+ msgstr ""
+ 
++msgid "'' is not a valid term"
++msgstr ""
++
+ #, c-format
+ msgid "'-%c' is incompatible with batch mode"
+ msgstr ""
+@@ -1727,6 +1710,18 @@
+ msgid "--author '%s' is not 'Name <email>' and matches no existing author"
+ msgstr ""
+ 
++msgid "--bisect-log requires 0 arguments"
++msgstr ""
++
++msgid "--bisect-next requires 0 arguments"
++msgstr ""
++
++msgid "--bisect-reset requires either no argument or a commit"
++msgstr ""
++
++msgid "--bisect-terms requires 0 or 1 argument"
++msgstr ""
++
+ msgid "--blob can only be used inside a git repository"
+ msgstr ""
+ 
+@@ -2214,18 +2209,10 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "Added %s in both, but differently.\n"
+-msgstr ""
+-
+-#, c-format
+ msgid "Adding %s"
+ msgstr ""
+ 
+ #, c-format
+-msgid "Adding %s\n"
+-msgstr ""
+-
+-#, c-format
+ msgid "Adding as %s instead"
+ msgstr ""
+ 
+@@ -2268,8 +2255,8 @@
+ msgid "Already on '%s'\n"
+ msgstr ""
+ 
+-#, c-format
+-msgid "Already up to date with %s\n"
++#, sh-format
++msgid "Already up to date with $pretty_name"
+ msgstr ""
+ 
+ msgid "Already up to date."
+@@ -2435,10 +2422,6 @@
+ msgid "Auto-merging %s"
+ msgstr ""
+ 
+-#, c-format
+-msgid "Auto-merging %s\n"
+-msgstr ""
+-
+ msgid "Automated merge did not work."
+ msgstr ""
+ 
+@@ -3504,6 +3487,9 @@
+ msgid "Error: Refusing to lose untracked file at %s; writing to %s instead."
+ msgstr ""
+ 
++msgid "Error: Your local changes to the following files would be overwritten by merge"
++msgstr ""
++
+ #, c-format
+ msgid ""
+ "Errors during submodule fetch:\n"
+@@ -3737,8 +3723,8 @@
+ msgid "Fast-forwarding submodule %s to the following commit:"
+ msgstr ""
+ 
+-#, c-format
+-msgid "Fast-forwarding to: %s\n"
++#, sh-format
++msgid "Fast-forwarding to: $pretty_name"
+ msgstr ""
+ 
+ msgid "Fetch from and integrate with another repository or a local branch"
+@@ -3763,14 +3749,6 @@
+ msgid "Fetching submodule %s%s at commit %s\n"
+ msgstr ""
+ 
+-#, c-format
+-msgid "File %s added identically in both branches, but permissions conflict %o->%o."
+-msgstr ""
+-
+-#, c-format
+-msgid "File %s deleted on one branch but had its permissions changed on the other."
+-msgstr ""
+-
+ #, perl-format
+ msgid ""
+ "File '%s' exists but it could also be the range of commits\n"
+@@ -4243,10 +4221,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "Invalid path '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "Invalid path: %s"
+ msgstr ""
+ 
+@@ -4916,6 +4890,9 @@
+ msgid "Pick out and massage parameters"
+ msgstr ""
+ 
++msgid "Please call `--bisect-state` with at least one argument"
++msgstr ""
++
+ msgid "Please commit or stash them."
+ msgstr ""
+ 
+@@ -5500,9 +5477,6 @@
+ msgid "Simple merge did not work, trying automatic merge."
+ msgstr ""
+ 
+-msgid "Simple merge failed, trying Automatic merge."
+-msgstr ""
+-
+ #, c-format
+ msgid "Skipped %s (merged same as existing)"
+ msgstr ""
+@@ -6226,11 +6200,8 @@
+ msgid "Trying really trivial in-index merge...\n"
+ msgstr ""
+ 
+-#, c-format
+-msgid "Trying simple merge with %s\n"
+-msgstr ""
+-
+-msgid "Trying simple merge."
++#, sh-format
++msgid "Trying simple merge with $pretty_name"
+ msgstr ""
+ 
+ msgid "Tweaking diff output"
+@@ -6295,8 +6266,8 @@
+ msgid "Unable to find %s revision in submodule path '%s'"
+ msgstr ""
+ 
+-#, c-format
+-msgid "Unable to find common commit with %s"
++#, sh-format
++msgid "Unable to find common commit with $pretty_name"
+ msgstr ""
+ 
+ #, c-format
+@@ -7939,11 +7910,11 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "bisect run failed: 'git bisect %s' exited with error code %d"
++msgid "bisect run failed: 'git bisect--helper --bisect-state %s' exited with error code %d"
+ msgstr ""
+ 
+ #, c-format
+-msgid "bisect run failed: exit code %d from %s is < 0 or >= 128"
++msgid "bisect run failed: exit code %d from '%s' is < 0 or >= 128"
+ msgstr ""
+ 
+ msgid "bisect run failed: no command provided."
+@@ -8690,6 +8661,9 @@
+ msgid "check out all files in the index"
+ msgstr ""
+ 
++msgid "check whether bad or good terms exist"
++msgstr ""
++
+ #, c-format
+ msgid "checking out '%s' failed. Try 'git bisect start <valid-branch>'."
+ msgstr ""
+@@ -8856,9 +8830,6 @@
+ msgid "commit date for commit %s in commit-graph is %<PRIuMAX> != %<PRIuMAX>"
+ msgstr ""
+ 
+-msgid "commit id for new branch"
+-msgstr ""
+-
+ msgid "commit message"
+ msgstr ""
+ 
+@@ -8981,10 +8952,6 @@
+ msgid "content"
+ msgstr ""
+ 
+-#, c-format
+-msgid "content conflict in %s"
+-msgstr ""
+-
+ msgid "continue"
+ msgstr ""
+ 
+@@ -9209,10 +9176,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "could not create branch '%s' in submodule path '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "could not create directories for %s"
+ msgstr ""
+ 
+@@ -10232,9 +10195,6 @@
+ msgid "destination path '%s' already exists and is not an empty directory."
+ msgstr ""
+ 
+-msgid "detach HEAD and don't create a local branch"
+-msgstr ""
+-
+ msgid "detach HEAD at named commit"
+ msgstr ""
+ 
+@@ -10481,9 +10441,6 @@
+ msgid "do not try <directory>/.git/ if <directory> is no Git directory"
+ msgstr ""
+ 
+-msgid "do not update worktree"
+-msgstr ""
+-
+ msgid "do not use"
+ msgstr ""
+ 
+@@ -11267,10 +11224,6 @@
+ msgid "failed to open '%s': %s"
+ msgstr ""
+ 
+-#, c-format
+-msgid "failed to open file '%s'"
+-msgstr ""
+-
+ #, perl-format
+ msgid "failed to open hunk edit file for reading: %s"
+ msgstr ""
+@@ -11707,6 +11660,9 @@
+ msgid "find the color setting: slot [stdout-is-tty]"
+ msgstr ""
+ 
++msgid "find the next bisection commit"
++msgstr ""
++
+ msgid "find the tag that comes after the commit"
+ msgstr ""
+ 
+@@ -11729,9 +11685,6 @@
+ msgid "follow in-tree symlinks"
+ msgstr ""
+ 
+-msgid "follow only first parent of merge commits"
+-msgstr ""
+-
+ msgid "for conflicts, use a union version"
+ msgstr ""
+ 
+@@ -12048,28 +12001,25 @@
+ msgid "git archive: protocol error"
+ msgstr ""
+ 
+-msgid "git bisect (bad|new) [<rev>]"
++msgid "git bisect--helper --bisect-replay <filename>"
+ msgstr ""
+ 
+-msgid "git bisect (good|bad) [<rev>...]"
++msgid "git bisect--helper --bisect-reset [<commit>]"
+ msgstr ""
+ 
+-msgid "git bisect (good|old) [<rev>...]"
++msgid "git bisect--helper --bisect-run <cmd>..."
+ msgstr ""
+ 
+-msgid "git bisect replay <logfile>"
++msgid "git bisect--helper --bisect-skip [(<rev>|<range>)...]"
+ msgstr ""
+ 
+-msgid "git bisect reset [<commit>]"
++msgid "git bisect--helper --bisect-start [--term-{new,bad}=<term> --term-{old,good}=<term>] [--no-checkout] [--first-parent] [<bad> [<good>...]] [--] [<paths>...]"
+ msgstr ""
+ 
+-msgid "git bisect run <cmd>..."
++msgid "git bisect--helper --bisect-state (bad|new) [<rev>]"
+ msgstr ""
+ 
+-msgid "git bisect skip [(<rev>|<range>)...]"
+-msgstr ""
+-
+-msgid "git bisect start [--term-{new,bad}=<term> --term-{old,good}=<term>]    [--no-checkout] [--first-parent] [<bad> [<good>...]] [--]    [<pathspec>...]"
++msgid "git bisect--helper --bisect-state (good|old) [<rev>...]"
+ msgstr ""
+ 
+ msgid "git blame [<options>] [<rev-opts>] [<rev>] [--] <file>"
+@@ -12420,10 +12370,6 @@
+ msgid "git merge-file [<options>] [-L <name1> [-L <orig> [-L <name2>]]] <file1> <orig-file> <file2>"
+ msgstr ""
+ 
+-#, c-format
+-msgid "git merge-index: unknown internal program %s"
+-msgstr ""
+-
+ msgid "git merge-tree [--trivial-merge] <base-tree> <branch1> <branch2>"
+ msgstr ""
+ 
+@@ -12828,7 +12774,7 @@
+ msgid "git submodule sync [--quiet] [--recursive] [<path>]"
+ msgstr ""
+ 
+-msgid "git submodule--helper clone [--prefix=<path>] [--quiet] [--reference <repository>] [--name <name>] [--depth <depth>] [--single-branch] [--filter <filter-spec>] [--branch <branch> --branch-oid <oid>]--url <url> --path <path>"
++msgid "git submodule--helper clone [--prefix=<path>] [--quiet] [--reference <repository>] [--name <name>] [--depth <depth>] [--single-branch] [--filter <filter-spec>] --url <url> --path <path>"
+ msgstr ""
+ 
+ msgid "git submodule--helper config --unset <name>"
+@@ -12994,6 +12940,10 @@
+ msgid "got %s (%d) %s"
+ msgstr ""
+ 
++#, c-format
++msgid "got bad config --config=%s"
++msgstr ""
++
+ msgid "gpg failed to sign the data"
+ msgstr ""
+ 
+@@ -13515,14 +13465,6 @@
+ msgid "invalid %s"
+ msgstr ""
+ 
+-#, c-format
+-msgid "invalid '%s' mode: %o"
+-msgstr ""
+-
+-#, c-format
+-msgid "invalid '%s' mode: expected nothing, got '%c'"
+-msgstr ""
+-
+ msgid "invalid '..' path segment"
+ msgstr ""
+ 
+@@ -13551,6 +13493,12 @@
+ msgid "invalid XOR offset in bitmap pack index"
+ msgstr ""
+ 
++#, c-format
++msgid ""
++"invalid argument %s for 'git bisect terms'.\n"
++"Supported options are: --term-good|--term-old and --term-bad|--term-new."
++msgstr ""
++
+ #, perl-format
+ msgid "invalid argument %s, expecting --"
+ msgstr ""
+@@ -14040,6 +13988,9 @@
+ msgid "list tag names"
+ msgstr ""
+ 
++msgid "list the bisection steps so far"
++msgstr ""
++
+ msgid "list untracked files in columns"
+ msgstr ""
+ 
+@@ -14231,6 +14182,9 @@
+ msgid "mark the series as Nth re-roll"
+ msgstr ""
+ 
++msgid "mark the state of ref (or refs)"
++msgstr ""
++
+ #, c-format
+ msgid "marked counting and '%s' cannot be used together"
+ msgstr ""
+@@ -14283,9 +14237,6 @@
+ msgid "merge commit message (for a non-fast-forward merge)"
+ msgstr ""
+ 
+-msgid "merge program failed"
+-msgstr ""
+-
+ msgid "merge returned no commit"
+ msgstr ""
+ 
+@@ -14594,9 +14545,6 @@
+ msgid "name consists only of disallowed characters: %s"
+ msgstr ""
+ 
+-msgid "name of branch to be created"
+-msgstr ""
+-
+ msgid "name of the new submodule"
+ msgstr ""
+ 
+@@ -14609,9 +14557,6 @@
+ msgid "need a HEAD to fixup"
+ msgstr ""
+ 
+-msgid "need a command"
+-msgstr ""
+-
+ msgid "need a repository to verify a bundle"
+ msgstr ""
+ 
+@@ -14621,9 +14566,6 @@
+ msgid "need a working directory"
+ msgstr ""
+ 
+-msgid "need at least one argument"
+-msgstr ""
+-
+ msgid "need exactly one range"
+ msgstr ""
+ 
+@@ -14685,10 +14627,6 @@
+ msgid "newline is forbidden in git:// hosts and repo paths"
+ msgstr ""
+ 
+-#, c-format
+-msgid "no '%s' object id given, but a mode was still given."
+-msgstr ""
+-
+ msgid "no <cmd> given for --extcmd=<cmd>"
+ msgstr ""
+ 
+@@ -14752,6 +14690,9 @@
+ msgid "no libc information available\n"
+ msgstr ""
+ 
++msgid "no log for BISECT_WRITE"
++msgstr ""
++
+ msgid "no logfile given"
+ msgstr ""
+ 
+@@ -15226,9 +15167,6 @@
+ msgid "object type mismatch at %s"
+ msgstr ""
+ 
+-msgid "object-id"
+-msgstr ""
+-
+ msgid "object-info: expected flush after arguments"
+ msgstr ""
+ 
+@@ -15875,10 +15813,6 @@
+ msgid "perform multiple merges, one per line of input"
+ msgstr ""
+ 
+-#, c-format
+-msgid "permission conflict: %o->%o,%o in %s"
+-msgstr ""
+-
+ msgid "permissions"
+ msgstr ""
+ 
+@@ -16068,6 +16002,9 @@
+ msgid "print only tags that don't contain the commit"
+ msgstr ""
+ 
++msgid "print out the bisect terms"
++msgstr ""
++
+ msgid "print patches to standard out"
+ msgstr ""
+ 
+@@ -16734,6 +16671,9 @@
+ msgid "replacement %s not found for %s"
+ msgstr ""
+ 
++msgid "replay the bisection process from the given file"
++msgstr ""
++
+ msgid "repo"
+ msgstr ""
+ 
+@@ -16814,21 +16754,12 @@
+ msgid "request atomic transaction on remote side"
+ msgstr ""
+ 
+-msgid "require 0 argument"
+-msgstr ""
+-
+ msgid "require old value of ref to be at this value"
+ msgstr ""
+ 
+ msgid "require remote updates to be integrated locally"
+ msgstr ""
+ 
+-msgid "requires 0 argument"
+-msgstr ""
+-
+-msgid "requires either no argument or a commit"
+-msgstr ""
+-
+ msgid "reroll-count"
+ msgstr ""
+ 
+@@ -16844,6 +16775,9 @@
+ msgid "reset only HEAD"
+ msgstr ""
+ 
++msgid "reset the bisection state"
++msgstr ""
++
+ msgid "resolve notes conflicts using the given strategy (manual/ours/theirs/union/cat_sort_uniq)"
+ msgstr ""
+ 
+@@ -17526,12 +17460,6 @@
+ msgid "show tag list in columns"
+ msgstr ""
+ 
+-msgid "show term for bad/new"
+-msgstr ""
+-
+-msgid "show term for good/old"
+-msgstr ""
+-
+ msgid "show the HEAD reference, even if it would be filtered out"
+ msgstr ""
+ 
+@@ -17628,6 +17556,9 @@
+ msgid "skip refreshing the index after reset"
+ msgstr ""
+ 
++msgid "skip some commits for checkout"
++msgstr ""
++
+ msgid "skip some sanity checks on the given paths that might give false positives"
+ msgstr ""
+ 
+@@ -17798,6 +17729,9 @@
+ msgid "start numbering patches at <n> instead of 1"
+ msgstr ""
+ 
++msgid "start the bisect session"
++msgstr ""
++
+ msgid "start walk at all refs"
+ msgstr ""
+ 
+@@ -18065,9 +17999,6 @@
+ msgid "temporary files exist in '%s'."
+ msgstr ""
+ 
+-msgid "term"
+-msgstr ""
+-
+ msgid "terminate entries with NUL"
+ msgstr ""
+ 
+@@ -18086,9 +18017,6 @@
+ msgid "terminating chunk id appears earlier than expected"
+ msgstr ""
+ 
+-msgid "terms: requires 0 or 1 argument"
+-msgstr ""
+-
+ msgid "test if the filesystem supports untracked cache"
+ msgstr ""
+ 
+@@ -19336,6 +19264,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unrecognized option: '%s'"
++msgstr ""
++
++#, c-format
+ msgid "unrecognized pattern: '%s'"
+ msgstr ""
+ 
+@@ -19402,10 +19334,6 @@
+ msgid "unsupported version '%d' for bitmap index file"
+ msgstr ""
+ 
+-#, c-format
+-msgid "untracked %s is overwritten by the merge."
+-msgstr ""
+-
+ msgid "untracked cache is disabled on this system or location"
+ msgstr ""
+ 
+@@ -19524,6 +19452,9 @@
+ msgid "use .gitattributes only from the index"
+ msgstr ""
+ 
++msgid "use <cmd>... to automatically bisect"
++msgstr ""
++
+ msgid "use <file>'s contents as the final image"
+ msgstr ""
+ 
+@@ -19752,12 +19683,6 @@
+ msgid "use this format"
+ msgstr ""
+ 
+-msgid "use this term instead of 'bad'"
+-msgstr ""
+-
+-msgid "use this term instead of 'good'"
+-msgstr ""
+-
+ msgid "use threads when searching for best delta matches"
+ msgstr ""
+ 
+@@ -19848,6 +19773,9 @@
+ msgid "virtual repository '%s' is incompatible with fsmonitor"
+ msgstr ""
+ 
++msgid "visualize the bisection"
++msgstr ""
++
+ #, c-format
+ msgid "wait for hEvent failed for '%s'"
+ msgstr ""
+@@ -19953,6 +19881,9 @@
+ msgid "with -a, repack unreachable objects"
+ msgstr ""
+ 
++msgid "won't bisect on cg-seek'ed tree"
++msgstr ""
++
+ msgid "work on the current change (see also: git help everyday)"
+ msgstr ""
+ 
