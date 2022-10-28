@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2022-10-27 23:57+0000\n"
+"POT-Creation-Date: 2022-10-28 19:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -1783,7 +1783,7 @@ msgstr ""
 #: builtin/log.c:1757 builtin/log.c:2190 builtin/log.c:2486 builtin/merge.c:441
 #: builtin/pack-objects.c:3408 builtin/pack-objects.c:3566
 #: builtin/pack-objects.c:4049 builtin/pack-objects.c:4064
-#: builtin/shortlog.c:267 bundle.c:233 midx.c:1114 pack-bitmap.c:1107
+#: builtin/shortlog.c:267 bundle.c:234 midx.c:1114 pack-bitmap.c:1107
 #: pack-bitmap.c:2000 ref-filter.c:2373 remote.c:2189 sequencer.c:2412
 #: sequencer.c:5167 submodule.c:911
 msgid "revision walk setup failed"
@@ -3710,7 +3710,7 @@ msgstr ""
 msgid "do not show progress meter"
 msgstr ""
 
-#: builtin/bundle.c:77 builtin/bundle.c:178 builtin/pack-objects.c:4183
+#: builtin/bundle.c:77 builtin/bundle.c:179 builtin/pack-objects.c:4183
 msgid "show progress meter"
 msgstr ""
 
@@ -3734,16 +3734,16 @@ msgstr ""
 msgid "do not show bundle details"
 msgstr ""
 
-#: builtin/bundle.c:137
+#: builtin/bundle.c:138
 #, c-format
 msgid "%s is okay\n"
 msgstr ""
 
-#: builtin/bundle.c:193
+#: builtin/bundle.c:194
 msgid "Need a repository to unbundle."
 msgstr ""
 
-#: builtin/bundle.c:196
+#: builtin/bundle.c:197
 msgid "Unbundling objects"
 msgstr ""
 
@@ -8872,7 +8872,7 @@ msgid ""
 "<file>"
 msgstr ""
 
-#: builtin/log.c:273 builtin/log.c:2075 builtin/shortlog.c:434 bundle.c:537
+#: builtin/log.c:273 builtin/log.c:2075 builtin/shortlog.c:434 bundle.c:540
 #, c-format
 msgid "unrecognized argument: %s"
 msgstr ""
@@ -9274,7 +9274,7 @@ msgstr ""
 msgid "git ls-files [<options>] [<file>...]"
 msgstr ""
 
-#: builtin/ls-files.c:703 builtin/merge-tree.c:499
+#: builtin/ls-files.c:703 builtin/merge-tree.c:505
 msgid "separate paths with the NUL character"
 msgstr ""
 
@@ -9666,48 +9666,62 @@ msgstr ""
 msgid "Merging %s with %s\n"
 msgstr ""
 
-#: builtin/merge-tree.c:419 builtin/merge-tree.c:424 builtin/merge.c:1230
+#: builtin/merge-tree.c:421 builtin/merge-tree.c:426 builtin/merge.c:1230
 msgid "not something we can merge"
 msgstr ""
 
-#: builtin/merge-tree.c:439 builtin/merge.c:1553
+#: builtin/merge-tree.c:441 builtin/merge.c:1553
 msgid "refusing to merge unrelated histories"
 msgstr ""
 
-#: builtin/merge-tree.c:444
+#: builtin/merge-tree.c:446
 msgid "failure to merge"
 msgstr ""
 
-#: builtin/merge-tree.c:486
+#: builtin/merge-tree.c:492
 msgid "git merge-tree [--write-tree] [<options>] <branch1> <branch2>"
 msgstr ""
 
-#: builtin/merge-tree.c:487
+#: builtin/merge-tree.c:493
 msgid "git merge-tree [--trivial-merge] <base-tree> <branch1> <branch2>"
 msgstr ""
 
-#: builtin/merge-tree.c:492
+#: builtin/merge-tree.c:498
 msgid "do a real merge instead of a trivial merge"
 msgstr ""
 
-#: builtin/merge-tree.c:495
+#: builtin/merge-tree.c:501
 msgid "do a trivial merge only"
 msgstr ""
 
-#: builtin/merge-tree.c:497
+#: builtin/merge-tree.c:503
 msgid "also show informational/conflict messages"
 msgstr ""
 
-#: builtin/merge-tree.c:502
+#: builtin/merge-tree.c:508
 msgid "list filenames without modes/oids/stages"
 msgstr ""
 
-#: builtin/merge-tree.c:506 builtin/merge.c:300 builtin/pull.c:185
+#: builtin/merge-tree.c:512 builtin/merge.c:300 builtin/pull.c:185
 msgid "allow merging unrelated histories"
 msgstr ""
 
-#: builtin/merge-tree.c:541
+#: builtin/merge-tree.c:516
+msgid "perform multiple merges, one per line of input"
+msgstr ""
+
+#: builtin/merge-tree.c:531 builtin/merge-tree.c:577
 msgid "--trivial-merge is incompatible with all other options"
+msgstr ""
+
+#: builtin/merge-tree.c:539 builtin/notes.c:307
+#, c-format
+msgid "malformed input line: '%s'."
+msgstr ""
+
+#: builtin/merge-tree.c:543
+#, c-format
+msgid "merging cannot continue; got unclean result of %d"
 msgstr ""
 
 #: builtin/merge.c:59
@@ -10468,11 +10482,6 @@ msgstr ""
 #: builtin/notes.c:266
 #, c-format
 msgid "cannot read note data from non-blob object '%s'."
-msgstr ""
-
-#: builtin/notes.c:307
-#, c-format
-msgid "malformed input line: '%s'."
 msgstr ""
 
 #: builtin/notes.c:322
@@ -15935,27 +15944,49 @@ msgstr ""
 msgid "core.fsyncMethod = batch is unsupported on this platform"
 msgstr ""
 
-#: bundle-uri.c:17
+#: bundle-uri.c:198
+#, c-format
+msgid "bundle list at '%s' has no mode"
+msgstr ""
+
+#: bundle-uri.c:215
 msgid "failed to create temporary file"
 msgstr ""
 
-#: bundle-uri.c:65
+#: bundle-uri.c:264
 msgid "insufficient capabilities"
 msgstr ""
 
-#: bundle-uri.c:150
+#: bundle-uri.c:423
+#, c-format
+msgid "unrecognized bundle mode from URI '%s'"
+msgstr ""
+
+#: bundle-uri.c:459
+#, c-format
+msgid "exceeded bundle URI recursion limit (%d)"
+msgstr ""
+
+#: bundle-uri.c:471
 #, c-format
 msgid "failed to download bundle from URI '%s'"
 msgstr ""
 
-#: bundle-uri.c:155
+#: bundle-uri.c:479
 #, c-format
-msgid "file at URI '%s' is not a bundle"
+msgid "file at URI '%s' is not a bundle or bundle list"
 msgstr ""
 
-#: bundle-uri.c:160
-#, c-format
-msgid "failed to unbundle bundle from URI '%s'"
+#: bundle-uri.c:576
+msgid "bundle-uri: got an empty line"
+msgstr ""
+
+#: bundle-uri.c:581
+msgid "bundle-uri: line is not of the form 'key=value'"
+msgstr ""
+
+#: bundle-uri.c:583
+msgid "bundle-uri: line has empty key or value"
 msgstr ""
 
 #: bundle.c:45
@@ -15986,61 +16017,61 @@ msgstr ""
 msgid "need a repository to verify a bundle"
 msgstr ""
 
-#: bundle.c:266
+#: bundle.c:261
 #, c-format
 msgid "The bundle contains this ref:"
 msgid_plural "The bundle contains these %<PRIuMAX> refs:"
 msgstr[0] ""
 msgstr[1] ""
 
-#: bundle.c:274
+#: bundle.c:269
 msgid "The bundle records a complete history."
 msgstr ""
 
-#: bundle.c:276
+#: bundle.c:271
 #, c-format
 msgid "The bundle requires this ref:"
 msgid_plural "The bundle requires these %<PRIuMAX> refs:"
 msgstr[0] ""
 msgstr[1] ""
 
-#: bundle.c:354
+#: bundle.c:357
 msgid "unable to dup bundle descriptor"
 msgstr ""
 
-#: bundle.c:361
+#: bundle.c:364
 msgid "Could not spawn pack-objects"
 msgstr ""
 
-#: bundle.c:372
+#: bundle.c:375
 msgid "pack-objects died"
 msgstr ""
 
-#: bundle.c:421
+#: bundle.c:424
 #, c-format
 msgid "ref '%s' is excluded by the rev-list options"
 msgstr ""
 
-#: bundle.c:552
+#: bundle.c:555
 #, c-format
 msgid "unsupported bundle version %d"
 msgstr ""
 
-#: bundle.c:554
+#: bundle.c:557
 #, c-format
 msgid "cannot write bundle version %d with algorithm %s"
 msgstr ""
 
-#: bundle.c:604
+#: bundle.c:607
 msgid "Refusing to create empty bundle."
 msgstr ""
 
-#: bundle.c:614
+#: bundle.c:617
 #, c-format
 msgid "cannot create '%s'"
 msgstr ""
 
-#: bundle.c:643
+#: bundle.c:647
 msgid "index-pack died"
 msgstr ""
 
