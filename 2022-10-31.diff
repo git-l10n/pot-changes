@@ -1,0 +1,200 @@
+
+
+#################### Mon, 31 Oct 2022 05:59:44 +0000 ####################
+
+--- po/git.pot.old	2022-10-31 05:59:44.581981548 +0000
++++ po/git.pot.new	2022-10-31 05:59:44.701982074 +0000
+@@ -3185,7 +3185,7 @@
+ msgid "Could not reset index file to revision '%s'."
+ msgstr ""
+ 
+-msgid "Could not resolve HEAD to a revision"
++msgid "Could not resolve HEAD to a commit"
+ msgstr ""
+ 
+ #, c-format
+@@ -8044,6 +8044,19 @@
+ msgid "build a temporary index based on embedded index information"
+ msgstr ""
+ 
++#, c-format
++msgid "bundle list at '%s' has no mode"
++msgstr ""
++
++msgid "bundle-uri: got an empty line"
++msgstr ""
++
++msgid "bundle-uri: line has empty key or value"
++msgstr ""
++
++msgid "bundle-uri: line is not of the form 'key=value'"
++msgstr ""
++
+ msgid "bypass post-rewrite hook"
+ msgstr ""
+ 
+@@ -9322,10 +9335,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "could not get 'onto': '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "could not get a repository handle for gitdir '%s'"
+ msgstr ""
+ 
+@@ -10491,6 +10500,9 @@
+ msgid "don't show filenames"
+ msgstr ""
+ 
++msgid "don't strip whitespace from the patch"
++msgstr ""
++
+ msgid "don't strip/add [PATCH]"
+ msgstr ""
+ 
+@@ -10767,6 +10779,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "exceeded bundle URI recursion limit (%d)"
++msgstr ""
++
++#, c-format
+ msgid ""
+ "exceeded maximum include depth (%d) while including\n"
+ "\t%s\n"
+@@ -11402,10 +11418,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "failed to unbundle bundle from URI '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "failed to unlink '%s'"
+ msgstr ""
+ 
+@@ -11607,7 +11619,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "file at URI '%s' is not a bundle"
++msgid "file at URI '%s' is not a bundle or bundle list"
+ msgstr ""
+ 
+ msgid "file to read from"
+@@ -12462,6 +12474,9 @@
+ msgid "git pack-refs [--all] [--no-prune]"
+ msgstr ""
+ 
++msgid "git patch-id [--stable | --unstable | --verbatim]"
++msgstr ""
++
+ msgid "git prune [-n] [-v] [--progress] [--expire <time>] [--] [<head>...]"
+ msgstr ""
+ 
+@@ -13641,6 +13656,10 @@
+ msgid "invalid object: %s"
+ msgstr ""
+ 
++#, c-format
++msgid "invalid onto: '%s'"
++msgstr ""
++
+ msgid "invalid option combination, ignoring --threads"
+ msgstr ""
+ 
+@@ -14230,6 +14249,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "merging cannot continue; got unclean result of %d"
++msgstr ""
++
++#, c-format
+ msgid "merging of trees %s and %s failed"
+ msgstr ""
+ 
+@@ -14328,10 +14351,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "missing required file: %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "missing value for '%s'"
+ msgstr ""
+ 
+@@ -15516,6 +15535,10 @@
+ msgid "pack version %<PRIu32> unsupported"
+ msgstr ""
+ 
++#, c-format
++msgid "pack-objects did not write a '%s' file for pack %s-%s"
++msgstr ""
++
+ msgid "pack-objects died"
+ msgstr ""
+ 
+@@ -15779,6 +15802,9 @@
+ msgid "perform a merge in addition to a read"
+ msgstr ""
+ 
++msgid "perform multiple merges, one per line of input"
++msgstr ""
++
+ msgid "permissions"
+ msgstr ""
+ 
+@@ -16589,6 +16615,10 @@
+ msgid "renaming '%s' failed"
+ msgstr ""
+ 
++#, c-format
++msgid "renaming pack to '%s' failed"
++msgstr ""
++
+ msgid "renormalize EOL of tracked files (implies -u)"
+ msgstr ""
+ 
+@@ -19198,6 +19228,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unrecognized bundle mode from URI '%s'"
++msgstr ""
++
++#, c-format
+ msgid "unrecognized color: %%(color:%s)"
+ msgstr ""
+ 
+@@ -19629,6 +19663,12 @@
+ msgid "use the specified diff tool"
+ msgstr ""
+ 
++msgid "use the stable patch-id algorithm"
++msgstr ""
++
++msgid "use the unstable patch-id algorithm"
++msgstr ""
++
+ msgid "use thin pack"
+ msgstr ""
+ 
+@@ -19648,10 +19688,11 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "using '%s' as range-diff origin of current series"
++msgid "using %s with stdin is not supported"
+ msgstr ""
+ 
+-msgid "using --group=trailer with stdin is not supported"
++#, c-format
++msgid "using '%s' as range-diff origin of current series"
+ msgstr ""
+ 
+ msgid "using multiple --group options with stdin is not supported"
