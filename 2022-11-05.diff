@@ -1,0 +1,198 @@
+
+
+#################### Sat, 05 Nov 2022 01:21:02 +0000 ####################
+
+--- po/git.pot.old	2022-11-05 01:21:02.702847914 +0000
++++ po/git.pot.new	2022-11-05 01:21:02.826849982 +0000
+@@ -1203,6 +1203,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "'%s' and '%s' cannot be used together"
++msgstr ""
++
++#, c-format
+ msgid "'%s' and pathspec arguments cannot be used together"
+ msgstr ""
+ 
+@@ -1810,13 +1814,13 @@
+ msgid "--merge-base does not work with ranges"
+ msgstr ""
+ 
+-msgid "--merge-base only works with commits"
++msgid "--merge-base is incompatible with --stdin"
+ msgstr ""
+ 
+-msgid "--merge-base only works with two commits"
++msgid "--merge-base only works with commits"
+ msgstr ""
+ 
+-msgid "--merge-base should be passed into the input line"
++msgid "--merge-base only works with two commits"
+ msgstr ""
+ 
+ msgid "--mirror can't be combined with refspecs"
+@@ -4263,7 +4267,7 @@
+ #, c-format
+ msgid ""
+ "It took %.2f seconds to enumerate untracked files,\n"
+-"but this is currently being cached, with fsmonitor %s."
++"but this is currently being cached."
+ msgstr ""
+ 
+ #, c-format
+@@ -5360,12 +5364,10 @@
+ msgid "See 'git help <command>' to read about a specific subcommand"
+ msgstr ""
+ 
+-msgid "See git-pull(1) for details."
++msgid "See 'git help status' for information on how to improve this."
+ msgstr ""
+ 
+-msgid ""
+-"See https://git-scm.com/docs/git-status#_untracked_files_and_status_speed\n"
+-"for configuration options that may improve that time."
++msgid "See git-pull(1) for details."
+ msgstr ""
+ 
+ msgid "Select items to delete"
+@@ -8675,9 +8677,6 @@
+ msgid "check out all files in the index"
+ msgstr ""
+ 
+-msgid "check whether bad or good terms exist"
+-msgstr ""
+-
+ #, c-format
+ msgid "checking out '%s' failed. Try 'git bisect start <valid-branch>'."
+ msgstr ""
+@@ -11700,9 +11699,6 @@
+ msgid "find the color setting: slot [stdout-is-tty]"
+ msgstr ""
+ 
+-msgid "find the next bisection commit"
+-msgstr ""
+-
+ msgid "find the tag that comes after the commit"
+ msgstr ""
+ 
+@@ -12882,7 +12878,7 @@
+ 
+ msgid ""
+ "git worktree add [-f] [--detach] [--checkout] [--lock [--reason <string>]]\n"
+-"                 [-b <new-branch>] <path> [<commit-ish>]"
++"                 [[-b | -B | --orphan] <new-branch>] <path> [<commit-ish>]"
+ msgstr ""
+ 
+ msgid "git worktree list [-v | --porcelain [-z]]"
+@@ -14021,9 +14017,6 @@
+ msgid "list tag names"
+ msgstr ""
+ 
+-msgid "list the bisection steps so far"
+-msgstr ""
+-
+ msgid "list untracked files in columns"
+ msgstr ""
+ 
+@@ -14215,9 +14208,6 @@
+ msgid "mark the series as Nth re-roll"
+ msgstr ""
+ 
+-msgid "mark the state of ref (or refs)"
+-msgstr ""
+-
+ #, c-format
+ msgid "marked counting and '%s' cannot be used together"
+ msgstr ""
+@@ -14726,9 +14716,6 @@
+ msgid "no libc information available\n"
+ msgstr ""
+ 
+-msgid "no log for BISECT_WRITE"
+-msgstr ""
+-
+ msgid "no logfile given"
+ msgstr ""
+ 
+@@ -16038,9 +16025,6 @@
+ msgid "print only tags that don't contain the commit"
+ msgstr ""
+ 
+-msgid "print out the bisect terms"
+-msgstr ""
+-
+ msgid "print patches to standard out"
+ msgstr ""
+ 
+@@ -16708,9 +16692,6 @@
+ msgid "replacement %s not found for %s"
+ msgstr ""
+ 
+-msgid "replay the bisection process from the given file"
+-msgstr ""
+-
+ msgid "repo"
+ msgstr ""
+ 
+@@ -16812,9 +16793,6 @@
+ msgid "reset only HEAD"
+ msgstr ""
+ 
+-msgid "reset the bisection state"
+-msgstr ""
+-
+ msgid "resolve notes conflicts using the given strategy (manual/ours/theirs/union/cat_sort_uniq)"
+ msgstr ""
+ 
+@@ -17593,9 +17571,6 @@
+ msgid "skip refreshing the index after reset"
+ msgstr ""
+ 
+-msgid "skip some commits for checkout"
+-msgstr ""
+-
+ msgid "skip some sanity checks on the given paths that might give false positives"
+ msgstr ""
+ 
+@@ -17769,9 +17744,6 @@
+ msgid "start numbering patches at <n> instead of 1"
+ msgstr ""
+ 
+-msgid "start the bisect session"
+-msgstr ""
+-
+ msgid "start walk at all refs"
+ msgstr ""
+ 
+@@ -19368,6 +19340,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unsupported section for --visible-refs: %s"
++msgstr ""
++
++#, c-format
+ msgid "unsupported version '%d' for bitmap index file"
+ msgstr ""
+ 
+@@ -19489,9 +19465,6 @@
+ msgid "use .gitattributes only from the index"
+ msgstr ""
+ 
+-msgid "use <cmd>... to automatically bisect"
+-msgstr ""
+-
+ msgid "use <file>'s contents as the final image"
+ msgstr ""
+ 
+@@ -19810,9 +19783,6 @@
+ msgid "virtual repository '%s' is incompatible with fsmonitor"
+ msgstr ""
+ 
+-msgid "visualize the bisection"
+-msgstr ""
+-
+ #, c-format
+ msgid "wait for hEvent failed for '%s'"
+ msgstr ""
