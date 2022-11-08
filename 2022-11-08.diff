@@ -1,0 +1,232 @@
+
+
+#################### Tue, 08 Nov 2022 03:49:48 +0000 ####################
+
+--- po/git.pot.old	2022-11-08 03:49:48.618356486 +0000
++++ po/git.pot.new	2022-11-08 03:49:48.714356829 +0000
+@@ -787,6 +787,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "%s file signature %X does not match signature %X"
++msgstr ""
++
++#, c-format
+ msgid "%s has multiple values"
+ msgstr ""
+ 
+@@ -1283,6 +1287,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "'%s' failed: no command provided."
++msgstr ""
++
++#, c-format
+ msgid "'%s' file does not contain absolute path to the working tree location"
+ msgstr ""
+ 
+@@ -1419,10 +1427,22 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "'%s' requires 0 arguments"
++msgstr ""
++
++#, c-format
++msgid "'%s' requires 0 or 1 argument"
++msgstr ""
++
++#, c-format
+ msgid "'%s' requires a batch mode"
+ msgstr ""
+ 
+ #, c-format
++msgid "'%s' requires either no argument or a commit"
++msgstr ""
++
++#, c-format
+ msgid "'%s' was deleted by the applypatch-msg hook"
+ msgstr ""
+ 
+@@ -1710,18 +1730,6 @@
+ msgid "--author '%s' is not 'Name <email>' and matches no existing author"
+ msgstr ""
+ 
+-msgid "--bisect-log requires 0 arguments"
+-msgstr ""
+-
+-msgid "--bisect-next requires 0 arguments"
+-msgstr ""
+-
+-msgid "--bisect-reset requires either no argument or a commit"
+-msgstr ""
+-
+-msgid "--bisect-terms requires 0 or 1 argument"
+-msgstr ""
+-
+ msgid "--blob can only be used inside a git repository"
+ msgstr ""
+ 
+@@ -1768,6 +1776,9 @@
+ msgid "--dump-aliases incompatible with other options\n"
+ msgstr ""
+ 
++msgid "--exclude-hidden= passed more than once"
++msgstr ""
++
+ msgid "--filter can only be used with the remote configured in extensions.partialclone"
+ msgstr ""
+ 
+@@ -2525,6 +2536,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Both original and appended notes are empty in %s, do nothing\n"
++msgstr ""
++
++#, c-format
+ msgid "Branch %s is being bisected at %s"
+ msgstr ""
+ 
+@@ -7908,7 +7923,6 @@
+ msgid "binary patch to '%s' creates incorrect result (expecting %s, got %s)"
+ msgstr ""
+ 
+-#, c-format
+ msgid "bisect found first bad commit"
+ msgstr ""
+ 
+@@ -7916,7 +7930,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "bisect run failed: 'git bisect--helper --bisect-state %s' exited with error code %d"
++msgid "bisect run failed: 'bisect-state %s' exited with error code %d"
+ msgstr ""
+ 
+ #, c-format
+@@ -7926,7 +7940,6 @@
+ msgid "bisect run failed: no command provided."
+ msgstr ""
+ 
+-#, c-format
+ msgid "bisect run success"
+ msgstr ""
+ 
+@@ -9698,6 +9711,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "could not remove stale scalar.repo '%s'"
++msgstr ""
++
++#, c-format
+ msgid "could not rename '%s' to '%s'"
+ msgstr ""
+ 
+@@ -11799,6 +11816,10 @@
+ msgid "format to use for the output"
+ msgstr ""
+ 
++#, c-format
++msgid "format version %u does not match expected file version %u"
++msgstr ""
++
+ msgid "format.headers without value"
+ msgstr ""
+ 
+@@ -12037,25 +12058,22 @@
+ msgid "git archive: protocol error"
+ msgstr ""
+ 
+-msgid "git bisect--helper --bisect-replay <filename>"
++msgid "git bisect (good|bad) [<rev>...]"
+ msgstr ""
+ 
+-msgid "git bisect--helper --bisect-reset [<commit>]"
++msgid "git bisect replay <logfile>"
+ msgstr ""
+ 
+-msgid "git bisect--helper --bisect-run <cmd>..."
++msgid "git bisect reset [<commit>]"
+ msgstr ""
+ 
+-msgid "git bisect--helper --bisect-skip [(<rev>|<range>)...]"
++msgid "git bisect run <cmd>..."
+ msgstr ""
+ 
+-msgid "git bisect--helper --bisect-start [--term-{new,bad}=<term> --term-{old,good}=<term>] [--no-checkout] [--first-parent] [<bad> [<good>...]] [--] [<paths>...]"
++msgid "git bisect skip [(<rev>|<range>)...]"
+ msgstr ""
+ 
+-msgid "git bisect--helper --bisect-state (bad|new) [<rev>]"
+-msgstr ""
+-
+-msgid "git bisect--helper --bisect-state (good|old) [<rev>...]"
++msgid "git bisect start [--term-{new,bad}=<term> --term-{old,good}=<term>]    [--no-checkout] [--first-parent] [<bad> [<good>...]] [--]    [<pathspec>...]"
+ msgstr ""
+ 
+ msgid "git blame [<options>] [<rev-opts>] [<rev>] [--] <file>"
+@@ -13025,6 +13043,10 @@
+ msgid "hash mismatch for %s (expected %s)"
+ msgstr ""
+ 
++#, c-format
++msgid "hash version %X does not match expected hash version %X"
++msgstr ""
++
+ msgid "hash-algorithm"
+ msgstr ""
+ 
+@@ -13437,6 +13459,9 @@
+ msgid "insane in-reply-to: %s"
+ msgstr ""
+ 
++msgid "insert paragraph break before appending to an existing note"
++msgstr ""
++
+ msgid "instead of applying the patch, output a summary for the input"
+ msgstr ""
+ 
+@@ -14583,6 +14608,9 @@
+ msgid "need a HEAD to fixup"
+ msgstr ""
+ 
++msgid "need a command"
++msgstr ""
++
+ msgid "need a repository to verify a bundle"
+ msgstr ""
+ 
+@@ -16464,6 +16492,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "refusing to create '%s' file because '%s' is not set"
++msgstr ""
++
++#, c-format
+ msgid "refusing to create/use '%s' in another submodule's git dir"
+ msgstr ""
+ 
+@@ -16628,6 +16660,10 @@
+ msgid "remove whole directories"
+ msgstr ""
+ 
++#, c-format
++msgid "removing stale scalar.repo '%s'"
++msgstr ""
++
+ msgid "rename"
+ msgstr ""
+ 
+@@ -19340,7 +19376,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unsupported section for --visible-refs: %s"
++msgid "unsupported section for hidden refs: %s"
+ msgstr ""
+ 
+ #, c-format
