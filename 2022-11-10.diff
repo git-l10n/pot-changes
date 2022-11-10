@@ -1,0 +1,107 @@
+
+
+#################### Thu, 10 Nov 2022 04:25:22 +0000 ####################
+
+--- po/git.pot.old	2022-11-10 04:25:22.579758624 +0000
++++ po/git.pot.new	2022-11-10 04:25:22.703758435 +0000
+@@ -759,10 +759,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "%s doesn't support --super-prefix"
+-msgstr ""
+-
+-#, c-format
+ msgid "%s exists and is not a directory"
+ msgstr ""
+ 
+@@ -4083,7 +4079,7 @@
+ "If you meant to check out a remote tracking branch on, e.g. 'origin',\n"
+ "you can do so by fully qualifying the name with the --track option:\n"
+ "\n"
+-"    git checkout --track origin/<name>\n"
++"    git switch --track origin/<name>\n"
+ "\n"
+ "If you'd like to always have checkouts of an ambiguous <name> prefer\n"
+ "one remote, e.g. the 'origin' remote, consider setting\n"
+@@ -4451,10 +4447,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid ""
+-"Migrating git directory of '%s%s' from\n"
+-"'%s' to\n"
+-"'%s'\n"
++msgid "Migrating git directory of '%s%s' from '%s' to '%s'\n"
+ msgstr ""
+ 
+ #, c-format
+@@ -8756,6 +8749,9 @@
+ msgid "clear skip-worktree bit"
+ msgstr ""
+ 
++msgid "clear the cache tree before each iteration"
++msgstr ""
++
+ msgid "clone --recursive is not compatible with both --reference and --reference-if-able"
+ msgstr ""
+ 
+@@ -11995,8 +11991,7 @@
+ "           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n"
+ "           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n"
+ "           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n"
+-"           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n"
+-"           <command> [<args>]"
++"           [--config-env=<name>=<envvar>] <command> [<args>]"
+ msgstr ""
+ 
+ msgid "git add [<options>] [--] <pathspec>..."
+@@ -14788,10 +14783,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "no prefix given for --super-prefix\n"
+-msgstr ""
+-
+-#, c-format
+ msgid "no reflog for '%s'"
+ msgstr ""
+ 
+@@ -15120,6 +15111,9 @@
+ msgid "number of bytes"
+ msgstr ""
+ 
++msgid "number of entries in the cache tree to invalidate (default 0)"
++msgstr ""
++
+ msgid "number of requests per thread"
+ msgstr ""
+ 
+@@ -15923,6 +15917,9 @@
+ msgid "prefix"
+ msgstr ""
+ 
++msgid "prefixed path to initial superproject"
++msgstr ""
++
+ msgid "premature end of input"
+ msgstr ""
+ 
+@@ -18095,6 +18092,9 @@
+ msgid "test-helper simple-ipc stop-daemon  [<name>] [<max-wait>]"
+ msgstr ""
+ 
++msgid "test-tool cache-tree <options> (control|prime|update)"
++msgstr ""
++
+ msgid "test-tool serve-v2 [<options>]"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-pot --------------------
+
+level=error msg="config variable 'submodule.diffJobs' in manpage does not match string in pot file:"
+level=error msg="    >> msgid   \"submodule.diffjobs cannot be negative\""
+
+ERROR: fail to execute "git-po-helper check-pot"
