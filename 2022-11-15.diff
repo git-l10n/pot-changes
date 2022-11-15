@@ -1,0 +1,209 @@
+
+
+#################### Tue, 15 Nov 2022 04:58:16 +0000 ####################
+
+--- po/git.pot.old	2022-11-15 04:58:16.120250286 +0000
++++ po/git.pot.new	2022-11-15 04:58:16.220251201 +0000
+@@ -1279,6 +1279,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "'%s' failed: no command provided."
++msgstr ""
++
++#, c-format
+ msgid "'%s' file does not contain absolute path to the working tree location"
+ msgstr ""
+ 
+@@ -1415,10 +1419,22 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "'%s' requires 0 arguments"
++msgstr ""
++
++#, c-format
++msgid "'%s' requires 0 or 1 argument"
++msgstr ""
++
++#, c-format
+ msgid "'%s' requires a batch mode"
+ msgstr ""
+ 
+ #, c-format
++msgid "'%s' requires either no argument or a commit"
++msgstr ""
++
++#, c-format
+ msgid "'%s' was deleted by the applypatch-msg hook"
+ msgstr ""
+ 
+@@ -1706,18 +1722,6 @@
+ msgid "--author '%s' is not 'Name <email>' and matches no existing author"
+ msgstr ""
+ 
+-msgid "--bisect-log requires 0 arguments"
+-msgstr ""
+-
+-msgid "--bisect-next requires 0 arguments"
+-msgstr ""
+-
+-msgid "--bisect-reset requires either no argument or a commit"
+-msgstr ""
+-
+-msgid "--bisect-terms requires 0 or 1 argument"
+-msgstr ""
+-
+ msgid "--blob can only be used inside a git repository"
+ msgstr ""
+ 
+@@ -1810,6 +1814,9 @@
+ msgid "--merge-base does not work with ranges"
+ msgstr ""
+ 
++msgid "--merge-base is incompatible with --stdin"
++msgstr ""
++
+ msgid "--merge-base only works with commits"
+ msgstr ""
+ 
+@@ -3236,9 +3243,6 @@
+ msgid "Couldn't look up commit object for '%s'"
+ msgstr ""
+ 
+-msgid "Couldn't look up commit object for HEAD"
+-msgstr ""
+-
+ msgid "Count unpacked number of objects and their disk consumption"
+ msgstr ""
+ 
+@@ -7898,7 +7902,6 @@
+ msgid "binary patch to '%s' creates incorrect result (expecting %s, got %s)"
+ msgstr ""
+ 
+-#, c-format
+ msgid "bisect found first bad commit"
+ msgstr ""
+ 
+@@ -7906,17 +7909,16 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "bisect run failed: 'git bisect--helper --bisect-state %s' exited with error code %d"
++msgid "bisect run failed: 'bisect-state %s' exited with error code %d"
+ msgstr ""
+ 
+ #, c-format
+-msgid "bisect run failed: exit code %d from '%s' is < 0 or >= 128"
++msgid "bisect run failed: exit code %d from %s is < 0 or >= 128"
+ msgstr ""
+ 
+ msgid "bisect run failed: no command provided."
+ msgstr ""
+ 
+-#, c-format
+ msgid "bisect run success"
+ msgstr ""
+ 
+@@ -8726,6 +8728,9 @@
+ msgid "clear skip-worktree bit"
+ msgstr ""
+ 
++msgid "clear the cache tree before each iteration"
++msgstr ""
++
+ msgid "clone --recursive is not compatible with both --reference and --reference-if-able"
+ msgstr ""
+ 
+@@ -11991,25 +11996,22 @@
+ msgid "git archive: protocol error"
+ msgstr ""
+ 
+-msgid "git bisect--helper --bisect-replay <filename>"
++msgid "git bisect (good|bad) [<rev>...]"
+ msgstr ""
+ 
+-msgid "git bisect--helper --bisect-reset [<commit>]"
++msgid "git bisect replay <logfile>"
+ msgstr ""
+ 
+-msgid "git bisect--helper --bisect-run <cmd>..."
++msgid "git bisect reset [<commit>]"
+ msgstr ""
+ 
+-msgid "git bisect--helper --bisect-skip [(<rev>|<range>)...]"
++msgid "git bisect run <cmd>..."
+ msgstr ""
+ 
+-msgid "git bisect--helper --bisect-start [--term-{new,bad}=<term> --term-{old,good}=<term>] [--no-checkout] [--first-parent] [<bad> [<good>...]] [--] [<paths>...]"
++msgid "git bisect skip [(<rev>|<range>)...]"
+ msgstr ""
+ 
+-msgid "git bisect--helper --bisect-state (bad|new) [<rev>]"
+-msgstr ""
+-
+-msgid "git bisect--helper --bisect-state (good|old) [<rev>...]"
++msgid "git bisect start [--term-{new,bad}=<term> --term-{old,good}=<term>]    [--no-checkout] [--first-parent] [<bad> [<good>...]] [--]    [<pathspec>...]"
+ msgstr ""
+ 
+ msgid "git blame [<options>] [<rev-opts>] [<rev>] [--] <file>"
+@@ -13200,10 +13202,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "ignoring extra bitmap file: '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "ignoring invalid allow_rerere_autoupdate: '%s'"
+ msgstr ""
+ 
+@@ -14534,6 +14532,9 @@
+ msgid "need a HEAD to fixup"
+ msgstr ""
+ 
++msgid "need a command"
++msgstr ""
++
+ msgid "need a repository to verify a bundle"
+ msgstr ""
+ 
+@@ -15043,6 +15044,9 @@
+ msgid "number of bytes"
+ msgstr ""
+ 
++msgid "number of entries in the cache tree to invalidate (default 0)"
++msgstr ""
++
+ msgid "number of requests per thread"
+ msgstr ""
+ 
+@@ -17586,6 +17590,9 @@
+ msgid "specify a destination for the diagnostics archive"
+ msgstr ""
+ 
++msgid "specify a merge-base for the merge"
++msgstr ""
++
+ msgid "specify a strftime format suffix for the filename"
+ msgstr ""
+ 
+@@ -17998,6 +18005,9 @@
+ msgid "test-helper simple-ipc stop-daemon  [<name>] [<max-wait>]"
+ msgstr ""
+ 
++msgid "test-tool cache-tree <options> (control|prime|update)"
++msgstr ""
++
+ msgid "test-tool serve-v2 [<options>]"
+ msgstr ""
+ 
+@@ -18835,7 +18845,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unable to verify '%s' on good revision"
++msgid "unable to verify %s on good revision"
+ msgstr ""
+ 
+ #, c-format
