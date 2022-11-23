@@ -1,0 +1,253 @@
+
+
+#################### Wed, 23 Nov 2022 07:57:56 +0000 ####################
+
+--- po/git.pot.old	2022-11-23 07:57:56.003851308 +0000
++++ po/git.pot.new	2022-11-23 07:57:56.107852623 +0000
+@@ -1371,10 +1371,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "'%s' is not a valid submodule--helper subcommand"
+-msgstr ""
+-
+-#, c-format
+ msgid "'%s' is not a valid tag name."
+ msgstr ""
+ 
+@@ -1768,6 +1764,18 @@
+ msgid "--dump-aliases incompatible with other options\n"
+ msgstr ""
+ 
++msgid "--exclude-hidden cannot be used together with --branches"
++msgstr ""
++
++msgid "--exclude-hidden cannot be used together with --remotes"
++msgstr ""
++
++msgid "--exclude-hidden cannot be used together with --tags"
++msgstr ""
++
++msgid "--exclude-hidden= passed more than once"
++msgstr ""
++
+ msgid "--filter can only be used with the remote configured in extensions.partialclone"
+ msgstr ""
+ 
+@@ -8652,18 +8660,12 @@
+ msgid "check if <object> exists"
+ msgstr ""
+ 
+-msgid "check if it is safe to write to the .gitmodules file"
+-msgstr ""
+-
+ msgid "check only connectivity"
+ msgstr ""
+ 
+ msgid "check out all files in the index"
+ msgstr ""
+ 
+-msgid "check whether bad or good terms exist"
+-msgstr ""
+-
+ #, c-format
+ msgid "checking out '%s' failed. Try 'git bisect start <valid-branch>'."
+ msgstr ""
+@@ -9678,6 +9680,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "could not remove stale scalar.repo '%s'"
++msgstr ""
++
++#, c-format
+ msgid "could not rename '%s' to '%s'"
+ msgstr ""
+ 
+@@ -11659,9 +11665,6 @@
+ msgid "find the color setting: slot [stdout-is-tty]"
+ msgstr ""
+ 
+-msgid "find the next bisection commit"
+-msgstr ""
+-
+ msgid "find the tag that comes after the commit"
+ msgstr ""
+ 
+@@ -12773,13 +12776,10 @@
+ msgid "git submodule sync [--quiet] [--recursive] [<path>]"
+ msgstr ""
+ 
+-msgid "git submodule--helper clone [--prefix=<path>] [--quiet] [--reference <repository>] [--name <name>] [--depth <depth>] [--single-branch] [--filter <filter-spec>] --url <url> --path <path>"
+-msgstr ""
+-
+-msgid "git submodule--helper config --unset <name>"
++msgid "git submodule--helper <command>"
+ msgstr ""
+ 
+-msgid "git submodule--helper config <name> [<value>]"
++msgid "git submodule--helper clone [--prefix=<path>] [--quiet] [--reference <repository>] [--name <name>] [--depth <depth>] [--single-branch] [--filter <filter-spec>] --url <url> --path <path>"
+ msgstr ""
+ 
+ msgid "git submodule--helper create-branch [-f|--force] [--create-reflog] [-q|--quiet] [-t|--track] [-n|--dry-run] <name> <start-oid> <start-name>"
+@@ -13983,9 +13983,6 @@
+ msgid "list tag names"
+ msgstr ""
+ 
+-msgid "list the bisection steps so far"
+-msgstr ""
+-
+ msgid "list untracked files in columns"
+ msgstr ""
+ 
+@@ -14177,9 +14174,6 @@
+ msgid "mark the series as Nth re-roll"
+ msgstr ""
+ 
+-msgid "mark the state of ref (or refs)"
+-msgstr ""
+-
+ #, c-format
+ msgid "marked counting and '%s' cannot be used together"
+ msgstr ""
+@@ -14685,9 +14679,6 @@
+ msgid "no libc information available\n"
+ msgstr ""
+ 
+-msgid "no log for BISECT_WRITE"
+-msgstr ""
+-
+ msgid "no logfile given"
+ msgstr ""
+ 
+@@ -15733,9 +15724,6 @@
+ msgid "path '%s': cannot merge"
+ msgstr ""
+ 
+-msgid "path into the working tree"
+-msgstr ""
+-
+ #, c-format
+ msgid "path is not valid UTF-8: %s"
+ msgstr ""
+@@ -16000,9 +15988,6 @@
+ msgid "print only tags that don't contain the commit"
+ msgstr ""
+ 
+-msgid "print out the bisect terms"
+-msgstr ""
+-
+ msgid "print patches to standard out"
+ msgstr ""
+ 
+@@ -16352,15 +16337,15 @@
+ msgid "recurse into nested submodules"
+ msgstr ""
+ 
+-msgid "recurse into submodules"
+-msgstr ""
+-
+ msgid "recurse into subtrees"
+ msgstr ""
+ 
+ msgid "recurse through submodules"
+ msgstr ""
+ 
++msgid "recursing into submodule with push.recurseSubmodules=only; using on-demand instead"
++msgstr ""
++
+ #, c-format
+ msgid "recursive alias: %s"
+ msgstr ""
+@@ -16605,6 +16590,10 @@
+ msgid "remove whole directories"
+ msgstr ""
+ 
++#, c-format
++msgid "removing stale scalar.repo '%s'"
++msgstr ""
++
+ msgid "rename"
+ msgstr ""
+ 
+@@ -16669,9 +16658,6 @@
+ msgid "replacement %s not found for %s"
+ msgstr ""
+ 
+-msgid "replay the bisection process from the given file"
+-msgstr ""
+-
+ msgid "repo"
+ msgstr ""
+ 
+@@ -16773,9 +16759,6 @@
+ msgid "reset only HEAD"
+ msgstr ""
+ 
+-msgid "reset the bisection state"
+-msgstr ""
+-
+ msgid "resolve notes conflicts using the given strategy (manual/ours/theirs/union/cat_sort_uniq)"
+ msgstr ""
+ 
+@@ -17554,9 +17537,6 @@
+ msgid "skip refreshing the index after reset"
+ msgstr ""
+ 
+-msgid "skip some commits for checkout"
+-msgstr ""
+-
+ msgid "skip some sanity checks on the given paths that might give false positives"
+ msgstr ""
+ 
+@@ -17727,9 +17707,6 @@
+ msgid "start numbering patches at <n> instead of 1"
+ msgstr ""
+ 
+-msgid "start the bisect session"
+-msgstr ""
+-
+ msgid "start walk at all refs"
+ msgstr ""
+ 
+@@ -19302,9 +19279,6 @@
+ msgid "unselect specified items"
+ msgstr ""
+ 
+-msgid "unset the config in the .gitmodules file"
+-msgstr ""
+-
+ msgid "unset the upstream info"
+ msgstr ""
+ 
+@@ -19332,6 +19306,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unsupported section for hidden refs: %s"
++msgstr ""
++
++#, c-format
+ msgid "unsupported version '%d' for bitmap index file"
+ msgstr ""
+ 
+@@ -19453,9 +19431,6 @@
+ msgid "use .gitattributes only from the index"
+ msgstr ""
+ 
+-msgid "use <cmd>... to automatically bisect"
+-msgstr ""
+-
+ msgid "use <file>'s contents as the final image"
+ msgstr ""
+ 
+@@ -19774,9 +19749,6 @@
+ msgid "virtual repository '%s' is incompatible with fsmonitor"
+ msgstr ""
+ 
+-msgid "visualize the bisection"
+-msgstr ""
+-
+ #, c-format
+ msgid "wait for hEvent failed for '%s'"
+ msgstr ""
