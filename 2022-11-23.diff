@@ -1,0 +1,77 @@
+
+
+#################### Wed, 23 Nov 2022 07:57:40 +0000 ####################
+
+--- po/git.pot.old	2022-11-23 07:57:40.643611393 +0000
++++ po/git.pot.new	2022-11-23 07:57:40.739610645 +0000
+@@ -759,6 +759,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "%s doesn't support --super-prefix"
++msgstr ""
++
++#, c-format
+ msgid "%s exists and is not a directory"
+ msgstr ""
+ 
+@@ -10296,6 +10300,10 @@
+ msgid "did you mean `--%s` (with two dashes)?"
+ msgstr ""
+ 
++#, c-format
++msgid "diff ended prematurely (-%d/+%d)"
++msgstr ""
++
+ msgid "different"
+ msgstr ""
+ 
+@@ -12012,7 +12020,8 @@
+ "           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n"
+ "           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n"
+ "           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n"
+-"           [--config-env=<name>=<envvar>] <command> [<args>]"
++"           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n"
++"           <command> [<args>]"
+ msgstr ""
+ 
+ msgid "git add [<options>] [--] <pathspec>..."
+@@ -14800,6 +14809,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "no prefix given for --super-prefix\n"
++msgstr ""
++
++#, c-format
+ msgid "no reflog for '%s'"
+ msgstr ""
+ 
+@@ -15944,9 +15957,6 @@
+ msgid "prefix"
+ msgstr ""
+ 
+-msgid "prefixed path to initial superproject"
+-msgstr ""
+-
+ msgid "premature end of input"
+ msgstr ""
+ 
+@@ -15968,6 +15978,9 @@
+ msgid "prepend prefix to each pathname in the archive"
+ msgstr ""
+ 
++msgid "prepend this to submodule path output"
++msgstr ""
++
+ msgid "preserve initially empty commits"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-pot --------------------
+
+level=error msg="config variable 'submodule.diffJobs' in manpage does not match string in pot file:"
+level=error msg="    >> msgid   \"submodule.diffjobs cannot be negative\""
+
+ERROR: fail to execute "git-po-helper check-pot"
