@@ -720,3 +720,542 @@ ERROR: fail to execute "git-po-helper check-pot"
  msgid "unable to open %s"
  msgstr ""
  
+
+
+#################### Mon, 28 Nov 2022 04:57:43 +0000 ####################
+
+--- po/git.pot.old	2022-11-28 04:57:42.942240968 +0000
++++ po/git.pot.new	2022-11-28 04:57:43.062241909 +0000
+@@ -787,6 +787,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "%s file signature %X does not match signature %X"
++msgstr ""
++
++#, c-format
+ msgid "%s has multiple values"
+ msgstr ""
+ 
+@@ -1203,6 +1207,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "'%s' and '%s' cannot be used together"
++msgstr ""
++
++#, c-format
+ msgid "'%s' and pathspec arguments cannot be used together"
+ msgstr ""
+ 
+@@ -1279,6 +1287,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "'%s' failed: no command provided."
++msgstr ""
++
++#, c-format
+ msgid "'%s' file does not contain absolute path to the working tree location"
+ msgstr ""
+ 
+@@ -1415,10 +1427,22 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "'%s' requires 0 arguments"
++msgstr ""
++
++#, c-format
++msgid "'%s' requires 0 or 1 argument"
++msgstr ""
++
++#, c-format
+ msgid "'%s' requires a batch mode"
+ msgstr ""
+ 
+ #, c-format
++msgid "'%s' requires either no argument or a commit"
++msgstr ""
++
++#, c-format
+ msgid "'%s' was deleted by the applypatch-msg hook"
+ msgstr ""
+ 
+@@ -1706,18 +1730,6 @@
+ msgid "--author '%s' is not 'Name <email>' and matches no existing author"
+ msgstr ""
+ 
+-msgid "--bisect-log requires 0 arguments"
+-msgstr ""
+-
+-msgid "--bisect-next requires 0 arguments"
+-msgstr ""
+-
+-msgid "--bisect-reset requires either no argument or a commit"
+-msgstr ""
+-
+-msgid "--bisect-terms requires 0 or 1 argument"
+-msgstr ""
+-
+ msgid "--blob can only be used inside a git repository"
+ msgstr ""
+ 
+@@ -1822,6 +1834,9 @@
+ msgid "--merge-base does not work with ranges"
+ msgstr ""
+ 
++msgid "--merge-base is incompatible with --stdin"
++msgstr ""
++
+ msgid "--merge-base only works with commits"
+ msgstr ""
+ 
+@@ -2530,6 +2545,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Both original and appended notes are empty in %s, do nothing\n"
++msgstr ""
++
++#, c-format
+ msgid "Branch %s is being bisected at %s"
+ msgstr ""
+ 
+@@ -4073,7 +4092,7 @@
+ "If you meant to check out a remote tracking branch on, e.g. 'origin',\n"
+ "you can do so by fully qualifying the name with the --track option:\n"
+ "\n"
+-"    git checkout --track origin/<name>\n"
++"    git switch --track origin/<name>\n"
+ "\n"
+ "If you'd like to always have checkouts of an ambiguous <name> prefer\n"
+ "one remote, e.g. the 'origin' remote, consider setting\n"
+@@ -4271,9 +4290,12 @@
+ 
+ #, c-format
+ msgid ""
+-"It took %.2f seconds to enumerate untracked files. 'status -uno'\n"
+-"may speed it up, but you have to be careful not to forget to add\n"
+-"new files yourself (see 'git help status')."
++"It took %.2f seconds to enumerate untracked files,\n"
++"but the results were cached, and subsequent runs may be faster."
++msgstr ""
++
++#, c-format
++msgid "It took %.2f seconds to enumerate untracked files."
+ msgstr ""
+ 
+ #, c-format
+@@ -4438,10 +4460,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid ""
+-"Migrating git directory of '%s%s' from\n"
+-"'%s' to\n"
+-"'%s'\n"
++msgid "Migrating git directory of '%s%s' from '%s' to '%s'\n"
+ msgstr ""
+ 
+ #, c-format
+@@ -5366,6 +5385,9 @@
+ msgid "See 'git help <command>' to read about a specific subcommand"
+ msgstr ""
+ 
++msgid "See 'git help status' for information on how to improve this."
++msgstr ""
++
+ msgid "See git-pull(1) for details."
+ msgstr ""
+ 
+@@ -7907,7 +7929,6 @@
+ msgid "binary patch to '%s' creates incorrect result (expecting %s, got %s)"
+ msgstr ""
+ 
+-#, c-format
+ msgid "bisect found first bad commit"
+ msgstr ""
+ 
+@@ -7915,17 +7936,16 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "bisect run failed: 'git bisect--helper --bisect-state %s' exited with error code %d"
++msgid "bisect run failed: 'bisect-state %s' exited with error code %d"
+ msgstr ""
+ 
+ #, c-format
+-msgid "bisect run failed: exit code %d from '%s' is < 0 or >= 128"
++msgid "bisect run failed: exit code %d from %s is < 0 or >= 128"
+ msgstr ""
+ 
+ msgid "bisect run failed: no command provided."
+ msgstr ""
+ 
+-#, c-format
+ msgid "bisect run success"
+ msgstr ""
+ 
+@@ -8065,6 +8085,9 @@
+ msgid "bypass post-rewrite hook"
+ msgstr ""
+ 
++msgid "bypass pre-applypatch and applypatch-msg hooks"
++msgstr ""
++
+ msgid "bypass pre-commit and commit-msg hooks"
+ msgstr ""
+ 
+@@ -8298,6 +8321,9 @@
+ msgid "cannot handle %s as a builtin"
+ msgstr ""
+ 
++msgid "cannot handle diff headers with CR/LF line endings"
++msgstr ""
++
+ #, c-format
+ msgid "cannot handle more than %d base. Ignoring %s."
+ msgid_plural "cannot handle more than %d bases. Ignoring %s."
+@@ -8759,6 +8785,9 @@
+ msgid "closing file '%s'"
+ msgstr ""
+ 
++msgid "closing inotify file descriptor failed"
++msgstr ""
++
+ msgid "cmdline ends with \\"
+ msgstr ""
+ 
+@@ -8835,6 +8864,9 @@
+ msgid "commit date for commit %s in commit-graph is %<PRIuMAX> != %<PRIuMAX>"
+ msgstr ""
+ 
++msgid "commit id for new branch"
++msgstr ""
++
+ msgid "commit message"
+ msgstr ""
+ 
+@@ -9181,6 +9213,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "could not create branch '%s' in submodule path '%s'"
++msgstr ""
++
++#, c-format
+ msgid "could not create directories for %s"
+ msgstr ""
+ 
+@@ -9639,6 +9675,9 @@
+ msgid "could not read ref %s"
+ msgstr ""
+ 
++msgid "could not read stdin"
++msgstr ""
++
+ #, c-format
+ msgid "could not read symlink %s"
+ msgstr ""
+@@ -9741,6 +9780,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "could not send '%s'"
++msgstr ""
++
++#, c-format
+ msgid "could not send '%s' command to fsmonitor--daemon"
+ msgstr ""
+ 
+@@ -10200,6 +10243,9 @@
+ msgid "destination path '%s' already exists and is not an empty directory."
+ msgstr ""
+ 
++msgid "detach HEAD and don't create a local branch"
++msgstr ""
++
+ msgid "detach HEAD at named commit"
+ msgstr ""
+ 
+@@ -10241,6 +10287,10 @@
+ msgid "did you mean `--%s` (with two dashes)?"
+ msgstr ""
+ 
++#, c-format
++msgid "diff ended prematurely (-%d/+%d)"
++msgstr ""
++
+ msgid "different"
+ msgstr ""
+ 
+@@ -11765,6 +11815,10 @@
+ msgid "format to use for the output"
+ msgstr ""
+ 
++#, c-format
++msgid "format version %u does not match expected file version %u"
++msgstr ""
++
+ msgid "format.headers without value"
+ msgstr ""
+ 
+@@ -12003,25 +12057,22 @@
+ msgid "git archive: protocol error"
+ msgstr ""
+ 
+-msgid "git bisect--helper --bisect-replay <filename>"
++msgid "git bisect (good|bad) [<rev>...]"
+ msgstr ""
+ 
+-msgid "git bisect--helper --bisect-reset [<commit>]"
++msgid "git bisect replay <logfile>"
+ msgstr ""
+ 
+-msgid "git bisect--helper --bisect-run <cmd>..."
++msgid "git bisect reset [<commit>]"
+ msgstr ""
+ 
+-msgid "git bisect--helper --bisect-skip [(<rev>|<range>)...]"
++msgid "git bisect run <cmd>..."
+ msgstr ""
+ 
+-msgid "git bisect--helper --bisect-start [--term-{new,bad}=<term> --term-{old,good}=<term>] [--no-checkout] [--first-parent] [<bad> [<good>...]] [--] [<paths>...]"
++msgid "git bisect skip [(<rev>|<range>)...]"
+ msgstr ""
+ 
+-msgid "git bisect--helper --bisect-state (bad|new) [<rev>]"
+-msgstr ""
+-
+-msgid "git bisect--helper --bisect-state (good|old) [<rev>...]"
++msgid "git bisect start [--term-{new,bad}=<term> --term-{old,good}=<term>]    [--no-checkout] [--first-parent] [<bad> [<good>...]] [--]    [<pathspec>...]"
+ msgstr ""
+ 
+ msgid "git blame [<options>] [<rev-opts>] [<rev>] [--] <file>"
+@@ -12779,7 +12830,7 @@
+ msgid "git submodule--helper <command>"
+ msgstr ""
+ 
+-msgid "git submodule--helper clone [--prefix=<path>] [--quiet] [--reference <repository>] [--name <name>] [--depth <depth>] [--single-branch] [--filter <filter-spec>] --url <url> --path <path>"
++msgid "git submodule--helper clone [--prefix=<path>] [--quiet] [--reference <repository>] [--name <name>] [--depth <depth>] [--single-branch] [--filter <filter-spec>] [--branch <branch> --branch-oid <oid>]--url <url> --path <path>"
+ msgstr ""
+ 
+ msgid "git submodule--helper create-branch [-f|--force] [--create-reflog] [-q|--quiet] [-t|--track] [-n|--dry-run] <name> <start-oid> <start-name>"
+@@ -12844,7 +12895,7 @@
+ 
+ msgid ""
+ "git worktree add [-f] [--detach] [--checkout] [--lock [--reason <string>]]\n"
+-"                 [-b <new-branch>] <path> [<commit-ish>]"
++"                 [[-b | -B | --orphan] <new-branch>] <path> [<commit-ish>]"
+ msgstr ""
+ 
+ msgid "git worktree list [-v | --porcelain [-z]]"
+@@ -12939,6 +12990,10 @@
+ msgid "got %s (%d) %s"
+ msgstr ""
+ 
++#, c-format
++msgid "got bad config --config=%s"
++msgstr ""
++
+ msgid "gpg failed to sign the data"
+ msgstr ""
+ 
+@@ -12987,6 +13042,10 @@
+ msgid "hash mismatch for %s (expected %s)"
+ msgstr ""
+ 
++#, c-format
++msgid "hash version %X does not match expected hash version %X"
++msgstr ""
++
+ msgid "hash-algorithm"
+ msgstr ""
+ 
+@@ -13212,10 +13271,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "ignoring extra bitmap file: '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "ignoring invalid allow_rerere_autoupdate: '%s'"
+ msgstr ""
+ 
+@@ -13403,6 +13458,9 @@
+ msgid "insane in-reply-to: %s"
+ msgstr ""
+ 
++msgid "insert paragraph break before appending to an existing note"
++msgstr ""
++
+ msgid "instead of applying the patch, output a summary for the input"
+ msgstr ""
+ 
+@@ -14534,6 +14592,9 @@
+ msgid "name consists only of disallowed characters: %s"
+ msgstr ""
+ 
++msgid "name of branch to be created"
++msgstr ""
++
+ msgid "name of the new submodule"
+ msgstr ""
+ 
+@@ -14546,6 +14607,9 @@
+ msgid "need a HEAD to fixup"
+ msgstr ""
+ 
++msgid "need a command"
++msgstr ""
++
+ msgid "need a repository to verify a bundle"
+ msgstr ""
+ 
+@@ -14940,6 +15004,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "not an mbox: '%s'"
++msgstr ""
++
++#, c-format
+ msgid "not copying templates from '%s': %s"
+ msgstr ""
+ 
+@@ -15156,6 +15224,9 @@
+ msgid "object type mismatch at %s"
+ msgstr ""
+ 
++msgid "object-id"
++msgstr ""
++
+ msgid "object-info: expected flush after arguments"
+ msgstr ""
+ 
+@@ -15238,6 +15309,9 @@
+ msgid "only one config file at a time"
+ msgstr ""
+ 
++msgid "only one mbox can be read from stdin"
++msgstr ""
++
+ msgid "only one pattern can be given with -l"
+ msgstr ""
+ 
+@@ -15826,6 +15900,9 @@
+ msgid "please use two different terms"
+ msgstr ""
+ 
++msgid "polling inotify message stream failed"
++msgstr ""
++
+ msgid "populate log with at most <n> entries from shortlog"
+ msgstr ""
+ 
+@@ -16276,6 +16353,9 @@
+ msgid "reading from '%s' beyond a symbolic link"
+ msgstr ""
+ 
++msgid "reading inotify message stream failed"
++msgstr ""
++
+ msgid "reading patches from stdin/tty..."
+ msgstr ""
+ 
+@@ -16430,6 +16510,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "refusing to create '%s' file because '%s' is not set"
++msgstr ""
++
++#, c-format
+ msgid "refusing to create/use '%s' in another submodule's git dir"
+ msgstr ""
+ 
+@@ -17124,6 +17208,10 @@
+ msgid "set upstream for git pull/status"
+ msgstr ""
+ 
++#, c-format
++msgid "setmntent('%s') failed"
++msgstr ""
++
+ msgid "sets the submodule's name to the given string instead of defaulting to its path"
+ msgstr ""
+ 
+@@ -17604,6 +17692,9 @@
+ msgid "specify a destination for the diagnostics archive"
+ msgstr ""
+ 
++msgid "specify a merge-base for the merge"
++msgstr ""
++
+ msgid "specify a strftime format suffix for the filename"
+ msgstr ""
+ 
+@@ -17729,6 +17820,10 @@
+ msgid "stash staged changes only"
+ msgstr ""
+ 
++#, c-format
++msgid "statfs('%s') failed"
++msgstr ""
++
+ #. TRANSLATORS: please do not translate the command names
+ #. 'status', 'update', 'revert', etc.
+ msgid ""
+@@ -17752,6 +17847,10 @@
+ msgid "status: waiting for good commit(s), bad commit known\n"
+ msgstr ""
+ 
++#, c-format
++msgid "statvfs('%s') failed"
++msgstr ""
++
+ msgid "stdin has NUL-terminated arguments"
+ msgstr ""
+ 
+@@ -17829,6 +17928,12 @@
+ msgid "submodule git dir '%s' is inside git dir '%.*s'"
+ msgstr ""
+ 
++msgid "submodule status failed"
++msgstr ""
++
++msgid "submodule.diffjobs cannot be negative"
++msgstr ""
++
+ msgid "suboptimal pack - out of memory"
+ msgstr ""
+ 
+@@ -18852,7 +18957,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unable to verify '%s' on good revision"
++msgid "unable to verify %s on good revision"
+ msgstr ""
+ 
+ #, c-format
+@@ -19634,6 +19739,9 @@
+ msgid "use the merge-base of upstream and branch as the current base"
+ msgstr ""
+ 
++msgid "use the robust mboxrd format with --stdout"
++msgstr ""
++
+ msgid "use the same output mode as git-annotate (Default: off)"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-pot --------------------
+
+level=error msg="config variable 'submodule.diffJobs' in manpage does not match string in pot file:"
+level=error msg="    >> msgid   \"submodule.diffjobs cannot be negative\""
+
+ERROR: fail to execute "git-po-helper check-pot"
