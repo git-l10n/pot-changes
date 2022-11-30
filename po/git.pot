@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2022-11-30 06:57+0000\n"
+"POT-Creation-Date: 2022-11-30 07:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -833,8 +833,8 @@ msgstr ""
 #: builtin/merge.c:1419 builtin/pack-objects.c:4370 builtin/push.c:638
 #: builtin/push.c:676 builtin/push.c:682 builtin/push.c:687
 #: builtin/rebase.c:1223 builtin/rebase.c:1225 builtin/rebase.c:1241
-#: builtin/repack.c:826 builtin/repack.c:832 builtin/repack.c:834
-#: builtin/repack.c:873 builtin/reset.c:354 builtin/reset.c:390
+#: builtin/repack.c:832 builtin/repack.c:838 builtin/repack.c:840
+#: builtin/repack.c:885 builtin/reset.c:354 builtin/reset.c:390
 #: builtin/rev-list.c:552 builtin/show-branch.c:712 builtin/show-branch.c:717
 #: builtin/stash.c:1754 builtin/stash.c:1757 builtin/submodule--helper.c:1188
 #: builtin/submodule--helper.c:2984 builtin/tag.c:529 builtin/tag.c:575
@@ -2467,7 +2467,7 @@ msgid "allow fall back on 3way merging if needed"
 msgstr ""
 
 #: builtin/am.c:2342 builtin/init-db.c:550 builtin/prune-packed.c:16
-#: builtin/repack.c:782 builtin/stash.c:1001
+#: builtin/repack.c:786 builtin/stash.c:1001
 msgid "be quiet"
 msgstr ""
 
@@ -2516,8 +2516,8 @@ msgstr ""
 #: builtin/am.c:2383 builtin/commit.c:1528 builtin/fmt-merge-msg.c:18
 #: builtin/fmt-merge-msg.c:21 builtin/grep.c:956 builtin/merge.c:263
 #: builtin/pull.c:143 builtin/pull.c:205 builtin/pull.c:222
-#: builtin/rebase.c:1070 builtin/repack.c:793 builtin/repack.c:797
-#: builtin/repack.c:799 builtin/show-branch.c:651 builtin/show-ref.c:167
+#: builtin/rebase.c:1070 builtin/repack.c:797 builtin/repack.c:801
+#: builtin/repack.c:803 builtin/show-branch.c:651 builtin/show-ref.c:167
 #: builtin/tag.c:448 parse-options.h:171 parse-options.h:192
 #: parse-options.h:369
 msgid "n"
@@ -4742,7 +4742,7 @@ msgstr ""
 
 #: builtin/clone.c:131 builtin/column.c:27 builtin/fmt-merge-msg.c:27
 #: builtin/init-db.c:553 builtin/merge-file.c:48 builtin/merge.c:290
-#: builtin/pack-objects.c:4239 builtin/repack.c:805
+#: builtin/pack-objects.c:4239 builtin/repack.c:811
 #: builtin/submodule--helper.c:3318 t/helper/test-simple-ipc.c:595
 #: t/helper/test-simple-ipc.c:597
 msgid "name"
@@ -5129,7 +5129,7 @@ msgid ""
 msgstr ""
 
 #: builtin/commit-graph.c:51 builtin/fetch.c:198 builtin/log.c:1910
-#: builtin/repack.c:811
+#: builtin/repack.c:817
 msgid "dir"
 msgstr ""
 
@@ -11115,35 +11115,31 @@ msgstr ""
 msgid "--thin cannot be used to build an indexable pack"
 msgstr ""
 
-#: builtin/pack-objects.c:4376
-msgid "cannot use --filter without --stdout"
-msgstr ""
-
-#: builtin/pack-objects.c:4378
+#: builtin/pack-objects.c:4375
 msgid "cannot use --filter with --stdin-packs"
 msgstr ""
 
-#: builtin/pack-objects.c:4382
+#: builtin/pack-objects.c:4378
 msgid "cannot use internal rev list with --stdin-packs"
 msgstr ""
 
-#: builtin/pack-objects.c:4386
+#: builtin/pack-objects.c:4382
 msgid "cannot use internal rev list with --cruft"
 msgstr ""
 
-#: builtin/pack-objects.c:4388
+#: builtin/pack-objects.c:4384
 msgid "cannot use --stdin-packs with --cruft"
 msgstr ""
 
-#: builtin/pack-objects.c:4390
+#: builtin/pack-objects.c:4386
 msgid "cannot use --max-pack-size with --cruft"
 msgstr ""
 
-#: builtin/pack-objects.c:4450
+#: builtin/pack-objects.c:4446
 msgid "Enumerating objects"
 msgstr ""
 
-#: builtin/pack-objects.c:4493
+#: builtin/pack-objects.c:4489
 #, c-format
 msgid ""
 "Total %<PRIu32> (delta %<PRIu32>), reused %<PRIu32> (delta %<PRIu32>), pack-"
@@ -12882,171 +12878,179 @@ msgid ""
 "--no-write-bitmap-index or disable the pack.writeBitmaps configuration."
 msgstr ""
 
-#: builtin/repack.c:192
+#: builtin/repack.c:195
 msgid "could not start pack-objects to repack promisor objects"
 msgstr ""
 
-#: builtin/repack.c:271 builtin/repack.c:719 builtin/repack.c:972
+#: builtin/repack.c:280 builtin/repack.c:723 builtin/repack.c:984
 msgid "repack: Expecting full hex object ID lines only from pack-objects."
 msgstr ""
 
-#: builtin/repack.c:295
+#: builtin/repack.c:299
 msgid "could not finish pack-objects to repack promisor objects"
 msgstr ""
 
-#: builtin/repack.c:307
+#: builtin/repack.c:311
 #, c-format
 msgid "cannot open index for %s"
 msgstr ""
 
-#: builtin/repack.c:390
+#: builtin/repack.c:394
 #, c-format
 msgid "pack %s too large to consider in geometric progression"
 msgstr ""
 
-#: builtin/repack.c:423 builtin/repack.c:430 builtin/repack.c:435
+#: builtin/repack.c:427 builtin/repack.c:434 builtin/repack.c:439
 #, c-format
 msgid "pack %s too large to roll up"
 msgstr ""
 
-#: builtin/repack.c:515
+#: builtin/repack.c:519
 #, c-format
 msgid "could not open tempfile %s for writing"
 msgstr ""
 
-#: builtin/repack.c:533
+#: builtin/repack.c:537
 msgid "could not close refs snapshot tempfile"
 msgstr ""
 
-#: builtin/repack.c:651
+#: builtin/repack.c:655
 #, c-format
 msgid "could not remove stale bitmap: %s"
 msgstr ""
 
-#: builtin/repack.c:765
+#: builtin/repack.c:769
 msgid "pack everything in a single pack"
 msgstr ""
 
-#: builtin/repack.c:767
+#: builtin/repack.c:771
 msgid "same as -a, and turn unreachable objects loose"
 msgstr ""
 
-#: builtin/repack.c:770
+#: builtin/repack.c:774
 msgid "same as -a, pack unreachable cruft objects separately"
 msgstr ""
 
-#: builtin/repack.c:772 builtin/repack.c:789
+#: builtin/repack.c:776 builtin/repack.c:793
 msgid "approxidate"
 msgstr ""
 
-#: builtin/repack.c:773
+#: builtin/repack.c:777
 msgid "with -C, expire objects older than this"
 msgstr ""
 
-#: builtin/repack.c:775
+#: builtin/repack.c:779
 msgid "remove redundant packs, and run git-prune-packed"
 msgstr ""
 
-#: builtin/repack.c:777
+#: builtin/repack.c:781
 msgid "pass --no-reuse-delta to git-pack-objects"
 msgstr ""
 
-#: builtin/repack.c:779
+#: builtin/repack.c:783
 msgid "pass --no-reuse-object to git-pack-objects"
 msgstr ""
 
-#: builtin/repack.c:781
+#: builtin/repack.c:785
 msgid "do not run git-update-server-info"
 msgstr ""
 
-#: builtin/repack.c:784
+#: builtin/repack.c:788
 msgid "pass --local to git-pack-objects"
 msgstr ""
 
-#: builtin/repack.c:786
+#: builtin/repack.c:790
 msgid "write bitmap index"
 msgstr ""
 
-#: builtin/repack.c:788
+#: builtin/repack.c:792
 msgid "pass --delta-islands to git-pack-objects"
 msgstr ""
 
-#: builtin/repack.c:790
+#: builtin/repack.c:794
 msgid "with -A, do not loosen objects older than this"
 msgstr ""
 
-#: builtin/repack.c:792
+#: builtin/repack.c:796
 msgid "with -a, repack unreachable objects"
 msgstr ""
 
-#: builtin/repack.c:794
+#: builtin/repack.c:798
 msgid "size of the window used for delta compression"
 msgstr ""
 
-#: builtin/repack.c:795 builtin/repack.c:801
+#: builtin/repack.c:799 builtin/repack.c:805
 msgid "bytes"
 msgstr ""
 
-#: builtin/repack.c:796
+#: builtin/repack.c:800
 msgid "same as the above, but limit memory size instead of entries count"
 msgstr ""
 
-#: builtin/repack.c:798
+#: builtin/repack.c:802
 msgid "limits the maximum delta depth"
 msgstr ""
 
-#: builtin/repack.c:800
+#: builtin/repack.c:804
 msgid "limits the maximum number of threads"
 msgstr ""
 
-#: builtin/repack.c:802
+#: builtin/repack.c:806
 msgid "maximum size of each packfile"
 msgstr ""
 
-#: builtin/repack.c:804
-msgid "repack objects in packs marked with .keep"
+#: builtin/repack.c:807 list-objects-filter-options.h:119
+msgid "args"
 msgstr ""
 
-#: builtin/repack.c:806
-msgid "do not repack this pack"
-msgstr ""
-
-#: builtin/repack.c:808
-msgid "find a geometric progression with factor <N>"
+#: builtin/repack.c:808 list-objects-filter-options.h:120
+msgid "object filtering"
 msgstr ""
 
 #: builtin/repack.c:810
-msgid "write a multi-pack index of the resulting packs"
+msgid "repack objects in packs marked with .keep"
 msgstr ""
 
 #: builtin/repack.c:812
+msgid "do not repack this pack"
+msgstr ""
+
+#: builtin/repack.c:814
+msgid "find a geometric progression with factor <N>"
+msgstr ""
+
+#: builtin/repack.c:816
+msgid "write a multi-pack index of the resulting packs"
+msgstr ""
+
+#: builtin/repack.c:818
 msgid "pack prefix to store a pack containing pruned objects"
 msgstr ""
 
-#: builtin/repack.c:822
+#: builtin/repack.c:828
 msgid "cannot delete packs in a precious-objects repo"
 msgstr ""
 
-#: builtin/repack.c:983
+#: builtin/repack.c:997
 msgid "Nothing new to pack."
 msgstr ""
 
-#: builtin/repack.c:988
+#: builtin/repack.c:1002
 #, c-format
 msgid "pack prefix %s does not begin with objdir %s"
 msgstr ""
 
-#: builtin/repack.c:1072
+#: builtin/repack.c:1086
 #, c-format
 msgid "renaming pack to '%s' failed"
 msgstr ""
 
-#: builtin/repack.c:1074
+#: builtin/repack.c:1088
 #, c-format
 msgid "pack-objects did not write a '%s' file for pack %s-%s"
 msgstr ""
 
-#: builtin/repack.c:1077 sequencer.c:4157
+#: builtin/repack.c:1091 sequencer.c:4157
 #, c-format
 msgid "could not unlink: %s"
 msgstr ""
@@ -18041,30 +18045,30 @@ msgstr ""
 msgid "%s: smudge filter %s failed"
 msgstr ""
 
-#: credential.c:98
+#: credential.c:96
 #, c-format
 msgid "skipping credential lookup for key: credential.%s"
 msgstr ""
 
-#: credential.c:114
+#: credential.c:112
 msgid "refusing to work with credential missing host field"
 msgstr ""
 
-#: credential.c:116
+#: credential.c:114
 msgid "refusing to work with credential missing protocol field"
 msgstr ""
 
-#: credential.c:414
+#: credential.c:396
 #, c-format
 msgid "url contains a newline in its %s component: %s"
 msgstr ""
 
-#: credential.c:458
+#: credential.c:440
 #, c-format
 msgid "url has no scheme: %s"
 msgstr ""
 
-#: credential.c:531
+#: credential.c:513
 #, c-format
 msgid "credential url cannot be parsed: %s"
 msgstr ""
@@ -19603,39 +19607,39 @@ msgstr ""
 msgid "not a git repository"
 msgstr ""
 
-#: http.c:426
+#: http.c:352
 #, c-format
 msgid "negative value for http.postBuffer; defaulting to %d"
 msgstr ""
 
-#: http.c:447
+#: http.c:373
 msgid "Delegation control is not supported with cURL < 7.22.0"
 msgstr ""
 
-#: http.c:456
+#: http.c:382
 msgid "Public key pinning not supported with cURL < 7.39.0"
 msgstr ""
 
-#: http.c:953
+#: http.c:861
 msgid "CURLSSLOPT_NO_REVOKE not supported with cURL < 7.44.0"
 msgstr ""
 
-#: http.c:1154
+#: http.c:1065
 #, c-format
 msgid "Unsupported SSL backend '%s'. Supported SSL backends:"
 msgstr ""
 
-#: http.c:1161
+#: http.c:1072
 #, c-format
 msgid "Could not set SSL backend to '%s': cURL was built without SSL backends"
 msgstr ""
 
-#: http.c:1165
+#: http.c:1076
 #, c-format
 msgid "Could not set SSL backend to '%s': already set"
 msgstr ""
 
-#: http.c:2046
+#: http.c:1955
 #, c-format
 msgid ""
 "unable to update url base from redirection:\n"
@@ -19727,14 +19731,6 @@ msgstr ""
 
 #: list-objects-filter-options.c:353
 msgid "unable to upgrade repository format to support partial clone"
-msgstr ""
-
-#: list-objects-filter-options.h:119
-msgid "args"
-msgstr ""
-
-#: list-objects-filter-options.h:120
-msgid "object filtering"
 msgstr ""
 
 #: list-objects-filter.c:532
@@ -22347,78 +22343,78 @@ msgstr ""
 msgid "RPC failed; %s"
 msgstr ""
 
-#: remote-curl.c:877
+#: remote-curl.c:880
 msgid "cannot handle pushes this big"
 msgstr ""
 
-#: remote-curl.c:996
+#: remote-curl.c:997
 #, c-format
 msgid "cannot deflate request; zlib deflate error %d"
 msgstr ""
 
-#: remote-curl.c:1000
+#: remote-curl.c:1001
 #, c-format
 msgid "cannot deflate request; zlib end error %d"
 msgstr ""
 
-#: remote-curl.c:1050
+#: remote-curl.c:1051
 #, c-format
 msgid "%d bytes of length header were received"
 msgstr ""
 
-#: remote-curl.c:1052
+#: remote-curl.c:1053
 #, c-format
 msgid "%d bytes of body are still expected"
 msgstr ""
 
-#: remote-curl.c:1143
+#: remote-curl.c:1145
 msgid "dumb http transport does not support shallow capabilities"
 msgstr ""
 
-#: remote-curl.c:1158
+#: remote-curl.c:1160
 msgid "fetch failed."
 msgstr ""
 
-#: remote-curl.c:1206
+#: remote-curl.c:1208
 msgid "cannot fetch by sha1 over smart http"
 msgstr ""
 
-#: remote-curl.c:1250 remote-curl.c:1256
+#: remote-curl.c:1252 remote-curl.c:1258
 #, c-format
 msgid "protocol error: expected sha/ref, got '%s'"
 msgstr ""
 
-#: remote-curl.c:1268 remote-curl.c:1409
+#: remote-curl.c:1270 remote-curl.c:1411
 #, c-format
 msgid "http transport does not support %s"
 msgstr ""
 
-#: remote-curl.c:1296
+#: remote-curl.c:1298
 msgid "protocol error: expected '<url> <path>', missing space"
 msgstr ""
 
-#: remote-curl.c:1302
+#: remote-curl.c:1304
 #, c-format
 msgid "failed to download file at URL '%s'"
 msgstr ""
 
-#: remote-curl.c:1327
+#: remote-curl.c:1329
 msgid "git-http-push failed"
 msgstr ""
 
-#: remote-curl.c:1521
+#: remote-curl.c:1523
 msgid "remote-curl: usage: git remote-curl <remote> [<url>]"
 msgstr ""
 
-#: remote-curl.c:1553
+#: remote-curl.c:1555
 msgid "remote-curl: error reading command stream from git"
 msgstr ""
 
-#: remote-curl.c:1560
+#: remote-curl.c:1562
 msgid "remote-curl: fetch attempted without a local repo"
 msgstr ""
 
-#: remote-curl.c:1606
+#: remote-curl.c:1608
 #, c-format
 msgid "remote-curl: unknown command '%s' from git"
 msgstr ""
@@ -24376,11 +24372,6 @@ msgstr ""
 
 #: t/helper/test-fast-rebase.c:149
 msgid "error preparing revisions"
-msgstr ""
-
-#: t/helper/test-http-server.c:337
-#, c-format
-msgid "could not send '%s'"
 msgstr ""
 
 #: t/helper/test-reach.c:154
