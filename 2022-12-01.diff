@@ -1,0 +1,355 @@
+
+
+#################### Thu, 01 Dec 2022 01:21:37 +0000 ####################
+
+--- po/git.pot.old	2022-12-01 01:21:37.846756120 +0000
++++ po/git.pot.new	2022-12-01 01:21:37.954757534 +0000
+@@ -787,10 +787,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "%s file signature %X does not match signature %X"
+-msgstr ""
+-
+-#, c-format
+ msgid "%s has multiple values"
+ msgstr ""
+ 
+@@ -1207,10 +1203,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "'%s' and '%s' cannot be used together"
+-msgstr ""
+-
+-#, c-format
+ msgid "'%s' and pathspec arguments cannot be used together"
+ msgstr ""
+ 
+@@ -2545,10 +2537,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "Both original and appended notes are empty in %s, do nothing\n"
+-msgstr ""
+-
+-#, c-format
+ msgid "Branch %s is being bisected at %s"
+ msgstr ""
+ 
+@@ -4092,7 +4080,7 @@
+ "If you meant to check out a remote tracking branch on, e.g. 'origin',\n"
+ "you can do so by fully qualifying the name with the --track option:\n"
+ "\n"
+-"    git switch --track origin/<name>\n"
++"    git checkout --track origin/<name>\n"
+ "\n"
+ "If you'd like to always have checkouts of an ambiguous <name> prefer\n"
+ "one remote, e.g. the 'origin' remote, consider setting\n"
+@@ -4290,12 +4278,9 @@
+ 
+ #, c-format
+ msgid ""
+-"It took %.2f seconds to enumerate untracked files,\n"
+-"but the results were cached, and subsequent runs may be faster."
+-msgstr ""
+-
+-#, c-format
+-msgid "It took %.2f seconds to enumerate untracked files."
++"It took %.2f seconds to enumerate untracked files. 'status -uno'\n"
++"may speed it up, but you have to be careful not to forget to add\n"
++"new files yourself (see 'git help status')."
+ msgstr ""
+ 
+ #, c-format
+@@ -5385,9 +5370,6 @@
+ msgid "See 'git help <command>' to read about a specific subcommand"
+ msgstr ""
+ 
+-msgid "See 'git help status' for information on how to improve this."
+-msgstr ""
+-
+ msgid "See git-pull(1) for details."
+ msgstr ""
+ 
+@@ -8085,9 +8067,6 @@
+ msgid "bypass post-rewrite hook"
+ msgstr ""
+ 
+-msgid "bypass pre-applypatch and applypatch-msg hooks"
+-msgstr ""
+-
+ msgid "bypass pre-commit and commit-msg hooks"
+ msgstr ""
+ 
+@@ -8321,9 +8300,6 @@
+ msgid "cannot handle %s as a builtin"
+ msgstr ""
+ 
+-msgid "cannot handle diff headers with CR/LF line endings"
+-msgstr ""
+-
+ #, c-format
+ msgid "cannot handle more than %d base. Ignoring %s."
+ msgid_plural "cannot handle more than %d bases. Ignoring %s."
+@@ -8619,6 +8595,9 @@
+ msgid "cannot use --filter with --stdin-packs"
+ msgstr ""
+ 
++msgid "cannot use --filter without --stdout"
++msgstr ""
++
+ msgid "cannot use --max-pack-size with --cruft"
+ msgstr ""
+ 
+@@ -8782,9 +8761,6 @@
+ msgid "closing file '%s'"
+ msgstr ""
+ 
+-msgid "closing inotify file descriptor failed"
+-msgstr ""
+-
+ msgid "cmdline ends with \\"
+ msgstr ""
+ 
+@@ -8861,9 +8837,6 @@
+ msgid "commit date for commit %s in commit-graph is %<PRIuMAX> != %<PRIuMAX>"
+ msgstr ""
+ 
+-msgid "commit id for new branch"
+-msgstr ""
+-
+ msgid "commit message"
+ msgstr ""
+ 
+@@ -9210,10 +9183,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "could not create branch '%s' in submodule path '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "could not create directories for %s"
+ msgstr ""
+ 
+@@ -9672,9 +9641,6 @@
+ msgid "could not read ref %s"
+ msgstr ""
+ 
+-msgid "could not read stdin"
+-msgstr ""
+-
+ #, c-format
+ msgid "could not read symlink %s"
+ msgstr ""
+@@ -10236,9 +10202,6 @@
+ msgid "destination path '%s' already exists and is not an empty directory."
+ msgstr ""
+ 
+-msgid "detach HEAD and don't create a local branch"
+-msgstr ""
+-
+ msgid "detach HEAD at named commit"
+ msgstr ""
+ 
+@@ -10280,10 +10243,6 @@
+ msgid "did you mean `--%s` (with two dashes)?"
+ msgstr ""
+ 
+-#, c-format
+-msgid "diff ended prematurely (-%d/+%d)"
+-msgstr ""
+-
+ msgid "different"
+ msgstr ""
+ 
+@@ -11808,10 +11767,6 @@
+ msgid "format to use for the output"
+ msgstr ""
+ 
+-#, c-format
+-msgid "format version %u does not match expected file version %u"
+-msgstr ""
+-
+ msgid "format.headers without value"
+ msgstr ""
+ 
+@@ -12823,7 +12778,7 @@
+ msgid "git submodule--helper <command>"
+ msgstr ""
+ 
+-msgid "git submodule--helper clone [--prefix=<path>] [--quiet] [--reference <repository>] [--name <name>] [--depth <depth>] [--single-branch] [--filter <filter-spec>] [--branch <branch> --branch-oid <oid>]--url <url> --path <path>"
++msgid "git submodule--helper clone [--prefix=<path>] [--quiet] [--reference <repository>] [--name <name>] [--depth <depth>] [--single-branch] [--filter <filter-spec>] --url <url> --path <path>"
+ msgstr ""
+ 
+ msgid "git submodule--helper create-branch [-f|--force] [--create-reflog] [-q|--quiet] [-t|--track] [-n|--dry-run] <name> <start-oid> <start-name>"
+@@ -12888,7 +12843,7 @@
+ 
+ msgid ""
+ "git worktree add [-f] [--detach] [--checkout] [--lock [--reason <string>]]\n"
+-"                 [[-b | -B | --orphan] <new-branch>] <path> [<commit-ish>]"
++"                 [-b <new-branch>] <path> [<commit-ish>]"
+ msgstr ""
+ 
+ msgid "git worktree list [-v | --porcelain [-z]]"
+@@ -12983,10 +12938,6 @@
+ msgid "got %s (%d) %s"
+ msgstr ""
+ 
+-#, c-format
+-msgid "got bad config --config=%s"
+-msgstr ""
+-
+ msgid "gpg failed to sign the data"
+ msgstr ""
+ 
+@@ -13035,10 +12986,6 @@
+ msgid "hash mismatch for %s (expected %s)"
+ msgstr ""
+ 
+-#, c-format
+-msgid "hash version %X does not match expected hash version %X"
+-msgstr ""
+-
+ msgid "hash-algorithm"
+ msgstr ""
+ 
+@@ -13451,9 +13398,6 @@
+ msgid "insane in-reply-to: %s"
+ msgstr ""
+ 
+-msgid "insert paragraph break before appending to an existing note"
+-msgstr ""
+-
+ msgid "instead of applying the patch, output a summary for the input"
+ msgstr ""
+ 
+@@ -14585,9 +14529,6 @@
+ msgid "name consists only of disallowed characters: %s"
+ msgstr ""
+ 
+-msgid "name of branch to be created"
+-msgstr ""
+-
+ msgid "name of the new submodule"
+ msgstr ""
+ 
+@@ -14997,10 +14938,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "not an mbox: '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "not copying templates from '%s': %s"
+ msgstr ""
+ 
+@@ -15217,9 +15154,6 @@
+ msgid "object type mismatch at %s"
+ msgstr ""
+ 
+-msgid "object-id"
+-msgstr ""
+-
+ msgid "object-info: expected flush after arguments"
+ msgstr ""
+ 
+@@ -15302,9 +15236,6 @@
+ msgid "only one config file at a time"
+ msgstr ""
+ 
+-msgid "only one mbox can be read from stdin"
+-msgstr ""
+-
+ msgid "only one pattern can be given with -l"
+ msgstr ""
+ 
+@@ -15893,9 +15824,6 @@
+ msgid "please use two different terms"
+ msgstr ""
+ 
+-msgid "polling inotify message stream failed"
+-msgstr ""
+-
+ msgid "populate log with at most <n> entries from shortlog"
+ msgstr ""
+ 
+@@ -16346,9 +16274,6 @@
+ msgid "reading from '%s' beyond a symbolic link"
+ msgstr ""
+ 
+-msgid "reading inotify message stream failed"
+-msgstr ""
+-
+ msgid "reading patches from stdin/tty..."
+ msgstr ""
+ 
+@@ -16503,10 +16428,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "refusing to create '%s' file because '%s' is not set"
+-msgstr ""
+-
+-#, c-format
+ msgid "refusing to create/use '%s' in another submodule's git dir"
+ msgstr ""
+ 
+@@ -17201,10 +17122,6 @@
+ msgid "set upstream for git pull/status"
+ msgstr ""
+ 
+-#, c-format
+-msgid "setmntent('%s') failed"
+-msgstr ""
+-
+ msgid "sets the submodule's name to the given string instead of defaulting to its path"
+ msgstr ""
+ 
+@@ -17813,10 +17730,6 @@
+ msgid "stash staged changes only"
+ msgstr ""
+ 
+-#, c-format
+-msgid "statfs('%s') failed"
+-msgstr ""
+-
+ #. TRANSLATORS: please do not translate the command names
+ #. 'status', 'update', 'revert', etc.
+ msgid ""
+@@ -17840,10 +17753,6 @@
+ msgid "status: waiting for good commit(s), bad commit known\n"
+ msgstr ""
+ 
+-#, c-format
+-msgid "statvfs('%s') failed"
+-msgstr ""
+-
+ msgid "stdin has NUL-terminated arguments"
+ msgstr ""
+ 
+@@ -17921,12 +17830,6 @@
+ msgid "submodule git dir '%s' is inside git dir '%.*s'"
+ msgstr ""
+ 
+-msgid "submodule status failed"
+-msgstr ""
+-
+-msgid "submodule.diffjobs cannot be negative"
+-msgstr ""
+-
+ msgid "suboptimal pack - out of memory"
+ msgstr ""
+ 
+@@ -19732,9 +19635,6 @@
+ msgid "use the merge-base of upstream and branch as the current base"
+ msgstr ""
+ 
+-msgid "use the robust mboxrd format with --stdout"
+-msgstr ""
+-
+ msgid "use the same output mode as git-annotate (Default: off)"
+ msgstr ""
+ 
