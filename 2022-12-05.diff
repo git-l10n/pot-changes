@@ -1,0 +1,343 @@
+
+
+#################### Mon, 05 Dec 2022 02:09:40 +0000 ####################
+
+--- po/git.pot.old	2022-12-05 02:09:40.272059417 +0000
++++ po/git.pot.new	2022-12-05 02:09:40.368059378 +0000
+@@ -1203,10 +1203,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "'%s' and '%s' cannot be used together"
+-msgstr ""
+-
+-#, c-format
+ msgid "'%s' and pathspec arguments cannot be used together"
+ msgstr ""
+ 
+@@ -2541,10 +2537,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "Both original and appended notes are empty in %s, do nothing\n"
+-msgstr ""
+-
+-#, c-format
+ msgid "Branch %s is being bisected at %s"
+ msgstr ""
+ 
+@@ -4088,7 +4080,7 @@
+ "If you meant to check out a remote tracking branch on, e.g. 'origin',\n"
+ "you can do so by fully qualifying the name with the --track option:\n"
+ "\n"
+-"    git switch --track origin/<name>\n"
++"    git checkout --track origin/<name>\n"
+ "\n"
+ "If you'd like to always have checkouts of an ambiguous <name> prefer\n"
+ "one remote, e.g. the 'origin' remote, consider setting\n"
+@@ -4286,12 +4278,9 @@
+ 
+ #, c-format
+ msgid ""
+-"It took %.2f seconds to enumerate untracked files,\n"
+-"but the results were cached, and subsequent runs may be faster."
+-msgstr ""
+-
+-#, c-format
+-msgid "It took %.2f seconds to enumerate untracked files."
++"It took %.2f seconds to enumerate untracked files. 'status -uno'\n"
++"may speed it up, but you have to be careful not to forget to add\n"
++"new files yourself (see 'git help status')."
+ msgstr ""
+ 
+ #, c-format
+@@ -5381,9 +5370,6 @@
+ msgid "See 'git help <command>' to read about a specific subcommand"
+ msgstr ""
+ 
+-msgid "See 'git help status' for information on how to improve this."
+-msgstr ""
+-
+ msgid "See git-pull(1) for details."
+ msgstr ""
+ 
+@@ -8069,12 +8055,6 @@
+ msgid "bundle list at '%s' has no mode"
+ msgstr ""
+ 
+-msgid "bundle-uri operation not supported by protocol"
+-msgstr ""
+-
+-msgid "bundle-uri: expected flush after arguments"
+-msgstr ""
+-
+ msgid "bundle-uri: got an empty line"
+ msgstr ""
+ 
+@@ -8084,16 +8064,9 @@
+ msgid "bundle-uri: line is not of the form 'key=value'"
+ msgstr ""
+ 
+-#, c-format
+-msgid "bundle-uri: unexpected argument: '%s'"
+-msgstr ""
+-
+ msgid "bypass post-rewrite hook"
+ msgstr ""
+ 
+-msgid "bypass pre-applypatch and applypatch-msg hooks"
+-msgstr ""
+-
+ msgid "bypass pre-commit and commit-msg hooks"
+ msgstr ""
+ 
+@@ -8327,9 +8300,6 @@
+ msgid "cannot handle %s as a builtin"
+ msgstr ""
+ 
+-msgid "cannot handle diff headers with CR/LF line endings"
+-msgstr ""
+-
+ #, c-format
+ msgid "cannot handle more than %d base. Ignoring %s."
+ msgid_plural "cannot handle more than %d bases. Ignoring %s."
+@@ -8625,6 +8595,9 @@
+ msgid "cannot use --filter with --stdin-packs"
+ msgstr ""
+ 
++msgid "cannot use --filter without --stdout"
++msgstr ""
++
+ msgid "cannot use --max-pack-size with --cruft"
+ msgstr ""
+ 
+@@ -8788,9 +8761,6 @@
+ msgid "closing file '%s'"
+ msgstr ""
+ 
+-msgid "closing inotify file descriptor failed"
+-msgstr ""
+-
+ msgid "cmdline ends with \\"
+ msgstr ""
+ 
+@@ -9396,9 +9366,6 @@
+ msgid "could not get submodule directory for '%s'"
+ msgstr ""
+ 
+-msgid "could not get the bundle-uri list"
+-msgstr ""
+-
+ #, c-format
+ msgid "could not get type of object %s in pack %s"
+ msgstr ""
+@@ -9674,9 +9641,6 @@
+ msgid "could not read ref %s"
+ msgstr ""
+ 
+-msgid "could not read stdin"
+-msgstr ""
+-
+ #, c-format
+ msgid "could not read symlink %s"
+ msgstr ""
+@@ -9764,9 +9728,6 @@
+ msgid "could not retrieve `%s`"
+ msgstr ""
+ 
+-msgid "could not retrieve server-advertised bundle-uri list"
+-msgstr ""
+-
+ #, c-format
+ msgid "could not revert %s... %s"
+ msgstr ""
+@@ -10282,10 +10243,6 @@
+ msgid "did you mean `--%s` (with two dashes)?"
+ msgstr ""
+ 
+-#, c-format
+-msgid "diff ended prematurely (-%d/+%d)"
+-msgstr ""
+-
+ msgid "different"
+ msgstr ""
+ 
+@@ -10767,10 +10724,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "error on bundle-uri response line %d: %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "error opening '%s'"
+ msgstr ""
+ 
+@@ -10926,9 +10879,6 @@
+ " %s"
+ msgstr ""
+ 
+-msgid "expected flush after bundle-uri listing"
+-msgstr ""
+-
+ msgid "expected flush after capabilities"
+ msgstr ""
+ 
+@@ -11157,9 +11107,6 @@
+ msgid "failed to expand user dir in: '%s'"
+ msgstr ""
+ 
+-msgid "failed to fetch advertised bundles"
+-msgstr ""
+-
+ #, c-format
+ msgid "failed to fetch objects from bundle URI '%s'"
+ msgstr ""
+@@ -12896,7 +12843,7 @@
+ 
+ msgid ""
+ "git worktree add [-f] [--detach] [--checkout] [--lock [--reason <string>]]\n"
+-"                 [[-b | -B | --orphan] <new-branch>] <path> [<commit-ish>]"
++"                 [-b <new-branch>] <path> [<commit-ish>]"
+ msgstr ""
+ 
+ msgid "git worktree list [-v | --porcelain [-z]]"
+@@ -12991,10 +12938,6 @@
+ msgid "got %s (%d) %s"
+ msgstr ""
+ 
+-#, c-format
+-msgid "got bad config --config=%s"
+-msgstr ""
+-
+ msgid "gpg failed to sign the data"
+ msgstr ""
+ 
+@@ -13455,9 +13398,6 @@
+ msgid "insane in-reply-to: %s"
+ msgstr ""
+ 
+-msgid "insert paragraph break before appending to an existing note"
+-msgstr ""
+-
+ msgid "instead of applying the patch, output a summary for the input"
+ msgstr ""
+ 
+@@ -14798,9 +14738,6 @@
+ msgid "no remembered resolution for '%s'"
+ msgstr ""
+ 
+-msgid "no remote configured to get bundle URIs from"
+-msgstr ""
+-
+ msgid ""
+ "no remote repository specified; please specify either a URL or a\n"
+ "remote name from which new revisions should be fetched"
+@@ -15001,10 +14938,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "not an mbox: '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "not copying templates from '%s': %s"
+ msgstr ""
+ 
+@@ -15303,9 +15236,6 @@
+ msgid "only one config file at a time"
+ msgstr ""
+ 
+-msgid "only one mbox can be read from stdin"
+-msgstr ""
+-
+ msgid "only one pattern can be given with -l"
+ msgstr ""
+ 
+@@ -15894,9 +15824,6 @@
+ msgid "please use two different terms"
+ msgstr ""
+ 
+-msgid "polling inotify message stream failed"
+-msgstr ""
+-
+ msgid "populate log with at most <n> entries from shortlog"
+ msgstr ""
+ 
+@@ -16347,9 +16274,6 @@
+ msgid "reading from '%s' beyond a symbolic link"
+ msgstr ""
+ 
+-msgid "reading inotify message stream failed"
+-msgstr ""
+-
+ msgid "reading patches from stdin/tty..."
+ msgstr ""
+ 
+@@ -16567,10 +16491,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "remote '%s' has no configured URL"
+-msgstr ""
+-
+-#, c-format
+ msgid "remote HEAD is not a branch: '%.*s'"
+ msgstr ""
+ 
+@@ -17202,10 +17122,6 @@
+ msgid "set upstream for git pull/status"
+ msgstr ""
+ 
+-#, c-format
+-msgid "setmntent('%s') failed"
+-msgstr ""
+-
+ msgid "sets the submodule's name to the given string instead of defaulting to its path"
+ msgstr ""
+ 
+@@ -17814,10 +17730,6 @@
+ msgid "stash staged changes only"
+ msgstr ""
+ 
+-#, c-format
+-msgid "statfs('%s') failed"
+-msgstr ""
+-
+ #. TRANSLATORS: please do not translate the command names
+ #. 'status', 'update', 'revert', etc.
+ msgid ""
+@@ -17841,10 +17753,6 @@
+ msgid "status: waiting for good commit(s), bad commit known\n"
+ msgstr ""
+ 
+-#, c-format
+-msgid "statvfs('%s') failed"
+-msgstr ""
+-
+ msgid "stdin has NUL-terminated arguments"
+ msgstr ""
+ 
+@@ -17922,12 +17830,6 @@
+ msgid "submodule git dir '%s' is inside git dir '%.*s'"
+ msgstr ""
+ 
+-msgid "submodule status failed"
+-msgstr ""
+-
+-msgid "submodule.diffjobs cannot be negative"
+-msgstr ""
+-
+ msgid "suboptimal pack - out of memory"
+ msgstr ""
+ 
+@@ -19733,9 +19635,6 @@
+ msgid "use the merge-base of upstream and branch as the current base"
+ msgstr ""
+ 
+-msgid "use the robust mboxrd format with --stdout"
+-msgstr ""
+-
+ msgid "use the same output mode as git-annotate (Default: off)"
+ msgstr ""
+ 
