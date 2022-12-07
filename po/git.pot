@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2022-12-05 05:57+0000\n"
+"POT-Creation-Date: 2022-12-07 06:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -3302,11 +3302,11 @@ msgstr ""
 msgid "Branch renamed to %s, but HEAD is not updated!"
 msgstr ""
 
-#: builtin/branch.c:588
+#: builtin/branch.c:586
 msgid "Branch is renamed, but update of config-file failed"
 msgstr ""
 
-#: builtin/branch.c:590
+#: builtin/branch.c:588
 msgid "Branch is copied, but update of config-file failed"
 msgstr ""
 
@@ -5050,7 +5050,7 @@ msgstr ""
 msgid "cannot clone from filtered bundle"
 msgstr ""
 
-#: builtin/clone.c:1253
+#: builtin/clone.c:1253 builtin/clone.c:1285
 msgid "failed to initialize the repo, skipping bundle URI"
 msgstr ""
 
@@ -5059,16 +5059,20 @@ msgstr ""
 msgid "failed to fetch objects from bundle URI '%s'"
 msgstr ""
 
-#: builtin/clone.c:1301 builtin/clone.c:1358
+#: builtin/clone.c:1289
+msgid "failed to fetch advertised bundles"
+msgstr ""
+
+#: builtin/clone.c:1323 builtin/clone.c:1380
 msgid "remote transport reported error"
 msgstr ""
 
-#: builtin/clone.c:1311
+#: builtin/clone.c:1333
 #, c-format
 msgid "Remote branch %s not found in upstream %s"
 msgstr ""
 
-#: builtin/clone.c:1321
+#: builtin/clone.c:1343
 msgid "You appear to have cloned an empty repository."
 msgstr ""
 
@@ -6528,8 +6532,8 @@ msgstr ""
 #: builtin/env--helper.c:82
 #, c-format
 msgid ""
-"option `--default' expects an unsigned long value with `--type=ulong`, not `"
-"%s`"
+"option `--default' expects an unsigned long value with `--type=ulong`, not "
+"`%s`"
 msgstr ""
 
 #: builtin/fast-export.c:29
@@ -11591,7 +11595,7 @@ msgstr ""
 msgid "--delete doesn't make sense without any refs"
 msgstr ""
 
-#: builtin/push.c:660
+#: builtin/push.c:660 t/helper/test-bundle-uri.c:91
 #, c-format
 msgid "bad repository '%s'"
 msgstr ""
@@ -11840,8 +11844,8 @@ msgstr ""
 #: builtin/rebase.c:966
 #, c-format
 msgid ""
-"unrecognized empty type '%s'; valid values are \"drop\", \"keep\", and \"ask"
-"\"."
+"unrecognized empty type '%s'; valid values are \"drop\", \"keep\", and "
+"\"ask\"."
 msgstr ""
 
 #: builtin/rebase.c:984
@@ -15896,48 +15900,57 @@ msgstr ""
 msgid "core.fsyncMethod = batch is unsupported on this platform"
 msgstr ""
 
-#: bundle-uri.c:198
+#: bundle-uri.c:212
 #, c-format
 msgid "bundle list at '%s' has no mode"
 msgstr ""
 
-#: bundle-uri.c:215
+#: bundle-uri.c:229
 msgid "failed to create temporary file"
 msgstr ""
 
-#: bundle-uri.c:264
+#: bundle-uri.c:278
 msgid "insufficient capabilities"
 msgstr ""
 
-#: bundle-uri.c:423
+#: bundle-uri.c:437
 #, c-format
 msgid "unrecognized bundle mode from URI '%s'"
 msgstr ""
 
-#: bundle-uri.c:459
+#: bundle-uri.c:473
 #, c-format
 msgid "exceeded bundle URI recursion limit (%d)"
 msgstr ""
 
-#: bundle-uri.c:471
+#: bundle-uri.c:485
 #, c-format
 msgid "failed to download bundle from URI '%s'"
 msgstr ""
 
-#: bundle-uri.c:479
+#: bundle-uri.c:493
 #, c-format
 msgid "file at URI '%s' is not a bundle or bundle list"
 msgstr ""
 
-#: bundle-uri.c:576
+#: bundle-uri.c:636
+#, c-format
+msgid "bundle-uri: unexpected argument: '%s'"
+msgstr ""
+
+#: bundle-uri.c:638
+msgid "bundle-uri: expected flush after arguments"
+msgstr ""
+
+#: bundle-uri.c:661
 msgid "bundle-uri: got an empty line"
 msgstr ""
 
-#: bundle-uri.c:581
+#: bundle-uri.c:666
 msgid "bundle-uri: line is not of the form 'key=value'"
 msgstr ""
 
-#: bundle-uri.c:583
+#: bundle-uri.c:668
 msgid "bundle-uri: line has empty key or value"
 msgstr ""
 
@@ -17114,11 +17127,11 @@ msgstr ""
 msgid "Invalid path: %s"
 msgstr ""
 
-#: compat/fsmonitor/fsm-listen-darwin.c:451
+#: compat/fsmonitor/fsm-listen-darwin.c:453
 msgid "Unable to create FSEventStream."
 msgstr ""
 
-#: compat/fsmonitor/fsm-listen-darwin.c:499
+#: compat/fsmonitor/fsm-listen-darwin.c:510
 msgid "Failed to start the FSEventStream"
 msgstr ""
 
@@ -17665,11 +17678,11 @@ msgstr ""
 msgid "missing value for '%s'"
 msgstr ""
 
-#: connect.c:61
+#: connect.c:62
 msgid "the remote end hung up upon initial contact"
 msgstr ""
 
-#: connect.c:63
+#: connect.c:64
 msgid ""
 "Could not read from remote repository.\n"
 "\n"
@@ -17677,93 +17690,102 @@ msgid ""
 "and the repository exists."
 msgstr ""
 
-#: connect.c:81
+#: connect.c:82
 #, c-format
 msgid "server doesn't support '%s'"
 msgstr ""
 
-#: connect.c:118
+#: connect.c:119
 #, c-format
 msgid "server doesn't support feature '%s'"
 msgstr ""
 
-#: connect.c:129
+#: connect.c:130
 msgid "expected flush after capabilities"
 msgstr ""
 
-#: connect.c:265
+#: connect.c:266
 #, c-format
 msgid "ignoring capabilities after first line '%s'"
 msgstr ""
 
-#: connect.c:286
+#: connect.c:287
 msgid "protocol error: unexpected capabilities^{}"
 msgstr ""
 
-#: connect.c:308
+#: connect.c:309
 #, c-format
 msgid "protocol error: expected shallow sha-1, got '%s'"
 msgstr ""
 
-#: connect.c:310
+#: connect.c:311
 msgid "repository on the other end cannot be shallow"
 msgstr ""
 
-#: connect.c:349
+#: connect.c:350
 msgid "invalid packet"
 msgstr ""
 
-#: connect.c:369
+#: connect.c:370
 #, c-format
 msgid "protocol error: unexpected '%s'"
 msgstr ""
 
-#: connect.c:486
+#: connect.c:487
 #, c-format
 msgid "unknown object format '%s' specified by server"
 msgstr ""
 
-#: connect.c:535
+#: connect.c:520
+#, c-format
+msgid "error on bundle-uri response line %d: %s"
+msgstr ""
+
+#: connect.c:525
+msgid "expected flush after bundle-uri listing"
+msgstr ""
+
+#: connect.c:533 connect.c:586
+msgid "expected response end packet after ref listing"
+msgstr ""
+
+#: connect.c:579
 #, c-format
 msgid "invalid ls-refs response: %s"
 msgstr ""
 
-#: connect.c:539
+#: connect.c:583
 msgid "expected flush after ref listing"
 msgstr ""
 
-#: connect.c:542
-msgid "expected response end packet after ref listing"
-msgstr ""
-
-#: connect.c:677
+#: connect.c:721
 #, c-format
 msgid "protocol '%s' is not supported"
 msgstr ""
 
-#: connect.c:728
+#: connect.c:772
 msgid "unable to set SO_KEEPALIVE on socket"
 msgstr ""
 
-#: connect.c:768 connect.c:831
+#: connect.c:812 connect.c:875
 #, c-format
 msgid "Looking up %s ... "
 msgstr ""
 
-#: connect.c:772
+#: connect.c:816
 #, c-format
 msgid "unable to look up %s (port %s) (%s)"
 msgstr ""
 
 #. TRANSLATORS: this is the end of "Looking up %s ... "
-#: connect.c:776 connect.c:847
+#: connect.c:820 connect.c:891
 #, c-format
 msgid ""
 "done.\n"
 "Connecting to %s (port %s) ... "
 msgstr ""
 
-#: connect.c:798 connect.c:875
+#: connect.c:842 connect.c:919
 #, c-format
 msgid ""
 "unable to connect to %s:\n"
@@ -17771,61 +17793,61 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: this is the end of "Connecting to %s (port %s) ... "
-#: connect.c:804 connect.c:881
+#: connect.c:848 connect.c:925
 msgid "done."
 msgstr ""
 
-#: connect.c:835
+#: connect.c:879
 #, c-format
 msgid "unable to look up %s (%s)"
 msgstr ""
 
-#: connect.c:841
+#: connect.c:885
 #, c-format
 msgid "unknown port %s"
 msgstr ""
 
-#: connect.c:978 connect.c:1310
+#: connect.c:1022 connect.c:1354
 #, c-format
 msgid "strange hostname '%s' blocked"
 msgstr ""
 
-#: connect.c:980
+#: connect.c:1024
 #, c-format
 msgid "strange port '%s' blocked"
 msgstr ""
 
-#: connect.c:990
+#: connect.c:1034
 #, c-format
 msgid "cannot start proxy %s"
 msgstr ""
 
-#: connect.c:1061
+#: connect.c:1105
 msgid "no path specified; see 'git help pull' for valid url syntax"
 msgstr ""
 
-#: connect.c:1201
+#: connect.c:1245
 msgid "newline is forbidden in git:// hosts and repo paths"
 msgstr ""
 
-#: connect.c:1258
+#: connect.c:1302
 msgid "ssh variant 'simple' does not support -4"
 msgstr ""
 
-#: connect.c:1270
+#: connect.c:1314
 msgid "ssh variant 'simple' does not support -6"
 msgstr ""
 
-#: connect.c:1287
+#: connect.c:1331
 msgid "ssh variant 'simple' does not support setting port"
 msgstr ""
 
-#: connect.c:1400
+#: connect.c:1444
 #, c-format
 msgid "strange pathname '%s' blocked"
 msgstr ""
 
-#: connect.c:1448
+#: connect.c:1492
 msgid "unable to fork"
 msgstr ""
 
@@ -20091,8 +20113,8 @@ msgstr ""
 #: merge-recursive.c:1744
 #, c-format
 msgid ""
-"CONFLICT (rename/rename): Rename \"%s\"->\"%s\" in branch \"%s\" rename \"%s"
-"\"->\"%s\" in \"%s\"%s"
+"CONFLICT (rename/rename): Rename \"%s\"->\"%s\" in branch \"%s\" rename "
+"\"%s\"->\"%s\" in \"%s\"%s"
 msgstr ""
 
 #: merge-recursive.c:1749
@@ -24233,6 +24255,19 @@ msgstr ""
 msgid "failed to lstat '%s'"
 msgstr ""
 
+#: t/helper/test-bundle-uri.c:92
+msgid "no remote configured to get bundle URIs from"
+msgstr ""
+
+#: t/helper/test-bundle-uri.c:95
+#, c-format
+msgid "remote '%s' has no configured URL"
+msgstr ""
+
+#: t/helper/test-bundle-uri.c:104
+msgid "could not get the bundle-uri list"
+msgstr ""
+
 #: t/helper/test-cache-tree.c:9
 msgid "test-tool cache-tree <options> (control|prime|update)"
 msgstr ""
@@ -24445,7 +24480,7 @@ msgstr ""
 msgid "invalid remote service path"
 msgstr ""
 
-#: transport-helper.c:661 transport.c:1505
+#: transport-helper.c:661 transport.c:1573
 msgid "operation not supported by protocol"
 msgstr ""
 
@@ -24454,7 +24489,7 @@ msgstr ""
 msgid "can't connect to subservice %s"
 msgstr ""
 
-#: transport-helper.c:693 transport.c:416
+#: transport-helper.c:693 transport.c:450
 msgid "--negotiate-only requires protocol v2"
 msgstr ""
 
@@ -24536,102 +24571,102 @@ msgstr ""
 msgid "malformed response in ref list: %s"
 msgstr ""
 
-#: transport-helper.c:1394
+#: transport-helper.c:1407
 #, c-format
 msgid "read(%s) failed"
 msgstr ""
 
-#: transport-helper.c:1421
+#: transport-helper.c:1434
 #, c-format
 msgid "write(%s) failed"
 msgstr ""
 
-#: transport-helper.c:1470
+#: transport-helper.c:1483
 #, c-format
 msgid "%s thread failed"
 msgstr ""
 
-#: transport-helper.c:1474
+#: transport-helper.c:1487
 #, c-format
 msgid "%s thread failed to join: %s"
 msgstr ""
 
-#: transport-helper.c:1493 transport-helper.c:1497
+#: transport-helper.c:1506 transport-helper.c:1510
 #, c-format
 msgid "can't start thread for copying data: %s"
 msgstr ""
 
-#: transport-helper.c:1534
+#: transport-helper.c:1547
 #, c-format
 msgid "%s process failed to wait"
 msgstr ""
 
-#: transport-helper.c:1538
+#: transport-helper.c:1551
 #, c-format
 msgid "%s process failed"
 msgstr ""
 
-#: transport-helper.c:1556 transport-helper.c:1565
+#: transport-helper.c:1569 transport-helper.c:1578
 msgid "can't start thread for copying data"
 msgstr ""
 
-#: transport.c:116
+#: transport.c:117
 #, c-format
 msgid "Would set upstream of '%s' to '%s' of '%s'\n"
 msgstr ""
 
-#: transport.c:138
+#: transport.c:139
 #, c-format
 msgid "could not read bundle '%s'"
 msgstr ""
 
-#: transport.c:234
+#: transport.c:235
 #, c-format
 msgid "transport: invalid depth option '%s'"
 msgstr ""
 
-#: transport.c:289
+#: transport.c:290
 msgid "see protocol.version in 'git help config' for more details"
 msgstr ""
 
-#: transport.c:290
+#: transport.c:291
 msgid "server options require protocol version 2 or later"
 msgstr ""
 
-#: transport.c:419
+#: transport.c:453
 msgid "server does not support wait-for-done"
 msgstr ""
 
-#: transport.c:772
+#: transport.c:806
 msgid "could not parse transport.color.* config"
 msgstr ""
 
-#: transport.c:847
+#: transport.c:881
 msgid "support for protocol v2 not implemented yet"
 msgstr ""
 
-#: transport.c:981
+#: transport.c:1016
 #, c-format
 msgid "unknown value for config '%s': %s"
 msgstr ""
 
-#: transport.c:1046
+#: transport.c:1081
 #, c-format
 msgid "transport '%s' not allowed"
 msgstr ""
 
-#: transport.c:1095
+#: transport.c:1134
 msgid "git-over-rsync is no longer supported"
 msgstr ""
 
-#: transport.c:1199
+#: transport.c:1238
 #, c-format
 msgid ""
 "The following submodule paths contain changes that can\n"
 "not be found on any remote:\n"
 msgstr ""
 
-#: transport.c:1203
+#: transport.c:1242
 #, c-format
 msgid ""
 "\n"
@@ -24647,12 +24682,20 @@ msgid ""
 "\n"
 msgstr ""
 
-#: transport.c:1211
+#: transport.c:1250
 msgid "Aborting."
 msgstr ""
 
-#: transport.c:1362
+#: transport.c:1401
 msgid "failed to push all needed submodules"
+msgstr ""
+
+#: transport.c:1546
+msgid "bundle-uri operation not supported by protocol"
+msgstr ""
+
+#: transport.c:1549
+msgid "could not retrieve server-advertised bundle-uri list"
 msgstr ""
 
 #: tree-walk.c:33
