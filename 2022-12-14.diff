@@ -1,0 +1,169 @@
+
+
+#################### Wed, 14 Dec 2022 10:57:38 +0000 ####################
+
+--- po/git.pot.old	2022-12-14 10:57:38.035056835 +0000
++++ po/git.pot.new	2022-12-14 10:57:38.155057383 +0000
+@@ -1279,6 +1279,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "'%s' failed: no command provided."
++msgstr ""
++
++#, c-format
+ msgid "'%s' file does not contain absolute path to the working tree location"
+ msgstr ""
+ 
+@@ -1415,10 +1419,22 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "'%s' requires 0 arguments"
++msgstr ""
++
++#, c-format
++msgid "'%s' requires 0 or 1 argument"
++msgstr ""
++
++#, c-format
+ msgid "'%s' requires a batch mode"
+ msgstr ""
+ 
+ #, c-format
++msgid "'%s' requires either no argument or a commit"
++msgstr ""
++
++#, c-format
+ msgid "'%s' was deleted by the applypatch-msg hook"
+ msgstr ""
+ 
+@@ -1706,18 +1722,6 @@
+ msgid "--author '%s' is not 'Name <email>' and matches no existing author"
+ msgstr ""
+ 
+-msgid "--bisect-log requires 0 arguments"
+-msgstr ""
+-
+-msgid "--bisect-next requires 0 arguments"
+-msgstr ""
+-
+-msgid "--bisect-reset requires either no argument or a commit"
+-msgstr ""
+-
+-msgid "--bisect-terms requires 0 or 1 argument"
+-msgstr ""
+-
+ msgid "--blob can only be used inside a git repository"
+ msgstr ""
+ 
+@@ -1822,6 +1826,9 @@
+ msgid "--merge-base does not work with ranges"
+ msgstr ""
+ 
++msgid "--merge-base is incompatible with --stdin"
++msgstr ""
++
+ msgid "--merge-base only works with commits"
+ msgstr ""
+ 
+@@ -7907,7 +7914,6 @@
+ msgid "binary patch to '%s' creates incorrect result (expecting %s, got %s)"
+ msgstr ""
+ 
+-#, c-format
+ msgid "bisect found first bad commit"
+ msgstr ""
+ 
+@@ -7915,17 +7921,16 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "bisect run failed: 'git bisect--helper --bisect-state %s' exited with error code %d"
++msgid "bisect run failed: 'bisect-state %s' exited with error code %d"
+ msgstr ""
+ 
+ #, c-format
+-msgid "bisect run failed: exit code %d from '%s' is < 0 or >= 128"
++msgid "bisect run failed: exit code %d from %s is < 0 or >= 128"
+ msgstr ""
+ 
+ msgid "bisect run failed: no command provided."
+ msgstr ""
+ 
+-#, c-format
+ msgid "bisect run success"
+ msgstr ""
+ 
+@@ -12003,25 +12008,22 @@
+ msgid "git archive: protocol error"
+ msgstr ""
+ 
+-msgid "git bisect--helper --bisect-replay <filename>"
+-msgstr ""
+-
+-msgid "git bisect--helper --bisect-reset [<commit>]"
++msgid "git bisect (good|bad) [<rev>...]"
+ msgstr ""
+ 
+-msgid "git bisect--helper --bisect-run <cmd>..."
++msgid "git bisect replay <logfile>"
+ msgstr ""
+ 
+-msgid "git bisect--helper --bisect-skip [(<rev>|<range>)...]"
++msgid "git bisect reset [<commit>]"
+ msgstr ""
+ 
+-msgid "git bisect--helper --bisect-start [--term-{new,bad}=<term> --term-{old,good}=<term>] [--no-checkout] [--first-parent] [<bad> [<good>...]] [--] [<paths>...]"
++msgid "git bisect run <cmd>..."
+ msgstr ""
+ 
+-msgid "git bisect--helper --bisect-state (bad|new) [<rev>]"
++msgid "git bisect skip [(<rev>|<range>)...]"
+ msgstr ""
+ 
+-msgid "git bisect--helper --bisect-state (good|old) [<rev>...]"
++msgid "git bisect start [--term-{new,bad}=<term> --term-{old,good}=<term>]    [--no-checkout] [--first-parent] [<bad> [<good>...]] [--]    [<pathspec>...]"
+ msgstr ""
+ 
+ msgid "git blame [<options>] [<rev-opts>] [<rev>] [--] <file>"
+@@ -13212,10 +13214,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "ignoring extra bitmap file: '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "ignoring invalid allow_rerere_autoupdate: '%s'"
+ msgstr ""
+ 
+@@ -14546,6 +14544,9 @@
+ msgid "need a HEAD to fixup"
+ msgstr ""
+ 
++msgid "need a command"
++msgstr ""
++
+ msgid "need a repository to verify a bundle"
+ msgstr ""
+ 
+@@ -17604,6 +17605,9 @@
+ msgid "specify a destination for the diagnostics archive"
+ msgstr ""
+ 
++msgid "specify a merge-base for the merge"
++msgstr ""
++
+ msgid "specify a strftime format suffix for the filename"
+ msgstr ""
+ 
+@@ -18852,7 +18856,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unable to verify '%s' on good revision"
++msgid "unable to verify %s on good revision"
+ msgstr ""
+ 
+ #, c-format
