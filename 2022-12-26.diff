@@ -295,3 +295,321 @@
  msgid "use the same output mode as git-annotate (Default: off)"
  msgstr ""
  
+
+
+#################### Mon, 26 Dec 2022 03:57:25 +0000 ####################
+
+--- po/git.pot.old	2022-12-26 03:57:24.937393431 +0000
++++ po/git.pot.new	2022-12-26 03:57:25.037393986 +0000
+@@ -747,10 +747,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "%s doesn't support --super-prefix"
+-msgstr ""
+-
+-#, c-format
+ msgid "%s exists and is not a directory"
+ msgstr ""
+ 
+@@ -1191,6 +1187,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "'%s' and '%s' cannot be used together"
++msgstr ""
++
++#, c-format
+ msgid "'%s' and pathspec arguments cannot be used together"
+ msgstr ""
+ 
+@@ -2050,6 +2050,9 @@
+ msgid "<char>"
+ msgstr ""
+ 
++msgid "<commit-ish>"
++msgstr ""
++
+ msgid "<count>"
+ msgstr ""
+ 
+@@ -2525,6 +2528,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Both original and appended notes are empty in %s, do nothing\n"
++msgstr ""
++
++#, c-format
+ msgid "Branch %s is being bisected at %s"
+ msgstr ""
+ 
+@@ -4068,7 +4075,7 @@
+ "If you meant to check out a remote tracking branch on, e.g. 'origin',\n"
+ "you can do so by fully qualifying the name with the --track option:\n"
+ "\n"
+-"    git checkout --track origin/<name>\n"
++"    git switch --track origin/<name>\n"
+ "\n"
+ "If you'd like to always have checkouts of an ambiguous <name> prefer\n"
+ "one remote, e.g. the 'origin' remote, consider setting\n"
+@@ -4076,6 +4083,15 @@
+ msgstr ""
+ 
+ #, c-format
++msgid ""
++"If you meant to create a worktree containing a new orphan branch\n"
++"(branch with no commits) for this repository, you can do so\n"
++"using the --orphan option:\n"
++"\n"
++"\tgit worktree add --orphan %s %s\n"
++msgstr ""
++
++#, c-format
+ msgid "If you prefer to skip this patch, run \"%s --skip\" instead."
+ msgstr ""
+ 
+@@ -8074,6 +8090,9 @@
+ msgid "bypass post-rewrite hook"
+ msgstr ""
+ 
++msgid "bypass pre-applypatch and applypatch-msg hooks"
++msgstr ""
++
+ msgid "bypass pre-commit and commit-msg hooks"
+ msgstr ""
+ 
+@@ -8307,6 +8326,9 @@
+ msgid "cannot handle %s as a builtin"
+ msgstr ""
+ 
++msgid "cannot handle diff headers with CR/LF line endings"
++msgstr ""
++
+ #, c-format
+ msgid "cannot handle more than %d base. Ignoring %s."
+ msgid_plural "cannot handle more than %d bases. Ignoring %s."
+@@ -8602,9 +8624,6 @@
+ msgid "cannot use --filter with --stdin-packs"
+ msgstr ""
+ 
+-msgid "cannot use --filter without --stdout"
+-msgstr ""
+-
+ msgid "cannot use --max-pack-size with --cruft"
+ msgstr ""
+ 
+@@ -8768,6 +8787,9 @@
+ msgid "closing file '%s'"
+ msgstr ""
+ 
++msgid "closing inotify file descriptor failed"
++msgstr ""
++
+ msgid "cmdline ends with \\"
+ msgstr ""
+ 
+@@ -9651,6 +9673,9 @@
+ msgid "could not read ref %s"
+ msgstr ""
+ 
++msgid "could not read stdin"
++msgstr ""
++
+ #, c-format
+ msgid "could not read symlink %s"
+ msgstr ""
+@@ -9756,6 +9781,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "could not send '%s'"
++msgstr ""
++
++#, c-format
+ msgid "could not send '%s' command to fsmonitor--daemon"
+ msgstr ""
+ 
+@@ -10256,6 +10285,10 @@
+ msgid "did you mean `--%s` (with two dashes)?"
+ msgstr ""
+ 
++#, c-format
++msgid "diff ended prematurely (-%d/+%d)"
++msgstr ""
++
+ msgid "different"
+ msgstr ""
+ 
+@@ -11319,10 +11352,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "failed to read object %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "failed to read object '%s'."
+ msgstr ""
+ 
+@@ -11965,8 +11994,7 @@
+ "           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n"
+ "           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n"
+ "           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n"
+-"           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n"
+-"           <command> [<args>]"
++"           [--config-env=<name>=<envvar>] <command> [<args>]"
+ msgstr ""
+ 
+ msgid "git add [<options>] [--] <pathspec>..."
+@@ -12863,7 +12891,12 @@
+ 
+ msgid ""
+ "git worktree add [-f] [--detach] [--checkout] [--lock [--reason <string>]]\n"
+-"                 [-b <new-branch>] <path> [<commit-ish>]"
++"                 [[-b | -B] <new-branch>] <path> [<commit-ish>]"
++msgstr ""
++
++msgid ""
++"git worktree add [-f] [--lock [--reason <string>]]\n"
++"                 --orphan <new-branch> <path>"
+ msgstr ""
+ 
+ msgid "git worktree list [-v | --porcelain [-z]]"
+@@ -12958,6 +12991,10 @@
+ msgid "got %s (%d) %s"
+ msgstr ""
+ 
++#, c-format
++msgid "got bad config --config=%s"
++msgstr ""
++
+ msgid "gpg failed to sign the data"
+ msgstr ""
+ 
+@@ -13418,6 +13455,9 @@
+ msgid "insane in-reply-to: %s"
+ msgstr ""
+ 
++msgid "insert paragraph break before appending to an existing note"
++msgstr ""
++
+ msgid "instead of applying the patch, output a summary for the input"
+ msgstr ""
+ 
+@@ -13901,6 +13941,9 @@
+ msgid "leave the rejected hunks in corresponding *.rej files"
+ msgstr ""
+ 
++msgid "legacy use of lone '-m' detected: please use '--diff-merges=on,hide' instead, as '-m' may imply '-p'"
++msgstr ""
++
+ msgid "let files replace directories and vice-versa"
+ msgstr ""
+ 
+@@ -14744,10 +14787,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "no prefix given for --super-prefix\n"
+-msgstr ""
+-
+-#, c-format
+ msgid "no reflog for '%s'"
+ msgstr ""
+ 
+@@ -14961,6 +15000,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "not an mbox: '%s'"
++msgstr ""
++
++#, c-format
+ msgid "not copying templates from '%s': %s"
+ msgstr ""
+ 
+@@ -15259,6 +15302,9 @@
+ msgid "only one config file at a time"
+ msgstr ""
+ 
++msgid "only one mbox can be read from stdin"
++msgstr ""
++
+ msgid "only one pattern can be given with -l"
+ msgstr ""
+ 
+@@ -15847,6 +15893,9 @@
+ msgid "please use two different terms"
+ msgstr ""
+ 
++msgid "polling inotify message stream failed"
++msgstr ""
++
+ msgid "populate log with at most <n> entries from shortlog"
+ msgstr ""
+ 
+@@ -15879,6 +15928,9 @@
+ msgid "prefix"
+ msgstr ""
+ 
++msgid "prefixed path to initial superproject"
++msgstr ""
++
+ msgid "premature end of input"
+ msgstr ""
+ 
+@@ -16297,6 +16349,9 @@
+ msgid "reading from '%s' beyond a symbolic link"
+ msgstr ""
+ 
++msgid "reading inotify message stream failed"
++msgstr ""
++
+ msgid "reading patches from stdin/tty..."
+ msgstr ""
+ 
+@@ -17149,6 +17204,10 @@
+ msgid "set upstream for git pull/status"
+ msgstr ""
+ 
++#, c-format
++msgid "setmntent('%s') failed"
++msgstr ""
++
+ msgid "sets the submodule's name to the given string instead of defaulting to its path"
+ msgstr ""
+ 
+@@ -17757,6 +17816,10 @@
+ msgid "stash staged changes only"
+ msgstr ""
+ 
++#, c-format
++msgid "statfs('%s') failed"
++msgstr ""
++
+ #. TRANSLATORS: please do not translate the command names
+ #. 'status', 'update', 'revert', etc.
+ msgid ""
+@@ -17780,6 +17843,10 @@
+ msgid "status: waiting for good commit(s), bad commit known\n"
+ msgstr ""
+ 
++#, c-format
++msgid "statvfs('%s') failed"
++msgstr ""
++
+ msgid "stdin has NUL-terminated arguments"
+ msgstr ""
+ 
+@@ -18646,6 +18713,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unable to open loose object %s"
++msgstr ""
++
++#, c-format
+ msgid "unable to open or read %s"
+ msgstr ""
+ 
