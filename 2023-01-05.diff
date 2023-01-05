@@ -625,3 +625,704 @@
  msgid "unrecognized empty type '%s'; valid values are \"drop\", \"keep\", and \"ask\"."
  msgstr ""
  
+
+
+#################### Thu, 05 Jan 2023 06:57:19 +0000 ####################
+
+--- po/git.pot.old	2023-01-05 06:57:19.528020764 +0000
++++ po/git.pot.new	2023-01-05 06:57:19.628022327 +0000
+@@ -536,19 +536,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "%%(body) does not take arguments"
+-msgstr ""
+-
+-#, c-format
+-msgid "%%(deltabase) does not take arguments"
+-msgstr ""
+-
+-#, c-format
+-msgid "%%(objecttype) does not take arguments"
+-msgstr ""
+-
+-#, c-format
+-msgid "%%(rest) does not take arguments"
++msgid "%%(%.*s) does not take arguments"
+ msgstr ""
+ 
+ #. TRANSLATORS: You should only need to translate this format
+@@ -759,10 +747,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "%s doesn't support --super-prefix"
+-msgstr ""
+-
+-#, c-format
+ msgid "%s exists and is not a directory"
+ msgstr ""
+ 
+@@ -1279,6 +1263,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "'%s' failed: no command provided."
++msgstr ""
++
++#, c-format
+ msgid "'%s' file does not contain absolute path to the working tree location"
+ msgstr ""
+ 
+@@ -1415,10 +1403,22 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "'%s' requires 0 arguments"
++msgstr ""
++
++#, c-format
++msgid "'%s' requires 0 or 1 argument"
++msgstr ""
++
++#, c-format
+ msgid "'%s' requires a batch mode"
+ msgstr ""
+ 
+ #, c-format
++msgid "'%s' requires either no argument or a commit"
++msgstr ""
++
++#, c-format
+ msgid "'%s' was deleted by the applypatch-msg hook"
+ msgstr ""
+ 
+@@ -1706,18 +1706,6 @@
+ msgid "--author '%s' is not 'Name <email>' and matches no existing author"
+ msgstr ""
+ 
+-msgid "--bisect-log requires 0 arguments"
+-msgstr ""
+-
+-msgid "--bisect-next requires 0 arguments"
+-msgstr ""
+-
+-msgid "--bisect-reset requires either no argument or a commit"
+-msgstr ""
+-
+-msgid "--bisect-terms requires 0 or 1 argument"
+-msgstr ""
+-
+ msgid "--blob can only be used inside a git repository"
+ msgstr ""
+ 
+@@ -1822,6 +1810,9 @@
+ msgid "--merge-base does not work with ranges"
+ msgstr ""
+ 
++msgid "--merge-base is incompatible with --stdin"
++msgstr ""
++
+ msgid "--merge-base only works with commits"
+ msgstr ""
+ 
+@@ -2130,6 +2121,9 @@
+ msgid "<text>"
+ msgstr ""
+ 
++msgid "<tree-ish>"
++msgstr ""
++
+ msgid "<version>[,<offset>]"
+ msgstr ""
+ 
+@@ -2530,6 +2524,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Both original and appended notes are empty in %s, do nothing\n"
++msgstr ""
++
++#, c-format
+ msgid "Branch %s is being bisected at %s"
+ msgstr ""
+ 
+@@ -3204,10 +3202,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "Could not run 'git status --porcelain=2' in submodule %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "Could not set SSL backend to '%s': already set"
+ msgstr ""
+ 
+@@ -4073,7 +4067,7 @@
+ "If you meant to check out a remote tracking branch on, e.g. 'origin',\n"
+ "you can do so by fully qualifying the name with the --track option:\n"
+ "\n"
+-"    git checkout --track origin/<name>\n"
++"    git switch --track origin/<name>\n"
+ "\n"
+ "If you'd like to always have checkouts of an ambiguous <name> prefer\n"
+ "one remote, e.g. the 'origin' remote, consider setting\n"
+@@ -4271,9 +4265,12 @@
+ 
+ #, c-format
+ msgid ""
+-"It took %.2f seconds to enumerate untracked files. 'status -uno'\n"
+-"may speed it up, but you have to be careful not to forget to add\n"
+-"new files yourself (see 'git help status')."
++"It took %.2f seconds to enumerate untracked files,\n"
++"but the results were cached, and subsequent runs may be faster."
++msgstr ""
++
++#, c-format
++msgid "It took %.2f seconds to enumerate untracked files."
+ msgstr ""
+ 
+ #, c-format
+@@ -5366,6 +5363,9 @@
+ msgid "See 'git help <command>' to read about a specific subcommand"
+ msgstr ""
+ 
++msgid "See 'git help status' for information on how to improve this."
++msgstr ""
++
+ msgid "See git-pull(1) for details."
+ msgstr ""
+ 
+@@ -7907,7 +7907,6 @@
+ msgid "binary patch to '%s' creates incorrect result (expecting %s, got %s)"
+ msgstr ""
+ 
+-#, c-format
+ msgid "bisect found first bad commit"
+ msgstr ""
+ 
+@@ -7915,17 +7914,16 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "bisect run failed: 'git bisect--helper --bisect-state %s' exited with error code %d"
++msgid "bisect run failed: 'bisect-state %s' exited with error code %d"
+ msgstr ""
+ 
+ #, c-format
+-msgid "bisect run failed: exit code %d from '%s' is < 0 or >= 128"
++msgid "bisect run failed: exit code %d from %s is < 0 or >= 128"
+ msgstr ""
+ 
+ msgid "bisect run failed: no command provided."
+ msgstr ""
+ 
+-#, c-format
+ msgid "bisect run success"
+ msgstr ""
+ 
+@@ -8053,6 +8051,12 @@
+ msgid "bundle list at '%s' has no mode"
+ msgstr ""
+ 
++msgid "bundle-uri operation not supported by protocol"
++msgstr ""
++
++msgid "bundle-uri: expected flush after arguments"
++msgstr ""
++
+ msgid "bundle-uri: got an empty line"
+ msgstr ""
+ 
+@@ -8062,9 +8066,16 @@
+ msgid "bundle-uri: line is not of the form 'key=value'"
+ msgstr ""
+ 
++#, c-format
++msgid "bundle-uri: unexpected argument: '%s'"
++msgstr ""
++
+ msgid "bypass post-rewrite hook"
+ msgstr ""
+ 
++msgid "bypass pre-applypatch and applypatch-msg hooks"
++msgstr ""
++
+ msgid "bypass pre-commit and commit-msg hooks"
+ msgstr ""
+ 
+@@ -8298,6 +8309,9 @@
+ msgid "cannot handle %s as a builtin"
+ msgstr ""
+ 
++msgid "cannot handle diff headers with CR/LF line endings"
++msgstr ""
++
+ #, c-format
+ msgid "cannot handle more than %d base. Ignoring %s."
+ msgid_plural "cannot handle more than %d bases. Ignoring %s."
+@@ -8593,9 +8607,6 @@
+ msgid "cannot use --filter with --stdin-packs"
+ msgstr ""
+ 
+-msgid "cannot use --filter without --stdout"
+-msgstr ""
+-
+ msgid "cannot use --max-pack-size with --cruft"
+ msgstr ""
+ 
+@@ -8759,6 +8770,9 @@
+ msgid "closing file '%s'"
+ msgstr ""
+ 
++msgid "closing inotify file descriptor failed"
++msgstr ""
++
+ msgid "cmdline ends with \\"
+ msgstr ""
+ 
+@@ -9364,6 +9378,9 @@
+ msgid "could not get submodule directory for '%s'"
+ msgstr ""
+ 
++msgid "could not get the bundle-uri list"
++msgstr ""
++
+ #, c-format
+ msgid "could not get type of object %s in pack %s"
+ msgstr ""
+@@ -9639,6 +9656,9 @@
+ msgid "could not read ref %s"
+ msgstr ""
+ 
++msgid "could not read stdin"
++msgstr ""
++
+ #, c-format
+ msgid "could not read symlink %s"
+ msgstr ""
+@@ -9726,11 +9746,18 @@
+ msgid "could not retrieve `%s`"
+ msgstr ""
+ 
++msgid "could not retrieve server-advertised bundle-uri list"
++msgstr ""
++
+ #, c-format
+ msgid "could not revert %s... %s"
+ msgstr ""
+ 
+ #, c-format
++msgid "could not run 'git status --porcelain=2' in submodule %s"
++msgstr ""
++
++#, c-format
+ msgid "could not run 'git status' in submodule '%s'"
+ msgstr ""
+ 
+@@ -9741,6 +9768,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "could not send '%s'"
++msgstr ""
++
++#, c-format
+ msgid "could not send '%s' command to fsmonitor--daemon"
+ msgstr ""
+ 
+@@ -10241,6 +10272,10 @@
+ msgid "did you mean `--%s` (with two dashes)?"
+ msgstr ""
+ 
++#, c-format
++msgid "diff ended prematurely (-%d/+%d)"
++msgstr ""
++
+ msgid "different"
+ msgstr ""
+ 
+@@ -10722,6 +10757,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "error on bundle-uri response line %d: %s"
++msgstr ""
++
++#, c-format
+ msgid "error opening '%s'"
+ msgstr ""
+ 
+@@ -10877,6 +10916,9 @@
+ " %s"
+ msgstr ""
+ 
++msgid "expected flush after bundle-uri listing"
++msgstr ""
++
+ msgid "expected flush after capabilities"
+ msgstr ""
+ 
+@@ -11105,6 +11147,9 @@
+ msgid "failed to expand user dir in: '%s'"
+ msgstr ""
+ 
++msgid "failed to fetch advertised bundles"
++msgstr ""
++
+ #, c-format
+ msgid "failed to fetch objects from bundle URI '%s'"
+ msgstr ""
+@@ -11294,10 +11339,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "failed to read object %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "failed to read object '%s'."
+ msgstr ""
+ 
+@@ -11631,9 +11672,6 @@
+ msgid "file to read from"
+ msgstr ""
+ 
+-msgid "file write error"
+-msgstr ""
+-
+ msgid "file/directory"
+ msgstr ""
+ 
+@@ -11943,8 +11981,7 @@
+ "           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n"
+ "           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n"
+ "           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n"
+-"           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n"
+-"           <command> [<args>]"
++"           [--config-env=<name>=<envvar>] <command> [<args>]"
+ msgstr ""
+ 
+ msgid "git add [<options>] [--] <pathspec>..."
+@@ -12003,25 +12040,22 @@
+ msgid "git archive: protocol error"
+ msgstr ""
+ 
+-msgid "git bisect--helper --bisect-replay <filename>"
+-msgstr ""
+-
+-msgid "git bisect--helper --bisect-reset [<commit>]"
++msgid "git bisect (good|bad) [<rev>...]"
+ msgstr ""
+ 
+-msgid "git bisect--helper --bisect-run <cmd>..."
++msgid "git bisect replay <logfile>"
+ msgstr ""
+ 
+-msgid "git bisect--helper --bisect-skip [(<rev>|<range>)...]"
++msgid "git bisect reset [<commit>]"
+ msgstr ""
+ 
+-msgid "git bisect--helper --bisect-start [--term-{new,bad}=<term> --term-{old,good}=<term>] [--no-checkout] [--first-parent] [<bad> [<good>...]] [--] [<paths>...]"
++msgid "git bisect run <cmd>..."
+ msgstr ""
+ 
+-msgid "git bisect--helper --bisect-state (bad|new) [<rev>]"
++msgid "git bisect skip [(<rev>|<range>)...]"
+ msgstr ""
+ 
+-msgid "git bisect--helper --bisect-state (good|old) [<rev>...]"
++msgid "git bisect start [--term-{new,bad}=<term> --term-{old,good}=<term>]    [--no-checkout] [--first-parent] [<bad> [<good>...]] [--]    [<pathspec>...]"
+ msgstr ""
+ 
+ msgid "git blame [<options>] [<rev-opts>] [<rev>] [--] <file>"
+@@ -12090,10 +12124,10 @@
+ msgid "git cat-file <type> <object>"
+ msgstr ""
+ 
+-msgid "git check-attr --stdin [-z] [-a | --all | <attr>...]"
++msgid "git check-attr --stdin [-z] [--source <tree>] [-a | --all | <attr>...]"
+ msgstr ""
+ 
+-msgid "git check-attr [-a | --all | <attr>...] [--] <pathname>..."
++msgid "git check-attr [--source <tree>] [-a | --all | <attr>...] [--] <pathname>..."
+ msgstr ""
+ 
+ msgid "git check-mailmap [<options>] <contact>..."
+@@ -12638,7 +12672,7 @@
+ msgid "git revert (--continue | --skip | --abort | --quit)"
+ msgstr ""
+ 
+-msgid "git revert [--[no-]edit] [-n] [-m parent-number] [-s] [-S[<keyid>]] <commit>..."
++msgid "git revert [--[no-]edit] [-n] [-m <parent-number>] [-s] [-S[<keyid>]] <commit>..."
+ msgstr ""
+ 
+ msgid ""
+@@ -12939,6 +12973,10 @@
+ msgid "got %s (%d) %s"
+ msgstr ""
+ 
++#, c-format
++msgid "got bad config --config=%s"
++msgstr ""
++
+ msgid "gpg failed to sign the data"
+ msgstr ""
+ 
+@@ -13212,10 +13250,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "ignoring extra bitmap file: '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "ignoring invalid allow_rerere_autoupdate: '%s'"
+ msgstr ""
+ 
+@@ -13403,6 +13437,9 @@
+ msgid "insane in-reply-to: %s"
+ msgstr ""
+ 
++msgid "insert paragraph break before appending to an existing note"
++msgstr ""
++
+ msgid "instead of applying the patch, output a summary for the input"
+ msgstr ""
+ 
+@@ -13886,6 +13923,9 @@
+ msgid "leave the rejected hunks in corresponding *.rej files"
+ msgstr ""
+ 
++msgid "legacy use of lone '-m' detected: please use '--diff-merges=on,hide' instead, as '-m' may imply '-p'"
++msgstr ""
++
+ msgid "let files replace directories and vice-versa"
+ msgstr ""
+ 
+@@ -14543,9 +14583,15 @@
+ msgid "named-pipe name"
+ msgstr ""
+ 
++msgid "need a <file> argument"
++msgstr ""
++
+ msgid "need a HEAD to fixup"
+ msgstr ""
+ 
++msgid "need a command"
++msgstr ""
++
+ msgid "need a repository to verify a bundle"
+ msgstr ""
+ 
+@@ -14726,10 +14772,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "no prefix given for --super-prefix\n"
+-msgstr ""
+-
+-#, c-format
+ msgid "no reflog for '%s'"
+ msgstr ""
+ 
+@@ -14740,6 +14782,9 @@
+ msgid "no remembered resolution for '%s'"
+ msgstr ""
+ 
++msgid "no remote configured to get bundle URIs from"
++msgstr ""
++
+ msgid ""
+ "no remote repository specified; please specify either a URL or a\n"
+ "remote name from which new revisions should be fetched"
+@@ -14940,6 +14985,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "not an mbox: '%s'"
++msgstr ""
++
++#, c-format
+ msgid "not copying templates from '%s': %s"
+ msgstr ""
+ 
+@@ -15238,6 +15287,9 @@
+ msgid "only one config file at a time"
+ msgstr ""
+ 
++msgid "only one mbox can be read from stdin"
++msgstr ""
++
+ msgid "only one pattern can be given with -l"
+ msgstr ""
+ 
+@@ -15826,6 +15878,9 @@
+ msgid "please use two different terms"
+ msgstr ""
+ 
++msgid "polling inotify message stream failed"
++msgstr ""
++
+ msgid "populate log with at most <n> entries from shortlog"
+ msgstr ""
+ 
+@@ -15858,6 +15913,9 @@
+ msgid "prefix"
+ msgstr ""
+ 
++msgid "prefixed path to initial superproject"
++msgstr ""
++
+ msgid "premature end of input"
+ msgstr ""
+ 
+@@ -16276,6 +16334,9 @@
+ msgid "reading from '%s' beyond a symbolic link"
+ msgstr ""
+ 
++msgid "reading inotify message stream failed"
++msgstr ""
++
+ msgid "reading patches from stdin/tty..."
+ msgstr ""
+ 
+@@ -16493,6 +16554,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "remote '%s' has no configured URL"
++msgstr ""
++
++#, c-format
+ msgid "remote HEAD is not a branch: '%.*s'"
+ msgstr ""
+ 
+@@ -17124,6 +17189,10 @@
+ msgid "set upstream for git pull/status"
+ msgstr ""
+ 
++#, c-format
++msgid "setmntent('%s') failed"
++msgstr ""
++
+ msgid "sets the submodule's name to the given string instead of defaulting to its path"
+ msgstr ""
+ 
+@@ -17604,6 +17673,9 @@
+ msgid "specify a destination for the diagnostics archive"
+ msgstr ""
+ 
++msgid "specify a merge-base for the merge"
++msgstr ""
++
+ msgid "specify a strftime format suffix for the filename"
+ msgstr ""
+ 
+@@ -17729,6 +17801,10 @@
+ msgid "stash staged changes only"
+ msgstr ""
+ 
++#, c-format
++msgid "statfs('%s') failed"
++msgstr ""
++
+ #. TRANSLATORS: please do not translate the command names
+ #. 'status', 'update', 'revert', etc.
+ msgid ""
+@@ -17752,6 +17828,10 @@
+ msgid "status: waiting for good commit(s), bad commit known\n"
+ msgstr ""
+ 
++#, c-format
++msgid "statvfs('%s') failed"
++msgstr ""
++
+ msgid "stdin has NUL-terminated arguments"
+ msgstr ""
+ 
+@@ -17829,6 +17909,12 @@
+ msgid "submodule git dir '%s' is inside git dir '%.*s'"
+ msgstr ""
+ 
++msgid "submodule status failed"
++msgstr ""
++
++msgid "submodule.diffjobs cannot be negative"
++msgstr ""
++
+ msgid "suboptimal pack - out of memory"
+ msgstr ""
+ 
+@@ -18595,10 +18681,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unable to normalize object directory: %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "unable to open %s"
+ msgstr ""
+ 
+@@ -18622,6 +18704,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unable to open loose object %s"
++msgstr ""
++
++#, c-format
+ msgid "unable to open or read %s"
+ msgstr ""
+ 
+@@ -18856,7 +18942,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unable to verify '%s' on good revision"
++msgid "unable to verify %s on good revision"
+ msgstr ""
+ 
+ #, c-format
+@@ -19182,6 +19268,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unrecognized %%(%.*s) argument: %s"
++msgstr ""
++
++#, c-format
+ msgid "unrecognized %%(%s) argument: %s"
+ msgstr ""
+ 
+@@ -19222,10 +19312,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unrecognized email option: %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "unrecognized empty type '%s'; valid values are \"drop\", \"keep\", and \"ask\"."
+ msgstr ""
+ 
+@@ -19812,6 +19898,9 @@
+ msgid "whether the initial clone should follow the shallow recommendation"
+ msgstr ""
+ 
++msgid "which tree-ish to check attributes at"
++msgstr ""
++
+ msgid "which tree-ish to checkout from"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-pot --------------------
+
+level=error msg="config variable 'submodule.diffJobs' in manpage does not match string in pot file:"
+level=error msg="    >> msgid   \"submodule.diffjobs cannot be negative\""
+
+ERROR: fail to execute "git-po-helper check-pot"
