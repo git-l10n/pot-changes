@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2023-01-17 18:57+0000\n"
+"POT-Creation-Date: 2023-01-17 23:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -2181,8 +2181,8 @@ msgstr ""
 #: builtin/checkout.c:746 builtin/clean.c:1016 builtin/commit.c:386
 #: builtin/diff-tree.c:124 builtin/grep.c:547 builtin/mv.c:194
 #: builtin/reset.c:429 builtin/rm.c:296 builtin/submodule--helper.c:199
-#: builtin/submodule--helper.c:3215 read-cache.c:2130 read-cache.c:2454
-#: rerere.c:549 rerere.c:583 rerere.c:1096 submodule.c:1849
+#: builtin/submodule--helper.c:3215 read-cache.c:2130 read-cache.c:2447
+#: rerere.c:549 rerere.c:583 rerere.c:1096 submodule.c:1866
 msgid "index file corrupt"
 msgstr ""
 
@@ -9179,7 +9179,7 @@ msgid "--remerge-diff does not make sense"
 msgstr ""
 
 #: builtin/log.c:2146 builtin/submodule--helper.c:1678
-#: builtin/submodule--helper.c:1728 rerere.c:866 submodule.c:2295
+#: builtin/submodule--helper.c:1728 rerere.c:866 submodule.c:2433
 #, c-format
 msgid "could not create directory '%s'"
 msgstr ""
@@ -9947,7 +9947,7 @@ msgstr ""
 msgid "Bad value '%s' in environment '%s'"
 msgstr ""
 
-#: builtin/merge.c:1164 read-cache.c:3178 strbuf.c:1192 wrapper.c:701
+#: builtin/merge.c:1164 read-cache.c:3171 strbuf.c:1192 wrapper.c:701
 #, c-format
 msgid "could not close '%s'"
 msgstr ""
@@ -18239,23 +18239,31 @@ msgstr ""
 msgid "failed to write archive"
 msgstr ""
 
-#: diff-lib.c:566
+#: diff-lib.c:313
+msgid "submodule.diffjobs cannot be negative"
+msgstr ""
+
+#: diff-lib.c:316 submodule.c:1950
+msgid "submodule status failed"
+msgstr ""
+
+#: diff-lib.c:642
 msgid "--merge-base does not work with ranges"
 msgstr ""
 
-#: diff-lib.c:568
+#: diff-lib.c:644
 msgid "--merge-base only works with commits"
 msgstr ""
 
-#: diff-lib.c:585
+#: diff-lib.c:661
 msgid "unable to get HEAD"
 msgstr ""
 
-#: diff-lib.c:592
+#: diff-lib.c:668
 msgid "no merge base found"
 msgstr ""
 
-#: diff-lib.c:594
+#: diff-lib.c:670
 msgid "multiple merge bases found"
 msgstr ""
 
@@ -19224,27 +19232,27 @@ msgstr ""
 msgid "could not send '%s' command to fsmonitor--daemon"
 msgstr ""
 
-#: fsmonitor-settings.c:261
+#: fsmonitor-settings.c:247
 #, c-format
 msgid "bare repository '%s' is incompatible with fsmonitor"
 msgstr ""
 
-#: fsmonitor-settings.c:269
+#: fsmonitor-settings.c:255
 #, c-format
 msgid "repository '%s' is incompatible with fsmonitor due to errors"
 msgstr ""
 
-#: fsmonitor-settings.c:275
+#: fsmonitor-settings.c:261
 #, c-format
 msgid "remote repository '%s' is incompatible with fsmonitor"
 msgstr ""
 
-#: fsmonitor-settings.c:281
+#: fsmonitor-settings.c:267
 #, c-format
 msgid "virtual repository '%s' is incompatible with fsmonitor"
 msgstr ""
 
-#: fsmonitor-settings.c:288
+#: fsmonitor-settings.c:274
 #, c-format
 msgid ""
 "socket directory '%s' is incompatible with fsmonitor due to lack of Unix "
@@ -21752,75 +21760,75 @@ msgstr ""
 msgid "unable to join load_cache_entries thread: %s"
 msgstr ""
 
-#: read-cache.c:2338
+#: read-cache.c:2334
 #, c-format
 msgid "%s: index file open failed"
 msgstr ""
 
-#: read-cache.c:2342
+#: read-cache.c:2338
 #, c-format
 msgid "%s: cannot stat the open index"
 msgstr ""
 
-#: read-cache.c:2346
+#: read-cache.c:2342
 #, c-format
 msgid "%s: index file smaller than expected"
 msgstr ""
 
-#: read-cache.c:2350
+#: read-cache.c:2346
 #, c-format
 msgid "%s: unable to map index file%s"
 msgstr ""
 
-#: read-cache.c:2393
+#: read-cache.c:2389
 #, c-format
 msgid "unable to create load_index_extensions thread: %s"
 msgstr ""
 
-#: read-cache.c:2420
+#: read-cache.c:2416
 #, c-format
 msgid "unable to join load_index_extensions thread: %s"
 msgstr ""
 
-#: read-cache.c:2466
+#: read-cache.c:2459
 #, c-format
 msgid "could not freshen shared index '%s'"
 msgstr ""
 
-#: read-cache.c:2526
+#: read-cache.c:2519
 #, c-format
 msgid "broken index, expect %s in %s, got %s"
 msgstr ""
 
-#: read-cache.c:3096
+#: read-cache.c:3089
 msgid "cannot write split index for a sparse index"
 msgstr ""
 
-#: read-cache.c:3221
+#: read-cache.c:3214
 msgid "failed to convert to a sparse-index"
 msgstr ""
 
-#: read-cache.c:3292
+#: read-cache.c:3285
 #, c-format
 msgid "could not stat '%s'"
 msgstr ""
 
-#: read-cache.c:3305
+#: read-cache.c:3298
 #, c-format
 msgid "unable to open git dir: %s"
 msgstr ""
 
-#: read-cache.c:3317
+#: read-cache.c:3310
 #, c-format
 msgid "unable to unlink: %s"
 msgstr ""
 
-#: read-cache.c:3346
+#: read-cache.c:3339
 #, c-format
 msgid "cannot fix permission bits on '%s'"
 msgstr ""
 
-#: read-cache.c:3503
+#: read-cache.c:3496
 #, c-format
 msgid "%s: cannot drop to stage #0"
 msgstr ""
@@ -24083,7 +24091,7 @@ msgstr ""
 msgid "setsid failed"
 msgstr ""
 
-#: sparse-index.c:382
+#: sparse-index.c:376
 #, c-format
 msgid "index entry is a directory, but not sparse (%08x)"
 msgstr ""
@@ -24235,104 +24243,104 @@ msgstr ""
 msgid "Unable to push submodule '%s'\n"
 msgstr ""
 
-#: submodule.c:1574
+#: submodule.c:1591
 #, c-format
 msgid "Fetching submodule %s%s\n"
 msgstr ""
 
-#: submodule.c:1596
+#: submodule.c:1613
 #, c-format
 msgid "Could not access submodule '%s'\n"
 msgstr ""
 
-#: submodule.c:1625
+#: submodule.c:1642
 #, c-format
 msgid "Could not access submodule '%s' at commit %s\n"
 msgstr ""
 
-#: submodule.c:1636
+#: submodule.c:1653
 #, c-format
 msgid "Fetching submodule %s%s at commit %s\n"
 msgstr ""
 
-#: submodule.c:1862
+#: submodule.c:1879
 #, c-format
 msgid ""
 "Errors during submodule fetch:\n"
 "%s"
 msgstr ""
 
-#: submodule.c:1887
+#: submodule.c:1972
 #, c-format
 msgid "'%s' not recognized as a git repository"
 msgstr ""
 
-#: submodule.c:1904
+#: submodule.c:2023
 #, c-format
-msgid "Could not run 'git status --porcelain=2' in submodule %s"
-msgstr ""
-
-#: submodule.c:1945
-#, c-format
-msgid "'git status --porcelain=2' failed in submodule %s"
-msgstr ""
-
-#: submodule.c:2020
-#, c-format
-msgid "could not start 'git status' in submodule '%s'"
-msgstr ""
-
-#: submodule.c:2033
-#, c-format
-msgid "could not run 'git status' in submodule '%s'"
+msgid "could not run 'git status --porcelain=2' in submodule %s"
 msgstr ""
 
 #: submodule.c:2050
 #, c-format
+msgid "'git status --porcelain=2' failed in submodule %s"
+msgstr ""
+
+#: submodule.c:2158
+#, c-format
+msgid "could not start 'git status' in submodule '%s'"
+msgstr ""
+
+#: submodule.c:2171
+#, c-format
+msgid "could not run 'git status' in submodule '%s'"
+msgstr ""
+
+#: submodule.c:2188
+#, c-format
 msgid "Could not unset core.worktree setting in submodule '%s'"
 msgstr ""
 
-#: submodule.c:2069 submodule.c:2326
+#: submodule.c:2207 submodule.c:2464
 #, c-format
 msgid "could not recurse into submodule '%s'"
 msgstr ""
 
-#: submodule.c:2091
+#: submodule.c:2229
 msgid "could not reset submodule index"
 msgstr ""
 
-#: submodule.c:2132
+#: submodule.c:2270
 #, c-format
 msgid "submodule '%s' has dirty index"
 msgstr ""
 
-#: submodule.c:2186
+#: submodule.c:2324
 #, c-format
 msgid "Submodule '%s' could not be updated."
 msgstr ""
 
-#: submodule.c:2254
+#: submodule.c:2392
 #, c-format
 msgid "submodule git dir '%s' is inside git dir '%.*s'"
 msgstr ""
 
-#: submodule.c:2276
+#: submodule.c:2414
 #, c-format
 msgid ""
 "relocate_gitdir for submodule '%s' with more than one worktree not supported"
 msgstr ""
 
-#: submodule.c:2288 submodule.c:2367
+#: submodule.c:2426 submodule.c:2505
 #, c-format
 msgid "could not lookup name for submodule '%s'"
 msgstr ""
 
-#: submodule.c:2292
+#: submodule.c:2430
 #, c-format
 msgid "refusing to move '%s' into an existing git dir"
 msgstr ""
 
-#: submodule.c:2298
+#: submodule.c:2436
 #, c-format
 msgid ""
 "Migrating git directory of '%s%s' from\n"
@@ -24340,11 +24348,11 @@ msgid ""
 "'%s'\n"
 msgstr ""
 
-#: submodule.c:2426
+#: submodule.c:2564
 msgid "could not start ls-files in .."
 msgstr ""
 
-#: submodule.c:2467
+#: submodule.c:2605
 #, c-format
 msgid "ls-tree returned unexpected return code %d"
 msgstr ""
