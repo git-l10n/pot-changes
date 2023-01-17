@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2023-01-15 09:57+0000\n"
+"POT-Creation-Date: 2023-01-17 18:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -801,7 +801,7 @@ msgstr ""
 msgid "unclosed quote"
 msgstr ""
 
-#: alias.c:53 builtin/cat-file.c:1047 builtin/notes.c:374 builtin/notes.c:429
+#: alias.c:53 builtin/cat-file.c:1066 builtin/notes.c:374 builtin/notes.c:429
 #: builtin/notes.c:507 builtin/notes.c:519 builtin/notes.c:599
 #: builtin/notes.c:663 builtin/notes.c:813 builtin/notes.c:965
 #: builtin/notes.c:987 builtin/prune-packed.c:25 builtin/receive-pack.c:2496
@@ -1650,15 +1650,39 @@ msgstr ""
 msgid "%.*s is not a valid attribute name"
 msgstr ""
 
-#: attr.c:361
+#: attr.c:228
+msgid "unable to add additional attribute"
+msgstr ""
+
+#: attr.c:350
+#, c-format
+msgid "ignoring overly long attributes line %d"
+msgstr ""
+
+#: attr.c:365
 #, c-format
 msgid "%s not allowed: %s:%d"
 msgstr ""
 
-#: attr.c:401
+#: attr.c:404
 msgid ""
 "Negative patterns are ignored in git attributes\n"
 "Use '\\!' for literal leading exclamation."
+msgstr ""
+
+#: attr.c:727
+#, c-format
+msgid "cannot fstat gitattributes file '%s'"
+msgstr ""
+
+#: attr.c:732
+#, c-format
+msgid "ignoring overly large gitattributes file '%s'"
+msgstr ""
+
+#: attr.c:827
+#, c-format
+msgid "ignoring overly large gitattributes blob '%s'"
 msgstr ""
 
 #: bisect.c:485
@@ -2524,7 +2548,7 @@ msgid "n"
 msgstr ""
 
 #: builtin/am.c:2398 builtin/branch.c:689 builtin/bugreport.c:117
-#: builtin/cat-file.c:945 builtin/cat-file.c:949 builtin/cat-file.c:954
+#: builtin/cat-file.c:964 builtin/cat-file.c:968 builtin/cat-file.c:973
 #: builtin/diagnose.c:24 builtin/for-each-ref.c:41 builtin/ls-files.c:764
 #: builtin/ls-tree.c:395 builtin/replace.c:558 builtin/tag.c:482
 #: builtin/verify-tag.c:38
@@ -2969,7 +2993,7 @@ msgstr ""
 msgid "need a command"
 msgstr ""
 
-#: builtin/bisect.c:1428 builtin/cat-file.c:721
+#: builtin/bisect.c:1428 builtin/cat-file.c:740
 #, c-format
 msgid "unknown command: '%s'"
 msgstr ""
@@ -3702,51 +3726,51 @@ msgstr ""
 msgid "Unbundling objects"
 msgstr ""
 
-#: builtin/cat-file.c:65 merge-recursive.c:956
+#: builtin/cat-file.c:66 merge-recursive.c:956
 #, c-format
 msgid "cannot read object %s '%s'"
 msgstr ""
 
-#: builtin/cat-file.c:645
+#: builtin/cat-file.c:664
 msgid "flush is only for --buffer mode"
 msgstr ""
 
-#: builtin/cat-file.c:697
+#: builtin/cat-file.c:716
 msgid "empty command in input"
 msgstr ""
 
-#: builtin/cat-file.c:699
+#: builtin/cat-file.c:718
 #, c-format
 msgid "whitespace before command: '%s'"
 msgstr ""
 
-#: builtin/cat-file.c:708
+#: builtin/cat-file.c:727
 #, c-format
 msgid "%s requires arguments"
 msgstr ""
 
-#: builtin/cat-file.c:713
+#: builtin/cat-file.c:732
 #, c-format
 msgid "%s takes no arguments"
 msgstr ""
 
-#: builtin/cat-file.c:890
+#: builtin/cat-file.c:909
 msgid "only one batch option may be specified"
 msgstr ""
 
-#: builtin/cat-file.c:919
+#: builtin/cat-file.c:938
 msgid "git cat-file <type> <object>"
 msgstr ""
 
-#: builtin/cat-file.c:920
+#: builtin/cat-file.c:939
 msgid "git cat-file (-e | -p) <object>"
 msgstr ""
 
-#: builtin/cat-file.c:921
+#: builtin/cat-file.c:940
 msgid "git cat-file (-t | -s) [--allow-unknown-type] <object>"
 msgstr ""
 
-#: builtin/cat-file.c:922
+#: builtin/cat-file.c:941
 msgid ""
 "git cat-file (--batch | --batch-check | --batch-command) [--batch-all-"
 "objects]\n"
@@ -3754,141 +3778,141 @@ msgid ""
 "             [--textconv | --filters] [-z]"
 msgstr ""
 
-#: builtin/cat-file.c:925
+#: builtin/cat-file.c:944
 msgid ""
 "git cat-file (--textconv | --filters)\n"
 "             [<rev>:<path|tree-ish> | --path=<path|tree-ish> <rev>]"
 msgstr ""
 
-#: builtin/cat-file.c:931
+#: builtin/cat-file.c:950
 msgid "Check object existence or emit object contents"
 msgstr ""
 
-#: builtin/cat-file.c:933
+#: builtin/cat-file.c:952
 msgid "check if <object> exists"
 msgstr ""
 
-#: builtin/cat-file.c:934
+#: builtin/cat-file.c:953
 msgid "pretty-print <object> content"
 msgstr ""
 
-#: builtin/cat-file.c:936
+#: builtin/cat-file.c:955
 msgid "Emit [broken] object attributes"
 msgstr ""
 
-#: builtin/cat-file.c:937
+#: builtin/cat-file.c:956
 msgid "show object type (one of 'blob', 'tree', 'commit', 'tag', ...)"
 msgstr ""
 
-#: builtin/cat-file.c:938
+#: builtin/cat-file.c:957
 msgid "show object size"
 msgstr ""
 
-#: builtin/cat-file.c:940
+#: builtin/cat-file.c:959
 msgid "allow -s and -t to work with broken/corrupt objects"
 msgstr ""
 
-#: builtin/cat-file.c:941 builtin/log.c:240
+#: builtin/cat-file.c:960 builtin/log.c:240
 msgid "use mail map file"
 msgstr ""
 
-#: builtin/cat-file.c:944
+#: builtin/cat-file.c:963
 msgid "Batch objects requested on stdin (or --batch-all-objects)"
 msgstr ""
 
-#: builtin/cat-file.c:946
+#: builtin/cat-file.c:965
 msgid "show full <object> or <rev> contents"
 msgstr ""
 
-#: builtin/cat-file.c:950
+#: builtin/cat-file.c:969
 msgid "like --batch, but don't emit <contents>"
 msgstr ""
 
-#: builtin/cat-file.c:953
+#: builtin/cat-file.c:972
 msgid "stdin is NUL-terminated"
 msgstr ""
 
-#: builtin/cat-file.c:955
+#: builtin/cat-file.c:974
 msgid "read commands from stdin"
 msgstr ""
 
-#: builtin/cat-file.c:959
+#: builtin/cat-file.c:978
 msgid "with --batch[-check]: ignores stdin, batches all known objects"
 msgstr ""
 
-#: builtin/cat-file.c:961
+#: builtin/cat-file.c:980
 msgid "Change or optimize batch output"
 msgstr ""
 
-#: builtin/cat-file.c:962
+#: builtin/cat-file.c:981
 msgid "buffer --batch output"
 msgstr ""
 
-#: builtin/cat-file.c:964
+#: builtin/cat-file.c:983
 msgid "follow in-tree symlinks"
 msgstr ""
 
-#: builtin/cat-file.c:966
+#: builtin/cat-file.c:985
 msgid "do not order objects before emitting them"
 msgstr ""
 
-#: builtin/cat-file.c:968
+#: builtin/cat-file.c:987
 msgid ""
 "Emit object (blob or tree) with conversion or filter (stand-alone, or with "
 "batch)"
 msgstr ""
 
-#: builtin/cat-file.c:970
+#: builtin/cat-file.c:989
 msgid "run textconv on object's content"
 msgstr ""
 
-#: builtin/cat-file.c:972
+#: builtin/cat-file.c:991
 msgid "run filters on object's content"
 msgstr ""
 
-#: builtin/cat-file.c:973
+#: builtin/cat-file.c:992
 msgid "blob|tree"
 msgstr ""
 
-#: builtin/cat-file.c:974
+#: builtin/cat-file.c:993
 msgid "use a <path> for (--textconv | --filters); Not with 'batch'"
 msgstr ""
 
-#: builtin/cat-file.c:995
+#: builtin/cat-file.c:1014
 #, c-format
 msgid "'%s=<%s>' needs '%s' or '%s'"
 msgstr ""
 
-#: builtin/cat-file.c:997
+#: builtin/cat-file.c:1016
 msgid "path|tree-ish"
 msgstr ""
 
-#: builtin/cat-file.c:1004 builtin/cat-file.c:1007 builtin/cat-file.c:1010
-#: builtin/cat-file.c:1013
+#: builtin/cat-file.c:1023 builtin/cat-file.c:1026 builtin/cat-file.c:1029
+#: builtin/cat-file.c:1032
 #, c-format
 msgid "'%s' requires a batch mode"
 msgstr ""
 
-#: builtin/cat-file.c:1025
+#: builtin/cat-file.c:1044
 #, c-format
 msgid "'-%c' is incompatible with batch mode"
 msgstr ""
 
-#: builtin/cat-file.c:1028
+#: builtin/cat-file.c:1047
 msgid "batch modes take no arguments"
 msgstr ""
 
-#: builtin/cat-file.c:1036 builtin/cat-file.c:1039
+#: builtin/cat-file.c:1055 builtin/cat-file.c:1058
 #, c-format
 msgid "<rev> required with '%s'"
 msgstr ""
 
-#: builtin/cat-file.c:1042
+#: builtin/cat-file.c:1061
 #, c-format
 msgid "<object> required with '-%c'"
 msgstr ""
 
-#: builtin/cat-file.c:1051
+#: builtin/cat-file.c:1070
 #, c-format
 msgid "only two arguments allowed in <type> <object> mode, not %d"
 msgstr ""
@@ -19616,39 +19640,39 @@ msgstr ""
 msgid "not a git repository"
 msgstr ""
 
-#: http.c:428
+#: http.c:426
 #, c-format
 msgid "negative value for http.postBuffer; defaulting to %d"
 msgstr ""
 
-#: http.c:449
+#: http.c:447
 msgid "Delegation control is not supported with cURL < 7.22.0"
 msgstr ""
 
-#: http.c:458
+#: http.c:456
 msgid "Public key pinning not supported with cURL < 7.39.0"
 msgstr ""
 
-#: http.c:937
+#: http.c:952
 msgid "CURLSSLOPT_NO_REVOKE not supported with cURL < 7.44.0"
 msgstr ""
 
-#: http.c:1141
+#: http.c:1172
 #, c-format
 msgid "Unsupported SSL backend '%s'. Supported SSL backends:"
 msgstr ""
 
-#: http.c:1148
+#: http.c:1179
 #, c-format
 msgid "Could not set SSL backend to '%s': cURL was built without SSL backends"
 msgstr ""
 
-#: http.c:1152
+#: http.c:1183
 #, c-format
 msgid "Could not set SSL backend to '%s': already set"
 msgstr ""
 
-#: http.c:2033
+#: http.c:2064
 #, c-format
 msgid ""
 "unable to update url base from redirection:\n"
@@ -21528,7 +21552,7 @@ msgstr ""
 msgid "unable to create threaded lstat: %s"
 msgstr ""
 
-#: pretty.c:1064
+#: pretty.c:1073
 msgid "unable to parse --pretty format"
 msgstr ""
 
@@ -22298,96 +22322,96 @@ msgstr ""
 msgid "remote server sent unexpected response end packet"
 msgstr ""
 
-#: remote-curl.c:733
+#: remote-curl.c:735
 msgid "unable to rewind rpc post data - try increasing http.postBuffer"
 msgstr ""
 
-#: remote-curl.c:762
+#: remote-curl.c:760
 #, c-format
 msgid "remote-curl: bad line length character: %.4s"
 msgstr ""
 
-#: remote-curl.c:764
+#: remote-curl.c:762
 msgid "remote-curl: unexpected response end packet"
 msgstr ""
 
-#: remote-curl.c:840
+#: remote-curl.c:838
 #, c-format
 msgid "RPC failed; %s"
 msgstr ""
 
-#: remote-curl.c:880
+#: remote-curl.c:878
 msgid "cannot handle pushes this big"
 msgstr ""
 
-#: remote-curl.c:997
+#: remote-curl.c:995
 #, c-format
 msgid "cannot deflate request; zlib deflate error %d"
 msgstr ""
 
-#: remote-curl.c:1001
+#: remote-curl.c:999
 #, c-format
 msgid "cannot deflate request; zlib end error %d"
 msgstr ""
 
-#: remote-curl.c:1051
+#: remote-curl.c:1049
 #, c-format
 msgid "%d bytes of length header were received"
 msgstr ""
 
-#: remote-curl.c:1053
+#: remote-curl.c:1051
 #, c-format
 msgid "%d bytes of body are still expected"
 msgstr ""
 
-#: remote-curl.c:1145
+#: remote-curl.c:1143
 msgid "dumb http transport does not support shallow capabilities"
 msgstr ""
 
-#: remote-curl.c:1160
+#: remote-curl.c:1158
 msgid "fetch failed."
 msgstr ""
 
-#: remote-curl.c:1208
+#: remote-curl.c:1206
 msgid "cannot fetch by sha1 over smart http"
 msgstr ""
 
-#: remote-curl.c:1252 remote-curl.c:1258
+#: remote-curl.c:1250 remote-curl.c:1256
 #, c-format
 msgid "protocol error: expected sha/ref, got '%s'"
 msgstr ""
 
-#: remote-curl.c:1270 remote-curl.c:1411
+#: remote-curl.c:1268 remote-curl.c:1409
 #, c-format
 msgid "http transport does not support %s"
 msgstr ""
 
-#: remote-curl.c:1298
+#: remote-curl.c:1296
 msgid "protocol error: expected '<url> <path>', missing space"
 msgstr ""
 
-#: remote-curl.c:1304
+#: remote-curl.c:1302
 #, c-format
 msgid "failed to download file at URL '%s'"
 msgstr ""
 
-#: remote-curl.c:1329
+#: remote-curl.c:1327
 msgid "git-http-push failed"
 msgstr ""
 
-#: remote-curl.c:1523
+#: remote-curl.c:1521
 msgid "remote-curl: usage: git remote-curl <remote> [<url>]"
 msgstr ""
 
-#: remote-curl.c:1555
+#: remote-curl.c:1553
 msgid "remote-curl: error reading command stream from git"
 msgstr ""
 
-#: remote-curl.c:1562
+#: remote-curl.c:1560
 msgid "remote-curl: fetch attempted without a local repo"
 msgstr ""
 
-#: remote-curl.c:1608
+#: remote-curl.c:1606
 #, c-format
 msgid "remote-curl: unknown command '%s' from git"
 msgstr ""
