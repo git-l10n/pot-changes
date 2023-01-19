@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2023-01-18 19:57+0000\n"
+"POT-Creation-Date: 2023-01-19 01:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -821,8 +821,8 @@ msgstr ""
 
 #: apply.c:138 archive.c:632 builtin/add.c:512 builtin/add.c:514
 #: builtin/add.c:520 builtin/add.c:532 builtin/branch.c:749
-#: builtin/checkout.c:473 builtin/checkout.c:476 builtin/checkout.c:1677
-#: builtin/checkout.c:1796 builtin/checkout.c:1799 builtin/clone.c:941
+#: builtin/checkout.c:473 builtin/checkout.c:476 builtin/checkout.c:1676
+#: builtin/checkout.c:1786 builtin/checkout.c:1789 builtin/clone.c:941
 #: builtin/commit.c:366 builtin/commit.c:369 builtin/commit.c:1214
 #: builtin/commit.c:1270 builtin/commit.c:1287 builtin/describe.c:596
 #: builtin/diff-tree.c:157 builtin/difftool.c:735 builtin/fast-export.c:1245
@@ -1621,7 +1621,7 @@ msgstr ""
 msgid "Unexpected option --remote"
 msgstr ""
 
-#: archive.c:628 builtin/add.c:535 builtin/add.c:567 builtin/checkout.c:1805
+#: archive.c:628 builtin/add.c:535 builtin/add.c:567 builtin/checkout.c:1795
 #: builtin/clone.c:1122 builtin/clone.c:1125 builtin/commit.c:378
 #: builtin/fast-export.c:1230 builtin/index-pack.c:1854 builtin/log.c:2244
 #: builtin/reset.c:364 builtin/reset.c:423 builtin/rm.c:282
@@ -1972,8 +1972,8 @@ msgstr ""
 #: branch.c:759
 #, c-format
 msgid ""
-"You may try updating the submodules using 'git checkout %s && git submodule "
-"update --init'"
+"You may try updating the submodules using 'git checkout --no-recurse-"
+"submodules %s && git submodule update --init'"
 msgstr ""
 
 #: branch.c:770 branch.c:796
@@ -2159,7 +2159,7 @@ msgstr ""
 msgid "--chmod param '%s' must be either -x or +x"
 msgstr ""
 
-#: builtin/add.c:560 builtin/checkout.c:1793 builtin/commit.c:372
+#: builtin/add.c:560 builtin/checkout.c:1783 builtin/commit.c:372
 #: builtin/reset.c:358 builtin/rm.c:276 builtin/stash.c:1761
 #, c-format
 msgid "'%s' and pathspec arguments cannot be used together"
@@ -4301,7 +4301,7 @@ msgstr ""
 msgid "invalid reference: %s"
 msgstr ""
 
-#: builtin/checkout.c:1376 builtin/checkout.c:1760
+#: builtin/checkout.c:1376 builtin/checkout.c:1757
 #, c-format
 msgid "reference is not a tree: %s"
 msgstr ""
@@ -4365,32 +4365,32 @@ msgstr ""
 msgid "you are switching branch while bisecting"
 msgstr ""
 
-#: builtin/checkout.c:1483
+#: builtin/checkout.c:1482
 msgid "paths cannot be used with switching branches"
 msgstr ""
 
-#: builtin/checkout.c:1486 builtin/checkout.c:1490 builtin/checkout.c:1494
+#: builtin/checkout.c:1485 builtin/checkout.c:1489 builtin/checkout.c:1493
 #, c-format
 msgid "'%s' cannot be used with switching branches"
 msgstr ""
 
-#: builtin/checkout.c:1498 builtin/checkout.c:1501 builtin/checkout.c:1504
-#: builtin/checkout.c:1509 builtin/checkout.c:1514
+#: builtin/checkout.c:1497 builtin/checkout.c:1500 builtin/checkout.c:1503
+#: builtin/checkout.c:1508 builtin/checkout.c:1513
 #, c-format
 msgid "'%s' cannot be used with '%s'"
 msgstr ""
 
-#: builtin/checkout.c:1511
+#: builtin/checkout.c:1510
 #, c-format
 msgid "'%s' cannot take <start-point>"
 msgstr ""
 
-#: builtin/checkout.c:1519
+#: builtin/checkout.c:1518
 #, c-format
 msgid "Cannot switch branch to a non-commit '%s'"
 msgstr ""
 
-#: builtin/checkout.c:1526
+#: builtin/checkout.c:1525
 msgid "missing branch or commit argument"
 msgstr ""
 
@@ -4442,110 +4442,110 @@ msgstr ""
 msgid "do not limit pathspecs to sparse entries only"
 msgstr ""
 
-#: builtin/checkout.c:1673
+#: builtin/checkout.c:1672
 #, c-format
 msgid "options '-%c', '-%c', and '%s' cannot be used together"
 msgstr ""
 
-#: builtin/checkout.c:1714
+#: builtin/checkout.c:1713
 msgid "--track needs a branch name"
 msgstr ""
 
-#: builtin/checkout.c:1719
+#: builtin/checkout.c:1718
 #, c-format
 msgid "missing branch name; try -%c"
 msgstr ""
 
-#: builtin/checkout.c:1752
+#: builtin/checkout.c:1750
 #, c-format
 msgid "could not resolve %s"
 msgstr ""
 
-#: builtin/checkout.c:1776
+#: builtin/checkout.c:1766
 msgid "invalid path specification"
 msgstr ""
 
-#: builtin/checkout.c:1783
+#: builtin/checkout.c:1773
 #, c-format
 msgid "'%s' is not a commit and a branch '%s' cannot be created from it"
 msgstr ""
 
-#: builtin/checkout.c:1787
+#: builtin/checkout.c:1777
 #, c-format
 msgid "git checkout: --detach does not take a path argument '%s'"
 msgstr ""
 
-#: builtin/checkout.c:1812
+#: builtin/checkout.c:1802
 msgid ""
 "git checkout: --ours/--theirs, --force and --merge are incompatible when\n"
 "checking out of the index."
 msgstr ""
 
-#: builtin/checkout.c:1817
+#: builtin/checkout.c:1807
 msgid "you must specify path(s) to restore"
 msgstr ""
 
-#: builtin/checkout.c:1842 builtin/checkout.c:1844 builtin/checkout.c:1896
-#: builtin/checkout.c:1898 builtin/clone.c:132 builtin/remote.c:173
+#: builtin/checkout.c:1832 builtin/checkout.c:1834 builtin/checkout.c:1886
+#: builtin/checkout.c:1888 builtin/clone.c:132 builtin/remote.c:173
 #: builtin/remote.c:175 builtin/submodule--helper.c:2925
 #: builtin/submodule--helper.c:3265 builtin/worktree.c:640
 #: builtin/worktree.c:642 builtin/worktree.c:644
 msgid "branch"
 msgstr ""
 
-#: builtin/checkout.c:1843
+#: builtin/checkout.c:1833
 msgid "create and checkout a new branch"
 msgstr ""
 
-#: builtin/checkout.c:1845
+#: builtin/checkout.c:1835
 msgid "create/reset and checkout a branch"
 msgstr ""
 
-#: builtin/checkout.c:1846
+#: builtin/checkout.c:1836
 msgid "create reflog for new branch"
 msgstr ""
 
-#: builtin/checkout.c:1848
+#: builtin/checkout.c:1838
 msgid "second guess 'git checkout <no-such-branch>' (default)"
 msgstr ""
 
-#: builtin/checkout.c:1849
+#: builtin/checkout.c:1839
 msgid "use overlay mode (default)"
 msgstr ""
 
-#: builtin/checkout.c:1897
+#: builtin/checkout.c:1887
 msgid "create and switch to a new branch"
 msgstr ""
 
-#: builtin/checkout.c:1899
+#: builtin/checkout.c:1889
 msgid "create/reset and switch to a branch"
 msgstr ""
 
-#: builtin/checkout.c:1901
+#: builtin/checkout.c:1891
 msgid "second guess 'git switch <no-such-branch>'"
 msgstr ""
 
-#: builtin/checkout.c:1903
+#: builtin/checkout.c:1893
 msgid "throw away local modifications"
 msgstr ""
 
-#: builtin/checkout.c:1939
+#: builtin/checkout.c:1929
 msgid "which tree-ish to checkout from"
 msgstr ""
 
-#: builtin/checkout.c:1941
+#: builtin/checkout.c:1931
 msgid "restore the index"
 msgstr ""
 
-#: builtin/checkout.c:1943
+#: builtin/checkout.c:1933
 msgid "restore the working tree (default)"
 msgstr ""
 
-#: builtin/checkout.c:1945
+#: builtin/checkout.c:1935
 msgid "ignore unmerged entries"
 msgstr ""
 
-#: builtin/checkout.c:1946
+#: builtin/checkout.c:1936
 msgid "use overlay mode"
 msgstr ""
 
@@ -26226,7 +26226,7 @@ msgstr ""
 msgid "Message-ID to be used as In-Reply-To for the first email (if any)? "
 msgstr ""
 
-#: git-send-email.perl:1149 git-send-email.perl:1157
+#: git-send-email.perl:1173 git-send-email.perl:1181
 #, perl-format
 msgid "error: unable to extract a valid address from: %s\n"
 msgstr ""
@@ -26234,16 +26234,16 @@ msgstr ""
 #. TRANSLATORS: Make sure to include [q] [d] [e] in your
 #. translation. The program will only accept English input
 #. at this point.
-#: git-send-email.perl:1161
+#: git-send-email.perl:1185
 msgid "What to do with this address? ([q]uit|[d]rop|[e]dit): "
 msgstr ""
 
-#: git-send-email.perl:1481
+#: git-send-email.perl:1500
 #, perl-format
 msgid "CA path \"%s\" does not exist"
 msgstr ""
 
-#: git-send-email.perl:1571
+#: git-send-email.perl:1590
 msgid ""
 "    The Cc list above has been expanded by additional\n"
 "    addresses found in the patch commit message. By default\n"
@@ -26260,112 +26260,112 @@ msgstr ""
 #. TRANSLATORS: Make sure to include [y] [n] [e] [q] [a] in your
 #. translation. The program will only accept English input
 #. at this point.
-#: git-send-email.perl:1586
+#: git-send-email.perl:1605
 msgid "Send this email? ([y]es|[n]o|[e]dit|[q]uit|[a]ll): "
 msgstr ""
 
-#: git-send-email.perl:1589
+#: git-send-email.perl:1608
 msgid "Send this email reply required"
 msgstr ""
 
-#: git-send-email.perl:1623
+#: git-send-email.perl:1642
 msgid "The required SMTP server is not properly defined."
 msgstr ""
 
-#: git-send-email.perl:1670
+#: git-send-email.perl:1689
 #, perl-format
 msgid "Server does not support STARTTLS! %s"
 msgstr ""
 
-#: git-send-email.perl:1675 git-send-email.perl:1679
+#: git-send-email.perl:1694 git-send-email.perl:1698
 #, perl-format
 msgid "STARTTLS failed! %s"
 msgstr ""
 
-#: git-send-email.perl:1688
+#: git-send-email.perl:1707
 msgid "Unable to initialize SMTP properly. Check config and use --smtp-debug."
 msgstr ""
 
-#: git-send-email.perl:1706
+#: git-send-email.perl:1725
 #, perl-format
 msgid "Failed to send %s\n"
 msgstr ""
 
-#: git-send-email.perl:1709
+#: git-send-email.perl:1728
 #, perl-format
 msgid "Dry-Sent %s\n"
 msgstr ""
 
-#: git-send-email.perl:1709
+#: git-send-email.perl:1728
 #, perl-format
 msgid "Sent %s\n"
 msgstr ""
 
-#: git-send-email.perl:1711
+#: git-send-email.perl:1730
 msgid "Dry-OK. Log says:\n"
 msgstr ""
 
-#: git-send-email.perl:1711
+#: git-send-email.perl:1730
 msgid "OK. Log says:\n"
 msgstr ""
 
-#: git-send-email.perl:1730
+#: git-send-email.perl:1749
 msgid "Result: "
 msgstr ""
 
-#: git-send-email.perl:1733
+#: git-send-email.perl:1752
 msgid "Result: OK\n"
 msgstr ""
 
-#: git-send-email.perl:1757
+#: git-send-email.perl:1762
 #, perl-format
 msgid "can't open file %s"
 msgstr ""
 
-#: git-send-email.perl:1805 git-send-email.perl:1825
+#: git-send-email.perl:1810 git-send-email.perl:1830
 #, perl-format
 msgid "(mbox) Adding cc: %s from line '%s'\n"
 msgstr ""
 
-#: git-send-email.perl:1811
+#: git-send-email.perl:1816
 #, perl-format
 msgid "(mbox) Adding to: %s from line '%s'\n"
 msgstr ""
 
-#: git-send-email.perl:1868
+#: git-send-email.perl:1873
 #, perl-format
 msgid "(non-mbox) Adding cc: %s from line '%s'\n"
 msgstr ""
 
-#: git-send-email.perl:1903
+#: git-send-email.perl:1908
 #, perl-format
 msgid "(body) Adding cc: %s from line '%s'\n"
 msgstr ""
 
-#: git-send-email.perl:2031
+#: git-send-email.perl:2030
 #, perl-format
 msgid "(%s) Could not execute '%s'"
 msgstr ""
 
-#: git-send-email.perl:2038
+#: git-send-email.perl:2037
 #, perl-format
 msgid "(%s) Adding %s: %s from: '%s'\n"
 msgstr ""
 
-#: git-send-email.perl:2042
+#: git-send-email.perl:2041
 #, perl-format
 msgid "(%s) failed to close pipe to '%s'"
 msgstr ""
 
-#: git-send-email.perl:2072
+#: git-send-email.perl:2071
 msgid "cannot send message as 7bit"
 msgstr ""
 
-#: git-send-email.perl:2080
+#: git-send-email.perl:2079
 msgid "invalid transfer encoding"
 msgstr ""
 
-#: git-send-email.perl:2131
+#: git-send-email.perl:2130
 #, perl-format
 msgid ""
 "fatal: %s: rejected by %s hook\n"
@@ -26373,25 +26373,25 @@ msgid ""
 "warning: no patches were sent\n"
 msgstr ""
 
-#: git-send-email.perl:2141 git-send-email.perl:2194 git-send-email.perl:2204
+#: git-send-email.perl:2140 git-send-email.perl:2193 git-send-email.perl:2203
 #, perl-format
 msgid "unable to open %s: %s\n"
 msgstr ""
 
-#: git-send-email.perl:2144
+#: git-send-email.perl:2143
 #, perl-format
 msgid ""
 "fatal: %s:%d is longer than 998 characters\n"
 "warning: no patches were sent\n"
 msgstr ""
 
-#: git-send-email.perl:2162
+#: git-send-email.perl:2161
 #, perl-format
 msgid "Skipping %s with backup suffix '%s'.\n"
 msgstr ""
 
 #. TRANSLATORS: please keep "[y|N]" as is.
-#: git-send-email.perl:2166
+#: git-send-email.perl:2165
 #, perl-format
 msgid "Do you really want to send %s? [y|N]: "
 msgstr ""
