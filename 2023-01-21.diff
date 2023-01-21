@@ -1,0 +1,477 @@
+
+
+#################### Sat, 21 Jan 2023 01:20:51 +0000 ####################
+
+--- po/git.pot.old	2023-01-21 01:20:51.737546845 +0000
++++ po/git.pot.new	2023-01-21 01:20:51.837548231 +0000
+@@ -1187,6 +1187,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "'%s' and '%s' cannot be used together"
++msgstr ""
++
++#, c-format
+ msgid "'%s' and pathspec arguments cannot be used together"
+ msgstr ""
+ 
+@@ -2046,6 +2050,9 @@
+ msgid "<char>"
+ msgstr ""
+ 
++msgid "<commit-ish>"
++msgstr ""
++
+ msgid "<count>"
+ msgstr ""
+ 
+@@ -2121,6 +2128,9 @@
+ msgid "<text>"
+ msgstr ""
+ 
++msgid "<tree-ish>"
++msgstr ""
++
+ msgid "<version>[,<offset>]"
+ msgstr ""
+ 
+@@ -2521,6 +2531,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Both original and appended notes are empty in %s, do nothing\n"
++msgstr ""
++
++#, c-format
+ msgid "Branch %s is being bisected at %s"
+ msgstr ""
+ 
+@@ -3195,10 +3209,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "Could not run 'git status --porcelain=2' in submodule %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "Could not set SSL backend to '%s': already set"
+ msgstr ""
+ 
+@@ -4064,7 +4074,7 @@
+ "If you meant to check out a remote tracking branch on, e.g. 'origin',\n"
+ "you can do so by fully qualifying the name with the --track option:\n"
+ "\n"
+-"    git checkout --track origin/<name>\n"
++"    git switch --track origin/<name>\n"
+ "\n"
+ "If you'd like to always have checkouts of an ambiguous <name> prefer\n"
+ "one remote, e.g. the 'origin' remote, consider setting\n"
+@@ -4072,6 +4082,15 @@
+ msgstr ""
+ 
+ #, c-format
++msgid ""
++"If you meant to create a worktree containing a new orphan branch\n"
++"(branch with no commits) for this repository, you can do so\n"
++"using the --orphan option:\n"
++"\n"
++"\tgit worktree add --orphan %s %s\n"
++msgstr ""
++
++#, c-format
+ msgid "If you prefer to skip this patch, run \"%s --skip\" instead."
+ msgstr ""
+ 
+@@ -6884,7 +6903,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "You may try updating the submodules using 'git checkout %s && git submodule update --init'"
++msgid "You may try updating the submodules using 'git checkout --no-recurse-submodules %s && git submodule update --init'"
+ msgstr ""
+ 
+ msgid ""
+@@ -7871,9 +7890,6 @@
+ msgid "be quiet"
+ msgstr ""
+ 
+-msgid "be quiet only use git_env_*() value as exit code"
+-msgstr ""
+-
+ msgid "be quiet, only report errors"
+ msgstr ""
+ 
+@@ -7911,7 +7927,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "bisect run failed: 'bisect-state %s' exited with error code %d"
++msgid "bisect run failed: 'git bisect %s' exited with error code %d"
+ msgstr ""
+ 
+ #, c-format
+@@ -8310,6 +8326,9 @@
+ msgid "cannot handle %s as a builtin"
+ msgstr ""
+ 
++msgid "cannot handle diff headers with CR/LF line endings"
++msgstr ""
++
+ #, c-format
+ msgid "cannot handle more than %d base. Ignoring %s."
+ msgid_plural "cannot handle more than %d bases. Ignoring %s."
+@@ -8605,9 +8624,6 @@
+ msgid "cannot use --filter with --stdin-packs"
+ msgstr ""
+ 
+-msgid "cannot use --filter without --stdout"
+-msgstr ""
+-
+ msgid "cannot use --max-pack-size with --cruft"
+ msgstr ""
+ 
+@@ -8771,6 +8787,9 @@
+ msgid "closing file '%s'"
+ msgstr ""
+ 
++msgid "closing inotify file descriptor failed"
++msgstr ""
++
+ msgid "cmdline ends with \\"
+ msgstr ""
+ 
+@@ -9070,9 +9089,6 @@
+ msgid "corrupt bitmap lookup table: xor chain exceeds entry count"
+ msgstr ""
+ 
+-msgid "corrupt commit"
+-msgstr ""
+-
+ #, c-format
+ msgid "corrupt ewah bitmap: commit index %u out of range"
+ msgstr ""
+@@ -9101,9 +9117,6 @@
+ msgid "corrupt patch for submodule %s"
+ msgstr ""
+ 
+-msgid "corrupt tag"
+-msgstr ""
+-
+ msgid "corrupted bitmap index (too small)"
+ msgstr ""
+ 
+@@ -9505,6 +9518,10 @@
+ msgid "could not parse author script"
+ msgstr ""
+ 
++#, c-format
++msgid "could not parse bundle list key %s with value '%s'"
++msgstr ""
++
+ msgid "could not parse colored diff"
+ msgstr ""
+ 
+@@ -9654,6 +9671,9 @@
+ msgid "could not read ref %s"
+ msgstr ""
+ 
++msgid "could not read stdin"
++msgstr ""
++
+ #, c-format
+ msgid "could not read symlink %s"
+ msgstr ""
+@@ -9749,6 +9769,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "could not run 'git status --porcelain=2' in submodule %s"
++msgstr ""
++
++#, c-format
+ msgid "could not run 'git status' in submodule '%s'"
+ msgstr ""
+ 
+@@ -9759,6 +9783,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "could not send '%s'"
++msgstr ""
++
++#, c-format
+ msgid "could not send '%s' command to fsmonitor--daemon"
+ msgstr ""
+ 
+@@ -10086,9 +10114,6 @@
+ msgid "deepen history of shallow repository based on time"
+ msgstr ""
+ 
+-msgid "default for git_env_*(...) to fall back on"
+-msgstr ""
+-
+ msgid "default for recursive fetching of submodules (lower priority than config files)"
+ msgstr ""
+ 
+@@ -10259,6 +10284,10 @@
+ msgid "did you mean `--%s` (with two dashes)?"
+ msgstr ""
+ 
++#, c-format
++msgid "diff ended prematurely (-%d/+%d)"
++msgstr ""
++
+ msgid "different"
+ msgstr ""
+ 
+@@ -11134,6 +11163,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "failed to fetch bundles from '%s'"
++msgstr ""
++
++#, c-format
+ msgid "failed to fetch objects from bundle URI '%s'"
+ msgstr ""
+ 
+@@ -11443,6 +11476,9 @@
+ msgid "failed to store link to current notes ref (%s)"
+ msgstr ""
+ 
++msgid "failed to store maximum creation token"
++msgstr ""
++
+ #, c-format
+ msgid "failed to symlink '%s': %s"
+ msgstr ""
+@@ -11652,6 +11688,10 @@
+ msgid "file at URI '%s' is not a bundle or bundle list"
+ msgstr ""
+ 
++#, c-format
++msgid "file downloaded from '%s' is not a bundle"
++msgstr ""
++
+ msgid "file to read from"
+ msgstr ""
+ 
+@@ -12107,10 +12147,10 @@
+ msgid "git cat-file <type> <object>"
+ msgstr ""
+ 
+-msgid "git check-attr --stdin [-z] [-a | --all | <attr>...]"
++msgid "git check-attr --stdin [-z] [--source <tree-ish>] [-a | --all | <attr>...]"
+ msgstr ""
+ 
+-msgid "git check-attr [-a | --all | <attr>...] [--] <pathname>..."
++msgid "git check-attr [--source <tree-ish>] [-a | --all | <attr>...] [--] <pathname>..."
+ msgstr ""
+ 
+ msgid "git check-mailmap [<options>] <contact>..."
+@@ -12233,9 +12273,6 @@
+ msgid "git difftool [<options>] [<commit> [<commit>]] [--] [<path>...]"
+ msgstr ""
+ 
+-msgid "git env--helper --type=[bool|ulong] <options> <env-var>"
+-msgstr ""
+-
+ msgid "git fast-export [<rev-list-opts>]"
+ msgstr ""
+ 
+@@ -12861,7 +12898,12 @@
+ 
+ msgid ""
+ "git worktree add [-f] [--detach] [--checkout] [--lock [--reason <string>]]\n"
+-"                 [-b <new-branch>] <path> [<commit-ish>]"
++"                 [(-b | -B) <new-branch>] <path> [<commit-ish>]"
++msgstr ""
++
++msgid ""
++"git worktree add [-f] [--lock [--reason <string>]]\n"
++"                 --orphan <new-branch> <path>"
+ msgstr ""
+ 
+ msgid "git worktree list [-v | --porcelain [-z]]"
+@@ -12956,6 +12998,10 @@
+ msgid "got %s (%d) %s"
+ msgstr ""
+ 
++#, c-format
++msgid "got bad config --config=%s"
++msgstr ""
++
+ msgid "gpg failed to sign the data"
+ msgstr ""
+ 
+@@ -13428,6 +13474,9 @@
+ msgid "insane in-reply-to: %s"
+ msgstr ""
+ 
++msgid "insert paragraph break before appending to an existing note"
++msgstr ""
++
+ msgid "instead of applying the patch, output a summary for the input"
+ msgstr ""
+ 
+@@ -13911,6 +13960,9 @@
+ msgid "leave the rejected hunks in corresponding *.rej files"
+ msgstr ""
+ 
++msgid "legacy use of lone '-m' detected: please use '--diff-merges=on,hide' instead, as '-m' may imply '-p'"
++msgstr ""
++
+ msgid "let files replace directories and vice-versa"
+ msgstr ""
+ 
+@@ -14970,6 +15022,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "not an mbox: '%s'"
++msgstr ""
++
++#, c-format
+ msgid "not copying templates from '%s': %s"
+ msgstr ""
+ 
+@@ -15162,6 +15218,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "object fails fsck: %s"
++msgstr ""
++
++#, c-format
+ msgid "object file %s is empty"
+ msgstr ""
+ 
+@@ -15268,6 +15328,9 @@
+ msgid "only one config file at a time"
+ msgstr ""
+ 
++msgid "only one mbox can be read from stdin"
++msgstr ""
++
+ msgid "only one pattern can be given with -l"
+ msgstr ""
+ 
+@@ -15375,14 +15438,6 @@
+ msgid "option `%s' requires a value"
+ msgstr ""
+ 
+-#, c-format
+-msgid "option `--default' expects a boolean value with `--type=bool`, not `%s`"
+-msgstr ""
+-
+-#, c-format
+-msgid "option `--default' expects an unsigned long value with `--type=ulong`, not `%s`"
+-msgstr ""
+-
+ msgid "option diff-algorithm accepts \"myers\", \"minimal\", \"patience\" and \"histogram\""
+ msgstr ""
+ 
+@@ -15856,6 +15911,9 @@
+ msgid "please use two different terms"
+ msgstr ""
+ 
++msgid "polling inotify message stream failed"
++msgstr ""
++
+ msgid "populate log with at most <n> entries from shortlog"
+ msgstr ""
+ 
+@@ -16309,6 +16367,9 @@
+ msgid "reading from '%s' beyond a symbolic link"
+ msgstr ""
+ 
++msgid "reading inotify message stream failed"
++msgstr ""
++
+ msgid "reading patches from stdin/tty..."
+ msgstr ""
+ 
+@@ -16462,6 +16523,9 @@
+ msgid "refusing to %s notes in %s (outside of refs/notes/)"
+ msgstr ""
+ 
++msgid "refusing to create malformed object"
++msgstr ""
++
+ #, c-format
+ msgid "refusing to create/use '%s' in another submodule's git dir"
+ msgstr ""
+@@ -17161,6 +17225,10 @@
+ msgid "set upstream for git pull/status"
+ msgstr ""
+ 
++#, c-format
++msgid "setmntent('%s') failed"
++msgstr ""
++
+ msgid "sets the submodule's name to the given string instead of defaulting to its path"
+ msgstr ""
+ 
+@@ -17769,6 +17837,10 @@
+ msgid "stash staged changes only"
+ msgstr ""
+ 
++#, c-format
++msgid "statfs('%s') failed"
++msgstr ""
++
+ #. TRANSLATORS: please do not translate the command names
+ #. 'status', 'update', 'revert', etc.
+ msgid ""
+@@ -17792,6 +17864,10 @@
+ msgid "status: waiting for good commit(s), bad commit known\n"
+ msgstr ""
+ 
++#, c-format
++msgid "statvfs('%s') failed"
++msgstr ""
++
+ msgid "stdin has NUL-terminated arguments"
+ msgstr ""
+ 
+@@ -17869,6 +17945,12 @@
+ msgid "submodule git dir '%s' is inside git dir '%.*s'"
+ msgstr ""
+ 
++msgid "submodule status failed"
++msgstr ""
++
++msgid "submodule.diffjobs cannot be negative"
++msgstr ""
++
+ msgid "suboptimal pack - out of memory"
+ msgstr ""
+ 
+@@ -19855,6 +19937,9 @@
+ msgid "whether the initial clone should follow the shallow recommendation"
+ msgstr ""
+ 
++msgid "which tree-ish to check attributes at"
++msgstr ""
++
+ msgid "which tree-ish to checkout from"
+ msgstr ""
+ 
+@@ -19897,9 +19982,6 @@
+ msgid "with -a, repack unreachable objects"
+ msgstr ""
+ 
+-msgid "won't bisect on cg-seek'ed tree"
+-msgstr ""
+-
+ msgid "work on the current change (see also: git help everyday)"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-pot --------------------
+
+level=error msg="config variable 'submodule.diffJobs' in manpage does not match string in pot file:"
+level=error msg="    >> msgid   \"submodule.diffjobs cannot be negative\""
+
+ERROR: fail to execute "git-po-helper check-pot"
