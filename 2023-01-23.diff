@@ -1,0 +1,68 @@
+
+
+#################### Mon, 23 Jan 2023 23:57:35 +0000 ####################
+
+--- po/git.pot.old	2023-01-23 23:57:35.889509486 +0000
++++ po/git.pot.new	2023-01-23 23:57:35.985509130 +0000
+@@ -7582,6 +7582,12 @@
+ msgid "apply options and merge options cannot be used together"
+ msgstr ""
+ 
++msgid "apply options are incompatible with rebase.autosquash.  Consider adding --no-autosquash"
++msgstr ""
++
++msgid "apply options are incompatible with rebase.updateRefs.  Consider adding --no-update-refs"
++msgstr ""
++
+ msgid "apply partial clone filters to submodules"
+ msgstr ""
+ 
+@@ -9070,9 +9076,6 @@
+ msgid "corrupt bitmap lookup table: xor chain exceeds entry count"
+ msgstr ""
+ 
+-msgid "corrupt commit"
+-msgstr ""
+-
+ #, c-format
+ msgid "corrupt ewah bitmap: commit index %u out of range"
+ msgstr ""
+@@ -9101,9 +9104,6 @@
+ msgid "corrupt patch for submodule %s"
+ msgstr ""
+ 
+-msgid "corrupt tag"
+-msgstr ""
+-
+ msgid "corrupted bitmap index (too small)"
+ msgstr ""
+ 
+@@ -15156,6 +15156,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "object fails fsck: %s"
++msgstr ""
++
++#, c-format
+ msgid "object file %s is empty"
+ msgstr ""
+ 
+@@ -16448,6 +16452,9 @@
+ msgid "refusing to %s notes in %s (outside of refs/notes/)"
+ msgstr ""
+ 
++msgid "refusing to create malformed object"
++msgstr ""
++
+ #, c-format
+ msgid "refusing to create/use '%s' in another submodule's git dir"
+ msgstr ""
+
+
+-------------------- git-po-helper check-pot --------------------
+
+level=error msg="config variable 'rebase.autoSquash' in manpage does not match string in pot file:"
+level=error msg="    >> msgid   \"apply options are incompatible with rebase.autosquash.  Consider adding --no-autosquash\""
+
+ERROR: fail to execute "git-po-helper check-pot"
