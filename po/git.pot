@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2023-02-08 22:57+0000\n"
+"POT-Creation-Date: 2023-02-08 23:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -821,7 +821,7 @@ msgstr ""
 #: builtin/rev-list.c:552 builtin/show-branch.c:712 builtin/show-branch.c:717
 #: builtin/stash.c:1756 builtin/stash.c:1759 builtin/submodule--helper.c:1196
 #: builtin/submodule--helper.c:2938 builtin/tag.c:524 builtin/tag.c:570
-#: builtin/worktree.c:889 parse-options.c:1222 range-diff.c:886 revision.c:2401
+#: builtin/worktree.c:889 parse-options.c:1222 range-diff.c:561 revision.c:2401
 #: revision.c:2405 revision.c:2414 revision.c:2419 revision.c:2648
 #: revision.c:3000 revision.c:3004 revision.c:3012 revision.c:3015
 #: revision.c:3017
@@ -2189,8 +2189,8 @@ msgstr ""
 msgid "invalid value for '%s': '%s'"
 msgstr ""
 
-#: builtin/am.c:291 builtin/commit.c:848 builtin/merge.c:1159 range-diff.c:114
-#: sequencer.c:518 sequencer.c:1978 sequencer.c:3185 sequencer.c:3620
+#: builtin/am.c:291 builtin/commit.c:848 builtin/merge.c:1159 sequencer.c:518
+#: sequencer.c:1978 sequencer.c:3185 sequencer.c:3620
 #, c-format
 msgid "could not read '%s'"
 msgstr ""
@@ -4263,7 +4263,7 @@ msgid ""
 "If you meant to check out a remote tracking branch on, e.g. 'origin',\n"
 "you can do so by fully qualifying the name with the --track option:\n"
 "\n"
-"    git switch --track origin/<name>\n"
+"    git checkout --track origin/<name>\n"
 "\n"
 "If you'd like to always have checkouts of an ambiguous <name> prefer\n"
 "one remote, e.g. the 'origin' remote, consider setting\n"
@@ -21616,60 +21616,38 @@ msgstr ""
 msgid "Removing duplicate objects"
 msgstr ""
 
-#: range-diff.c:112
-msgid "could not read stdin"
-msgstr ""
-
-#: range-diff.c:156
-msgid "cannot handle diff headers with CR/LF line endings"
-msgstr ""
-
-#: range-diff.c:161 range-diff.c:444
-#, c-format
-msgid "could not parse git header '%.*s'"
-msgstr ""
-
-#: range-diff.c:308
-#, c-format
-msgid "diff ended prematurely (-%d/+%d)"
-msgstr ""
-
-#: range-diff.c:380
+#: range-diff.c:68
 msgid "could not start `log`"
 msgstr ""
 
-#: range-diff.c:382
+#: range-diff.c:70
 msgid "could not read `log` output"
 msgstr ""
 
-#: range-diff.c:410 sequencer.c:5887
+#: range-diff.c:98 sequencer.c:5887
 #, c-format
 msgid "could not parse commit '%s'"
 msgstr ""
 
-#: range-diff.c:421
+#: range-diff.c:109
 #, c-format
 msgid ""
 "could not parse first line of `log` output: did not start with 'commit ': "
 "'%s'"
 msgstr ""
 
-#: range-diff.c:618
+#: range-diff.c:132
+#, c-format
+msgid "could not parse git header '%.*s'"
+msgstr ""
+
+#: range-diff.c:306
 msgid "failed to generate diff"
 msgstr ""
 
-#: range-diff.c:889
-msgid "only one mbox can be read from stdin"
-msgstr ""
-
-#: range-diff.c:892 range-diff.c:894
+#: range-diff.c:564 range-diff.c:566
 #, c-format
 msgid "could not parse log for '%s'"
-msgstr ""
-
-#: range-diff.c:920
-#, c-format
-msgid "not an mbox: '%s'"
 msgstr ""
 
 #: read-cache.c:743
