@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2023-02-24 20:57+0000\n"
+"POT-Creation-Date: 2023-02-24 23:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -784,10 +784,10 @@ msgstr ""
 msgid "unclosed quote"
 msgstr ""
 
-#: alias.c:55 builtin/cat-file.c:1070 builtin/notes.c:376 builtin/notes.c:431
-#: builtin/notes.c:509 builtin/notes.c:521 builtin/notes.c:598
-#: builtin/notes.c:665 builtin/notes.c:815 builtin/notes.c:967
-#: builtin/notes.c:989 builtin/prune-packed.c:25 builtin/receive-pack.c:2494
+#: alias.c:55 builtin/cat-file.c:1070 builtin/notes.c:396 builtin/notes.c:454
+#: builtin/notes.c:533 builtin/notes.c:545 builtin/notes.c:625
+#: builtin/notes.c:693 builtin/notes.c:843 builtin/notes.c:995
+#: builtin/notes.c:1017 builtin/prune-packed.c:25 builtin/receive-pack.c:2494
 #: builtin/tag.c:590
 msgid "too many arguments"
 msgstr ""
@@ -1473,7 +1473,7 @@ msgstr ""
 msgid "git archive --remote <repo> [--exec <cmd>] --list"
 msgstr ""
 
-#: archive.c:189 archive.c:344 builtin/gc.c:505 builtin/notes.c:240
+#: archive.c:189 archive.c:344 builtin/gc.c:505 builtin/notes.c:260
 #: builtin/tag.c:577
 #, c-format
 msgid "cannot read '%s'"
@@ -1549,7 +1549,7 @@ msgstr ""
 #: builtin/fast-export.c:1182 builtin/fast-export.c:1184
 #: builtin/fast-export.c:1188 builtin/gc.c:1492 builtin/gc.c:1558
 #: builtin/grep.c:974 builtin/hash-object.c:107 builtin/ls-files.c:740
-#: builtin/ls-files.c:743 builtin/notes.c:412 builtin/notes.c:578
+#: builtin/ls-files.c:743 builtin/notes.c:433 builtin/notes.c:603
 #: builtin/read-tree.c:119 parse-options.h:207
 msgid "file"
 msgstr ""
@@ -1601,7 +1601,7 @@ msgid "retrieve the archive from remote repository <repo>"
 msgstr ""
 
 #: archive.c:626 builtin/archive.c:91 builtin/difftool.c:711
-#: builtin/notes.c:498
+#: builtin/notes.c:522
 msgid "command"
 msgstr ""
 
@@ -3448,8 +3448,8 @@ msgstr ""
 msgid "list branches in columns"
 msgstr ""
 
-#: builtin/branch.c:718 builtin/for-each-ref.c:45 builtin/notes.c:415
-#: builtin/notes.c:418 builtin/notes.c:581 builtin/notes.c:584
+#: builtin/branch.c:718 builtin/for-each-ref.c:45 builtin/notes.c:436
+#: builtin/notes.c:439 builtin/notes.c:606 builtin/notes.c:609
 #: builtin/tag.c:474
 msgid "object"
 msgstr ""
@@ -5275,7 +5275,7 @@ msgid "id of a parent commit object"
 msgstr ""
 
 #: builtin/commit-tree.c:111 builtin/commit.c:1636 builtin/merge.c:286
-#: builtin/notes.c:409 builtin/notes.c:575 builtin/stash.c:1729
+#: builtin/notes.c:430 builtin/notes.c:600 builtin/stash.c:1729
 #: builtin/tag.c:453
 msgid "message"
 msgstr ""
@@ -9694,7 +9694,7 @@ msgstr ""
 msgid "--merge-base is incompatible with --stdin"
 msgstr ""
 
-#: builtin/merge-tree.c:565 builtin/merge-tree.c:581 builtin/notes.c:309
+#: builtin/merge-tree.c:565 builtin/merge-tree.c:581 builtin/notes.c:329
 #, c-format
 msgid "malformed input line: '%s'."
 msgstr ""
@@ -9772,7 +9772,7 @@ msgstr ""
 msgid "verify that the named commit has a valid GPG signature"
 msgstr ""
 
-#: builtin/merge.c:282 builtin/notes.c:787 builtin/pull.c:174
+#: builtin/merge.c:282 builtin/notes.c:815 builtin/pull.c:174
 #: builtin/rebase.c:1179 builtin/revert.c:116
 msgid "strategy"
 msgstr ""
@@ -10318,153 +10318,154 @@ msgstr ""
 msgid "dereference tags in the input (internal use)"
 msgstr ""
 
-#: builtin/notes.c:29
+#: builtin/notes.c:30
 msgid "git notes [--ref <notes-ref>] [list [<object>]]"
 msgstr ""
 
-#: builtin/notes.c:30
-msgid ""
-"git notes [--ref <notes-ref>] add [-f] [--allow-empty] [-m <msg> | -F <file> "
-"| (-c | -C) <object>] [<object>]"
-msgstr ""
-
 #: builtin/notes.c:31
-msgid "git notes [--ref <notes-ref>] copy [-f] <from-object> <to-object>"
+msgid ""
+"git notes [--ref <notes-ref>] add [-f] [--allow-empty] [--"
+"separator=<paragraph-break>] [-m <msg> | -F <file> | (-c | -C) <object>] "
+"[<object>]"
 msgstr ""
 
 #: builtin/notes.c:32
-msgid ""
-"git notes [--ref <notes-ref>] append [--allow-empty] [-m <msg> | -F <file> | "
-"(-c | -C) <object>] [<object>]"
+msgid "git notes [--ref <notes-ref>] copy [-f] <from-object> <to-object>"
 msgstr ""
 
 #: builtin/notes.c:33
-msgid "git notes [--ref <notes-ref>] edit [--allow-empty] [<object>]"
+msgid ""
+"git notes [--ref <notes-ref>] append [--allow-empty] [--separator=<paragraph-"
+"break>] [-m <msg> | -F <file> | (-c | -C) <object>] [<object>]"
 msgstr ""
 
 #: builtin/notes.c:34
-msgid "git notes [--ref <notes-ref>] show [<object>]"
+msgid "git notes [--ref <notes-ref>] edit [--allow-empty] [<object>]"
 msgstr ""
 
 #: builtin/notes.c:35
+msgid "git notes [--ref <notes-ref>] show [<object>]"
+msgstr ""
+
+#: builtin/notes.c:36
 msgid ""
 "git notes [--ref <notes-ref>] merge [-v | -q] [-s <strategy>] <notes-ref>"
 msgstr ""
 
-#: builtin/notes.c:38
+#: builtin/notes.c:39
 msgid "git notes [--ref <notes-ref>] remove [<object>...]"
 msgstr ""
 
-#: builtin/notes.c:39
+#: builtin/notes.c:40
 msgid "git notes [--ref <notes-ref>] prune [-n] [-v]"
 msgstr ""
 
-#: builtin/notes.c:40
+#: builtin/notes.c:41
 msgid "git notes [--ref <notes-ref>] get-ref"
 msgstr ""
 
-#: builtin/notes.c:45
+#: builtin/notes.c:46
 msgid "git notes [list [<object>]]"
 msgstr ""
 
-#: builtin/notes.c:50
+#: builtin/notes.c:51
 msgid "git notes add [<options>] [<object>]"
 msgstr ""
 
-#: builtin/notes.c:55
+#: builtin/notes.c:56
 msgid "git notes copy [<options>] <from-object> <to-object>"
 msgstr ""
 
-#: builtin/notes.c:56
+#: builtin/notes.c:57
 msgid "git notes copy --stdin [<from-object> <to-object>]..."
 msgstr ""
 
-#: builtin/notes.c:61
+#: builtin/notes.c:62
 msgid "git notes append [<options>] [<object>]"
 msgstr ""
 
-#: builtin/notes.c:66
+#: builtin/notes.c:67
 msgid "git notes edit [<object>]"
 msgstr ""
 
-#: builtin/notes.c:71
+#: builtin/notes.c:72
 msgid "git notes show [<object>]"
 msgstr ""
 
-#: builtin/notes.c:76
+#: builtin/notes.c:77
 msgid "git notes merge [<options>] <notes-ref>"
 msgstr ""
 
-#: builtin/notes.c:77
+#: builtin/notes.c:78
 msgid "git notes merge --commit [<options>]"
 msgstr ""
 
-#: builtin/notes.c:78
+#: builtin/notes.c:79
 msgid "git notes merge --abort [<options>]"
 msgstr ""
 
-#: builtin/notes.c:83
+#: builtin/notes.c:84
 msgid "git notes remove [<object>]"
 msgstr ""
 
-#: builtin/notes.c:88
+#: builtin/notes.c:89
 msgid "git notes prune [<options>]"
 msgstr ""
 
-#: builtin/notes.c:98
+#: builtin/notes.c:99
 msgid "Write/edit the notes for the following object:"
 msgstr ""
 
-#: builtin/notes.c:151
+#: builtin/notes.c:152
 #, c-format
 msgid "unable to start 'show' for object '%s'"
 msgstr ""
 
-#: builtin/notes.c:155
+#: builtin/notes.c:156
 msgid "could not read 'show' output"
 msgstr ""
 
-#: builtin/notes.c:163
+#: builtin/notes.c:164
 #, c-format
 msgid "failed to finish 'show' for object '%s'"
 msgstr ""
 
-#: builtin/notes.c:196
+#: builtin/notes.c:197
 msgid "please supply the note contents using either -m or -F option"
 msgstr ""
 
-#: builtin/notes.c:205
+#: builtin/notes.c:206
 msgid "unable to write note object"
 msgstr ""
 
-#: builtin/notes.c:208
+#: builtin/notes.c:209
 #, c-format
 msgid "the note contents have been left in %s"
 msgstr ""
 
-#: builtin/notes.c:242 builtin/tag.c:580
+#: builtin/notes.c:262 builtin/tag.c:580
 #, c-format
 msgid "could not open or read '%s'"
 msgstr ""
 
-#: builtin/notes.c:263 builtin/notes.c:313 builtin/notes.c:315
-#: builtin/notes.c:383 builtin/notes.c:438 builtin/notes.c:526
-#: builtin/notes.c:531 builtin/notes.c:610 builtin/notes.c:672
+#: builtin/notes.c:283 builtin/notes.c:333 builtin/notes.c:335
+#: builtin/notes.c:403 builtin/notes.c:462 builtin/notes.c:550
+#: builtin/notes.c:555 builtin/notes.c:639 builtin/notes.c:700
 #, c-format
 msgid "failed to resolve '%s' as a valid ref."
 msgstr ""
 
-#: builtin/notes.c:265
+#: builtin/notes.c:285
 #, c-format
 msgid "failed to read object '%s'."
 msgstr ""
 
-#: builtin/notes.c:268
+#: builtin/notes.c:288
 #, c-format
 msgid "cannot read note data from non-blob object '%s'."
 msgstr ""
 
-#: builtin/notes.c:324
+#: builtin/notes.c:344
 #, c-format
 msgid "failed to copy notes from '%s' to '%s'"
 msgstr ""
@@ -10472,179 +10473,187 @@ msgstr ""
 #. TRANSLATORS: the first %s will be replaced by a git
 #. notes command: 'add', 'merge', 'remove', etc.
 #.
-#: builtin/notes.c:356
+#: builtin/notes.c:376
 #, c-format
 msgid "refusing to %s notes in %s (outside of refs/notes/)"
 msgstr ""
 
-#: builtin/notes.c:389 builtin/notes.c:678
+#: builtin/notes.c:409 builtin/notes.c:706
 #, c-format
 msgid "no note found for object %s."
 msgstr ""
 
-#: builtin/notes.c:410 builtin/notes.c:576
+#: builtin/notes.c:431 builtin/notes.c:601
 msgid "note contents as a string"
 msgstr ""
 
-#: builtin/notes.c:413 builtin/notes.c:579
+#: builtin/notes.c:434 builtin/notes.c:604
 msgid "note contents in a file"
 msgstr ""
 
-#: builtin/notes.c:416 builtin/notes.c:582
+#: builtin/notes.c:437 builtin/notes.c:607
 msgid "reuse and edit specified note object"
 msgstr ""
 
-#: builtin/notes.c:419 builtin/notes.c:585
+#: builtin/notes.c:440 builtin/notes.c:610
 msgid "reuse specified note object"
 msgstr ""
 
-#: builtin/notes.c:422 builtin/notes.c:588
+#: builtin/notes.c:443 builtin/notes.c:613
 msgid "allow storing empty note"
 msgstr ""
 
-#: builtin/notes.c:423 builtin/notes.c:496
+#: builtin/notes.c:444 builtin/notes.c:520
 msgid "replace existing notes"
 msgstr ""
 
-#: builtin/notes.c:448
+#: builtin/notes.c:445 builtin/notes.c:614
+msgid "separator"
+msgstr ""
+
+#: builtin/notes.c:446 builtin/notes.c:615
+msgid "insert <paragraph-break> between paragraphs"
+msgstr ""
+
+#: builtin/notes.c:472
 #, c-format
 msgid ""
 "Cannot add notes. Found existing notes for object %s. Use '-f' to overwrite "
 "existing notes"
 msgstr ""
 
-#: builtin/notes.c:463 builtin/notes.c:544
+#: builtin/notes.c:487 builtin/notes.c:568
 #, c-format
 msgid "Overwriting existing notes for object %s\n"
 msgstr ""
 
-#: builtin/notes.c:475 builtin/notes.c:637 builtin/notes.c:906
+#: builtin/notes.c:499 builtin/notes.c:665 builtin/notes.c:934
 #, c-format
 msgid "Removing note for object %s\n"
 msgstr ""
 
-#: builtin/notes.c:497
+#: builtin/notes.c:521
 msgid "read objects from stdin"
 msgstr ""
 
-#: builtin/notes.c:499
+#: builtin/notes.c:523
 msgid "load rewriting config for <command> (implies --stdin)"
 msgstr ""
 
-#: builtin/notes.c:517
+#: builtin/notes.c:541
 msgid "too few arguments"
 msgstr ""
 
-#: builtin/notes.c:538
+#: builtin/notes.c:562
 #, c-format
 msgid ""
 "Cannot copy notes. Found existing notes for object %s. Use '-f' to overwrite "
 "existing notes"
 msgstr ""
 
-#: builtin/notes.c:550
+#: builtin/notes.c:574
 #, c-format
 msgid "missing notes on source object %s. Cannot copy."
 msgstr ""
 
-#: builtin/notes.c:603
+#: builtin/notes.c:632
 #, c-format
 msgid ""
 "The -m/-F/-c/-C options have been deprecated for the 'edit' subcommand.\n"
 "Please use 'git notes add -f -m/-F/-c/-C' instead.\n"
 msgstr ""
 
-#: builtin/notes.c:698
+#: builtin/notes.c:726
 msgid "failed to delete ref NOTES_MERGE_PARTIAL"
 msgstr ""
 
-#: builtin/notes.c:700
+#: builtin/notes.c:728
 msgid "failed to delete ref NOTES_MERGE_REF"
 msgstr ""
 
-#: builtin/notes.c:702
+#: builtin/notes.c:730
 msgid "failed to remove 'git notes merge' worktree"
 msgstr ""
 
-#: builtin/notes.c:722
+#: builtin/notes.c:750
 msgid "failed to read ref NOTES_MERGE_PARTIAL"
 msgstr ""
 
-#: builtin/notes.c:724
+#: builtin/notes.c:752
 msgid "could not find commit from NOTES_MERGE_PARTIAL."
 msgstr ""
 
-#: builtin/notes.c:726
+#: builtin/notes.c:754
 msgid "could not parse commit from NOTES_MERGE_PARTIAL."
 msgstr ""
 
-#: builtin/notes.c:739
+#: builtin/notes.c:767
 msgid "failed to resolve NOTES_MERGE_REF"
 msgstr ""
 
-#: builtin/notes.c:742
+#: builtin/notes.c:770
 msgid "failed to finalize notes merge"
 msgstr ""
 
-#: builtin/notes.c:768
+#: builtin/notes.c:796
 #, c-format
 msgid "unknown notes merge strategy %s"
 msgstr ""
 
-#: builtin/notes.c:784
+#: builtin/notes.c:812
 msgid "General options"
 msgstr ""
 
-#: builtin/notes.c:786
+#: builtin/notes.c:814
 msgid "Merge options"
 msgstr ""
 
-#: builtin/notes.c:788
+#: builtin/notes.c:816
 msgid ""
 "resolve notes conflicts using the given strategy (manual/ours/theirs/union/"
 "cat_sort_uniq)"
 msgstr ""
 
-#: builtin/notes.c:790
+#: builtin/notes.c:818
 msgid "Committing unmerged notes"
 msgstr ""
 
-#: builtin/notes.c:792
+#: builtin/notes.c:820
 msgid "finalize notes merge by committing unmerged notes"
 msgstr ""
 
-#: builtin/notes.c:794
+#: builtin/notes.c:822
 msgid "Aborting notes merge resolution"
 msgstr ""
 
-#: builtin/notes.c:796
+#: builtin/notes.c:824
 msgid "abort notes merge"
 msgstr ""
 
-#: builtin/notes.c:807
+#: builtin/notes.c:835
 msgid "cannot mix --commit, --abort or -s/--strategy"
 msgstr ""
 
-#: builtin/notes.c:812
+#: builtin/notes.c:840
 msgid "must specify a notes ref to merge"
 msgstr ""
 
-#: builtin/notes.c:836
+#: builtin/notes.c:864
 #, c-format
 msgid "unknown -s/--strategy: %s"
 msgstr ""
 
-#: builtin/notes.c:876
+#: builtin/notes.c:904
 #, c-format
 msgid "a notes merge into %s is already in-progress at %s"
 msgstr ""
 
-#: builtin/notes.c:880
+#: builtin/notes.c:908
 #, c-format
 msgid "failed to store link to current notes ref (%s)"
 msgstr ""
 
-#: builtin/notes.c:882
+#: builtin/notes.c:910
 #, c-format
 msgid ""
 "Automatic notes merge failed. Fix conflicts in %s and commit the result with "
@@ -10652,41 +10661,41 @@ msgid ""
 "abort'.\n"
 msgstr ""
 
-#: builtin/notes.c:901 builtin/tag.c:593
+#: builtin/notes.c:929 builtin/tag.c:593
 #, c-format
 msgid "Failed to resolve '%s' as a valid ref."
 msgstr ""
 
-#: builtin/notes.c:904
+#: builtin/notes.c:932
 #, c-format
 msgid "Object %s has no note\n"
 msgstr ""
 
-#: builtin/notes.c:916
+#: builtin/notes.c:944
 msgid "attempt to remove non-existent note is not an error"
 msgstr ""
 
-#: builtin/notes.c:919
+#: builtin/notes.c:947
 msgid "read object names from the standard input"
 msgstr ""
 
-#: builtin/notes.c:958 builtin/prune.c:150 builtin/worktree.c:211
+#: builtin/notes.c:986 builtin/prune.c:150 builtin/worktree.c:211
 msgid "do not remove, show only"
 msgstr ""
 
-#: builtin/notes.c:959
+#: builtin/notes.c:987
 msgid "report pruned notes"
 msgstr ""
 
-#: builtin/notes.c:1002
+#: builtin/notes.c:1030
 msgid "notes-ref"
 msgstr ""
 
-#: builtin/notes.c:1003
+#: builtin/notes.c:1031
 msgid "use notes from <notes-ref>"
 msgstr ""
 
-#: builtin/notes.c:1022 builtin/remote.c:1777 parse-options.c:817
+#: builtin/notes.c:1050 builtin/remote.c:1777 parse-options.c:817
 #, c-format
 msgid "unknown subcommand: `%s'"
 msgstr ""
