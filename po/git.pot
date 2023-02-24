@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2023-02-22 23:57+0000\n"
+"POT-Creation-Date: 2023-02-24 20:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -802,7 +802,7 @@ msgstr ""
 msgid "unrecognized whitespace ignore option '%s'"
 msgstr ""
 
-#: apply.c:138 archive.c:632 builtin/add.c:469 builtin/add.c:471
+#: apply.c:138 archive.c:638 builtin/add.c:469 builtin/add.c:471
 #: builtin/add.c:477 builtin/add.c:489 builtin/branch.c:749
 #: builtin/checkout.c:474 builtin/checkout.c:477 builtin/checkout.c:1678
 #: builtin/checkout.c:1788 builtin/checkout.c:1791 builtin/clone.c:941
@@ -811,7 +811,7 @@ msgstr ""
 #: builtin/diff-tree.c:157 builtin/difftool.c:735 builtin/fast-export.c:1245
 #: builtin/fetch.c:2156 builtin/fetch.c:2177 builtin/fetch.c:2182
 #: builtin/help.c:614 builtin/index-pack.c:1858 builtin/init-db.c:563
-#: builtin/log.c:2071 builtin/log.c:2073 builtin/ls-files.c:874
+#: builtin/log.c:2073 builtin/log.c:2075 builtin/ls-files.c:874
 #: builtin/merge-base.c:163 builtin/merge-base.c:169 builtin/merge.c:1417
 #: builtin/merge.c:1419 builtin/pack-objects.c:4369 builtin/push.c:644
 #: builtin/push.c:682 builtin/push.c:688 builtin/push.c:693
@@ -1494,57 +1494,57 @@ msgstr ""
 msgid "not a valid object name: %s"
 msgstr ""
 
-#: archive.c:478 t/helper/test-cache-tree.c:40
+#: archive.c:480 t/helper/test-cache-tree.c:40
 #, c-format
 msgid "not a tree object: %s"
 msgstr ""
 
-#: archive.c:490
+#: archive.c:492
 msgid "current working directory is untracked"
-msgstr ""
-
-#: archive.c:533
-#, c-format
-msgid "File not found: %s"
 msgstr ""
 
 #: archive.c:535
 #, c-format
+msgid "File not found: %s"
+msgstr ""
+
+#: archive.c:537
+#, c-format
 msgid "Not a regular file: %s"
 msgstr ""
 
-#: archive.c:544
+#: archive.c:546
 #, c-format
 msgid "unclosed quote: '%s'"
 msgstr ""
 
-#: archive.c:547
+#: archive.c:549
 #, c-format
 msgid "missing colon: '%s'"
 msgstr ""
 
-#: archive.c:550
+#: archive.c:552
 #, c-format
 msgid "empty file name: '%s'"
 msgstr ""
 
-#: archive.c:596
+#: archive.c:599
 msgid "fmt"
 msgstr ""
 
-#: archive.c:596
+#: archive.c:599
 msgid "archive format"
 msgstr ""
 
-#: archive.c:597 builtin/log.c:1909 parse-options.h:373
+#: archive.c:600 builtin/log.c:1911 parse-options.h:373
 msgid "prefix"
 msgstr ""
 
-#: archive.c:598
+#: archive.c:601
 msgid "prepend prefix to each pathname in the archive"
 msgstr ""
 
-#: archive.c:599 archive.c:605 builtin/blame.c:889 builtin/blame.c:893
+#: archive.c:602 archive.c:608 builtin/blame.c:889 builtin/blame.c:893
 #: builtin/blame.c:894 builtin/commit-tree.c:116 builtin/config.c:135
 #: builtin/fast-export.c:1181 builtin/fast-export.c:1183
 #: builtin/fast-export.c:1187 builtin/gc.c:1491 builtin/gc.c:1561
@@ -1554,59 +1554,68 @@ msgstr ""
 msgid "file"
 msgstr ""
 
-#: archive.c:600 archive.c:603
+#: archive.c:603 archive.c:606
 msgid "add untracked file to archive"
 msgstr ""
 
-#: archive.c:603
+#: archive.c:606
 msgid "path:content"
 msgstr ""
 
-#: archive.c:606 builtin/archive.c:88
+#: archive.c:609 builtin/archive.c:88
 msgid "write the archive to this file"
 msgstr ""
 
-#: archive.c:608
+#: archive.c:611
 msgid "read .gitattributes in working directory"
 msgstr ""
 
-#: archive.c:609
+#: archive.c:612
 msgid "report archived files on stderr"
 msgstr ""
 
-#: archive.c:611
-msgid "set compression level"
+#: archive.c:613 builtin/clone.c:138 builtin/fetch.c:187
+#: builtin/pack-objects.c:4223 builtin/pack-objects.c:4227 builtin/pull.c:216
+msgid "time"
 msgstr ""
 
 #: archive.c:614
+msgid "set modification time of archive entries"
+msgstr ""
+
+#: archive.c:617
+msgid "set compression level"
+msgstr ""
+
+#: archive.c:620
 msgid "list supported archive formats"
 msgstr ""
 
-#: archive.c:616 builtin/archive.c:89 builtin/clone.c:124 builtin/clone.c:127
+#: archive.c:622 builtin/archive.c:89 builtin/clone.c:124 builtin/clone.c:127
 #: builtin/submodule--helper.c:1780 builtin/submodule--helper.c:2672
 msgid "repo"
 msgstr ""
 
-#: archive.c:617 builtin/archive.c:90
+#: archive.c:623 builtin/archive.c:90
 msgid "retrieve the archive from remote repository <repo>"
 msgstr ""
 
-#: archive.c:618 builtin/archive.c:91 builtin/difftool.c:710
+#: archive.c:624 builtin/archive.c:91 builtin/difftool.c:710
 #: builtin/notes.c:496
 msgid "command"
 msgstr ""
 
-#: archive.c:619 builtin/archive.c:92
+#: archive.c:625 builtin/archive.c:92
 msgid "path to the remote git-upload-archive command"
 msgstr ""
 
-#: archive.c:626
+#: archive.c:632
 msgid "Unexpected option --remote"
 msgstr ""
 
-#: archive.c:628 builtin/add.c:492 builtin/add.c:524 builtin/checkout.c:1797
+#: archive.c:634 builtin/add.c:492 builtin/add.c:524 builtin/checkout.c:1797
 #: builtin/clone.c:1122 builtin/clone.c:1125 builtin/commit.c:378
-#: builtin/fast-export.c:1230 builtin/index-pack.c:1854 builtin/log.c:2240
+#: builtin/fast-export.c:1230 builtin/index-pack.c:1854 builtin/log.c:2242
 #: builtin/reset.c:365 builtin/reset.c:425 builtin/rm.c:282
 #: builtin/stash.c:1771 builtin/worktree.c:640 builtin/worktree.c:841
 #: fetch-pack.c:338 http-fetch.c:147 http-fetch.c:156 revision.c:3019
@@ -1614,16 +1623,16 @@ msgstr ""
 msgid "the option '%s' requires '%s'"
 msgstr ""
 
-#: archive.c:630
+#: archive.c:636
 msgid "Unexpected option --output"
 msgstr ""
 
-#: archive.c:654
+#: archive.c:660
 #, c-format
 msgid "Unknown archive format '%s'"
 msgstr ""
 
-#: archive.c:663
+#: archive.c:669
 #, c-format
 msgid "Argument not supported for format '%s': -%d"
 msgstr ""
@@ -1785,8 +1794,8 @@ msgstr ""
 msgid "--reverse and --first-parent together require specified latest commit"
 msgstr ""
 
-#: blame.c:2805 builtin/commit.c:1132 builtin/log.c:497 builtin/log.c:1152
-#: builtin/log.c:1761 builtin/log.c:2196 builtin/log.c:2493 builtin/merge.c:431
+#: blame.c:2805 builtin/commit.c:1132 builtin/log.c:497 builtin/log.c:1154
+#: builtin/log.c:1763 builtin/log.c:2198 builtin/log.c:2495 builtin/merge.c:431
 #: builtin/pack-objects.c:3407 builtin/pack-objects.c:3565
 #: builtin/pack-objects.c:4048 builtin/pack-objects.c:4063
 #: builtin/shortlog.c:267 midx.c:1114 pack-bitmap.c:1120 pack-bitmap.c:2013
@@ -2044,7 +2053,7 @@ msgid "dry run"
 msgstr ""
 
 #: builtin/add.c:330 builtin/check-ignore.c:22 builtin/commit.c:1497
-#: builtin/count-objects.c:98 builtin/fsck.c:831 builtin/log.c:2444
+#: builtin/count-objects.c:98 builtin/fsck.c:831 builtin/log.c:2446
 #: builtin/mv.c:164 builtin/read-tree.c:123
 msgid "be verbose"
 msgstr ""
@@ -3082,7 +3091,7 @@ msgstr ""
 msgid "ignore whitespace differences"
 msgstr ""
 
-#: builtin/blame.c:888 builtin/log.c:1957
+#: builtin/blame.c:888 builtin/log.c:1959
 msgid "rev"
 msgstr ""
 
@@ -4386,7 +4395,7 @@ msgstr ""
 msgid "perform a 3-way merge with the new branch"
 msgstr ""
 
-#: builtin/checkout.c:1571 builtin/log.c:1944 parse-options.h:379
+#: builtin/checkout.c:1571 builtin/log.c:1946 parse-options.h:379
 msgid "style"
 msgstr ""
 
@@ -4791,11 +4800,6 @@ msgstr ""
 msgid "create a shallow clone of that depth"
 msgstr ""
 
-#: builtin/clone.c:138 builtin/fetch.c:187 builtin/pack-objects.c:4223
-#: builtin/pack-objects.c:4227 builtin/pull.c:216
-msgid "time"
-msgstr ""
-
 #: builtin/clone.c:139
 msgid "create a shallow clone since a specific time"
 msgstr ""
@@ -5014,7 +5018,7 @@ msgid "working tree '%s' already exists."
 msgstr ""
 
 #: builtin/clone.c:1007 builtin/clone.c:1028 builtin/difftool.c:259
-#: builtin/log.c:2137 builtin/worktree.c:409 builtin/worktree.c:441
+#: builtin/log.c:2139 builtin/worktree.c:409 builtin/worktree.c:441
 #, c-format
 msgid "could not create leading directories of '%s'"
 msgstr ""
@@ -5150,7 +5154,7 @@ msgid ""
 "                       <split options>"
 msgstr ""
 
-#: builtin/commit-graph.c:51 builtin/fetch.c:199 builtin/log.c:1913
+#: builtin/commit-graph.c:51 builtin/fetch.c:199 builtin/log.c:1915
 #: builtin/repack.c:811
 msgid "dir"
 msgstr ""
@@ -5755,7 +5759,7 @@ msgstr ""
 msgid "add custom trailer(s)"
 msgstr ""
 
-#: builtin/commit.c:1651 builtin/log.c:1888 builtin/merge.c:306
+#: builtin/commit.c:1651 builtin/log.c:1890 builtin/merge.c:306
 #: builtin/pull.c:147 builtin/revert.c:111
 msgid "add a Signed-off-by trailer"
 msgstr ""
@@ -6184,7 +6188,7 @@ msgstr ""
 msgid "print sizes in human readable format"
 msgstr ""
 
-#: builtin/credential-cache--daemon.c:227
+#: builtin/credential-cache--daemon.c:230
 #, c-format
 msgid ""
 "The permissions on your socket directory are too loose; other\n"
@@ -6193,11 +6197,11 @@ msgid ""
 "\tchmod 0700 %s"
 msgstr ""
 
-#: builtin/credential-cache--daemon.c:276
+#: builtin/credential-cache--daemon.c:279
 msgid "print debugging messages to stderr"
 msgstr ""
 
-#: builtin/credential-cache--daemon.c:316
+#: builtin/credential-cache--daemon.c:319
 msgid "credential-cache--daemon unavailable; no unix socket support"
 msgstr ""
 
@@ -6595,7 +6599,7 @@ msgstr ""
 msgid "skip output of blob data"
 msgstr ""
 
-#: builtin/fast-export.c:1196 builtin/log.c:1960
+#: builtin/fast-export.c:1196 builtin/log.c:1962
 msgid "refspec"
 msgstr ""
 
@@ -8838,7 +8842,7 @@ msgid ""
 "<file>"
 msgstr ""
 
-#: builtin/log.c:273 builtin/log.c:2078 builtin/shortlog.c:434 bundle.c:523
+#: builtin/log.c:273 builtin/log.c:2080 builtin/shortlog.c:434 bundle.c:523
 #, c-format
 msgid "unrecognized argument: %s"
 msgstr ""
@@ -8880,342 +8884,342 @@ msgstr ""
 msgid "format.headers without value"
 msgstr ""
 
-#: builtin/log.c:1113
+#: builtin/log.c:1115
 #, c-format
 msgid "cannot open patch file %s"
 msgstr ""
 
-#: builtin/log.c:1130
+#: builtin/log.c:1132
 msgid "need exactly one range"
 msgstr ""
 
-#: builtin/log.c:1140
+#: builtin/log.c:1142
 msgid "not a range"
 msgstr ""
 
-#: builtin/log.c:1304
+#: builtin/log.c:1306
 msgid "cover letter needs email format"
 msgstr ""
 
-#: builtin/log.c:1310
+#: builtin/log.c:1312
 msgid "failed to create cover-letter file"
 msgstr ""
 
-#: builtin/log.c:1398
+#: builtin/log.c:1400
 #, c-format
 msgid "insane in-reply-to: %s"
 msgstr ""
 
-#: builtin/log.c:1425
+#: builtin/log.c:1427
 msgid "git format-patch [<options>] [<since> | <revision-range>]"
 msgstr ""
 
-#: builtin/log.c:1483
+#: builtin/log.c:1485
 msgid "two output directories?"
 msgstr ""
 
-#: builtin/log.c:1634 builtin/log.c:2475 builtin/log.c:2477 builtin/log.c:2489
+#: builtin/log.c:1636 builtin/log.c:2477 builtin/log.c:2479 builtin/log.c:2491
 #, c-format
 msgid "unknown commit %s"
 msgstr ""
 
-#: builtin/log.c:1645 builtin/replace.c:58 builtin/replace.c:210
+#: builtin/log.c:1647 builtin/replace.c:58 builtin/replace.c:210
 #: builtin/replace.c:213
 #, c-format
 msgid "failed to resolve '%s' as a valid ref"
 msgstr ""
 
-#: builtin/log.c:1654
+#: builtin/log.c:1656
 msgid "could not find exact merge base"
 msgstr ""
 
-#: builtin/log.c:1664
+#: builtin/log.c:1666
 msgid ""
 "failed to get upstream, if you want to record base commit automatically,\n"
 "please use git branch --set-upstream-to to track a remote branch.\n"
 "Or you could specify base commit by --base=<base-commit-id> manually"
 msgstr ""
 
-#: builtin/log.c:1687
+#: builtin/log.c:1689
 msgid "failed to find exact merge base"
 msgstr ""
 
-#: builtin/log.c:1704
+#: builtin/log.c:1706
 msgid "base commit should be the ancestor of revision list"
 msgstr ""
 
-#: builtin/log.c:1714
+#: builtin/log.c:1716
 msgid "base commit shouldn't be in revision list"
 msgstr ""
 
-#: builtin/log.c:1772
+#: builtin/log.c:1774
 msgid "cannot get patch id"
 msgstr ""
 
-#: builtin/log.c:1835
+#: builtin/log.c:1837
 msgid "failed to infer range-diff origin of current series"
 msgstr ""
 
-#: builtin/log.c:1837
+#: builtin/log.c:1839
 #, c-format
 msgid "using '%s' as range-diff origin of current series"
 msgstr ""
 
-#: builtin/log.c:1883
+#: builtin/log.c:1885
 msgid "use [PATCH n/m] even with a single patch"
 msgstr ""
 
-#: builtin/log.c:1886
+#: builtin/log.c:1888
 msgid "use [PATCH] even with multiple patches"
 msgstr ""
 
-#: builtin/log.c:1890
+#: builtin/log.c:1892
 msgid "print patches to standard out"
 msgstr ""
 
-#: builtin/log.c:1892
+#: builtin/log.c:1894
 msgid "generate a cover letter"
 msgstr ""
 
-#: builtin/log.c:1894
+#: builtin/log.c:1896
 msgid "use simple number sequence for output file names"
 msgstr ""
 
-#: builtin/log.c:1895
+#: builtin/log.c:1897
 msgid "sfx"
 msgstr ""
 
-#: builtin/log.c:1896
+#: builtin/log.c:1898
 msgid "use <sfx> instead of '.patch'"
 msgstr ""
 
-#: builtin/log.c:1898
+#: builtin/log.c:1900
 msgid "start numbering patches at <n> instead of 1"
 msgstr ""
 
-#: builtin/log.c:1899
+#: builtin/log.c:1901
 msgid "reroll-count"
 msgstr ""
 
-#: builtin/log.c:1900
+#: builtin/log.c:1902
 msgid "mark the series as Nth re-roll"
 msgstr ""
 
-#: builtin/log.c:1902
+#: builtin/log.c:1904
 msgid "max length of output filename"
 msgstr ""
 
-#: builtin/log.c:1904
+#: builtin/log.c:1906
 msgid "use [RFC PATCH] instead of [PATCH]"
 msgstr ""
 
-#: builtin/log.c:1907
+#: builtin/log.c:1909
 msgid "cover-from-description-mode"
 msgstr ""
 
-#: builtin/log.c:1908
+#: builtin/log.c:1910
 msgid "generate parts of a cover letter based on a branch's description"
 msgstr ""
 
-#: builtin/log.c:1910
+#: builtin/log.c:1912
 msgid "use [<prefix>] instead of [PATCH]"
 msgstr ""
 
-#: builtin/log.c:1913
+#: builtin/log.c:1915
 msgid "store resulting files in <dir>"
 msgstr ""
 
-#: builtin/log.c:1916
+#: builtin/log.c:1918
 msgid "don't strip/add [PATCH]"
 msgstr ""
 
-#: builtin/log.c:1919
+#: builtin/log.c:1921
 msgid "don't output binary diffs"
 msgstr ""
 
-#: builtin/log.c:1921
+#: builtin/log.c:1923
 msgid "output all-zero hash in From header"
 msgstr ""
 
-#: builtin/log.c:1923
+#: builtin/log.c:1925
 msgid "don't include a patch matching a commit upstream"
 msgstr ""
 
-#: builtin/log.c:1925
+#: builtin/log.c:1927
 msgid "show patch format instead of default (patch + stat)"
 msgstr ""
 
-#: builtin/log.c:1927
+#: builtin/log.c:1929
 msgid "Messaging"
 msgstr ""
 
-#: builtin/log.c:1928
+#: builtin/log.c:1930
 msgid "header"
 msgstr ""
 
-#: builtin/log.c:1929
+#: builtin/log.c:1931
 msgid "add email header"
 msgstr ""
 
-#: builtin/log.c:1930 builtin/log.c:1931
+#: builtin/log.c:1932 builtin/log.c:1933
 msgid "email"
 msgstr ""
 
-#: builtin/log.c:1930
+#: builtin/log.c:1932
 msgid "add To: header"
 msgstr ""
 
-#: builtin/log.c:1931
+#: builtin/log.c:1933
 msgid "add Cc: header"
 msgstr ""
 
-#: builtin/log.c:1932
+#: builtin/log.c:1934
 msgid "ident"
 msgstr ""
 
-#: builtin/log.c:1933
+#: builtin/log.c:1935
 msgid "set From address to <ident> (or committer ident if absent)"
 msgstr ""
 
-#: builtin/log.c:1935
+#: builtin/log.c:1937
 msgid "message-id"
 msgstr ""
 
-#: builtin/log.c:1936
+#: builtin/log.c:1938
 msgid "make first mail a reply to <message-id>"
 msgstr ""
 
-#: builtin/log.c:1937 builtin/log.c:1940
+#: builtin/log.c:1939 builtin/log.c:1942
 msgid "boundary"
 msgstr ""
 
-#: builtin/log.c:1938
+#: builtin/log.c:1940
 msgid "attach the patch"
 msgstr ""
 
-#: builtin/log.c:1941
+#: builtin/log.c:1943
 msgid "inline the patch"
 msgstr ""
 
-#: builtin/log.c:1945
+#: builtin/log.c:1947
 msgid "enable message threading, styles: shallow, deep"
 msgstr ""
 
-#: builtin/log.c:1947
+#: builtin/log.c:1949
 msgid "signature"
 msgstr ""
 
-#: builtin/log.c:1948
+#: builtin/log.c:1950
 msgid "add a signature"
 msgstr ""
 
-#: builtin/log.c:1949
+#: builtin/log.c:1951
 msgid "base-commit"
 msgstr ""
 
-#: builtin/log.c:1950
+#: builtin/log.c:1952
 msgid "add prerequisite tree info to the patch series"
 msgstr ""
 
-#: builtin/log.c:1953
+#: builtin/log.c:1955
 msgid "add a signature from a file"
 msgstr ""
 
-#: builtin/log.c:1954
+#: builtin/log.c:1956
 msgid "don't print the patch filenames"
 msgstr ""
 
-#: builtin/log.c:1956
+#: builtin/log.c:1958
 msgid "show progress while generating patches"
 msgstr ""
 
-#: builtin/log.c:1958
+#: builtin/log.c:1960
 msgid "show changes against <rev> in cover letter or single patch"
 msgstr ""
 
-#: builtin/log.c:1961
+#: builtin/log.c:1963
 msgid "show changes against <refspec> in cover letter or single patch"
 msgstr ""
 
-#: builtin/log.c:1963 builtin/range-diff.c:28
+#: builtin/log.c:1965 builtin/range-diff.c:28
 msgid "percentage by which creation is weighted"
 msgstr ""
 
-#: builtin/log.c:1965
+#: builtin/log.c:1967
 msgid "show in-body From: even if identical to the e-mail header"
 msgstr ""
 
-#: builtin/log.c:2056
+#: builtin/log.c:2058
 #, c-format
 msgid "invalid ident line: %s"
 msgstr ""
 
-#: builtin/log.c:2081
+#: builtin/log.c:2083
 msgid "--name-only does not make sense"
 msgstr ""
 
-#: builtin/log.c:2083
+#: builtin/log.c:2085
 msgid "--name-status does not make sense"
 msgstr ""
 
-#: builtin/log.c:2085
+#: builtin/log.c:2087
 msgid "--check does not make sense"
 msgstr ""
 
-#: builtin/log.c:2087
+#: builtin/log.c:2089
 msgid "--remerge-diff does not make sense"
 msgstr ""
 
-#: builtin/log.c:2142 builtin/submodule--helper.c:1677
+#: builtin/log.c:2144 builtin/submodule--helper.c:1677
 #: builtin/submodule--helper.c:1727 rerere.c:866 submodule.c:2296
 #, c-format
 msgid "could not create directory '%s'"
 msgstr ""
 
-#: builtin/log.c:2229
+#: builtin/log.c:2231
 msgid "--interdiff requires --cover-letter or single patch"
 msgstr ""
 
-#: builtin/log.c:2233
+#: builtin/log.c:2235
 msgid "Interdiff:"
 msgstr ""
 
-#: builtin/log.c:2234
+#: builtin/log.c:2236
 #, c-format
 msgid "Interdiff against v%d:"
 msgstr ""
 
-#: builtin/log.c:2244
+#: builtin/log.c:2246
 msgid "--range-diff requires --cover-letter or single patch"
 msgstr ""
 
-#: builtin/log.c:2252
+#: builtin/log.c:2254
 msgid "Range-diff:"
 msgstr ""
 
-#: builtin/log.c:2253
+#: builtin/log.c:2255
 #, c-format
 msgid "Range-diff against v%d:"
 msgstr ""
 
-#: builtin/log.c:2264
+#: builtin/log.c:2266
 #, c-format
 msgid "unable to read signature file '%s'"
 msgstr ""
 
-#: builtin/log.c:2302
+#: builtin/log.c:2304
 msgid "Generating patches"
 msgstr ""
 
-#: builtin/log.c:2346
+#: builtin/log.c:2348
 msgid "failed to create output files"
 msgstr ""
 
-#: builtin/log.c:2410
+#: builtin/log.c:2412
 msgid "git cherry [-v] [<upstream> [<head> [<limit>]]]"
 msgstr ""
 
-#: builtin/log.c:2464
+#: builtin/log.c:2466
 #, c-format
 msgid ""
 "Could not find a tracked remote branch, please specify <upstream> manually.\n"
@@ -18022,30 +18026,30 @@ msgstr ""
 msgid "%s: smudge filter %s failed"
 msgstr ""
 
-#: credential.c:96
+#: credential.c:97
 #, c-format
 msgid "skipping credential lookup for key: credential.%s"
 msgstr ""
 
-#: credential.c:112
+#: credential.c:113
 msgid "refusing to work with credential missing host field"
 msgstr ""
 
-#: credential.c:114
+#: credential.c:115
 msgid "refusing to work with credential missing protocol field"
 msgstr ""
 
-#: credential.c:396
+#: credential.c:414
 #, c-format
 msgid "url contains a newline in its %s component: %s"
 msgstr ""
 
-#: credential.c:440
+#: credential.c:458
 #, c-format
 msgid "url has no scheme: %s"
 msgstr ""
 
-#: credential.c:513
+#: credential.c:531
 #, c-format
 msgid "credential url cannot be parsed: %s"
 msgstr ""
@@ -22151,25 +22155,25 @@ msgstr ""
 msgid "update_ref failed for ref '%s': %s"
 msgstr ""
 
-#: refs.c:2174
+#: refs.c:2177
 #, c-format
 msgid "multiple updates for ref '%s' not allowed"
 msgstr ""
 
-#: refs.c:2257
+#: refs.c:2260
 msgid "ref updates forbidden inside quarantine environment"
 msgstr ""
 
-#: refs.c:2268
+#: refs.c:2271
 msgid "ref updates aborted by hook"
 msgstr ""
 
-#: refs.c:2376 refs.c:2406
+#: refs.c:2379 refs.c:2409
 #, c-format
 msgid "'%s' exists; cannot create '%s'"
 msgstr ""
 
-#: refs.c:2382 refs.c:2417
+#: refs.c:2385 refs.c:2420
 #, c-format
 msgid "cannot process '%s' and '%s' at the same time"
 msgstr ""
