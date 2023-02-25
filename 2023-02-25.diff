@@ -1,0 +1,1594 @@
+
+
+#################### Sat, 25 Feb 2023 05:57:23 +0000 ####################
+
+--- po/git.pot.old	2023-02-25 05:57:23.391022020 +0000
++++ po/git.pot.new	2023-02-25 05:57:23.491022683 +0000
+@@ -536,7 +536,19 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "%%(%.*s) does not take arguments"
++msgid "%%(body) does not take arguments"
++msgstr ""
++
++#, c-format
++msgid "%%(deltabase) does not take arguments"
++msgstr ""
++
++#, c-format
++msgid "%%(objecttype) does not take arguments"
++msgstr ""
++
++#, c-format
++msgid "%%(rest) does not take arguments"
+ msgstr ""
+ 
+ #. TRANSLATORS: You should only need to translate this format
+@@ -574,6 +586,11 @@
+ msgid "%.*s is not a valid attribute name"
+ msgstr ""
+ 
++#. TRANSLATORS: you can adjust this to align "git add -i" status menu
++#, perl-format
++msgid "%12s %12s %s"
++msgstr ""
++
+ #, c-format
+ msgid "%<PRIuMAX> day ago"
+ msgid_plural "%<PRIuMAX> days ago"
+@@ -742,6 +759,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "%s doesn't support --super-prefix"
++msgstr ""
++
++#, c-format
+ msgid "%s exists and is not a directory"
+ msgstr ""
+ 
+@@ -1032,11 +1053,11 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "%s: invalid sha1 pointer in cache-tree of %s"
++msgid "%s: invalid sha1 pointer in cache-tree"
+ msgstr ""
+ 
+ #, c-format
+-msgid "%s: invalid sha1 pointer in resolve-undo of %s"
++msgid "%s: invalid sha1 pointer in resolve-undo"
+ msgstr ""
+ 
+ #, c-format
+@@ -1182,10 +1203,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "'%s' and '%s' cannot be used together"
+-msgstr ""
+-
+-#, c-format
+ msgid "'%s' and pathspec arguments cannot be used together"
+ msgstr ""
+ 
+@@ -1262,10 +1279,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "'%s' failed: no command provided."
+-msgstr ""
+-
+-#, c-format
+ msgid "'%s' file does not contain absolute path to the working tree location"
+ msgstr ""
+ 
+@@ -1342,10 +1355,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "'%s' is not a valid label"
+-msgstr ""
+-
+-#, c-format
+ msgid "'%s' is not a valid ref name"
+ msgstr ""
+ 
+@@ -1354,10 +1363,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "'%s' is not a valid refname"
+-msgstr ""
+-
+-#, c-format
+ msgid "'%s' is not a valid remote name"
+ msgstr ""
+ 
+@@ -1410,22 +1415,10 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "'%s' requires 0 arguments"
+-msgstr ""
+-
+-#, c-format
+-msgid "'%s' requires 0 or 1 argument"
+-msgstr ""
+-
+-#, c-format
+ msgid "'%s' requires a batch mode"
+ msgstr ""
+ 
+ #, c-format
+-msgid "'%s' requires either no argument or a commit"
+-msgstr ""
+-
+-#, c-format
+ msgid "'%s' was deleted by the applypatch-msg hook"
+ msgstr ""
+ 
+@@ -1674,6 +1667,14 @@
+ "Lines starting with %c will be removed.\n"
+ msgstr ""
+ 
++#, perl-format
++msgid ""
++"---\n"
++"To remove '%s' lines, make them ' ' lines (context).\n"
++"To remove '%s' lines, delete them.\n"
++"Lines starting with %s will be removed.\n"
++msgstr ""
++
+ msgid "--[no-]exclude-standard cannot be used for tracked contents"
+ msgstr ""
+ 
+@@ -1705,6 +1706,18 @@
+ msgid "--author '%s' is not 'Name <email>' and matches no existing author"
+ msgstr ""
+ 
++msgid "--bisect-log requires 0 arguments"
++msgstr ""
++
++msgid "--bisect-next requires 0 arguments"
++msgstr ""
++
++msgid "--bisect-reset requires either no argument or a commit"
++msgstr ""
++
++msgid "--bisect-terms requires 0 or 1 argument"
++msgstr ""
++
+ msgid "--blob can only be used inside a git repository"
+ msgstr ""
+ 
+@@ -1809,9 +1822,6 @@
+ msgid "--merge-base does not work with ranges"
+ msgstr ""
+ 
+-msgid "--merge-base is incompatible with --stdin"
+-msgstr ""
+-
+ msgid "--merge-base only works with commits"
+ msgstr ""
+ 
+@@ -2045,9 +2055,6 @@
+ msgid "<char>"
+ msgstr ""
+ 
+-msgid "<commit-ish>"
+-msgstr ""
+-
+ msgid "<count>"
+ msgstr ""
+ 
+@@ -2123,9 +2130,6 @@
+ msgid "<text>"
+ msgstr ""
+ 
+-msgid "<tree-ish>"
+-msgstr ""
+-
+ msgid "<version>[,<offset>]"
+ msgstr ""
+ 
+@@ -2316,39 +2320,39 @@
+ msgid "Apply a series of patches from a mailbox"
+ msgstr ""
+ 
+-#, c-format
++#, c-format, perl-format
+ msgid "Apply addition to index [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+-#, c-format
++#, c-format, perl-format
+ msgid "Apply addition to index and worktree [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+-#, c-format
++#, c-format, perl-format
+ msgid "Apply addition to worktree [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+-#, c-format
++#, c-format, perl-format
+ msgid "Apply deletion to index [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+-#, c-format
++#, c-format, perl-format
+ msgid "Apply deletion to index and worktree [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+-#, c-format
++#, c-format, perl-format
+ msgid "Apply deletion to worktree [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+-#, c-format
++#, c-format, perl-format
+ msgid "Apply mode change to index [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+-#, c-format
++#, c-format, perl-format
+ msgid "Apply mode change to index and worktree [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+-#, c-format
++#, c-format, perl-format
+ msgid "Apply mode change to worktree [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+@@ -2358,15 +2362,15 @@
+ msgid "Apply them to the worktree anyway? "
+ msgstr ""
+ 
+-#, c-format
++#, c-format, perl-format
+ msgid "Apply this hunk to index [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+-#, c-format
++#, c-format, perl-format
+ msgid "Apply this hunk to index and worktree [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+-#, c-format
++#, c-format, perl-format
+ msgid "Apply this hunk to worktree [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+@@ -2894,8 +2898,7 @@
+ msgid "Checking %s link"
+ msgstr ""
+ 
+-#, c-format
+-msgid "Checking cache tree of %s"
++msgid "Checking cache tree"
+ msgstr ""
+ 
+ msgid "Checking connectivity"
+@@ -3201,6 +3204,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Could not run 'git status --porcelain=2' in submodule %s"
++msgstr ""
++
++#, c-format
+ msgid "Could not set SSL backend to '%s': already set"
+ msgstr ""
+ 
+@@ -3361,35 +3368,35 @@
+ msgid "Dirty index: cannot apply patches (dirty: %s)"
+ msgstr ""
+ 
+-#, c-format
++#, c-format, perl-format
+ msgid "Discard addition from index and worktree [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+-#, c-format
++#, c-format, perl-format
+ msgid "Discard addition from worktree [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+-#, c-format
++#, c-format, perl-format
+ msgid "Discard deletion from index and worktree [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+-#, c-format
++#, c-format, perl-format
+ msgid "Discard deletion from worktree [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+-#, c-format
++#, c-format, perl-format
+ msgid "Discard mode change from index and worktree [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+-#, c-format
++#, c-format, perl-format
+ msgid "Discard mode change from worktree [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+-#, c-format
++#, c-format, perl-format
+ msgid "Discard this hunk from index and worktree [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+-#, c-format
++#, c-format, perl-format
+ msgid "Discard this hunk from worktree [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+@@ -3961,6 +3968,10 @@
+ msgid "HEAD not found below refs/heads!"
+ msgstr ""
+ 
++#, c-format
++msgid "HEAD of working tree %s is not updated"
++msgstr ""
++
+ msgid "Helper programs to interact with remote repositories"
+ msgstr ""
+ 
+@@ -3980,7 +3991,7 @@
+ msgid "Huh (%s)?"
+ msgstr ""
+ 
+-#, c-format
++#, c-format, perl-format
+ msgid "Huh (%s)?\n"
+ msgstr ""
+ 
+@@ -3994,12 +4005,39 @@
+ msgstr[0] ""
+ msgstr[1] ""
+ 
++#. #-#-#-#-#  git-add--interactive.perl.po  #-#-#-#-#
++#. TRANSLATORS: 'it' refers to the patch mentioned in the previous messages.
+ msgid ""
+ "If it does not apply cleanly, you will be given an opportunity to\n"
+ "edit again.  If all lines of the hunk are removed, then the edit is\n"
+ "aborted and the hunk is left unchanged.\n"
+ msgstr ""
+ 
++msgid ""
++"If the patch applies cleanly, the edited hunk will immediately be\n"
++"marked for applying."
++msgstr ""
++
++msgid ""
++"If the patch applies cleanly, the edited hunk will immediately be\n"
++"marked for discarding."
++msgstr ""
++
++msgid ""
++"If the patch applies cleanly, the edited hunk will immediately be\n"
++"marked for staging."
++msgstr ""
++
++msgid ""
++"If the patch applies cleanly, the edited hunk will immediately be\n"
++"marked for stashing."
++msgstr ""
++
++msgid ""
++"If the patch applies cleanly, the edited hunk will immediately be\n"
++"marked for unstaging."
++msgstr ""
++
+ msgid "If the patch applies cleanly, the edited hunk will immediately be marked for applying."
+ msgstr ""
+ 
+@@ -4043,15 +4081,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid ""
+-"If you meant to create a worktree containing a new orphan branch\n"
+-"(branch with no commits) for this repository, you can do so\n"
+-"using the --orphan option:\n"
+-"\n"
+-"\tgit worktree add --orphan %s %s\n"
+-msgstr ""
+-
+-#, c-format
+ msgid "If you prefer to skip this patch, run \"%s --skip\" instead."
+ msgstr ""
+ 
+@@ -4188,6 +4217,10 @@
+ msgid "Invalid number: '%s'"
+ msgstr ""
+ 
++#, perl-format
++msgid "Invalid number: '%s'\n"
++msgstr ""
++
+ #, c-format
+ msgid "Invalid old URL pattern: %s"
+ msgstr ""
+@@ -4238,12 +4271,9 @@
+ 
+ #, c-format
+ msgid ""
+-"It took %.2f seconds to enumerate untracked files,\n"
+-"but the results were cached, and subsequent runs may be faster."
+-msgstr ""
+-
+-#, c-format
+-msgid "It took %.2f seconds to enumerate untracked files."
++"It took %.2f seconds to enumerate untracked files. 'status -uno'\n"
++"may speed it up, but you have to be careful not to forget to add\n"
++"new files yourself (see 'git help status')."
+ msgstr ""
+ 
+ #, c-format
+@@ -4331,6 +4361,10 @@
+ msgid "Malformed search regexp %s: %s"
+ msgstr ""
+ 
++#, perl-format
++msgid "Malformed search regexp %s: %s\n"
++msgstr ""
++
+ msgid "Manage multiple working trees"
+ msgstr ""
+ 
+@@ -4540,6 +4574,9 @@
+ msgid "No hunk matches the given pattern"
+ msgstr ""
+ 
++msgid "No hunk matches the given pattern\n"
++msgstr ""
++
+ msgid "No local changes to save"
+ msgstr ""
+ 
+@@ -4563,12 +4600,21 @@
+ msgid "No next hunk"
+ msgstr ""
+ 
++msgid "No next hunk\n"
++msgstr ""
++
+ msgid "No other hunks to goto"
+ msgstr ""
+ 
++msgid "No other hunks to goto\n"
++msgstr ""
++
+ msgid "No other hunks to search"
+ msgstr ""
+ 
++msgid "No other hunks to search\n"
++msgstr ""
++
+ msgid "No paths with --include/--only does not make sense."
+ msgstr ""
+ 
+@@ -4578,6 +4624,9 @@
+ msgid "No previous hunk"
+ msgstr ""
+ 
++msgid "No previous hunk\n"
++msgstr ""
++
+ msgid "No previous regular expression"
+ msgstr ""
+ 
+@@ -5317,9 +5366,6 @@
+ msgid "See 'git help <command>' to read about a specific subcommand"
+ msgstr ""
+ 
+-msgid "See 'git help status' for information on how to improve this."
+-msgstr ""
+-
+ msgid "See git-pull(1) for details."
+ msgstr ""
+ 
+@@ -5474,15 +5520,27 @@
+ msgid "Sorry, cannot edit this hunk"
+ msgstr ""
+ 
++msgid "Sorry, cannot edit this hunk\n"
++msgstr ""
++
+ msgid "Sorry, cannot split this hunk"
+ msgstr ""
+ 
++msgid "Sorry, cannot split this hunk\n"
++msgstr ""
++
+ #, c-format
+ msgid "Sorry, only %d hunk available."
+ msgid_plural "Sorry, only %d hunks available."
+ msgstr[0] ""
+ msgstr[1] ""
+ 
++#, perl-format
++msgid "Sorry, only %d hunk available.\n"
++msgid_plural "Sorry, only %d hunks available.\n"
++msgstr[0] ""
++msgstr[1] ""
++
+ msgid "Sorting objects by packfile"
+ msgstr ""
+ 
+@@ -5495,6 +5553,12 @@
+ msgid "Specifying revisions and ranges for Git"
+ msgstr ""
+ 
++#, perl-format
++msgid "Split into %d hunk.\n"
++msgid_plural "Split into %d hunks.\n"
++msgstr[0] ""
++msgstr[1] ""
++
+ #, c-format
+ msgid "Split into %d hunks."
+ msgstr ""
+@@ -5506,19 +5570,19 @@
+ msgid "Squash commit into empty head not supported yet"
+ msgstr ""
+ 
+-#, c-format
++#, c-format, perl-format
+ msgid "Stage addition [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+-#, c-format
++#, c-format, perl-format
+ msgid "Stage deletion [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+-#, c-format
++#, c-format, perl-format
+ msgid "Stage mode change [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+-#, c-format
++#, c-format, perl-format
+ msgid "Stage this hunk [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+@@ -5526,22 +5590,22 @@
+ msgid "Staged '%s' using previous resolution."
+ msgstr ""
+ 
+-#, c-format
++#, c-format, perl-format
+ msgid "Stash addition [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+-#, c-format
++#, c-format, perl-format
+ msgid "Stash deletion [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+-#, c-format
++#, c-format, perl-format
+ msgid "Stash mode change [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+ msgid "Stash the changes in a dirty working directory away"
+ msgstr ""
+ 
+-#, c-format
++#, c-format, perl-format
+ msgid "Stash this hunk [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+@@ -6013,6 +6077,9 @@
+ msgid "The selected hunks do not apply to the index!"
+ msgstr ""
+ 
++msgid "The selected hunks do not apply to the index!\n"
++msgstr ""
++
+ msgid "The standard helper program to use with git-merge-index"
+ msgstr ""
+ 
+@@ -6309,19 +6376,19 @@
+ msgid "Unpacking objects"
+ msgstr ""
+ 
+-#, c-format
++#, c-format, perl-format
+ msgid "Unstage addition [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+-#, c-format
++#, c-format, perl-format
+ msgid "Unstage deletion [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+-#, c-format
++#, c-format, perl-format
+ msgid "Unstage mode change [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+-#, c-format
++#, c-format, perl-format
+ msgid "Unstage this hunk [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+@@ -6778,13 +6845,13 @@
+ "your next pull:\n"
+ "\n"
+ "  git config pull.rebase false  # merge\n"
+-"  git config pull.rebase merges # rebase\n"
++"  git config pull.rebase true   # rebase\n"
+ "  git config pull.ff only       # fast-forward only\n"
+ "\n"
+ "You can replace \"git config\" with \"git config --global\" to set a default\n"
+-"preference for all repositories. You can also pass --rebase=merges,\n"
+-"--no-rebase, or --ff-only on the command line to override the configured\n"
+-"default per invocation.\n"
++"preference for all repositories. You can also pass --rebase, --no-rebase,\n"
++"or --ff-only on the command line to override the configured default per\n"
++"invocation.\n"
+ msgstr ""
+ 
+ msgid "You have not concluded your cherry-pick (CHERRY_PICK_HEAD exists)."
+@@ -6820,7 +6887,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "You may try updating the submodules using 'git checkout --no-recurse-submodules %s && git submodule update --init'"
++msgid "You may try updating the submodules using 'git checkout %s && git submodule update --init'"
+ msgstr ""
+ 
+ msgid ""
+@@ -6930,12 +6997,20 @@
+ "and %s for the new state.\n"
+ msgstr ""
+ 
++#. #-#-#-#-#  add-patch.c.po  #-#-#-#-#
+ #. TRANSLATORS: do not translate [y/n]
+ #. The program will only accept that input at this point.
+ #. Consider translating (saying "no" discards!) as
+ #. (saying "n" for "no" discards!) if the translation
+ #. of the word "no" does not start with n.
+ #.
++#. #-#-#-#-#  git-add--interactive.perl.po  #-#-#-#-#
++#. TRANSLATORS: do not translate [y/n]
++#. The program will only accept that input
++#. at this point.
++#. Consider translating (saying "no" discards!) as
++#. (saying "n" for "no" discards!) if the translation
++#. of the word "no" does not start with n.
+ msgid "Your edited hunk does not apply. Edit again (saying \"no\" discards!) [y/n]? "
+ msgstr ""
+ 
+@@ -7261,7 +7336,7 @@
+ msgid "add_cacheinfo failed to refresh for path '%s'; merge aborting."
+ msgstr ""
+ 
+-#, c-format
++#, c-format, perl-format
+ msgid "added %d path\n"
+ msgid_plural "added %d paths\n"
+ msgstr[0] ""
+@@ -7507,12 +7582,6 @@
+ msgid "apply options and merge options cannot be used together"
+ msgstr ""
+ 
+-msgid "apply options are incompatible with rebase.autosquash.  Consider adding --no-autosquash"
+-msgstr ""
+-
+-msgid "apply options are incompatible with rebase.updateRefs.  Consider adding --no-update-refs"
+-msgstr ""
+-
+ msgid "apply partial clone filters to submodules"
+ msgstr ""
+ 
+@@ -7805,6 +7874,9 @@
+ msgid "be quiet"
+ msgstr ""
+ 
++msgid "be quiet only use git_env_*() value as exit code"
++msgstr ""
++
+ msgid "be quiet, only report errors"
+ msgstr ""
+ 
+@@ -7835,6 +7907,7 @@
+ msgid "binary patch to '%s' creates incorrect result (expecting %s, got %s)"
+ msgstr ""
+ 
++#, c-format
+ msgid "bisect found first bad commit"
+ msgstr ""
+ 
+@@ -7842,16 +7915,17 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "bisect run failed: 'git bisect %s' exited with error code %d"
++msgid "bisect run failed: 'git bisect--helper --bisect-state %s' exited with error code %d"
+ msgstr ""
+ 
+ #, c-format
+-msgid "bisect run failed: exit code %d from %s is < 0 or >= 128"
++msgid "bisect run failed: exit code %d from '%s' is < 0 or >= 128"
+ msgstr ""
+ 
+ msgid "bisect run failed: no command provided."
+ msgstr ""
+ 
++#, c-format
+ msgid "bisect run success"
+ msgstr ""
+ 
+@@ -7979,12 +8053,6 @@
+ msgid "bundle list at '%s' has no mode"
+ msgstr ""
+ 
+-msgid "bundle-uri operation not supported by protocol"
+-msgstr ""
+-
+-msgid "bundle-uri: expected flush after arguments"
+-msgstr ""
+-
+ msgid "bundle-uri: got an empty line"
+ msgstr ""
+ 
+@@ -7994,16 +8062,9 @@
+ msgid "bundle-uri: line is not of the form 'key=value'"
+ msgstr ""
+ 
+-#, c-format
+-msgid "bundle-uri: unexpected argument: '%s'"
+-msgstr ""
+-
+ msgid "bypass post-rewrite hook"
+ msgstr ""
+ 
+-msgid "bypass pre-applypatch and applypatch-msg hooks"
+-msgstr ""
+-
+ msgid "bypass pre-commit and commit-msg hooks"
+ msgstr ""
+ 
+@@ -8702,9 +8763,6 @@
+ msgid "closing file '%s'"
+ msgstr ""
+ 
+-msgid "closing inotify file descriptor failed"
+-msgstr ""
+-
+ msgid "cmdline ends with \\"
+ msgstr ""
+ 
+@@ -9004,6 +9062,9 @@
+ msgid "corrupt bitmap lookup table: xor chain exceeds entry count"
+ msgstr ""
+ 
++msgid "corrupt commit"
++msgstr ""
++
+ #, c-format
+ msgid "corrupt ewah bitmap: commit index %u out of range"
+ msgstr ""
+@@ -9032,6 +9093,9 @@
+ msgid "corrupt patch for submodule %s"
+ msgstr ""
+ 
++msgid "corrupt tag"
++msgstr ""
++
+ msgid "corrupted bitmap index (too small)"
+ msgstr ""
+ 
+@@ -9304,9 +9368,6 @@
+ msgid "could not get submodule directory for '%s'"
+ msgstr ""
+ 
+-msgid "could not get the bundle-uri list"
+-msgstr ""
+-
+ #, c-format
+ msgid "could not get type of object %s in pack %s"
+ msgstr ""
+@@ -9433,10 +9494,6 @@
+ msgid "could not parse author script"
+ msgstr ""
+ 
+-#, c-format
+-msgid "could not parse bundle list key %s with value '%s'"
+-msgstr ""
+-
+ msgid "could not parse colored diff"
+ msgstr ""
+ 
+@@ -9673,18 +9730,11 @@
+ msgid "could not retrieve `%s`"
+ msgstr ""
+ 
+-msgid "could not retrieve server-advertised bundle-uri list"
+-msgstr ""
+-
+ #, c-format
+ msgid "could not revert %s... %s"
+ msgstr ""
+ 
+ #, c-format
+-msgid "could not run 'git status --porcelain=2' in submodule %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "could not run 'git status' in submodule '%s'"
+ msgstr ""
+ 
+@@ -10022,6 +10072,9 @@
+ msgid "deepen history of shallow repository based on time"
+ msgstr ""
+ 
++msgid "default for git_env_*(...) to fall back on"
++msgstr ""
++
+ msgid "default for recursive fetching of submodules (lower priority than config files)"
+ msgstr ""
+ 
+@@ -10673,10 +10726,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "error on bundle-uri response line %d: %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "error opening '%s'"
+ msgstr ""
+ 
+@@ -10832,9 +10881,6 @@
+ " %s"
+ msgstr ""
+ 
+-msgid "expected flush after bundle-uri listing"
+-msgstr ""
+-
+ msgid "expected flush after capabilities"
+ msgstr ""
+ 
+@@ -11063,13 +11109,6 @@
+ msgid "failed to expand user dir in: '%s'"
+ msgstr ""
+ 
+-msgid "failed to fetch advertised bundles"
+-msgstr ""
+-
+-#, c-format
+-msgid "failed to fetch bundles from '%s'"
+-msgstr ""
+-
+ #, c-format
+ msgid "failed to fetch objects from bundle URI '%s'"
+ msgstr ""
+@@ -11194,6 +11233,14 @@
+ msgid "failed to open '%s': %s"
+ msgstr ""
+ 
++#, perl-format
++msgid "failed to open hunk edit file for reading: %s"
++msgstr ""
++
++#, perl-format
++msgid "failed to open hunk edit file for writing: %s"
++msgstr ""
++
+ #, c-format
+ msgid "failed to open pack-index '%s'"
+ msgstr ""
+@@ -11251,6 +11298,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "failed to read object %s"
++msgstr ""
++
++#, c-format
+ msgid "failed to read object '%s'."
+ msgstr ""
+ 
+@@ -11372,9 +11423,6 @@
+ msgid "failed to store link to current notes ref (%s)"
+ msgstr ""
+ 
+-msgid "failed to store maximum creation token"
+-msgstr ""
+-
+ #, c-format
+ msgid "failed to symlink '%s': %s"
+ msgstr ""
+@@ -11584,16 +11632,9 @@
+ msgid "file at URI '%s' is not a bundle or bundle list"
+ msgstr ""
+ 
+-#, c-format
+-msgid "file downloaded from '%s' is not a bundle"
+-msgstr ""
+-
+ msgid "file to read from"
+ msgstr ""
+ 
+-msgid "file to read into hooks' stdin"
+-msgstr ""
+-
+ msgid "file/directory"
+ msgstr ""
+ 
+@@ -11816,6 +11857,18 @@
+ msgid "full write to remote helper failed"
+ msgstr ""
+ 
++msgid ""
++"g - select a hunk to go to\n"
++"/ - search for a hunk matching the given regex\n"
++"j - leave this hunk undecided, see next undecided hunk\n"
++"J - leave this hunk undecided, see next hunk\n"
++"k - leave this hunk undecided, see previous undecided hunk\n"
++"K - leave this hunk undecided, see previous hunk\n"
++"s - split the current hunk into smaller hunks\n"
++"e - manually edit the current hunk\n"
++"? - print help\n"
++msgstr ""
++
+ #, c-format
+ msgid "garbage at end of loose object '%s'"
+ msgstr ""
+@@ -11891,7 +11944,8 @@
+ "           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n"
+ "           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n"
+ "           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n"
+-"           [--config-env=<name>=<envvar>] <command> [<args>]"
++"           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n"
++"           <command> [<args>]"
+ msgstr ""
+ 
+ msgid "git add [<options>] [--] <pathspec>..."
+@@ -11950,22 +12004,25 @@
+ msgid "git archive: protocol error"
+ msgstr ""
+ 
+-msgid "git bisect (good|bad) [<rev>...]"
++msgid "git bisect--helper --bisect-replay <filename>"
+ msgstr ""
+ 
+-msgid "git bisect replay <logfile>"
++msgid "git bisect--helper --bisect-reset [<commit>]"
+ msgstr ""
+ 
+-msgid "git bisect reset [<commit>]"
++msgid "git bisect--helper --bisect-run <cmd>..."
+ msgstr ""
+ 
+-msgid "git bisect run <cmd>..."
++msgid "git bisect--helper --bisect-skip [(<rev>|<range>)...]"
+ msgstr ""
+ 
+-msgid "git bisect skip [(<rev>|<range>)...]"
++msgid "git bisect--helper --bisect-start [--term-{new,bad}=<term> --term-{old,good}=<term>] [--no-checkout] [--first-parent] [<bad> [<good>...]] [--] [<paths>...]"
+ msgstr ""
+ 
+-msgid "git bisect start [--term-{new,bad}=<term> --term-{old,good}=<term>]    [--no-checkout] [--first-parent] [<bad> [<good>...]] [--]    [<pathspec>...]"
++msgid "git bisect--helper --bisect-state (bad|new) [<rev>]"
++msgstr ""
++
++msgid "git bisect--helper --bisect-state (good|old) [<rev>...]"
+ msgstr ""
+ 
+ msgid "git blame [<options>] [<rev-opts>] [<rev>] [--] <file>"
+@@ -12034,10 +12091,10 @@
+ msgid "git cat-file <type> <object>"
+ msgstr ""
+ 
+-msgid "git check-attr --stdin [-z] [--source <tree-ish>] [-a | --all | <attr>...]"
++msgid "git check-attr --stdin [-z] [-a | --all | <attr>...]"
+ msgstr ""
+ 
+-msgid "git check-attr [--source <tree-ish>] [-a | --all | <attr>...] [--] <pathname>..."
++msgid "git check-attr [-a | --all | <attr>...] [--] <pathname>..."
+ msgstr ""
+ 
+ msgid "git check-mailmap [<options>] <contact>..."
+@@ -12160,6 +12217,9 @@
+ msgid "git difftool [<options>] [<commit> [<commit>]] [--] [<path>...]"
+ msgstr ""
+ 
++msgid "git env--helper --type=[bool|ulong] <options> <env-var>"
++msgstr ""
++
+ msgid "git fast-export [<rev-list-opts>]"
+ msgstr ""
+ 
+@@ -12245,7 +12305,7 @@
+ msgid "git help [[-i|--info] [-m|--man] [-w|--web]] [<command>|<doc>]"
+ msgstr ""
+ 
+-msgid "git hook run [--ignore-missing] [--to-stdin=<path>] <hook-name> [-- <hook-args>]"
++msgid "git hook run [--ignore-missing] <hook-name> [-- <hook-args>]"
+ msgstr ""
+ 
+ msgid ""
+@@ -12273,7 +12333,7 @@
+ msgid ""
+ "git ls-remote [--heads] [--tags] [--refs] [--upload-pack=<exec>]\n"
+ "              [-q | --quiet] [--exit-code] [--get-url] [--sort=<key>]\n"
+-"              [--symref] [<repository> [<patterns>...]]"
++"              [--symref] [<repository> [<refs>...]]"
+ msgstr ""
+ 
+ msgid "git ls-tree [<options>] <tree-ish> [<path>...]"
+@@ -12346,10 +12406,10 @@
+ msgid "git notes [--ref <notes-ref>] [list [<object>]]"
+ msgstr ""
+ 
+-msgid "git notes [--ref <notes-ref>] add [-f] [--allow-empty] [--separator=<paragraph-break>] [-m <msg> | -F <file> | (-c | -C) <object>] [<object>]"
++msgid "git notes [--ref <notes-ref>] add [-f] [--allow-empty] [-m <msg> | -F <file> | (-c | -C) <object>] [<object>]"
+ msgstr ""
+ 
+-msgid "git notes [--ref <notes-ref>] append [--allow-empty] [--separator=<paragraph-break>] [-m <msg> | -F <file> | (-c | -C) <object>] [<object>]"
++msgid "git notes [--ref <notes-ref>] append [--allow-empty] [-m <msg> | -F <file> | (-c | -C) <object>] [<object>]"
+ msgstr ""
+ 
+ msgid "git notes [--ref <notes-ref>] copy [-f] <from-object> <to-object>"
+@@ -12785,12 +12845,7 @@
+ 
+ msgid ""
+ "git worktree add [-f] [--detach] [--checkout] [--lock [--reason <string>]]\n"
+-"                 [(-b | -B) <new-branch>] <path> [<commit-ish>]"
+-msgstr ""
+-
+-msgid ""
+-"git worktree add [-f] [--lock [--reason <string>]]\n"
+-"                 --orphan <new-branch> <path>"
++"                 [-b <new-branch>] <path> [<commit-ish>]"
+ msgstr ""
+ 
+ msgid "git worktree list [-v | --porcelain [-z]]"
+@@ -12886,10 +12941,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "got bad config --config=%s"
+-msgstr ""
+-
+-#, c-format
+ msgid ""
+ "gpg failed to sign the data:\n"
+ "%s"
+@@ -13165,6 +13216,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "ignoring extra bitmap file: '%s'"
++msgstr ""
++
++#, c-format
+ msgid "ignoring invalid allow_rerere_autoupdate: '%s'"
+ msgstr ""
+ 
+@@ -13204,6 +13259,10 @@
+ msgid "ignoring unmerged: %s"
+ msgstr ""
+ 
++#, perl-format
++msgid "ignoring unmerged: %s\n"
++msgstr ""
++
+ #, c-format
+ msgid "illegal crlf_action %d"
+ msgstr ""
+@@ -13360,9 +13419,6 @@
+ msgid "insane in-reply-to: %s"
+ msgstr ""
+ 
+-msgid "insert <paragraph-break> between paragraphs"
+-msgstr ""
+-
+ msgid "instead of applying the patch, output a summary for the input"
+ msgstr ""
+ 
+@@ -13454,6 +13510,10 @@
+ "Supported options are: --term-good|--term-old and --term-bad|--term-new."
+ msgstr ""
+ 
++#, perl-format
++msgid "invalid argument %s, expecting --"
++msgstr ""
++
+ #, c-format
+ msgid "invalid argument to %s"
+ msgstr ""
+@@ -13489,10 +13549,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "invalid command '%.*s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "invalid commit %s"
+ msgstr ""
+ 
+@@ -13846,9 +13902,6 @@
+ msgid "leave the rejected hunks in corresponding *.rej files"
+ msgstr ""
+ 
+-msgid "legacy use of lone '-m' detected: please use '--diff-merges=on,hide' instead, as '-m' may imply '-p'"
+-msgstr ""
+-
+ msgid "let files replace directories and vice-versa"
+ msgstr ""
+ 
+@@ -14248,6 +14301,9 @@
+ msgid "missing 'GIT_AUTHOR_NAME'"
+ msgstr ""
+ 
++msgid "missing --"
++msgstr ""
++
+ msgid "missing --config=<config>"
+ msgstr ""
+ 
+@@ -14509,9 +14565,6 @@
+ msgid "need a HEAD to fixup"
+ msgstr ""
+ 
+-msgid "need a command"
+-msgstr ""
+-
+ msgid "need a repository to verify a bundle"
+ msgstr ""
+ 
+@@ -14692,6 +14745,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "no prefix given for --super-prefix\n"
++msgstr ""
++
++#, c-format
+ msgid "no reflog for '%s'"
+ msgstr ""
+ 
+@@ -14702,9 +14759,6 @@
+ msgid "no remembered resolution for '%s'"
+ msgstr ""
+ 
+-msgid "no remote configured to get bundle URIs from"
+-msgstr ""
+-
+ msgid ""
+ "no remote repository specified; please specify either a URL or a\n"
+ "remote name from which new revisions should be fetched"
+@@ -14960,7 +15014,7 @@
+ msgid "note contents in a file"
+ msgstr ""
+ 
+-#, c-format
++#, c-format, perl-format
+ msgid "note: %s is untracked now.\n"
+ msgstr ""
+ 
+@@ -15097,10 +15151,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "object fails fsck: %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "object file %s is empty"
+ msgstr ""
+ 
+@@ -15314,6 +15364,14 @@
+ msgid "option `%s' requires a value"
+ msgstr ""
+ 
++#, c-format
++msgid "option `--default' expects a boolean value with `--type=bool`, not `%s`"
++msgstr ""
++
++#, c-format
++msgid "option `--default' expects an unsigned long value with `--type=ulong`, not `%s`"
++msgstr ""
++
+ msgid "option diff-algorithm accepts \"myers\", \"minimal\", \"patience\" and \"histogram\""
+ msgstr ""
+ 
+@@ -15787,9 +15845,6 @@
+ msgid "please use two different terms"
+ msgstr ""
+ 
+-msgid "polling inotify message stream failed"
+-msgstr ""
+-
+ msgid "populate log with at most <n> entries from shortlog"
+ msgstr ""
+ 
+@@ -15822,9 +15877,6 @@
+ msgid "prefix"
+ msgstr ""
+ 
+-msgid "prefixed path to initial superproject"
+-msgstr ""
+-
+ msgid "premature end of input"
+ msgstr ""
+ 
+@@ -16243,9 +16295,6 @@
+ msgid "reading from '%s' beyond a symbolic link"
+ msgstr ""
+ 
+-msgid "reading inotify message stream failed"
+-msgstr ""
+-
+ msgid "reading patches from stdin/tty..."
+ msgstr ""
+ 
+@@ -16399,9 +16448,6 @@
+ msgid "refusing to %s notes in %s (outside of refs/notes/)"
+ msgstr ""
+ 
+-msgid "refusing to create malformed object"
+-msgstr ""
+-
+ #, c-format
+ msgid "refusing to create/use '%s' in another submodule's git dir"
+ msgstr ""
+@@ -16466,10 +16512,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "remote '%s' has no configured URL"
+-msgstr ""
+-
+-#, c-format
+ msgid "remote HEAD is not a branch: '%.*s'"
+ msgstr ""
+ 
+@@ -16829,7 +16871,7 @@
+ msgid "revert staged set of changes back to the HEAD version"
+ msgstr ""
+ 
+-#, c-format
++#, c-format, perl-format
+ msgid "reverted %d path\n"
+ msgid_plural "reverted %d paths\n"
+ msgstr[0] ""
+@@ -17039,9 +17081,6 @@
+ msgid "separate paths with the NUL character"
+ msgstr ""
+ 
+-msgid "separator"
+-msgstr ""
+-
+ msgid "serious inflate inconsistency"
+ msgstr ""
+ 
+@@ -17080,9 +17119,6 @@
+ msgid "set labels for file1/orig-file/file2"
+ msgstr ""
+ 
+-msgid "set modification time of archive entries"
+-msgstr ""
+-
+ msgid "set parsing options"
+ msgstr ""
+ 
+@@ -17107,10 +17143,6 @@
+ msgid "set upstream for git pull/status"
+ msgstr ""
+ 
+-#, c-format
+-msgid "setmntent('%s') failed"
+-msgstr ""
+-
+ msgid "sets the submodule's name to the given string instead of defaulting to its path"
+ msgstr ""
+ 
+@@ -17564,9 +17596,6 @@
+ " 'git remote prune %s' to remove any old, conflicting branches"
+ msgstr ""
+ 
+-msgid "some prerequisite commits exist in the object store, but are not connected to the repository's history"
+-msgstr ""
+-
+ msgid "sort output according to the number of commits per author"
+ msgstr ""
+ 
+@@ -17594,9 +17623,6 @@
+ msgid "specify a destination for the diagnostics archive"
+ msgstr ""
+ 
+-msgid "specify a merge-base for the merge"
+-msgstr ""
+-
+ msgid "specify a strftime format suffix for the filename"
+ msgstr ""
+ 
+@@ -17722,8 +17748,15 @@
+ msgid "stash staged changes only"
+ msgstr ""
+ 
+-#, c-format
+-msgid "statfs('%s') failed"
++#. TRANSLATORS: please do not translate the command names
++#. 'status', 'update', 'revert', etc.
++msgid ""
++"status        - show paths with changes\n"
++"update        - add working tree state to the staged set of changes\n"
++"revert        - revert staged set of changes back to the HEAD version\n"
++"patch         - pick hunks and update selectively\n"
++"diff          - view diff between HEAD and index\n"
++"add untracked - add contents of untracked files to the staged set of changes\n"
+ msgstr ""
+ 
+ #, c-format
+@@ -17738,10 +17771,6 @@
+ msgid "status: waiting for good commit(s), bad commit known\n"
+ msgstr ""
+ 
+-#, c-format
+-msgid "statvfs('%s') failed"
+-msgstr ""
+-
+ msgid "stdin has NUL-terminated arguments"
+ msgstr ""
+ 
+@@ -17819,9 +17848,6 @@
+ msgid "submodule git dir '%s' is inside git dir '%.*s'"
+ msgstr ""
+ 
+-msgid "submodule status failed"
+-msgstr ""
+-
+ msgid "suboptimal pack - out of memory"
+ msgstr ""
+ 
+@@ -18032,14 +18058,6 @@
+ msgid "the '--set-upstream' option is no longer supported. Please use '--track' or '--set-upstream-to' instead."
+ msgstr ""
+ 
+-msgid "the --no-curl option to imap-send has been deprecated"
+-msgstr ""
+-
+-msgid ""
+-"the add.interactive.useBuiltin setting has been removed!\n"
+-"See its entry in 'git help config' for details."
+-msgstr ""
+-
+ msgid "the commit is authored by me now (used with -C/-c/--amend)"
+ msgstr ""
+ 
+@@ -18246,6 +18264,12 @@
+ msgid "topologically sort, maintaining date order where possible"
+ msgstr ""
+ 
++#, perl-format
++msgid "touched %d path\n"
++msgid_plural "touched %d paths\n"
++msgstr[0] ""
++msgstr[1] ""
++
+ msgid "trace the evolution of line range <start>,<end> or function :<funcname> in <file>"
+ msgstr ""
+ 
+@@ -18616,10 +18640,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unable to open loose object %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "unable to open or read %s"
+ msgstr ""
+ 
+@@ -18854,7 +18874,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unable to verify %s on good revision"
++msgid "unable to verify '%s' on good revision"
+ msgstr ""
+ 
+ #, c-format
+@@ -18993,6 +19013,10 @@
+ msgid "unknown %%(trailers) argument: %s"
+ msgstr ""
+ 
++#, perl-format
++msgid "unknown --patch mode: %s"
++msgstr ""
++
+ #, c-format
+ msgid "unknown -s/--strategy: %s"
+ msgstr ""
+@@ -19176,10 +19200,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unrecognized %%(%.*s) argument: %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "unrecognized %%(%s) argument: %s"
+ msgstr ""
+ 
+@@ -19220,6 +19240,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unrecognized email option: %s"
++msgstr ""
++
++#, c-format
+ msgid "unrecognized empty type '%s'; valid values are \"drop\", \"keep\", and \"ask\"."
+ msgstr ""
+ 
+@@ -19355,10 +19379,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "update-ref requires a fully qualified refname e.g. refs/heads/%s"
+-msgstr ""
+-
+-#, c-format
+ msgid "update-refs file at '%s' is invalid"
+ msgstr ""
+ 
+@@ -19366,7 +19386,7 @@
+ msgid "update_ref failed for ref '%s': %s"
+ msgstr ""
+ 
+-#, c-format
++#, c-format, perl-format
+ msgid "updated %d path\n"
+ msgid_plural "updated %d paths\n"
+ msgstr[0] ""
+@@ -19810,9 +19830,6 @@
+ msgid "whether the initial clone should follow the shallow recommendation"
+ msgstr ""
+ 
+-msgid "which tree-ish to check attributes at"
+-msgstr ""
+-
+ msgid "which tree-ish to checkout from"
+ msgstr ""
+ 
+@@ -19855,6 +19872,9 @@
+ msgid "with -a, repack unreachable objects"
+ msgstr ""
+ 
++msgid "won't bisect on cg-seek'ed tree"
++msgstr ""
++
+ msgid "work on the current change (see also: git help everyday)"
+ msgstr ""
+ 
+@@ -19977,6 +19997,14 @@
+ "n - do not apply this hunk to index\n"
+ "q - quit; do not apply this hunk or any of the remaining ones\n"
+ "a - apply this hunk and all later hunks in the file\n"
++"d - do not apply this hunk or any of the later hunks in the file"
++msgstr ""
++
++msgid ""
++"y - apply this hunk to index\n"
++"n - do not apply this hunk to index\n"
++"q - quit; do not apply this hunk or any of the remaining ones\n"
++"a - apply this hunk and all later hunks in the file\n"
+ "d - do not apply this hunk or any of the later hunks in the file\n"
+ msgstr ""
+ 
+@@ -19985,6 +20013,14 @@
+ "n - do not apply this hunk to index and worktree\n"
+ "q - quit; do not apply this hunk or any of the remaining ones\n"
+ "a - apply this hunk and all later hunks in the file\n"
++"d - do not apply this hunk or any of the later hunks in the file"
++msgstr ""
++
++msgid ""
++"y - apply this hunk to index and worktree\n"
++"n - do not apply this hunk to index and worktree\n"
++"q - quit; do not apply this hunk or any of the remaining ones\n"
++"a - apply this hunk and all later hunks in the file\n"
+ "d - do not apply this hunk or any of the later hunks in the file\n"
+ msgstr ""
+ 
+@@ -19993,6 +20029,14 @@
+ "n - do not apply this hunk to worktree\n"
+ "q - quit; do not apply this hunk or any of the remaining ones\n"
+ "a - apply this hunk and all later hunks in the file\n"
++"d - do not apply this hunk or any of the later hunks in the file"
++msgstr ""
++
++msgid ""
++"y - apply this hunk to worktree\n"
++"n - do not apply this hunk to worktree\n"
++"q - quit; do not apply this hunk or any of the remaining ones\n"
++"a - apply this hunk and all later hunks in the file\n"
+ "d - do not apply this hunk or any of the later hunks in the file\n"
+ msgstr ""
+ 
+@@ -20001,6 +20045,14 @@
+ "n - do not discard this hunk from index and worktree\n"
+ "q - quit; do not discard this hunk or any of the remaining ones\n"
+ "a - discard this hunk and all later hunks in the file\n"
++"d - do not discard this hunk or any of the later hunks in the file"
++msgstr ""
++
++msgid ""
++"y - discard this hunk from index and worktree\n"
++"n - do not discard this hunk from index and worktree\n"
++"q - quit; do not discard this hunk or any of the remaining ones\n"
++"a - discard this hunk and all later hunks in the file\n"
+ "d - do not discard this hunk or any of the later hunks in the file\n"
+ msgstr ""
+ 
+@@ -20009,6 +20061,14 @@
+ "n - do not discard this hunk from worktree\n"
+ "q - quit; do not discard this hunk or any of the remaining ones\n"
+ "a - discard this hunk and all later hunks in the file\n"
++"d - do not discard this hunk or any of the later hunks in the file"
++msgstr ""
++
++msgid ""
++"y - discard this hunk from worktree\n"
++"n - do not discard this hunk from worktree\n"
++"q - quit; do not discard this hunk or any of the remaining ones\n"
++"a - discard this hunk and all later hunks in the file\n"
+ "d - do not discard this hunk or any of the later hunks in the file\n"
+ msgstr ""
+ 
+@@ -20017,6 +20077,14 @@
+ "n - do not stage this hunk\n"
+ "q - quit; do not stage this hunk or any of the remaining ones\n"
+ "a - stage this hunk and all later hunks in the file\n"
++"d - do not stage this hunk or any of the later hunks in the file"
++msgstr ""
++
++msgid ""
++"y - stage this hunk\n"
++"n - do not stage this hunk\n"
++"q - quit; do not stage this hunk or any of the remaining ones\n"
++"a - stage this hunk and all later hunks in the file\n"
+ "d - do not stage this hunk or any of the later hunks in the file\n"
+ msgstr ""
+ 
+@@ -20025,10 +20093,26 @@
+ "n - do not stash this hunk\n"
+ "q - quit; do not stash this hunk or any of the remaining ones\n"
+ "a - stash this hunk and all later hunks in the file\n"
++"d - do not stash this hunk or any of the later hunks in the file"
++msgstr ""
++
++msgid ""
++"y - stash this hunk\n"
++"n - do not stash this hunk\n"
++"q - quit; do not stash this hunk or any of the remaining ones\n"
++"a - stash this hunk and all later hunks in the file\n"
+ "d - do not stash this hunk or any of the later hunks in the file\n"
+ msgstr ""
+ 
+ msgid ""
++"y - unstage this hunk\n"
++"n - do not unstage this hunk\n"
++"q - quit; do not unstage this hunk or any of the remaining ones\n"
++"a - unstage this hunk and all later hunks in the file\n"
++"d - do not unstage this hunk or any of the later hunks in the file"
++msgstr ""
++
++msgid ""
+ "y - unstage this hunk\n"
+ "n - do not unstage this hunk\n"
+ "q - quit; do not unstage this hunk or any of the remaining ones\n"
