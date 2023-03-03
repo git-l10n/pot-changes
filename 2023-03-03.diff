@@ -1,0 +1,95 @@
+
+
+#################### Fri, 03 Mar 2023 04:23:19 +0000 ####################
+
+--- po/git.pot.old	2023-03-03 04:23:19.080179117 +0000
++++ po/git.pot.new	2023-03-03 04:23:19.176179565 +0000
+@@ -6738,6 +6738,22 @@
+ 
+ #, c-format
+ msgid ""
++"You attempted to add another git repository inside your current repository.\n"
++"Clones of the outer repository will not contain the contents of\n"
++"the embedded repository and will not know how to obtain it.\n"
++"If you meant to add a submodule, use:\n"
++"\n"
++"\tgit submodule add <url> %s\n"
++"\n"
++"See \"git help submodule\" for more information.\n"
++"\n"
++"If you cannot use submodules, you may bypass this check with:\n"
++"\n"
++"\tgit add --allow-embedded-repo %s\n"
++msgstr ""
++
++#, c-format
++msgid ""
+ "You can amend the commit now, with\n"
+ "\n"
+ "  git commit --amend %s\n"
+@@ -6872,23 +6888,6 @@
+ 
+ #, c-format
+ msgid ""
+-"You've added another git repository inside your current repository.\n"
+-"Clones of the outer repository will not contain the contents of\n"
+-"the embedded repository and will not know how to obtain it.\n"
+-"If you meant to add a submodule, use:\n"
+-"\n"
+-"\tgit submodule add <url> %s\n"
+-"\n"
+-"If you added this path by mistake, you can remove it from the\n"
+-"index with:\n"
+-"\n"
+-"\tgit rm --cached %s\n"
+-"\n"
+-"See \"git help submodule\" for more information."
+-msgstr ""
+-
+-#, c-format
+-msgid ""
+ "Your branch and '%s' have diverged,\n"
+ "and have %d and %d different commit each, respectively.\n"
+ msgid_plural ""
+@@ -7279,10 +7278,6 @@
+ msgid "added with --lock"
+ msgstr ""
+ 
+-#, c-format
+-msgid "adding embedded git repository: %s"
+-msgstr ""
+-
+ msgid "adding files failed"
+ msgstr ""
+ 
+@@ -7329,6 +7324,9 @@
+ msgid "allow -s and -t to work with broken/corrupt objects"
+ msgstr ""
+ 
++msgid "allow adding an embedded repository"
++msgstr ""
++
+ msgid "allow adding an otherwise ignored submodule path"
+ msgstr ""
+ 
+@@ -8089,6 +8087,10 @@
+ msgid "cannot abort from a branch yet to be born"
+ msgstr ""
+ 
++#, c-format
++msgid "cannot add embedded git repository: %s"
++msgstr ""
++
+ msgid "cannot amend non-existing commit"
+ msgstr ""
+ 
+@@ -16405,6 +16407,9 @@
+ msgid "refusing to %s notes in %s (outside of refs/notes/)"
+ msgstr ""
+ 
++msgid "refusing to add embedded git repositories"
++msgstr ""
++
+ msgid "refusing to create malformed object"
+ msgstr ""
+ 
