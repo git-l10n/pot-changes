@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2023-03-07 23:57+0000\n"
+"POT-Creation-Date: 2023-03-08 23:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -660,70 +660,81 @@ msgstr ""
 msgid "'git apply' failed"
 msgstr ""
 
-#: advice.c:84
+#: advice.c:85
 #, c-format
 msgid ""
 "\n"
 "Disable this message with \"git config advice.%s false\""
 msgstr ""
 
-#: advice.c:100
+#: advice.c:101
 #, c-format
 msgid "%shint: %.*s%s\n"
 msgstr ""
 
-#: advice.c:184
+#: advice.c:185
 msgid "Cherry-picking is not possible because you have unmerged files."
 msgstr ""
 
-#: advice.c:186
+#: advice.c:187
 msgid "Committing is not possible because you have unmerged files."
 msgstr ""
 
-#: advice.c:188
+#: advice.c:189
 msgid "Merging is not possible because you have unmerged files."
 msgstr ""
 
-#: advice.c:190
+#: advice.c:191
 msgid "Pulling is not possible because you have unmerged files."
 msgstr ""
 
-#: advice.c:192
+#: advice.c:193
 msgid "Reverting is not possible because you have unmerged files."
 msgstr ""
 
-#: advice.c:194
+#: advice.c:195
 #, c-format
 msgid "It is not possible to %s because you have unmerged files."
 msgstr ""
 
-#: advice.c:202
+#: advice.c:203
 msgid ""
 "Fix them up in the work tree, and then use 'git add/rm <file>'\n"
 "as appropriate to mark resolution and make a commit."
 msgstr ""
 
-#: advice.c:210
+#: advice.c:211
 msgid "Exiting because of an unresolved conflict."
 msgstr ""
 
-#: advice.c:215 builtin/merge.c:1395
+#: advice.c:216 builtin/merge.c:1395
 msgid "You have not concluded your merge (MERGE_HEAD exists)."
 msgstr ""
 
-#: advice.c:217
+#: advice.c:218
 msgid "Please, commit your changes before merging."
 msgstr ""
 
-#: advice.c:218
+#: advice.c:219
 msgid "Exiting because of unfinished merge."
 msgstr ""
 
-#: advice.c:223
+#: advice.c:225
+msgid ""
+"Diverging branches can't be fast-forwarded, you need to either:\n"
+"\n"
+"\tgit merge --no-ff\n"
+"\n"
+"or:\n"
+"\n"
+"\tgit rebase\n"
+msgstr ""
+
+#: advice.c:232
 msgid "Not possible to fast-forward, aborting."
 msgstr ""
 
-#: advice.c:233
+#: advice.c:242
 #, c-format
 msgid ""
 "The following paths and/or pathspecs matched paths that exist\n"
@@ -731,14 +742,14 @@ msgid ""
 "updated in the index:\n"
 msgstr ""
 
-#: advice.c:240
+#: advice.c:249
 msgid ""
 "If you intend to update such entries, try one of the following:\n"
 "* Use the --sparse option.\n"
 "* Disable or modify the sparsity rules."
 msgstr ""
 
-#: advice.c:248
+#: advice.c:257
 #, c-format
 msgid ""
 "Note: switching to '%s'.\n"
@@ -761,7 +772,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: advice.c:275
+#: advice.c:284
 #, c-format
 msgid ""
 "The following paths have been moved outside the\n"
@@ -769,7 +780,7 @@ msgid ""
 "modifications.\n"
 msgstr ""
 
-#: advice.c:282
+#: advice.c:291
 msgid ""
 "To correct the sparsity of these paths, do the following:\n"
 "* Use \"git add --sparse <paths>\" to update the index\n"
@@ -809,7 +820,7 @@ msgstr ""
 #: builtin/commit.c:366 builtin/commit.c:369 builtin/commit.c:1214
 #: builtin/commit.c:1270 builtin/commit.c:1287 builtin/describe.c:597
 #: builtin/diff-tree.c:158 builtin/difftool.c:736 builtin/fast-export.c:1246
-#: builtin/fetch.c:2161 builtin/fetch.c:2182 builtin/fetch.c:2187
+#: builtin/fetch.c:2163 builtin/fetch.c:2184 builtin/fetch.c:2189
 #: builtin/help.c:614 builtin/index-pack.c:1861 builtin/init-db.c:563
 #: builtin/log.c:2077 builtin/log.c:2079 builtin/ls-files.c:874
 #: builtin/merge-base.c:164 builtin/merge-base.c:170 builtin/merge.c:1416
@@ -5021,7 +5032,7 @@ msgstr ""
 msgid "repository '%s' does not exist"
 msgstr ""
 
-#: builtin/clone.c:963 builtin/fetch.c:2196
+#: builtin/clone.c:963 builtin/fetch.c:2198
 #, c-format
 msgid "depth %s is not a positive number"
 msgstr ""
@@ -6975,7 +6986,7 @@ msgstr ""
 msgid "option \"%s\" is ignored for %s\n"
 msgstr ""
 
-#: builtin/fetch.c:1494 object-file.c:2527
+#: builtin/fetch.c:1494 object-file.c:2521
 #, c-format
 msgid "%s is not a valid object"
 msgstr ""
@@ -7014,84 +7025,84 @@ msgid ""
 "you need to specify exactly one branch with the --set-upstream option"
 msgstr ""
 
-#: builtin/fetch.c:1914 builtin/fetch.c:1986
+#: builtin/fetch.c:1916 builtin/fetch.c:1988
 #, c-format
 msgid "Fetching %s\n"
 msgstr ""
 
-#: builtin/fetch.c:1925 builtin/fetch.c:1989
+#: builtin/fetch.c:1927 builtin/fetch.c:1991
 #, c-format
 msgid "could not fetch %s"
 msgstr ""
 
-#: builtin/fetch.c:1937
+#: builtin/fetch.c:1939
 #, c-format
 msgid "could not fetch '%s' (exit code: %d)\n"
 msgstr ""
 
-#: builtin/fetch.c:2049
+#: builtin/fetch.c:2051
 msgid ""
 "no remote repository specified; please specify either a URL or a\n"
 "remote name from which new revisions should be fetched"
 msgstr ""
 
-#: builtin/fetch.c:2085
+#: builtin/fetch.c:2087
 msgid "you need to specify a tag name"
 msgstr ""
 
-#: builtin/fetch.c:2176
+#: builtin/fetch.c:2178
 msgid "--negotiate-only needs one or more --negotiation-tip=*"
 msgstr ""
 
-#: builtin/fetch.c:2180
+#: builtin/fetch.c:2182
 msgid "negative depth in --deepen is not supported"
 msgstr ""
 
-#: builtin/fetch.c:2189
+#: builtin/fetch.c:2191
 msgid "--unshallow on a complete repository does not make sense"
 msgstr ""
 
-#: builtin/fetch.c:2209
+#: builtin/fetch.c:2211
 #, c-format
 msgid "failed to fetch bundles from '%s'"
 msgstr ""
 
-#: builtin/fetch.c:2213
+#: builtin/fetch.c:2215
 msgid "fetch --all does not take a repository argument"
 msgstr ""
 
-#: builtin/fetch.c:2215
+#: builtin/fetch.c:2217
 msgid "fetch --all does not make sense with refspecs"
 msgstr ""
 
-#: builtin/fetch.c:2228
+#: builtin/fetch.c:2230
 #, c-format
 msgid "no such remote or remote group: %s"
 msgstr ""
 
-#: builtin/fetch.c:2236
+#: builtin/fetch.c:2238
 msgid "fetching a group and specifying refspecs does not make sense"
 msgstr ""
 
-#: builtin/fetch.c:2253
+#: builtin/fetch.c:2255
 msgid "must supply remote when using --negotiate-only"
 msgstr ""
 
-#: builtin/fetch.c:2258
+#: builtin/fetch.c:2260
 msgid "protocol does not support --negotiate-only, exiting"
 msgstr ""
 
-#: builtin/fetch.c:2278
+#: builtin/fetch.c:2280
 msgid ""
 "--filter can only be used with the remote configured in extensions."
 "partialclone"
 msgstr ""
 
-#: builtin/fetch.c:2282
+#: builtin/fetch.c:2284
 msgid "--atomic can only be used when fetching from one remote"
 msgstr ""
 
-#: builtin/fetch.c:2286
+#: builtin/fetch.c:2288
 msgid "--stdin can only be used when fetching from one remote"
 msgstr ""
 
@@ -10782,7 +10793,7 @@ msgstr ""
 msgid "failed to stat %s"
 msgstr ""
 
-#: builtin/pack-objects.c:1258 object-file.c:2075
+#: builtin/pack-objects.c:1258 object-file.c:2069
 #, c-format
 msgid "failed utime() on %s"
 msgstr ""
@@ -20710,197 +20721,197 @@ msgstr ""
 msgid "invalid line while parsing alternate refs: %s"
 msgstr ""
 
-#: object-file.c:1028
+#: object-file.c:1022
 #, c-format
 msgid "attempting to mmap %<PRIuMAX> over limit %<PRIuMAX>"
 msgstr ""
 
-#: object-file.c:1063
+#: object-file.c:1057
 #, c-format
 msgid "mmap failed%s"
 msgstr ""
 
-#: object-file.c:1235
+#: object-file.c:1229
 #, c-format
 msgid "object file %s is empty"
 msgstr ""
 
-#: object-file.c:1358 object-file.c:2741
+#: object-file.c:1352 object-file.c:2735
 #, c-format
 msgid "corrupt loose object '%s'"
 msgstr ""
 
-#: object-file.c:1360 object-file.c:2745
+#: object-file.c:1354 object-file.c:2739
 #, c-format
 msgid "garbage at end of loose object '%s'"
 msgstr ""
 
-#: object-file.c:1470
+#: object-file.c:1464
 #, c-format
 msgid "unable to open loose object %s"
 msgstr ""
 
-#: object-file.c:1489
+#: object-file.c:1483
 #, c-format
 msgid "unable to parse %s header"
 msgstr ""
 
-#: object-file.c:1491
+#: object-file.c:1485
 msgid "invalid object type"
 msgstr ""
 
-#: object-file.c:1502
+#: object-file.c:1496
 #, c-format
 msgid "unable to unpack %s header"
 msgstr ""
 
-#: object-file.c:1506
+#: object-file.c:1500
 #, c-format
 msgid "header for %s too long, exceeds %d bytes"
 msgstr ""
 
-#: object-file.c:1512
+#: object-file.c:1506
 #, c-format
 msgid "loose object %s (stored in %s) is corrupt"
 msgstr ""
 
-#: object-file.c:1627
+#: object-file.c:1621
 #, c-format
 msgid "replacement %s not found for %s"
 msgstr ""
 
-#: object-file.c:1630
+#: object-file.c:1624
 #, c-format
 msgid "packed object %s (stored in %s) is corrupt"
 msgstr ""
 
-#: object-file.c:1841
+#: object-file.c:1835
 #, c-format
 msgid "unable to write file %s"
 msgstr ""
 
-#: object-file.c:1848
+#: object-file.c:1842
 #, c-format
 msgid "unable to set permission to '%s'"
 msgstr ""
 
-#: object-file.c:1885
+#: object-file.c:1879
 msgid "error when closing loose object file"
 msgstr ""
 
-#: object-file.c:1958
+#: object-file.c:1952
 #, c-format
 msgid "insufficient permission for adding an object to repository database %s"
 msgstr ""
 
-#: object-file.c:1963
+#: object-file.c:1957
 msgid "unable to create temporary file"
 msgstr ""
 
-#: object-file.c:1997
+#: object-file.c:1991
 msgid "unable to write loose object file"
 msgstr ""
 
-#: object-file.c:2057
+#: object-file.c:2051
 #, c-format
 msgid "unable to deflate new object %s (%d)"
 msgstr ""
 
-#: object-file.c:2061
+#: object-file.c:2055
 #, c-format
 msgid "deflateEnd on object %s failed (%d)"
 msgstr ""
 
-#: object-file.c:2064
+#: object-file.c:2058
 #, c-format
 msgid "confused by unstable object source data for %s"
 msgstr ""
 
-#: object-file.c:2160
+#: object-file.c:2154
 #, c-format
 msgid "write stream object %ld != %<PRIuMAX>"
 msgstr ""
 
-#: object-file.c:2171
+#: object-file.c:2165
 #, c-format
 msgid "unable to stream deflate new object (%d)"
 msgstr ""
 
-#: object-file.c:2174
+#: object-file.c:2168
 #, c-format
 msgid "deflateEnd on stream object failed (%d)"
 msgstr ""
 
-#: object-file.c:2191
+#: object-file.c:2185
 #, c-format
 msgid "unable to create directory %s"
 msgstr ""
 
-#: object-file.c:2262
+#: object-file.c:2256
 #, c-format
 msgid "cannot read object for %s"
 msgstr ""
 
-#: object-file.c:2309
+#: object-file.c:2303
 #, c-format
 msgid "object fails fsck: %s"
 msgstr ""
 
-#: object-file.c:2342
+#: object-file.c:2336
 msgid "refusing to create malformed object"
 msgstr ""
 
-#: object-file.c:2411
+#: object-file.c:2405
 #, c-format
 msgid "read error while indexing %s"
 msgstr ""
 
-#: object-file.c:2414
+#: object-file.c:2408
 #, c-format
 msgid "short read while indexing %s"
 msgstr ""
 
-#: object-file.c:2487 object-file.c:2497
+#: object-file.c:2481 object-file.c:2491
 #, c-format
 msgid "%s: failed to insert into database"
 msgstr ""
 
-#: object-file.c:2503
+#: object-file.c:2497
 #, c-format
 msgid "%s: unsupported file type"
 msgstr ""
 
-#: object-file.c:2529
+#: object-file.c:2523
 #, c-format
 msgid "%s is not a valid '%s' object"
 msgstr ""
 
-#: object-file.c:2556
+#: object-file.c:2550
 #, c-format
 msgid "unable to open %s"
 msgstr ""
 
-#: object-file.c:2752
+#: object-file.c:2746
 #, c-format
 msgid "hash mismatch for %s (expected %s)"
 msgstr ""
 
-#: object-file.c:2778
+#: object-file.c:2772
 #, c-format
 msgid "unable to mmap %s"
 msgstr ""
 
-#: object-file.c:2784
+#: object-file.c:2778
 #, c-format
 msgid "unable to unpack header of %s"
 msgstr ""
 
-#: object-file.c:2789
+#: object-file.c:2783
 #, c-format
 msgid "unable to parse header of %s"
 msgstr ""
 
-#: object-file.c:2800
+#: object-file.c:2794
 #, c-format
 msgid "unable to unpack contents of %s"
 msgstr ""
@@ -21303,12 +21314,12 @@ msgstr ""
 msgid "packfile %s cannot be mapped%s"
 msgstr ""
 
-#: packfile.c:1922
+#: packfile.c:1931
 #, c-format
 msgid "offset before start of pack index for %s (corrupt index?)"
 msgstr ""
 
-#: packfile.c:1926
+#: packfile.c:1935
 #, c-format
 msgid "offset beyond end of pack index for %s (truncated index?)"
 msgstr ""
