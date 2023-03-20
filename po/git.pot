@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2023-03-20 21:57+0000\n"
+"POT-Creation-Date: 2023-03-20 22:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -813,7 +813,7 @@ msgstr ""
 msgid "unrecognized whitespace ignore option '%s'"
 msgstr ""
 
-#: apply.c:140 archive.c:642 builtin/add.c:469 builtin/add.c:471
+#: apply.c:140 archive.c:671 builtin/add.c:469 builtin/add.c:471
 #: builtin/add.c:477 builtin/add.c:489 builtin/branch.c:784
 #: builtin/checkout.c:475 builtin/checkout.c:478 builtin/checkout.c:1702
 #: builtin/checkout.c:1822 builtin/checkout.c:1825 builtin/clone.c:942
@@ -1484,78 +1484,79 @@ msgstr ""
 msgid "git archive --remote <repo> [--exec <cmd>] --list"
 msgstr ""
 
-#: archive.c:190 archive.c:345 builtin/gc.c:505 builtin/notes.c:260
+#: archive.c:209 archive.c:364 builtin/gc.c:505 builtin/notes.c:260
 #: builtin/tag.c:579
 #, c-format
 msgid "cannot read '%s'"
 msgstr ""
 
-#: archive.c:438 builtin/add.c:224 builtin/add.c:619 builtin/rm.c:339
+#: archive.c:459
+#, c-format
+msgid "pathspec '%s' matches files outside the current directory"
+msgstr ""
+
+#: archive.c:482 builtin/add.c:224 builtin/add.c:619 builtin/rm.c:339
 #, c-format
 msgid "pathspec '%s' did not match any files"
 msgstr ""
 
-#: archive.c:462
+#: archive.c:505
 #, c-format
 msgid "no such ref: %.*s"
 msgstr ""
 
-#: archive.c:469
+#: archive.c:512
 #, c-format
 msgid "not a valid object name: %s"
 msgstr ""
 
-#: archive.c:484 t/helper/test-cache-tree.c:41
+#: archive.c:527 t/helper/test-cache-tree.c:41
 #, c-format
 msgid "not a tree object: %s"
 msgstr ""
 
-#: archive.c:496
-msgid "current working directory is untracked"
-msgstr ""
-
-#: archive.c:539
+#: archive.c:568
 #, c-format
 msgid "File not found: %s"
 msgstr ""
 
-#: archive.c:541
+#: archive.c:570
 #, c-format
 msgid "Not a regular file: %s"
 msgstr ""
 
-#: archive.c:550
+#: archive.c:579
 #, c-format
 msgid "unclosed quote: '%s'"
 msgstr ""
 
-#: archive.c:553
+#: archive.c:582
 #, c-format
 msgid "missing colon: '%s'"
 msgstr ""
 
-#: archive.c:556
+#: archive.c:585
 #, c-format
 msgid "empty file name: '%s'"
 msgstr ""
 
-#: archive.c:603
+#: archive.c:632
 msgid "fmt"
 msgstr ""
 
-#: archive.c:603
+#: archive.c:632
 msgid "archive format"
 msgstr ""
 
-#: archive.c:604 builtin/log.c:1935 parse-options.h:521
+#: archive.c:633 builtin/log.c:1935 parse-options.h:521
 msgid "prefix"
 msgstr ""
 
-#: archive.c:605
+#: archive.c:634
 msgid "prepend prefix to each pathname in the archive"
 msgstr ""
 
-#: archive.c:606 archive.c:612 builtin/blame.c:892 builtin/blame.c:896
+#: archive.c:635 archive.c:641 builtin/blame.c:892 builtin/blame.c:896
 #: builtin/blame.c:897 builtin/commit-tree.c:109 builtin/config.c:136
 #: builtin/fast-export.c:1184 builtin/fast-export.c:1186
 #: builtin/fast-export.c:1190 builtin/gc.c:1492 builtin/gc.c:1558
@@ -1565,66 +1566,66 @@ msgstr ""
 msgid "file"
 msgstr ""
 
-#: archive.c:607 archive.c:610
+#: archive.c:636 archive.c:639
 msgid "add untracked file to archive"
 msgstr ""
 
-#: archive.c:610
+#: archive.c:639
 msgid "path:content"
 msgstr ""
 
-#: archive.c:613 builtin/archive.c:88
+#: archive.c:642 builtin/archive.c:88
 msgid "write the archive to this file"
 msgstr ""
 
-#: archive.c:615
+#: archive.c:644
 msgid "read .gitattributes in working directory"
 msgstr ""
 
-#: archive.c:616
+#: archive.c:645
 msgid "report archived files on stderr"
 msgstr ""
 
-#: archive.c:617 builtin/clone.c:139 builtin/fetch.c:197
+#: archive.c:646 builtin/clone.c:139 builtin/fetch.c:197
 #: builtin/pack-objects.c:4236 builtin/pack-objects.c:4240 builtin/pull.c:217
 msgid "time"
 msgstr ""
 
-#: archive.c:618
+#: archive.c:647
 msgid "set modification time of archive entries"
 msgstr ""
 
-#: archive.c:621
+#: archive.c:650
 msgid "set compression level"
 msgstr ""
 
-#: archive.c:624
+#: archive.c:653
 msgid "list supported archive formats"
 msgstr ""
 
-#: archive.c:626 builtin/archive.c:89 builtin/clone.c:125 builtin/clone.c:128
+#: archive.c:655 builtin/archive.c:89 builtin/clone.c:125 builtin/clone.c:128
 #: builtin/submodule--helper.c:1782 builtin/submodule--helper.c:2674
 msgid "repo"
 msgstr ""
 
-#: archive.c:627 builtin/archive.c:90
+#: archive.c:656 builtin/archive.c:90
 msgid "retrieve the archive from remote repository <repo>"
 msgstr ""
 
-#: archive.c:628 builtin/archive.c:91 builtin/difftool.c:712
+#: archive.c:657 builtin/archive.c:91 builtin/difftool.c:712
 #: builtin/notes.c:522
 msgid "command"
 msgstr ""
 
-#: archive.c:629 builtin/archive.c:92
+#: archive.c:658 builtin/archive.c:92
 msgid "path to the remote git-upload-archive command"
 msgstr ""
 
-#: archive.c:636
+#: archive.c:665
 msgid "Unexpected option --remote"
 msgstr ""
 
-#: archive.c:638 builtin/add.c:492 builtin/add.c:524 builtin/checkout.c:1831
+#: archive.c:667 builtin/add.c:492 builtin/add.c:524 builtin/checkout.c:1831
 #: builtin/clone.c:1123 builtin/clone.c:1126 builtin/commit.c:378
 #: builtin/fast-export.c:1233 builtin/index-pack.c:1860 builtin/log.c:2270
 #: builtin/reset.c:367 builtin/reset.c:428 builtin/rm.c:283
@@ -1634,16 +1635,16 @@ msgstr ""
 msgid "the option '%s' requires '%s'"
 msgstr ""
 
-#: archive.c:640
+#: archive.c:669
 msgid "Unexpected option --output"
 msgstr ""
 
-#: archive.c:664
+#: archive.c:693
 #, c-format
 msgid "Unknown archive format '%s'"
 msgstr ""
 
-#: archive.c:673
+#: archive.c:702
 #, c-format
 msgid "Argument not supported for format '%s': -%d"
 msgstr ""
@@ -1809,7 +1810,7 @@ msgstr ""
 #: builtin/log.c:1787 builtin/log.c:2226 builtin/log.c:2523 builtin/merge.c:433
 #: builtin/pack-objects.c:3419 builtin/pack-objects.c:3577
 #: builtin/pack-objects.c:4061 builtin/pack-objects.c:4076
-#: builtin/shortlog.c:270 midx.c:1116 pack-bitmap.c:1123 pack-bitmap.c:2017
+#: builtin/shortlog.c:270 midx.c:1116 pack-bitmap.c:1157 pack-bitmap.c:2051
 #: remote.c:2193 sequencer.c:2429 sequencer.c:5244 submodule.c:915
 msgid "revision walk setup failed"
 msgstr ""
@@ -10803,7 +10804,7 @@ msgstr ""
 msgid "Counting objects"
 msgstr ""
 
-#: builtin/pack-objects.c:2453 pack-bitmap.c:1375 pack-bitmap.c:1381
+#: builtin/pack-objects.c:2453 pack-bitmap.c:1409 pack-bitmap.c:1415
 #, c-format
 msgid "unable to get size of %s"
 msgstr ""
@@ -21083,137 +21084,137 @@ msgstr ""
 msgid "trying to write commit not in index"
 msgstr ""
 
-#: pack-bitmap.c:150
-msgid "failed to load bitmap index (corrupted?)"
-msgstr ""
-
-#: pack-bitmap.c:172
-msgid "corrupted bitmap index (too small)"
-msgstr ""
-
-#: pack-bitmap.c:175
-msgid "corrupted bitmap index file (wrong header)"
-msgstr ""
-
-#: pack-bitmap.c:179
-#, c-format
-msgid "unsupported version '%d' for bitmap index file"
-msgstr ""
-
-#: pack-bitmap.c:193
-msgid "corrupted bitmap index file (too short to fit hash cache)"
-msgstr ""
-
-#: pack-bitmap.c:202
-msgid "corrupted bitmap index file (too short to fit lookup table)"
-msgstr ""
-
-#: pack-bitmap.c:239
-#, c-format
-msgid "duplicate entry in bitmap index: '%s'"
-msgstr ""
-
-#: pack-bitmap.c:283
-#, c-format
-msgid "corrupt ewah bitmap: truncated header for entry %d"
-msgstr ""
-
-#: pack-bitmap.c:290
-#, c-format
-msgid "corrupt ewah bitmap: commit index %u out of range"
-msgstr ""
-
-#: pack-bitmap.c:298
-msgid "corrupted bitmap pack index"
-msgstr ""
-
-#: pack-bitmap.c:304
-msgid "invalid XOR offset in bitmap pack index"
-msgstr ""
-
-#: pack-bitmap.c:351 pack-bitmap.c:428
-msgid "cannot fstat bitmap file"
-msgstr ""
-
-#: pack-bitmap.c:377
-msgid "checksum doesn't match in MIDX and bitmap"
-msgstr ""
-
-#: pack-bitmap.c:382
-msgid "multi-pack bitmap is missing required reverse index"
-msgstr ""
-
-#: pack-bitmap.c:388
-#, c-format
-msgid "could not open pack %s"
-msgstr ""
-
-#: pack-bitmap.c:394
-#, c-format
-msgid "preferred pack (%s) is invalid"
-msgstr ""
-
-#: pack-bitmap.c:647
-msgid "corrupt bitmap lookup table: triplet position out of index"
-msgstr ""
-
-#: pack-bitmap.c:741
-msgid "corrupt bitmap lookup table: xor chain exceeds entry count"
-msgstr ""
-
-#: pack-bitmap.c:752
-#, c-format
-msgid "corrupt bitmap lookup table: commit index %u out of range"
-msgstr ""
-
-#: pack-bitmap.c:777 pack-bitmap.c:795
+#: pack-bitmap.c:168
 #, c-format
 msgid "corrupt ewah bitmap: truncated header for bitmap of commit \"%s\""
 msgstr ""
 
-#: pack-bitmap.c:1932
+#: pack-bitmap.c:187
+msgid "failed to load bitmap index (corrupted?)"
+msgstr ""
+
+#: pack-bitmap.c:209
+msgid "corrupted bitmap index (too small)"
+msgstr ""
+
+#: pack-bitmap.c:212
+msgid "corrupted bitmap index file (wrong header)"
+msgstr ""
+
+#: pack-bitmap.c:216
+#, c-format
+msgid "unsupported version '%d' for bitmap index file"
+msgstr ""
+
+#: pack-bitmap.c:230
+msgid "corrupted bitmap index file (too short to fit hash cache)"
+msgstr ""
+
+#: pack-bitmap.c:239
+msgid "corrupted bitmap index file (too short to fit lookup table)"
+msgstr ""
+
+#: pack-bitmap.c:276
+#, c-format
+msgid "duplicate entry in bitmap index: '%s'"
+msgstr ""
+
+#: pack-bitmap.c:322
+#, c-format
+msgid "corrupt ewah bitmap: truncated header for entry %d"
+msgstr ""
+
+#: pack-bitmap.c:329
+#, c-format
+msgid "corrupt ewah bitmap: commit index %u out of range"
+msgstr ""
+
+#: pack-bitmap.c:337
+msgid "corrupted bitmap pack index"
+msgstr ""
+
+#: pack-bitmap.c:343
+msgid "invalid XOR offset in bitmap pack index"
+msgstr ""
+
+#: pack-bitmap.c:390 pack-bitmap.c:467
+msgid "cannot fstat bitmap file"
+msgstr ""
+
+#: pack-bitmap.c:416
+msgid "checksum doesn't match in MIDX and bitmap"
+msgstr ""
+
+#: pack-bitmap.c:421
+msgid "multi-pack bitmap is missing required reverse index"
+msgstr ""
+
+#: pack-bitmap.c:427
+#, c-format
+msgid "could not open pack %s"
+msgstr ""
+
+#: pack-bitmap.c:433
+#, c-format
+msgid "preferred pack (%s) is invalid"
+msgstr ""
+
+#: pack-bitmap.c:686
+msgid "corrupt bitmap lookup table: triplet position out of index"
+msgstr ""
+
+#: pack-bitmap.c:779
+msgid "corrupt bitmap lookup table: xor chain exceeds entry count"
+msgstr ""
+
+#: pack-bitmap.c:790
+#, c-format
+msgid "corrupt bitmap lookup table: commit index %u out of range"
+msgstr ""
+
+#: pack-bitmap.c:1966
 #, c-format
 msgid "object '%s' not found in type bitmaps"
 msgstr ""
 
-#: pack-bitmap.c:1936
+#: pack-bitmap.c:1970
 #, c-format
 msgid "object '%s' does not have a unique type"
 msgstr ""
 
-#: pack-bitmap.c:1940
+#: pack-bitmap.c:1974
 #, c-format
 msgid "object '%s': real type '%s', expected: '%s'"
 msgstr ""
 
-#: pack-bitmap.c:1955 pack-bitmap.c:1970
+#: pack-bitmap.c:1989 pack-bitmap.c:2004
 #, c-format
 msgid "object not in bitmap: '%s'"
 msgstr ""
 
-#: pack-bitmap.c:1987 pack-bitmap.c:2053 pack-bitmap.c:2061
+#: pack-bitmap.c:2021 pack-bitmap.c:2087 pack-bitmap.c:2095
 msgid "failed to load bitmap indexes"
 msgstr ""
 
-#: pack-bitmap.c:1990
+#: pack-bitmap.c:2024
 msgid "you must specify exactly one commit to test"
 msgstr ""
 
-#: pack-bitmap.c:2008
+#: pack-bitmap.c:2042
 #, c-format
 msgid "commit '%s' doesn't have an indexed bitmap"
 msgstr ""
 
-#: pack-bitmap.c:2035
+#: pack-bitmap.c:2069
 msgid "mismatch in bitmap results"
 msgstr ""
 
-#: pack-bitmap.c:2252
+#: pack-bitmap.c:2286
 #, c-format
 msgid "could not find '%s' in pack '%s' at offset %<PRIuMAX>"
 msgstr ""
 
-#: pack-bitmap.c:2288
+#: pack-bitmap.c:2322
 #, c-format
 msgid "unable to get disk usage of '%s'"
 msgstr ""
