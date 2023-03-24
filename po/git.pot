@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2023-03-24 19:57+0000\n"
+"POT-Creation-Date: 2023-03-24 23:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -813,7 +813,7 @@ msgstr ""
 msgid "unrecognized whitespace ignore option '%s'"
 msgstr ""
 
-#: apply.c:145 archive.c:646 builtin/add.c:470 builtin/add.c:472
+#: apply.c:145 archive.c:679 builtin/add.c:470 builtin/add.c:472
 #: builtin/add.c:478 builtin/add.c:490 builtin/branch.c:787
 #: builtin/checkout.c:478 builtin/checkout.c:481 builtin/checkout.c:1705
 #: builtin/checkout.c:1825 builtin/checkout.c:1828 builtin/clone.c:946
@@ -1484,78 +1484,79 @@ msgstr ""
 msgid "git archive --remote <repo> [--exec <cmd>] --list"
 msgstr ""
 
-#: archive.c:194 archive.c:349 builtin/gc.c:510 builtin/notes.c:262
+#: archive.c:217 archive.c:372 builtin/gc.c:510 builtin/notes.c:262
 #: builtin/tag.c:582
 #, c-format
 msgid "cannot read '%s'"
 msgstr ""
 
-#: archive.c:442 builtin/add.c:225 builtin/add.c:620 builtin/rm.c:341
+#: archive.c:467
+#, c-format
+msgid "pathspec '%s' matches files outside the current directory"
+msgstr ""
+
+#: archive.c:490 builtin/add.c:225 builtin/add.c:620 builtin/rm.c:341
 #, c-format
 msgid "pathspec '%s' did not match any files"
 msgstr ""
 
-#: archive.c:466
+#: archive.c:513
 #, c-format
 msgid "no such ref: %.*s"
 msgstr ""
 
-#: archive.c:473
+#: archive.c:520
 #, c-format
 msgid "not a valid object name: %s"
 msgstr ""
 
-#: archive.c:488 t/helper/test-cache-tree.c:43
+#: archive.c:535 t/helper/test-cache-tree.c:43
 #, c-format
 msgid "not a tree object: %s"
 msgstr ""
 
-#: archive.c:500
-msgid "current working directory is untracked"
-msgstr ""
-
-#: archive.c:543
+#: archive.c:576
 #, c-format
 msgid "File not found: %s"
 msgstr ""
 
-#: archive.c:545
+#: archive.c:578
 #, c-format
 msgid "Not a regular file: %s"
 msgstr ""
 
-#: archive.c:554
+#: archive.c:587
 #, c-format
 msgid "unclosed quote: '%s'"
 msgstr ""
 
-#: archive.c:557
+#: archive.c:590
 #, c-format
 msgid "missing colon: '%s'"
 msgstr ""
 
-#: archive.c:560
+#: archive.c:593
 #, c-format
 msgid "empty file name: '%s'"
 msgstr ""
 
-#: archive.c:607
+#: archive.c:640
 msgid "fmt"
 msgstr ""
 
-#: archive.c:607
+#: archive.c:640
 msgid "archive format"
 msgstr ""
 
-#: archive.c:608 builtin/log.c:1939 parse-options.h:523
+#: archive.c:641 builtin/log.c:1939 parse-options.h:523
 msgid "prefix"
 msgstr ""
 
-#: archive.c:609
+#: archive.c:642
 msgid "prepend prefix to each pathname in the archive"
 msgstr ""
 
-#: archive.c:610 archive.c:616 builtin/blame.c:896 builtin/blame.c:900
+#: archive.c:643 archive.c:649 builtin/blame.c:896 builtin/blame.c:900
 #: builtin/blame.c:901 builtin/commit-tree.c:110 builtin/config.c:141
 #: builtin/fast-export.c:1194 builtin/fast-export.c:1196
 #: builtin/fast-export.c:1200 builtin/gc.c:1497 builtin/gc.c:1563
@@ -1565,66 +1566,66 @@ msgstr ""
 msgid "file"
 msgstr ""
 
-#: archive.c:611 archive.c:614
+#: archive.c:644 archive.c:647
 msgid "add untracked file to archive"
 msgstr ""
 
-#: archive.c:614
+#: archive.c:647
 msgid "path:content"
 msgstr ""
 
-#: archive.c:617 builtin/archive.c:89
+#: archive.c:650 builtin/archive.c:89
 msgid "write the archive to this file"
 msgstr ""
 
-#: archive.c:619
+#: archive.c:652
 msgid "read .gitattributes in working directory"
 msgstr ""
 
-#: archive.c:620
+#: archive.c:653
 msgid "report archived files on stderr"
 msgstr ""
 
-#: archive.c:621 builtin/clone.c:143 builtin/fetch.c:199
+#: archive.c:654 builtin/clone.c:143 builtin/fetch.c:199
 #: builtin/pack-objects.c:4239 builtin/pack-objects.c:4243 builtin/pull.c:218
 msgid "time"
 msgstr ""
 
-#: archive.c:622
+#: archive.c:655
 msgid "set modification time of archive entries"
 msgstr ""
 
-#: archive.c:625
+#: archive.c:658
 msgid "set compression level"
 msgstr ""
 
-#: archive.c:628
+#: archive.c:661
 msgid "list supported archive formats"
 msgstr ""
 
-#: archive.c:630 builtin/archive.c:90 builtin/clone.c:129 builtin/clone.c:132
+#: archive.c:663 builtin/archive.c:90 builtin/clone.c:129 builtin/clone.c:132
 #: builtin/submodule--helper.c:1786 builtin/submodule--helper.c:2678
 msgid "repo"
 msgstr ""
 
-#: archive.c:631 builtin/archive.c:91
+#: archive.c:664 builtin/archive.c:91
 msgid "retrieve the archive from remote repository <repo>"
 msgstr ""
 
-#: archive.c:632 builtin/archive.c:92 builtin/difftool.c:717
+#: archive.c:665 builtin/archive.c:92 builtin/difftool.c:717
 #: builtin/notes.c:524
 msgid "command"
 msgstr ""
 
-#: archive.c:633 builtin/archive.c:93
+#: archive.c:666 builtin/archive.c:93
 msgid "path to the remote git-upload-archive command"
 msgstr ""
 
-#: archive.c:640
+#: archive.c:673
 msgid "Unexpected option --remote"
 msgstr ""
 
-#: archive.c:642 builtin/add.c:493 builtin/add.c:525 builtin/checkout.c:1834
+#: archive.c:675 builtin/add.c:493 builtin/add.c:525 builtin/checkout.c:1834
 #: builtin/clone.c:1127 builtin/clone.c:1130 builtin/commit.c:380
 #: builtin/fast-export.c:1243 builtin/index-pack.c:1864 builtin/log.c:2274
 #: builtin/reset.c:370 builtin/reset.c:431 builtin/rm.c:285
@@ -1634,16 +1635,16 @@ msgstr ""
 msgid "the option '%s' requires '%s'"
 msgstr ""
 
-#: archive.c:644
+#: archive.c:677
 msgid "Unexpected option --output"
 msgstr ""
 
-#: archive.c:668
+#: archive.c:701
 #, c-format
 msgid "Unknown archive format '%s'"
 msgstr ""
 
-#: archive.c:677
+#: archive.c:710
 #, c-format
 msgid "Argument not supported for format '%s': -%d"
 msgstr ""
@@ -1797,11 +1798,11 @@ msgstr[1] ""
 msgid "--contents and --reverse do not blend well."
 msgstr ""
 
-#: blame.c:2805
+#: blame.c:2812
 msgid "--reverse and --first-parent together require specified latest commit"
 msgstr ""
 
-#: blame.c:2814 builtin/commit.c:1136 builtin/log.c:504 builtin/log.c:1176
+#: blame.c:2821 builtin/commit.c:1136 builtin/log.c:504 builtin/log.c:1176
 #: builtin/log.c:1791 builtin/log.c:2230 builtin/log.c:2527 builtin/merge.c:437
 #: builtin/pack-objects.c:3422 builtin/pack-objects.c:3580
 #: builtin/pack-objects.c:4064 builtin/pack-objects.c:4079
@@ -1810,17 +1811,17 @@ msgstr ""
 msgid "revision walk setup failed"
 msgstr ""
 
-#: blame.c:2832
+#: blame.c:2839
 msgid ""
 "--reverse --first-parent together require range along first-parent chain"
 msgstr ""
 
-#: blame.c:2843
+#: blame.c:2850
 #, c-format
 msgid "no such path %s in %s"
 msgstr ""
 
-#: blame.c:2856
+#: blame.c:2863
 #, c-format
 msgid "cannot read blob %s for path %s"
 msgstr ""
@@ -17434,11 +17435,11 @@ msgstr ""
 msgid "No previous regular expression"
 msgstr ""
 
-#: compat/simple-ipc/ipc-unix-socket.c:206 compat/simple-ipc/ipc-win32.c:250
+#: compat/simple-ipc/ipc-unix-socket.c:206 compat/simple-ipc/ipc-win32.c:251
 msgid "could not send IPC command"
 msgstr ""
 
-#: compat/simple-ipc/ipc-unix-socket.c:213 compat/simple-ipc/ipc-win32.c:259
+#: compat/simple-ipc/ipc-unix-socket.c:213 compat/simple-ipc/ipc-win32.c:260
 msgid "could not read IPC response"
 msgstr ""
 
@@ -17452,22 +17453,22 @@ msgstr ""
 msgid "could not start worker[0] for '%s'"
 msgstr ""
 
-#: compat/simple-ipc/ipc-win32.c:402
+#: compat/simple-ipc/ipc-win32.c:403
 #, c-format
 msgid "ConnectNamedPipe failed for '%s' (%lu)"
 msgstr ""
 
-#: compat/simple-ipc/ipc-win32.c:483
+#: compat/simple-ipc/ipc-win32.c:484
 #, c-format
 msgid "could not create fd from pipe for '%s'"
 msgstr ""
 
-#: compat/simple-ipc/ipc-win32.c:822
+#: compat/simple-ipc/ipc-win32.c:823
 #, c-format
 msgid "could not start thread[0] for '%s'"
 msgstr ""
 
-#: compat/simple-ipc/ipc-win32.c:863
+#: compat/simple-ipc/ipc-win32.c:864
 #, c-format
 msgid "wait for hEvent failed for '%s'"
 msgstr ""
