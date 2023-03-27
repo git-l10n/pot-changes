@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2023-03-24 23:57+0000\n"
+"POT-Creation-Date: 2023-03-27 20:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -24,7 +24,7 @@ msgid "Huh (%s)?"
 msgstr ""
 
 #: add-interactive.c:537 add-interactive.c:845 builtin/merge.c:401
-#: builtin/rebase.c:1303 builtin/rebase.c:1730 reset.c:139 sequencer.c:3634
+#: builtin/rebase.c:1304 builtin/rebase.c:1731 reset.c:139 sequencer.c:3634
 #: sequencer.c:4115 sequencer.c:4491
 msgid "could not read index"
 msgstr ""
@@ -814,7 +814,7 @@ msgid "unrecognized whitespace ignore option '%s'"
 msgstr ""
 
 #: apply.c:145 archive.c:679 builtin/add.c:470 builtin/add.c:472
-#: builtin/add.c:478 builtin/add.c:490 builtin/branch.c:787
+#: builtin/add.c:478 builtin/add.c:490 builtin/branch.c:799
 #: builtin/checkout.c:478 builtin/checkout.c:481 builtin/checkout.c:1705
 #: builtin/checkout.c:1825 builtin/checkout.c:1828 builtin/clone.c:946
 #: builtin/commit.c:368 builtin/commit.c:371 builtin/commit.c:1219
@@ -826,7 +826,7 @@ msgstr ""
 #: builtin/merge-base.c:166 builtin/merge-base.c:172 builtin/merge.c:1421
 #: builtin/merge.c:1423 builtin/pack-objects.c:4385 builtin/push.c:641
 #: builtin/push.c:679 builtin/push.c:685 builtin/push.c:690
-#: builtin/rebase.c:1258 builtin/rebase.c:1260 builtin/rebase.c:1269
+#: builtin/rebase.c:1259 builtin/rebase.c:1261 builtin/rebase.c:1270
 #: builtin/repack.c:830 builtin/repack.c:836 builtin/repack.c:838
 #: builtin/repack.c:877 builtin/reset.c:361 builtin/reset.c:398
 #: builtin/rev-list.c:556 builtin/show-branch.c:715 builtin/show-branch.c:720
@@ -1378,7 +1378,7 @@ msgstr ""
 #: apply.c:5090 builtin/am.c:2354 builtin/am.c:2357
 #: builtin/interpret-trailers.c:101 builtin/interpret-trailers.c:103
 #: builtin/interpret-trailers.c:105 builtin/pack-objects.c:4270
-#: builtin/rebase.c:1113
+#: builtin/rebase.c:1114
 msgid "action"
 msgstr ""
 
@@ -2540,14 +2540,14 @@ msgstr ""
 #: builtin/am.c:2375 builtin/commit.c:1533 builtin/fmt-merge-msg.c:20
 #: builtin/fmt-merge-msg.c:23 builtin/grep.c:963 builtin/merge.c:269
 #: builtin/pull.c:145 builtin/pull.c:207 builtin/pull.c:224
-#: builtin/rebase.c:1108 builtin/repack.c:797 builtin/repack.c:801
+#: builtin/rebase.c:1109 builtin/repack.c:797 builtin/repack.c:801
 #: builtin/repack.c:803 builtin/show-branch.c:654 builtin/show-ref.c:169
 #: builtin/tag.c:449 parse-options.h:215 parse-options.h:276
 #: parse-options.h:517
 msgid "n"
 msgstr ""
 
-#: builtin/am.c:2381 builtin/branch.c:727 builtin/bugreport.c:120
+#: builtin/am.c:2381 builtin/branch.c:739 builtin/bugreport.c:120
 #: builtin/cat-file.c:957 builtin/cat-file.c:961 builtin/cat-file.c:966
 #: builtin/diagnose.c:26 builtin/for-each-ref.c:46 builtin/ls-files.c:769
 #: builtin/ls-tree.c:398 builtin/replace.c:562 builtin/tag.c:483
@@ -2600,12 +2600,12 @@ msgid "use current timestamp for author date"
 msgstr ""
 
 #: builtin/am.c:2418 builtin/commit-tree.c:113 builtin/commit.c:1657
-#: builtin/merge.c:308 builtin/pull.c:182 builtin/rebase.c:1164
+#: builtin/merge.c:308 builtin/pull.c:182 builtin/rebase.c:1165
 #: builtin/revert.c:120 builtin/tag.c:464
 msgid "key-id"
 msgstr ""
 
-#: builtin/am.c:2419 builtin/rebase.c:1165
+#: builtin/am.c:2419 builtin/rebase.c:1166
 msgid "GPG-sign commits"
 msgstr ""
 
@@ -3278,63 +3278,68 @@ msgstr ""
 msgid "HEAD (%s) points outside of refs/heads/"
 msgstr ""
 
-#: builtin/branch.c:517
-#, c-format
-msgid "Invalid branch name: '%s'"
-msgstr ""
-
-#: builtin/branch.c:546 builtin/branch.c:848 builtin/branch.c:893
-#, c-format
-msgid "No commit on branch '%s' yet."
-msgstr ""
-
-#: builtin/branch.c:548 builtin/branch.c:849
-#, c-format
-msgid "No branch named '%s'."
-msgstr ""
-
-#: builtin/branch.c:561
+#: builtin/branch.c:506
 #, c-format
 msgid "Branch %s is being rebased at %s"
 msgstr ""
 
-#: builtin/branch.c:565
+#: builtin/branch.c:510
 #, c-format
 msgid "Branch %s is being bisected at %s"
 msgstr ""
 
-#: builtin/branch.c:582
+#: builtin/branch.c:539
+#, c-format
+msgid "HEAD of working tree %s is not updated"
+msgstr ""
+
+#: builtin/branch.c:566
+#, c-format
+msgid "Invalid branch name: '%s'"
+msgstr ""
+
+#: builtin/branch.c:582 builtin/branch.c:860 builtin/branch.c:905
+#, c-format
+msgid "No commit on branch '%s' yet."
+msgstr ""
+
+#: builtin/branch.c:584 builtin/branch.c:861
+#, c-format
+msgid "No branch named '%s'."
+msgstr ""
+
+#: builtin/branch.c:612
 msgid "Branch rename failed"
 msgstr ""
 
-#: builtin/branch.c:584
+#: builtin/branch.c:614
 msgid "Branch copy failed"
 msgstr ""
 
-#: builtin/branch.c:588
+#: builtin/branch.c:618
 #, c-format
 msgid "Created a copy of a misnamed branch '%s'"
 msgstr ""
 
-#: builtin/branch.c:591
+#: builtin/branch.c:621
 #, c-format
 msgid "Renamed a misnamed branch '%s' away"
 msgstr ""
 
-#: builtin/branch.c:612
+#: builtin/branch.c:628
 #, c-format
 msgid "Branch renamed to %s, but HEAD is not updated!"
 msgstr ""
 
-#: builtin/branch.c:624
+#: builtin/branch.c:635
 msgid "Branch is renamed, but update of config-file failed"
 msgstr ""
 
-#: builtin/branch.c:626
+#: builtin/branch.c:637
 msgid "Branch is copied, but update of config-file failed"
 msgstr ""
 
-#: builtin/branch.c:645
+#: builtin/branch.c:657
 #, c-format
 msgid ""
 "Please edit the description for the branch\n"
@@ -3342,228 +3347,228 @@ msgid ""
 "Lines starting with '%c' will be stripped.\n"
 msgstr ""
 
-#: builtin/branch.c:683
+#: builtin/branch.c:695
 msgid "Generic options"
 msgstr ""
 
-#: builtin/branch.c:685
+#: builtin/branch.c:697
 msgid "show hash and subject, give twice for upstream branch"
 msgstr ""
 
-#: builtin/branch.c:686
+#: builtin/branch.c:698
 msgid "suppress informational messages"
 msgstr ""
 
-#: builtin/branch.c:688 builtin/checkout.c:1611
+#: builtin/branch.c:700 builtin/checkout.c:1611
 #: builtin/submodule--helper.c:2966
 msgid "set branch tracking configuration"
 msgstr ""
 
-#: builtin/branch.c:691
+#: builtin/branch.c:703
 msgid "do not use"
 msgstr ""
 
-#: builtin/branch.c:693
+#: builtin/branch.c:705
 msgid "upstream"
 msgstr ""
 
-#: builtin/branch.c:693
+#: builtin/branch.c:705
 msgid "change the upstream info"
 msgstr ""
 
-#: builtin/branch.c:694
+#: builtin/branch.c:706
 msgid "unset the upstream info"
 msgstr ""
 
-#: builtin/branch.c:695
+#: builtin/branch.c:707
 msgid "use colored output"
 msgstr ""
 
-#: builtin/branch.c:696
+#: builtin/branch.c:708
 msgid "act on remote-tracking branches"
 msgstr ""
 
-#: builtin/branch.c:698 builtin/branch.c:700
+#: builtin/branch.c:710 builtin/branch.c:712
 msgid "print only branches that contain the commit"
 msgstr ""
 
-#: builtin/branch.c:699 builtin/branch.c:701
+#: builtin/branch.c:711 builtin/branch.c:713
 msgid "print only branches that don't contain the commit"
 msgstr ""
 
-#: builtin/branch.c:704
+#: builtin/branch.c:716
 msgid "Specific git-branch actions:"
 msgstr ""
 
-#: builtin/branch.c:705
+#: builtin/branch.c:717
 msgid "list both remote-tracking and local branches"
 msgstr ""
 
-#: builtin/branch.c:707
+#: builtin/branch.c:719
 msgid "delete fully merged branch"
 msgstr ""
 
-#: builtin/branch.c:708
+#: builtin/branch.c:720
 msgid "delete branch (even if not merged)"
 msgstr ""
 
-#: builtin/branch.c:709
+#: builtin/branch.c:721
 msgid "move/rename a branch and its reflog"
 msgstr ""
 
-#: builtin/branch.c:710
+#: builtin/branch.c:722
 msgid "move/rename a branch, even if target exists"
 msgstr ""
 
-#: builtin/branch.c:711
+#: builtin/branch.c:723
 msgid "copy a branch and its reflog"
 msgstr ""
 
-#: builtin/branch.c:712
+#: builtin/branch.c:724
 msgid "copy a branch, even if target exists"
 msgstr ""
 
-#: builtin/branch.c:713
+#: builtin/branch.c:725
 msgid "list branch names"
 msgstr ""
 
-#: builtin/branch.c:714
+#: builtin/branch.c:726
 msgid "show current branch name"
 msgstr ""
 
-#: builtin/branch.c:715 builtin/submodule--helper.c:2964
+#: builtin/branch.c:727 builtin/submodule--helper.c:2964
 msgid "create the branch's reflog"
 msgstr ""
 
-#: builtin/branch.c:717
+#: builtin/branch.c:729
 msgid "edit the description for the branch"
 msgstr ""
 
-#: builtin/branch.c:718
+#: builtin/branch.c:730
 msgid "force creation, move/rename, deletion"
 msgstr ""
 
-#: builtin/branch.c:719
+#: builtin/branch.c:731
 msgid "print only branches that are merged"
 msgstr ""
 
-#: builtin/branch.c:720
+#: builtin/branch.c:732
 msgid "print only branches that are not merged"
 msgstr ""
 
-#: builtin/branch.c:721
+#: builtin/branch.c:733
 msgid "list branches in columns"
 msgstr ""
 
-#: builtin/branch.c:723 builtin/for-each-ref.c:50 builtin/notes.c:438
+#: builtin/branch.c:735 builtin/for-each-ref.c:50 builtin/notes.c:438
 #: builtin/notes.c:441 builtin/notes.c:608 builtin/notes.c:611
 #: builtin/tag.c:479
 msgid "object"
 msgstr ""
 
-#: builtin/branch.c:724
+#: builtin/branch.c:736
 msgid "print only branches of the object"
 msgstr ""
 
-#: builtin/branch.c:725 builtin/for-each-ref.c:56 builtin/tag.c:486
+#: builtin/branch.c:737 builtin/for-each-ref.c:56 builtin/tag.c:486
 msgid "sorting and filtering are case insensitive"
 msgstr ""
 
-#: builtin/branch.c:726 builtin/ls-files.c:758
+#: builtin/branch.c:738 builtin/ls-files.c:758
 msgid "recurse through submodules"
 msgstr ""
 
-#: builtin/branch.c:727 builtin/for-each-ref.c:46 builtin/ls-files.c:770
+#: builtin/branch.c:739 builtin/for-each-ref.c:46 builtin/ls-files.c:770
 #: builtin/ls-tree.c:399 builtin/tag.c:484 builtin/verify-tag.c:31
 msgid "format to use for the output"
 msgstr ""
 
-#: builtin/branch.c:746 builtin/submodule--helper.c:2795 submodule.c:1236
+#: builtin/branch.c:758 builtin/submodule--helper.c:2795 submodule.c:1236
 msgid "Failed to resolve HEAD as a valid ref."
 msgstr ""
 
-#: builtin/branch.c:750 builtin/clone.c:705
+#: builtin/branch.c:762 builtin/clone.c:705
 msgid "HEAD not found below refs/heads!"
 msgstr ""
 
-#: builtin/branch.c:771
+#: builtin/branch.c:783
 msgid ""
 "branch with --recurse-submodules can only be used if submodule."
 "propagateBranches is enabled"
 msgstr ""
 
-#: builtin/branch.c:773
+#: builtin/branch.c:785
 msgid "--recurse-submodules can only be used to create branches"
 msgstr ""
 
-#: builtin/branch.c:802 builtin/branch.c:860
+#: builtin/branch.c:814 builtin/branch.c:872
 msgid "branch name required"
 msgstr ""
 
-#: builtin/branch.c:836
+#: builtin/branch.c:848
 msgid "Cannot give description to detached HEAD"
 msgstr ""
 
-#: builtin/branch.c:842
+#: builtin/branch.c:854
 msgid "cannot edit description of more than one branch"
 msgstr ""
 
-#: builtin/branch.c:862
+#: builtin/branch.c:874
 msgid "cannot copy the current branch while not on any."
 msgstr ""
 
-#: builtin/branch.c:863
+#: builtin/branch.c:875
 msgid "cannot rename the current branch while not on any."
 msgstr ""
 
-#: builtin/branch.c:869
+#: builtin/branch.c:881
 msgid "too many branches for a copy operation"
 msgstr ""
 
-#: builtin/branch.c:870
+#: builtin/branch.c:882
 msgid "too many arguments for a rename operation"
 msgstr ""
 
-#: builtin/branch.c:881
+#: builtin/branch.c:893
 msgid "too many arguments to set new upstream"
 msgstr ""
 
-#: builtin/branch.c:885
+#: builtin/branch.c:897
 #, c-format
 msgid ""
 "could not set upstream of HEAD to %s when it does not point to any branch."
 msgstr ""
 
-#: builtin/branch.c:888 builtin/branch.c:917
+#: builtin/branch.c:900 builtin/branch.c:929
 #, c-format
 msgid "no such branch '%s'"
 msgstr ""
 
-#: builtin/branch.c:894
+#: builtin/branch.c:906
 #, c-format
 msgid "branch '%s' does not exist"
 msgstr ""
 
-#: builtin/branch.c:911
+#: builtin/branch.c:923
 msgid "too many arguments to unset upstream"
 msgstr ""
 
-#: builtin/branch.c:915
+#: builtin/branch.c:927
 msgid "could not unset upstream of HEAD when it does not point to any branch."
 msgstr ""
 
-#: builtin/branch.c:921
+#: builtin/branch.c:933
 #, c-format
 msgid "Branch '%s' has no upstream information"
 msgstr ""
 
-#: builtin/branch.c:935
+#: builtin/branch.c:947
 msgid ""
 "The -a, and -r, options to 'git branch' do not take a branch name.\n"
 "Did you mean to use: -a|-r --list <pattern>?"
 msgstr ""
 
-#: builtin/branch.c:939
+#: builtin/branch.c:951
 msgid ""
 "the '--set-upstream' option is no longer supported. Please use '--track' or "
 "'--set-upstream-to' instead."
@@ -3617,7 +3622,7 @@ msgstr ""
 
 #: builtin/bugreport.c:115 builtin/commit.c:1520 builtin/commit.c:1524
 #: builtin/commit.c:1683 builtin/fast-export.c:1185 builtin/fast-export.c:1188
-#: builtin/fast-export.c:1191 builtin/rebase.c:1175 parse-options.h:572
+#: builtin/fast-export.c:1191 builtin/rebase.c:1176 parse-options.h:572
 msgid "mode"
 msgstr ""
 
@@ -4807,7 +4812,7 @@ msgid "create a shallow clone since a specific time"
 msgstr ""
 
 #: builtin/clone.c:145 builtin/fetch.c:201 builtin/fetch.c:227
-#: builtin/pull.c:221 builtin/pull.c:246 builtin/rebase.c:1084
+#: builtin/pull.c:221 builtin/pull.c:246 builtin/rebase.c:1085
 msgid "revision"
 msgstr ""
 
@@ -9385,7 +9390,7 @@ msgstr ""
 msgid "do not print remote URL"
 msgstr ""
 
-#: builtin/ls-remote.c:64 builtin/ls-remote.c:66 builtin/rebase.c:1168
+#: builtin/ls-remote.c:64 builtin/ls-remote.c:66 builtin/rebase.c:1169
 msgid "exec"
 msgstr ""
 
@@ -9787,7 +9792,7 @@ msgid "verify that the named commit has a valid GPG signature"
 msgstr ""
 
 #: builtin/merge.c:286 builtin/notes.c:819 builtin/pull.c:175
-#: builtin/rebase.c:1181 builtin/revert.c:117
+#: builtin/rebase.c:1182 builtin/revert.c:117
 msgid "strategy"
 msgstr ""
 
@@ -9955,7 +9960,7 @@ msgstr ""
 msgid "Bad value '%s' in environment '%s'"
 msgstr ""
 
-#: builtin/merge.c:1168 read-cache.c:3183 strbuf.c:1198 wrapper.c:704
+#: builtin/merge.c:1168 read-cache.c:3191 strbuf.c:1198 wrapper.c:704
 #, c-format
 msgid "could not close '%s'"
 msgstr ""
@@ -11304,7 +11309,7 @@ msgid ""
 "for your current branch, you must specify a branch on the command line."
 msgstr ""
 
-#: builtin/pull.c:457 builtin/rebase.c:1032
+#: builtin/pull.c:457 builtin/rebase.c:1033
 msgid "You are not currently on a branch."
 msgstr ""
 
@@ -11321,7 +11326,7 @@ msgid "See git-pull(1) for details."
 msgstr ""
 
 #: builtin/pull.c:464 builtin/pull.c:470 builtin/pull.c:479
-#: builtin/rebase.c:1038
+#: builtin/rebase.c:1039
 msgid "<remote>"
 msgstr ""
 
@@ -11329,7 +11334,7 @@ msgstr ""
 msgid "<branch>"
 msgstr ""
 
-#: builtin/pull.c:472 builtin/rebase.c:1030
+#: builtin/pull.c:472 builtin/rebase.c:1031
 msgid "There is no tracking information for the current branch."
 msgstr ""
 
@@ -11864,7 +11869,7 @@ msgstr ""
 msgid "ignoring invalid allow_rerere_autoupdate: '%s'"
 msgstr ""
 
-#: builtin/rebase.c:556 builtin/rebase.c:1371 builtin/rm.c:416 sequencer.c:396
+#: builtin/rebase.c:556 builtin/rebase.c:1372 builtin/rm.c:416 sequencer.c:396
 #: sequencer.c:5080
 #, c-format
 msgid "could not remove '%s'"
@@ -11896,31 +11901,31 @@ msgstr ""
 msgid "Unknown rebase-merges mode: %s"
 msgstr ""
 
-#: builtin/rebase.c:854
+#: builtin/rebase.c:855
 #, c-format
 msgid "could not switch to %s"
 msgstr ""
 
-#: builtin/rebase.c:934 builtin/rebase.c:950 builtin/rebase.c:967
-#: builtin/rebase.c:1532
+#: builtin/rebase.c:935 builtin/rebase.c:951 builtin/rebase.c:968
+#: builtin/rebase.c:1527
 msgid "apply options and merge options cannot be used together"
 msgstr ""
 
-#: builtin/rebase.c:984
+#: builtin/rebase.c:985
 #, c-format
 msgid ""
 "unrecognized empty type '%s'; valid values are \"drop\", \"keep\", and "
 "\"ask\"."
 msgstr ""
 
-#: builtin/rebase.c:1007
+#: builtin/rebase.c:1008
 msgid ""
 "--rebase-merges with an empty string argument is deprecated and will stop "
 "working in a future version of Git. Use --rebase-merges without an argument "
 "instead, which does the same thing."
 msgstr ""
 
-#: builtin/rebase.c:1024
+#: builtin/rebase.c:1025
 #, c-format
 msgid ""
 "%s\n"
@@ -11931,7 +11936,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: builtin/rebase.c:1040
+#: builtin/rebase.c:1041
 #, c-format
 msgid ""
 "If you wish to set tracking information for this branch you can do so with:\n"
@@ -11940,208 +11945,208 @@ msgid ""
 "\n"
 msgstr ""
 
-#: builtin/rebase.c:1053
+#: builtin/rebase.c:1054
 msgid "exec commands cannot contain newlines"
 msgstr ""
 
-#: builtin/rebase.c:1057
+#: builtin/rebase.c:1058
 msgid "empty exec command"
 msgstr ""
 
-#: builtin/rebase.c:1085
+#: builtin/rebase.c:1086
 msgid "rebase onto given branch instead of upstream"
 msgstr ""
 
-#: builtin/rebase.c:1087
+#: builtin/rebase.c:1088
 msgid "use the merge-base of upstream and branch as the current base"
 msgstr ""
 
-#: builtin/rebase.c:1089
+#: builtin/rebase.c:1090
 msgid "allow pre-rebase hook to run"
 msgstr ""
 
-#: builtin/rebase.c:1091
+#: builtin/rebase.c:1092
 msgid "be quiet. implies --no-stat"
 msgstr ""
 
-#: builtin/rebase.c:1094
+#: builtin/rebase.c:1095
 msgid "display a diffstat of what changed upstream"
 msgstr ""
 
-#: builtin/rebase.c:1097
+#: builtin/rebase.c:1098
 msgid "do not show diffstat of what changed upstream"
 msgstr ""
 
-#: builtin/rebase.c:1100
+#: builtin/rebase.c:1101
 msgid "add a Signed-off-by trailer to each commit"
 msgstr ""
 
-#: builtin/rebase.c:1103
+#: builtin/rebase.c:1104
 msgid "make committer date match author date"
 msgstr ""
 
-#: builtin/rebase.c:1105
+#: builtin/rebase.c:1106
 msgid "ignore author date and use current date"
 msgstr ""
 
-#: builtin/rebase.c:1107
+#: builtin/rebase.c:1108
 msgid "synonym of --reset-author-date"
 msgstr ""
 
-#: builtin/rebase.c:1109 builtin/rebase.c:1113
+#: builtin/rebase.c:1110 builtin/rebase.c:1114
 msgid "passed to 'git apply'"
 msgstr ""
 
-#: builtin/rebase.c:1111
+#: builtin/rebase.c:1112
 msgid "ignore changes in whitespace"
 msgstr ""
 
-#: builtin/rebase.c:1115 builtin/rebase.c:1118
+#: builtin/rebase.c:1116 builtin/rebase.c:1119
 msgid "cherry-pick all commits, even if unchanged"
 msgstr ""
 
-#: builtin/rebase.c:1120
+#: builtin/rebase.c:1121
 msgid "continue"
 msgstr ""
 
-#: builtin/rebase.c:1123
+#: builtin/rebase.c:1124
 msgid "skip current patch and continue"
 msgstr ""
 
-#: builtin/rebase.c:1125
+#: builtin/rebase.c:1126
 msgid "abort and check out the original branch"
 msgstr ""
 
-#: builtin/rebase.c:1128
+#: builtin/rebase.c:1129
 msgid "abort but keep HEAD where it is"
 msgstr ""
 
-#: builtin/rebase.c:1129
+#: builtin/rebase.c:1130
 msgid "edit the todo list during an interactive rebase"
 msgstr ""
 
-#: builtin/rebase.c:1132
+#: builtin/rebase.c:1133
 msgid "show the patch file being applied or merged"
 msgstr ""
 
-#: builtin/rebase.c:1135
+#: builtin/rebase.c:1136
 msgid "use apply strategies to rebase"
 msgstr ""
 
-#: builtin/rebase.c:1139
+#: builtin/rebase.c:1140
 msgid "use merging strategies to rebase"
 msgstr ""
 
-#: builtin/rebase.c:1143
+#: builtin/rebase.c:1144
 msgid "let the user edit the list of commits to rebase"
 msgstr ""
 
-#: builtin/rebase.c:1147
+#: builtin/rebase.c:1148
 msgid "(REMOVED) was: try to recreate merges instead of ignoring them"
 msgstr ""
 
-#: builtin/rebase.c:1152
+#: builtin/rebase.c:1153
 msgid "how to handle commits that become empty"
 msgstr ""
 
-#: builtin/rebase.c:1155
+#: builtin/rebase.c:1156
 msgid "keep commits which start empty"
 msgstr ""
 
-#: builtin/rebase.c:1159
+#: builtin/rebase.c:1160
 msgid "move commits that begin with squash!/fixup! under -i"
 msgstr ""
 
-#: builtin/rebase.c:1162
+#: builtin/rebase.c:1163
 msgid "update branches that point to commits that are being rebased"
 msgstr ""
 
-#: builtin/rebase.c:1169
+#: builtin/rebase.c:1170
 msgid "add exec lines after each commit of the editable list"
 msgstr ""
 
-#: builtin/rebase.c:1173
+#: builtin/rebase.c:1174
 msgid "allow rebasing commits with empty messages"
 msgstr ""
 
-#: builtin/rebase.c:1176
+#: builtin/rebase.c:1177
 msgid "try to rebase merges instead of skipping them"
 msgstr ""
 
-#: builtin/rebase.c:1179
+#: builtin/rebase.c:1180
 msgid "use 'merge-base --fork-point' to refine upstream"
 msgstr ""
 
-#: builtin/rebase.c:1181
+#: builtin/rebase.c:1182
 msgid "use the given merge strategy"
 msgstr ""
 
-#: builtin/rebase.c:1183 builtin/revert.c:118
+#: builtin/rebase.c:1184 builtin/revert.c:118
 msgid "option"
 msgstr ""
 
-#: builtin/rebase.c:1184
+#: builtin/rebase.c:1185
 msgid "pass the argument through to the merge strategy"
 msgstr ""
 
-#: builtin/rebase.c:1187
+#: builtin/rebase.c:1188
 msgid "rebase all reachable commits up to the root(s)"
 msgstr ""
 
-#: builtin/rebase.c:1190
+#: builtin/rebase.c:1191
 msgid "automatically re-schedule any `exec` that fails"
 msgstr ""
 
-#: builtin/rebase.c:1192
+#: builtin/rebase.c:1193
 msgid "apply all changes, even those already present upstream"
 msgstr ""
 
-#: builtin/rebase.c:1212
+#: builtin/rebase.c:1213
 msgid "It looks like 'git am' is in progress. Cannot rebase."
 msgstr ""
 
-#: builtin/rebase.c:1221
+#: builtin/rebase.c:1222
 msgid ""
 "`rebase --preserve-merges` (-p) is no longer supported.\n"
 "Use `git rebase --abort` to terminate current rebase.\n"
 "Or downgrade to v2.33, or earlier, to complete the rebase."
 msgstr ""
 
-#: builtin/rebase.c:1243
+#: builtin/rebase.c:1244
 msgid ""
 "--preserve-merges was replaced by --rebase-merges\n"
 "Note: Your `pull.rebase` configuration may also be set to 'preserve',\n"
 "which is no longer supported; use 'merges' instead"
 msgstr ""
 
-#: builtin/rebase.c:1272
+#: builtin/rebase.c:1273
 msgid "No rebase in progress?"
 msgstr ""
 
-#: builtin/rebase.c:1275
+#: builtin/rebase.c:1276
 msgid "The --edit-todo action can only be used during interactive rebase."
 msgstr ""
 
-#: builtin/rebase.c:1299 t/helper/test-fast-rebase.c:130
+#: builtin/rebase.c:1300 t/helper/test-fast-rebase.c:130
 msgid "Cannot read HEAD"
 msgstr ""
 
-#: builtin/rebase.c:1311
+#: builtin/rebase.c:1312
 msgid ""
 "You must edit all merge conflicts and then\n"
 "mark them as resolved using git add"
 msgstr ""
 
-#: builtin/rebase.c:1326
+#: builtin/rebase.c:1327
 msgid "could not discard worktree changes"
 msgstr ""
 
-#: builtin/rebase.c:1351
+#: builtin/rebase.c:1352
 #, c-format
 msgid "could not move back to %s"
 msgstr ""
 
-#: builtin/rebase.c:1397
+#: builtin/rebase.c:1398
 #, c-format
 msgid ""
 "It seems that there is already a %s directory, and\n"
@@ -12154,126 +12159,126 @@ msgid ""
 "valuable there.\n"
 msgstr ""
 
-#: builtin/rebase.c:1426
+#: builtin/rebase.c:1427
 msgid "switch `C' expects a numerical value"
 msgstr ""
 
-#: builtin/rebase.c:1497
+#: builtin/rebase.c:1498
 msgid "--strategy requires --merge or --interactive"
 msgstr ""
 
-#: builtin/rebase.c:1526
+#: builtin/rebase.c:1530
 msgid ""
 "apply options are incompatible with rebase.autoSquash.  Consider adding --no-"
 "autosquash"
 msgstr ""
 
-#: builtin/rebase.c:1528
+#: builtin/rebase.c:1532
 msgid ""
 "apply options are incompatible with rebase.rebaseMerges.  Consider adding --"
 "no-rebase-merges"
 msgstr ""
 
-#: builtin/rebase.c:1530
+#: builtin/rebase.c:1534
 msgid ""
 "apply options are incompatible with rebase.updateRefs.  Consider adding --no-"
 "update-refs"
 msgstr ""
 
-#: builtin/rebase.c:1560
+#: builtin/rebase.c:1561
 #, c-format
 msgid "Unknown rebase backend: %s"
 msgstr ""
 
-#: builtin/rebase.c:1589
+#: builtin/rebase.c:1590
 msgid "--reschedule-failed-exec requires --exec or --interactive"
 msgstr ""
 
-#: builtin/rebase.c:1620
+#: builtin/rebase.c:1621
 #, c-format
 msgid "invalid upstream '%s'"
 msgstr ""
 
-#: builtin/rebase.c:1626
+#: builtin/rebase.c:1627
 msgid "Could not create new root commit"
 msgstr ""
 
-#: builtin/rebase.c:1670
+#: builtin/rebase.c:1671
 #, c-format
 msgid "no such branch/commit '%s'"
 msgstr ""
 
-#: builtin/rebase.c:1677 builtin/submodule--helper.c:49
+#: builtin/rebase.c:1678 builtin/submodule--helper.c:49
 #: builtin/submodule--helper.c:2390
 #, c-format
 msgid "No such ref: %s"
 msgstr ""
 
-#: builtin/rebase.c:1689
+#: builtin/rebase.c:1690
 msgid "Could not resolve HEAD to a commit"
 msgstr ""
 
-#: builtin/rebase.c:1705
+#: builtin/rebase.c:1706
 #, c-format
 msgid "'%s': need exactly one merge base with branch"
 msgstr ""
 
-#: builtin/rebase.c:1708
+#: builtin/rebase.c:1709
 #, c-format
 msgid "'%s': need exactly one merge base"
 msgstr ""
 
-#: builtin/rebase.c:1717
+#: builtin/rebase.c:1718
 #, c-format
 msgid "Does not point to a valid commit '%s'"
 msgstr ""
 
-#: builtin/rebase.c:1738
+#: builtin/rebase.c:1739
 msgid "Please commit or stash them."
 msgstr ""
 
-#: builtin/rebase.c:1770
+#: builtin/rebase.c:1771
 msgid "HEAD is up to date."
 msgstr ""
 
-#: builtin/rebase.c:1772
+#: builtin/rebase.c:1773
 #, c-format
 msgid "Current branch %s is up to date.\n"
 msgstr ""
 
-#: builtin/rebase.c:1780
+#: builtin/rebase.c:1781
 msgid "HEAD is up to date, rebase forced."
 msgstr ""
 
-#: builtin/rebase.c:1782
+#: builtin/rebase.c:1783
 #, c-format
 msgid "Current branch %s is up to date, rebase forced.\n"
 msgstr ""
 
-#: builtin/rebase.c:1790
+#: builtin/rebase.c:1791
 msgid "The pre-rebase hook refused to rebase."
 msgstr ""
 
-#: builtin/rebase.c:1797
+#: builtin/rebase.c:1798
 #, c-format
 msgid "Changes to %s:\n"
 msgstr ""
 
-#: builtin/rebase.c:1800
+#: builtin/rebase.c:1801
 #, c-format
 msgid "Changes from %s to %s:\n"
 msgstr ""
 
-#: builtin/rebase.c:1825
+#: builtin/rebase.c:1826
 #, c-format
 msgid "First, rewinding head to replay your work on top of it...\n"
 msgstr ""
 
-#: builtin/rebase.c:1837
+#: builtin/rebase.c:1838
 msgid "Could not detach HEAD"
 msgstr ""
 
-#: builtin/rebase.c:1845
+#: builtin/rebase.c:1846
 #, c-format
 msgid "Fast-forwarded %s to %s.\n"
 msgstr ""
@@ -14049,143 +14054,163 @@ msgstr ""
 
 #: builtin/sparse-checkout.c:26
 msgid ""
-"git sparse-checkout (init | list | set | add | reapply | disable) [<options>]"
+"git sparse-checkout (init | list | set | add | reapply | disable | check-"
+"rules) [<options>]"
 msgstr ""
 
-#: builtin/sparse-checkout.c:64
+#: builtin/sparse-checkout.c:65
 msgid "this worktree is not sparse"
 msgstr ""
 
-#: builtin/sparse-checkout.c:79
+#: builtin/sparse-checkout.c:80
 msgid "this worktree is not sparse (sparse-checkout file may not exist)"
 msgstr ""
 
-#: builtin/sparse-checkout.c:180
+#: builtin/sparse-checkout.c:181
 #, c-format
 msgid ""
 "directory '%s' contains untracked files, but is not in the sparse-checkout "
 "cone"
 msgstr ""
 
-#: builtin/sparse-checkout.c:188
+#: builtin/sparse-checkout.c:189
 #, c-format
 msgid "failed to remove directory '%s'"
 msgstr ""
 
-#: builtin/sparse-checkout.c:329
+#: builtin/sparse-checkout.c:330
 msgid "failed to create directory for sparse-checkout file"
 msgstr ""
 
-#: builtin/sparse-checkout.c:368
+#: builtin/sparse-checkout.c:369
 msgid "failed to initialize worktree config"
 msgstr ""
 
-#: builtin/sparse-checkout.c:413
+#: builtin/sparse-checkout.c:417
 msgid "failed to modify sparse-index config"
 msgstr ""
 
-#: builtin/sparse-checkout.c:446 builtin/sparse-checkout.c:798
-#: builtin/sparse-checkout.c:853
+#: builtin/sparse-checkout.c:450 builtin/sparse-checkout.c:806
+#: builtin/sparse-checkout.c:862
 msgid "initialize the sparse-checkout in cone mode"
 msgstr ""
 
-#: builtin/sparse-checkout.c:448 builtin/sparse-checkout.c:800
-#: builtin/sparse-checkout.c:855
+#: builtin/sparse-checkout.c:452 builtin/sparse-checkout.c:808
+#: builtin/sparse-checkout.c:864
 msgid "toggle the use of a sparse index"
 msgstr ""
 
-#: builtin/sparse-checkout.c:480 commit-graph.c:1917 midx.c:1246
+#: builtin/sparse-checkout.c:485 commit-graph.c:1917 midx.c:1246
 #: sequencer.c:4223
 #, c-format
 msgid "unable to create leading directories of %s"
 msgstr ""
 
-#: builtin/sparse-checkout.c:484
+#: builtin/sparse-checkout.c:489
 #, c-format
 msgid "failed to open '%s'"
 msgstr ""
 
-#: builtin/sparse-checkout.c:536
+#: builtin/sparse-checkout.c:541
 #, c-format
 msgid "could not normalize path %s"
 msgstr ""
 
-#: builtin/sparse-checkout.c:565
+#: builtin/sparse-checkout.c:570 builtin/sparse-checkout.c:963
 #, c-format
 msgid "unable to unquote C-style string '%s'"
 msgstr ""
 
-#: builtin/sparse-checkout.c:620 builtin/sparse-checkout.c:648
+#: builtin/sparse-checkout.c:626 builtin/sparse-checkout.c:654
+#: builtin/sparse-checkout.c:1014
 msgid "unable to load existing sparse-checkout patterns"
 msgstr ""
 
-#: builtin/sparse-checkout.c:624
+#: builtin/sparse-checkout.c:630
 msgid "existing sparse-checkout patterns do not use cone mode"
 msgstr ""
 
-#: builtin/sparse-checkout.c:712
+#: builtin/sparse-checkout.c:719
 msgid "please run from the toplevel directory in non-cone mode"
 msgstr ""
 
-#: builtin/sparse-checkout.c:717
+#: builtin/sparse-checkout.c:724
 msgid "specify directories rather than patterns (no leading slash)"
 msgstr ""
 
-#: builtin/sparse-checkout.c:719
+#: builtin/sparse-checkout.c:726
 msgid ""
 "specify directories rather than patterns.  If your directory starts with a "
 "'!', pass --skip-checks"
 msgstr ""
 
-#: builtin/sparse-checkout.c:721
+#: builtin/sparse-checkout.c:728
 msgid ""
 "specify directories rather than patterns.  If your directory really has any "
 "of '*?[]\\' in it, pass --skip-checks"
 msgstr ""
 
-#: builtin/sparse-checkout.c:737
+#: builtin/sparse-checkout.c:744
 #, c-format
 msgid ""
 "'%s' is not a directory; to treat it as a directory anyway, rerun with --"
 "skip-checks"
 msgstr ""
 
-#: builtin/sparse-checkout.c:739
+#: builtin/sparse-checkout.c:746
 #, c-format
 msgid ""
 "pass a leading slash before paths such as '%s' if you want a single file "
 "(see NON-CONE PROBLEMS in the git-sparse-checkout manual)."
 msgstr ""
 
-#: builtin/sparse-checkout.c:744
+#: builtin/sparse-checkout.c:751
 msgid "git sparse-checkout add [--skip-checks] (--stdin | <patterns>)"
 msgstr ""
 
-#: builtin/sparse-checkout.c:757 builtin/sparse-checkout.c:802
+#: builtin/sparse-checkout.c:764 builtin/sparse-checkout.c:810
 msgid ""
 "skip some sanity checks on the given paths that might give false positives"
 msgstr ""
 
-#: builtin/sparse-checkout.c:760 builtin/sparse-checkout.c:805
+#: builtin/sparse-checkout.c:767 builtin/sparse-checkout.c:813
 msgid "read patterns from standard in"
 msgstr ""
 
-#: builtin/sparse-checkout.c:765
+#: builtin/sparse-checkout.c:773
 msgid "no sparse-checkout to add to"
 msgstr ""
 
-#: builtin/sparse-checkout.c:780
+#: builtin/sparse-checkout.c:788
 msgid ""
 "git sparse-checkout set [--[no-]cone] [--[no-]sparse-index] [--skip-checks] "
 "(--stdin | <patterns>)"
 msgstr ""
 
-#: builtin/sparse-checkout.c:860
+#: builtin/sparse-checkout.c:870
 msgid "must be in a sparse-checkout to reapply sparsity patterns"
 msgstr ""
 
-#: builtin/sparse-checkout.c:921
+#: builtin/sparse-checkout.c:932
 msgid "error while refreshing working directory"
+msgstr ""
+
+#: builtin/sparse-checkout.c:939
+msgid ""
+"git sparse-checkout check-rules [-z] [--skip-checks][--[no-]cone] [--rules-"
+"file <file>]"
+msgstr ""
+
+#: builtin/sparse-checkout.c:982
+msgid "terminate input and output files by a NUL character"
+msgstr ""
+
+#: builtin/sparse-checkout.c:984
+msgid "when used with --rules-file interpret patterns as cone mode patterns"
+msgstr ""
+
+#: builtin/sparse-checkout.c:986
+msgid "use patterns in <file> instead of the current ones."
 msgstr ""
 
 #: builtin/stash.c:31
@@ -17688,7 +17713,7 @@ msgid "bad zlib compression level %d"
 msgstr ""
 
 #: config.c:1751
-msgid "core.commentChar should only be one character"
+msgid "core.commentChar should only be one ASCII character"
 msgstr ""
 
 #: config.c:1785
@@ -21842,35 +21867,35 @@ msgstr ""
 msgid "broken index, expect %s in %s, got %s"
 msgstr ""
 
-#: read-cache.c:3101
+#: read-cache.c:3105
 msgid "cannot write split index for a sparse index"
 msgstr ""
 
-#: read-cache.c:3232
+#: read-cache.c:3236
 msgid "failed to convert to a sparse-index"
 msgstr ""
 
-#: read-cache.c:3303
+#: read-cache.c:3307
 #, c-format
 msgid "could not stat '%s'"
 msgstr ""
 
-#: read-cache.c:3316
+#: read-cache.c:3320
 #, c-format
 msgid "unable to open git dir: %s"
 msgstr ""
 
-#: read-cache.c:3328
+#: read-cache.c:3332
 #, c-format
 msgid "unable to unlink: %s"
 msgstr ""
 
-#: read-cache.c:3357
+#: read-cache.c:3361
 #, c-format
 msgid "cannot fix permission bits on '%s'"
 msgstr ""
 
-#: read-cache.c:3511
+#: read-cache.c:3517
 #, c-format
 msgid "%s: cannot drop to stage #0"
 msgstr ""
