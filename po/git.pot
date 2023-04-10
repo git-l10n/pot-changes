@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2023-04-04 23:57+0000\n"
+"POT-Creation-Date: 2023-04-10 22:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -814,9 +814,9 @@ msgid "unrecognized whitespace ignore option '%s'"
 msgstr ""
 
 #: apply.c:145 archive.c:646 builtin/add.c:470 builtin/add.c:472
-#: builtin/add.c:478 builtin/add.c:490 builtin/branch.c:754
+#: builtin/add.c:478 builtin/add.c:490 builtin/branch.c:771
 #: builtin/checkout.c:478 builtin/checkout.c:481 builtin/checkout.c:1702
-#: builtin/checkout.c:1812 builtin/checkout.c:1815 builtin/clone.c:946
+#: builtin/checkout.c:1812 builtin/checkout.c:1815 builtin/clone.c:947
 #: builtin/commit.c:368 builtin/commit.c:371 builtin/commit.c:1219
 #: builtin/commit.c:1275 builtin/commit.c:1292 builtin/describe.c:601
 #: builtin/diff-tree.c:159 builtin/difftool.c:742 builtin/fast-export.c:1258
@@ -1625,7 +1625,7 @@ msgid "Unexpected option --remote"
 msgstr ""
 
 #: archive.c:642 builtin/add.c:493 builtin/add.c:525 builtin/checkout.c:1821
-#: builtin/clone.c:1127 builtin/clone.c:1130 builtin/commit.c:380
+#: builtin/clone.c:1128 builtin/clone.c:1131 builtin/commit.c:380
 #: builtin/fast-export.c:1243 builtin/index-pack.c:1864 builtin/log.c:2270
 #: builtin/reset.c:370 builtin/reset.c:431 builtin/rm.c:285
 #: builtin/stash.c:1778 builtin/worktree.c:644 builtin/worktree.c:845
@@ -1805,7 +1805,7 @@ msgstr ""
 #: builtin/log.c:1787 builtin/log.c:2226 builtin/log.c:2523 builtin/merge.c:437
 #: builtin/pack-objects.c:3422 builtin/pack-objects.c:3580
 #: builtin/pack-objects.c:4064 builtin/pack-objects.c:4079
-#: builtin/shortlog.c:273 midx.c:1118 pack-bitmap.c:1158 pack-bitmap.c:2052
+#: builtin/shortlog.c:273 midx.c:1118 pack-bitmap.c:1124 pack-bitmap.c:2018
 #: remote.c:2197 sequencer.c:2433 sequencer.c:5216 submodule.c:915
 msgid "revision walk setup failed"
 msgstr ""
@@ -2551,7 +2551,7 @@ msgstr ""
 msgid "n"
 msgstr ""
 
-#: builtin/am.c:2381 builtin/branch.c:694 builtin/bugreport.c:120
+#: builtin/am.c:2381 builtin/branch.c:711 builtin/bugreport.c:120
 #: builtin/cat-file.c:957 builtin/cat-file.c:961 builtin/cat-file.c:966
 #: builtin/diagnose.c:26 builtin/for-each-ref.c:46 builtin/ls-files.c:769
 #: builtin/ls-tree.c:398 builtin/replace.c:562 builtin/tag.c:483
@@ -3240,105 +3240,112 @@ msgstr ""
 msgid "Update of config-file failed"
 msgstr ""
 
-#: builtin/branch.c:238
+#: builtin/branch.c:239
 msgid "cannot use -a with -d"
 msgstr ""
 
-#: builtin/branch.c:256
+#: builtin/branch.c:257
 #, c-format
 msgid "Cannot delete branch '%s' checked out at '%s'"
 msgstr ""
 
-#: builtin/branch.c:271
+#: builtin/branch.c:272
 #, c-format
 msgid "remote-tracking branch '%s' not found."
 msgstr ""
 
-#: builtin/branch.c:272
+#: builtin/branch.c:283
+#, c-format
+msgid ""
+"branch '%s' not found.\n"
+"Did you forget --remote?"
+msgstr ""
+
+#: builtin/branch.c:287
 #, c-format
 msgid "branch '%s' not found."
 msgstr ""
 
-#: builtin/branch.c:303
+#: builtin/branch.c:320
 #, c-format
 msgid "Deleted remote-tracking branch %s (was %s).\n"
 msgstr ""
 
-#: builtin/branch.c:304
+#: builtin/branch.c:321
 #, c-format
 msgid "Deleted branch %s (was %s).\n"
 msgstr ""
 
-#: builtin/branch.c:453 builtin/tag.c:70
+#: builtin/branch.c:470 builtin/tag.c:70
 msgid "unable to parse format string"
 msgstr ""
 
-#: builtin/branch.c:485
+#: builtin/branch.c:502
 msgid "could not resolve HEAD"
 msgstr ""
 
-#: builtin/branch.c:491
+#: builtin/branch.c:508
 #, c-format
 msgid "HEAD (%s) points outside of refs/heads/"
 msgstr ""
 
-#: builtin/branch.c:506
+#: builtin/branch.c:523
 #, c-format
 msgid "Branch %s is being rebased at %s"
 msgstr ""
 
-#: builtin/branch.c:510
+#: builtin/branch.c:527
 #, c-format
 msgid "Branch %s is being bisected at %s"
 msgstr ""
 
-#: builtin/branch.c:533
+#: builtin/branch.c:550
 #, c-format
 msgid "Invalid branch name: '%s'"
 msgstr ""
 
-#: builtin/branch.c:538 builtin/branch.c:815 builtin/branch.c:860
+#: builtin/branch.c:555 builtin/branch.c:832 builtin/branch.c:877
 #, c-format
 msgid "No commit on branch '%s' yet."
 msgstr ""
 
-#: builtin/branch.c:540 builtin/branch.c:816
+#: builtin/branch.c:557 builtin/branch.c:833
 #, c-format
 msgid "No branch named '%s'."
 msgstr ""
 
-#: builtin/branch.c:569
+#: builtin/branch.c:586
 msgid "Branch rename failed"
 msgstr ""
 
-#: builtin/branch.c:571
+#: builtin/branch.c:588
 msgid "Branch copy failed"
 msgstr ""
 
-#: builtin/branch.c:575
+#: builtin/branch.c:592
 #, c-format
 msgid "Created a copy of a misnamed branch '%s'"
 msgstr ""
 
-#: builtin/branch.c:578
+#: builtin/branch.c:595
 #, c-format
 msgid "Renamed a misnamed branch '%s' away"
 msgstr ""
 
-#: builtin/branch.c:584
+#: builtin/branch.c:601
 #, c-format
 msgid "Branch renamed to %s, but HEAD is not updated!"
 msgstr ""
 
-#: builtin/branch.c:591
+#: builtin/branch.c:608
 msgid "Branch is renamed, but update of config-file failed"
 msgstr ""
 
-#: builtin/branch.c:593
+#: builtin/branch.c:610
 msgid "Branch is copied, but update of config-file failed"
 msgstr ""
 
-#: builtin/branch.c:612
+#: builtin/branch.c:629
 #, c-format
 msgid ""
 "Please edit the description for the branch\n"
@@ -3346,228 +3353,228 @@ msgid ""
 "Lines starting with '%c' will be stripped.\n"
 msgstr ""
 
-#: builtin/branch.c:650
+#: builtin/branch.c:667
 msgid "Generic options"
 msgstr ""
 
-#: builtin/branch.c:652
+#: builtin/branch.c:669
 msgid "show hash and subject, give twice for upstream branch"
 msgstr ""
 
-#: builtin/branch.c:653
+#: builtin/branch.c:670
 msgid "suppress informational messages"
 msgstr ""
 
-#: builtin/branch.c:655 builtin/checkout.c:1610
+#: builtin/branch.c:672 builtin/checkout.c:1610
 #: builtin/submodule--helper.c:2966
 msgid "set branch tracking configuration"
 msgstr ""
 
-#: builtin/branch.c:658
+#: builtin/branch.c:675
 msgid "do not use"
 msgstr ""
 
-#: builtin/branch.c:660
+#: builtin/branch.c:677
 msgid "upstream"
 msgstr ""
 
-#: builtin/branch.c:660
+#: builtin/branch.c:677
 msgid "change the upstream info"
 msgstr ""
 
-#: builtin/branch.c:661
+#: builtin/branch.c:678
 msgid "unset the upstream info"
 msgstr ""
 
-#: builtin/branch.c:662
+#: builtin/branch.c:679
 msgid "use colored output"
 msgstr ""
 
-#: builtin/branch.c:663
+#: builtin/branch.c:680
 msgid "act on remote-tracking branches"
 msgstr ""
 
-#: builtin/branch.c:665 builtin/branch.c:667
+#: builtin/branch.c:682 builtin/branch.c:684
 msgid "print only branches that contain the commit"
 msgstr ""
 
-#: builtin/branch.c:666 builtin/branch.c:668
+#: builtin/branch.c:683 builtin/branch.c:685
 msgid "print only branches that don't contain the commit"
 msgstr ""
 
-#: builtin/branch.c:671
+#: builtin/branch.c:688
 msgid "Specific git-branch actions:"
 msgstr ""
 
-#: builtin/branch.c:672
+#: builtin/branch.c:689
 msgid "list both remote-tracking and local branches"
 msgstr ""
 
-#: builtin/branch.c:674
+#: builtin/branch.c:691
 msgid "delete fully merged branch"
 msgstr ""
 
-#: builtin/branch.c:675
+#: builtin/branch.c:692
 msgid "delete branch (even if not merged)"
 msgstr ""
 
-#: builtin/branch.c:676
+#: builtin/branch.c:693
 msgid "move/rename a branch and its reflog"
 msgstr ""
 
-#: builtin/branch.c:677
+#: builtin/branch.c:694
 msgid "move/rename a branch, even if target exists"
 msgstr ""
 
-#: builtin/branch.c:678
+#: builtin/branch.c:695
 msgid "copy a branch and its reflog"
 msgstr ""
 
-#: builtin/branch.c:679
+#: builtin/branch.c:696
 msgid "copy a branch, even if target exists"
 msgstr ""
 
-#: builtin/branch.c:680
+#: builtin/branch.c:697
 msgid "list branch names"
 msgstr ""
 
-#: builtin/branch.c:681
+#: builtin/branch.c:698
 msgid "show current branch name"
 msgstr ""
 
-#: builtin/branch.c:682 builtin/submodule--helper.c:2964
+#: builtin/branch.c:699 builtin/submodule--helper.c:2964
 msgid "create the branch's reflog"
 msgstr ""
 
-#: builtin/branch.c:684
+#: builtin/branch.c:701
 msgid "edit the description for the branch"
 msgstr ""
 
-#: builtin/branch.c:685
+#: builtin/branch.c:702
 msgid "force creation, move/rename, deletion"
 msgstr ""
 
-#: builtin/branch.c:686
+#: builtin/branch.c:703
 msgid "print only branches that are merged"
 msgstr ""
 
-#: builtin/branch.c:687
+#: builtin/branch.c:704
 msgid "print only branches that are not merged"
 msgstr ""
 
-#: builtin/branch.c:688
+#: builtin/branch.c:705
 msgid "list branches in columns"
 msgstr ""
 
-#: builtin/branch.c:690 builtin/for-each-ref.c:50 builtin/notes.c:417
+#: builtin/branch.c:707 builtin/for-each-ref.c:50 builtin/notes.c:417
 #: builtin/notes.c:420 builtin/notes.c:583 builtin/notes.c:586
 #: builtin/tag.c:479
 msgid "object"
 msgstr ""
 
-#: builtin/branch.c:691
+#: builtin/branch.c:708
 msgid "print only branches of the object"
 msgstr ""
 
-#: builtin/branch.c:692 builtin/for-each-ref.c:56 builtin/tag.c:486
+#: builtin/branch.c:709 builtin/for-each-ref.c:56 builtin/tag.c:486
 msgid "sorting and filtering are case insensitive"
 msgstr ""
 
-#: builtin/branch.c:693 builtin/ls-files.c:758
+#: builtin/branch.c:710 builtin/ls-files.c:758
 msgid "recurse through submodules"
 msgstr ""
 
-#: builtin/branch.c:694 builtin/for-each-ref.c:46 builtin/ls-files.c:770
+#: builtin/branch.c:711 builtin/for-each-ref.c:46 builtin/ls-files.c:770
 #: builtin/ls-tree.c:399 builtin/tag.c:484 builtin/verify-tag.c:31
 msgid "format to use for the output"
 msgstr ""
 
-#: builtin/branch.c:713 builtin/submodule--helper.c:2795 submodule.c:1232
+#: builtin/branch.c:730 builtin/submodule--helper.c:2795 submodule.c:1232
 msgid "Failed to resolve HEAD as a valid ref."
 msgstr ""
 
-#: builtin/branch.c:717 builtin/clone.c:705
+#: builtin/branch.c:734 builtin/clone.c:705
 msgid "HEAD not found below refs/heads!"
 msgstr ""
 
-#: builtin/branch.c:738
+#: builtin/branch.c:755
 msgid ""
 "branch with --recurse-submodules can only be used if submodule."
 "propagateBranches is enabled"
 msgstr ""
 
-#: builtin/branch.c:740
+#: builtin/branch.c:757
 msgid "--recurse-submodules can only be used to create branches"
 msgstr ""
 
-#: builtin/branch.c:769 builtin/branch.c:827
+#: builtin/branch.c:786 builtin/branch.c:844
 msgid "branch name required"
 msgstr ""
 
-#: builtin/branch.c:803
+#: builtin/branch.c:820
 msgid "Cannot give description to detached HEAD"
 msgstr ""
 
-#: builtin/branch.c:809
+#: builtin/branch.c:826
 msgid "cannot edit description of more than one branch"
 msgstr ""
 
-#: builtin/branch.c:829
+#: builtin/branch.c:846
 msgid "cannot copy the current branch while not on any."
 msgstr ""
 
-#: builtin/branch.c:830
+#: builtin/branch.c:847
 msgid "cannot rename the current branch while not on any."
 msgstr ""
 
-#: builtin/branch.c:836
+#: builtin/branch.c:853
 msgid "too many branches for a copy operation"
 msgstr ""
 
-#: builtin/branch.c:837
+#: builtin/branch.c:854
 msgid "too many arguments for a rename operation"
 msgstr ""
 
-#: builtin/branch.c:848
+#: builtin/branch.c:865
 msgid "too many arguments to set new upstream"
 msgstr ""
 
-#: builtin/branch.c:852
+#: builtin/branch.c:869
 #, c-format
 msgid ""
 "could not set upstream of HEAD to %s when it does not point to any branch."
 msgstr ""
 
-#: builtin/branch.c:855 builtin/branch.c:884
+#: builtin/branch.c:872 builtin/branch.c:901
 #, c-format
 msgid "no such branch '%s'"
 msgstr ""
 
-#: builtin/branch.c:861
+#: builtin/branch.c:878
 #, c-format
 msgid "branch '%s' does not exist"
 msgstr ""
 
-#: builtin/branch.c:878
+#: builtin/branch.c:895
 msgid "too many arguments to unset upstream"
 msgstr ""
 
-#: builtin/branch.c:882
+#: builtin/branch.c:899
 msgid "could not unset upstream of HEAD when it does not point to any branch."
 msgstr ""
 
-#: builtin/branch.c:888
+#: builtin/branch.c:905
 #, c-format
 msgid "Branch '%s' has no upstream information"
 msgstr ""
 
-#: builtin/branch.c:902
+#: builtin/branch.c:919
 msgid ""
 "The -a, and -r, options to 'git branch' do not take a branch name.\n"
 "Did you mean to use: -a|-r --list <pattern>?"
 msgstr ""
 
-#: builtin/branch.c:906
+#: builtin/branch.c:923
 msgid ""
 "the '--set-upstream' option is no longer supported. Please use '--track' or "
 "'--set-upstream-to' instead."
@@ -4983,132 +4990,132 @@ msgstr ""
 msgid "cannot unlink temporary alternates file"
 msgstr ""
 
-#: builtin/clone.c:929
+#: builtin/clone.c:930
 msgid "Too many arguments."
 msgstr ""
 
-#: builtin/clone.c:933 scalar.c:451
+#: builtin/clone.c:934 scalar.c:451
 msgid "You must specify a repository to clone."
 msgstr ""
 
-#: builtin/clone.c:951
+#: builtin/clone.c:952
 msgid ""
 "--bundle-uri is incompatible with --depth, --shallow-since, and --shallow-"
 "exclude"
 msgstr ""
 
-#: builtin/clone.c:963
+#: builtin/clone.c:964
 #, c-format
 msgid "repository '%s' does not exist"
 msgstr ""
 
-#: builtin/clone.c:967 builtin/fetch.c:2215
+#: builtin/clone.c:968 builtin/fetch.c:2215
 #, c-format
 msgid "depth %s is not a positive number"
 msgstr ""
 
-#: builtin/clone.c:977
+#: builtin/clone.c:978
 #, c-format
 msgid "destination path '%s' already exists and is not an empty directory."
 msgstr ""
 
-#: builtin/clone.c:983
+#: builtin/clone.c:984
 #, c-format
 msgid "repository path '%s' already exists and is not an empty directory."
 msgstr ""
 
-#: builtin/clone.c:997
+#: builtin/clone.c:998
 #, c-format
 msgid "working tree '%s' already exists."
 msgstr ""
 
-#: builtin/clone.c:1012 builtin/clone.c:1033 builtin/difftool.c:265
+#: builtin/clone.c:1013 builtin/clone.c:1034 builtin/difftool.c:265
 #: builtin/log.c:2167 builtin/worktree.c:413 builtin/worktree.c:445
 #, c-format
 msgid "could not create leading directories of '%s'"
 msgstr ""
 
-#: builtin/clone.c:1017
+#: builtin/clone.c:1018
 #, c-format
 msgid "could not create work tree dir '%s'"
 msgstr ""
 
-#: builtin/clone.c:1037
+#: builtin/clone.c:1038
 #, c-format
 msgid "Cloning into bare repository '%s'...\n"
 msgstr ""
 
-#: builtin/clone.c:1039
+#: builtin/clone.c:1040
 #, c-format
 msgid "Cloning into '%s'...\n"
 msgstr ""
 
-#: builtin/clone.c:1068
+#: builtin/clone.c:1069
 msgid ""
 "clone --recursive is not compatible with both --reference and --reference-if-"
 "able"
 msgstr ""
 
-#: builtin/clone.c:1146 builtin/remote.c:204 builtin/remote.c:731
+#: builtin/clone.c:1147 builtin/remote.c:204 builtin/remote.c:731
 #, c-format
 msgid "'%s' is not a valid remote name"
 msgstr ""
 
-#: builtin/clone.c:1183
+#: builtin/clone.c:1184
 msgid "--depth is ignored in local clones; use file:// instead."
 msgstr ""
 
-#: builtin/clone.c:1185
+#: builtin/clone.c:1186
 msgid "--shallow-since is ignored in local clones; use file:// instead."
 msgstr ""
 
-#: builtin/clone.c:1187
+#: builtin/clone.c:1188
 msgid "--shallow-exclude is ignored in local clones; use file:// instead."
 msgstr ""
 
-#: builtin/clone.c:1189
+#: builtin/clone.c:1190
 msgid "--filter is ignored in local clones; use file:// instead."
 msgstr ""
 
-#: builtin/clone.c:1192 fetch-pack.c:1222 fetch-pack.c:1575
+#: builtin/clone.c:1193 fetch-pack.c:1222 fetch-pack.c:1575
 msgid "source repository is shallow, reject to clone."
 msgstr ""
 
-#: builtin/clone.c:1194
+#: builtin/clone.c:1195
 msgid "source repository is shallow, ignoring --local"
 msgstr ""
 
-#: builtin/clone.c:1199
+#: builtin/clone.c:1200
 msgid "--local is ignored"
 msgstr ""
 
-#: builtin/clone.c:1215
+#: builtin/clone.c:1216
 msgid "cannot clone from filtered bundle"
 msgstr ""
 
-#: builtin/clone.c:1261 builtin/clone.c:1295
+#: builtin/clone.c:1262 builtin/clone.c:1296
 msgid "failed to initialize the repo, skipping bundle URI"
 msgstr ""
 
-#: builtin/clone.c:1263
+#: builtin/clone.c:1264
 #, c-format
 msgid "failed to fetch objects from bundle URI '%s'"
 msgstr ""
 
-#: builtin/clone.c:1298
+#: builtin/clone.c:1299
 msgid "failed to fetch advertised bundles"
 msgstr ""
 
-#: builtin/clone.c:1332 builtin/clone.c:1389
+#: builtin/clone.c:1333 builtin/clone.c:1390
 msgid "remote transport reported error"
 msgstr ""
 
-#: builtin/clone.c:1342
+#: builtin/clone.c:1343
 #, c-format
 msgid "Remote branch %s not found in upstream %s"
 msgstr ""
 
-#: builtin/clone.c:1352
+#: builtin/clone.c:1353
 msgid "You appear to have cloned an empty repository."
 msgstr ""
 
@@ -6540,11 +6547,11 @@ msgstr ""
 msgid "difftool requires worktree or --no-index"
 msgstr ""
 
-#: builtin/difftool.c:754
+#: builtin/difftool.c:762
 msgid "no <tool> given for --tool=<tool>"
 msgstr ""
 
-#: builtin/difftool.c:761
+#: builtin/difftool.c:769
 msgid "no <cmd> given for --extcmd=<cmd>"
 msgstr ""
 
@@ -10794,7 +10801,7 @@ msgstr ""
 msgid "Counting objects"
 msgstr ""
 
-#: builtin/pack-objects.c:2456 pack-bitmap.c:1410 pack-bitmap.c:1416
+#: builtin/pack-objects.c:2456 pack-bitmap.c:1376 pack-bitmap.c:1382
 #, c-format
 msgid "unable to get size of %s"
 msgstr ""
@@ -21031,137 +21038,137 @@ msgstr ""
 msgid "trying to write commit not in index"
 msgstr ""
 
-#: pack-bitmap.c:169
-#, c-format
-msgid "corrupt ewah bitmap: truncated header for bitmap of commit \"%s\""
-msgstr ""
-
-#: pack-bitmap.c:188
+#: pack-bitmap.c:151
 msgid "failed to load bitmap index (corrupted?)"
 msgstr ""
 
-#: pack-bitmap.c:210
+#: pack-bitmap.c:173
 msgid "corrupted bitmap index (too small)"
 msgstr ""
 
-#: pack-bitmap.c:213
+#: pack-bitmap.c:176
 msgid "corrupted bitmap index file (wrong header)"
 msgstr ""
 
-#: pack-bitmap.c:217
+#: pack-bitmap.c:180
 #, c-format
 msgid "unsupported version '%d' for bitmap index file"
 msgstr ""
 
-#: pack-bitmap.c:231
+#: pack-bitmap.c:194
 msgid "corrupted bitmap index file (too short to fit hash cache)"
 msgstr ""
 
-#: pack-bitmap.c:240
+#: pack-bitmap.c:203
 msgid "corrupted bitmap index file (too short to fit lookup table)"
 msgstr ""
 
-#: pack-bitmap.c:277
+#: pack-bitmap.c:240
 #, c-format
 msgid "duplicate entry in bitmap index: '%s'"
 msgstr ""
 
-#: pack-bitmap.c:323
+#: pack-bitmap.c:284
 #, c-format
 msgid "corrupt ewah bitmap: truncated header for entry %d"
 msgstr ""
 
-#: pack-bitmap.c:330
+#: pack-bitmap.c:291
 #, c-format
 msgid "corrupt ewah bitmap: commit index %u out of range"
 msgstr ""
 
-#: pack-bitmap.c:338
+#: pack-bitmap.c:299
 msgid "corrupted bitmap pack index"
 msgstr ""
 
-#: pack-bitmap.c:344
+#: pack-bitmap.c:305
 msgid "invalid XOR offset in bitmap pack index"
 msgstr ""
 
-#: pack-bitmap.c:391 pack-bitmap.c:468
+#: pack-bitmap.c:352 pack-bitmap.c:429
 msgid "cannot fstat bitmap file"
 msgstr ""
 
-#: pack-bitmap.c:417
+#: pack-bitmap.c:378
 msgid "checksum doesn't match in MIDX and bitmap"
 msgstr ""
 
-#: pack-bitmap.c:422
+#: pack-bitmap.c:383
 msgid "multi-pack bitmap is missing required reverse index"
 msgstr ""
 
-#: pack-bitmap.c:428
+#: pack-bitmap.c:389
 #, c-format
 msgid "could not open pack %s"
 msgstr ""
 
-#: pack-bitmap.c:434
+#: pack-bitmap.c:395
 #, c-format
 msgid "preferred pack (%s) is invalid"
 msgstr ""
 
-#: pack-bitmap.c:687
+#: pack-bitmap.c:648
 msgid "corrupt bitmap lookup table: triplet position out of index"
 msgstr ""
 
-#: pack-bitmap.c:780
+#: pack-bitmap.c:742
 msgid "corrupt bitmap lookup table: xor chain exceeds entry count"
 msgstr ""
 
-#: pack-bitmap.c:791
+#: pack-bitmap.c:753
 #, c-format
 msgid "corrupt bitmap lookup table: commit index %u out of range"
 msgstr ""
 
-#: pack-bitmap.c:1967
+#: pack-bitmap.c:778 pack-bitmap.c:796
+#, c-format
+msgid "corrupt ewah bitmap: truncated header for bitmap of commit \"%s\""
+msgstr ""
+
+#: pack-bitmap.c:1933
 #, c-format
 msgid "object '%s' not found in type bitmaps"
 msgstr ""
 
-#: pack-bitmap.c:1971
+#: pack-bitmap.c:1937
 #, c-format
 msgid "object '%s' does not have a unique type"
 msgstr ""
 
-#: pack-bitmap.c:1975
+#: pack-bitmap.c:1941
 #, c-format
 msgid "object '%s': real type '%s', expected: '%s'"
 msgstr ""
 
-#: pack-bitmap.c:1990 pack-bitmap.c:2005
+#: pack-bitmap.c:1956 pack-bitmap.c:1971
 #, c-format
 msgid "object not in bitmap: '%s'"
 msgstr ""
 
-#: pack-bitmap.c:2022 pack-bitmap.c:2088 pack-bitmap.c:2096
+#: pack-bitmap.c:1988 pack-bitmap.c:2054 pack-bitmap.c:2062
 msgid "failed to load bitmap indexes"
 msgstr ""
 
-#: pack-bitmap.c:2025
+#: pack-bitmap.c:1991
 msgid "you must specify exactly one commit to test"
 msgstr ""
 
-#: pack-bitmap.c:2043
+#: pack-bitmap.c:2009
 #, c-format
 msgid "commit '%s' doesn't have an indexed bitmap"
 msgstr ""
 
-#: pack-bitmap.c:2070
+#: pack-bitmap.c:2036
 msgid "mismatch in bitmap results"
 msgstr ""
 
-#: pack-bitmap.c:2287
+#: pack-bitmap.c:2253
 #, c-format
 msgid "could not find '%s' in pack '%s' at offset %<PRIuMAX>"
 msgstr ""
 
-#: pack-bitmap.c:2323
+#: pack-bitmap.c:2289
 #, c-format
 msgid "unable to get disk usage of '%s'"
 msgstr ""
