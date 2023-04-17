@@ -1,0 +1,165 @@
+
+
+#################### Mon, 17 Apr 2023 23:57:50 +0000 ####################
+
+--- po/git.pot.old	2023-04-17 23:57:50.028742258 +0000
++++ po/git.pot.new	2023-04-17 23:57:50.124743030 +0000
+@@ -3982,6 +3982,13 @@
+ msgid "HEAD of working tree %s is not updated"
+ msgstr ""
+ 
++#, c-format
++msgid ""
++"HEAD points to an invalid (or orphaned) reference.\n"
++"HEAD path: '%s'\n"
++"HEAD contents: '%s'"
++msgstr ""
++
+ msgid "Helper programs to interact with remote repositories"
+ msgstr ""
+ 
+@@ -4067,9 +4074,18 @@
+ msgid ""
+ "If you meant to create a worktree containing a new orphan branch\n"
+ "(branch with no commits) for this repository, you can do so\n"
+-"using the --orphan option:\n"
++"using the --orphan flag:\n"
++"\n"
++"\tgit worktree add --orphan %s\n"
++msgstr ""
++
++#, c-format
++msgid ""
++"If you meant to create a worktree containing a new orphan branch\n"
++"(branch with no commits) for this repository, you can do so\n"
++"using the --orphan flag:\n"
+ "\n"
+-"\tgit worktree add --orphan %s %s\n"
++"\tgit worktree add --orphan -b %s %s\n"
+ msgstr ""
+ 
+ #, c-format
+@@ -4564,6 +4580,11 @@
+ msgid "No local changes to save"
+ msgstr ""
+ 
++msgid ""
++"No local or remote refs exist despite at least one remote\n"
++"present, stopping; use 'add -f' to overide or fetch a remote first"
++msgstr ""
++
+ msgid "No match"
+ msgstr ""
+ 
+@@ -4596,6 +4617,9 @@
+ msgid "No pathspec was given. Which files should I remove?"
+ msgstr ""
+ 
++msgid "No possible source branch, inferring '--orphan'"
++msgstr ""
++
+ msgid "No previous hunk"
+ msgstr ""
+ 
+@@ -9985,6 +10009,9 @@
+ msgid "create thin packs"
+ msgstr ""
+ 
++msgid "create unborn/orphaned branch"
++msgstr ""
++
+ msgid "create/reset and checkout a branch"
+ msgstr ""
+ 
+@@ -12816,12 +12843,7 @@
+ 
+ msgid ""
+ "git worktree add [-f] [--detach] [--checkout] [--lock [--reason <string>]]\n"
+-"                 [(-b | -B) <new-branch>] <path> [<commit-ish>]"
+-msgstr ""
+-
+-msgid ""
+-"git worktree add [-f] [--lock [--reason <string>]]\n"
+-"                 --orphan <new-branch> <path>"
++"                 [--orphan] [(-b | -B) <new-branch>] <path> [<commit-ish>]"
+ msgstr ""
+ 
+ msgid "git worktree list [-v | --porcelain [-z]]"
+@@ -13518,6 +13540,9 @@
+ msgid "invalid characters in host name"
+ msgstr ""
+ 
++msgid "invalid checksum"
++msgstr ""
++
+ #, c-format
+ msgid "invalid color value: %.*s"
+ msgstr ""
+@@ -13723,6 +13748,14 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "invalid rev-index for pack '%s'"
++msgstr ""
++
++#, c-format
++msgid "invalid rev-index position at %<PRIu64>: %<PRIu32> != %<PRIu32>"
++msgstr ""
++
++#, c-format
+ msgid "invalid section name '%s'"
+ msgstr ""
+ 
+@@ -15388,6 +15421,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "options '%s', and '%s' cannot be used together"
++msgstr ""
++
++#, c-format
+ msgid "options '%s=%s' and '%s=%s' cannot be used together"
+ msgstr ""
+ 
+@@ -18579,6 +18616,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unable to load rev-index for pack '%s'"
++msgstr ""
++
++#, c-format
+ msgid "unable to load root tree for commit %s"
+ msgstr ""
+ 
+@@ -19205,6 +19246,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unreachable: invalid reference: %s"
++msgstr ""
++
++#, c-format
+ msgid "unrecognized %%(%.*s) argument: %s"
+ msgstr ""
+ 
+@@ -19875,6 +19920,9 @@
+ msgid "with --batch[-check]: ignores stdin, batches all known objects"
+ msgstr ""
+ 
++msgid "with --cruft, expire objects older than this"
++msgstr ""
++
+ msgid "with --get, use default value when missing entry"
+ msgstr ""
+ 
+@@ -19887,9 +19935,6 @@
+ msgid "with -A, do not loosen objects older than this"
+ msgstr ""
+ 
+-msgid "with -C, expire objects older than this"
+-msgstr ""
+-
+ msgid "with -a, repack unreachable objects"
+ msgstr ""
+ 
