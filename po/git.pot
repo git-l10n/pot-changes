@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2023-04-21 23:57+0000\n"
+"POT-Creation-Date: 2023-04-25 17:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -207,7 +207,7 @@ msgstr ""
 msgid "unstaged"
 msgstr ""
 
-#: add-interactive.c:1158 apply.c:5051 apply.c:5054 builtin/am.c:2373
+#: add-interactive.c:1158 apply.c:5061 apply.c:5064 builtin/am.c:2373
 #: builtin/am.c:2376 builtin/bugreport.c:120 builtin/clone.c:142
 #: builtin/diagnose.c:25 builtin/fetch.c:175 builtin/hook.c:32
 #: builtin/merge.c:296 builtin/pull.c:199 builtin/submodule--helper.c:1776
@@ -1245,184 +1245,189 @@ msgstr[1] ""
 msgid "truncating .rej filename to %.*s.rej"
 msgstr ""
 
-#: apply.c:4633
+#: apply.c:4634 apply.c:4639 apply.c:4643
 #, c-format
 msgid "cannot open %s"
 msgstr ""
 
-#: apply.c:4647
+#: apply.c:4636 rerere.c:1069
+#, c-format
+msgid "cannot unlink '%s'"
+msgstr ""
+
+#: apply.c:4657
 #, c-format
 msgid "Hunk #%d applied cleanly."
 msgstr ""
 
-#: apply.c:4651
+#: apply.c:4661
 #, c-format
 msgid "Rejected hunk #%d."
 msgstr ""
 
-#: apply.c:4780
+#: apply.c:4790
 #, c-format
 msgid "Skipped patch '%s'."
 msgstr ""
 
-#: apply.c:4789
+#: apply.c:4799
 msgid "No valid patches in input (allow with \"--allow-empty\")"
 msgstr ""
 
-#: apply.c:4810 t/helper/test-cache-tree.c:38
+#: apply.c:4820 t/helper/test-cache-tree.c:38
 msgid "unable to read index file"
 msgstr ""
 
-#: apply.c:4967
+#: apply.c:4977
 #, c-format
 msgid "can't open patch '%s': %s"
 msgstr ""
 
-#: apply.c:4994
+#: apply.c:5004
 #, c-format
 msgid "squelched %d whitespace error"
 msgid_plural "squelched %d whitespace errors"
 msgstr[0] ""
 msgstr[1] ""
 
-#: apply.c:5000 apply.c:5015
+#: apply.c:5010 apply.c:5025
 #, c-format
 msgid "%d line adds whitespace errors."
 msgid_plural "%d lines add whitespace errors."
 msgstr[0] ""
 msgstr[1] ""
 
-#: apply.c:5008
+#: apply.c:5018
 #, c-format
 msgid "%d line applied after fixing whitespace errors."
 msgid_plural "%d lines applied after fixing whitespace errors."
 msgstr[0] ""
 msgstr[1] ""
 
-#: apply.c:5024 builtin/add.c:655 builtin/mv.c:565 builtin/rm.c:438
+#: apply.c:5034 builtin/add.c:655 builtin/mv.c:565 builtin/rm.c:438
 msgid "Unable to write new index file"
 msgstr ""
 
-#: apply.c:5052
+#: apply.c:5062
 msgid "don't apply changes matching the given path"
 msgstr ""
 
-#: apply.c:5055
+#: apply.c:5065
 msgid "apply changes matching the given path"
 msgstr ""
 
-#: apply.c:5057 builtin/am.c:2382
+#: apply.c:5067 builtin/am.c:2382
 msgid "num"
 msgstr ""
 
-#: apply.c:5058
+#: apply.c:5068
 msgid "remove <num> leading slashes from traditional diff paths"
 msgstr ""
 
-#: apply.c:5061
+#: apply.c:5071
 msgid "ignore additions made by the patch"
 msgstr ""
 
-#: apply.c:5063
+#: apply.c:5073
 msgid "instead of applying the patch, output diffstat for the input"
 msgstr ""
 
-#: apply.c:5067
+#: apply.c:5077
 msgid "show number of added and deleted lines in decimal notation"
 msgstr ""
 
-#: apply.c:5069
+#: apply.c:5079
 msgid "instead of applying the patch, output a summary for the input"
 msgstr ""
 
-#: apply.c:5071
+#: apply.c:5081
 msgid "instead of applying the patch, see if the patch is applicable"
 msgstr ""
 
-#: apply.c:5073
+#: apply.c:5083
 msgid "make sure the patch is applicable to the current index"
 msgstr ""
 
-#: apply.c:5075
+#: apply.c:5085
 msgid "mark new files with `git add --intent-to-add`"
 msgstr ""
 
-#: apply.c:5077
+#: apply.c:5087
 msgid "apply a patch without touching the working tree"
 msgstr ""
 
-#: apply.c:5079
+#: apply.c:5089
 msgid "accept a patch that touches outside the working area"
 msgstr ""
 
-#: apply.c:5082
+#: apply.c:5092
 msgid "also apply the patch (use with --stat/--summary/--check)"
 msgstr ""
 
-#: apply.c:5084
+#: apply.c:5094
 msgid "attempt three-way merge, fall back on normal patch if that fails"
 msgstr ""
 
-#: apply.c:5086
+#: apply.c:5096
 msgid "build a temporary index based on embedded index information"
 msgstr ""
 
-#: apply.c:5089 builtin/checkout-index.c:232
+#: apply.c:5099 builtin/checkout-index.c:232
 msgid "paths are separated with NUL character"
 msgstr ""
 
-#: apply.c:5091
+#: apply.c:5101
 msgid "ensure at least <n> lines of context match"
 msgstr ""
 
-#: apply.c:5092 builtin/am.c:2358 builtin/am.c:2361
+#: apply.c:5102 builtin/am.c:2358 builtin/am.c:2361
 #: builtin/interpret-trailers.c:101 builtin/interpret-trailers.c:103
 #: builtin/interpret-trailers.c:105 builtin/pack-objects.c:4271
 #: builtin/rebase.c:1111
 msgid "action"
 msgstr ""
 
-#: apply.c:5093
+#: apply.c:5103
 msgid "detect new or modified lines that have whitespace errors"
 msgstr ""
 
-#: apply.c:5096 apply.c:5099
+#: apply.c:5106 apply.c:5109
 msgid "ignore changes in whitespace when finding context"
 msgstr ""
 
-#: apply.c:5102
+#: apply.c:5112
 msgid "apply the patch in reverse"
 msgstr ""
 
-#: apply.c:5104
+#: apply.c:5114
 msgid "don't expect at least one line of context"
 msgstr ""
 
-#: apply.c:5106
+#: apply.c:5116
 msgid "leave the rejected hunks in corresponding *.rej files"
 msgstr ""
 
-#: apply.c:5108
+#: apply.c:5118
 msgid "allow overlapping hunks"
 msgstr ""
 
-#: apply.c:5111
+#: apply.c:5121
 msgid "tolerate incorrectly detected missing new-line at the end of file"
 msgstr ""
 
-#: apply.c:5114
+#: apply.c:5124
 msgid "do not trust the line counts in the hunk headers"
 msgstr ""
 
-#: apply.c:5116 builtin/am.c:2370
+#: apply.c:5126 builtin/am.c:2370
 msgid "root"
 msgstr ""
 
-#: apply.c:5117
+#: apply.c:5127
 msgid "prepend <root> to all filenames"
 msgstr ""
 
-#: apply.c:5120
+#: apply.c:5130
 msgid "don't return error for empty patches"
 msgstr ""
 
@@ -17765,7 +17770,7 @@ msgstr ""
 msgid "failed to write new configuration file %s"
 msgstr ""
 
-#: config.c:3402 config.c:3743
+#: config.c:3402 config.c:3747
 #, c-format
 msgid "could not lock config file %s"
 msgstr ""
@@ -17780,7 +17785,7 @@ msgstr ""
 msgid "invalid config file %s"
 msgstr ""
 
-#: config.c:3488 config.c:3756
+#: config.c:3488 config.c:3760
 #, c-format
 msgid "fstat on %s failed"
 msgstr ""
@@ -17790,12 +17795,12 @@ msgstr ""
 msgid "unable to mmap '%s'%s"
 msgstr ""
 
-#: config.c:3509 config.c:3761
+#: config.c:3509 config.c:3765
 #, c-format
 msgid "chmod on %s failed"
 msgstr ""
 
-#: config.c:3594 config.c:3858
+#: config.c:3594 config.c:3871
 #, c-format
 msgid "could not write config file %s"
 msgstr ""
@@ -17805,12 +17810,17 @@ msgstr ""
 msgid "could not set '%s' to '%s'"
 msgstr ""
 
-#: config.c:3734
+#: config.c:3738
 #, c-format
 msgid "invalid section name: %s"
 msgstr ""
 
-#: config.c:3901
+#: config.c:3778
+#, c-format
+msgid "refusing to work with overly long line in '%s' on line %<PRIuMAX>"
+msgstr ""
+
+#: config.c:3915
 #, c-format
 msgid "missing value for '%s'"
 msgstr ""
@@ -22793,11 +22803,6 @@ msgstr ""
 #: rerere.c:1060 rerere.c:1067
 #, c-format
 msgid "no remembered resolution for '%s'"
-msgstr ""
-
-#: rerere.c:1069
-#, c-format
-msgid "cannot unlink '%s'"
 msgstr ""
 
 #: rerere.c:1079
