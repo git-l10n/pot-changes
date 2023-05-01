@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2023-04-28 23:57+0000\n"
+"POT-Creation-Date: 2023-05-01 17:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -24,8 +24,8 @@ msgid "Huh (%s)?"
 msgstr ""
 
 #: add-interactive.c:538 add-interactive.c:846 builtin/merge.c:404
-#: builtin/rebase.c:1301 builtin/rebase.c:1728 reset.c:140 sequencer.c:3625
-#: sequencer.c:4106 sequencer.c:4484
+#: builtin/rebase.c:1301 builtin/rebase.c:1728 reset.c:140 sequencer.c:3636
+#: sequencer.c:4117 sequencer.c:4495
 msgid "could not read index"
 msgstr ""
 
@@ -51,7 +51,7 @@ msgid "could not stage '%s'"
 msgstr ""
 
 #: add-interactive.c:719 add-interactive.c:908 builtin/stash.c:607 reset.c:164
-#: sequencer.c:3863
+#: sequencer.c:3874
 msgid "could not write index"
 msgstr ""
 
@@ -1654,44 +1654,48 @@ msgstr ""
 msgid "Argument not supported for format '%s': -%d"
 msgstr ""
 
-#: attr.c:205
+#: attr.c:206
 #, c-format
 msgid "%.*s is not a valid attribute name"
 msgstr ""
 
-#: attr.c:233
+#: attr.c:234
 msgid "unable to add additional attribute"
 msgstr ""
 
-#: attr.c:355
+#: attr.c:356
 #, c-format
 msgid "ignoring overly long attributes line %d"
 msgstr ""
 
-#: attr.c:370
+#: attr.c:371
 #, c-format
 msgid "%s not allowed: %s:%d"
 msgstr ""
 
-#: attr.c:409
+#: attr.c:410
 msgid ""
 "Negative patterns are ignored in git attributes\n"
 "Use '\\!' for literal leading exclamation."
 msgstr ""
 
-#: attr.c:732
+#: attr.c:733
 #, c-format
 msgid "cannot fstat gitattributes file '%s'"
 msgstr ""
 
-#: attr.c:737
+#: attr.c:738
 #, c-format
 msgid "ignoring overly large gitattributes file '%s'"
 msgstr ""
 
-#: attr.c:832
+#: attr.c:833
 #, c-format
 msgid "ignoring overly large gitattributes blob '%s'"
+msgstr ""
+
+#: attr.c:1190
+msgid "bad --attr-source or GIT_ATTR_SOURCE"
 msgstr ""
 
 #: bisect.c:490
@@ -1812,7 +1816,7 @@ msgstr ""
 #: builtin/pack-objects.c:3423 builtin/pack-objects.c:3581
 #: builtin/pack-objects.c:4065 builtin/pack-objects.c:4080
 #: builtin/shortlog.c:273 midx.c:1119 pack-bitmap.c:2186 remote.c:2198
-#: sequencer.c:2443 sequencer.c:5228 submodule.c:913
+#: sequencer.c:2454 sequencer.c:5239 submodule.c:913
 msgid "revision walk setup failed"
 msgstr ""
 
@@ -2200,13 +2204,13 @@ msgstr ""
 #: builtin/blame.c:759 builtin/fetch.c:2263 builtin/pack-objects.c:3769
 #: builtin/pull.c:49 builtin/pull.c:51 builtin/pull.c:326 diff-merges.c:130
 #: gpg-interface.c:742 gpg-interface.c:757 ls-refs.c:37 parallel-checkout.c:48
-#: sequencer.c:2934 setup.c:583
+#: sequencer.c:2945 setup.c:583
 #, c-format
 msgid "invalid value for '%s': '%s'"
 msgstr ""
 
 #: builtin/am.c:300 builtin/commit.c:855 builtin/merge.c:1169 sequencer.c:534
-#: sequencer.c:1997 sequencer.c:3232 sequencer.c:3667
+#: sequencer.c:1997 sequencer.c:3243 sequencer.c:3678
 #, c-format
 msgid "could not read '%s'"
 msgstr ""
@@ -2216,7 +2220,7 @@ msgid "could not parse author script"
 msgstr ""
 
 #: builtin/am.c:410 builtin/am.c:455 builtin/am.c:460 builtin/am.c:1452
-#: builtin/am.c:2138 builtin/replace.c:466 commit.c:60 sequencer.c:3225
+#: builtin/am.c:2138 builtin/replace.c:466 commit.c:60 sequencer.c:3236
 #, c-format
 msgid "could not parse %s"
 msgstr ""
@@ -2246,7 +2250,7 @@ msgstr ""
 msgid "could not open '%s' for reading"
 msgstr ""
 
-#: builtin/am.c:766 builtin/rebase.c:644 editor.c:149 sequencer.c:4230
+#: builtin/am.c:766 builtin/rebase.c:644 editor.c:149 sequencer.c:4241
 #: wrapper.c:202 wrapper.c:372
 #, c-format
 msgid "could not open '%s' for writing"
@@ -5496,8 +5500,8 @@ msgstr ""
 msgid "could not read MERGE_MSG"
 msgstr ""
 
-#: builtin/commit.c:883 bundle.c:150 rerere.c:471 rerere.c:682 sequencer.c:2746
-#: sequencer.c:3516
+#: builtin/commit.c:883 bundle.c:150 rerere.c:471 rerere.c:682 sequencer.c:2757
+#: sequencer.c:3527
 #, c-format
 msgid "could not open '%s'"
 msgstr ""
@@ -6501,7 +6505,7 @@ msgstr ""
 msgid "working tree file has been left."
 msgstr ""
 
-#: builtin/difftool.c:644 sequencer.c:3602 sequencer.c:3606
+#: builtin/difftool.c:644 sequencer.c:3613 sequencer.c:3617
 #, c-format
 msgid "could not copy '%s' to '%s'"
 msgstr ""
@@ -6776,7 +6780,7 @@ msgid "non-fast-forward"
 msgstr ""
 
 #: builtin/fetch.c:1045 builtin/fetch.c:1428 builtin/grep.c:820
-#: sequencer.c:3293
+#: sequencer.c:3304
 #, c-format
 msgid "cannot open '%s'"
 msgstr ""
@@ -7285,8 +7289,8 @@ msgid "could not create lost-found"
 msgstr ""
 
 #: builtin/fsck.c:337 builtin/gc.c:1902 builtin/rebase.c:216
-#: rebase-interactive.c:122 rerere.c:476 rerere.c:684 sequencer.c:4014
-#: sequencer.c:4040 sequencer.c:6177
+#: rebase-interactive.c:122 rerere.c:476 rerere.c:684 sequencer.c:4025
+#: sequencer.c:4051 sequencer.c:6188
 #, c-format
 msgid "could not write '%s'"
 msgstr ""
@@ -8342,12 +8346,12 @@ msgstr ""
 msgid "no info viewer handled the request"
 msgstr ""
 
-#: builtin/help.c:571 builtin/help.c:582 git.c:340
+#: builtin/help.c:571 builtin/help.c:582 git.c:356
 #, c-format
 msgid "'%s' is aliased to '%s'"
 msgstr ""
 
-#: builtin/help.c:585 git.c:372
+#: builtin/help.c:585 git.c:388
 #, c-format
 msgid "bad alias.%s string: %s"
 msgstr ""
@@ -11874,7 +11878,7 @@ msgid ""
 "git rebase [-i] [options] [--exec <cmd>] [--onto <newbase>] --root [<branch>]"
 msgstr ""
 
-#: builtin/rebase.c:210 sequencer.c:2750
+#: builtin/rebase.c:210 sequencer.c:2761
 #, c-format
 msgid "could not read '%s'."
 msgstr ""
@@ -11917,7 +11921,7 @@ msgid "ignoring invalid allow_rerere_autoupdate: '%s'"
 msgstr ""
 
 #: builtin/rebase.c:553 builtin/rebase.c:1369 builtin/rm.c:419 sequencer.c:404
-#: sequencer.c:5079
+#: sequencer.c:5090
 #, c-format
 msgid "could not remove '%s'"
 msgstr ""
@@ -13152,7 +13156,7 @@ msgstr ""
 msgid "pack-objects did not write a '%s' file for pack %s-%s"
 msgstr ""
 
-#: builtin/repack.c:1130 sequencer.c:4211
+#: builtin/repack.c:1130 sequencer.c:4222
 #, c-format
 msgid "could not unlink: %s"
 msgstr ""
@@ -14144,7 +14148,7 @@ msgid "toggle the use of a sparse index"
 msgstr ""
 
 #: builtin/sparse-checkout.c:487 commit-graph.c:1920 midx.c:1247
-#: sequencer.c:4216
+#: sequencer.c:4227
 #, c-format
 msgid "unable to create leading directories of %s"
 msgstr ""
@@ -17607,7 +17611,7 @@ msgstr ""
 msgid "key does not contain variable name: %s"
 msgstr ""
 
-#: config.c:652 sequencer.c:2931
+#: config.c:652 sequencer.c:2942
 #, c-format
 msgid "invalid key: %s"
 msgstr ""
@@ -18224,17 +18228,17 @@ msgstr ""
 msgid "refusing to work with credential missing protocol field"
 msgstr ""
 
-#: credential.c:426
+#: credential.c:428
 #, c-format
 msgid "url contains a newline in its %s component: %s"
 msgstr ""
 
-#: credential.c:470
+#: credential.c:472
 #, c-format
 msgid "url has no scheme: %s"
 msgstr ""
 
-#: credential.c:543
+#: credential.c:545
 #, c-format
 msgid "credential url cannot be parsed: %s"
 msgstr ""
@@ -19073,8 +19077,8 @@ msgstr ""
 msgid "hint: Waiting for your editor to close the file...%c"
 msgstr ""
 
-#: editor.c:151 sequencer.c:511 sequencer.c:3410 sequencer.c:3424
-#: sequencer.c:3677 sequencer.c:5958 wrapper.c:706
+#: editor.c:151 sequencer.c:511 sequencer.c:3421 sequencer.c:3435
+#: sequencer.c:3688 sequencer.c:5969 wrapper.c:706
 #, c-format
 msgid "could not write to '%s'"
 msgstr ""
@@ -19400,7 +19404,7 @@ msgid ""
 "sockets support"
 msgstr ""
 
-#: git.c:34
+#: git.c:35
 msgid ""
 "git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n"
 "           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n"
@@ -19410,7 +19414,7 @@ msgid ""
 "           [--config-env=<name>=<envvar>] <command> [<args>]"
 msgstr ""
 
-#: git.c:41
+#: git.c:42
 msgid ""
 "'git help -a' and 'git help -g' list available subcommands and some\n"
 "concept guides. See 'git help <command>' or 'git help <concept>'\n"
@@ -19418,93 +19422,98 @@ msgid ""
 "See 'git help git' for an overview of the system."
 msgstr ""
 
-#: git.c:105 help.c:395
+#: git.c:106 help.c:395
 #, c-format
 msgid "unsupported command listing type '%s'"
 msgstr ""
 
-#: git.c:194 git.c:222 git.c:292
+#: git.c:195 git.c:223 git.c:293
 #, c-format
 msgid "no directory given for '%s' option\n"
 msgstr ""
 
-#: git.c:208
+#: git.c:209
 #, c-format
 msgid "no namespace given for --namespace\n"
 msgstr ""
 
-#: git.c:244
+#: git.c:245
 #, c-format
 msgid "-c expects a configuration string\n"
 msgstr ""
 
-#: git.c:252
+#: git.c:253
 #, c-format
 msgid "no config key given for --config-env\n"
 msgstr ""
 
-#: git.c:318
+#: git.c:320
+#, c-format
+msgid "no prefix given for --attr-source\n"
+msgstr ""
+
+#: git.c:334
 #, c-format
 msgid "unknown option: %s\n"
 msgstr ""
 
-#: git.c:367
+#: git.c:383
 #, c-format
 msgid "while expanding alias '%s': '%s'"
 msgstr ""
 
-#: git.c:376
+#: git.c:392
 #, c-format
 msgid ""
 "alias '%s' changes environment variables.\n"
 "You can use '!git' in the alias to do this"
 msgstr ""
 
-#: git.c:383
+#: git.c:399
 #, c-format
 msgid "empty alias for %s"
 msgstr ""
 
-#: git.c:386
+#: git.c:402
 #, c-format
 msgid "recursive alias: %s"
 msgstr ""
 
-#: git.c:467
+#: git.c:483
 msgid "write failure on standard output"
 msgstr ""
 
-#: git.c:469
+#: git.c:485
 msgid "unknown write failure on standard output"
 msgstr ""
 
-#: git.c:471
+#: git.c:487
 msgid "close failed on standard output"
 msgstr ""
 
-#: git.c:822
+#: git.c:838
 #, c-format
 msgid "alias loop detected: expansion of '%s' does not terminate:%s"
 msgstr ""
 
-#: git.c:872
+#: git.c:888
 #, c-format
 msgid "cannot handle %s as a builtin"
 msgstr ""
 
-#: git.c:883
+#: git.c:899
 #, c-format
 msgid ""
 "usage: %s\n"
 "\n"
 msgstr ""
 
-#: git.c:909
+#: git.c:925
 #, c-format
 msgid "expansion of alias '%s' failed; '%s' is not a git command\n"
 msgstr ""
 
-#: git.c:921
+#: git.c:937
 #, c-format
 msgid "failed to run command '%s': %s\n"
 msgstr ""
@@ -21768,7 +21777,7 @@ msgstr ""
 msgid "could not read `log` output"
 msgstr ""
 
-#: range-diff.c:102 sequencer.c:5942
+#: range-diff.c:102 sequencer.c:5953
 #, c-format
 msgid "could not parse commit '%s'"
 msgstr ""
@@ -22925,7 +22934,7 @@ msgstr ""
 msgid "could not determine HEAD revision"
 msgstr ""
 
-#: reset.c:145 reset.c:151 sequencer.c:3850
+#: reset.c:145 reset.c:151 sequencer.c:3861
 #, c-format
 msgid "failed to find tree of %s"
 msgstr ""
@@ -23295,7 +23304,7 @@ msgid ""
 "run \"git revert --abort\"."
 msgstr ""
 
-#: sequencer.c:509 sequencer.c:3406
+#: sequencer.c:509 sequencer.c:3417
 #, c-format
 msgid "could not lock '%s'"
 msgstr ""
@@ -23305,7 +23314,7 @@ msgstr ""
 msgid "could not write eol to '%s'"
 msgstr ""
 
-#: sequencer.c:521 sequencer.c:3412 sequencer.c:3426 sequencer.c:3684
+#: sequencer.c:521 sequencer.c:3423 sequencer.c:3437 sequencer.c:3695
 #, c-format
 msgid "failed to finalize '%s'"
 msgstr ""
@@ -23453,7 +23462,7 @@ msgstr ""
 msgid "HEAD %s is not a commit!"
 msgstr ""
 
-#: sequencer.c:1491 sequencer.c:2404
+#: sequencer.c:1491 sequencer.c:2415
 msgid "unable to parse commit author"
 msgstr ""
 
@@ -23471,7 +23480,7 @@ msgstr ""
 msgid "corrupt author: missing date information"
 msgstr ""
 
-#: sequencer.c:1638 sequencer.c:4858 t/helper/test-fast-rebase.c:210
+#: sequencer.c:1638 sequencer.c:4869 t/helper/test-fast-rebase.c:210
 #: t/helper/test-fast-rebase.c:226
 #, c-format
 msgid "could not update %s"
@@ -23524,7 +23533,7 @@ msgstr ""
 msgid "need a HEAD to fixup"
 msgstr ""
 
-#: sequencer.c:2018 sequencer.c:3711
+#: sequencer.c:2018 sequencer.c:3722
 msgid "could not read HEAD"
 msgstr ""
 
@@ -23567,209 +23576,209 @@ msgstr ""
 msgid "%s: cannot parse parent commit %s"
 msgstr ""
 
-#: sequencer.c:2312
+#: sequencer.c:2323
 #, c-format
 msgid "could not rename '%s' to '%s'"
 msgstr ""
 
-#: sequencer.c:2374
+#: sequencer.c:2385
 #, c-format
 msgid "could not revert %s... %s"
 msgstr ""
 
-#: sequencer.c:2375
+#: sequencer.c:2386
 #, c-format
 msgid "could not apply %s... %s"
 msgstr ""
 
-#: sequencer.c:2396
+#: sequencer.c:2407
 #, c-format
 msgid "dropping %s %s -- patch contents already upstream\n"
 msgstr ""
 
-#: sequencer.c:2455
+#: sequencer.c:2466
 #, c-format
 msgid "git %s: failed to read the index"
 msgstr ""
 
-#: sequencer.c:2463
+#: sequencer.c:2474
 #, c-format
 msgid "git %s: failed to refresh the index"
 msgstr ""
 
-#: sequencer.c:2518
+#: sequencer.c:2529
 #, c-format
 msgid "'%s' is not a valid label"
 msgstr ""
 
-#: sequencer.c:2523
+#: sequencer.c:2534
 #, c-format
 msgid "'%s' is not a valid refname"
 msgstr ""
 
-#: sequencer.c:2525
+#: sequencer.c:2536
 #, c-format
 msgid "update-ref requires a fully qualified refname e.g. refs/heads/%s"
 msgstr ""
 
-#: sequencer.c:2562
+#: sequencer.c:2573
 #, c-format
 msgid "invalid command '%.*s'"
 msgstr ""
 
-#: sequencer.c:2571
+#: sequencer.c:2582
 #, c-format
 msgid "%s does not accept arguments: '%s'"
 msgstr ""
 
-#: sequencer.c:2580
+#: sequencer.c:2591
 #, c-format
 msgid "missing arguments for %s"
 msgstr ""
 
-#: sequencer.c:2630
+#: sequencer.c:2641
 #, c-format
 msgid "could not parse '%s'"
 msgstr ""
 
-#: sequencer.c:2691
+#: sequencer.c:2702
 #, c-format
 msgid "invalid line %d: %.*s"
 msgstr ""
 
-#: sequencer.c:2702
+#: sequencer.c:2713
 #, c-format
 msgid "cannot '%s' without a previous commit"
 msgstr ""
 
-#: sequencer.c:2788
+#: sequencer.c:2799
 msgid "cancelling a cherry picking in progress"
 msgstr ""
 
-#: sequencer.c:2797
+#: sequencer.c:2808
 msgid "cancelling a revert in progress"
 msgstr ""
 
-#: sequencer.c:2837
+#: sequencer.c:2848
 msgid "please fix this using 'git rebase --edit-todo'."
 msgstr ""
 
-#: sequencer.c:2839
+#: sequencer.c:2850
 #, c-format
 msgid "unusable instruction sheet: '%s'"
 msgstr ""
 
-#: sequencer.c:2844
+#: sequencer.c:2855
 msgid "no commits parsed."
 msgstr ""
 
-#: sequencer.c:2855
+#: sequencer.c:2866
 msgid "cannot cherry-pick during a revert."
 msgstr ""
 
-#: sequencer.c:2857
+#: sequencer.c:2868
 msgid "cannot revert during a cherry-pick."
 msgstr ""
 
-#: sequencer.c:3048
+#: sequencer.c:3059
 msgid "unusable squash-onto"
 msgstr ""
 
-#: sequencer.c:3068
+#: sequencer.c:3079
 #, c-format
 msgid "malformed options sheet: '%s'"
 msgstr ""
 
-#: sequencer.c:3167 sequencer.c:5231
+#: sequencer.c:3178 sequencer.c:5242
 msgid "empty commit set passed"
 msgstr ""
 
-#: sequencer.c:3184
+#: sequencer.c:3195
 msgid "revert is already in progress"
 msgstr ""
 
-#: sequencer.c:3186
+#: sequencer.c:3197
 #, c-format
 msgid "try \"git revert (--continue | %s--abort | --quit)\""
 msgstr ""
 
-#: sequencer.c:3189
+#: sequencer.c:3200
 msgid "cherry-pick is already in progress"
 msgstr ""
 
-#: sequencer.c:3191
+#: sequencer.c:3202
 #, c-format
 msgid "try \"git cherry-pick (--continue | %s--abort | --quit)\""
 msgstr ""
 
-#: sequencer.c:3205
+#: sequencer.c:3216
 #, c-format
 msgid "could not create sequencer directory '%s'"
 msgstr ""
 
-#: sequencer.c:3259 sequencer.c:4940
+#: sequencer.c:3270 sequencer.c:4951
 msgid "no cherry-pick or revert in progress"
 msgstr ""
 
-#: sequencer.c:3261 sequencer.c:3272
+#: sequencer.c:3272 sequencer.c:3283
 msgid "cannot resolve HEAD"
 msgstr ""
 
-#: sequencer.c:3263 sequencer.c:3307
+#: sequencer.c:3274 sequencer.c:3318
 msgid "cannot abort from a branch yet to be born"
 msgstr ""
 
-#: sequencer.c:3295
+#: sequencer.c:3306
 #, c-format
 msgid "cannot read '%s': %s"
 msgstr ""
 
-#: sequencer.c:3296
+#: sequencer.c:3307
 msgid "unexpected end of file"
 msgstr ""
 
-#: sequencer.c:3302
+#: sequencer.c:3313
 #, c-format
 msgid "stored pre-cherry-pick HEAD file '%s' is corrupt"
 msgstr ""
 
-#: sequencer.c:3313
+#: sequencer.c:3324
 msgid "You seem to have moved HEAD. Not rewinding, check your HEAD!"
 msgstr ""
 
-#: sequencer.c:3354
+#: sequencer.c:3365
 msgid "no revert in progress"
 msgstr ""
 
-#: sequencer.c:3363
+#: sequencer.c:3374
 msgid "no cherry-pick in progress"
 msgstr ""
 
-#: sequencer.c:3373
+#: sequencer.c:3384
 msgid "failed to skip the commit"
 msgstr ""
 
-#: sequencer.c:3380
+#: sequencer.c:3391
 msgid "there is nothing to skip"
 msgstr ""
 
-#: sequencer.c:3383
+#: sequencer.c:3394
 #, c-format
 msgid ""
 "have you committed already?\n"
 "try \"git %s --continue\""
 msgstr ""
 
-#: sequencer.c:3546 sequencer.c:4838
+#: sequencer.c:3557 sequencer.c:4849
 msgid "cannot read HEAD"
 msgstr ""
 
-#: sequencer.c:3563
+#: sequencer.c:3574
 #, c-format
 msgid "unable to copy '%s' to '%s'"
 msgstr ""
 
-#: sequencer.c:3571
+#: sequencer.c:3582
 #, c-format
 msgid ""
 "You can amend the commit now, with\n"
@@ -23781,22 +23790,22 @@ msgid ""
 "  git rebase --continue\n"
 msgstr ""
 
-#: sequencer.c:3581
+#: sequencer.c:3592
 #, c-format
 msgid "Could not apply %s... %.*s"
 msgstr ""
 
-#: sequencer.c:3588
+#: sequencer.c:3599
 #, c-format
 msgid "Could not merge %.*s"
 msgstr ""
 
-#: sequencer.c:3617
+#: sequencer.c:3628
 #, c-format
 msgid "Executing: %s\n"
 msgstr ""
 
-#: sequencer.c:3630
+#: sequencer.c:3641
 #, c-format
 msgid ""
 "execution failed: %s\n"
@@ -23806,11 +23815,11 @@ msgid ""
 "\n"
 msgstr ""
 
-#: sequencer.c:3636
+#: sequencer.c:3647
 msgid "and made changes to the index and/or the working tree.\n"
 msgstr ""
 
-#: sequencer.c:3642
+#: sequencer.c:3653
 #, c-format
 msgid ""
 "execution succeeded: %s\n"
@@ -23821,110 +23830,110 @@ msgid ""
 "\n"
 msgstr ""
 
-#: sequencer.c:3701
+#: sequencer.c:3712
 #, c-format
 msgid "illegal label name: '%.*s'"
 msgstr ""
 
-#: sequencer.c:3781
+#: sequencer.c:3792
 #, c-format
 msgid "could not resolve '%s'"
 msgstr ""
 
-#: sequencer.c:3807
+#: sequencer.c:3818
 msgid "writing fake root commit"
 msgstr ""
 
-#: sequencer.c:3812
+#: sequencer.c:3823
 msgid "writing squash-onto"
 msgstr ""
 
-#: sequencer.c:3905
+#: sequencer.c:3916
 msgid "cannot merge without a current revision"
 msgstr ""
 
-#: sequencer.c:3927
+#: sequencer.c:3938
 #, c-format
 msgid "unable to parse '%.*s'"
 msgstr ""
 
-#: sequencer.c:3936
+#: sequencer.c:3947
 #, c-format
 msgid "nothing to merge: '%.*s'"
 msgstr ""
 
-#: sequencer.c:3948
+#: sequencer.c:3959
 msgid "octopus merge cannot be executed on top of a [new root]"
 msgstr ""
 
-#: sequencer.c:4004
+#: sequencer.c:4015
 #, c-format
 msgid "could not get commit message of '%s'"
 msgstr ""
 
-#: sequencer.c:4150
+#: sequencer.c:4161
 #, c-format
 msgid "could not even attempt to merge '%.*s'"
 msgstr ""
 
-#: sequencer.c:4168
+#: sequencer.c:4179
 msgid "merge: Unable to write new index file"
 msgstr ""
 
-#: sequencer.c:4222
+#: sequencer.c:4233
 #, c-format
 msgid ""
 "another 'rebase' process appears to be running; '%s.lock' already exists"
 msgstr ""
 
-#: sequencer.c:4400
+#: sequencer.c:4411
 #, c-format
 msgid ""
 "Updated the following refs with %s:\n"
 "%s"
 msgstr ""
 
-#: sequencer.c:4406
+#: sequencer.c:4417
 #, c-format
 msgid ""
 "Failed to update the following refs with %s:\n"
 "%s"
 msgstr ""
 
-#: sequencer.c:4467
+#: sequencer.c:4478
 msgid "Cannot autostash"
 msgstr ""
 
-#: sequencer.c:4470
+#: sequencer.c:4481
 #, c-format
 msgid "Unexpected stash response: '%s'"
 msgstr ""
 
-#: sequencer.c:4476
+#: sequencer.c:4487
 #, c-format
 msgid "Could not create directory for '%s'"
 msgstr ""
 
-#: sequencer.c:4479
+#: sequencer.c:4490
 #, c-format
 msgid "Created autostash: %s\n"
 msgstr ""
 
-#: sequencer.c:4481
+#: sequencer.c:4492
 msgid "could not reset --hard"
 msgstr ""
 
-#: sequencer.c:4505
+#: sequencer.c:4516
 #, c-format
 msgid "Applied autostash.\n"
 msgstr ""
 
-#: sequencer.c:4517
+#: sequencer.c:4528
 #, c-format
 msgid "cannot store %s"
 msgstr ""
 
-#: sequencer.c:4520
+#: sequencer.c:4531
 #, c-format
 msgid ""
 "%s\n"
@@ -23932,29 +23941,29 @@ msgid ""
 "You can run \"git stash pop\" or \"git stash drop\" at any time.\n"
 msgstr ""
 
-#: sequencer.c:4525
+#: sequencer.c:4536
 msgid "Applying autostash resulted in conflicts."
 msgstr ""
 
-#: sequencer.c:4526
+#: sequencer.c:4537
 msgid "Autostash exists; creating a new stash entry."
 msgstr ""
 
-#: sequencer.c:4582
+#: sequencer.c:4593
 msgid "could not detach HEAD"
 msgstr ""
 
-#: sequencer.c:4597
+#: sequencer.c:4608
 #, c-format
 msgid "Stopped at HEAD\n"
 msgstr ""
 
-#: sequencer.c:4599
+#: sequencer.c:4610
 #, c-format
 msgid "Stopped at %s\n"
 msgstr ""
 
-#: sequencer.c:4631
+#: sequencer.c:4642
 #, c-format
 msgid ""
 "Could not execute the todo command\n"
@@ -23967,121 +23976,121 @@ msgid ""
 "    git rebase --continue\n"
 msgstr ""
 
-#: sequencer.c:4665
+#: sequencer.c:4676
 #, c-format
 msgid "Stopped at %s...  %.*s\n"
 msgstr ""
 
-#: sequencer.c:4741
+#: sequencer.c:4752
 #, c-format
 msgid "Rebasing (%d/%d)%s"
 msgstr ""
 
-#: sequencer.c:4802
+#: sequencer.c:4813
 #, c-format
 msgid "unknown command %d"
 msgstr ""
 
-#: sequencer.c:4846
+#: sequencer.c:4857
 msgid "could not read orig-head"
 msgstr ""
 
-#: sequencer.c:4851
+#: sequencer.c:4862
 msgid "could not read 'onto'"
 msgstr ""
 
-#: sequencer.c:4865
+#: sequencer.c:4876
 #, c-format
 msgid "could not update HEAD to %s"
 msgstr ""
 
-#: sequencer.c:4916
+#: sequencer.c:4927
 #, c-format
 msgid "Successfully rebased and updated %s.\n"
 msgstr ""
 
-#: sequencer.c:4969
+#: sequencer.c:4980
 msgid "cannot rebase: You have unstaged changes."
 msgstr ""
 
-#: sequencer.c:4978
+#: sequencer.c:4989
 msgid "cannot amend non-existing commit"
 msgstr ""
 
-#: sequencer.c:4980
+#: sequencer.c:4991
 #, c-format
 msgid "invalid file: '%s'"
 msgstr ""
 
-#: sequencer.c:4982
+#: sequencer.c:4993
 #, c-format
 msgid "invalid contents: '%s'"
 msgstr ""
 
-#: sequencer.c:4985
+#: sequencer.c:4996
 msgid ""
 "\n"
 "You have uncommitted changes in your working tree. Please, commit them\n"
 "first and then run 'git rebase --continue' again."
 msgstr ""
 
-#: sequencer.c:5021 sequencer.c:5060
+#: sequencer.c:5032 sequencer.c:5071
 #, c-format
 msgid "could not write file: '%s'"
 msgstr ""
 
-#: sequencer.c:5077
+#: sequencer.c:5088
 msgid "could not remove CHERRY_PICK_HEAD"
 msgstr ""
 
-#: sequencer.c:5087
+#: sequencer.c:5098
 msgid "could not commit staged changes."
 msgstr ""
 
-#: sequencer.c:5208
+#: sequencer.c:5219
 #, c-format
 msgid "%s: can't cherry-pick a %s"
 msgstr ""
 
-#: sequencer.c:5212
+#: sequencer.c:5223
 #, c-format
 msgid "%s: bad revision"
 msgstr ""
 
-#: sequencer.c:5247
+#: sequencer.c:5258
 msgid "can't revert as initial commit"
 msgstr ""
 
-#: sequencer.c:5520 sequencer.c:5756
+#: sequencer.c:5531 sequencer.c:5767
 #, c-format
 msgid "skipped previously applied commit %s"
 msgstr ""
 
-#: sequencer.c:5590 sequencer.c:5772
+#: sequencer.c:5601 sequencer.c:5783
 msgid "use --reapply-cherry-picks to include skipped commits"
 msgstr ""
 
-#: sequencer.c:5737
+#: sequencer.c:5748
 msgid "make_script: unhandled options"
 msgstr ""
 
-#: sequencer.c:5742
+#: sequencer.c:5753
 msgid "make_script: error preparing revisions"
 msgstr ""
 
-#: sequencer.c:6135 sequencer.c:6152
+#: sequencer.c:6146 sequencer.c:6163
 msgid "nothing to do"
 msgstr ""
 
-#: sequencer.c:6171
+#: sequencer.c:6182
 msgid "could not skip unnecessary pick commands"
 msgstr ""
 
-#: sequencer.c:6271
+#: sequencer.c:6282
 msgid "the script was already rearranged."
 msgstr ""
 
-#: sequencer.c:6427 sequencer.c:6435
+#: sequencer.c:6438 sequencer.c:6446
 #, c-format
 msgid "update-refs file at '%s' is invalid"
 msgstr ""
@@ -25957,86 +25966,86 @@ msgstr ""
 msgid "Unable to determine absolute path of git directory"
 msgstr ""
 
-#: git-send-email.perl:159
+#: git-send-email.perl:161
 msgid "local zone differs from GMT by a non-minute interval\n"
 msgstr ""
 
-#: git-send-email.perl:166 git-send-email.perl:172
+#: git-send-email.perl:168 git-send-email.perl:174
 msgid "local time offset greater than or equal to 24 hours\n"
 msgstr ""
 
-#: git-send-email.perl:248
+#: git-send-email.perl:250
 #, perl-format
 msgid "fatal: command '%s' died with exit code %d"
 msgstr ""
 
-#: git-send-email.perl:261
+#: git-send-email.perl:263
 msgid "the editor exited uncleanly, aborting everything"
 msgstr ""
 
-#: git-send-email.perl:350
+#: git-send-email.perl:353
 #, perl-format
 msgid ""
 "'%s' contains an intermediate version of the email you were composing.\n"
 msgstr ""
 
-#: git-send-email.perl:355
+#: git-send-email.perl:358
 #, perl-format
 msgid "'%s.final' contains the composed email.\n"
 msgstr ""
 
-#: git-send-email.perl:488
+#: git-send-email.perl:491
 msgid "--dump-aliases incompatible with other options\n"
 msgstr ""
 
-#: git-send-email.perl:566
+#: git-send-email.perl:571
 msgid ""
 "fatal: found configuration options for 'sendmail'\n"
 "git-send-email is configured with the sendemail.* options - note the 'e'.\n"
 "Set sendemail.forbidSendmailVariables to false to disable this check.\n"
 msgstr ""
 
-#: git-send-email.perl:571 git-send-email.perl:787
+#: git-send-email.perl:576 git-send-email.perl:792
 msgid "Cannot run git format-patch from outside a repository\n"
 msgstr ""
 
-#: git-send-email.perl:574
+#: git-send-email.perl:579
 msgid ""
 "`batch-size` and `relogin` must be specified together (via command-line or "
 "configuration option)\n"
 msgstr ""
 
-#: git-send-email.perl:587
+#: git-send-email.perl:592
 #, perl-format
 msgid "Unknown --suppress-cc field: '%s'\n"
 msgstr ""
 
-#: git-send-email.perl:618
+#: git-send-email.perl:623
 #, perl-format
 msgid "Unknown --confirm setting: '%s'\n"
 msgstr ""
 
-#: git-send-email.perl:658
+#: git-send-email.perl:663
 #, perl-format
 msgid "warning: sendmail alias with quotes is not supported: %s\n"
 msgstr ""
 
-#: git-send-email.perl:660
+#: git-send-email.perl:665
 #, perl-format
 msgid "warning: `:include:` not supported: %s\n"
 msgstr ""
 
-#: git-send-email.perl:662
+#: git-send-email.perl:667
 #, perl-format
 msgid "warning: `/file` or `|pipe` redirection not supported: %s\n"
 msgstr ""
 
-#: git-send-email.perl:667
+#: git-send-email.perl:672
 #, perl-format
 msgid "warning: sendmail line is not recognized: %s\n"
 msgstr ""
 
-#: git-send-email.perl:752
+#: git-send-email.perl:757
 #, perl-format
 msgid ""
 "File '%s' exists but it could also be the range of commits\n"
@@ -26046,29 +26055,29 @@ msgid ""
 "    * Giving --format-patch option if you mean a range.\n"
 msgstr ""
 
-#: git-send-email.perl:773
+#: git-send-email.perl:778
 #, perl-format
 msgid "Failed to opendir %s: %s"
 msgstr ""
 
-#: git-send-email.perl:840
+#: git-send-email.perl:845
 msgid ""
 "\n"
 "No patch files specified!\n"
 "\n"
 msgstr ""
 
-#: git-send-email.perl:853
+#: git-send-email.perl:858
 #, perl-format
 msgid "No subject line in %s?"
 msgstr ""
 
-#: git-send-email.perl:864
+#: git-send-email.perl:869
 #, perl-format
 msgid "Failed to open for writing %s: %s"
 msgstr ""
 
-#: git-send-email.perl:875
+#: git-send-email.perl:880
 msgid ""
 "Lines beginning in \"GIT:\" will be removed.\n"
 "Consider including an overall diffstat or table of contents\n"
@@ -26077,37 +26086,37 @@ msgid ""
 "Clear the body content if you don't wish to send a summary.\n"
 msgstr ""
 
-#: git-send-email.perl:899
+#: git-send-email.perl:904
 #, perl-format
 msgid "Failed to open %s: %s"
 msgstr ""
 
-#: git-send-email.perl:916
+#: git-send-email.perl:921
 #, perl-format
 msgid "Failed to open %s.final: %s"
 msgstr ""
 
-#: git-send-email.perl:959
+#: git-send-email.perl:964
 msgid "Summary email is empty, skipping it\n"
 msgstr ""
 
 #. TRANSLATORS: please keep [y/N] as is.
-#: git-send-email.perl:1008
+#: git-send-email.perl:1013
 #, perl-format
 msgid "Are you sure you want to use <%s> [y/N]? "
 msgstr ""
 
-#: git-send-email.perl:1063
+#: git-send-email.perl:1068
 msgid ""
 "The following files are 8bit, but do not declare a Content-Transfer-"
 "Encoding.\n"
 msgstr ""
 
-#: git-send-email.perl:1068
+#: git-send-email.perl:1073
 msgid "Which 8bit encoding should I declare [UTF-8]? "
 msgstr ""
 
-#: git-send-email.perl:1076
+#: git-send-email.perl:1081
 #, perl-format
 msgid ""
 "Refusing to send because the patch\n"
@@ -26116,20 +26125,20 @@ msgid ""
 "want to send.\n"
 msgstr ""
 
-#: git-send-email.perl:1083
+#: git-send-email.perl:1088
 msgid "To whom should the emails be sent (if anyone)?"
 msgstr ""
 
-#: git-send-email.perl:1101
+#: git-send-email.perl:1106
 #, perl-format
 msgid "fatal: alias '%s' expands to itself\n"
 msgstr ""
 
-#: git-send-email.perl:1113
+#: git-send-email.perl:1118
 msgid "Message-ID to be used as In-Reply-To for the first email (if any)? "
 msgstr ""
 
-#: git-send-email.perl:1175 git-send-email.perl:1183
+#: git-send-email.perl:1180 git-send-email.perl:1188
 #, perl-format
 msgid "error: unable to extract a valid address from: %s\n"
 msgstr ""
@@ -26137,16 +26146,16 @@ msgstr ""
 #. TRANSLATORS: Make sure to include [q] [d] [e] in your
 #. translation. The program will only accept English input
 #. at this point.
-#: git-send-email.perl:1187
+#: git-send-email.perl:1192
 msgid "What to do with this address? ([q]uit|[d]rop|[e]dit): "
 msgstr ""
 
-#: git-send-email.perl:1503
+#: git-send-email.perl:1508
 #, perl-format
 msgid "CA path \"%s\" does not exist"
 msgstr ""
 
-#: git-send-email.perl:1593
+#: git-send-email.perl:1598
 msgid ""
 "    The Cc list above has been expanded by additional\n"
 "    addresses found in the patch commit message. By default\n"
@@ -26163,112 +26172,117 @@ msgstr ""
 #. TRANSLATORS: Make sure to include [y] [n] [e] [q] [a] in your
 #. translation. The program will only accept English input
 #. at this point.
-#: git-send-email.perl:1608
+#: git-send-email.perl:1613
 msgid "Send this email? ([y]es|[n]o|[e]dit|[q]uit|[a]ll): "
 msgstr ""
 
-#: git-send-email.perl:1611
+#: git-send-email.perl:1616
 msgid "Send this email reply required"
 msgstr ""
 
-#: git-send-email.perl:1645
+#: git-send-email.perl:1650
 msgid "The required SMTP server is not properly defined."
 msgstr ""
 
-#: git-send-email.perl:1692
+#: git-send-email.perl:1697
 #, perl-format
 msgid "Server does not support STARTTLS! %s"
 msgstr ""
 
-#: git-send-email.perl:1697 git-send-email.perl:1701
+#: git-send-email.perl:1702 git-send-email.perl:1706
 #, perl-format
 msgid "STARTTLS failed! %s"
 msgstr ""
 
-#: git-send-email.perl:1710
+#: git-send-email.perl:1715
 msgid "Unable to initialize SMTP properly. Check config and use --smtp-debug."
 msgstr ""
 
-#: git-send-email.perl:1728
+#: git-send-email.perl:1733
 #, perl-format
 msgid "Failed to send %s\n"
 msgstr ""
 
-#: git-send-email.perl:1731
+#: git-send-email.perl:1736
 #, perl-format
 msgid "Dry-Sent %s\n"
 msgstr ""
 
-#: git-send-email.perl:1731
+#: git-send-email.perl:1736
 #, perl-format
 msgid "Sent %s\n"
 msgstr ""
 
-#: git-send-email.perl:1733
+#: git-send-email.perl:1738
 msgid "Dry-OK. Log says:\n"
 msgstr ""
 
-#: git-send-email.perl:1733
+#: git-send-email.perl:1738
 msgid "OK. Log says:\n"
 msgstr ""
 
-#: git-send-email.perl:1752
+#: git-send-email.perl:1757
 msgid "Result: "
 msgstr ""
 
-#: git-send-email.perl:1755
+#: git-send-email.perl:1760
 msgid "Result: OK\n"
 msgstr ""
 
-#: git-send-email.perl:1769
+#: git-send-email.perl:1774
 #, perl-format
 msgid "can't open file %s"
 msgstr ""
 
-#: git-send-email.perl:1817 git-send-email.perl:1837
+#: git-send-email.perl:1822 git-send-email.perl:1842
 #, perl-format
 msgid "(mbox) Adding cc: %s from line '%s'\n"
 msgstr ""
 
-#: git-send-email.perl:1823
+#: git-send-email.perl:1828
 #, perl-format
 msgid "(mbox) Adding to: %s from line '%s'\n"
 msgstr ""
 
-#: git-send-email.perl:1880
+#: git-send-email.perl:1885
 #, perl-format
 msgid "(non-mbox) Adding cc: %s from line '%s'\n"
 msgstr ""
 
-#: git-send-email.perl:1915
+#: git-send-email.perl:1920
 #, perl-format
 msgid "(body) Adding cc: %s from line '%s'\n"
 msgstr ""
 
-#: git-send-email.perl:2043
+#: git-send-email.perl:2049
 #, perl-format
 msgid "(%s) Could not execute '%s'"
 msgstr ""
 
-#: git-send-email.perl:2050
+#: git-send-email.perl:2051
 #, perl-format
-msgid "(%s) Adding %s: %s from: '%s'\n"
+msgid "(%s) Malformed output from '%s'"
 msgstr ""
 
-#: git-send-email.perl:2054
+#: git-send-email.perl:2060
 #, perl-format
 msgid "(%s) failed to close pipe to '%s'"
 msgstr ""
 
-#: git-send-email.perl:2084
+#: git-send-email.perl:2104
+#, perl-format
+msgid "(%s) Adding %s: %s from: '%s'\n"
+msgstr ""
+
+#: git-send-email.perl:2136
 msgid "cannot send message as 7bit"
 msgstr ""
 
-#: git-send-email.perl:2092
+#: git-send-email.perl:2144
 msgid "invalid transfer encoding"
 msgstr ""
 
-#: git-send-email.perl:2145
+#: git-send-email.perl:2197
 #, perl-format
 msgid ""
 "fatal: %s: rejected by %s hook\n"
@@ -26276,25 +26290,25 @@ msgid ""
 "warning: no patches were sent\n"
 msgstr ""
 
-#: git-send-email.perl:2155 git-send-email.perl:2208 git-send-email.perl:2218
+#: git-send-email.perl:2207 git-send-email.perl:2260 git-send-email.perl:2270
 #, perl-format
 msgid "unable to open %s: %s\n"
 msgstr ""
 
-#: git-send-email.perl:2158
+#: git-send-email.perl:2210
 #, perl-format
 msgid ""
 "fatal: %s:%d is longer than 998 characters\n"
 "warning: no patches were sent\n"
 msgstr ""
 
-#: git-send-email.perl:2176
+#: git-send-email.perl:2228
 #, perl-format
 msgid "Skipping %s with backup suffix '%s'.\n"
 msgstr ""
 
 #. TRANSLATORS: please keep "[y|N]" as is.
-#: git-send-email.perl:2180
+#: git-send-email.perl:2232
 #, perl-format
 msgid "Do you really want to send %s? [y|N]: "
 msgstr ""
