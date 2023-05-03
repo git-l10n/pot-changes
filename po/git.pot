@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2023-05-03 18:57+0000\n"
+"POT-Creation-Date: 2023-05-03 23:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -824,7 +824,7 @@ msgstr ""
 #: builtin/fetch.c:2307 builtin/help.c:618 builtin/index-pack.c:1872
 #: builtin/init-db.c:571 builtin/log.c:2109 builtin/log.c:2111
 #: builtin/ls-files.c:881 builtin/merge-base.c:167 builtin/merge-base.c:173
-#: builtin/merge.c:1426 builtin/merge.c:1428 builtin/pack-objects.c:4387
+#: builtin/merge.c:1426 builtin/merge.c:1428 builtin/pack-objects.c:4477
 #: builtin/push.c:645 builtin/push.c:683 builtin/push.c:689 builtin/push.c:694
 #: builtin/rebase.c:1256 builtin/rebase.c:1258 builtin/rebase.c:1267
 #: builtin/repack.c:867 builtin/repack.c:873 builtin/repack.c:875
@@ -1382,7 +1382,7 @@ msgstr ""
 
 #: apply.c:5105 builtin/am.c:2358 builtin/am.c:2361
 #: builtin/interpret-trailers.c:101 builtin/interpret-trailers.c:103
-#: builtin/interpret-trailers.c:105 builtin/pack-objects.c:4271
+#: builtin/interpret-trailers.c:105 builtin/pack-objects.c:4361
 #: builtin/rebase.c:1111
 msgid "action"
 msgstr ""
@@ -1441,8 +1441,8 @@ msgstr ""
 msgid "unsupported file mode: 0%o (SHA1: %s)"
 msgstr ""
 
-#: archive-tar.c:456 archive-zip.c:474 builtin/pack-objects.c:375
-#: builtin/pack-objects.c:378
+#: archive-tar.c:456 archive-zip.c:474 builtin/pack-objects.c:376
+#: builtin/pack-objects.c:379
 #, c-format
 msgid "deflate error (%d)"
 msgstr ""
@@ -1592,7 +1592,7 @@ msgid "report archived files on stderr"
 msgstr ""
 
 #: archive.c:657 builtin/clone.c:148 builtin/fetch.c:2168
-#: builtin/pack-objects.c:4240 builtin/pack-objects.c:4244 builtin/pull.c:220
+#: builtin/pack-objects.c:4330 builtin/pack-objects.c:4334 builtin/pull.c:220
 msgid "time"
 msgstr ""
 
@@ -1813,8 +1813,8 @@ msgstr ""
 
 #: blame.c:2827 builtin/commit.c:1139 builtin/log.c:509 builtin/log.c:1181
 #: builtin/log.c:1796 builtin/log.c:2235 builtin/log.c:2532 builtin/merge.c:440
-#: builtin/pack-objects.c:3423 builtin/pack-objects.c:3581
-#: builtin/pack-objects.c:4065 builtin/pack-objects.c:4080
+#: builtin/pack-objects.c:3424 builtin/pack-objects.c:3660
+#: builtin/pack-objects.c:4155 builtin/pack-objects.c:4170
 #: builtin/shortlog.c:273 midx.c:1119 pack-bitmap.c:2186 remote.c:2198
 #: sequencer.c:2460 sequencer.c:5245 submodule.c:913
 msgid "revision walk setup failed"
@@ -2201,7 +2201,7 @@ msgid "bad action '%s' for '%s'"
 msgstr ""
 
 #: builtin/am.c:213 builtin/am.c:2255 builtin/am.c:2299 builtin/blame.c:741
-#: builtin/blame.c:759 builtin/fetch.c:2244 builtin/pack-objects.c:3769
+#: builtin/blame.c:759 builtin/fetch.c:2244 builtin/pack-objects.c:3859
 #: builtin/pull.c:49 builtin/pull.c:51 builtin/pull.c:326 diff-merges.c:130
 #: gpg-interface.c:743 gpg-interface.c:758 ls-refs.c:37 parallel-checkout.c:48
 #: sequencer.c:2951 setup.c:583
@@ -3709,11 +3709,11 @@ msgstr ""
 msgid "need a <file> argument"
 msgstr ""
 
-#: builtin/bundle.c:79 builtin/pack-objects.c:4183
+#: builtin/bundle.c:79 builtin/pack-objects.c:4273
 msgid "do not show progress meter"
 msgstr ""
 
-#: builtin/bundle.c:81 builtin/bundle.c:202 builtin/pack-objects.c:4185
+#: builtin/bundle.c:81 builtin/bundle.c:202 builtin/pack-objects.c:4275
 msgid "show progress meter"
 msgstr ""
 
@@ -4803,7 +4803,7 @@ msgstr ""
 
 #: builtin/clone.c:140 builtin/column.c:28 builtin/fmt-merge-msg.c:29
 #: builtin/init-db.c:561 builtin/merge-file.c:51 builtin/merge.c:299
-#: builtin/pack-objects.c:4255 builtin/repack.c:846
+#: builtin/pack-objects.c:4345 builtin/repack.c:846
 #: builtin/submodule--helper.c:3278 t/helper/test-simple-ipc.c:596
 #: t/helper/test-simple-ipc.c:598
 msgid "name"
@@ -7950,7 +7950,7 @@ msgstr ""
 #. grep.threads
 #.
 #: builtin/grep.c:310 builtin/index-pack.c:1600 builtin/index-pack.c:1805
-#: builtin/pack-objects.c:3188
+#: builtin/pack-objects.c:3189
 #, c-format
 msgid "no threads support, ignoring %s"
 msgstr ""
@@ -8179,11 +8179,11 @@ msgstr ""
 msgid "invalid option combination, ignoring --threads"
 msgstr ""
 
-#: builtin/grep.c:1169 builtin/pack-objects.c:4373
+#: builtin/grep.c:1169 builtin/pack-objects.c:4463
 msgid "no threads support, ignoring --threads"
 msgstr ""
 
-#: builtin/grep.c:1172 builtin/index-pack.c:1597 builtin/pack-objects.c:3185
+#: builtin/grep.c:1172 builtin/index-pack.c:1597 builtin/pack-objects.c:3186
 #, c-format
 msgid "invalid number of threads specified (%d)"
 msgstr ""
@@ -8414,7 +8414,7 @@ msgstr ""
 msgid "used more bytes than were available"
 msgstr ""
 
-#: builtin/index-pack.c:334 builtin/pack-objects.c:768
+#: builtin/index-pack.c:334 builtin/pack-objects.c:769
 msgid "pack too large for current definition of off_t"
 msgstr ""
 
@@ -8476,8 +8476,8 @@ msgstr ""
 msgid "SHA1 COLLISION FOUND WITH %s !"
 msgstr ""
 
-#: builtin/index-pack.c:767 builtin/pack-objects.c:301
-#: builtin/pack-objects.c:362 builtin/pack-objects.c:470
+#: builtin/index-pack.c:767 builtin/pack-objects.c:302
+#: builtin/pack-objects.c:363 builtin/pack-objects.c:471
 #, c-format
 msgid "unable to read %s"
 msgstr ""
@@ -8538,7 +8538,7 @@ msgstr ""
 msgid "Resolving deltas"
 msgstr ""
 
-#: builtin/index-pack.c:1261 builtin/pack-objects.c:2942
+#: builtin/index-pack.c:1261 builtin/pack-objects.c:2943
 #, c-format
 msgid "unable to create thread: %s"
 msgstr ""
@@ -8600,7 +8600,7 @@ msgstr ""
 msgid "error while closing pack file"
 msgstr ""
 
-#: builtin/index-pack.c:1591 builtin/pack-objects.c:3196
+#: builtin/index-pack.c:1591 builtin/pack-objects.c:3197
 #, c-format
 msgid "bad pack.indexVersion=%<PRIu32>"
 msgstr ""
@@ -10761,464 +10761,477 @@ msgstr ""
 msgid "unknown subcommand: `%s'"
 msgstr ""
 
-#: builtin/pack-objects.c:190
+#: builtin/pack-objects.c:191
 msgid "git pack-objects --stdout [<options>] [< <ref-list> | < <object-list>]"
 msgstr ""
 
-#: builtin/pack-objects.c:191
+#: builtin/pack-objects.c:192
 msgid ""
 "git pack-objects [<options>] <base-name> [< <ref-list> | < <object-list>]"
 msgstr ""
 
-#: builtin/pack-objects.c:584
+#: builtin/pack-objects.c:585
 #, c-format
 msgid ""
 "write_reuse_object: could not locate %s, expected at offset %<PRIuMAX> in "
 "pack %s"
 msgstr ""
 
-#: builtin/pack-objects.c:592
+#: builtin/pack-objects.c:593
 #, c-format
 msgid "bad packed object CRC for %s"
 msgstr ""
 
-#: builtin/pack-objects.c:603
+#: builtin/pack-objects.c:604
 #, c-format
 msgid "corrupt packed object for %s"
 msgstr ""
 
-#: builtin/pack-objects.c:734
+#: builtin/pack-objects.c:735
 #, c-format
 msgid "recursive delta detected for object %s"
 msgstr ""
 
-#: builtin/pack-objects.c:955
+#: builtin/pack-objects.c:956
 #, c-format
 msgid "ordered %u objects, expected %<PRIu32>"
 msgstr ""
 
-#: builtin/pack-objects.c:1050
+#: builtin/pack-objects.c:1051
 #, c-format
 msgid "expected object at offset %<PRIuMAX> in pack %s"
 msgstr ""
 
-#: builtin/pack-objects.c:1174
+#: builtin/pack-objects.c:1175
 msgid "disabling bitmap writing, packs are split due to pack.packSizeLimit"
 msgstr ""
 
-#: builtin/pack-objects.c:1187
+#: builtin/pack-objects.c:1188
 msgid "Writing objects"
 msgstr ""
 
-#: builtin/pack-objects.c:1259 builtin/update-index.c:108
+#: builtin/pack-objects.c:1260 builtin/update-index.c:108
 #, c-format
 msgid "failed to stat %s"
 msgstr ""
 
-#: builtin/pack-objects.c:1267 object-file.c:2083
+#: builtin/pack-objects.c:1268 object-file.c:2083
 #, c-format
 msgid "failed utime() on %s"
 msgstr ""
 
-#: builtin/pack-objects.c:1296
+#: builtin/pack-objects.c:1297
 msgid "failed to write bitmap index"
 msgstr ""
 
-#: builtin/pack-objects.c:1322
+#: builtin/pack-objects.c:1323
 #, c-format
 msgid "wrote %<PRIu32> objects while expecting %<PRIu32>"
 msgstr ""
 
-#: builtin/pack-objects.c:1572 builtin/repack.c:901
+#: builtin/pack-objects.c:1573 builtin/repack.c:901
 msgid "disabling bitmap writing, as some objects are not being packed"
 msgstr ""
 
-#: builtin/pack-objects.c:2017
+#: builtin/pack-objects.c:2018
 #, c-format
 msgid "delta base offset overflow in pack for %s"
 msgstr ""
 
-#: builtin/pack-objects.c:2026
+#: builtin/pack-objects.c:2027
 #, c-format
 msgid "delta base offset out of bound for %s"
 msgstr ""
 
-#: builtin/pack-objects.c:2307
+#: builtin/pack-objects.c:2308
 msgid "Counting objects"
 msgstr ""
 
-#: builtin/pack-objects.c:2457 pack-bitmap.c:1554 pack-bitmap.c:1560
+#: builtin/pack-objects.c:2458 pack-bitmap.c:1554 pack-bitmap.c:1560
 #, c-format
 msgid "unable to get size of %s"
 msgstr ""
 
-#: builtin/pack-objects.c:2472
+#: builtin/pack-objects.c:2473
 #, c-format
 msgid "unable to parse object header of %s"
 msgstr ""
 
-#: builtin/pack-objects.c:2544 builtin/pack-objects.c:2562
-#: builtin/pack-objects.c:2572
+#: builtin/pack-objects.c:2545 builtin/pack-objects.c:2563
+#: builtin/pack-objects.c:2573
 #, c-format
 msgid "object %s cannot be read"
 msgstr ""
 
-#: builtin/pack-objects.c:2547 builtin/pack-objects.c:2576
+#: builtin/pack-objects.c:2548 builtin/pack-objects.c:2577
 #, c-format
 msgid "object %s inconsistent object length (%<PRIuMAX> vs %<PRIuMAX>)"
 msgstr ""
 
-#: builtin/pack-objects.c:2586
+#: builtin/pack-objects.c:2587
 msgid "suboptimal pack - out of memory"
 msgstr ""
 
-#: builtin/pack-objects.c:2901
+#: builtin/pack-objects.c:2902
 #, c-format
 msgid "Delta compression using up to %d threads"
 msgstr ""
 
-#: builtin/pack-objects.c:3040
+#: builtin/pack-objects.c:3041
 #, c-format
 msgid "unable to pack objects reachable from tag %s"
 msgstr ""
 
-#: builtin/pack-objects.c:3108 commit-graph.c:1373
+#: builtin/pack-objects.c:3109 commit-graph.c:1373
 #, c-format
 msgid "unable to get type of object %s"
 msgstr ""
 
-#: builtin/pack-objects.c:3127
+#: builtin/pack-objects.c:3128
 msgid "Compressing objects"
 msgstr ""
 
-#: builtin/pack-objects.c:3133
+#: builtin/pack-objects.c:3134
 msgid "inconsistency with delta count"
 msgstr ""
 
-#: builtin/pack-objects.c:3220
+#: builtin/pack-objects.c:3221
 #, c-format
 msgid ""
 "value of uploadpack.blobpackfileuri must be of the form '<object-hash> <pack-"
 "hash> <uri>' (got '%s')"
 msgstr ""
 
-#: builtin/pack-objects.c:3223
+#: builtin/pack-objects.c:3224
 #, c-format
 msgid ""
 "object already configured in another uploadpack.blobpackfileuri (got '%s')"
 msgstr ""
 
-#: builtin/pack-objects.c:3260
+#: builtin/pack-objects.c:3261
 #, c-format
 msgid "could not get type of object %s in pack %s"
 msgstr ""
 
-#: builtin/pack-objects.c:3390 builtin/pack-objects.c:3403
-#: builtin/pack-objects.c:3527
+#: builtin/pack-objects.c:3391 builtin/pack-objects.c:3404
+#: builtin/pack-objects.c:3528
 #, c-format
 msgid "could not find pack '%s'"
 msgstr ""
 
-#: builtin/pack-objects.c:3392
+#: builtin/pack-objects.c:3393
 #, c-format
 msgid "packfile %s cannot be accessed"
 msgstr ""
 
-#: builtin/pack-objects.c:3538 builtin/pack-objects.c:3564
+#: builtin/pack-objects.c:3539 builtin/pack-objects.c:3640
 msgid "Enumerating cruft objects"
 msgstr ""
 
 #: builtin/pack-objects.c:3570
+#, c-format
+msgid "invalid extra cruft tip: '%s'"
+msgstr ""
+
+#: builtin/pack-objects.c:3607
+msgid "Enumerating extra cruft tips"
+msgstr ""
+
+#: builtin/pack-objects.c:3618
+msgid "unable to enumerate additional cruft tips"
+msgstr ""
+
+#: builtin/pack-objects.c:3649
 msgid "unable to add cruft objects"
 msgstr ""
 
-#: builtin/pack-objects.c:3583
+#: builtin/pack-objects.c:3662
 msgid "Traversing cruft objects"
 msgstr ""
 
-#: builtin/pack-objects.c:3669
+#: builtin/pack-objects.c:3759
 #, c-format
 msgid ""
 "expected edge object ID, got garbage:\n"
 " %s"
 msgstr ""
 
-#: builtin/pack-objects.c:3675
+#: builtin/pack-objects.c:3765
 #, c-format
 msgid ""
 "expected object ID, got garbage:\n"
 " %s"
 msgstr ""
 
-#: builtin/pack-objects.c:3789 reachable.c:175
+#: builtin/pack-objects.c:3879 reachable.c:175
 msgid "could not load cruft pack .mtimes"
 msgstr ""
 
-#: builtin/pack-objects.c:3811 builtin/pack-objects.c:3910
+#: builtin/pack-objects.c:3901 builtin/pack-objects.c:4000
 msgid "cannot open pack index"
 msgstr ""
 
-#: builtin/pack-objects.c:3820
+#: builtin/pack-objects.c:3910
 #, c-format
 msgid "loose object at %s could not be examined"
 msgstr ""
 
-#: builtin/pack-objects.c:3918
+#: builtin/pack-objects.c:4008
 msgid "unable to force loose object"
 msgstr ""
 
-#: builtin/pack-objects.c:4047
+#: builtin/pack-objects.c:4137
 #, c-format
 msgid "not a rev '%s'"
 msgstr ""
 
-#: builtin/pack-objects.c:4050 builtin/rev-parse.c:1091
+#: builtin/pack-objects.c:4140 builtin/rev-parse.c:1091
 #, c-format
 msgid "bad revision '%s'"
 msgstr ""
 
-#: builtin/pack-objects.c:4078
+#: builtin/pack-objects.c:4168
 msgid "unable to add recent objects"
 msgstr ""
 
-#: builtin/pack-objects.c:4131
+#: builtin/pack-objects.c:4221
 #, c-format
 msgid "unsupported index version %s"
 msgstr ""
 
-#: builtin/pack-objects.c:4135
+#: builtin/pack-objects.c:4225
 #, c-format
 msgid "bad index version '%s'"
 msgstr ""
 
-#: builtin/pack-objects.c:4187
+#: builtin/pack-objects.c:4277
 msgid "show progress meter during object writing phase"
 msgstr ""
 
-#: builtin/pack-objects.c:4190
+#: builtin/pack-objects.c:4280
 msgid "similar to --all-progress when progress meter is shown"
 msgstr ""
 
-#: builtin/pack-objects.c:4191
+#: builtin/pack-objects.c:4281
 msgid "<version>[,<offset>]"
 msgstr ""
 
-#: builtin/pack-objects.c:4192
+#: builtin/pack-objects.c:4282
 msgid "write the pack index file in the specified idx format version"
 msgstr ""
 
-#: builtin/pack-objects.c:4195
+#: builtin/pack-objects.c:4285
 msgid "maximum size of each output pack file"
 msgstr ""
 
-#: builtin/pack-objects.c:4197
+#: builtin/pack-objects.c:4287
 msgid "ignore borrowed objects from alternate object store"
 msgstr ""
 
-#: builtin/pack-objects.c:4199
+#: builtin/pack-objects.c:4289
 msgid "ignore packed objects"
 msgstr ""
 
-#: builtin/pack-objects.c:4201
+#: builtin/pack-objects.c:4291
 msgid "limit pack window by objects"
 msgstr ""
 
-#: builtin/pack-objects.c:4203
+#: builtin/pack-objects.c:4293
 msgid "limit pack window by memory in addition to object limit"
 msgstr ""
 
-#: builtin/pack-objects.c:4205
+#: builtin/pack-objects.c:4295
 msgid "maximum length of delta chain allowed in the resulting pack"
 msgstr ""
 
-#: builtin/pack-objects.c:4207
+#: builtin/pack-objects.c:4297
 msgid "reuse existing deltas"
 msgstr ""
 
-#: builtin/pack-objects.c:4209
+#: builtin/pack-objects.c:4299
 msgid "reuse existing objects"
 msgstr ""
 
-#: builtin/pack-objects.c:4211
+#: builtin/pack-objects.c:4301
 msgid "use OFS_DELTA objects"
 msgstr ""
 
-#: builtin/pack-objects.c:4213
+#: builtin/pack-objects.c:4303
 msgid "use threads when searching for best delta matches"
 msgstr ""
 
-#: builtin/pack-objects.c:4215
+#: builtin/pack-objects.c:4305
 msgid "do not create an empty pack output"
 msgstr ""
 
-#: builtin/pack-objects.c:4217
+#: builtin/pack-objects.c:4307
 msgid "read revision arguments from standard input"
 msgstr ""
 
-#: builtin/pack-objects.c:4219
+#: builtin/pack-objects.c:4309
 msgid "limit the objects to those that are not yet packed"
 msgstr ""
 
-#: builtin/pack-objects.c:4222
+#: builtin/pack-objects.c:4312
 msgid "include objects reachable from any reference"
 msgstr ""
 
-#: builtin/pack-objects.c:4225
+#: builtin/pack-objects.c:4315
 msgid "include objects referred by reflog entries"
 msgstr ""
 
-#: builtin/pack-objects.c:4228
+#: builtin/pack-objects.c:4318
 msgid "include objects referred to by the index"
 msgstr ""
 
-#: builtin/pack-objects.c:4231
+#: builtin/pack-objects.c:4321
 msgid "read packs from stdin"
 msgstr ""
 
-#: builtin/pack-objects.c:4233
+#: builtin/pack-objects.c:4323
 msgid "output pack to stdout"
 msgstr ""
 
-#: builtin/pack-objects.c:4235
+#: builtin/pack-objects.c:4325
 msgid "include tag objects that refer to objects to be packed"
 msgstr ""
 
-#: builtin/pack-objects.c:4237
+#: builtin/pack-objects.c:4327
 msgid "keep unreachable objects"
 msgstr ""
 
-#: builtin/pack-objects.c:4239
+#: builtin/pack-objects.c:4329
 msgid "pack loose unreachable objects"
 msgstr ""
 
-#: builtin/pack-objects.c:4241
+#: builtin/pack-objects.c:4331
 msgid "unpack unreachable objects newer than <time>"
 msgstr ""
 
-#: builtin/pack-objects.c:4243
+#: builtin/pack-objects.c:4333
 msgid "create a cruft pack"
 msgstr ""
 
-#: builtin/pack-objects.c:4245
+#: builtin/pack-objects.c:4335
 msgid "expire cruft objects older than <time>"
 msgstr ""
 
-#: builtin/pack-objects.c:4248
+#: builtin/pack-objects.c:4338
 msgid "use the sparse reachability algorithm"
 msgstr ""
 
-#: builtin/pack-objects.c:4250
+#: builtin/pack-objects.c:4340
 msgid "create thin packs"
 msgstr ""
 
-#: builtin/pack-objects.c:4252
+#: builtin/pack-objects.c:4342
 msgid "create packs suitable for shallow fetches"
 msgstr ""
 
-#: builtin/pack-objects.c:4254
+#: builtin/pack-objects.c:4344
 msgid "ignore packs that have companion .keep file"
 msgstr ""
 
-#: builtin/pack-objects.c:4256
+#: builtin/pack-objects.c:4346
 msgid "ignore this pack"
 msgstr ""
 
-#: builtin/pack-objects.c:4258
+#: builtin/pack-objects.c:4348
 msgid "pack compression level"
 msgstr ""
 
-#: builtin/pack-objects.c:4260
+#: builtin/pack-objects.c:4350
 msgid "do not hide commits by grafts"
 msgstr ""
 
-#: builtin/pack-objects.c:4262
+#: builtin/pack-objects.c:4352
 msgid "use a bitmap index if available to speed up counting objects"
 msgstr ""
 
-#: builtin/pack-objects.c:4264
+#: builtin/pack-objects.c:4354
 msgid "write a bitmap index together with the pack index"
 msgstr ""
 
-#: builtin/pack-objects.c:4268
+#: builtin/pack-objects.c:4358
 msgid "write a bitmap index if possible"
 msgstr ""
 
-#: builtin/pack-objects.c:4272
+#: builtin/pack-objects.c:4362
 msgid "handling for missing objects"
 msgstr ""
 
-#: builtin/pack-objects.c:4275
+#: builtin/pack-objects.c:4365
 msgid "do not pack objects in promisor packfiles"
 msgstr ""
 
-#: builtin/pack-objects.c:4277
+#: builtin/pack-objects.c:4367
 msgid "respect islands during delta compression"
 msgstr ""
 
-#: builtin/pack-objects.c:4279
+#: builtin/pack-objects.c:4369
 msgid "protocol"
 msgstr ""
 
-#: builtin/pack-objects.c:4280
+#: builtin/pack-objects.c:4370
 msgid "exclude any configured uploadpack.blobpackfileuri with this protocol"
 msgstr ""
 
-#: builtin/pack-objects.c:4316
+#: builtin/pack-objects.c:4406
 #, c-format
 msgid "delta chain depth %d is too deep, forcing %d"
 msgstr ""
 
-#: builtin/pack-objects.c:4321
+#: builtin/pack-objects.c:4411
 #, c-format
 msgid "pack.deltaCacheLimit is too high, forcing %d"
 msgstr ""
 
-#: builtin/pack-objects.c:4367 config.c:1990
+#: builtin/pack-objects.c:4457 config.c:1990
 #, c-format
 msgid "bad pack compression level %d"
 msgstr ""
 
-#: builtin/pack-objects.c:4377
+#: builtin/pack-objects.c:4467
 msgid "--max-pack-size cannot be used to build a pack for transfer"
 msgstr ""
 
-#: builtin/pack-objects.c:4379
+#: builtin/pack-objects.c:4469
 msgid "minimum pack size limit is 1 MiB"
 msgstr ""
 
-#: builtin/pack-objects.c:4384
+#: builtin/pack-objects.c:4474
 msgid "--thin cannot be used to build an indexable pack"
 msgstr ""
 
-#: builtin/pack-objects.c:4393
+#: builtin/pack-objects.c:4483
 msgid "cannot use --filter without --stdout"
 msgstr ""
 
-#: builtin/pack-objects.c:4395
+#: builtin/pack-objects.c:4485
 msgid "cannot use --filter with --stdin-packs"
 msgstr ""
 
-#: builtin/pack-objects.c:4399
+#: builtin/pack-objects.c:4489
 msgid "cannot use internal rev list with --stdin-packs"
 msgstr ""
 
-#: builtin/pack-objects.c:4403
+#: builtin/pack-objects.c:4493
 msgid "cannot use internal rev list with --cruft"
 msgstr ""
 
-#: builtin/pack-objects.c:4405
+#: builtin/pack-objects.c:4495
 msgid "cannot use --stdin-packs with --cruft"
 msgstr ""
 
-#: builtin/pack-objects.c:4407
+#: builtin/pack-objects.c:4497
 msgid "cannot use --max-pack-size with --cruft"
 msgstr ""
 
-#: builtin/pack-objects.c:4467
+#: builtin/pack-objects.c:4557
 msgid "Enumerating objects"
 msgstr ""
 
-#: builtin/pack-objects.c:4510
+#: builtin/pack-objects.c:4600
 #, c-format
 msgid ""
 "Total %<PRIu32> (delta %<PRIu32>), reused %<PRIu32> (delta %<PRIu32>), pack-"
@@ -19440,7 +19453,7 @@ msgstr ""
 
 #: git.c:320
 #, c-format
-msgid "no prefix given for --attr-source\n"
+msgid "no attribute source given for --attr-source\n"
 msgstr ""
 
 #: git.c:334
