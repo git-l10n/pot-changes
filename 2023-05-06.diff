@@ -1,0 +1,354 @@
+
+
+#################### Sat, 06 May 2023 21:57:54 +0000 ####################
+
+--- po/git.pot.old	2023-05-06 21:57:54.047911509 +0000
++++ po/git.pot.new	2023-05-06 21:57:54.175913445 +0000
+@@ -1182,10 +1182,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "'%s' and '%s' cannot be used together"
+-msgstr ""
+-
+-#, c-format
+ msgid "'%s' and pathspec arguments cannot be used together"
+ msgstr ""
+ 
+@@ -1556,10 +1552,6 @@
+ msgstr ""
+ 
+ #, perl-format
+-msgid "(%s) Malformed output from '%s'"
+-msgstr ""
+-
+-#, perl-format
+ msgid "(%s) failed to close pipe to '%s'"
+ msgstr ""
+ 
+@@ -2056,9 +2048,6 @@
+ msgid "<char>"
+ msgstr ""
+ 
+-msgid "<commit-ish>"
+-msgstr ""
+-
+ msgid "<count>"
+ msgstr ""
+ 
+@@ -3212,6 +3201,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Could not run 'git status --porcelain=2' in submodule %s"
++msgstr ""
++
++#, c-format
+ msgid "Could not set SSL backend to '%s': already set"
+ msgstr ""
+ 
+@@ -3493,9 +3486,6 @@
+ msgid "Enumerating cruft objects"
+ msgstr ""
+ 
+-msgid "Enumerating extra cruft tips"
+-msgstr ""
+-
+ msgid "Enumerating objects"
+ msgstr ""
+ 
+@@ -3989,13 +3979,6 @@
+ msgid "HEAD of working tree %s is not updated"
+ msgstr ""
+ 
+-#, c-format
+-msgid ""
+-"HEAD points to an invalid (or orphaned) reference.\n"
+-"HEAD path: '%s'\n"
+-"HEAD contents: '%s'"
+-msgstr ""
+-
+ msgid "Helper programs to interact with remote repositories"
+ msgstr ""
+ 
+@@ -4078,24 +4061,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid ""
+-"If you meant to create a worktree containing a new orphan branch\n"
+-"(branch with no commits) for this repository, you can do so\n"
+-"using the --orphan flag:\n"
+-"\n"
+-"\tgit worktree add --orphan %s\n"
+-msgstr ""
+-
+-#, c-format
+-msgid ""
+-"If you meant to create a worktree containing a new orphan branch\n"
+-"(branch with no commits) for this repository, you can do so\n"
+-"using the --orphan flag:\n"
+-"\n"
+-"\tgit worktree add --orphan -b %s %s\n"
+-msgstr ""
+-
+-#, c-format
+ msgid "If you prefer to skip this patch, run \"%s --skip\" instead."
+ msgstr ""
+ 
+@@ -4587,11 +4552,6 @@
+ msgid "No local changes to save"
+ msgstr ""
+ 
+-msgid ""
+-"No local or remote refs exist despite at least one remote\n"
+-"present, stopping; use 'add -f' to overide or fetch a remote first"
+-msgstr ""
+-
+ msgid "No match"
+ msgstr ""
+ 
+@@ -4624,9 +4584,6 @@
+ msgid "No pathspec was given. Which files should I remove?"
+ msgstr ""
+ 
+-msgid "No possible source branch, inferring '--orphan'"
+-msgstr ""
+-
+ msgid "No previous hunk"
+ msgstr ""
+ 
+@@ -6830,13 +6787,13 @@
+ "your next pull:\n"
+ "\n"
+ "  git config pull.rebase false  # merge\n"
+-"  git config pull.rebase merges # rebase\n"
++"  git config pull.rebase true   # rebase\n"
+ "  git config pull.ff only       # fast-forward only\n"
+ "\n"
+ "You can replace \"git config\" with \"git config --global\" to set a default\n"
+-"preference for all repositories. You can also pass --rebase=merges,\n"
+-"--no-rebase, or --ff-only on the command line to override the configured\n"
+-"default per invocation.\n"
++"preference for all repositories. You can also pass --rebase, --no-rebase,\n"
++"or --ff-only on the command line to override the configured default per\n"
++"invocation.\n"
+ msgstr ""
+ 
+ msgid "You have not concluded your cherry-pick (CHERRY_PICK_HEAD exists)."
+@@ -7488,7 +7445,7 @@
+ msgid "amend previous commit"
+ msgstr ""
+ 
+-msgid "and made changes to the index and/or the working tree.\n"
++msgid "and made changes to the index and/or the working tree\n"
+ msgstr ""
+ 
+ msgid ""
+@@ -7643,9 +7600,6 @@
+ msgid "bad %s"
+ msgstr ""
+ 
+-msgid "bad --attr-source or GIT_ATTR_SOURCE"
+-msgstr ""
+-
+ #, c-format
+ msgid "bad --color-moved argument: %s"
+ msgstr ""
+@@ -7918,10 +7872,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "bitmap file '%s' has invalid checksum"
+-msgstr ""
+-
+-#, c-format
+ msgid "blob expected for %s '%s'"
+ msgstr ""
+ 
+@@ -8989,9 +8939,6 @@
+ msgid "control recursive pushing of submodules"
+ msgstr ""
+ 
+-msgid "control recursive updating of submodules"
+-msgstr ""
+-
+ msgid "control the order in which files appear in the output"
+ msgstr ""
+ 
+@@ -9743,10 +9690,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "could not run 'git status --porcelain=2' in submodule %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "could not run 'git status' in submodule '%s'"
+ msgstr ""
+ 
+@@ -10023,9 +9966,6 @@
+ msgid "create thin packs"
+ msgstr ""
+ 
+-msgid "create unborn/orphaned branch"
+-msgstr ""
+-
+ msgid "create/reset and checkout a branch"
+ msgstr ""
+ 
+@@ -10841,7 +10781,7 @@
+ #, c-format
+ msgid ""
+ "execution succeeded: %s\n"
+-"but left changes to the index and/or the working tree.\n"
++"but left changes to the index and/or the working tree\n"
+ "Commit or stash your changes, and then run\n"
+ "\n"
+ "  git rebase --continue\n"
+@@ -12415,10 +12355,10 @@
+ msgid "git notes [--ref <notes-ref>] [list [<object>]]"
+ msgstr ""
+ 
+-msgid "git notes [--ref <notes-ref>] add [-f] [--allow-empty] [--separator=<paragraph-break>] [-m <msg> | -F <file> | (-c | -C) <object>] [<object>]"
++msgid "git notes [--ref <notes-ref>] add [-f] [--allow-empty] [-m <msg> | -F <file> | (-c | -C) <object>] [<object>]"
+ msgstr ""
+ 
+-msgid "git notes [--ref <notes-ref>] append [--allow-empty] [--separator=<paragraph-break>] [-m <msg> | -F <file> | (-c | -C) <object>] [<object>]"
++msgid "git notes [--ref <notes-ref>] append [--allow-empty] [-m <msg> | -F <file> | (-c | -C) <object>] [<object>]"
+ msgstr ""
+ 
+ msgid "git notes [--ref <notes-ref>] copy [-f] <from-object> <to-object>"
+@@ -12857,7 +12797,7 @@
+ 
+ msgid ""
+ "git worktree add [-f] [--detach] [--checkout] [--lock [--reason <string>]]\n"
+-"                 [--orphan] [(-b | -B) <new-branch>] <path> [<commit-ish>]"
++"                 [-b <new-branch>] <path> [<commit-ish>]"
+ msgstr ""
+ 
+ msgid "git worktree list [-v | --porcelain [-z]]"
+@@ -13433,9 +13373,6 @@
+ msgid "insane in-reply-to: %s"
+ msgstr ""
+ 
+-msgid "insert <paragraph-break> between paragraphs"
+-msgstr ""
+-
+ msgid "instead of applying the patch, output a summary for the input"
+ msgstr ""
+ 
+@@ -13600,10 +13537,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "invalid extra cruft tip: '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "invalid file: '%s'"
+ msgstr ""
+ 
+@@ -13934,9 +13867,6 @@
+ msgid "leave the rejected hunks in corresponding *.rej files"
+ msgstr ""
+ 
+-msgid "legacy use of lone '-m' detected: please use '--diff-merges=on,hide' instead, as '-m' may imply '-p'"
+-msgstr ""
+-
+ msgid "let files replace directories and vice-versa"
+ msgstr ""
+ 
+@@ -14680,10 +14610,6 @@
+ msgid "no URLs configured for remote '%s'"
+ msgstr ""
+ 
+-#, c-format
+-msgid "no attribute source given for --attr-source\n"
+-msgstr ""
+-
+ msgid "no branches given, and HEAD is not valid"
+ msgstr ""
+ 
+@@ -15446,10 +15372,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "options '%s', and '%s' cannot be used together"
+-msgstr ""
+-
+-#, c-format
+ msgid "options '%s=%s' and '%s=%s' cannot be used together"
+ msgstr ""
+ 
+@@ -15866,6 +15788,9 @@
+ msgid "pick hunks and update selectively"
+ msgstr ""
+ 
++msgid "please commit or stash them."
++msgstr ""
++
+ msgid "please fix this using 'git rebase --edit-todo'."
+ msgstr ""
+ 
+@@ -16665,9 +16590,6 @@
+ msgid "remove submodule working trees even if they contain local changes"
+ msgstr ""
+ 
+-msgid "remove unnecessary whitespace"
+-msgstr ""
+-
+ msgid "remove whole directories"
+ msgstr ""
+ 
+@@ -17143,9 +17065,6 @@
+ msgid "separate paths with the NUL character"
+ msgstr ""
+ 
+-msgid "separator"
+-msgstr ""
+-
+ msgid "serious inflate inconsistency"
+ msgstr ""
+ 
+@@ -17911,9 +17830,6 @@
+ msgid "submodule git dir '%s' is inside git dir '%.*s'"
+ msgstr ""
+ 
+-msgid "submodule status failed"
+-msgstr ""
+-
+ msgid "suboptimal pack - out of memory"
+ msgstr ""
+ 
+@@ -18127,9 +18043,6 @@
+ msgid "the '--set-upstream' option is no longer supported. Please use '--track' or '--set-upstream-to' instead."
+ msgstr ""
+ 
+-msgid "the --no-curl option to imap-send has been deprecated"
+-msgstr ""
+-
+ msgid ""
+ "the add.interactive.useBuiltin setting has been removed!\n"
+ "See its entry in 'git help config' for details."
+@@ -18558,9 +18471,6 @@
+ msgid "unable to dup bundle descriptor"
+ msgstr ""
+ 
+-msgid "unable to enumerate additional cruft tips"
+-msgstr ""
+-
+ msgid "unable to fdopen alternates lockfile"
+ msgstr ""
+ 
+@@ -19281,10 +19191,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unreachable: invalid reference: %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "unrecognized %%(%.*s) argument: %s"
+ msgstr ""
+ 
