@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2023-05-01 21:57+0000\n"
+"POT-Creation-Date: 2023-05-08 15:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -795,10 +795,10 @@ msgstr ""
 msgid "unclosed quote"
 msgstr ""
 
-#: alias.c:73 builtin/cat-file.c:1062 builtin/notes.c:380 builtin/notes.c:435
-#: builtin/notes.c:513 builtin/notes.c:525 builtin/notes.c:602
-#: builtin/notes.c:670 builtin/notes.c:821 builtin/notes.c:973
-#: builtin/notes.c:995 builtin/prune-packed.c:26 builtin/receive-pack.c:2512
+#: alias.c:73 builtin/cat-file.c:1062 builtin/notes.c:436 builtin/notes.c:496
+#: builtin/notes.c:578 builtin/notes.c:590 builtin/notes.c:671
+#: builtin/notes.c:745 builtin/notes.c:896 builtin/notes.c:1048
+#: builtin/notes.c:1070 builtin/prune-packed.c:26 builtin/receive-pack.c:2512
 #: builtin/tag.c:602
 msgid "too many arguments"
 msgstr ""
@@ -814,7 +814,7 @@ msgid "unrecognized whitespace ignore option '%s'"
 msgstr ""
 
 #: apply.c:150 archive.c:682 builtin/add.c:472 builtin/add.c:474
-#: builtin/add.c:480 builtin/add.c:492 builtin/branch.c:777
+#: builtin/add.c:480 builtin/add.c:492 builtin/branch.c:822
 #: builtin/checkout.c:482 builtin/checkout.c:485 builtin/checkout.c:1706
 #: builtin/checkout.c:1816 builtin/checkout.c:1819 builtin/clone.c:962
 #: builtin/commit.c:371 builtin/commit.c:374 builtin/commit.c:1222
@@ -1489,7 +1489,7 @@ msgstr ""
 msgid "git archive --remote <repo> [--exec <cmd>] --list"
 msgstr ""
 
-#: archive.c:220 archive.c:375 builtin/gc.c:513 builtin/notes.c:244
+#: archive.c:220 archive.c:375 builtin/gc.c:513 builtin/notes.c:294
 #: builtin/tag.c:589
 #, c-format
 msgid "cannot read '%s'"
@@ -1566,7 +1566,7 @@ msgstr ""
 #: builtin/fast-export.c:1195 builtin/fast-export.c:1197
 #: builtin/fast-export.c:1201 builtin/gc.c:1496 builtin/gc.c:1562
 #: builtin/grep.c:982 builtin/hash-object.c:112 builtin/ls-files.c:747
-#: builtin/ls-files.c:750 builtin/notes.c:416 builtin/notes.c:582
+#: builtin/ls-files.c:750 builtin/notes.c:473 builtin/notes.c:647
 #: builtin/read-tree.c:123 parse-options.h:330
 msgid "file"
 msgstr ""
@@ -1618,7 +1618,7 @@ msgid "retrieve the archive from remote repository <repo>"
 msgstr ""
 
 #: archive.c:668 builtin/archive.c:93 builtin/difftool.c:719
-#: builtin/notes.c:502
+#: builtin/notes.c:567
 msgid "command"
 msgstr ""
 
@@ -1988,11 +1988,6 @@ msgstr ""
 #: branch.c:836
 #, c-format
 msgid "'%s' is already checked out at '%s'"
-msgstr ""
-
-#: branch.c:863
-#, c-format
-msgid "HEAD of working tree %s is not updated"
 msgstr ""
 
 #: builtin/add.c:29
@@ -2557,7 +2552,7 @@ msgstr ""
 msgid "n"
 msgstr ""
 
-#: builtin/am.c:2385 builtin/branch.c:717 builtin/bugreport.c:122
+#: builtin/am.c:2385 builtin/branch.c:762 builtin/bugreport.c:122
 #: builtin/cat-file.c:960 builtin/cat-file.c:964 builtin/cat-file.c:969
 #: builtin/diagnose.c:27 builtin/for-each-ref.c:48 builtin/ls-files.c:771
 #: builtin/ls-tree.c:399 builtin/replace.c:565 builtin/tag.c:490
@@ -3305,53 +3300,58 @@ msgstr ""
 msgid "Branch %s is being bisected at %s"
 msgstr ""
 
-#: builtin/branch.c:554
+#: builtin/branch.c:560
+#, c-format
+msgid "HEAD of working tree %s is not updated"
+msgstr ""
+
+#: builtin/branch.c:587
 #, c-format
 msgid "Invalid branch name: '%s'"
 msgstr ""
 
-#: builtin/branch.c:559 builtin/branch.c:838 builtin/branch.c:883
+#: builtin/branch.c:603 builtin/branch.c:883 builtin/branch.c:928
 #, c-format
 msgid "No commit on branch '%s' yet."
 msgstr ""
 
-#: builtin/branch.c:561 builtin/branch.c:839
+#: builtin/branch.c:605 builtin/branch.c:884
 #, c-format
 msgid "No branch named '%s'."
 msgstr ""
 
-#: builtin/branch.c:590
+#: builtin/branch.c:633
 msgid "Branch rename failed"
 msgstr ""
 
-#: builtin/branch.c:592
+#: builtin/branch.c:635
 msgid "Branch copy failed"
 msgstr ""
 
-#: builtin/branch.c:596
+#: builtin/branch.c:639
 #, c-format
 msgid "Created a copy of a misnamed branch '%s'"
 msgstr ""
 
-#: builtin/branch.c:599
+#: builtin/branch.c:642
 #, c-format
 msgid "Renamed a misnamed branch '%s' away"
 msgstr ""
 
-#: builtin/branch.c:605
+#: builtin/branch.c:649
 #, c-format
 msgid "Branch renamed to %s, but HEAD is not updated!"
 msgstr ""
 
-#: builtin/branch.c:612
+#: builtin/branch.c:656
 msgid "Branch is renamed, but update of config-file failed"
 msgstr ""
 
-#: builtin/branch.c:614
+#: builtin/branch.c:658
 msgid "Branch is copied, but update of config-file failed"
 msgstr ""
 
-#: builtin/branch.c:633
+#: builtin/branch.c:678
 #, c-format
 msgid ""
 "Please edit the description for the branch\n"
@@ -3359,232 +3359,232 @@ msgid ""
 "Lines starting with '%c' will be stripped.\n"
 msgstr ""
 
-#: builtin/branch.c:671
+#: builtin/branch.c:716
 msgid "Generic options"
 msgstr ""
 
-#: builtin/branch.c:673
+#: builtin/branch.c:718
 msgid "show hash and subject, give twice for upstream branch"
 msgstr ""
 
-#: builtin/branch.c:674
+#: builtin/branch.c:719
 msgid "suppress informational messages"
 msgstr ""
 
-#: builtin/branch.c:676 builtin/checkout.c:1614
+#: builtin/branch.c:721 builtin/checkout.c:1614
 #: builtin/submodule--helper.c:2968
 msgid "set branch tracking configuration"
 msgstr ""
 
-#: builtin/branch.c:679
+#: builtin/branch.c:724
 msgid "do not use"
 msgstr ""
 
-#: builtin/branch.c:681
+#: builtin/branch.c:726
 msgid "upstream"
 msgstr ""
 
-#: builtin/branch.c:681
+#: builtin/branch.c:726
 msgid "change the upstream info"
 msgstr ""
 
-#: builtin/branch.c:682
+#: builtin/branch.c:727
 msgid "unset the upstream info"
 msgstr ""
 
-#: builtin/branch.c:683
+#: builtin/branch.c:728
 msgid "use colored output"
 msgstr ""
 
-#: builtin/branch.c:684
+#: builtin/branch.c:729
 msgid "act on remote-tracking branches"
 msgstr ""
 
-#: builtin/branch.c:686 builtin/branch.c:688
+#: builtin/branch.c:731 builtin/branch.c:733
 msgid "print only branches that contain the commit"
 msgstr ""
 
-#: builtin/branch.c:687 builtin/branch.c:689
+#: builtin/branch.c:732 builtin/branch.c:734
 msgid "print only branches that don't contain the commit"
 msgstr ""
 
-#: builtin/branch.c:692
+#: builtin/branch.c:737
 msgid "Specific git-branch actions:"
 msgstr ""
 
-#: builtin/branch.c:693
+#: builtin/branch.c:738
 msgid "list both remote-tracking and local branches"
 msgstr ""
 
-#: builtin/branch.c:695
+#: builtin/branch.c:740
 msgid "delete fully merged branch"
 msgstr ""
 
-#: builtin/branch.c:696
+#: builtin/branch.c:741
 msgid "delete branch (even if not merged)"
 msgstr ""
 
-#: builtin/branch.c:697
+#: builtin/branch.c:742
 msgid "move/rename a branch and its reflog"
 msgstr ""
 
-#: builtin/branch.c:698
+#: builtin/branch.c:743
 msgid "move/rename a branch, even if target exists"
 msgstr ""
 
-#: builtin/branch.c:700 builtin/for-each-ref.c:44 builtin/tag.c:483
+#: builtin/branch.c:745 builtin/for-each-ref.c:44 builtin/tag.c:483
 msgid "do not output a newline after empty formatted refs"
 msgstr ""
 
-#: builtin/branch.c:701
+#: builtin/branch.c:746
 msgid "copy a branch and its reflog"
 msgstr ""
 
-#: builtin/branch.c:702
+#: builtin/branch.c:747
 msgid "copy a branch, even if target exists"
 msgstr ""
 
-#: builtin/branch.c:703
+#: builtin/branch.c:748
 msgid "list branch names"
 msgstr ""
 
-#: builtin/branch.c:704
+#: builtin/branch.c:749
 msgid "show current branch name"
 msgstr ""
 
-#: builtin/branch.c:705 builtin/submodule--helper.c:2966
+#: builtin/branch.c:750 builtin/submodule--helper.c:2966
 msgid "create the branch's reflog"
 msgstr ""
 
-#: builtin/branch.c:707
+#: builtin/branch.c:752
 msgid "edit the description for the branch"
 msgstr ""
 
-#: builtin/branch.c:708
+#: builtin/branch.c:753
 msgid "force creation, move/rename, deletion"
 msgstr ""
 
-#: builtin/branch.c:709
+#: builtin/branch.c:754
 msgid "print only branches that are merged"
 msgstr ""
 
-#: builtin/branch.c:710
+#: builtin/branch.c:755
 msgid "print only branches that are not merged"
 msgstr ""
 
-#: builtin/branch.c:711
+#: builtin/branch.c:756
 msgid "list branches in columns"
 msgstr ""
 
-#: builtin/branch.c:713 builtin/for-each-ref.c:52 builtin/notes.c:419
-#: builtin/notes.c:422 builtin/notes.c:585 builtin/notes.c:588
+#: builtin/branch.c:758 builtin/for-each-ref.c:52 builtin/notes.c:476
+#: builtin/notes.c:479 builtin/notes.c:650 builtin/notes.c:653
 #: builtin/tag.c:486
 msgid "object"
 msgstr ""
 
-#: builtin/branch.c:714
+#: builtin/branch.c:759
 msgid "print only branches of the object"
 msgstr ""
 
-#: builtin/branch.c:715 builtin/for-each-ref.c:58 builtin/tag.c:493
+#: builtin/branch.c:760 builtin/for-each-ref.c:58 builtin/tag.c:493
 msgid "sorting and filtering are case insensitive"
 msgstr ""
 
-#: builtin/branch.c:716 builtin/ls-files.c:760
+#: builtin/branch.c:761 builtin/ls-files.c:760
 msgid "recurse through submodules"
 msgstr ""
 
-#: builtin/branch.c:717 builtin/for-each-ref.c:48 builtin/ls-files.c:772
+#: builtin/branch.c:762 builtin/for-each-ref.c:48 builtin/ls-files.c:772
 #: builtin/ls-tree.c:400 builtin/tag.c:491 builtin/verify-tag.c:32
 msgid "format to use for the output"
 msgstr ""
 
-#: builtin/branch.c:736 builtin/submodule--helper.c:2797 submodule.c:1235
+#: builtin/branch.c:781 builtin/submodule--helper.c:2797 submodule.c:1235
 msgid "Failed to resolve HEAD as a valid ref."
 msgstr ""
 
-#: builtin/branch.c:740 builtin/clone.c:720
+#: builtin/branch.c:785 builtin/clone.c:720
 msgid "HEAD not found below refs/heads!"
 msgstr ""
 
-#: builtin/branch.c:761
+#: builtin/branch.c:806
 msgid ""
 "branch with --recurse-submodules can only be used if submodule."
 "propagateBranches is enabled"
 msgstr ""
 
-#: builtin/branch.c:763
+#: builtin/branch.c:808
 msgid "--recurse-submodules can only be used to create branches"
 msgstr ""
 
-#: builtin/branch.c:792 builtin/branch.c:850
+#: builtin/branch.c:837 builtin/branch.c:895
 msgid "branch name required"
 msgstr ""
 
-#: builtin/branch.c:826
+#: builtin/branch.c:871
 msgid "Cannot give description to detached HEAD"
 msgstr ""
 
-#: builtin/branch.c:832
+#: builtin/branch.c:877
 msgid "cannot edit description of more than one branch"
 msgstr ""
 
-#: builtin/branch.c:852
+#: builtin/branch.c:897
 msgid "cannot copy the current branch while not on any."
 msgstr ""
 
-#: builtin/branch.c:853
+#: builtin/branch.c:898
 msgid "cannot rename the current branch while not on any."
 msgstr ""
 
-#: builtin/branch.c:859
+#: builtin/branch.c:904
 msgid "too many branches for a copy operation"
 msgstr ""
 
-#: builtin/branch.c:860
+#: builtin/branch.c:905
 msgid "too many arguments for a rename operation"
 msgstr ""
 
-#: builtin/branch.c:871
+#: builtin/branch.c:916
 msgid "too many arguments to set new upstream"
 msgstr ""
 
-#: builtin/branch.c:875
+#: builtin/branch.c:920
 #, c-format
 msgid ""
 "could not set upstream of HEAD to %s when it does not point to any branch."
 msgstr ""
 
-#: builtin/branch.c:878 builtin/branch.c:907
+#: builtin/branch.c:923 builtin/branch.c:952
 #, c-format
 msgid "no such branch '%s'"
 msgstr ""
 
-#: builtin/branch.c:884
+#: builtin/branch.c:929
 #, c-format
 msgid "branch '%s' does not exist"
 msgstr ""
 
-#: builtin/branch.c:901
+#: builtin/branch.c:946
 msgid "too many arguments to unset upstream"
 msgstr ""
 
-#: builtin/branch.c:905
+#: builtin/branch.c:950
 msgid "could not unset upstream of HEAD when it does not point to any branch."
 msgstr ""
 
-#: builtin/branch.c:911
+#: builtin/branch.c:956
 #, c-format
 msgid "Branch '%s' has no upstream information"
 msgstr ""
 
-#: builtin/branch.c:925
+#: builtin/branch.c:970
 msgid ""
 "The -a, and -r, options to 'git branch' do not take a branch name.\n"
 "Did you mean to use: -a|-r --list <pattern>?"
 msgstr ""
 
-#: builtin/branch.c:929
+#: builtin/branch.c:974
 msgid ""
 "the '--set-upstream' option is no longer supported. Please use '--track' or "
 "'--set-upstream-to' instead."
@@ -5306,7 +5306,7 @@ msgid "id of a parent commit object"
 msgstr ""
 
 #: builtin/commit-tree.c:108 builtin/commit.c:1644 builtin/merge.c:293
-#: builtin/notes.c:413 builtin/notes.c:579 builtin/stash.c:1736
+#: builtin/notes.c:470 builtin/notes.c:644 builtin/stash.c:1736
 #: builtin/tag.c:463
 msgid "message"
 msgstr ""
@@ -6215,7 +6215,7 @@ msgstr ""
 msgid "print sizes in human readable format"
 msgstr ""
 
-#: builtin/credential-cache--daemon.c:234
+#: builtin/credential-cache--daemon.c:237
 #, c-format
 msgid ""
 "The permissions on your socket directory are too loose; other\n"
@@ -6224,11 +6224,11 @@ msgid ""
 "\tchmod 0700 %s"
 msgstr ""
 
-#: builtin/credential-cache--daemon.c:283
+#: builtin/credential-cache--daemon.c:286
 msgid "print debugging messages to stderr"
 msgstr ""
 
-#: builtin/credential-cache--daemon.c:323
+#: builtin/credential-cache--daemon.c:326
 msgid "credential-cache--daemon unavailable; no unix socket support"
 msgstr ""
 
@@ -9743,7 +9743,7 @@ msgstr ""
 msgid "--merge-base is incompatible with --stdin"
 msgstr ""
 
-#: builtin/merge-tree.c:572 builtin/merge-tree.c:588 builtin/notes.c:313
+#: builtin/merge-tree.c:572 builtin/merge-tree.c:588 builtin/notes.c:369
 #, c-format
 msgid "malformed input line: '%s'."
 msgstr ""
@@ -9821,7 +9821,7 @@ msgstr ""
 msgid "verify that the named commit has a valid GPG signature"
 msgstr ""
 
-#: builtin/merge.c:289 builtin/notes.c:793 builtin/pull.c:177
+#: builtin/merge.c:289 builtin/notes.c:868 builtin/pull.c:177
 #: builtin/rebase.c:1179 builtin/revert.c:104
 msgid "strategy"
 msgstr ""
@@ -10367,153 +10367,154 @@ msgstr ""
 msgid "dereference tags in the input (internal use)"
 msgstr ""
 
-#: builtin/notes.c:33
-msgid "git notes [--ref <notes-ref>] [list [<object>]]"
-msgstr ""
-
-#: builtin/notes.c:34
-msgid ""
-"git notes [--ref <notes-ref>] add [-f] [--allow-empty] [-m <msg> | -F <file> "
-"| (-c | -C) <object>] [<object>]"
-msgstr ""
-
 #: builtin/notes.c:35
-msgid "git notes [--ref <notes-ref>] copy [-f] <from-object> <to-object>"
+msgid "git notes [--ref <notes-ref>] [list [<object>]]"
 msgstr ""
 
 #: builtin/notes.c:36
 msgid ""
-"git notes [--ref <notes-ref>] append [--allow-empty] [-m <msg> | -F <file> | "
-"(-c | -C) <object>] [<object>]"
+"git notes [--ref <notes-ref>] add [-f] [--allow-empty] [--"
+"separator=<paragraph-break>] [-m <msg> | -F <file> | (-c | -C) <object>] "
+"[<object>]"
 msgstr ""
 
 #: builtin/notes.c:37
-msgid "git notes [--ref <notes-ref>] edit [--allow-empty] [<object>]"
+msgid "git notes [--ref <notes-ref>] copy [-f] <from-object> <to-object>"
 msgstr ""
 
 #: builtin/notes.c:38
-msgid "git notes [--ref <notes-ref>] show [<object>]"
+msgid ""
+"git notes [--ref <notes-ref>] append [--allow-empty] [--separator=<paragraph-"
+"break>] [-m <msg> | -F <file> | (-c | -C) <object>] [<object>]"
 msgstr ""
 
 #: builtin/notes.c:39
+msgid "git notes [--ref <notes-ref>] edit [--allow-empty] [<object>]"
+msgstr ""
+
+#: builtin/notes.c:40
+msgid "git notes [--ref <notes-ref>] show [<object>]"
+msgstr ""
+
+#: builtin/notes.c:41
 msgid ""
 "git notes [--ref <notes-ref>] merge [-v | -q] [-s <strategy>] <notes-ref>"
 msgstr ""
 
-#: builtin/notes.c:42
+#: builtin/notes.c:44
 msgid "git notes [--ref <notes-ref>] remove [<object>...]"
 msgstr ""
 
-#: builtin/notes.c:43
+#: builtin/notes.c:45
 msgid "git notes [--ref <notes-ref>] prune [-n] [-v]"
 msgstr ""
 
-#: builtin/notes.c:44
+#: builtin/notes.c:46
 msgid "git notes [--ref <notes-ref>] get-ref"
 msgstr ""
 
-#: builtin/notes.c:49
+#: builtin/notes.c:51
 msgid "git notes [list [<object>]]"
 msgstr ""
 
-#: builtin/notes.c:54
+#: builtin/notes.c:56
 msgid "git notes add [<options>] [<object>]"
 msgstr ""
 
-#: builtin/notes.c:59
+#: builtin/notes.c:61
 msgid "git notes copy [<options>] <from-object> <to-object>"
 msgstr ""
 
-#: builtin/notes.c:60
+#: builtin/notes.c:62
 msgid "git notes copy --stdin [<from-object> <to-object>]..."
 msgstr ""
 
-#: builtin/notes.c:65
+#: builtin/notes.c:67
 msgid "git notes append [<options>] [<object>]"
 msgstr ""
 
-#: builtin/notes.c:70
+#: builtin/notes.c:72
 msgid "git notes edit [<object>]"
 msgstr ""
 
-#: builtin/notes.c:75
+#: builtin/notes.c:77
 msgid "git notes show [<object>]"
 msgstr ""
 
-#: builtin/notes.c:80
+#: builtin/notes.c:82
 msgid "git notes merge [<options>] <notes-ref>"
 msgstr ""
 
-#: builtin/notes.c:81
+#: builtin/notes.c:83
 msgid "git notes merge --commit [<options>]"
 msgstr ""
 
-#: builtin/notes.c:82
+#: builtin/notes.c:84
 msgid "git notes merge --abort [<options>]"
 msgstr ""
 
-#: builtin/notes.c:87
+#: builtin/notes.c:89
 msgid "git notes remove [<object>]"
 msgstr ""
 
-#: builtin/notes.c:92
+#: builtin/notes.c:94
 msgid "git notes prune [<options>]"
 msgstr ""
 
-#: builtin/notes.c:102
+#: builtin/notes.c:104
 msgid "Write/edit the notes for the following object:"
 msgstr ""
 
-#: builtin/notes.c:155
+#: builtin/notes.c:178
 #, c-format
 msgid "unable to start 'show' for object '%s'"
 msgstr ""
 
-#: builtin/notes.c:159
+#: builtin/notes.c:182
 msgid "could not read 'show' output"
 msgstr ""
 
-#: builtin/notes.c:167
+#: builtin/notes.c:190
 #, c-format
 msgid "failed to finish 'show' for object '%s'"
 msgstr ""
 
-#: builtin/notes.c:200
+#: builtin/notes.c:223
 msgid "please supply the note contents using either -m or -F option"
 msgstr ""
 
-#: builtin/notes.c:209
+#: builtin/notes.c:233
 msgid "unable to write note object"
 msgstr ""
 
-#: builtin/notes.c:212
+#: builtin/notes.c:236
 #, c-format
 msgid "the note contents have been left in %s"
 msgstr ""
 
-#: builtin/notes.c:246 builtin/tag.c:592
+#: builtin/notes.c:296 builtin/tag.c:592
 #, c-format
 msgid "could not open or read '%s'"
 msgstr ""
 
-#: builtin/notes.c:267 builtin/notes.c:317 builtin/notes.c:319
-#: builtin/notes.c:387 builtin/notes.c:442 builtin/notes.c:530
-#: builtin/notes.c:535 builtin/notes.c:614 builtin/notes.c:677
+#: builtin/notes.c:317 builtin/notes.c:373 builtin/notes.c:375
+#: builtin/notes.c:443 builtin/notes.c:507 builtin/notes.c:595
+#: builtin/notes.c:600 builtin/notes.c:687 builtin/notes.c:752
 #, c-format
 msgid "failed to resolve '%s' as a valid ref."
 msgstr ""
 
-#: builtin/notes.c:269
+#: builtin/notes.c:319
 #, c-format
 msgid "failed to read object '%s'."
 msgstr ""
 
-#: builtin/notes.c:272
+#: builtin/notes.c:324
 #, c-format
 msgid "cannot read note data from non-blob object '%s'."
 msgstr ""
 
-#: builtin/notes.c:328
+#: builtin/notes.c:384
 #, c-format
 msgid "failed to copy notes from '%s' to '%s'"
 msgstr ""
@@ -10521,179 +10522,191 @@ msgstr ""
 #. TRANSLATORS: the first %s will be replaced by a git
 #. notes command: 'add', 'merge', 'remove', etc.
 #.
-#: builtin/notes.c:360
+#: builtin/notes.c:416
 #, c-format
 msgid "refusing to %s notes in %s (outside of refs/notes/)"
 msgstr ""
 
-#: builtin/notes.c:393 builtin/notes.c:683
+#: builtin/notes.c:449 builtin/notes.c:758
 #, c-format
 msgid "no note found for object %s."
 msgstr ""
 
-#: builtin/notes.c:414 builtin/notes.c:580
+#: builtin/notes.c:471 builtin/notes.c:645
 msgid "note contents as a string"
 msgstr ""
 
-#: builtin/notes.c:417 builtin/notes.c:583
+#: builtin/notes.c:474 builtin/notes.c:648
 msgid "note contents in a file"
 msgstr ""
 
-#: builtin/notes.c:420 builtin/notes.c:586
+#: builtin/notes.c:477 builtin/notes.c:651
 msgid "reuse and edit specified note object"
 msgstr ""
 
-#: builtin/notes.c:423 builtin/notes.c:589
+#: builtin/notes.c:480 builtin/notes.c:654
 msgid "reuse specified note object"
 msgstr ""
 
-#: builtin/notes.c:426 builtin/notes.c:592
+#: builtin/notes.c:483 builtin/notes.c:657
 msgid "allow storing empty note"
 msgstr ""
 
-#: builtin/notes.c:427 builtin/notes.c:500
+#: builtin/notes.c:484 builtin/notes.c:565
 msgid "replace existing notes"
 msgstr ""
 
-#: builtin/notes.c:452
+#: builtin/notes.c:485 builtin/notes.c:658
+msgid "separator"
+msgstr ""
+
+#: builtin/notes.c:486 builtin/notes.c:659
+msgid "insert <paragraph-break> between paragraphs"
+msgstr ""
+
+#: builtin/notes.c:488 builtin/notes.c:661
+msgid "remove unnecessary whitespace"
+msgstr ""
+
+#: builtin/notes.c:517
 #, c-format
 msgid ""
 "Cannot add notes. Found existing notes for object %s. Use '-f' to overwrite "
 "existing notes"
 msgstr ""
 
-#: builtin/notes.c:467 builtin/notes.c:548
+#: builtin/notes.c:532 builtin/notes.c:613
 #, c-format
 msgid "Overwriting existing notes for object %s\n"
 msgstr ""
 
-#: builtin/notes.c:479 builtin/notes.c:642 builtin/notes.c:912
+#: builtin/notes.c:544 builtin/notes.c:717 builtin/notes.c:987
 #, c-format
 msgid "Removing note for object %s\n"
 msgstr ""
 
-#: builtin/notes.c:501
+#: builtin/notes.c:566
 msgid "read objects from stdin"
 msgstr ""
 
-#: builtin/notes.c:503
+#: builtin/notes.c:568
 msgid "load rewriting config for <command> (implies --stdin)"
 msgstr ""
 
-#: builtin/notes.c:521
+#: builtin/notes.c:586
 msgid "too few arguments"
 msgstr ""
 
-#: builtin/notes.c:542
+#: builtin/notes.c:607
 #, c-format
 msgid ""
 "Cannot copy notes. Found existing notes for object %s. Use '-f' to overwrite "
 "existing notes"
 msgstr ""
 
-#: builtin/notes.c:554
+#: builtin/notes.c:619
 #, c-format
 msgid "missing notes on source object %s. Cannot copy."
 msgstr ""
 
-#: builtin/notes.c:607
+#: builtin/notes.c:680
 #, c-format
 msgid ""
 "The -m/-F/-c/-C options have been deprecated for the 'edit' subcommand.\n"
 "Please use 'git notes add -f -m/-F/-c/-C' instead.\n"
 msgstr ""
 
-#: builtin/notes.c:703
+#: builtin/notes.c:778
 msgid "failed to delete ref NOTES_MERGE_PARTIAL"
 msgstr ""
 
-#: builtin/notes.c:705
+#: builtin/notes.c:780
 msgid "failed to delete ref NOTES_MERGE_REF"
 msgstr ""
 
-#: builtin/notes.c:707
+#: builtin/notes.c:782
 msgid "failed to remove 'git notes merge' worktree"
 msgstr ""
 
-#: builtin/notes.c:727
+#: builtin/notes.c:802
 msgid "failed to read ref NOTES_MERGE_PARTIAL"
 msgstr ""
 
-#: builtin/notes.c:729
+#: builtin/notes.c:804
 msgid "could not find commit from NOTES_MERGE_PARTIAL."
 msgstr ""
 
-#: builtin/notes.c:731
+#: builtin/notes.c:806
 msgid "could not parse commit from NOTES_MERGE_PARTIAL."
 msgstr ""
 
-#: builtin/notes.c:744
+#: builtin/notes.c:819
 msgid "failed to resolve NOTES_MERGE_REF"
 msgstr ""
 
-#: builtin/notes.c:747
+#: builtin/notes.c:822
 msgid "failed to finalize notes merge"
 msgstr ""
 
-#: builtin/notes.c:774
+#: builtin/notes.c:849
 #, c-format
 msgid "unknown notes merge strategy %s"
 msgstr ""
 
-#: builtin/notes.c:790
+#: builtin/notes.c:865
 msgid "General options"
 msgstr ""
 
-#: builtin/notes.c:792
+#: builtin/notes.c:867
 msgid "Merge options"
 msgstr ""
 
-#: builtin/notes.c:794
+#: builtin/notes.c:869
 msgid ""
 "resolve notes conflicts using the given strategy (manual/ours/theirs/union/"
 "cat_sort_uniq)"
 msgstr ""
 
-#: builtin/notes.c:796
+#: builtin/notes.c:871
 msgid "Committing unmerged notes"
 msgstr ""
 
-#: builtin/notes.c:798
+#: builtin/notes.c:873
 msgid "finalize notes merge by committing unmerged notes"
 msgstr ""
 
-#: builtin/notes.c:800
+#: builtin/notes.c:875
 msgid "Aborting notes merge resolution"
 msgstr ""
 
-#: builtin/notes.c:802
+#: builtin/notes.c:877
 msgid "abort notes merge"
 msgstr ""
 
-#: builtin/notes.c:813
+#: builtin/notes.c:888
 msgid "cannot mix --commit, --abort or -s/--strategy"
 msgstr ""
 
-#: builtin/notes.c:818
+#: builtin/notes.c:893
 msgid "must specify a notes ref to merge"
 msgstr ""
 
-#: builtin/notes.c:842
+#: builtin/notes.c:917
 #, c-format
 msgid "unknown -s/--strategy: %s"
 msgstr ""
 
-#: builtin/notes.c:882
+#: builtin/notes.c:957
 #, c-format
 msgid "a notes merge into %s is already in-progress at %s"
 msgstr ""
 
-#: builtin/notes.c:886
+#: builtin/notes.c:961
 #, c-format
 msgid "failed to store link to current notes ref (%s)"
 msgstr ""
 
-#: builtin/notes.c:888
+#: builtin/notes.c:963
 #, c-format
 msgid ""
 "Automatic notes merge failed. Fix conflicts in %s and commit the result with "
@@ -10701,41 +10714,41 @@ msgid ""
 "abort'.\n"
 msgstr ""
 
-#: builtin/notes.c:907 builtin/tag.c:605
+#: builtin/notes.c:982 builtin/tag.c:605
 #, c-format
 msgid "Failed to resolve '%s' as a valid ref."
 msgstr ""
 
-#: builtin/notes.c:910
+#: builtin/notes.c:985
 #, c-format
 msgid "Object %s has no note\n"
 msgstr ""
 
-#: builtin/notes.c:922
+#: builtin/notes.c:997
 msgid "attempt to remove non-existent note is not an error"
 msgstr ""
 
-#: builtin/notes.c:925
+#: builtin/notes.c:1000
 msgid "read object names from the standard input"
 msgstr ""
 
-#: builtin/notes.c:964 builtin/prune.c:154 builtin/worktree.c:215
+#: builtin/notes.c:1039 builtin/prune.c:154 builtin/worktree.c:215
 msgid "do not remove, show only"
 msgstr ""
 
-#: builtin/notes.c:965
+#: builtin/notes.c:1040
 msgid "report pruned notes"
 msgstr ""
 
-#: builtin/notes.c:1008
+#: builtin/notes.c:1083
 msgid "notes-ref"
 msgstr ""
 
-#: builtin/notes.c:1009
+#: builtin/notes.c:1084
 msgid "use notes from <notes-ref>"
 msgstr ""
 
-#: builtin/notes.c:1028 builtin/remote.c:1778 parse-options.c:819
+#: builtin/notes.c:1103 builtin/remote.c:1778 parse-options.c:819
 #, c-format
 msgid "unknown subcommand: `%s'"
 msgstr ""
@@ -18123,30 +18136,30 @@ msgstr ""
 msgid "%s: smudge filter %s failed"
 msgstr ""
 
-#: credential.c:101
+#: credential.c:102
 #, c-format
 msgid "skipping credential lookup for key: credential.%s"
 msgstr ""
 
-#: credential.c:117
+#: credential.c:118
 msgid "refusing to work with credential missing host field"
 msgstr ""
 
-#: credential.c:119
+#: credential.c:120
 msgid "refusing to work with credential missing protocol field"
 msgstr ""
 
-#: credential.c:420
+#: credential.c:428
 #, c-format
 msgid "url contains a newline in its %s component: %s"
 msgstr ""
 
-#: credential.c:464
+#: credential.c:472
 #, c-format
 msgid "url has no scheme: %s"
 msgstr ""
 
-#: credential.c:537
+#: credential.c:545
 #, c-format
 msgid "credential url cannot be parsed: %s"
 msgstr ""
@@ -24092,28 +24105,28 @@ msgstr ""
 msgid "failed to stat '%*s%s%s'"
 msgstr ""
 
-#: setup.c:1459
+#: setup.c:1460
 msgid "Unable to read current working directory"
 msgstr ""
 
-#: setup.c:1468 setup.c:1474
+#: setup.c:1469 setup.c:1475
 #, c-format
 msgid "cannot change to '%s'"
 msgstr ""
 
-#: setup.c:1479
+#: setup.c:1480
 #, c-format
 msgid "not a git repository (or any of the parent directories): %s"
 msgstr ""
 
-#: setup.c:1485
+#: setup.c:1486
 #, c-format
 msgid ""
 "not a git repository (or any parent up to mount point %s)\n"
 "Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set)."
 msgstr ""
 
-#: setup.c:1496
+#: setup.c:1497
 #, c-format
 msgid ""
 "detected dubious ownership in repository at '%s'\n"
@@ -24122,23 +24135,23 @@ msgid ""
 "\tgit config --global --add safe.directory %s"
 msgstr ""
 
-#: setup.c:1507
+#: setup.c:1508
 #, c-format
 msgid "cannot use bare repository '%s' (safe.bareRepository is '%s')"
 msgstr ""
 
-#: setup.c:1634
+#: setup.c:1635
 #, c-format
 msgid ""
 "problem with core.sharedRepository filemode value (0%.3o).\n"
 "The owner of files must always have read and write permissions."
 msgstr ""
 
-#: setup.c:1696
+#: setup.c:1697
 msgid "fork failed"
 msgstr ""
 
-#: setup.c:1701
+#: setup.c:1702
 msgid "setsid failed"
 msgstr ""
 
@@ -25855,86 +25868,86 @@ msgstr ""
 msgid "Unable to determine absolute path of git directory"
 msgstr ""
 
-#: git-send-email.perl:159
+#: git-send-email.perl:161
 msgid "local zone differs from GMT by a non-minute interval\n"
 msgstr ""
 
-#: git-send-email.perl:166 git-send-email.perl:172
+#: git-send-email.perl:168 git-send-email.perl:174
 msgid "local time offset greater than or equal to 24 hours\n"
 msgstr ""
 
-#: git-send-email.perl:248
+#: git-send-email.perl:250
 #, perl-format
 msgid "fatal: command '%s' died with exit code %d"
 msgstr ""
 
-#: git-send-email.perl:261
+#: git-send-email.perl:263
 msgid "the editor exited uncleanly, aborting everything"
 msgstr ""
 
-#: git-send-email.perl:350
+#: git-send-email.perl:353
 #, perl-format
 msgid ""
 "'%s' contains an intermediate version of the email you were composing.\n"
 msgstr ""
 
-#: git-send-email.perl:355
+#: git-send-email.perl:358
 #, perl-format
 msgid "'%s.final' contains the composed email.\n"
 msgstr ""
 
-#: git-send-email.perl:488
+#: git-send-email.perl:491
 msgid "--dump-aliases incompatible with other options\n"
 msgstr ""
 
-#: git-send-email.perl:566
+#: git-send-email.perl:571
 msgid ""
 "fatal: found configuration options for 'sendmail'\n"
 "git-send-email is configured with the sendemail.* options - note the 'e'.\n"
 "Set sendemail.forbidSendmailVariables to false to disable this check.\n"
 msgstr ""
 
-#: git-send-email.perl:571 git-send-email.perl:787
+#: git-send-email.perl:576 git-send-email.perl:792
 msgid "Cannot run git format-patch from outside a repository\n"
 msgstr ""
 
-#: git-send-email.perl:574
+#: git-send-email.perl:579
 msgid ""
 "`batch-size` and `relogin` must be specified together (via command-line or "
 "configuration option)\n"
 msgstr ""
 
-#: git-send-email.perl:587
+#: git-send-email.perl:592
 #, perl-format
 msgid "Unknown --suppress-cc field: '%s'\n"
 msgstr ""
 
-#: git-send-email.perl:618
+#: git-send-email.perl:623
 #, perl-format
 msgid "Unknown --confirm setting: '%s'\n"
 msgstr ""
 
-#: git-send-email.perl:658
+#: git-send-email.perl:663
 #, perl-format
 msgid "warning: sendmail alias with quotes is not supported: %s\n"
 msgstr ""
 
-#: git-send-email.perl:660
+#: git-send-email.perl:665
 #, perl-format
 msgid "warning: `:include:` not supported: %s\n"
 msgstr ""
 
-#: git-send-email.perl:662
+#: git-send-email.perl:667
 #, perl-format
 msgid "warning: `/file` or `|pipe` redirection not supported: %s\n"
 msgstr ""
 
-#: git-send-email.perl:667
+#: git-send-email.perl:672
 #, perl-format
 msgid "warning: sendmail line is not recognized: %s\n"
 msgstr ""
 
-#: git-send-email.perl:752
+#: git-send-email.perl:757
 #, perl-format
 msgid ""
 "File '%s' exists but it could also be the range of commits\n"
@@ -25944,29 +25957,29 @@ msgid ""
 "    * Giving --format-patch option if you mean a range.\n"
 msgstr ""
 
-#: git-send-email.perl:773
+#: git-send-email.perl:778
 #, perl-format
 msgid "Failed to opendir %s: %s"
 msgstr ""
 
-#: git-send-email.perl:825
+#: git-send-email.perl:845
 msgid ""
 "\n"
 "No patch files specified!\n"
 "\n"
 msgstr ""
 
-#: git-send-email.perl:838
+#: git-send-email.perl:858
 #, perl-format
 msgid "No subject line in %s?"
 msgstr ""
 
-#: git-send-email.perl:849
+#: git-send-email.perl:869
 #, perl-format
 msgid "Failed to open for writing %s: %s"
 msgstr ""
 
-#: git-send-email.perl:860
+#: git-send-email.perl:880
 msgid ""
 "Lines beginning in \"GIT:\" will be removed.\n"
 "Consider including an overall diffstat or table of contents\n"
@@ -25975,37 +25988,37 @@ msgid ""
 "Clear the body content if you don't wish to send a summary.\n"
 msgstr ""
 
-#: git-send-email.perl:884
+#: git-send-email.perl:904
 #, perl-format
 msgid "Failed to open %s: %s"
 msgstr ""
 
-#: git-send-email.perl:901
+#: git-send-email.perl:921
 #, perl-format
 msgid "Failed to open %s.final: %s"
 msgstr ""
 
-#: git-send-email.perl:944
+#: git-send-email.perl:964
 msgid "Summary email is empty, skipping it\n"
 msgstr ""
 
 #. TRANSLATORS: please keep [y/N] as is.
-#: git-send-email.perl:993
+#: git-send-email.perl:1013
 #, perl-format
 msgid "Are you sure you want to use <%s> [y/N]? "
 msgstr ""
 
-#: git-send-email.perl:1048
+#: git-send-email.perl:1068
 msgid ""
 "The following files are 8bit, but do not declare a Content-Transfer-"
 "Encoding.\n"
 msgstr ""
 
-#: git-send-email.perl:1053
+#: git-send-email.perl:1073
 msgid "Which 8bit encoding should I declare [UTF-8]? "
 msgstr ""
 
-#: git-send-email.perl:1061
+#: git-send-email.perl:1081
 #, perl-format
 msgid ""
 "Refusing to send because the patch\n"
@@ -26014,20 +26027,20 @@ msgid ""
 "want to send.\n"
 msgstr ""
 
-#: git-send-email.perl:1080
+#: git-send-email.perl:1088
 msgid "To whom should the emails be sent (if anyone)?"
 msgstr ""
 
-#: git-send-email.perl:1098
+#: git-send-email.perl:1106
 #, perl-format
 msgid "fatal: alias '%s' expands to itself\n"
 msgstr ""
 
-#: git-send-email.perl:1110
+#: git-send-email.perl:1118
 msgid "Message-ID to be used as In-Reply-To for the first email (if any)? "
 msgstr ""
 
-#: git-send-email.perl:1172 git-send-email.perl:1180
+#: git-send-email.perl:1180 git-send-email.perl:1188
 #, perl-format
 msgid "error: unable to extract a valid address from: %s\n"
 msgstr ""
@@ -26035,16 +26048,16 @@ msgstr ""
 #. TRANSLATORS: Make sure to include [q] [d] [e] in your
 #. translation. The program will only accept English input
 #. at this point.
-#: git-send-email.perl:1184
+#: git-send-email.perl:1192
 msgid "What to do with this address? ([q]uit|[d]rop|[e]dit): "
 msgstr ""
 
-#: git-send-email.perl:1504
+#: git-send-email.perl:1508
 #, perl-format
 msgid "CA path \"%s\" does not exist"
 msgstr ""
 
-#: git-send-email.perl:1587
+#: git-send-email.perl:1598
 msgid ""
 "    The Cc list above has been expanded by additional\n"
 "    addresses found in the patch commit message. By default\n"
@@ -26061,112 +26074,117 @@ msgstr ""
 #. TRANSLATORS: Make sure to include [y] [n] [e] [q] [a] in your
 #. translation. The program will only accept English input
 #. at this point.
-#: git-send-email.perl:1602
+#: git-send-email.perl:1613
 msgid "Send this email? ([y]es|[n]o|[e]dit|[q]uit|[a]ll): "
 msgstr ""
 
-#: git-send-email.perl:1605
+#: git-send-email.perl:1616
 msgid "Send this email reply required"
 msgstr ""
 
-#: git-send-email.perl:1639
+#: git-send-email.perl:1650
 msgid "The required SMTP server is not properly defined."
 msgstr ""
 
-#: git-send-email.perl:1686
+#: git-send-email.perl:1697
 #, perl-format
 msgid "Server does not support STARTTLS! %s"
 msgstr ""
 
-#: git-send-email.perl:1691 git-send-email.perl:1695
+#: git-send-email.perl:1702 git-send-email.perl:1706
 #, perl-format
 msgid "STARTTLS failed! %s"
 msgstr ""
 
-#: git-send-email.perl:1704
+#: git-send-email.perl:1715
 msgid "Unable to initialize SMTP properly. Check config and use --smtp-debug."
 msgstr ""
 
-#: git-send-email.perl:1722
+#: git-send-email.perl:1733
 #, perl-format
 msgid "Failed to send %s\n"
 msgstr ""
 
-#: git-send-email.perl:1725
+#: git-send-email.perl:1736
 #, perl-format
 msgid "Dry-Sent %s\n"
 msgstr ""
 
-#: git-send-email.perl:1725
+#: git-send-email.perl:1736
 #, perl-format
 msgid "Sent %s\n"
 msgstr ""
 
-#: git-send-email.perl:1727
+#: git-send-email.perl:1738
 msgid "Dry-OK. Log says:\n"
 msgstr ""
 
-#: git-send-email.perl:1727
+#: git-send-email.perl:1738
 msgid "OK. Log says:\n"
 msgstr ""
 
-#: git-send-email.perl:1746
+#: git-send-email.perl:1757
 msgid "Result: "
 msgstr ""
 
-#: git-send-email.perl:1749
+#: git-send-email.perl:1760
 msgid "Result: OK\n"
 msgstr ""
 
-#: git-send-email.perl:1766
+#: git-send-email.perl:1774
 #, perl-format
 msgid "can't open file %s"
 msgstr ""
 
-#: git-send-email.perl:1814 git-send-email.perl:1834
+#: git-send-email.perl:1822 git-send-email.perl:1842
 #, perl-format
 msgid "(mbox) Adding cc: %s from line '%s'\n"
 msgstr ""
 
-#: git-send-email.perl:1820
+#: git-send-email.perl:1828
 #, perl-format
 msgid "(mbox) Adding to: %s from line '%s'\n"
 msgstr ""
 
-#: git-send-email.perl:1877
+#: git-send-email.perl:1885
 #, perl-format
 msgid "(non-mbox) Adding cc: %s from line '%s'\n"
 msgstr ""
 
-#: git-send-email.perl:1912
+#: git-send-email.perl:1920
 #, perl-format
 msgid "(body) Adding cc: %s from line '%s'\n"
 msgstr ""
 
-#: git-send-email.perl:2031
+#: git-send-email.perl:2049
 #, perl-format
 msgid "(%s) Could not execute '%s'"
 msgstr ""
 
-#: git-send-email.perl:2038
+#: git-send-email.perl:2051
 #, perl-format
-msgid "(%s) Adding %s: %s from: '%s'\n"
+msgid "(%s) Malformed output from '%s'"
 msgstr ""
 
-#: git-send-email.perl:2042
+#: git-send-email.perl:2060
 #, perl-format
 msgid "(%s) failed to close pipe to '%s'"
 msgstr ""
 
-#: git-send-email.perl:2072
+#: git-send-email.perl:2104
+#, perl-format
+msgid "(%s) Adding %s: %s from: '%s'\n"
+msgstr ""
+
+#: git-send-email.perl:2136
 msgid "cannot send message as 7bit"
 msgstr ""
 
-#: git-send-email.perl:2080
+#: git-send-email.perl:2144
 msgid "invalid transfer encoding"
 msgstr ""
 
-#: git-send-email.perl:2122
+#: git-send-email.perl:2197
 #, perl-format
 msgid ""
 "fatal: %s: rejected by %s hook\n"
@@ -26174,25 +26192,25 @@ msgid ""
 "warning: no patches were sent\n"
 msgstr ""
 
-#: git-send-email.perl:2132 git-send-email.perl:2185 git-send-email.perl:2195
+#: git-send-email.perl:2207 git-send-email.perl:2260 git-send-email.perl:2270
 #, perl-format
 msgid "unable to open %s: %s\n"
 msgstr ""
 
-#: git-send-email.perl:2135
+#: git-send-email.perl:2210
 #, perl-format
 msgid ""
 "fatal: %s:%d is longer than 998 characters\n"
 "warning: no patches were sent\n"
 msgstr ""
 
-#: git-send-email.perl:2153
+#: git-send-email.perl:2228
 #, perl-format
 msgid "Skipping %s with backup suffix '%s'.\n"
 msgstr ""
 
 #. TRANSLATORS: please keep "[y|N]" as is.
-#: git-send-email.perl:2157
+#: git-send-email.perl:2232
 #, perl-format
 msgid "Do you really want to send %s? [y|N]: "
 msgstr ""
