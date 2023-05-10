@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2023-05-10 01:20+0000\n"
+"POT-Creation-Date: 2023-05-10 19:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -1654,44 +1654,48 @@ msgstr ""
 msgid "Argument not supported for format '%s': -%d"
 msgstr ""
 
-#: attr.c:205
+#: attr.c:206
 #, c-format
 msgid "%.*s is not a valid attribute name"
 msgstr ""
 
-#: attr.c:233
+#: attr.c:234
 msgid "unable to add additional attribute"
 msgstr ""
 
-#: attr.c:355
+#: attr.c:356
 #, c-format
 msgid "ignoring overly long attributes line %d"
 msgstr ""
 
-#: attr.c:370
+#: attr.c:371
 #, c-format
 msgid "%s not allowed: %s:%d"
 msgstr ""
 
-#: attr.c:409
+#: attr.c:410
 msgid ""
 "Negative patterns are ignored in git attributes\n"
 "Use '\\!' for literal leading exclamation."
 msgstr ""
 
-#: attr.c:732
+#: attr.c:733
 #, c-format
 msgid "cannot fstat gitattributes file '%s'"
 msgstr ""
 
-#: attr.c:737
+#: attr.c:738
 #, c-format
 msgid "ignoring overly large gitattributes file '%s'"
 msgstr ""
 
-#: attr.c:832
+#: attr.c:833
 #, c-format
 msgid "ignoring overly large gitattributes blob '%s'"
+msgstr ""
+
+#: attr.c:1190
+msgid "bad --attr-source or GIT_ATTR_SOURCE"
 msgstr ""
 
 #: bisect.c:490
@@ -8329,12 +8333,12 @@ msgstr ""
 msgid "no info viewer handled the request"
 msgstr ""
 
-#: builtin/help.c:571 builtin/help.c:582 git.c:340
+#: builtin/help.c:571 builtin/help.c:582 git.c:356
 #, c-format
 msgid "'%s' is aliased to '%s'"
 msgstr ""
 
-#: builtin/help.c:585 git.c:372
+#: builtin/help.c:585 git.c:388
 #, c-format
 msgid "bad alias.%s string: %s"
 msgstr ""
@@ -19319,7 +19323,7 @@ msgid ""
 "sockets support"
 msgstr ""
 
-#: git.c:34
+#: git.c:35
 msgid ""
 "git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n"
 "           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n"
@@ -19329,7 +19333,7 @@ msgid ""
 "           [--config-env=<name>=<envvar>] <command> [<args>]"
 msgstr ""
 
-#: git.c:41
+#: git.c:42
 msgid ""
 "'git help -a' and 'git help -g' list available subcommands and some\n"
 "concept guides. See 'git help <command>' or 'git help <concept>'\n"
@@ -19337,93 +19341,98 @@ msgid ""
 "See 'git help git' for an overview of the system."
 msgstr ""
 
-#: git.c:105 help.c:395
+#: git.c:106 help.c:395
 #, c-format
 msgid "unsupported command listing type '%s'"
 msgstr ""
 
-#: git.c:194 git.c:222 git.c:292
+#: git.c:195 git.c:223 git.c:293
 #, c-format
 msgid "no directory given for '%s' option\n"
 msgstr ""
 
-#: git.c:208
+#: git.c:209
 #, c-format
 msgid "no namespace given for --namespace\n"
 msgstr ""
 
-#: git.c:244
+#: git.c:245
 #, c-format
 msgid "-c expects a configuration string\n"
 msgstr ""
 
-#: git.c:252
+#: git.c:253
 #, c-format
 msgid "no config key given for --config-env\n"
 msgstr ""
 
-#: git.c:318
+#: git.c:320
+#, c-format
+msgid "no attribute source given for --attr-source\n"
+msgstr ""
+
+#: git.c:334
 #, c-format
 msgid "unknown option: %s\n"
 msgstr ""
 
-#: git.c:367
+#: git.c:383
 #, c-format
 msgid "while expanding alias '%s': '%s'"
 msgstr ""
 
-#: git.c:376
+#: git.c:392
 #, c-format
 msgid ""
 "alias '%s' changes environment variables.\n"
 "You can use '!git' in the alias to do this"
 msgstr ""
 
-#: git.c:383
+#: git.c:399
 #, c-format
 msgid "empty alias for %s"
 msgstr ""
 
-#: git.c:386
+#: git.c:402
 #, c-format
 msgid "recursive alias: %s"
 msgstr ""
 
-#: git.c:467
+#: git.c:483
 msgid "write failure on standard output"
 msgstr ""
 
-#: git.c:469
+#: git.c:485
 msgid "unknown write failure on standard output"
 msgstr ""
 
-#: git.c:471
+#: git.c:487
 msgid "close failed on standard output"
 msgstr ""
 
-#: git.c:822
+#: git.c:838
 #, c-format
 msgid "alias loop detected: expansion of '%s' does not terminate:%s"
 msgstr ""
 
-#: git.c:872
+#: git.c:888
 #, c-format
 msgid "cannot handle %s as a builtin"
 msgstr ""
 
-#: git.c:883
+#: git.c:899
 #, c-format
 msgid ""
 "usage: %s\n"
 "\n"
 msgstr ""
 
-#: git.c:909
+#: git.c:925
 #, c-format
 msgid "expansion of alias '%s' failed; '%s' is not a git command\n"
 msgstr ""
 
-#: git.c:921
+#: git.c:937
 #, c-format
 msgid "failed to run command '%s': %s\n"
 msgstr ""
