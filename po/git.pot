@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2023-05-10 23:57+0000\n"
+"POT-Creation-Date: 2023-05-15 23:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -209,7 +209,7 @@ msgstr ""
 
 #: add-interactive.c:1159 apply.c:5064 apply.c:5067 builtin/am.c:2373
 #: builtin/am.c:2376 builtin/bugreport.c:120 builtin/clone.c:144
-#: builtin/diagnose.c:25 builtin/fetch.c:176 builtin/hook.c:32
+#: builtin/diagnose.c:25 builtin/fetch.c:2141 builtin/hook.c:32
 #: builtin/merge.c:296 builtin/pull.c:199 builtin/submodule--helper.c:1776
 #: builtin/submodule--helper.c:1779
 msgid "path"
@@ -814,18 +814,18 @@ msgid "unrecognized whitespace ignore option '%s'"
 msgstr ""
 
 #: apply.c:150 archive.c:682 builtin/add.c:472 builtin/add.c:474
-#: builtin/add.c:480 builtin/add.c:492 builtin/branch.c:777
+#: builtin/add.c:480 builtin/add.c:492 builtin/branch.c:822
 #: builtin/checkout.c:482 builtin/checkout.c:485 builtin/checkout.c:1706
 #: builtin/checkout.c:1816 builtin/checkout.c:1819 builtin/clone.c:962
 #: builtin/commit.c:371 builtin/commit.c:374 builtin/commit.c:1222
 #: builtin/commit.c:1278 builtin/commit.c:1295 builtin/describe.c:602
 #: builtin/diff-tree.c:160 builtin/difftool.c:744 builtin/fast-export.c:1259
-#: builtin/fetch.c:2187 builtin/fetch.c:2208 builtin/fetch.c:2213
-#: builtin/help.c:618 builtin/index-pack.c:1872 builtin/init-db.c:571
-#: builtin/log.c:2105 builtin/log.c:2107 builtin/ls-files.c:881
-#: builtin/merge-base.c:167 builtin/merge-base.c:173 builtin/merge.c:1424
-#: builtin/merge.c:1426 builtin/pack-objects.c:4387 builtin/push.c:645
-#: builtin/push.c:683 builtin/push.c:689 builtin/push.c:694
+#: builtin/fetch.c:2255 builtin/fetch.c:2282 builtin/fetch.c:2296
+#: builtin/fetch.c:2301 builtin/help.c:618 builtin/index-pack.c:1872
+#: builtin/init-db.c:571 builtin/log.c:2105 builtin/log.c:2107
+#: builtin/ls-files.c:881 builtin/merge-base.c:167 builtin/merge-base.c:173
+#: builtin/merge.c:1424 builtin/merge.c:1426 builtin/pack-objects.c:4387
+#: builtin/push.c:646 builtin/push.c:684 builtin/push.c:690 builtin/push.c:695
 #: builtin/rebase.c:1256 builtin/rebase.c:1258 builtin/rebase.c:1267
 #: builtin/repack.c:867 builtin/repack.c:873 builtin/repack.c:875
 #: builtin/repack.c:926 builtin/reset.c:365 builtin/reset.c:402
@@ -1591,7 +1591,7 @@ msgstr ""
 msgid "report archived files on stderr"
 msgstr ""
 
-#: archive.c:657 builtin/clone.c:148 builtin/fetch.c:206
+#: archive.c:657 builtin/clone.c:148 builtin/fetch.c:2172
 #: builtin/pack-objects.c:4240 builtin/pack-objects.c:4244 builtin/pull.c:220
 msgid "time"
 msgstr ""
@@ -1990,11 +1990,6 @@ msgstr ""
 msgid "'%s' is already checked out at '%s'"
 msgstr ""
 
-#: branch.c:863
-#, c-format
-msgid "HEAD of working tree %s is not updated"
-msgstr ""
-
 #: builtin/add.c:29
 msgid "git add [<options>] [--] <pathspec>..."
 msgstr ""
@@ -2058,14 +2053,14 @@ msgstr ""
 msgid "The following paths are ignored by one of your .gitignore files:\n"
 msgstr ""
 
-#: builtin/add.c:332 builtin/clean.c:931 builtin/fetch.c:197 builtin/mv.c:173
-#: builtin/prune-packed.c:15 builtin/pull.c:213 builtin/push.c:603
+#: builtin/add.c:332 builtin/clean.c:931 builtin/fetch.c:2162 builtin/mv.c:173
+#: builtin/prune-packed.c:15 builtin/pull.c:213 builtin/push.c:604
 #: builtin/remote.c:1481 builtin/rm.c:251 builtin/send-pack.c:196
 msgid "dry run"
 msgstr ""
 
 #: builtin/add.c:333 builtin/check-ignore.c:25 builtin/commit.c:1505
-#: builtin/count-objects.c:102 builtin/fsck.c:904 builtin/log.c:2479
+#: builtin/count-objects.c:102 builtin/fsck.c:906 builtin/log.c:2479
 #: builtin/mv.c:172 builtin/read-tree.c:128
 msgid "be verbose"
 msgstr ""
@@ -2202,7 +2197,7 @@ msgid "bad action '%s' for '%s'"
 msgstr ""
 
 #: builtin/am.c:213 builtin/am.c:2255 builtin/am.c:2299 builtin/blame.c:741
-#: builtin/blame.c:759 builtin/fetch.c:825 builtin/pack-objects.c:3769
+#: builtin/blame.c:759 builtin/fetch.c:164 builtin/pack-objects.c:3769
 #: builtin/pull.c:49 builtin/pull.c:51 builtin/pull.c:326 diff-merges.c:94
 #: gpg-interface.c:742 gpg-interface.c:757 ls-refs.c:37 parallel-checkout.c:48
 #: sequencer.c:2927 setup.c:583
@@ -2557,7 +2552,7 @@ msgstr ""
 msgid "n"
 msgstr ""
 
-#: builtin/am.c:2385 builtin/branch.c:717 builtin/bugreport.c:122
+#: builtin/am.c:2385 builtin/branch.c:762 builtin/bugreport.c:122
 #: builtin/cat-file.c:960 builtin/cat-file.c:964 builtin/cat-file.c:969
 #: builtin/diagnose.c:27 builtin/for-each-ref.c:48 builtin/ls-files.c:771
 #: builtin/ls-tree.c:399 builtin/replace.c:565 builtin/tag.c:490
@@ -3051,10 +3046,10 @@ msgid "show work cost statistics"
 msgstr ""
 
 #: builtin/blame.c:885 builtin/checkout.c:1597 builtin/clone.c:110
-#: builtin/commit-graph.c:81 builtin/commit-graph.c:235 builtin/fetch.c:203
+#: builtin/commit-graph.c:81 builtin/commit-graph.c:235 builtin/fetch.c:2169
 #: builtin/merge.c:310 builtin/multi-pack-index.c:129
 #: builtin/multi-pack-index.c:181 builtin/multi-pack-index.c:208
-#: builtin/multi-pack-index.c:237 builtin/pull.c:125 builtin/push.c:619
+#: builtin/multi-pack-index.c:237 builtin/pull.c:125 builtin/push.c:620
 #: builtin/remote.c:693 builtin/send-pack.c:204
 msgid "force progress reporting"
 msgstr ""
@@ -3305,53 +3300,58 @@ msgstr ""
 msgid "Branch %s is being bisected at %s"
 msgstr ""
 
-#: builtin/branch.c:554
+#: builtin/branch.c:560
+#, c-format
+msgid "HEAD of working tree %s is not updated"
+msgstr ""
+
+#: builtin/branch.c:587
 #, c-format
 msgid "Invalid branch name: '%s'"
 msgstr ""
 
-#: builtin/branch.c:559 builtin/branch.c:838 builtin/branch.c:883
+#: builtin/branch.c:603 builtin/branch.c:883 builtin/branch.c:928
 #, c-format
 msgid "No commit on branch '%s' yet."
 msgstr ""
 
-#: builtin/branch.c:561 builtin/branch.c:839
+#: builtin/branch.c:605 builtin/branch.c:884
 #, c-format
 msgid "No branch named '%s'."
 msgstr ""
 
-#: builtin/branch.c:590
+#: builtin/branch.c:633
 msgid "Branch rename failed"
 msgstr ""
 
-#: builtin/branch.c:592
+#: builtin/branch.c:635
 msgid "Branch copy failed"
 msgstr ""
 
-#: builtin/branch.c:596
+#: builtin/branch.c:639
 #, c-format
 msgid "Created a copy of a misnamed branch '%s'"
 msgstr ""
 
-#: builtin/branch.c:599
+#: builtin/branch.c:642
 #, c-format
 msgid "Renamed a misnamed branch '%s' away"
 msgstr ""
 
-#: builtin/branch.c:605
+#: builtin/branch.c:649
 #, c-format
 msgid "Branch renamed to %s, but HEAD is not updated!"
 msgstr ""
 
-#: builtin/branch.c:612
+#: builtin/branch.c:656
 msgid "Branch is renamed, but update of config-file failed"
 msgstr ""
 
-#: builtin/branch.c:614
+#: builtin/branch.c:658
 msgid "Branch is copied, but update of config-file failed"
 msgstr ""
 
-#: builtin/branch.c:633
+#: builtin/branch.c:678
 #, c-format
 msgid ""
 "Please edit the description for the branch\n"
@@ -3359,232 +3359,232 @@ msgid ""
 "Lines starting with '%c' will be stripped.\n"
 msgstr ""
 
-#: builtin/branch.c:671
+#: builtin/branch.c:716
 msgid "Generic options"
 msgstr ""
 
-#: builtin/branch.c:673
+#: builtin/branch.c:718
 msgid "show hash and subject, give twice for upstream branch"
 msgstr ""
 
-#: builtin/branch.c:674
+#: builtin/branch.c:719
 msgid "suppress informational messages"
 msgstr ""
 
-#: builtin/branch.c:676 builtin/checkout.c:1614
+#: builtin/branch.c:721 builtin/checkout.c:1614
 #: builtin/submodule--helper.c:2968
 msgid "set branch tracking configuration"
 msgstr ""
 
-#: builtin/branch.c:679
+#: builtin/branch.c:724
 msgid "do not use"
 msgstr ""
 
-#: builtin/branch.c:681
+#: builtin/branch.c:726
 msgid "upstream"
 msgstr ""
 
-#: builtin/branch.c:681
+#: builtin/branch.c:726
 msgid "change the upstream info"
 msgstr ""
 
-#: builtin/branch.c:682
+#: builtin/branch.c:727
 msgid "unset the upstream info"
 msgstr ""
 
-#: builtin/branch.c:683
+#: builtin/branch.c:728
 msgid "use colored output"
 msgstr ""
 
-#: builtin/branch.c:684
+#: builtin/branch.c:729
 msgid "act on remote-tracking branches"
 msgstr ""
 
-#: builtin/branch.c:686 builtin/branch.c:688
+#: builtin/branch.c:731 builtin/branch.c:733
 msgid "print only branches that contain the commit"
 msgstr ""
 
-#: builtin/branch.c:687 builtin/branch.c:689
+#: builtin/branch.c:732 builtin/branch.c:734
 msgid "print only branches that don't contain the commit"
 msgstr ""
 
-#: builtin/branch.c:692
+#: builtin/branch.c:737
 msgid "Specific git-branch actions:"
 msgstr ""
 
-#: builtin/branch.c:693
+#: builtin/branch.c:738
 msgid "list both remote-tracking and local branches"
 msgstr ""
 
-#: builtin/branch.c:695
+#: builtin/branch.c:740
 msgid "delete fully merged branch"
 msgstr ""
 
-#: builtin/branch.c:696
+#: builtin/branch.c:741
 msgid "delete branch (even if not merged)"
 msgstr ""
 
-#: builtin/branch.c:697
+#: builtin/branch.c:742
 msgid "move/rename a branch and its reflog"
 msgstr ""
 
-#: builtin/branch.c:698
+#: builtin/branch.c:743
 msgid "move/rename a branch, even if target exists"
 msgstr ""
 
-#: builtin/branch.c:700 builtin/for-each-ref.c:44 builtin/tag.c:483
+#: builtin/branch.c:745 builtin/for-each-ref.c:44 builtin/tag.c:483
 msgid "do not output a newline after empty formatted refs"
 msgstr ""
 
-#: builtin/branch.c:701
+#: builtin/branch.c:746
 msgid "copy a branch and its reflog"
 msgstr ""
 
-#: builtin/branch.c:702
+#: builtin/branch.c:747
 msgid "copy a branch, even if target exists"
 msgstr ""
 
-#: builtin/branch.c:703
+#: builtin/branch.c:748
 msgid "list branch names"
 msgstr ""
 
-#: builtin/branch.c:704
+#: builtin/branch.c:749
 msgid "show current branch name"
 msgstr ""
 
-#: builtin/branch.c:705 builtin/submodule--helper.c:2966
+#: builtin/branch.c:750 builtin/submodule--helper.c:2966
 msgid "create the branch's reflog"
 msgstr ""
 
-#: builtin/branch.c:707
+#: builtin/branch.c:752
 msgid "edit the description for the branch"
 msgstr ""
 
-#: builtin/branch.c:708
+#: builtin/branch.c:753
 msgid "force creation, move/rename, deletion"
 msgstr ""
 
-#: builtin/branch.c:709
+#: builtin/branch.c:754
 msgid "print only branches that are merged"
 msgstr ""
 
-#: builtin/branch.c:710
+#: builtin/branch.c:755
 msgid "print only branches that are not merged"
 msgstr ""
 
-#: builtin/branch.c:711
+#: builtin/branch.c:756
 msgid "list branches in columns"
 msgstr ""
 
-#: builtin/branch.c:713 builtin/for-each-ref.c:52 builtin/notes.c:419
+#: builtin/branch.c:758 builtin/for-each-ref.c:52 builtin/notes.c:419
 #: builtin/notes.c:422 builtin/notes.c:585 builtin/notes.c:588
 #: builtin/tag.c:486
 msgid "object"
 msgstr ""
 
-#: builtin/branch.c:714
+#: builtin/branch.c:759
 msgid "print only branches of the object"
 msgstr ""
 
-#: builtin/branch.c:715 builtin/for-each-ref.c:58 builtin/tag.c:493
+#: builtin/branch.c:760 builtin/for-each-ref.c:58 builtin/tag.c:493
 msgid "sorting and filtering are case insensitive"
 msgstr ""
 
-#: builtin/branch.c:716 builtin/ls-files.c:760
+#: builtin/branch.c:761 builtin/ls-files.c:760
 msgid "recurse through submodules"
 msgstr ""
 
-#: builtin/branch.c:717 builtin/for-each-ref.c:48 builtin/ls-files.c:772
+#: builtin/branch.c:762 builtin/for-each-ref.c:48 builtin/ls-files.c:772
 #: builtin/ls-tree.c:400 builtin/tag.c:491 builtin/verify-tag.c:32
 msgid "format to use for the output"
 msgstr ""
 
-#: builtin/branch.c:736 builtin/submodule--helper.c:2797 submodule.c:1235
+#: builtin/branch.c:781 builtin/submodule--helper.c:2797 submodule.c:1235
 msgid "Failed to resolve HEAD as a valid ref."
 msgstr ""
 
-#: builtin/branch.c:740 builtin/clone.c:720
+#: builtin/branch.c:785 builtin/clone.c:720
 msgid "HEAD not found below refs/heads!"
 msgstr ""
 
-#: builtin/branch.c:761
+#: builtin/branch.c:806
 msgid ""
 "branch with --recurse-submodules can only be used if submodule."
 "propagateBranches is enabled"
 msgstr ""
 
-#: builtin/branch.c:763
+#: builtin/branch.c:808
 msgid "--recurse-submodules can only be used to create branches"
 msgstr ""
 
-#: builtin/branch.c:792 builtin/branch.c:850
+#: builtin/branch.c:837 builtin/branch.c:895
 msgid "branch name required"
 msgstr ""
 
-#: builtin/branch.c:826
+#: builtin/branch.c:871
 msgid "Cannot give description to detached HEAD"
 msgstr ""
 
-#: builtin/branch.c:832
+#: builtin/branch.c:877
 msgid "cannot edit description of more than one branch"
 msgstr ""
 
-#: builtin/branch.c:852
+#: builtin/branch.c:897
 msgid "cannot copy the current branch while not on any."
 msgstr ""
 
-#: builtin/branch.c:853
+#: builtin/branch.c:898
 msgid "cannot rename the current branch while not on any."
 msgstr ""
 
-#: builtin/branch.c:859
+#: builtin/branch.c:904
 msgid "too many branches for a copy operation"
 msgstr ""
 
-#: builtin/branch.c:860
+#: builtin/branch.c:905
 msgid "too many arguments for a rename operation"
 msgstr ""
 
-#: builtin/branch.c:871
+#: builtin/branch.c:916
 msgid "too many arguments to set new upstream"
 msgstr ""
 
-#: builtin/branch.c:875
+#: builtin/branch.c:920
 #, c-format
 msgid ""
 "could not set upstream of HEAD to %s when it does not point to any branch."
 msgstr ""
 
-#: builtin/branch.c:878 builtin/branch.c:907
+#: builtin/branch.c:923 builtin/branch.c:952
 #, c-format
 msgid "no such branch '%s'"
 msgstr ""
 
-#: builtin/branch.c:884
+#: builtin/branch.c:929
 #, c-format
 msgid "branch '%s' does not exist"
 msgstr ""
 
-#: builtin/branch.c:901
+#: builtin/branch.c:946
 msgid "too many arguments to unset upstream"
 msgstr ""
 
-#: builtin/branch.c:905
+#: builtin/branch.c:950
 msgid "could not unset upstream of HEAD when it does not point to any branch."
 msgstr ""
 
-#: builtin/branch.c:911
+#: builtin/branch.c:956
 #, c-format
 msgid "Branch '%s' has no upstream information"
 msgstr ""
 
-#: builtin/branch.c:925
+#: builtin/branch.c:970
 msgid ""
 "The -a, and -r, options to 'git branch' do not take a branch name.\n"
 "Did you mean to use: -a|-r --list <pattern>?"
 msgstr ""
 
-#: builtin/branch.c:929
+#: builtin/branch.c:974
 msgid ""
 "the '--set-upstream' option is no longer supported. Please use '--track' or "
 "'--set-upstream-to' instead."
@@ -4813,7 +4813,7 @@ msgstr ""
 msgid "path to git-upload-pack on the remote"
 msgstr ""
 
-#: builtin/clone.c:146 builtin/fetch.c:204 builtin/grep.c:923
+#: builtin/clone.c:146 builtin/fetch.c:2170 builtin/grep.c:923
 #: builtin/pull.c:217
 msgid "depth"
 msgstr ""
@@ -4826,12 +4826,12 @@ msgstr ""
 msgid "create a shallow clone since a specific time"
 msgstr ""
 
-#: builtin/clone.c:150 builtin/fetch.c:208 builtin/fetch.c:234
+#: builtin/clone.c:150 builtin/fetch.c:2174 builtin/fetch.c:2200
 #: builtin/pull.c:223 builtin/pull.c:248 builtin/rebase.c:1082
 msgid "revision"
 msgstr ""
 
-#: builtin/clone.c:151 builtin/fetch.c:209 builtin/pull.c:224
+#: builtin/clone.c:151 builtin/fetch.c:2175 builtin/pull.c:224
 msgid "deepen history of shallow clone, excluding rev"
 msgstr ""
 
@@ -4864,23 +4864,23 @@ msgstr ""
 msgid "set config inside the new repository"
 msgstr ""
 
-#: builtin/clone.c:163 builtin/fetch.c:229 builtin/ls-remote.c:81
-#: builtin/pull.c:239 builtin/push.c:628 builtin/send-pack.c:202
+#: builtin/clone.c:163 builtin/fetch.c:2195 builtin/ls-remote.c:81
+#: builtin/pull.c:239 builtin/push.c:629 builtin/send-pack.c:202
 msgid "server-specific"
 msgstr ""
 
-#: builtin/clone.c:163 builtin/fetch.c:229 builtin/ls-remote.c:81
-#: builtin/pull.c:240 builtin/push.c:628 builtin/send-pack.c:203
+#: builtin/clone.c:163 builtin/fetch.c:2195 builtin/ls-remote.c:81
+#: builtin/pull.c:240 builtin/push.c:629 builtin/send-pack.c:203
 msgid "option to transmit"
 msgstr ""
 
-#: builtin/clone.c:164 builtin/fetch.c:230 builtin/pull.c:243
-#: builtin/push.c:629
+#: builtin/clone.c:164 builtin/fetch.c:2196 builtin/pull.c:243
+#: builtin/push.c:630
 msgid "use IPv4 addresses only"
 msgstr ""
 
-#: builtin/clone.c:166 builtin/fetch.c:232 builtin/pull.c:246
-#: builtin/push.c:631
+#: builtin/clone.c:166 builtin/fetch.c:2198 builtin/pull.c:246
+#: builtin/push.c:632
 msgid "use IPv6 addresses only"
 msgstr ""
 
@@ -5024,7 +5024,7 @@ msgstr ""
 msgid "repository '%s' does not exist"
 msgstr ""
 
-#: builtin/clone.c:983 builtin/fetch.c:2222
+#: builtin/clone.c:983 builtin/fetch.c:2310
 #, c-format
 msgid "depth %s is not a positive number"
 msgstr ""
@@ -5181,7 +5181,7 @@ msgid ""
 "                       <split options>"
 msgstr ""
 
-#: builtin/commit-graph.c:56 builtin/fetch.c:218 builtin/log.c:1944
+#: builtin/commit-graph.c:56 builtin/fetch.c:2184 builtin/log.c:1944
 #: builtin/repack.c:852
 msgid "dir"
 msgstr ""
@@ -5460,7 +5460,7 @@ msgid ""
 msgstr ""
 
 #: builtin/commit.c:766 builtin/commit.c:801 builtin/commit.c:1192
-#: builtin/merge-tree.c:450
+#: builtin/merge-tree.c:451
 #, c-format
 msgid "could not lookup commit %s"
 msgstr ""
@@ -5664,8 +5664,8 @@ msgstr ""
 msgid "version"
 msgstr ""
 
-#: builtin/commit.c:1515 builtin/commit.c:1678 builtin/push.c:604
-#: builtin/worktree.c:833
+#: builtin/commit.c:1515 builtin/commit.c:1678 builtin/fetch.c:2163
+#: builtin/push.c:605 builtin/worktree.c:833
 msgid "machine-readable output"
 msgstr ""
 
@@ -5746,7 +5746,7 @@ msgid "override date for commit"
 msgstr ""
 
 #: builtin/commit.c:1645 builtin/commit.c:1646 builtin/commit.c:1652
-#: builtin/merge-tree.c:546 parse-options.h:569 ref-filter.h:102
+#: builtin/merge-tree.c:547 parse-options.h:569 ref-filter.h:102
 msgid "commit"
 msgstr ""
 
@@ -6215,7 +6215,7 @@ msgstr ""
 msgid "print sizes in human readable format"
 msgstr ""
 
-#: builtin/credential-cache--daemon.c:234
+#: builtin/credential-cache--daemon.c:237
 #, c-format
 msgid ""
 "The permissions on your socket directory are too loose; other\n"
@@ -6224,11 +6224,11 @@ msgid ""
 "\tchmod 0700 %s"
 msgstr ""
 
-#: builtin/credential-cache--daemon.c:283
+#: builtin/credential-cache--daemon.c:286
 msgid "print debugging messages to stderr"
 msgstr ""
 
-#: builtin/credential-cache--daemon.c:323
+#: builtin/credential-cache--daemon.c:326
 msgid "credential-cache--daemon unavailable; no unix socket support"
 msgstr ""
 
@@ -6373,7 +6373,7 @@ msgstr ""
 msgid "do not consider tags matching <pattern>"
 msgstr ""
 
-#: builtin/describe.c:579 builtin/name-rev.c:580
+#: builtin/describe.c:579 builtin/name-rev.c:584
 msgid "show abbreviated commit object as fallback"
 msgstr ""
 
@@ -6708,218 +6708,83 @@ msgstr ""
 msgid "git fetch --all [<options>]"
 msgstr ""
 
-#: builtin/fetch.c:144
+#: builtin/fetch.c:150
 msgid "fetch.parallel cannot be negative"
 msgstr ""
 
-#: builtin/fetch.c:169 builtin/pull.c:194
-msgid "fetch from all remotes"
-msgstr ""
-
-#: builtin/fetch.c:171 builtin/pull.c:254
-msgid "set upstream for git pull/fetch"
-msgstr ""
-
-#: builtin/fetch.c:173 builtin/pull.c:197
-msgid "append to .git/FETCH_HEAD instead of overwriting"
-msgstr ""
-
-#: builtin/fetch.c:175
-msgid "use atomic transaction to update references"
-msgstr ""
-
-#: builtin/fetch.c:177 builtin/pull.c:200
-msgid "path to upload pack on remote end"
-msgstr ""
-
-#: builtin/fetch.c:178
-msgid "force overwrite of local reference"
-msgstr ""
-
-#: builtin/fetch.c:180
-msgid "fetch from multiple remotes"
-msgstr ""
-
-#: builtin/fetch.c:182 builtin/pull.c:204
-msgid "fetch all tags and associated objects"
-msgstr ""
-
-#: builtin/fetch.c:184
-msgid "do not fetch all tags (--no-tags)"
-msgstr ""
-
-#: builtin/fetch.c:186
-msgid "number of submodules fetched in parallel"
-msgstr ""
-
-#: builtin/fetch.c:188
-msgid "modify the refspec to place all refs within refs/prefetch/"
-msgstr ""
-
-#: builtin/fetch.c:190 builtin/pull.c:207
-msgid "prune remote-tracking branches no longer on remote"
-msgstr ""
-
-#: builtin/fetch.c:192
-msgid "prune local tags no longer on remote and clobber changed tags"
-msgstr ""
-
-#: builtin/fetch.c:193 builtin/fetch.c:221 builtin/pull.c:128
-msgid "on-demand"
-msgstr ""
-
-#: builtin/fetch.c:194
-msgid "control recursive fetching of submodules"
-msgstr ""
-
-#: builtin/fetch.c:199
-msgid "write fetched references to the FETCH_HEAD file"
-msgstr ""
-
-#: builtin/fetch.c:200 builtin/pull.c:215
-msgid "keep downloaded pack"
-msgstr ""
-
-#: builtin/fetch.c:202
-msgid "allow updating of HEAD ref"
-msgstr ""
-
-#: builtin/fetch.c:205 builtin/fetch.c:211 builtin/pull.c:218
-#: builtin/pull.c:227
-msgid "deepen history of shallow clone"
-msgstr ""
-
-#: builtin/fetch.c:207 builtin/pull.c:221
-msgid "deepen history of shallow repository based on time"
-msgstr ""
-
-#: builtin/fetch.c:213 builtin/pull.c:230
-msgid "convert to a complete repository"
-msgstr ""
-
-#: builtin/fetch.c:216
-msgid "re-fetch without negotiating common commits"
-msgstr ""
-
-#: builtin/fetch.c:219
-msgid "prepend this to submodule path output"
-msgstr ""
-
-#: builtin/fetch.c:222
-msgid ""
-"default for recursive fetching of submodules (lower priority than config "
-"files)"
-msgstr ""
-
-#: builtin/fetch.c:226 builtin/pull.c:233
-msgid "accept refs that update .git/shallow"
-msgstr ""
-
-#: builtin/fetch.c:227 builtin/pull.c:235
-msgid "refmap"
-msgstr ""
-
-#: builtin/fetch.c:228 builtin/pull.c:236
-msgid "specify fetch refmap"
-msgstr ""
-
-#: builtin/fetch.c:235 builtin/pull.c:249
-msgid "report that we have only objects reachable from this object"
-msgstr ""
-
-#: builtin/fetch.c:237
-msgid "do not fetch a packfile; instead, print ancestors of negotiation tips"
-msgstr ""
-
-#: builtin/fetch.c:240 builtin/fetch.c:242
-msgid "run 'maintenance --auto' after fetching"
-msgstr ""
-
-#: builtin/fetch.c:244 builtin/pull.c:252
-msgid "check for forced-updates on all updated branches"
-msgstr ""
-
-#: builtin/fetch.c:246
-msgid "write the commit-graph after fetching"
-msgstr ""
-
-#: builtin/fetch.c:248
-msgid "accept refspecs from stdin"
-msgstr ""
-
-#: builtin/fetch.c:642
+#: builtin/fetch.c:574
 msgid "couldn't find remote ref HEAD"
 msgstr ""
 
-#: builtin/fetch.c:924
+#: builtin/fetch.c:857
 #, c-format
 msgid "From %.*s\n"
 msgstr ""
 
-#: builtin/fetch.c:953
+#: builtin/fetch.c:901
 #, c-format
 msgid "object %s not found"
 msgstr ""
 
-#: builtin/fetch.c:957
+#: builtin/fetch.c:905
 msgid "[up to date]"
 msgstr ""
 
-#: builtin/fetch.c:969 builtin/fetch.c:985 builtin/fetch.c:1059
+#: builtin/fetch.c:918 builtin/fetch.c:936 builtin/fetch.c:1014
 msgid "[rejected]"
 msgstr ""
 
-#: builtin/fetch.c:970
+#: builtin/fetch.c:919
 msgid "can't fetch into checked-out branch"
 msgstr ""
 
-#: builtin/fetch.c:980
+#: builtin/fetch.c:930
 msgid "[tag update]"
 msgstr ""
 
-#: builtin/fetch.c:981 builtin/fetch.c:1019 builtin/fetch.c:1042
-#: builtin/fetch.c:1054
+#: builtin/fetch.c:931 builtin/fetch.c:971 builtin/fetch.c:995
+#: builtin/fetch.c:1008
 msgid "unable to update local ref"
 msgstr ""
 
-#: builtin/fetch.c:986
+#: builtin/fetch.c:937
 msgid "would clobber existing tag"
 msgstr ""
 
-#: builtin/fetch.c:1008
+#: builtin/fetch.c:960
 msgid "[new tag]"
 msgstr ""
 
-#: builtin/fetch.c:1011
+#: builtin/fetch.c:963
 msgid "[new branch]"
 msgstr ""
 
-#: builtin/fetch.c:1014
+#: builtin/fetch.c:966
 msgid "[new ref]"
 msgstr ""
 
-#: builtin/fetch.c:1054
+#: builtin/fetch.c:1008
 msgid "forced update"
 msgstr ""
 
-#: builtin/fetch.c:1059
+#: builtin/fetch.c:1014
 msgid "non-fast-forward"
 msgstr ""
 
-#: builtin/fetch.c:1090 builtin/fetch.c:1471 builtin/grep.c:820
+#: builtin/fetch.c:1046 builtin/fetch.c:1429 builtin/grep.c:820
 #: sequencer.c:3286
 #, c-format
 msgid "cannot open '%s'"
 msgstr ""
 
-#: builtin/fetch.c:1162
+#: builtin/fetch.c:1118
 msgid ""
 "fetch normally indicates which branches had a forced update,\n"
 "but that check has been disabled; to re-enable, use '--show-forced-updates'\n"
 "flag or run 'git config fetch.showForcedUpdates true'"
 msgstr ""
 
-#: builtin/fetch.c:1166
+#: builtin/fetch.c:1122
 #, c-format
 msgid ""
 "it took %.2f seconds to check forced updates; you can use\n"
@@ -6928,173 +6793,308 @@ msgid ""
 "to avoid this check\n"
 msgstr ""
 
-#: builtin/fetch.c:1192
+#: builtin/fetch.c:1148
 #, c-format
 msgid "%s did not send all necessary objects\n"
 msgstr ""
 
-#: builtin/fetch.c:1211
+#: builtin/fetch.c:1167
 #, c-format
 msgid "rejected %s because shallow roots are not allowed to be updated"
 msgstr ""
 
-#: builtin/fetch.c:1308
+#: builtin/fetch.c:1265
 #, c-format
 msgid ""
 "some local refs could not be updated; try running\n"
 " 'git remote prune %s' to remove any old, conflicting branches"
 msgstr ""
 
-#: builtin/fetch.c:1414
+#: builtin/fetch.c:1371
 #, c-format
 msgid "   (%s will become dangling)"
 msgstr ""
 
-#: builtin/fetch.c:1415
+#: builtin/fetch.c:1372
 #, c-format
 msgid "   (%s has become dangling)"
 msgstr ""
 
-#: builtin/fetch.c:1440
+#: builtin/fetch.c:1397
 msgid "[deleted]"
 msgstr ""
 
-#: builtin/fetch.c:1441 builtin/remote.c:1171
+#: builtin/fetch.c:1398 builtin/remote.c:1171
 msgid "(none)"
 msgstr ""
 
-#: builtin/fetch.c:1460
+#: builtin/fetch.c:1418
 #, c-format
 msgid "refusing to fetch into branch '%s' checked out at '%s'"
 msgstr ""
 
-#: builtin/fetch.c:1480
+#: builtin/fetch.c:1438
 #, c-format
 msgid "option \"%s\" value \"%s\" is not valid for %s"
 msgstr ""
 
-#: builtin/fetch.c:1483
+#: builtin/fetch.c:1441
 #, c-format
 msgid "option \"%s\" is ignored for %s\n"
 msgstr ""
 
-#: builtin/fetch.c:1509 object-file.c:2535
+#: builtin/fetch.c:1467 object-file.c:2535
 #, c-format
 msgid "%s is not a valid object"
 msgstr ""
 
-#: builtin/fetch.c:1511
+#: builtin/fetch.c:1469
 #, c-format
 msgid "the object %s does not exist"
 msgstr ""
 
-#: builtin/fetch.c:1776
+#: builtin/fetch.c:1735
 msgid "multiple branches detected, incompatible with --set-upstream"
 msgstr ""
 
-#: builtin/fetch.c:1788
+#: builtin/fetch.c:1747
 #, c-format
 msgid ""
 "could not set upstream of HEAD to '%s' from '%s' when it does not point to "
 "any branch."
 msgstr ""
 
-#: builtin/fetch.c:1801
+#: builtin/fetch.c:1760
 msgid "not setting upstream for a remote remote-tracking branch"
 msgstr ""
 
-#: builtin/fetch.c:1803
+#: builtin/fetch.c:1762
 msgid "not setting upstream for a remote tag"
 msgstr ""
 
-#: builtin/fetch.c:1805
+#: builtin/fetch.c:1764
 msgid "unknown branch type"
 msgstr ""
 
-#: builtin/fetch.c:1807
+#: builtin/fetch.c:1766
 msgid ""
 "no source branch found;\n"
 "you need to specify exactly one branch with the --set-upstream option"
 msgstr ""
 
-#: builtin/fetch.c:1935 builtin/fetch.c:2012
+#: builtin/fetch.c:1900 builtin/fetch.c:1978
 #, c-format
 msgid "Fetching %s\n"
 msgstr ""
 
-#: builtin/fetch.c:1946 builtin/fetch.c:2015
+#: builtin/fetch.c:1911 builtin/fetch.c:1981
 #, c-format
 msgid "could not fetch %s"
 msgstr ""
 
-#: builtin/fetch.c:1958
+#: builtin/fetch.c:1923
 #, c-format
 msgid "could not fetch '%s' (exit code: %d)\n"
 msgstr ""
 
-#: builtin/fetch.c:2075
+#: builtin/fetch.c:2042
 msgid ""
 "no remote repository specified; please specify either a URL or a\n"
 "remote name from which new revisions should be fetched"
 msgstr ""
 
-#: builtin/fetch.c:2111
+#: builtin/fetch.c:2078
 msgid "you need to specify a tag name"
 msgstr ""
 
-#: builtin/fetch.c:2202
+#: builtin/fetch.c:2134 builtin/pull.c:194
+msgid "fetch from all remotes"
+msgstr ""
+
+#: builtin/fetch.c:2136 builtin/pull.c:254
+msgid "set upstream for git pull/fetch"
+msgstr ""
+
+#: builtin/fetch.c:2138 builtin/pull.c:197
+msgid "append to .git/FETCH_HEAD instead of overwriting"
+msgstr ""
+
+#: builtin/fetch.c:2140
+msgid "use atomic transaction to update references"
+msgstr ""
+
+#: builtin/fetch.c:2142 builtin/pull.c:200
+msgid "path to upload pack on remote end"
+msgstr ""
+
+#: builtin/fetch.c:2143
+msgid "force overwrite of local reference"
+msgstr ""
+
+#: builtin/fetch.c:2145
+msgid "fetch from multiple remotes"
+msgstr ""
+
+#: builtin/fetch.c:2147 builtin/pull.c:204
+msgid "fetch all tags and associated objects"
+msgstr ""
+
+#: builtin/fetch.c:2149
+msgid "do not fetch all tags (--no-tags)"
+msgstr ""
+
+#: builtin/fetch.c:2151
+msgid "number of submodules fetched in parallel"
+msgstr ""
+
+#: builtin/fetch.c:2153
+msgid "modify the refspec to place all refs within refs/prefetch/"
+msgstr ""
+
+#: builtin/fetch.c:2155 builtin/pull.c:207
+msgid "prune remote-tracking branches no longer on remote"
+msgstr ""
+
+#: builtin/fetch.c:2157
+msgid "prune local tags no longer on remote and clobber changed tags"
+msgstr ""
+
+#: builtin/fetch.c:2158 builtin/fetch.c:2187 builtin/pull.c:128
+msgid "on-demand"
+msgstr ""
+
+#: builtin/fetch.c:2159
+msgid "control recursive fetching of submodules"
+msgstr ""
+
+#: builtin/fetch.c:2165
+msgid "write fetched references to the FETCH_HEAD file"
+msgstr ""
+
+#: builtin/fetch.c:2166 builtin/pull.c:215
+msgid "keep downloaded pack"
+msgstr ""
+
+#: builtin/fetch.c:2168
+msgid "allow updating of HEAD ref"
+msgstr ""
+
+#: builtin/fetch.c:2171 builtin/fetch.c:2177 builtin/pull.c:218
+#: builtin/pull.c:227
+msgid "deepen history of shallow clone"
+msgstr ""
+
+#: builtin/fetch.c:2173 builtin/pull.c:221
+msgid "deepen history of shallow repository based on time"
+msgstr ""
+
+#: builtin/fetch.c:2179 builtin/pull.c:230
+msgid "convert to a complete repository"
+msgstr ""
+
+#: builtin/fetch.c:2182
+msgid "re-fetch without negotiating common commits"
+msgstr ""
+
+#: builtin/fetch.c:2185
+msgid "prepend this to submodule path output"
+msgstr ""
+
+#: builtin/fetch.c:2188
+msgid ""
+"default for recursive fetching of submodules (lower priority than config "
+"files)"
+msgstr ""
+
+#: builtin/fetch.c:2192 builtin/pull.c:233
+msgid "accept refs that update .git/shallow"
+msgstr ""
+
+#: builtin/fetch.c:2193 builtin/pull.c:235
+msgid "refmap"
+msgstr ""
+
+#: builtin/fetch.c:2194 builtin/pull.c:236
+msgid "specify fetch refmap"
+msgstr ""
+
+#: builtin/fetch.c:2201 builtin/pull.c:249
+msgid "report that we have only objects reachable from this object"
+msgstr ""
+
+#: builtin/fetch.c:2203
+msgid "do not fetch a packfile; instead, print ancestors of negotiation tips"
+msgstr ""
+
+#: builtin/fetch.c:2206 builtin/fetch.c:2208
+msgid "run 'maintenance --auto' after fetching"
+msgstr ""
+
+#: builtin/fetch.c:2210 builtin/pull.c:252
+msgid "check for forced-updates on all updated branches"
+msgstr ""
+
+#: builtin/fetch.c:2212
+msgid "write the commit-graph after fetching"
+msgstr ""
+
+#: builtin/fetch.c:2214
+msgid "accept refspecs from stdin"
+msgstr ""
+
+#: builtin/fetch.c:2290
 msgid "--negotiate-only needs one or more --negotiation-tip=*"
 msgstr ""
 
-#: builtin/fetch.c:2206
+#: builtin/fetch.c:2294
 msgid "negative depth in --deepen is not supported"
 msgstr ""
 
-#: builtin/fetch.c:2215
+#: builtin/fetch.c:2303
 msgid "--unshallow on a complete repository does not make sense"
 msgstr ""
 
-#: builtin/fetch.c:2235
+#: builtin/fetch.c:2323
 #, c-format
 msgid "failed to fetch bundles from '%s'"
 msgstr ""
 
-#: builtin/fetch.c:2239
+#: builtin/fetch.c:2327
 msgid "fetch --all does not take a repository argument"
 msgstr ""
 
-#: builtin/fetch.c:2241
+#: builtin/fetch.c:2329
 msgid "fetch --all does not make sense with refspecs"
 msgstr ""
 
-#: builtin/fetch.c:2254
+#: builtin/fetch.c:2342
 #, c-format
 msgid "no such remote or remote group: %s"
 msgstr ""
 
-#: builtin/fetch.c:2262
+#: builtin/fetch.c:2350
 msgid "fetching a group and specifying refspecs does not make sense"
 msgstr ""
 
-#: builtin/fetch.c:2279
+#: builtin/fetch.c:2367
 msgid "must supply remote when using --negotiate-only"
 msgstr ""
 
-#: builtin/fetch.c:2284
+#: builtin/fetch.c:2372
 msgid "protocol does not support --negotiate-only, exiting"
 msgstr ""
 
-#: builtin/fetch.c:2304
+#: builtin/fetch.c:2393
 msgid ""
 "--filter can only be used with the remote configured in extensions."
 "partialclone"
 msgstr ""
 
-#: builtin/fetch.c:2308
+#: builtin/fetch.c:2397
 msgid "--atomic can only be used when fetching from one remote"
 msgstr ""
 
-#: builtin/fetch.c:2312
+#: builtin/fetch.c:2401
 msgid "--stdin can only be used when fetching from one remote"
 msgstr ""
 
@@ -7216,219 +7216,219 @@ msgstr ""
 msgid "got bad config --config=%s"
 msgstr ""
 
-#: builtin/fsck.c:76 builtin/fsck.c:135 builtin/fsck.c:136
+#: builtin/fsck.c:78 builtin/fsck.c:137 builtin/fsck.c:138
 msgid "unknown"
 msgstr ""
 
 #. TRANSLATORS: e.g. error in tree 01bfda: <more explanation>
-#: builtin/fsck.c:85 builtin/fsck.c:107
+#: builtin/fsck.c:87 builtin/fsck.c:109
 #, c-format
 msgid "error in %s %s: %s"
 msgstr ""
 
 #. TRANSLATORS: e.g. warning in tree 01bfda: <more explanation>
-#: builtin/fsck.c:101
+#: builtin/fsck.c:103
 #, c-format
 msgid "warning in %s %s: %s"
 msgstr ""
 
-#: builtin/fsck.c:131 builtin/fsck.c:134
+#: builtin/fsck.c:133 builtin/fsck.c:136
 #, c-format
 msgid "broken link from %7s %s"
 msgstr ""
 
-#: builtin/fsck.c:143
+#: builtin/fsck.c:145
 msgid "wrong object type in link"
 msgstr ""
 
-#: builtin/fsck.c:159
+#: builtin/fsck.c:161
 #, c-format
 msgid ""
 "broken link from %7s %s\n"
 "              to %7s %s"
 msgstr ""
 
-#: builtin/fsck.c:196 builtin/prune.c:63 connected.c:115
+#: builtin/fsck.c:198 builtin/prune.c:63 connected.c:115
 msgid "Checking connectivity"
 msgstr ""
 
-#: builtin/fsck.c:273
+#: builtin/fsck.c:275
 #, c-format
 msgid "missing %s %s"
 msgstr ""
 
-#: builtin/fsck.c:300
+#: builtin/fsck.c:302
 #, c-format
 msgid "unreachable %s %s"
 msgstr ""
 
-#: builtin/fsck.c:320
+#: builtin/fsck.c:322
 #, c-format
 msgid "dangling %s %s"
 msgstr ""
 
-#: builtin/fsck.c:330
+#: builtin/fsck.c:332
 msgid "could not create lost-found"
 msgstr ""
 
-#: builtin/fsck.c:337 builtin/gc.c:1902 builtin/rebase.c:216
+#: builtin/fsck.c:339 builtin/gc.c:1902 builtin/rebase.c:216
 #: rebase-interactive.c:122 rerere.c:476 rerere.c:684 sequencer.c:4007
 #: sequencer.c:4033 sequencer.c:6164
 #, c-format
 msgid "could not write '%s'"
 msgstr ""
 
-#: builtin/fsck.c:341
+#: builtin/fsck.c:343
 #, c-format
 msgid "could not finish '%s'"
 msgstr ""
 
-#: builtin/fsck.c:358
+#: builtin/fsck.c:360
 #, c-format
 msgid "Checking %s"
 msgstr ""
 
-#: builtin/fsck.c:396
+#: builtin/fsck.c:398
 #, c-format
 msgid "Checking connectivity (%d objects)"
 msgstr ""
 
-#: builtin/fsck.c:415
+#: builtin/fsck.c:417
 #, c-format
 msgid "Checking %s %s"
 msgstr ""
 
-#: builtin/fsck.c:420
+#: builtin/fsck.c:422
 msgid "broken links"
 msgstr ""
 
-#: builtin/fsck.c:429
+#: builtin/fsck.c:431
 #, c-format
 msgid "root %s"
 msgstr ""
 
-#: builtin/fsck.c:437
+#: builtin/fsck.c:439
 #, c-format
 msgid "tagged %s %s (%s) in %s"
 msgstr ""
 
-#: builtin/fsck.c:463
+#: builtin/fsck.c:465
 #, c-format
 msgid "%s: object corrupt or missing"
 msgstr ""
 
-#: builtin/fsck.c:488
+#: builtin/fsck.c:490
 #, c-format
 msgid "%s: invalid reflog entry %s"
 msgstr ""
 
-#: builtin/fsck.c:503
+#: builtin/fsck.c:505
 #, c-format
 msgid "Checking reflog %s->%s"
 msgstr ""
 
-#: builtin/fsck.c:538
+#: builtin/fsck.c:540
 #, c-format
 msgid "%s: invalid sha1 pointer %s"
 msgstr ""
 
-#: builtin/fsck.c:545
+#: builtin/fsck.c:547
 #, c-format
 msgid "%s: not a commit"
 msgstr ""
 
-#: builtin/fsck.c:599
+#: builtin/fsck.c:601
 msgid "notice: No default references"
 msgstr ""
 
-#: builtin/fsck.c:629
+#: builtin/fsck.c:631
 #, c-format
 msgid "%s: hash-path mismatch, found at: %s"
 msgstr ""
 
-#: builtin/fsck.c:632
+#: builtin/fsck.c:634
 #, c-format
 msgid "%s: object corrupt or missing: %s"
 msgstr ""
 
-#: builtin/fsck.c:636
+#: builtin/fsck.c:638
 #, c-format
 msgid "%s: object is of unknown type '%s': %s"
 msgstr ""
 
-#: builtin/fsck.c:653
+#: builtin/fsck.c:655
 #, c-format
 msgid "%s: object could not be parsed: %s"
 msgstr ""
 
-#: builtin/fsck.c:674
+#: builtin/fsck.c:676
 #, c-format
 msgid "bad sha1 file: %s"
 msgstr ""
 
-#: builtin/fsck.c:695
+#: builtin/fsck.c:697
 msgid "Checking object directory"
 msgstr ""
 
-#: builtin/fsck.c:698
+#: builtin/fsck.c:700
 msgid "Checking object directories"
 msgstr ""
 
-#: builtin/fsck.c:714
+#: builtin/fsck.c:716
 #, c-format
 msgid "Checking %s link"
 msgstr ""
 
-#: builtin/fsck.c:719 builtin/index-pack.c:874
+#: builtin/fsck.c:721 builtin/index-pack.c:874
 #, c-format
 msgid "invalid %s"
 msgstr ""
 
-#: builtin/fsck.c:726
+#: builtin/fsck.c:728
 #, c-format
 msgid "%s points to something strange (%s)"
 msgstr ""
 
-#: builtin/fsck.c:732
+#: builtin/fsck.c:734
 #, c-format
 msgid "%s: detached HEAD points at nothing"
 msgstr ""
 
-#: builtin/fsck.c:736
+#: builtin/fsck.c:738
 #, c-format
 msgid "notice: %s points to an unborn branch (%s)"
 msgstr ""
 
-#: builtin/fsck.c:748
+#: builtin/fsck.c:750
 #, c-format
 msgid "Checking cache tree of %s"
 msgstr ""
 
-#: builtin/fsck.c:753
+#: builtin/fsck.c:755
 #, c-format
 msgid "%s: invalid sha1 pointer in cache-tree of %s"
 msgstr ""
 
-#: builtin/fsck.c:762
+#: builtin/fsck.c:764
 msgid "non-tree in cache-tree"
 msgstr ""
 
-#: builtin/fsck.c:793
+#: builtin/fsck.c:795
 #, c-format
 msgid "%s: invalid sha1 pointer in resolve-undo of %s"
 msgstr ""
 
-#: builtin/fsck.c:880
+#: builtin/fsck.c:882
 #, c-format
 msgid "unable to load rev-index for pack '%s'"
 msgstr ""
 
-#: builtin/fsck.c:885
+#: builtin/fsck.c:887
 #, c-format
 msgid "invalid rev-index for pack '%s'"
 msgstr ""
 
-#: builtin/fsck.c:896
+#: builtin/fsck.c:898
 msgid ""
 "git fsck [--tags] [--root] [--unreachable] [--cache] [--no-reflogs]\n"
 "         [--[no-]full] [--strict] [--verbose] [--lost-found]\n"
@@ -7436,64 +7436,64 @@ msgid ""
 "         [--[no-]name-objects] [<object>...]"
 msgstr ""
 
-#: builtin/fsck.c:905
+#: builtin/fsck.c:907
 msgid "show unreachable objects"
 msgstr ""
 
-#: builtin/fsck.c:906
+#: builtin/fsck.c:908
 msgid "show dangling objects"
 msgstr ""
 
-#: builtin/fsck.c:907
+#: builtin/fsck.c:909
 msgid "report tags"
 msgstr ""
 
-#: builtin/fsck.c:908
+#: builtin/fsck.c:910
 msgid "report root nodes"
 msgstr ""
 
-#: builtin/fsck.c:909
+#: builtin/fsck.c:911
 msgid "make index objects head nodes"
 msgstr ""
 
-#: builtin/fsck.c:910
+#: builtin/fsck.c:912
 msgid "make reflogs head nodes (default)"
 msgstr ""
 
-#: builtin/fsck.c:911
+#: builtin/fsck.c:913
 msgid "also consider packs and alternate objects"
 msgstr ""
 
-#: builtin/fsck.c:912
+#: builtin/fsck.c:914
 msgid "check only connectivity"
 msgstr ""
 
-#: builtin/fsck.c:913 builtin/mktag.c:79
+#: builtin/fsck.c:915 builtin/mktag.c:79
 msgid "enable more strict checking"
 msgstr ""
 
-#: builtin/fsck.c:915
+#: builtin/fsck.c:917
 msgid "write dangling objects in .git/lost-found"
 msgstr ""
 
-#: builtin/fsck.c:916 builtin/prune.c:156
+#: builtin/fsck.c:918 builtin/prune.c:156
 msgid "show progress"
 msgstr ""
 
-#: builtin/fsck.c:917
+#: builtin/fsck.c:919
 msgid "show verbose names for reachable objects"
 msgstr ""
 
-#: builtin/fsck.c:978 builtin/index-pack.c:271
+#: builtin/fsck.c:980 builtin/index-pack.c:271
 msgid "Checking objects"
 msgstr ""
 
-#: builtin/fsck.c:1006
+#: builtin/fsck.c:1008
 #, c-format
 msgid "%s: object missing"
 msgstr ""
 
-#: builtin/fsck.c:1017
+#: builtin/fsck.c:1019
 #, c-format
 msgid "invalid parameter: expected sha1, got '%s'"
 msgstr ""
@@ -8863,7 +8863,7 @@ msgstr ""
 msgid "invalid --decorate option: %s"
 msgstr ""
 
-#: builtin/log.c:250 diff.c:5497
+#: builtin/log.c:250 diff.c:5503
 msgid "suppress diff output"
 msgstr ""
 
@@ -9295,7 +9295,7 @@ msgstr ""
 msgid "git ls-files [<options>] [<file>...]"
 msgstr ""
 
-#: builtin/ls-files.c:711 builtin/merge-tree.c:531
+#: builtin/ls-files.c:711 builtin/merge-tree.c:532
 msgid "separate paths with the NUL character"
 msgstr ""
 
@@ -9687,68 +9687,68 @@ msgstr ""
 msgid "Merging %s with %s\n"
 msgstr ""
 
-#: builtin/merge-tree.c:430 builtin/merge-tree.c:435 builtin/merge.c:1232
+#: builtin/merge-tree.c:431 builtin/merge-tree.c:436 builtin/merge.c:1232
 msgid "not something we can merge"
 msgstr ""
 
-#: builtin/merge-tree.c:465 builtin/merge.c:1556
+#: builtin/merge-tree.c:466 builtin/merge.c:1556
 msgid "refusing to merge unrelated histories"
 msgstr ""
 
-#: builtin/merge-tree.c:471
+#: builtin/merge-tree.c:472
 msgid "failure to merge"
 msgstr ""
 
-#: builtin/merge-tree.c:518
+#: builtin/merge-tree.c:519
 msgid "git merge-tree [--write-tree] [<options>] <branch1> <branch2>"
 msgstr ""
 
-#: builtin/merge-tree.c:519
+#: builtin/merge-tree.c:520
 msgid "git merge-tree [--trivial-merge] <base-tree> <branch1> <branch2>"
 msgstr ""
 
-#: builtin/merge-tree.c:524
+#: builtin/merge-tree.c:525
 msgid "do a real merge instead of a trivial merge"
 msgstr ""
 
-#: builtin/merge-tree.c:527
+#: builtin/merge-tree.c:528
 msgid "do a trivial merge only"
 msgstr ""
 
-#: builtin/merge-tree.c:529
+#: builtin/merge-tree.c:530
 msgid "also show informational/conflict messages"
 msgstr ""
 
-#: builtin/merge-tree.c:534
+#: builtin/merge-tree.c:535
 msgid "list filenames without modes/oids/stages"
 msgstr ""
 
-#: builtin/merge-tree.c:538 builtin/merge.c:309 builtin/pull.c:189
+#: builtin/merge-tree.c:539 builtin/merge.c:309 builtin/pull.c:189
 msgid "allow merging unrelated histories"
 msgstr ""
 
-#: builtin/merge-tree.c:542
+#: builtin/merge-tree.c:543
 msgid "perform multiple merges, one per line of input"
 msgstr ""
 
-#: builtin/merge-tree.c:547
+#: builtin/merge-tree.c:548
 msgid "specify a merge-base for the merge"
 msgstr ""
 
-#: builtin/merge-tree.c:561 builtin/merge-tree.c:626
+#: builtin/merge-tree.c:562 builtin/merge-tree.c:627
 msgid "--trivial-merge is incompatible with all other options"
 msgstr ""
 
-#: builtin/merge-tree.c:563
+#: builtin/merge-tree.c:564
 msgid "--merge-base is incompatible with --stdin"
 msgstr ""
 
-#: builtin/merge-tree.c:572 builtin/merge-tree.c:588 builtin/notes.c:313
+#: builtin/merge-tree.c:573 builtin/merge-tree.c:589 builtin/notes.c:313
 #, c-format
 msgid "malformed input line: '%s'."
 msgstr ""
 
-#: builtin/merge-tree.c:592
+#: builtin/merge-tree.c:593
 #, c-format
 msgid "merging cannot continue; got unclean result of %d"
 msgstr ""
@@ -10351,19 +10351,19 @@ msgstr ""
 msgid "list all commits reachable from all refs"
 msgstr ""
 
-#: builtin/name-rev.c:576
+#: builtin/name-rev.c:579
 msgid "deprecated: use --annotate-stdin instead"
 msgstr ""
 
-#: builtin/name-rev.c:577
+#: builtin/name-rev.c:581
 msgid "annotate text from stdin"
 msgstr ""
 
-#: builtin/name-rev.c:578
+#: builtin/name-rev.c:582
 msgid "allow to print `undefined` names (default)"
 msgstr ""
 
-#: builtin/name-rev.c:584
+#: builtin/name-rev.c:588
 msgid "dereference tags in the input (internal use)"
 msgstr ""
 
@@ -11603,85 +11603,85 @@ msgstr ""
 msgid "repository"
 msgstr ""
 
-#: builtin/push.c:598 builtin/send-pack.c:195
-msgid "push all refs"
+#: builtin/push.c:598
+msgid "push all branches"
 msgstr ""
 
-#: builtin/push.c:599 builtin/send-pack.c:197
+#: builtin/push.c:600 builtin/send-pack.c:197
 msgid "mirror all refs"
 msgstr ""
 
-#: builtin/push.c:601
+#: builtin/push.c:602
 msgid "delete refs"
 msgstr ""
 
-#: builtin/push.c:602
-msgid "push tags (can't be used with --all or --mirror)"
+#: builtin/push.c:603
+msgid "push tags (can't be used with --all or --branches or --mirror)"
 msgstr ""
 
-#: builtin/push.c:605 builtin/send-pack.c:198
+#: builtin/push.c:606 builtin/send-pack.c:198
 msgid "force updates"
 msgstr ""
 
-#: builtin/push.c:606 builtin/send-pack.c:210
+#: builtin/push.c:607 builtin/send-pack.c:210
 msgid "<refname>:<expect>"
 msgstr ""
 
-#: builtin/push.c:607 builtin/send-pack.c:211
+#: builtin/push.c:608 builtin/send-pack.c:211
 msgid "require old value of ref to be at this value"
 msgstr ""
 
-#: builtin/push.c:610 builtin/send-pack.c:214
+#: builtin/push.c:611 builtin/send-pack.c:214
 msgid "require remote updates to be integrated locally"
 msgstr ""
 
-#: builtin/push.c:613
+#: builtin/push.c:614
 msgid "control recursive pushing of submodules"
 msgstr ""
 
-#: builtin/push.c:614 builtin/send-pack.c:205
+#: builtin/push.c:615 builtin/send-pack.c:205
 msgid "use thin pack"
 msgstr ""
 
-#: builtin/push.c:615 builtin/push.c:616 builtin/send-pack.c:192
+#: builtin/push.c:616 builtin/push.c:617 builtin/send-pack.c:192
 #: builtin/send-pack.c:193
 msgid "receive pack program"
 msgstr ""
 
-#: builtin/push.c:617
+#: builtin/push.c:618
 msgid "set upstream for git pull/status"
 msgstr ""
 
-#: builtin/push.c:620
+#: builtin/push.c:621
 msgid "prune locally removed refs"
 msgstr ""
 
-#: builtin/push.c:622
+#: builtin/push.c:623
 msgid "bypass pre-push hook"
 msgstr ""
 
-#: builtin/push.c:623
+#: builtin/push.c:624
 msgid "push missing but relevant tags"
 msgstr ""
 
-#: builtin/push.c:625 builtin/send-pack.c:199
+#: builtin/push.c:626 builtin/send-pack.c:199
 msgid "GPG sign the push"
 msgstr ""
 
-#: builtin/push.c:627 builtin/send-pack.c:206
+#: builtin/push.c:628 builtin/send-pack.c:206
 msgid "request atomic transaction on remote side"
 msgstr ""
 
-#: builtin/push.c:647
+#: builtin/push.c:648
 msgid "--delete doesn't make sense without any refs"
 msgstr ""
 
-#: builtin/push.c:667 t/helper/test-bundle-uri.c:90
+#: builtin/push.c:668 t/helper/test-bundle-uri.c:90
 #, c-format
 msgid "bad repository '%s'"
 msgstr ""
 
-#: builtin/push.c:668
+#: builtin/push.c:669
 msgid ""
 "No configured push destination.\n"
 "Either specify the URL from the command-line or configure a remote "
@@ -11694,15 +11694,15 @@ msgid ""
 "    git push <name>\n"
 msgstr ""
 
-#: builtin/push.c:685
+#: builtin/push.c:686
 msgid "--all can't be combined with refspecs"
 msgstr ""
 
-#: builtin/push.c:691
+#: builtin/push.c:692
 msgid "--mirror can't be combined with refspecs"
 msgstr ""
 
-#: builtin/push.c:701
+#: builtin/push.c:702
 msgid "push options must not have new line characters"
 msgstr ""
 
@@ -13822,6 +13822,10 @@ msgstr ""
 msgid "remote name"
 msgstr ""
 
+#: builtin/send-pack.c:195
+msgid "push all refs"
+msgstr ""
+
 #: builtin/send-pack.c:207
 msgid "use stateless RPC protocol"
 msgstr ""
@@ -15860,7 +15864,7 @@ msgstr ""
 msgid "try to match the new branch name with a remote-tracking branch"
 msgstr ""
 
-#: builtin/worktree.c:646 diff.c:4768 parse-options.c:1220
+#: builtin/worktree.c:646 diff.c:4774 parse-options.c:1220
 #, c-format
 msgid "options '%s', '%s', and '%s' cannot be used together"
 msgstr ""
@@ -18123,30 +18127,30 @@ msgstr ""
 msgid "%s: smudge filter %s failed"
 msgstr ""
 
-#: credential.c:101
+#: credential.c:102
 #, c-format
 msgid "skipping credential lookup for key: credential.%s"
 msgstr ""
 
-#: credential.c:117
+#: credential.c:118
 msgid "refusing to work with credential missing host field"
 msgstr ""
 
-#: credential.c:119
+#: credential.c:120
 msgid "refusing to work with credential missing protocol field"
 msgstr ""
 
-#: credential.c:420
+#: credential.c:428
 #, c-format
 msgid "url contains a newline in its %s component: %s"
 msgstr ""
 
-#: credential.c:464
+#: credential.c:472
 #, c-format
 msgid "url has no scheme: %s"
 msgstr ""
 
-#: credential.c:537
+#: credential.c:545
 #, c-format
 msgid "credential url cannot be parsed: %s"
 msgstr ""
@@ -18347,552 +18351,552 @@ msgid ""
 "%s"
 msgstr ""
 
-#: diff.c:4366
+#: diff.c:4372
 #, c-format
 msgid "external diff died, stopping at %s"
 msgstr ""
 
-#: diff.c:4764 parse-options.c:1216
+#: diff.c:4770 parse-options.c:1216
 #, c-format
 msgid "options '%s', '%s', '%s', and '%s' cannot be used together"
 msgstr ""
 
-#: diff.c:4772
+#: diff.c:4778
 #, c-format
 msgid "options '%s' and '%s' cannot be used together, use '%s' with '%s'"
 msgstr ""
 
-#: diff.c:4776
+#: diff.c:4782
 #, c-format
 msgid ""
 "options '%s' and '%s' cannot be used together, use '%s' with '%s' and '%s'"
 msgstr ""
 
-#: diff.c:4856
+#: diff.c:4862
 msgid "--follow requires exactly one pathspec"
 msgstr ""
 
-#: diff.c:4908
+#: diff.c:4914
 #, c-format
 msgid "invalid --stat value: %s"
 msgstr ""
 
-#: diff.c:4913 diff.c:4918 diff.c:4923 diff.c:4928 diff.c:5430
+#: diff.c:4919 diff.c:4924 diff.c:4929 diff.c:4934 diff.c:5436
 #: parse-options.c:219 parse-options.c:223
 #, c-format
 msgid "%s expects a numerical value"
 msgstr ""
 
-#: diff.c:4945
+#: diff.c:4951
 #, c-format
 msgid ""
 "Failed to parse --dirstat/-X option parameter:\n"
 "%s"
 msgstr ""
 
-#: diff.c:4978
+#: diff.c:4984
 #, c-format
 msgid "unknown change class '%c' in --diff-filter=%s"
 msgstr ""
 
-#: diff.c:5002
+#: diff.c:5008
 #, c-format
 msgid "unknown value after ws-error-highlight=%.*s"
 msgstr ""
 
-#: diff.c:5016
+#: diff.c:5022
 #, c-format
 msgid "unable to resolve '%s'"
 msgstr ""
 
-#: diff.c:5066 diff.c:5072
+#: diff.c:5072 diff.c:5078
 #, c-format
 msgid "%s expects <n>/<m> form"
 msgstr ""
 
-#: diff.c:5084
+#: diff.c:5090
 #, c-format
 msgid "%s expects a character, got '%s'"
 msgstr ""
 
-#: diff.c:5105
+#: diff.c:5111
 #, c-format
 msgid "bad --color-moved argument: %s"
 msgstr ""
 
-#: diff.c:5124
+#: diff.c:5130
 #, c-format
 msgid "invalid mode '%s' in --color-moved-ws"
 msgstr ""
 
-#: diff.c:5164
+#: diff.c:5170
 msgid ""
 "option diff-algorithm accepts \"myers\", \"minimal\", \"patience\" and "
 "\"histogram\""
 msgstr ""
 
-#: diff.c:5215 diff.c:5235
+#: diff.c:5221 diff.c:5241
 #, c-format
 msgid "invalid argument to %s"
 msgstr ""
 
-#: diff.c:5350
+#: diff.c:5356
 #, c-format
 msgid "invalid regex given to -I: '%s'"
 msgstr ""
 
-#: diff.c:5399
+#: diff.c:5405
 #, c-format
 msgid "failed to parse --submodule option parameter: '%s'"
 msgstr ""
 
-#: diff.c:5455
+#: diff.c:5461
 #, c-format
 msgid "bad --word-diff argument: %s"
 msgstr ""
 
-#: diff.c:5492
+#: diff.c:5498
 msgid "Diff output format options"
 msgstr ""
 
-#: diff.c:5494 diff.c:5500
+#: diff.c:5500 diff.c:5506
 msgid "generate patch"
 msgstr ""
 
-#: diff.c:5502 diff.c:5619 diff.c:5626
+#: diff.c:5508 diff.c:5625 diff.c:5632
 msgid "<n>"
 msgstr ""
 
-#: diff.c:5503 diff.c:5506
+#: diff.c:5509 diff.c:5512
 msgid "generate diffs with <n> lines context"
 msgstr ""
 
-#: diff.c:5508
+#: diff.c:5514
 msgid "generate the diff in raw format"
 msgstr ""
 
-#: diff.c:5511
+#: diff.c:5517
 msgid "synonym for '-p --raw'"
 msgstr ""
 
-#: diff.c:5515
+#: diff.c:5521
 msgid "synonym for '-p --stat'"
 msgstr ""
 
-#: diff.c:5519
+#: diff.c:5525
 msgid "machine friendly --stat"
 msgstr ""
 
-#: diff.c:5522
+#: diff.c:5528
 msgid "output only the last line of --stat"
 msgstr ""
 
-#: diff.c:5524 diff.c:5532
+#: diff.c:5530 diff.c:5538
 msgid "<param1,param2>..."
 msgstr ""
 
-#: diff.c:5525
+#: diff.c:5531
 msgid ""
 "output the distribution of relative amount of changes for each sub-directory"
 msgstr ""
 
-#: diff.c:5529
+#: diff.c:5535
 msgid "synonym for --dirstat=cumulative"
 msgstr ""
 
-#: diff.c:5533
+#: diff.c:5539
 msgid "synonym for --dirstat=files,param1,param2..."
 msgstr ""
 
-#: diff.c:5537
+#: diff.c:5543
 msgid "warn if changes introduce conflict markers or whitespace errors"
 msgstr ""
 
-#: diff.c:5540
+#: diff.c:5546
 msgid "condensed summary such as creations, renames and mode changes"
 msgstr ""
 
-#: diff.c:5543
+#: diff.c:5549
 msgid "show only names of changed files"
 msgstr ""
 
-#: diff.c:5546
+#: diff.c:5552
 msgid "show only names and status of changed files"
 msgstr ""
 
-#: diff.c:5548
+#: diff.c:5554
 msgid "<width>[,<name-width>[,<count>]]"
 msgstr ""
 
-#: diff.c:5549
+#: diff.c:5555
 msgid "generate diffstat"
 msgstr ""
 
-#: diff.c:5551 diff.c:5554 diff.c:5557
+#: diff.c:5557 diff.c:5560 diff.c:5563
 msgid "<width>"
 msgstr ""
 
-#: diff.c:5552
+#: diff.c:5558
 msgid "generate diffstat with a given width"
 msgstr ""
 
-#: diff.c:5555
+#: diff.c:5561
 msgid "generate diffstat with a given name width"
 msgstr ""
 
-#: diff.c:5558
+#: diff.c:5564
 msgid "generate diffstat with a given graph width"
 msgstr ""
 
-#: diff.c:5560
+#: diff.c:5566
 msgid "<count>"
 msgstr ""
 
-#: diff.c:5561
+#: diff.c:5567
 msgid "generate diffstat with limited lines"
 msgstr ""
 
-#: diff.c:5564
+#: diff.c:5570
 msgid "generate compact summary in diffstat"
 msgstr ""
 
-#: diff.c:5567
+#: diff.c:5573
 msgid "output a binary diff that can be applied"
 msgstr ""
 
-#: diff.c:5570
+#: diff.c:5576
 msgid "show full pre- and post-image object names on the \"index\" lines"
 msgstr ""
 
-#: diff.c:5572
+#: diff.c:5578
 msgid "show colored diff"
 msgstr ""
 
-#: diff.c:5573
+#: diff.c:5579
 msgid "<kind>"
 msgstr ""
 
-#: diff.c:5574
+#: diff.c:5580
 msgid ""
 "highlight whitespace errors in the 'context', 'old' or 'new' lines in the "
 "diff"
 msgstr ""
 
-#: diff.c:5577
+#: diff.c:5583
 msgid ""
 "do not munge pathnames and use NULs as output field terminators in --raw or "
 "--numstat"
 msgstr ""
 
-#: diff.c:5580 diff.c:5583 diff.c:5586 diff.c:5700
+#: diff.c:5586 diff.c:5589 diff.c:5592 diff.c:5706
 msgid "<prefix>"
 msgstr ""
 
-#: diff.c:5581
+#: diff.c:5587
 msgid "show the given source prefix instead of \"a/\""
 msgstr ""
 
-#: diff.c:5584
+#: diff.c:5590
 msgid "show the given destination prefix instead of \"b/\""
 msgstr ""
 
-#: diff.c:5587
+#: diff.c:5593
 msgid "prepend an additional prefix to every line of output"
 msgstr ""
 
-#: diff.c:5590
+#: diff.c:5596
 msgid "do not show any source or destination prefix"
 msgstr ""
 
-#: diff.c:5593
+#: diff.c:5599
 msgid "use default prefixes a/ and b/"
 msgstr ""
 
-#: diff.c:5596
+#: diff.c:5602
 msgid "show context between diff hunks up to the specified number of lines"
 msgstr ""
 
-#: diff.c:5600 diff.c:5605 diff.c:5610
+#: diff.c:5606 diff.c:5611 diff.c:5616
 msgid "<char>"
 msgstr ""
 
-#: diff.c:5601
+#: diff.c:5607
 msgid "specify the character to indicate a new line instead of '+'"
 msgstr ""
 
-#: diff.c:5606
+#: diff.c:5612
 msgid "specify the character to indicate an old line instead of '-'"
 msgstr ""
 
-#: diff.c:5611
+#: diff.c:5617
 msgid "specify the character to indicate a context instead of ' '"
 msgstr ""
 
-#: diff.c:5614
+#: diff.c:5620
 msgid "Diff rename options"
 msgstr ""
 
-#: diff.c:5615
+#: diff.c:5621
 msgid "<n>[/<m>]"
 msgstr ""
 
-#: diff.c:5616
+#: diff.c:5622
 msgid "break complete rewrite changes into pairs of delete and create"
 msgstr ""
 
-#: diff.c:5620
+#: diff.c:5626
 msgid "detect renames"
 msgstr ""
 
-#: diff.c:5624
+#: diff.c:5630
 msgid "omit the preimage for deletes"
 msgstr ""
 
-#: diff.c:5627
+#: diff.c:5633
 msgid "detect copies"
 msgstr ""
 
-#: diff.c:5631
+#: diff.c:5637
 msgid "use unmodified files as source to find copies"
 msgstr ""
 
-#: diff.c:5633
+#: diff.c:5639
 msgid "disable rename detection"
 msgstr ""
 
-#: diff.c:5636
+#: diff.c:5642
 msgid "use empty blobs as rename source"
 msgstr ""
 
-#: diff.c:5638
+#: diff.c:5644
 msgid "continue listing the history of a file beyond renames"
 msgstr ""
 
-#: diff.c:5641
+#: diff.c:5647
 msgid ""
 "prevent rename/copy detection if the number of rename/copy targets exceeds "
 "given limit"
 msgstr ""
 
-#: diff.c:5643
+#: diff.c:5649
 msgid "Diff algorithm options"
 msgstr ""
 
-#: diff.c:5645
+#: diff.c:5651
 msgid "produce the smallest possible diff"
 msgstr ""
 
-#: diff.c:5649
+#: diff.c:5655
 msgid "ignore whitespace when comparing lines"
 msgstr ""
 
-#: diff.c:5652
+#: diff.c:5658
 msgid "ignore changes in amount of whitespace"
 msgstr ""
 
-#: diff.c:5655
+#: diff.c:5661
 msgid "ignore changes in whitespace at EOL"
 msgstr ""
 
-#: diff.c:5658
+#: diff.c:5664
 msgid "ignore carrier-return at the end of line"
 msgstr ""
 
-#: diff.c:5661
+#: diff.c:5667
 msgid "ignore changes whose lines are all blank"
 msgstr ""
 
-#: diff.c:5663 diff.c:5686 diff.c:5689 diff.c:5734
+#: diff.c:5669 diff.c:5692 diff.c:5695 diff.c:5740
 msgid "<regex>"
 msgstr ""
 
-#: diff.c:5664
+#: diff.c:5670
 msgid "ignore changes whose all lines match <regex>"
 msgstr ""
 
-#: diff.c:5667
+#: diff.c:5673
 msgid "heuristic to shift diff hunk boundaries for easy reading"
 msgstr ""
 
-#: diff.c:5670
+#: diff.c:5676
 msgid "generate diff using the \"patience diff\" algorithm"
 msgstr ""
 
-#: diff.c:5674
+#: diff.c:5680
 msgid "generate diff using the \"histogram diff\" algorithm"
 msgstr ""
 
-#: diff.c:5677
+#: diff.c:5683
 msgid "<algorithm>"
 msgstr ""
 
-#: diff.c:5678
+#: diff.c:5684
 msgid "choose a diff algorithm"
 msgstr ""
 
-#: diff.c:5680
+#: diff.c:5686
 msgid "<text>"
 msgstr ""
 
-#: diff.c:5681
+#: diff.c:5687
 msgid "generate diff using the \"anchored diff\" algorithm"
 msgstr ""
 
-#: diff.c:5683 diff.c:5692 diff.c:5695
+#: diff.c:5689 diff.c:5698 diff.c:5701
 msgid "<mode>"
 msgstr ""
 
-#: diff.c:5684
+#: diff.c:5690
 msgid "show word diff, using <mode> to delimit changed words"
 msgstr ""
 
-#: diff.c:5687
+#: diff.c:5693
 msgid "use <regex> to decide what a word is"
 msgstr ""
 
-#: diff.c:5690
+#: diff.c:5696
 msgid "equivalent to --word-diff=color --word-diff-regex=<regex>"
 msgstr ""
 
-#: diff.c:5693
+#: diff.c:5699
 msgid "moved lines of code are colored differently"
 msgstr ""
 
-#: diff.c:5696
+#: diff.c:5702
 msgid "how white spaces are ignored in --color-moved"
 msgstr ""
 
-#: diff.c:5699
+#: diff.c:5705
 msgid "Other diff options"
 msgstr ""
 
-#: diff.c:5701
+#: diff.c:5707
 msgid "when run from subdir, exclude changes outside and show relative paths"
 msgstr ""
 
-#: diff.c:5705
+#: diff.c:5711
 msgid "treat all files as text"
 msgstr ""
 
-#: diff.c:5707
+#: diff.c:5713
 msgid "swap two inputs, reverse the diff"
 msgstr ""
 
-#: diff.c:5709
+#: diff.c:5715
 msgid "exit with 1 if there were differences, 0 otherwise"
 msgstr ""
 
-#: diff.c:5711
+#: diff.c:5717
 msgid "disable all output of the program"
 msgstr ""
 
-#: diff.c:5713
+#: diff.c:5719
 msgid "allow an external diff helper to be executed"
 msgstr ""
 
-#: diff.c:5715
+#: diff.c:5721
 msgid "run external text conversion filters when comparing binary files"
 msgstr ""
 
-#: diff.c:5717
+#: diff.c:5723
 msgid "<when>"
 msgstr ""
 
-#: diff.c:5718
+#: diff.c:5724
 msgid "ignore changes to submodules in the diff generation"
 msgstr ""
 
-#: diff.c:5721
+#: diff.c:5727
 msgid "<format>"
 msgstr ""
 
-#: diff.c:5722
+#: diff.c:5728
 msgid "specify how differences in submodules are shown"
 msgstr ""
 
-#: diff.c:5726
+#: diff.c:5732
 msgid "hide 'git add -N' entries from the index"
 msgstr ""
 
-#: diff.c:5729
+#: diff.c:5735
 msgid "treat 'git add -N' entries as real in the index"
 msgstr ""
 
-#: diff.c:5731
+#: diff.c:5737
 msgid "<string>"
 msgstr ""
 
-#: diff.c:5732
+#: diff.c:5738
 msgid ""
 "look for differences that change the number of occurrences of the specified "
 "string"
 msgstr ""
 
-#: diff.c:5735
+#: diff.c:5741
 msgid ""
 "look for differences that change the number of occurrences of the specified "
 "regex"
 msgstr ""
 
-#: diff.c:5738
+#: diff.c:5744
 msgid "show all changes in the changeset with -S or -G"
 msgstr ""
 
-#: diff.c:5741
+#: diff.c:5747
 msgid "treat <string> in -S as extended POSIX regular expression"
 msgstr ""
 
-#: diff.c:5744
+#: diff.c:5750
 msgid "control the order in which files appear in the output"
 msgstr ""
 
-#: diff.c:5745 diff.c:5748
+#: diff.c:5751 diff.c:5754
 msgid "<path>"
 msgstr ""
 
-#: diff.c:5746
+#: diff.c:5752
 msgid "show the change in the specified path first"
 msgstr ""
 
-#: diff.c:5749
+#: diff.c:5755
 msgid "skip the output to the specified path"
 msgstr ""
 
-#: diff.c:5751
+#: diff.c:5757
 msgid "<object-id>"
 msgstr ""
 
-#: diff.c:5752
+#: diff.c:5758
 msgid ""
 "look for differences that change the number of occurrences of the specified "
 "object"
 msgstr ""
 
-#: diff.c:5754
+#: diff.c:5760
 msgid "[(A|C|D|M|R|T|U|X|B)...[*]]"
 msgstr ""
 
-#: diff.c:5755
+#: diff.c:5761
 msgid "select files by diff type"
 msgstr ""
 
-#: diff.c:5757
+#: diff.c:5763
 msgid "<file>"
 msgstr ""
 
-#: diff.c:5758
+#: diff.c:5764
 msgid "output to a specific file"
 msgstr ""
 
-#: diff.c:6448
+#: diff.c:6454
 msgid "exhaustive rename detection was skipped due to too many files."
 msgstr ""
 
-#: diff.c:6451
+#: diff.c:6457
 msgid "only found copies from modified paths due to too many files."
 msgstr ""
 
-#: diff.c:6454
+#: diff.c:6460
 #, c-format
 msgid ""
 "you may want to set your %s variable to at least %d and retry the command."
@@ -21208,6 +21212,11 @@ msgstr ""
 #: pack-bitmap.c:2294
 #, c-format
 msgid "unable to get disk usage of '%s'"
+msgstr ""
+
+#: pack-bitmap.c:2367
+#, c-format
+msgid "bitmap file '%s' has invalid checksum"
 msgstr ""
 
 #: pack-mtimes.c:48
@@ -24092,28 +24101,28 @@ msgstr ""
 msgid "failed to stat '%*s%s%s'"
 msgstr ""
 
-#: setup.c:1459
+#: setup.c:1460
 msgid "Unable to read current working directory"
 msgstr ""
 
-#: setup.c:1468 setup.c:1474
+#: setup.c:1469 setup.c:1475
 #, c-format
 msgid "cannot change to '%s'"
 msgstr ""
 
-#: setup.c:1479
+#: setup.c:1480
 #, c-format
 msgid "not a git repository (or any of the parent directories): %s"
 msgstr ""
 
-#: setup.c:1485
+#: setup.c:1486
 #, c-format
 msgid ""
 "not a git repository (or any parent up to mount point %s)\n"
 "Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set)."
 msgstr ""
 
-#: setup.c:1496
+#: setup.c:1497
 #, c-format
 msgid ""
 "detected dubious ownership in repository at '%s'\n"
@@ -24122,23 +24131,23 @@ msgid ""
 "\tgit config --global --add safe.directory %s"
 msgstr ""
 
-#: setup.c:1507
+#: setup.c:1508
 #, c-format
 msgid "cannot use bare repository '%s' (safe.bareRepository is '%s')"
 msgstr ""
 
-#: setup.c:1634
+#: setup.c:1635
 #, c-format
 msgid ""
 "problem with core.sharedRepository filemode value (0%.3o).\n"
 "The owner of files must always have read and write permissions."
 msgstr ""
 
-#: setup.c:1696
+#: setup.c:1697
 msgid "fork failed"
 msgstr ""
 
-#: setup.c:1701
+#: setup.c:1702
 msgid "setsid failed"
 msgstr ""
 
@@ -25855,86 +25864,86 @@ msgstr ""
 msgid "Unable to determine absolute path of git directory"
 msgstr ""
 
-#: git-send-email.perl:159
+#: git-send-email.perl:161
 msgid "local zone differs from GMT by a non-minute interval\n"
 msgstr ""
 
-#: git-send-email.perl:166 git-send-email.perl:172
+#: git-send-email.perl:168 git-send-email.perl:174
 msgid "local time offset greater than or equal to 24 hours\n"
 msgstr ""
 
-#: git-send-email.perl:248
+#: git-send-email.perl:250
 #, perl-format
 msgid "fatal: command '%s' died with exit code %d"
 msgstr ""
 
-#: git-send-email.perl:261
+#: git-send-email.perl:263
 msgid "the editor exited uncleanly, aborting everything"
 msgstr ""
 
-#: git-send-email.perl:350
+#: git-send-email.perl:353
 #, perl-format
 msgid ""
 "'%s' contains an intermediate version of the email you were composing.\n"
 msgstr ""
 
-#: git-send-email.perl:355
+#: git-send-email.perl:358
 #, perl-format
 msgid "'%s.final' contains the composed email.\n"
 msgstr ""
 
-#: git-send-email.perl:488
+#: git-send-email.perl:491
 msgid "--dump-aliases incompatible with other options\n"
 msgstr ""
 
-#: git-send-email.perl:566
+#: git-send-email.perl:571
 msgid ""
 "fatal: found configuration options for 'sendmail'\n"
 "git-send-email is configured with the sendemail.* options - note the 'e'.\n"
 "Set sendemail.forbidSendmailVariables to false to disable this check.\n"
 msgstr ""
 
-#: git-send-email.perl:571 git-send-email.perl:787
+#: git-send-email.perl:576 git-send-email.perl:792
 msgid "Cannot run git format-patch from outside a repository\n"
 msgstr ""
 
-#: git-send-email.perl:574
+#: git-send-email.perl:579
 msgid ""
 "`batch-size` and `relogin` must be specified together (via command-line or "
 "configuration option)\n"
 msgstr ""
 
-#: git-send-email.perl:587
+#: git-send-email.perl:592
 #, perl-format
 msgid "Unknown --suppress-cc field: '%s'\n"
 msgstr ""
 
-#: git-send-email.perl:618
+#: git-send-email.perl:623
 #, perl-format
 msgid "Unknown --confirm setting: '%s'\n"
 msgstr ""
 
-#: git-send-email.perl:658
+#: git-send-email.perl:663
 #, perl-format
 msgid "warning: sendmail alias with quotes is not supported: %s\n"
 msgstr ""
 
-#: git-send-email.perl:660
+#: git-send-email.perl:665
 #, perl-format
 msgid "warning: `:include:` not supported: %s\n"
 msgstr ""
 
-#: git-send-email.perl:662
+#: git-send-email.perl:667
 #, perl-format
 msgid "warning: `/file` or `|pipe` redirection not supported: %s\n"
 msgstr ""
 
-#: git-send-email.perl:667
+#: git-send-email.perl:672
 #, perl-format
 msgid "warning: sendmail line is not recognized: %s\n"
 msgstr ""
 
-#: git-send-email.perl:752
+#: git-send-email.perl:757
 #, perl-format
 msgid ""
 "File '%s' exists but it could also be the range of commits\n"
@@ -25944,29 +25953,29 @@ msgid ""
 "    * Giving --format-patch option if you mean a range.\n"
 msgstr ""
 
-#: git-send-email.perl:773
+#: git-send-email.perl:778
 #, perl-format
 msgid "Failed to opendir %s: %s"
 msgstr ""
 
-#: git-send-email.perl:825
+#: git-send-email.perl:845
 msgid ""
 "\n"
 "No patch files specified!\n"
 "\n"
 msgstr ""
 
-#: git-send-email.perl:838
+#: git-send-email.perl:858
 #, perl-format
 msgid "No subject line in %s?"
 msgstr ""
 
-#: git-send-email.perl:849
+#: git-send-email.perl:869
 #, perl-format
 msgid "Failed to open for writing %s: %s"
 msgstr ""
 
-#: git-send-email.perl:860
+#: git-send-email.perl:880
 msgid ""
 "Lines beginning in \"GIT:\" will be removed.\n"
 "Consider including an overall diffstat or table of contents\n"
@@ -25975,37 +25984,37 @@ msgid ""
 "Clear the body content if you don't wish to send a summary.\n"
 msgstr ""
 
-#: git-send-email.perl:884
+#: git-send-email.perl:904
 #, perl-format
 msgid "Failed to open %s: %s"
 msgstr ""
 
-#: git-send-email.perl:901
+#: git-send-email.perl:921
 #, perl-format
 msgid "Failed to open %s.final: %s"
 msgstr ""
 
-#: git-send-email.perl:944
+#: git-send-email.perl:964
 msgid "Summary email is empty, skipping it\n"
 msgstr ""
 
 #. TRANSLATORS: please keep [y/N] as is.
-#: git-send-email.perl:993
+#: git-send-email.perl:1013
 #, perl-format
 msgid "Are you sure you want to use <%s> [y/N]? "
 msgstr ""
 
-#: git-send-email.perl:1048
+#: git-send-email.perl:1068
 msgid ""
 "The following files are 8bit, but do not declare a Content-Transfer-"
 "Encoding.\n"
 msgstr ""
 
-#: git-send-email.perl:1053
+#: git-send-email.perl:1073
 msgid "Which 8bit encoding should I declare [UTF-8]? "
 msgstr ""
 
-#: git-send-email.perl:1061
+#: git-send-email.perl:1081
 #, perl-format
 msgid ""
 "Refusing to send because the patch\n"
@@ -26014,20 +26023,20 @@ msgid ""
 "want to send.\n"
 msgstr ""
 
-#: git-send-email.perl:1080
+#: git-send-email.perl:1088
 msgid "To whom should the emails be sent (if anyone)?"
 msgstr ""
 
-#: git-send-email.perl:1098
+#: git-send-email.perl:1106
 #, perl-format
 msgid "fatal: alias '%s' expands to itself\n"
 msgstr ""
 
-#: git-send-email.perl:1110
+#: git-send-email.perl:1118
 msgid "Message-ID to be used as In-Reply-To for the first email (if any)? "
 msgstr ""
 
-#: git-send-email.perl:1172 git-send-email.perl:1180
+#: git-send-email.perl:1180 git-send-email.perl:1188
 #, perl-format
 msgid "error: unable to extract a valid address from: %s\n"
 msgstr ""
@@ -26035,16 +26044,16 @@ msgstr ""
 #. TRANSLATORS: Make sure to include [q] [d] [e] in your
 #. translation. The program will only accept English input
 #. at this point.
-#: git-send-email.perl:1184
+#: git-send-email.perl:1192
 msgid "What to do with this address? ([q]uit|[d]rop|[e]dit): "
 msgstr ""
 
-#: git-send-email.perl:1504
+#: git-send-email.perl:1508
 #, perl-format
 msgid "CA path \"%s\" does not exist"
 msgstr ""
 
-#: git-send-email.perl:1587
+#: git-send-email.perl:1598
 msgid ""
 "    The Cc list above has been expanded by additional\n"
 "    addresses found in the patch commit message. By default\n"
@@ -26061,112 +26070,117 @@ msgstr ""
 #. TRANSLATORS: Make sure to include [y] [n] [e] [q] [a] in your
 #. translation. The program will only accept English input
 #. at this point.
-#: git-send-email.perl:1602
+#: git-send-email.perl:1613
 msgid "Send this email? ([y]es|[n]o|[e]dit|[q]uit|[a]ll): "
 msgstr ""
 
-#: git-send-email.perl:1605
+#: git-send-email.perl:1616
 msgid "Send this email reply required"
 msgstr ""
 
-#: git-send-email.perl:1639
+#: git-send-email.perl:1650
 msgid "The required SMTP server is not properly defined."
 msgstr ""
 
-#: git-send-email.perl:1686
+#: git-send-email.perl:1697
 #, perl-format
 msgid "Server does not support STARTTLS! %s"
 msgstr ""
 
-#: git-send-email.perl:1691 git-send-email.perl:1695
+#: git-send-email.perl:1702 git-send-email.perl:1706
 #, perl-format
 msgid "STARTTLS failed! %s"
 msgstr ""
 
-#: git-send-email.perl:1704
+#: git-send-email.perl:1715
 msgid "Unable to initialize SMTP properly. Check config and use --smtp-debug."
 msgstr ""
 
-#: git-send-email.perl:1722
+#: git-send-email.perl:1733
 #, perl-format
 msgid "Failed to send %s\n"
 msgstr ""
 
-#: git-send-email.perl:1725
+#: git-send-email.perl:1736
 #, perl-format
 msgid "Dry-Sent %s\n"
 msgstr ""
 
-#: git-send-email.perl:1725
+#: git-send-email.perl:1736
 #, perl-format
 msgid "Sent %s\n"
 msgstr ""
 
-#: git-send-email.perl:1727
+#: git-send-email.perl:1738
 msgid "Dry-OK. Log says:\n"
 msgstr ""
 
-#: git-send-email.perl:1727
+#: git-send-email.perl:1738
 msgid "OK. Log says:\n"
 msgstr ""
 
-#: git-send-email.perl:1746
+#: git-send-email.perl:1757
 msgid "Result: "
 msgstr ""
 
-#: git-send-email.perl:1749
+#: git-send-email.perl:1760
 msgid "Result: OK\n"
 msgstr ""
 
-#: git-send-email.perl:1766
+#: git-send-email.perl:1774
 #, perl-format
 msgid "can't open file %s"
 msgstr ""
 
-#: git-send-email.perl:1814 git-send-email.perl:1834
+#: git-send-email.perl:1822 git-send-email.perl:1842
 #, perl-format
 msgid "(mbox) Adding cc: %s from line '%s'\n"
 msgstr ""
 
-#: git-send-email.perl:1820
+#: git-send-email.perl:1828
 #, perl-format
 msgid "(mbox) Adding to: %s from line '%s'\n"
 msgstr ""
 
-#: git-send-email.perl:1877
+#: git-send-email.perl:1885
 #, perl-format
 msgid "(non-mbox) Adding cc: %s from line '%s'\n"
 msgstr ""
 
-#: git-send-email.perl:1912
+#: git-send-email.perl:1920
 #, perl-format
 msgid "(body) Adding cc: %s from line '%s'\n"
 msgstr ""
 
-#: git-send-email.perl:2031
+#: git-send-email.perl:2049
 #, perl-format
 msgid "(%s) Could not execute '%s'"
 msgstr ""
 
-#: git-send-email.perl:2038
+#: git-send-email.perl:2051
 #, perl-format
-msgid "(%s) Adding %s: %s from: '%s'\n"
+msgid "(%s) Malformed output from '%s'"
 msgstr ""
 
-#: git-send-email.perl:2042
+#: git-send-email.perl:2060
 #, perl-format
 msgid "(%s) failed to close pipe to '%s'"
 msgstr ""
 
-#: git-send-email.perl:2072
+#: git-send-email.perl:2104
+#, perl-format
+msgid "(%s) Adding %s: %s from: '%s'\n"
+msgstr ""
+
+#: git-send-email.perl:2136
 msgid "cannot send message as 7bit"
 msgstr ""
 
-#: git-send-email.perl:2080
+#: git-send-email.perl:2144
 msgid "invalid transfer encoding"
 msgstr ""
 
-#: git-send-email.perl:2122
+#: git-send-email.perl:2197
 #, perl-format
 msgid ""
 "fatal: %s: rejected by %s hook\n"
@@ -26174,25 +26188,25 @@ msgid ""
 "warning: no patches were sent\n"
 msgstr ""
 
-#: git-send-email.perl:2132 git-send-email.perl:2185 git-send-email.perl:2195
+#: git-send-email.perl:2207 git-send-email.perl:2260 git-send-email.perl:2270
 #, perl-format
 msgid "unable to open %s: %s\n"
 msgstr ""
 
-#: git-send-email.perl:2135
+#: git-send-email.perl:2210
 #, perl-format
 msgid ""
 "fatal: %s:%d is longer than 998 characters\n"
 "warning: no patches were sent\n"
 msgstr ""
 
-#: git-send-email.perl:2153
+#: git-send-email.perl:2228
 #, perl-format
 msgid "Skipping %s with backup suffix '%s'.\n"
 msgstr ""
 
 #. TRANSLATORS: please keep "[y|N]" as is.
-#: git-send-email.perl:2157
+#: git-send-email.perl:2232
 #, perl-format
 msgid "Do you really want to send %s? [y|N]: "
 msgstr ""
