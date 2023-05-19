@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2023-05-15 23:57+0000\n"
+"POT-Creation-Date: 2023-05-19 19:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -1654,44 +1654,48 @@ msgstr ""
 msgid "Argument not supported for format '%s': -%d"
 msgstr ""
 
-#: attr.c:205
+#: attr.c:206
 #, c-format
 msgid "%.*s is not a valid attribute name"
 msgstr ""
 
-#: attr.c:233
+#: attr.c:234
 msgid "unable to add additional attribute"
 msgstr ""
 
-#: attr.c:355
+#: attr.c:356
 #, c-format
 msgid "ignoring overly long attributes line %d"
 msgstr ""
 
-#: attr.c:370
+#: attr.c:371
 #, c-format
 msgid "%s not allowed: %s:%d"
 msgstr ""
 
-#: attr.c:409
+#: attr.c:410
 msgid ""
 "Negative patterns are ignored in git attributes\n"
 "Use '\\!' for literal leading exclamation."
 msgstr ""
 
-#: attr.c:732
+#: attr.c:733
 #, c-format
 msgid "cannot fstat gitattributes file '%s'"
 msgstr ""
 
-#: attr.c:737
+#: attr.c:738
 #, c-format
 msgid "ignoring overly large gitattributes file '%s'"
 msgstr ""
 
-#: attr.c:832
+#: attr.c:833
 #, c-format
 msgid "ignoring overly large gitattributes blob '%s'"
+msgstr ""
+
+#: attr.c:1190
+msgid "bad --attr-source or GIT_ATTR_SOURCE"
 msgstr ""
 
 #: bisect.c:490
@@ -8329,12 +8333,12 @@ msgstr ""
 msgid "no info viewer handled the request"
 msgstr ""
 
-#: builtin/help.c:571 builtin/help.c:582 git.c:340
+#: builtin/help.c:571 builtin/help.c:582 git.c:356
 #, c-format
 msgid "'%s' is aliased to '%s'"
 msgstr ""
 
-#: builtin/help.c:585 git.c:372
+#: builtin/help.c:585 git.c:388
 #, c-format
 msgid "bad alias.%s string: %s"
 msgstr ""
@@ -10139,7 +10143,7 @@ msgstr ""
 msgid "object '%s' tagged as '%s', but is a '%s' type"
 msgstr ""
 
-#: builtin/mktag.c:92 imap-send.c:1566 trailer.c:771
+#: builtin/mktag.c:92 imap-send.c:1567 trailer.c:771
 msgid "could not read from stdin"
 msgstr ""
 
@@ -19306,7 +19310,7 @@ msgid ""
 "sockets support"
 msgstr ""
 
-#: git.c:34
+#: git.c:35
 msgid ""
 "git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n"
 "           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n"
@@ -19316,7 +19320,7 @@ msgid ""
 "           [--config-env=<name>=<envvar>] <command> [<args>]"
 msgstr ""
 
-#: git.c:41
+#: git.c:42
 msgid ""
 "'git help -a' and 'git help -g' list available subcommands and some\n"
 "concept guides. See 'git help <command>' or 'git help <concept>'\n"
@@ -19324,93 +19328,98 @@ msgid ""
 "See 'git help git' for an overview of the system."
 msgstr ""
 
-#: git.c:105 help.c:395
+#: git.c:106 help.c:395
 #, c-format
 msgid "unsupported command listing type '%s'"
 msgstr ""
 
-#: git.c:194 git.c:222 git.c:292
+#: git.c:195 git.c:223 git.c:293
 #, c-format
 msgid "no directory given for '%s' option\n"
 msgstr ""
 
-#: git.c:208
+#: git.c:209
 #, c-format
 msgid "no namespace given for --namespace\n"
 msgstr ""
 
-#: git.c:244
+#: git.c:245
 #, c-format
 msgid "-c expects a configuration string\n"
 msgstr ""
 
-#: git.c:252
+#: git.c:253
 #, c-format
 msgid "no config key given for --config-env\n"
 msgstr ""
 
-#: git.c:318
+#: git.c:320
+#, c-format
+msgid "no attribute source given for --attr-source\n"
+msgstr ""
+
+#: git.c:334
 #, c-format
 msgid "unknown option: %s\n"
 msgstr ""
 
-#: git.c:367
+#: git.c:383
 #, c-format
 msgid "while expanding alias '%s': '%s'"
 msgstr ""
 
-#: git.c:376
+#: git.c:392
 #, c-format
 msgid ""
 "alias '%s' changes environment variables.\n"
 "You can use '!git' in the alias to do this"
 msgstr ""
 
-#: git.c:383
+#: git.c:399
 #, c-format
 msgid "empty alias for %s"
 msgstr ""
 
-#: git.c:386
+#: git.c:402
 #, c-format
 msgid "recursive alias: %s"
 msgstr ""
 
-#: git.c:467
+#: git.c:483
 msgid "write failure on standard output"
 msgstr ""
 
-#: git.c:469
+#: git.c:485
 msgid "unknown write failure on standard output"
 msgstr ""
 
-#: git.c:471
+#: git.c:487
 msgid "close failed on standard output"
 msgstr ""
 
-#: git.c:822
+#: git.c:838
 #, c-format
 msgid "alias loop detected: expansion of '%s' does not terminate:%s"
 msgstr ""
 
-#: git.c:872
+#: git.c:888
 #, c-format
 msgid "cannot handle %s as a builtin"
 msgstr ""
 
-#: git.c:883
+#: git.c:899
 #, c-format
 msgid ""
 "usage: %s\n"
 "\n"
 msgstr ""
 
-#: git.c:909
+#: git.c:925
 #, c-format
 msgid "expansion of alias '%s' failed; '%s' is not a git command\n"
 msgstr ""
 
-#: git.c:921
+#: git.c:937
 #, c-format
 msgid "failed to run command '%s': %s\n"
 msgstr ""
@@ -22877,7 +22886,7 @@ msgstr ""
 msgid "-L does not yet support diff formats besides -p and -s"
 msgstr ""
 
-#: run-command.c:1235
+#: run-command.c:1236
 #, c-format
 msgid "cannot create async thread: %s"
 msgstr ""
@@ -25085,7 +25094,7 @@ msgstr ""
 msgid "worktree and untracked commit have duplicate entries: %s"
 msgstr ""
 
-#: upload-pack.c:1599
+#: upload-pack.c:1611
 msgid "expected flush after fetch arguments"
 msgstr ""
 
@@ -26132,55 +26141,55 @@ msgstr ""
 msgid "can't open file %s"
 msgstr ""
 
-#: git-send-email.perl:1822 git-send-email.perl:1842
+#: git-send-email.perl:1823 git-send-email.perl:1843
 #, perl-format
 msgid "(mbox) Adding cc: %s from line '%s'\n"
 msgstr ""
 
-#: git-send-email.perl:1828
+#: git-send-email.perl:1829
 #, perl-format
 msgid "(mbox) Adding to: %s from line '%s'\n"
 msgstr ""
 
-#: git-send-email.perl:1885
+#: git-send-email.perl:1886
 #, perl-format
 msgid "(non-mbox) Adding cc: %s from line '%s'\n"
 msgstr ""
 
-#: git-send-email.perl:1920
+#: git-send-email.perl:1921
 #, perl-format
 msgid "(body) Adding cc: %s from line '%s'\n"
 msgstr ""
 
-#: git-send-email.perl:2049
+#: git-send-email.perl:2050
 #, perl-format
 msgid "(%s) Could not execute '%s'"
 msgstr ""
 
-#: git-send-email.perl:2051
+#: git-send-email.perl:2052
 #, perl-format
 msgid "(%s) Malformed output from '%s'"
 msgstr ""
 
-#: git-send-email.perl:2060
+#: git-send-email.perl:2061
 #, perl-format
 msgid "(%s) failed to close pipe to '%s'"
 msgstr ""
 
-#: git-send-email.perl:2104
+#: git-send-email.perl:2105
 #, perl-format
 msgid "(%s) Adding %s: %s from: '%s'\n"
 msgstr ""
 
-#: git-send-email.perl:2136
+#: git-send-email.perl:2137
 msgid "cannot send message as 7bit"
 msgstr ""
 
-#: git-send-email.perl:2144
+#: git-send-email.perl:2145
 msgid "invalid transfer encoding"
 msgstr ""
 
-#: git-send-email.perl:2197
+#: git-send-email.perl:2198
 #, perl-format
 msgid ""
 "fatal: %s: rejected by %s hook\n"
@@ -26188,25 +26197,25 @@ msgid ""
 "warning: no patches were sent\n"
 msgstr ""
 
-#: git-send-email.perl:2207 git-send-email.perl:2260 git-send-email.perl:2270
+#: git-send-email.perl:2208 git-send-email.perl:2261 git-send-email.perl:2271
 #, perl-format
 msgid "unable to open %s: %s\n"
 msgstr ""
 
-#: git-send-email.perl:2210
+#: git-send-email.perl:2211
 #, perl-format
 msgid ""
 "fatal: %s:%d is longer than 998 characters\n"
 "warning: no patches were sent\n"
 msgstr ""
 
-#: git-send-email.perl:2228
+#: git-send-email.perl:2229
 #, perl-format
 msgid "Skipping %s with backup suffix '%s'.\n"
 msgstr ""
 
 #. TRANSLATORS: please keep "[y|N]" as is.
-#: git-send-email.perl:2232
+#: git-send-email.perl:2233
 #, perl-format
 msgid "Do you really want to send %s? [y|N]: "
 msgstr ""
