@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2023-06-01 10:57+0000\n"
+"POT-Creation-Date: 2023-06-03 02:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -795,7 +795,7 @@ msgstr ""
 msgid "unclosed quote"
 msgstr ""
 
-#: alias.c:73 builtin/cat-file.c:1080 builtin/notes.c:438 builtin/notes.c:498
+#: alias.c:73 builtin/cat-file.c:1062 builtin/notes.c:438 builtin/notes.c:498
 #: builtin/notes.c:580 builtin/notes.c:592 builtin/notes.c:673
 #: builtin/notes.c:747 builtin/notes.c:898 builtin/notes.c:1050
 #: builtin/notes.c:1072 builtin/prune-packed.c:26 builtin/receive-pack.c:2514
@@ -824,7 +824,7 @@ msgstr ""
 #: builtin/fetch.c:2312 builtin/help.c:617 builtin/index-pack.c:1873
 #: builtin/init-db.c:105 builtin/log.c:2109 builtin/log.c:2111
 #: builtin/ls-files.c:773 builtin/merge-base.c:166 builtin/merge-base.c:172
-#: builtin/merge.c:1427 builtin/merge.c:1429 builtin/pack-objects.c:4386
+#: builtin/merge.c:1427 builtin/merge.c:1429 builtin/pack-objects.c:4387
 #: builtin/push.c:645 builtin/push.c:683 builtin/push.c:689 builtin/push.c:694
 #: builtin/rebase.c:1257 builtin/rebase.c:1259 builtin/rebase.c:1268
 #: builtin/repack.c:868 builtin/repack.c:874 builtin/repack.c:876
@@ -2311,7 +2311,7 @@ msgid "invalid ident line: %.*s"
 msgstr ""
 
 #: builtin/am.c:1372 builtin/checkout.c:816 builtin/clone.c:742
-#: commit-graph.c:1110
+#: commit-graph.c:1121
 #, c-format
 msgid "unable to parse commit %s"
 msgstr ""
@@ -2543,7 +2543,7 @@ msgid "n"
 msgstr ""
 
 #: builtin/am.c:2386 builtin/branch.c:762 builtin/bugreport.c:122
-#: builtin/cat-file.c:978 builtin/cat-file.c:982 builtin/cat-file.c:987
+#: builtin/cat-file.c:950 builtin/cat-file.c:954 builtin/cat-file.c:960
 #: builtin/diagnose.c:27 builtin/for-each-ref.c:48 builtin/ls-files.c:663
 #: builtin/ls-tree.c:399 builtin/replace.c:566 builtin/tag.c:487
 #: builtin/verify-tag.c:31
@@ -2988,7 +2988,7 @@ msgstr ""
 msgid "need a command"
 msgstr ""
 
-#: builtin/bisect.c:1439 builtin/cat-file.c:754
+#: builtin/bisect.c:1439 builtin/cat-file.c:733
 #, c-format
 msgid "unknown command: '%s'"
 msgstr ""
@@ -3036,7 +3036,7 @@ msgid "show work cost statistics"
 msgstr ""
 
 #: builtin/blame.c:885 builtin/checkout.c:1601 builtin/clone.c:111
-#: builtin/commit-graph.c:82 builtin/commit-graph.c:235 builtin/fetch.c:2180
+#: builtin/commit-graph.c:82 builtin/commit-graph.c:236 builtin/fetch.c:2180
 #: builtin/merge.c:311 builtin/multi-pack-index.c:129
 #: builtin/multi-pack-index.c:181 builtin/multi-pack-index.c:208
 #: builtin/multi-pack-index.c:237 builtin/pull.c:127 builtin/push.c:619
@@ -3741,188 +3741,192 @@ msgstr ""
 msgid "cannot read object %s '%s'"
 msgstr ""
 
-#: builtin/cat-file.c:678
+#: builtin/cat-file.c:665
 msgid "flush is only for --buffer mode"
 msgstr ""
 
-#: builtin/cat-file.c:730
+#: builtin/cat-file.c:709
 msgid "empty command in input"
 msgstr ""
 
-#: builtin/cat-file.c:732
+#: builtin/cat-file.c:711
 #, c-format
 msgid "whitespace before command: '%s'"
 msgstr ""
 
-#: builtin/cat-file.c:741
+#: builtin/cat-file.c:720
 #, c-format
 msgid "%s requires arguments"
 msgstr ""
 
-#: builtin/cat-file.c:746
+#: builtin/cat-file.c:725
 #, c-format
 msgid "%s takes no arguments"
 msgstr ""
 
-#: builtin/cat-file.c:923
+#: builtin/cat-file.c:893
 msgid "only one batch option may be specified"
 msgstr ""
 
-#: builtin/cat-file.c:952
+#: builtin/cat-file.c:924
 msgid "git cat-file <type> <object>"
 msgstr ""
 
-#: builtin/cat-file.c:953
+#: builtin/cat-file.c:925
 msgid "git cat-file (-e | -p) <object>"
 msgstr ""
 
-#: builtin/cat-file.c:954
+#: builtin/cat-file.c:926
 msgid "git cat-file (-t | -s) [--allow-unknown-type] <object>"
 msgstr ""
 
-#: builtin/cat-file.c:955
+#: builtin/cat-file.c:927
 msgid ""
 "git cat-file (--batch | --batch-check | --batch-command) [--batch-all-"
 "objects]\n"
 "             [--buffer] [--follow-symlinks] [--unordered]\n"
-"             [--textconv | --filters] [-z]"
+"             [--textconv | --filters] [-z] [-Z]"
 msgstr ""
 
-#: builtin/cat-file.c:958
+#: builtin/cat-file.c:930
 msgid ""
 "git cat-file (--textconv | --filters)\n"
 "             [<rev>:<path|tree-ish> | --path=<path|tree-ish> <rev>]"
 msgstr ""
 
-#: builtin/cat-file.c:964
+#: builtin/cat-file.c:936
 msgid "Check object existence or emit object contents"
 msgstr ""
 
-#: builtin/cat-file.c:966
+#: builtin/cat-file.c:938
 msgid "check if <object> exists"
 msgstr ""
 
-#: builtin/cat-file.c:967
+#: builtin/cat-file.c:939
 msgid "pretty-print <object> content"
 msgstr ""
 
-#: builtin/cat-file.c:969
+#: builtin/cat-file.c:941
 msgid "Emit [broken] object attributes"
 msgstr ""
 
-#: builtin/cat-file.c:970
+#: builtin/cat-file.c:942
 msgid "show object type (one of 'blob', 'tree', 'commit', 'tag', ...)"
 msgstr ""
 
-#: builtin/cat-file.c:971
+#: builtin/cat-file.c:943
 msgid "show object size"
 msgstr ""
 
-#: builtin/cat-file.c:973
+#: builtin/cat-file.c:945
 msgid "allow -s and -t to work with broken/corrupt objects"
 msgstr ""
 
-#: builtin/cat-file.c:974 builtin/log.c:252
+#: builtin/cat-file.c:946 builtin/log.c:252
 msgid "use mail map file"
 msgstr ""
 
-#: builtin/cat-file.c:977
+#: builtin/cat-file.c:949
 msgid "Batch objects requested on stdin (or --batch-all-objects)"
 msgstr ""
 
-#: builtin/cat-file.c:979
+#: builtin/cat-file.c:951
 msgid "show full <object> or <rev> contents"
 msgstr ""
 
-#: builtin/cat-file.c:983
+#: builtin/cat-file.c:955
 msgid "like --batch, but don't emit <contents>"
 msgstr ""
 
-#: builtin/cat-file.c:986
+#: builtin/cat-file.c:958
 msgid "stdin is NUL-terminated"
 msgstr ""
 
-#: builtin/cat-file.c:988
+#: builtin/cat-file.c:959
+msgid "stdin and stdout is NUL-terminated"
+msgstr ""
+
+#: builtin/cat-file.c:961
 msgid "read commands from stdin"
 msgstr ""
 
-#: builtin/cat-file.c:992
+#: builtin/cat-file.c:965
 msgid "with --batch[-check]: ignores stdin, batches all known objects"
 msgstr ""
 
-#: builtin/cat-file.c:994
+#: builtin/cat-file.c:967
 msgid "Change or optimize batch output"
 msgstr ""
 
-#: builtin/cat-file.c:995
+#: builtin/cat-file.c:968
 msgid "buffer --batch output"
 msgstr ""
 
-#: builtin/cat-file.c:997
+#: builtin/cat-file.c:970
 msgid "follow in-tree symlinks"
 msgstr ""
 
-#: builtin/cat-file.c:999
+#: builtin/cat-file.c:972
 msgid "do not order objects before emitting them"
 msgstr ""
 
-#: builtin/cat-file.c:1001
+#: builtin/cat-file.c:974
 msgid ""
 "Emit object (blob or tree) with conversion or filter (stand-alone, or with "
 "batch)"
 msgstr ""
 
-#: builtin/cat-file.c:1003
+#: builtin/cat-file.c:976
 msgid "run textconv on object's content"
 msgstr ""
 
-#: builtin/cat-file.c:1005
+#: builtin/cat-file.c:978
 msgid "run filters on object's content"
 msgstr ""
 
-#: builtin/cat-file.c:1006
+#: builtin/cat-file.c:979
 msgid "blob|tree"
 msgstr ""
 
-#: builtin/cat-file.c:1007
+#: builtin/cat-file.c:980
 msgid "use a <path> for (--textconv | --filters); Not with 'batch'"
 msgstr ""
 
-#: builtin/cat-file.c:1028
+#: builtin/cat-file.c:1001
 #, c-format
 msgid "'%s=<%s>' needs '%s' or '%s'"
 msgstr ""
 
-#: builtin/cat-file.c:1030
+#: builtin/cat-file.c:1003
 msgid "path|tree-ish"
 msgstr ""
 
-#: builtin/cat-file.c:1037 builtin/cat-file.c:1040 builtin/cat-file.c:1043
-#: builtin/cat-file.c:1046
+#: builtin/cat-file.c:1010 builtin/cat-file.c:1013 builtin/cat-file.c:1016
+#: builtin/cat-file.c:1019 builtin/cat-file.c:1022
 #, c-format
 msgid "'%s' requires a batch mode"
 msgstr ""
 
-#: builtin/cat-file.c:1058
+#: builtin/cat-file.c:1040
 #, c-format
 msgid "'-%c' is incompatible with batch mode"
 msgstr ""
 
-#: builtin/cat-file.c:1061
+#: builtin/cat-file.c:1043
 msgid "batch modes take no arguments"
 msgstr ""
 
-#: builtin/cat-file.c:1069 builtin/cat-file.c:1072
+#: builtin/cat-file.c:1051 builtin/cat-file.c:1054
 #, c-format
 msgid "<rev> required with '%s'"
 msgstr ""
 
-#: builtin/cat-file.c:1075
+#: builtin/cat-file.c:1057
 #, c-format
 msgid "<object> required with '-%c'"
 msgstr ""
 
-#: builtin/cat-file.c:1084
+#: builtin/cat-file.c:1066
 #, c-format
 msgid "only two arguments allowed in <type> <object> mode, not %d"
 msgstr ""
@@ -5194,71 +5198,71 @@ msgstr ""
 msgid "Could not open commit-graph '%s'"
 msgstr ""
 
-#: builtin/commit-graph.c:144
+#: builtin/commit-graph.c:145
 #, c-format
 msgid "unrecognized --split argument, %s"
 msgstr ""
 
-#: builtin/commit-graph.c:157
+#: builtin/commit-graph.c:158
 #, c-format
 msgid "unexpected non-hex object ID: %s"
 msgstr ""
 
-#: builtin/commit-graph.c:162
+#: builtin/commit-graph.c:163
 #, c-format
 msgid "invalid object: %s"
 msgstr ""
 
-#: builtin/commit-graph.c:182 parse-options-cb.c:24 parse-options-cb.c:28
+#: builtin/commit-graph.c:183 parse-options-cb.c:24 parse-options-cb.c:28
 #, c-format
 msgid "option `%s' expects a numerical value"
 msgstr ""
 
-#: builtin/commit-graph.c:212
+#: builtin/commit-graph.c:213
 msgid "start walk at all refs"
 msgstr ""
 
-#: builtin/commit-graph.c:214
+#: builtin/commit-graph.c:215
 msgid "scan pack-indexes listed by stdin for commits"
 msgstr ""
 
-#: builtin/commit-graph.c:216
+#: builtin/commit-graph.c:217
 msgid "start walk at commits listed by stdin"
 msgstr ""
 
-#: builtin/commit-graph.c:218
+#: builtin/commit-graph.c:219
 msgid "include all commits already in the commit-graph file"
 msgstr ""
 
-#: builtin/commit-graph.c:220
+#: builtin/commit-graph.c:221
 msgid "enable computation for changed paths"
 msgstr ""
 
-#: builtin/commit-graph.c:222
+#: builtin/commit-graph.c:223
 msgid "allow writing an incremental commit-graph file"
 msgstr ""
 
-#: builtin/commit-graph.c:226
+#: builtin/commit-graph.c:227
 msgid "maximum number of commits in a non-base split commit-graph"
 msgstr ""
 
-#: builtin/commit-graph.c:228
+#: builtin/commit-graph.c:229
 msgid "maximum ratio between two levels of a split commit-graph"
 msgstr ""
 
-#: builtin/commit-graph.c:230
+#: builtin/commit-graph.c:231
 msgid "only expire files older than a given date-time"
 msgstr ""
 
-#: builtin/commit-graph.c:232
+#: builtin/commit-graph.c:233
 msgid "maximum number of changed-path Bloom filters to compute"
 msgstr ""
 
-#: builtin/commit-graph.c:258
+#: builtin/commit-graph.c:259
 msgid "use at most one of --reachable, --stdin-commits, or --stdin-packs"
 msgstr ""
 
-#: builtin/commit-graph.c:289
+#: builtin/commit-graph.c:290
 msgid "Collecting commits from input"
 msgstr ""
 
@@ -5461,7 +5465,7 @@ msgstr ""
 #: builtin/commit.c:770 builtin/commit.c:805 builtin/commit.c:1196
 #: builtin/merge-tree.c:451
 #, c-format
-msgid "could not lookup commit %s"
+msgid "could not lookup commit '%s'"
 msgstr ""
 
 #: builtin/commit.c:783 builtin/shortlog.c:458
@@ -8170,7 +8174,7 @@ msgstr ""
 msgid "invalid option combination, ignoring --threads"
 msgstr ""
 
-#: builtin/grep.c:1170 builtin/pack-objects.c:4372
+#: builtin/grep.c:1170 builtin/pack-objects.c:4373
 msgid "no threads support, ignoring --threads"
 msgstr ""
 
@@ -8643,7 +8647,7 @@ msgstr ""
 msgid "--verify with no packfile name given"
 msgstr ""
 
-#: builtin/index-pack.c:1954 builtin/unpack-objects.c:673
+#: builtin/index-pack.c:1954 builtin/unpack-objects.c:674
 msgid "fsck error in pack objects"
 msgstr ""
 
@@ -8773,7 +8777,7 @@ msgstr ""
 msgid "invalid --decorate option: %s"
 msgstr ""
 
-#: builtin/log.c:250 diff.c:5507
+#: builtin/log.c:250 diff.c:5532
 msgid "suppress diff output"
 msgstr ""
 
@@ -10785,7 +10789,7 @@ msgstr ""
 msgid "unable to pack objects reachable from tag %s"
 msgstr ""
 
-#: builtin/pack-objects.c:3108 commit-graph.c:1372
+#: builtin/pack-objects.c:3108 commit-graph.c:1383
 #, c-format
 msgid "unable to get type of object %s"
 msgstr ""
@@ -11066,62 +11070,62 @@ msgstr ""
 msgid "exclude any configured uploadpack.blobpackfileuri with this protocol"
 msgstr ""
 
-#: builtin/pack-objects.c:4315
+#: builtin/pack-objects.c:4316
 #, c-format
 msgid "delta chain depth %d is too deep, forcing %d"
 msgstr ""
 
-#: builtin/pack-objects.c:4320
+#: builtin/pack-objects.c:4321
 #, c-format
 msgid "pack.deltaCacheLimit is too high, forcing %d"
 msgstr ""
 
-#: builtin/pack-objects.c:4366 config.c:1990
+#: builtin/pack-objects.c:4367 config.c:1990
 #, c-format
 msgid "bad pack compression level %d"
 msgstr ""
 
-#: builtin/pack-objects.c:4376
+#: builtin/pack-objects.c:4377
 msgid "--max-pack-size cannot be used to build a pack for transfer"
 msgstr ""
 
-#: builtin/pack-objects.c:4378
+#: builtin/pack-objects.c:4379
 msgid "minimum pack size limit is 1 MiB"
 msgstr ""
 
-#: builtin/pack-objects.c:4383
+#: builtin/pack-objects.c:4384
 msgid "--thin cannot be used to build an indexable pack"
 msgstr ""
 
-#: builtin/pack-objects.c:4392
+#: builtin/pack-objects.c:4393
 msgid "cannot use --filter without --stdout"
 msgstr ""
 
-#: builtin/pack-objects.c:4394
+#: builtin/pack-objects.c:4395
 msgid "cannot use --filter with --stdin-packs"
 msgstr ""
 
-#: builtin/pack-objects.c:4398
+#: builtin/pack-objects.c:4399
 msgid "cannot use internal rev list with --stdin-packs"
 msgstr ""
 
-#: builtin/pack-objects.c:4402
+#: builtin/pack-objects.c:4403
 msgid "cannot use internal rev list with --cruft"
 msgstr ""
 
-#: builtin/pack-objects.c:4404
+#: builtin/pack-objects.c:4405
 msgid "cannot use --stdin-packs with --cruft"
 msgstr ""
 
-#: builtin/pack-objects.c:4406
+#: builtin/pack-objects.c:4407
 msgid "cannot use --max-pack-size with --cruft"
 msgstr ""
 
-#: builtin/pack-objects.c:4466
+#: builtin/pack-objects.c:4467
 msgid "Enumerating objects"
 msgstr ""
 
-#: builtin/pack-objects.c:4509
+#: builtin/pack-objects.c:4510
 #, c-format
 msgid ""
 "Total %<PRIu32> (delta %<PRIu32>), reused %<PRIu32> (delta %<PRIu32>), pack-"
@@ -11195,7 +11199,7 @@ msgstr ""
 msgid "limit traversal to objects outside promisor packfiles"
 msgstr ""
 
-#: builtin/prune.c:173
+#: builtin/prune.c:174
 msgid "cannot prune in a precious-objects repo"
 msgstr ""
 
@@ -13258,39 +13262,39 @@ msgstr ""
 msgid "use this format"
 msgstr ""
 
-#: builtin/replace.c:580
+#: builtin/replace.c:579
 msgid "--format cannot be used when not listing"
 msgstr ""
 
-#: builtin/replace.c:588
+#: builtin/replace.c:587
 msgid "-f only makes sense when writing a replacement"
 msgstr ""
 
-#: builtin/replace.c:592
+#: builtin/replace.c:591
 msgid "--raw only makes sense with --edit"
 msgstr ""
 
-#: builtin/replace.c:598
+#: builtin/replace.c:597
 msgid "-d needs at least one argument"
 msgstr ""
 
-#: builtin/replace.c:604
+#: builtin/replace.c:603
 msgid "bad number of arguments"
 msgstr ""
 
-#: builtin/replace.c:610
+#: builtin/replace.c:609
 msgid "-e needs exactly one argument"
 msgstr ""
 
-#: builtin/replace.c:616
+#: builtin/replace.c:615
 msgid "-g needs at least one argument"
 msgstr ""
 
-#: builtin/replace.c:622
+#: builtin/replace.c:621
 msgid "--convert-graft-file takes no argument"
 msgstr ""
 
-#: builtin/replace.c:628
+#: builtin/replace.c:627
 msgid "only one pattern can be given with -l"
 msgstr ""
 
@@ -13327,7 +13331,7 @@ msgstr ""
 
 #: builtin/replay.c:286
 msgid ""
-"git replay [--contained] (--onto <newbase> | --advance <branch>) <revision-"
+"git replay ([--contained] --onto <newbase> | --advance <branch>) <revision-"
 "range>..."
 msgstr ""
 
@@ -13347,20 +13351,20 @@ msgstr ""
 msgid "option --onto or --advance is mandatory"
 msgstr ""
 
-#: builtin/replay.c:342
+#: builtin/replay.c:341
 #, c-format
 msgid "invalid pathspec: %s"
 msgstr ""
 
-#: builtin/replay.c:359
+#: builtin/replay.c:358
 msgid "error preparing revisions"
 msgstr ""
 
-#: builtin/replay.c:374
+#: builtin/replay.c:373
 msgid "replaying down to root commit is not supported yet!"
 msgstr ""
 
-#: builtin/replay.c:376
+#: builtin/replay.c:375
 msgid "replaying merge commits is not supported yet!"
 msgstr ""
 
@@ -14125,7 +14129,7 @@ msgstr ""
 msgid "toggle the use of a sparse index"
 msgstr ""
 
-#: builtin/sparse-checkout.c:486 commit-graph.c:1919 midx.c:1247
+#: builtin/sparse-checkout.c:486 commit-graph.c:1930 midx.c:1247
 #: sequencer.c:4248
 #, c-format
 msgid "unable to create leading directories of %s"
@@ -15926,7 +15930,7 @@ msgstr ""
 msgid "try to match the new branch name with a remote-tracking branch"
 msgstr ""
 
-#: builtin/worktree.c:807 diff.c:4775 parse-options.c:1220
+#: builtin/worktree.c:807 diff.c:4800 parse-options.c:1220
 #, c-format
 msgid "options '%s', '%s', and '%s' cannot be used together"
 msgstr ""
@@ -17025,223 +17029,230 @@ msgstr ""
 msgid "commit-graph file is too small"
 msgstr ""
 
-#: commit-graph.c:347
+#: commit-graph.c:353
 #, c-format
 msgid "commit-graph signature %X does not match signature %X"
 msgstr ""
 
-#: commit-graph.c:354
+#: commit-graph.c:360
 #, c-format
 msgid "commit-graph version %X does not match version %X"
 msgstr ""
 
-#: commit-graph.c:361
+#: commit-graph.c:367
 #, c-format
 msgid "commit-graph hash version %X does not match version %X"
 msgstr ""
 
-#: commit-graph.c:376
+#: commit-graph.c:382
 #, c-format
 msgid "commit-graph file is too small to hold %u chunks"
 msgstr ""
 
-#: commit-graph.c:475
+#: commit-graph.c:486
 msgid "commit-graph has no base graphs chunk"
 msgstr ""
 
-#: commit-graph.c:485
+#: commit-graph.c:496
 msgid "commit-graph chain does not match"
 msgstr ""
 
-#: commit-graph.c:536
+#: commit-graph.c:547
 #, c-format
 msgid "invalid commit-graph chain: line '%s' not a hash"
 msgstr ""
 
-#: commit-graph.c:560
+#: commit-graph.c:571
 msgid "unable to find all commit-graph files"
 msgstr ""
 
-#: commit-graph.c:745 commit-graph.c:782
+#: commit-graph.c:756 commit-graph.c:793
 msgid "invalid commit position. commit-graph is likely corrupt"
 msgstr ""
 
-#: commit-graph.c:766
+#: commit-graph.c:777
 #, c-format
 msgid "could not find commit %s"
 msgstr ""
 
-#: commit-graph.c:799
+#: commit-graph.c:810
 msgid "commit-graph requires overflow generation data but has none"
 msgstr ""
 
-#: commit-graph.c:1403
+#: commit-graph.c:1414
 msgid "Loading known commits in commit graph"
 msgstr ""
 
-#: commit-graph.c:1420
+#: commit-graph.c:1431
 msgid "Expanding reachable commits in commit graph"
 msgstr ""
 
-#: commit-graph.c:1440
+#: commit-graph.c:1451
 msgid "Clearing commit marks in commit graph"
 msgstr ""
 
-#: commit-graph.c:1557
+#: commit-graph.c:1568
 msgid "Computing commit graph topological levels"
 msgstr ""
 
-#: commit-graph.c:1590
+#: commit-graph.c:1601
 msgid "Computing commit graph generation numbers"
 msgstr ""
 
-#: commit-graph.c:1664
+#: commit-graph.c:1675
 msgid "Computing commit changed paths Bloom filters"
 msgstr ""
 
-#: commit-graph.c:1740
+#: commit-graph.c:1751
 msgid "Collecting referenced commits"
 msgstr ""
 
-#: commit-graph.c:1766
+#: commit-graph.c:1777
 #, c-format
 msgid "Finding commits for commit graph in %<PRIuMAX> pack"
 msgid_plural "Finding commits for commit graph in %<PRIuMAX> packs"
 msgstr[0] ""
 msgstr[1] ""
 
-#: commit-graph.c:1779
+#: commit-graph.c:1790
 #, c-format
 msgid "error adding pack %s"
 msgstr ""
 
-#: commit-graph.c:1783
+#: commit-graph.c:1794
 #, c-format
 msgid "error opening index for %s"
 msgstr ""
 
-#: commit-graph.c:1821
+#: commit-graph.c:1832
 msgid "Finding commits for commit graph among packed objects"
 msgstr ""
 
-#: commit-graph.c:1839
+#: commit-graph.c:1850
 msgid "Finding extra edges in commit graph"
 msgstr ""
 
-#: commit-graph.c:1888
+#: commit-graph.c:1899
 msgid "failed to write correct number of base graph ids"
 msgstr ""
 
-#: commit-graph.c:1933
+#: commit-graph.c:1944
 msgid "unable to create temporary graph layer"
 msgstr ""
 
-#: commit-graph.c:1938
+#: commit-graph.c:1949
 #, c-format
 msgid "unable to adjust shared permissions for '%s'"
 msgstr ""
 
-#: commit-graph.c:1995
+#: commit-graph.c:2006
 #, c-format
 msgid "Writing out commit graph in %d pass"
 msgid_plural "Writing out commit graph in %d passes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: commit-graph.c:2032
+#: commit-graph.c:2043
 msgid "unable to open commit-graph chain file"
 msgstr ""
 
-#: commit-graph.c:2048
+#: commit-graph.c:2059
 msgid "failed to rename base commit-graph file"
 msgstr ""
 
-#: commit-graph.c:2069
+#: commit-graph.c:2080
 msgid "failed to rename temporary commit-graph file"
 msgstr ""
 
-#: commit-graph.c:2202
+#: commit-graph.c:2213
 msgid "Scanning merged commits"
 msgstr ""
 
-#: commit-graph.c:2246
+#: commit-graph.c:2257
 msgid "Merging commit-graph"
 msgstr ""
 
-#: commit-graph.c:2358
+#: commit-graph.c:2369
 msgid "attempting to write a commit-graph, but 'core.commitGraph' is disabled"
 msgstr ""
 
-#: commit-graph.c:2465
+#: commit-graph.c:2388
+#, c-format
+msgid ""
+"attempting to write a commit-graph, but 'commitgraph."
+"changedPathsVersion' (%d) is not supported"
+msgstr ""
+
+#: commit-graph.c:2484
 msgid "too many commits to write graph"
 msgstr ""
 
-#: commit-graph.c:2563
+#: commit-graph.c:2582
 msgid "the commit-graph file has incorrect checksum and is likely corrupt"
 msgstr ""
 
-#: commit-graph.c:2573
+#: commit-graph.c:2592
 #, c-format
 msgid "commit-graph has incorrect OID order: %s then %s"
 msgstr ""
 
-#: commit-graph.c:2583 commit-graph.c:2598
+#: commit-graph.c:2602 commit-graph.c:2617
 #, c-format
 msgid "commit-graph has incorrect fanout value: fanout[%d] = %u != %u"
 msgstr ""
 
-#: commit-graph.c:2590
+#: commit-graph.c:2609
 #, c-format
 msgid "failed to parse commit %s from commit-graph"
 msgstr ""
 
-#: commit-graph.c:2608
+#: commit-graph.c:2627
 msgid "Verifying commits in commit graph"
 msgstr ""
 
-#: commit-graph.c:2623
+#: commit-graph.c:2642
 #, c-format
 msgid "failed to parse commit %s from object database for commit-graph"
 msgstr ""
 
-#: commit-graph.c:2630
+#: commit-graph.c:2649
 #, c-format
 msgid "root tree OID for commit %s in commit-graph is %s != %s"
 msgstr ""
 
-#: commit-graph.c:2640
+#: commit-graph.c:2659
 #, c-format
 msgid "commit-graph parent list for commit %s is too long"
 msgstr ""
 
-#: commit-graph.c:2649
+#: commit-graph.c:2668
 #, c-format
 msgid "commit-graph parent for %s is %s != %s"
 msgstr ""
 
-#: commit-graph.c:2663
+#: commit-graph.c:2682
 #, c-format
 msgid "commit-graph parent list for commit %s terminates early"
 msgstr ""
 
-#: commit-graph.c:2668
+#: commit-graph.c:2687
 #, c-format
 msgid ""
 "commit-graph has generation number zero for commit %s, but non-zero elsewhere"
 msgstr ""
 
-#: commit-graph.c:2672
+#: commit-graph.c:2691
 #, c-format
 msgid ""
 "commit-graph has non-zero generation number for commit %s, but zero elsewhere"
 msgstr ""
 
-#: commit-graph.c:2689
+#: commit-graph.c:2708
 #, c-format
 msgid "commit-graph generation for commit %s is %<PRIuMAX> < %<PRIuMAX>"
 msgstr ""
 
-#: commit-graph.c:2695
+#: commit-graph.c:2714
 #, c-format
 msgid "commit date for commit %s in commit-graph is %<PRIuMAX> != %<PRIuMAX>"
 msgstr ""
@@ -18441,547 +18452,552 @@ msgstr ""
 msgid "external diff died, stopping at %s"
 msgstr ""
 
-#: diff.c:4771 parse-options.c:1216
+#: diff.c:4761
+msgid "--follow requires exactly one pathspec"
+msgstr ""
+
+#: diff.c:4771
+#, c-format
+msgid "pathspec magic not supported by --follow: %s"
+msgstr ""
+
+#: diff.c:4796 parse-options.c:1216
 #, c-format
 msgid "options '%s', '%s', '%s', and '%s' cannot be used together"
 msgstr ""
 
-#: diff.c:4779
+#: diff.c:4804
 #, c-format
 msgid "options '%s' and '%s' cannot be used together, use '%s' with '%s'"
 msgstr ""
 
-#: diff.c:4783
+#: diff.c:4808
 #, c-format
 msgid ""
 "options '%s' and '%s' cannot be used together, use '%s' with '%s' and '%s'"
 msgstr ""
 
-#: diff.c:4863
-msgid "--follow requires exactly one pathspec"
-msgstr ""
-
-#: diff.c:4915
+#: diff.c:4940
 #, c-format
 msgid "invalid --stat value: %s"
 msgstr ""
 
-#: diff.c:4920 diff.c:4925 diff.c:4930 diff.c:4935 diff.c:5440
+#: diff.c:4945 diff.c:4950 diff.c:4955 diff.c:4960 diff.c:5465
 #: parse-options.c:219 parse-options.c:223
 #, c-format
 msgid "%s expects a numerical value"
 msgstr ""
 
-#: diff.c:4953
+#: diff.c:4978
 #, c-format
 msgid ""
 "Failed to parse --dirstat/-X option parameter:\n"
 "%s"
 msgstr ""
 
-#: diff.c:4987
+#: diff.c:5012
 #, c-format
 msgid "unknown change class '%c' in --diff-filter=%s"
 msgstr ""
 
-#: diff.c:5011
+#: diff.c:5036
 #, c-format
 msgid "unknown value after ws-error-highlight=%.*s"
 msgstr ""
 
-#: diff.c:5025
+#: diff.c:5050
 #, c-format
 msgid "unable to resolve '%s'"
 msgstr ""
 
-#: diff.c:5075 diff.c:5081
+#: diff.c:5100 diff.c:5106
 #, c-format
 msgid "%s expects <n>/<m> form"
 msgstr ""
 
-#: diff.c:5093
+#: diff.c:5118
 #, c-format
 msgid "%s expects a character, got '%s'"
 msgstr ""
 
-#: diff.c:5114
+#: diff.c:5139
 #, c-format
 msgid "bad --color-moved argument: %s"
 msgstr ""
 
-#: diff.c:5133
+#: diff.c:5158
 #, c-format
 msgid "invalid mode '%s' in --color-moved-ws"
 msgstr ""
 
-#: diff.c:5174
+#: diff.c:5199
 msgid ""
 "option diff-algorithm accepts \"myers\", \"minimal\", \"patience\" and "
 "\"histogram\""
 msgstr ""
 
-#: diff.c:5225 diff.c:5245
+#: diff.c:5250 diff.c:5270
 #, c-format
 msgid "invalid argument to %s"
 msgstr ""
 
-#: diff.c:5360
+#: diff.c:5385
 #, c-format
 msgid "invalid regex given to -I: '%s'"
 msgstr ""
 
-#: diff.c:5409
+#: diff.c:5434
 #, c-format
 msgid "failed to parse --submodule option parameter: '%s'"
 msgstr ""
 
-#: diff.c:5465
+#: diff.c:5490
 #, c-format
 msgid "bad --word-diff argument: %s"
 msgstr ""
 
-#: diff.c:5502
+#: diff.c:5527
 msgid "Diff output format options"
 msgstr ""
 
-#: diff.c:5504 diff.c:5509
+#: diff.c:5529 diff.c:5534
 msgid "generate patch"
 msgstr ""
 
-#: diff.c:5511 diff.c:5628 diff.c:5635
+#: diff.c:5536 diff.c:5653 diff.c:5660
 msgid "<n>"
 msgstr ""
 
-#: diff.c:5512 diff.c:5515
+#: diff.c:5537 diff.c:5540
 msgid "generate diffs with <n> lines context"
 msgstr ""
 
-#: diff.c:5517
+#: diff.c:5542
 msgid "generate the diff in raw format"
 msgstr ""
 
-#: diff.c:5520
+#: diff.c:5545
 msgid "synonym for '-p --raw'"
 msgstr ""
 
-#: diff.c:5524
+#: diff.c:5549
 msgid "synonym for '-p --stat'"
 msgstr ""
 
-#: diff.c:5528
+#: diff.c:5553
 msgid "machine friendly --stat"
 msgstr ""
 
-#: diff.c:5531
+#: diff.c:5556
 msgid "output only the last line of --stat"
 msgstr ""
 
-#: diff.c:5533 diff.c:5541
+#: diff.c:5558 diff.c:5566
 msgid "<param1,param2>..."
 msgstr ""
 
-#: diff.c:5534
+#: diff.c:5559
 msgid ""
 "output the distribution of relative amount of changes for each sub-directory"
 msgstr ""
 
-#: diff.c:5538
+#: diff.c:5563
 msgid "synonym for --dirstat=cumulative"
 msgstr ""
 
-#: diff.c:5542
+#: diff.c:5567
 msgid "synonym for --dirstat=files,param1,param2..."
 msgstr ""
 
-#: diff.c:5546
+#: diff.c:5571
 msgid "warn if changes introduce conflict markers or whitespace errors"
 msgstr ""
 
-#: diff.c:5549
+#: diff.c:5574
 msgid "condensed summary such as creations, renames and mode changes"
 msgstr ""
 
-#: diff.c:5552
+#: diff.c:5577
 msgid "show only names of changed files"
 msgstr ""
 
-#: diff.c:5555
+#: diff.c:5580
 msgid "show only names and status of changed files"
 msgstr ""
 
-#: diff.c:5557
+#: diff.c:5582
 msgid "<width>[,<name-width>[,<count>]]"
 msgstr ""
 
-#: diff.c:5558
+#: diff.c:5583
 msgid "generate diffstat"
 msgstr ""
 
-#: diff.c:5560 diff.c:5563 diff.c:5566
+#: diff.c:5585 diff.c:5588 diff.c:5591
 msgid "<width>"
 msgstr ""
 
-#: diff.c:5561
+#: diff.c:5586
 msgid "generate diffstat with a given width"
 msgstr ""
 
-#: diff.c:5564
+#: diff.c:5589
 msgid "generate diffstat with a given name width"
 msgstr ""
 
-#: diff.c:5567
+#: diff.c:5592
 msgid "generate diffstat with a given graph width"
 msgstr ""
 
-#: diff.c:5569
+#: diff.c:5594
 msgid "<count>"
 msgstr ""
 
-#: diff.c:5570
+#: diff.c:5595
 msgid "generate diffstat with limited lines"
 msgstr ""
 
-#: diff.c:5573
+#: diff.c:5598
 msgid "generate compact summary in diffstat"
 msgstr ""
 
-#: diff.c:5576
+#: diff.c:5601
 msgid "output a binary diff that can be applied"
 msgstr ""
 
-#: diff.c:5579
+#: diff.c:5604
 msgid "show full pre- and post-image object names on the \"index\" lines"
 msgstr ""
 
-#: diff.c:5581
+#: diff.c:5606
 msgid "show colored diff"
 msgstr ""
 
-#: diff.c:5582
+#: diff.c:5607
 msgid "<kind>"
 msgstr ""
 
-#: diff.c:5583
+#: diff.c:5608
 msgid ""
 "highlight whitespace errors in the 'context', 'old' or 'new' lines in the "
 "diff"
 msgstr ""
 
-#: diff.c:5586
+#: diff.c:5611
 msgid ""
 "do not munge pathnames and use NULs as output field terminators in --raw or "
 "--numstat"
 msgstr ""
 
-#: diff.c:5589 diff.c:5592 diff.c:5595 diff.c:5709
+#: diff.c:5614 diff.c:5617 diff.c:5620 diff.c:5734
 msgid "<prefix>"
 msgstr ""
 
-#: diff.c:5590
+#: diff.c:5615
 msgid "show the given source prefix instead of \"a/\""
 msgstr ""
 
-#: diff.c:5593
+#: diff.c:5618
 msgid "show the given destination prefix instead of \"b/\""
 msgstr ""
 
-#: diff.c:5596
+#: diff.c:5621
 msgid "prepend an additional prefix to every line of output"
 msgstr ""
 
-#: diff.c:5599
+#: diff.c:5624
 msgid "do not show any source or destination prefix"
 msgstr ""
 
-#: diff.c:5602
+#: diff.c:5627
 msgid "use default prefixes a/ and b/"
 msgstr ""
 
-#: diff.c:5605
+#: diff.c:5630
 msgid "show context between diff hunks up to the specified number of lines"
 msgstr ""
 
-#: diff.c:5609 diff.c:5614 diff.c:5619
+#: diff.c:5634 diff.c:5639 diff.c:5644
 msgid "<char>"
 msgstr ""
 
-#: diff.c:5610
+#: diff.c:5635
 msgid "specify the character to indicate a new line instead of '+'"
 msgstr ""
 
-#: diff.c:5615
+#: diff.c:5640
 msgid "specify the character to indicate an old line instead of '-'"
 msgstr ""
 
-#: diff.c:5620
+#: diff.c:5645
 msgid "specify the character to indicate a context instead of ' '"
 msgstr ""
 
-#: diff.c:5623
+#: diff.c:5648
 msgid "Diff rename options"
 msgstr ""
 
-#: diff.c:5624
+#: diff.c:5649
 msgid "<n>[/<m>]"
 msgstr ""
 
-#: diff.c:5625
+#: diff.c:5650
 msgid "break complete rewrite changes into pairs of delete and create"
 msgstr ""
 
-#: diff.c:5629
+#: diff.c:5654
 msgid "detect renames"
 msgstr ""
 
-#: diff.c:5633
+#: diff.c:5658
 msgid "omit the preimage for deletes"
 msgstr ""
 
-#: diff.c:5636
+#: diff.c:5661
 msgid "detect copies"
 msgstr ""
 
-#: diff.c:5640
+#: diff.c:5665
 msgid "use unmodified files as source to find copies"
 msgstr ""
 
-#: diff.c:5642
+#: diff.c:5667
 msgid "disable rename detection"
 msgstr ""
 
-#: diff.c:5645
+#: diff.c:5670
 msgid "use empty blobs as rename source"
 msgstr ""
 
-#: diff.c:5647
+#: diff.c:5672
 msgid "continue listing the history of a file beyond renames"
 msgstr ""
 
-#: diff.c:5650
+#: diff.c:5675
 msgid ""
 "prevent rename/copy detection if the number of rename/copy targets exceeds "
 "given limit"
 msgstr ""
 
-#: diff.c:5652
+#: diff.c:5677
 msgid "Diff algorithm options"
 msgstr ""
 
-#: diff.c:5654
+#: diff.c:5679
 msgid "produce the smallest possible diff"
 msgstr ""
 
-#: diff.c:5658
+#: diff.c:5683
 msgid "ignore whitespace when comparing lines"
 msgstr ""
 
-#: diff.c:5661
+#: diff.c:5686
 msgid "ignore changes in amount of whitespace"
 msgstr ""
 
-#: diff.c:5664
+#: diff.c:5689
 msgid "ignore changes in whitespace at EOL"
 msgstr ""
 
-#: diff.c:5667
+#: diff.c:5692
 msgid "ignore carrier-return at the end of line"
 msgstr ""
 
-#: diff.c:5670
+#: diff.c:5695
 msgid "ignore changes whose lines are all blank"
 msgstr ""
 
-#: diff.c:5672 diff.c:5695 diff.c:5698 diff.c:5743
+#: diff.c:5697 diff.c:5720 diff.c:5723 diff.c:5768
 msgid "<regex>"
 msgstr ""
 
-#: diff.c:5673
+#: diff.c:5698
 msgid "ignore changes whose all lines match <regex>"
 msgstr ""
 
-#: diff.c:5676
+#: diff.c:5701
 msgid "heuristic to shift diff hunk boundaries for easy reading"
 msgstr ""
 
-#: diff.c:5679
+#: diff.c:5704
 msgid "generate diff using the \"patience diff\" algorithm"
 msgstr ""
 
-#: diff.c:5683
+#: diff.c:5708
 msgid "generate diff using the \"histogram diff\" algorithm"
 msgstr ""
 
-#: diff.c:5686
+#: diff.c:5711
 msgid "<algorithm>"
 msgstr ""
 
-#: diff.c:5687
+#: diff.c:5712
 msgid "choose a diff algorithm"
 msgstr ""
 
-#: diff.c:5689
+#: diff.c:5714
 msgid "<text>"
 msgstr ""
 
-#: diff.c:5690
+#: diff.c:5715
 msgid "generate diff using the \"anchored diff\" algorithm"
 msgstr ""
 
-#: diff.c:5692 diff.c:5701 diff.c:5704
+#: diff.c:5717 diff.c:5726 diff.c:5729
 msgid "<mode>"
 msgstr ""
 
-#: diff.c:5693
+#: diff.c:5718
 msgid "show word diff, using <mode> to delimit changed words"
 msgstr ""
 
-#: diff.c:5696
+#: diff.c:5721
 msgid "use <regex> to decide what a word is"
 msgstr ""
 
-#: diff.c:5699
+#: diff.c:5724
 msgid "equivalent to --word-diff=color --word-diff-regex=<regex>"
 msgstr ""
 
-#: diff.c:5702
+#: diff.c:5727
 msgid "moved lines of code are colored differently"
 msgstr ""
 
-#: diff.c:5705
+#: diff.c:5730
 msgid "how white spaces are ignored in --color-moved"
 msgstr ""
 
-#: diff.c:5708
+#: diff.c:5733
 msgid "Other diff options"
 msgstr ""
 
-#: diff.c:5710
+#: diff.c:5735
 msgid "when run from subdir, exclude changes outside and show relative paths"
 msgstr ""
 
-#: diff.c:5714
+#: diff.c:5739
 msgid "treat all files as text"
 msgstr ""
 
-#: diff.c:5716
+#: diff.c:5741
 msgid "swap two inputs, reverse the diff"
 msgstr ""
 
-#: diff.c:5718
+#: diff.c:5743
 msgid "exit with 1 if there were differences, 0 otherwise"
 msgstr ""
 
-#: diff.c:5720
+#: diff.c:5745
 msgid "disable all output of the program"
 msgstr ""
 
-#: diff.c:5722
+#: diff.c:5747
 msgid "allow an external diff helper to be executed"
 msgstr ""
 
-#: diff.c:5724
+#: diff.c:5749
 msgid "run external text conversion filters when comparing binary files"
 msgstr ""
 
-#: diff.c:5726
+#: diff.c:5751
 msgid "<when>"
 msgstr ""
 
-#: diff.c:5727
+#: diff.c:5752
 msgid "ignore changes to submodules in the diff generation"
 msgstr ""
 
-#: diff.c:5730
+#: diff.c:5755
 msgid "<format>"
 msgstr ""
 
-#: diff.c:5731
+#: diff.c:5756
 msgid "specify how differences in submodules are shown"
 msgstr ""
 
-#: diff.c:5735
+#: diff.c:5760
 msgid "hide 'git add -N' entries from the index"
 msgstr ""
 
-#: diff.c:5738
+#: diff.c:5763
 msgid "treat 'git add -N' entries as real in the index"
 msgstr ""
 
-#: diff.c:5740
+#: diff.c:5765
 msgid "<string>"
 msgstr ""
 
-#: diff.c:5741
+#: diff.c:5766
 msgid ""
 "look for differences that change the number of occurrences of the specified "
 "string"
 msgstr ""
 
-#: diff.c:5744
+#: diff.c:5769
 msgid ""
 "look for differences that change the number of occurrences of the specified "
 "regex"
 msgstr ""
 
-#: diff.c:5747
+#: diff.c:5772
 msgid "show all changes in the changeset with -S or -G"
 msgstr ""
 
-#: diff.c:5750
+#: diff.c:5775
 msgid "treat <string> in -S as extended POSIX regular expression"
 msgstr ""
 
-#: diff.c:5753
+#: diff.c:5778
 msgid "control the order in which files appear in the output"
 msgstr ""
 
-#: diff.c:5754 diff.c:5757
+#: diff.c:5779 diff.c:5782
 msgid "<path>"
 msgstr ""
 
-#: diff.c:5755
+#: diff.c:5780
 msgid "show the change in the specified path first"
 msgstr ""
 
-#: diff.c:5758
+#: diff.c:5783
 msgid "skip the output to the specified path"
 msgstr ""
 
-#: diff.c:5760
+#: diff.c:5785
 msgid "<object-id>"
 msgstr ""
 
-#: diff.c:5761
+#: diff.c:5786
 msgid ""
 "look for differences that change the number of occurrences of the specified "
 "object"
 msgstr ""
 
-#: diff.c:5763
+#: diff.c:5788
 msgid "[(A|C|D|M|R|T|U|X|B)...[*]]"
 msgstr ""
 
-#: diff.c:5764
+#: diff.c:5789
 msgid "select files by diff type"
 msgstr ""
 
-#: diff.c:5766
+#: diff.c:5791
 msgid "<file>"
 msgstr ""
 
-#: diff.c:5767
+#: diff.c:5792
 msgid "output to a specific file"
 msgstr ""
 
-#: diff.c:6457
+#: diff.c:6482
 msgid "exhaustive rename detection was skipped due to too many files."
 msgstr ""
 
-#: diff.c:6460
+#: diff.c:6485
 msgid "only found copies from modified paths due to too many files."
 msgstr ""
 
-#: diff.c:6463
+#: diff.c:6488
 #, c-format
 msgid ""
 "you may want to set your %s variable to at least %d and retry the command."
@@ -21642,22 +21658,22 @@ msgstr ""
 msgid "%s: '%s' is outside repository at '%s'"
 msgstr ""
 
-#: pathspec.c:549
+#: pathspec.c:547
 #, c-format
 msgid "'%s' (mnemonic: '%c')"
 msgstr ""
 
-#: pathspec.c:559
+#: pathspec.c:564
 #, c-format
 msgid "%s: pathspec magic not supported by this command: %s"
 msgstr ""
 
-#: pathspec.c:626
+#: pathspec.c:631
 #, c-format
 msgid "pathspec '%s' is beyond a symbolic link"
 msgstr ""
 
-#: pathspec.c:671
+#: pathspec.c:676
 #, c-format
 msgid "line is badly quoted: %s"
 msgstr ""
@@ -24358,43 +24374,43 @@ msgid "cannot use split index with a sparse index"
 msgstr ""
 
 #. TRANSLATORS: IEC 80000-13:2008 gibibyte
-#: strbuf.c:839
+#: strbuf.c:844
 #, c-format
 msgid "%u.%2.2u GiB"
 msgstr ""
 
 #. TRANSLATORS: IEC 80000-13:2008 gibibyte/second
-#: strbuf.c:841
+#: strbuf.c:846
 #, c-format
 msgid "%u.%2.2u GiB/s"
 msgstr ""
 
 #. TRANSLATORS: IEC 80000-13:2008 mebibyte
-#: strbuf.c:849
+#: strbuf.c:854
 #, c-format
 msgid "%u.%2.2u MiB"
 msgstr ""
 
 #. TRANSLATORS: IEC 80000-13:2008 mebibyte/second
-#: strbuf.c:851
+#: strbuf.c:856
 #, c-format
 msgid "%u.%2.2u MiB/s"
 msgstr ""
 
 #. TRANSLATORS: IEC 80000-13:2008 kibibyte
-#: strbuf.c:858
+#: strbuf.c:863
 #, c-format
 msgid "%u.%2.2u KiB"
 msgstr ""
 
 #. TRANSLATORS: IEC 80000-13:2008 kibibyte/second
-#: strbuf.c:860
+#: strbuf.c:865
 #, c-format
 msgid "%u.%2.2u KiB/s"
 msgstr ""
 
 #. TRANSLATORS: IEC 80000-13:2008 byte
-#: strbuf.c:866
+#: strbuf.c:871
 #, c-format
 msgid "%u byte"
 msgid_plural "%u bytes"
@@ -24402,7 +24418,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #. TRANSLATORS: IEC 80000-13:2008 byte/second
-#: strbuf.c:868
+#: strbuf.c:873
 #, c-format
 msgid "%u byte/s"
 msgid_plural "%u bytes/s"
