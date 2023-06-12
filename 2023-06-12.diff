@@ -1,0 +1,43 @@
+
+
+#################### Mon, 12 Jun 2023 23:58:07 +0000 ####################
+
+--- po/git.pot.old	2023-06-12 23:58:07.474283748 +0000
++++ po/git.pot.new	2023-06-12 23:58:07.598284672 +0000
+@@ -7636,6 +7636,10 @@
+ msgid "attempting to mmap %<PRIuMAX> over limit %<PRIuMAX>"
+ msgstr ""
+ 
++#, c-format
++msgid "attempting to write a commit-graph, but 'commitgraph.changedPathsVersion' (%d) is not supported"
++msgstr ""
++
+ msgid "attempting to write a commit-graph, but 'core.commitGraph' is disabled"
+ msgstr ""
+ 
+@@ -12115,7 +12119,7 @@
+ msgid ""
+ "git cat-file (--batch | --batch-check | --batch-command) [--batch-all-objects]\n"
+ "             [--buffer] [--follow-symlinks] [--unordered]\n"
+-"             [--textconv | --filters] [-z] [-Z]"
++"             [--textconv | --filters] [-Z]"
+ msgstr ""
+ 
+ msgid ""
+@@ -18621,7 +18625,7 @@
+ msgid "unable to dup bundle descriptor"
+ msgstr ""
+ 
+-msgid "unable to enumerate additional cruft tips"
++msgid "unable to enumerate additional recent objects"
+ msgstr ""
+ 
+ msgid "unable to fdopen alternates lockfile"
+
+
+-------------------- git-po-helper check-pot --------------------
+
+level=error msg="config variable 'commitGraph.changedPathsVersion' in manpage does not match string in pot file:"
+level=error msg="    >> msgid   \"attempting to write a commit-graph, but 'commitgraph.changedPathsVersion' (%d) is not supported\""
+
+ERROR: fail to execute "git-po-helper check-pot"
