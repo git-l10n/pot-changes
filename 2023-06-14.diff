@@ -1,0 +1,148 @@
+
+
+#################### Wed, 14 Jun 2023 21:57:44 +0000 ####################
+
+--- po/git.pot.old	2023-06-14 21:57:44.716809792 +0000
++++ po/git.pot.new	2023-06-14 21:57:44.824811177 +0000
+@@ -1182,6 +1182,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "'%s' and '%s' cannot be used together"
++msgstr ""
++
++#, c-format
+ msgid "'%s' and pathspec arguments cannot be used together"
+ msgstr ""
+ 
+@@ -2052,6 +2056,9 @@
+ msgid "<char>"
+ msgstr ""
+ 
++msgid "<commit-ish>"
++msgstr ""
++
+ msgid "<count>"
+ msgstr ""
+ 
+@@ -3983,6 +3990,13 @@
+ msgid "HEAD of working tree %s is not updated"
+ msgstr ""
+ 
++#, c-format
++msgid ""
++"HEAD points to an invalid (or orphaned) reference.\n"
++"HEAD path: '%s'\n"
++"HEAD contents: '%s'"
++msgstr ""
++
+ msgid "Helper programs to interact with remote repositories"
+ msgstr ""
+ 
+@@ -4065,6 +4079,24 @@
+ msgstr ""
+ 
+ #, c-format
++msgid ""
++"If you meant to create a worktree containing a new orphan branch\n"
++"(branch with no commits) for this repository, you can do so\n"
++"using the --orphan flag:\n"
++"\n"
++"\tgit worktree add --orphan %s\n"
++msgstr ""
++
++#, c-format
++msgid ""
++"If you meant to create a worktree containing a new orphan branch\n"
++"(branch with no commits) for this repository, you can do so\n"
++"using the --orphan flag:\n"
++"\n"
++"\tgit worktree add --orphan -b %s %s\n"
++msgstr ""
++
++#, c-format
+ msgid "If you prefer to skip this patch, run \"%s --skip\" instead."
+ msgstr ""
+ 
+@@ -4556,6 +4588,11 @@
+ msgid "No local changes to save"
+ msgstr ""
+ 
++msgid ""
++"No local or remote refs exist despite at least one remote\n"
++"present, stopping; use 'add -f' to overide or fetch a remote first"
++msgstr ""
++
+ msgid "No match"
+ msgstr ""
+ 
+@@ -4588,6 +4625,9 @@
+ msgid "No pathspec was given. Which files should I remove?"
+ msgstr ""
+ 
++msgid "No possible source branch, inferring '--orphan'"
++msgstr ""
++
+ msgid "No previous hunk"
+ msgstr ""
+ 
+@@ -9981,6 +10021,9 @@
+ msgid "create thin packs"
+ msgstr ""
+ 
++msgid "create unborn/orphaned branch"
++msgstr ""
++
+ msgid "create/reset and checkout a branch"
+ msgstr ""
+ 
+@@ -12041,7 +12084,7 @@
+ msgid ""
+ "git cat-file (--batch | --batch-check | --batch-command) [--batch-all-objects]\n"
+ "             [--buffer] [--follow-symlinks] [--unordered]\n"
+-"             [--textconv | --filters] [-z]"
++"             [--textconv | --filters] [-Z]"
+ msgstr ""
+ 
+ msgid ""
+@@ -12812,7 +12855,7 @@
+ 
+ msgid ""
+ "git worktree add [-f] [--detach] [--checkout] [--lock [--reason <string>]]\n"
+-"                 [-b <new-branch>] <path> [<commit-ish>]"
++"                 [--orphan] [(-b | -B) <new-branch>] <path> [<commit-ish>]"
+ msgstr ""
+ 
+ msgid "git worktree list [-v | --porcelain [-z]]"
+@@ -15394,6 +15437,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "options '%s', and '%s' cannot be used together"
++msgstr ""
++
++#, c-format
+ msgid "options '%s=%s' and '%s=%s' cannot be used together"
+ msgstr ""
+ 
+@@ -17791,6 +17838,9 @@
+ msgid "status: waiting for good commit(s), bad commit known\n"
+ msgstr ""
+ 
++msgid "stdin and stdout is NUL-terminated"
++msgstr ""
++
+ msgid "stdin has NUL-terminated arguments"
+ msgstr ""
+ 
+@@ -19229,6 +19279,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unreachable: invalid reference: %s"
++msgstr ""
++
++#, c-format
+ msgid "unrecognized %%(%.*s) argument: %s"
+ msgstr ""
+ 
