@@ -1,0 +1,430 @@
+
+
+#################### Sat, 24 Jun 2023 22:57:41 +0000 ####################
+
+--- po/git.pot.old	2023-06-24 22:57:41.324152263 +0000
++++ po/git.pot.new	2023-06-24 22:57:41.420152479 +0000
+@@ -778,10 +778,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "%s is already in progress"
+-msgstr ""
+-
+-#, c-format
+ msgid "%s is incompatible with %s"
+ msgstr ""
+ 
+@@ -1865,9 +1861,6 @@
+ msgid "--non-matching is only valid with --verbose"
+ msgstr ""
+ 
+-msgid "--onto and --advance are incompatible"
+-msgstr ""
+-
+ msgid "--open-files-in-pager only works on the worktree"
+ msgstr ""
+ 
+@@ -2104,9 +2097,6 @@
+ msgid "<object>:<path> required, only <object> '%s' given"
+ msgstr ""
+ 
+-msgid "<paragraph-break>"
+-msgstr ""
+-
+ msgid "<param1,param2>..."
+ msgstr ""
+ 
+@@ -3047,7 +3037,7 @@
+ msgid "Compressing objects"
+ msgstr ""
+ 
+-msgid "Compute object ID and optionally creates an object from a file"
++msgid "Compute object ID and optionally creates a blob from a file"
+ msgstr ""
+ 
+ msgid "Compute unique ID for a patch"
+@@ -3222,6 +3212,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Could not run 'git status --porcelain=2' in submodule %s"
++msgstr ""
++
++#, c-format
+ msgid "Could not set SSL backend to '%s': already set"
+ msgstr ""
+ 
+@@ -4993,9 +4987,6 @@
+ msgid "Print lines matching a pattern"
+ msgstr ""
+ 
+-msgid "Printing objects omitted by filter"
+-msgstr ""
+-
+ msgid "Produce a merge commit message"
+ msgstr ""
+ 
+@@ -5259,9 +5250,6 @@
+ msgid "Renaming remote references"
+ msgstr ""
+ 
+-msgid "Replay commits on a different base, without touching working tree"
+-msgstr ""
+-
+ msgid "Repository lacks necessary blobs to fall back on 3-way merge."
+ msgstr ""
+ 
+@@ -6843,13 +6831,13 @@
+ "your next pull:\n"
+ "\n"
+ "  git config pull.rebase false  # merge\n"
+-"  git config pull.rebase merges # rebase\n"
++"  git config pull.rebase true   # rebase\n"
+ "  git config pull.ff only       # fast-forward only\n"
+ "\n"
+ "You can replace \"git config\" with \"git config --global\" to set a default\n"
+-"preference for all repositories. You can also pass --rebase=merges,\n"
+-"--no-rebase, or --ff-only on the command line to override the configured\n"
+-"default per invocation.\n"
++"preference for all repositories. You can also pass --rebase, --no-rebase,\n"
++"or --ff-only on the command line to override the configured default per\n"
++"invocation.\n"
+ msgstr ""
+ 
+ msgid "You have not concluded your cherry-pick (CHERRY_PICK_HEAD exists)."
+@@ -7351,9 +7339,6 @@
+ msgid "additionally, your index contains uncommitted changes."
+ msgstr ""
+ 
+-msgid "advance all branches contained in revision-range"
+-msgstr ""
+-
+ #, c-format
+ msgid "affected file '%s' is beyond a symbolic link"
+ msgstr ""
+@@ -7391,9 +7376,6 @@
+ msgid "alias of --%s"
+ msgstr ""
+ 
+-msgid "all positive revisions given must be references"
+-msgstr ""
+-
+ msgid "allow -s and -t to work with broken/corrupt objects"
+ msgstr ""
+ 
+@@ -7608,9 +7590,6 @@
+ msgid "args"
+ msgstr ""
+ 
+-msgid "argument to --advance must be a reference"
+-msgstr ""
+-
+ #, c-format
+ msgid "argument to --packfile must be a valid hash (got '%s')"
+ msgstr ""
+@@ -7642,10 +7621,6 @@
+ msgid "attempting to mmap %<PRIuMAX> over limit %<PRIuMAX>"
+ msgstr ""
+ 
+-#, c-format
+-msgid "attempting to write a commit-graph, but 'commitgraph.changedPathsVersion' (%d) is not supported"
+-msgstr ""
+-
+ msgid "attempting to write a commit-graph, but 'core.commitGraph' is disabled"
+ msgstr ""
+ 
+@@ -8177,9 +8152,6 @@
+ msgid "cannot abort from a branch yet to be born"
+ msgstr ""
+ 
+-msgid "cannot advance target with multiple source branches because ordering would be ill-defined"
+-msgstr ""
+-
+ msgid "cannot amend non-existing commit"
+ msgstr ""
+ 
+@@ -8360,12 +8332,6 @@
+ msgid "cannot have both --quiet and --verbose"
+ msgstr ""
+ 
+-msgid "cannot implicitly determine correct base for --onto"
+-msgstr ""
+-
+-msgid "cannot implicitly determine whether this is an --advance or --onto operation"
+-msgstr ""
+-
+ msgid "cannot inherit upstream tracking configuration of multiple refs when rebasing is requested"
+ msgstr ""
+ 
+@@ -8640,13 +8606,10 @@
+ msgid "cannot use --filter with --stdin-packs"
+ msgstr ""
+ 
+-msgid "cannot use --max-pack-size with --cruft"
++msgid "cannot use --filter without --stdout"
+ msgstr ""
+ 
+-msgid "cannot use --print-filtered with --stdout"
+-msgstr ""
+-
+-msgid "cannot use --print-filtered without --filter"
++msgid "cannot use --max-pack-size with --cruft"
+ msgstr ""
+ 
+ msgid "cannot use --stdin-packs with --cruft"
+@@ -8744,6 +8707,9 @@
+ msgid "cherry-pick failed"
+ msgstr ""
+ 
++msgid "cherry-pick is already in progress"
++msgstr ""
++
+ #, c-format
+ msgid "chmod on %s failed"
+ msgstr ""
+@@ -9028,9 +8994,6 @@
+ msgid "control recursive pushing of submodules"
+ msgstr ""
+ 
+-msgid "control recursive updating of submodules"
+-msgstr ""
+-
+ msgid "control the order in which files appear in the output"
+ msgstr ""
+ 
+@@ -9366,9 +9329,6 @@
+ msgid "could not finish pack-objects"
+ msgstr ""
+ 
+-msgid "could not finish pack-objects to pack filtered objects"
+-msgstr ""
+-
+ msgid "could not finish pack-objects to repack promisor objects"
+ msgstr ""
+ 
+@@ -9785,10 +9745,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "could not run 'git status --porcelain=2' in submodule %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "could not run 'git status' in submodule '%s'"
+ msgstr ""
+ 
+@@ -9862,9 +9818,6 @@
+ msgid "could not start pack-objects"
+ msgstr ""
+ 
+-msgid "could not start pack-objects to pack filtered objects"
+-msgstr ""
+-
+ msgid "could not start pack-objects to repack promisor objects"
+ msgstr ""
+ 
+@@ -10868,9 +10821,6 @@
+ msgid "exclude guides"
+ msgstr ""
+ 
+-msgid "exclude refs which match pattern"
+-msgstr ""
+-
+ msgid "exec"
+ msgstr ""
+ 
+@@ -12463,10 +12413,10 @@
+ msgid "git notes [--ref <notes-ref>] [list [<object>]]"
+ msgstr ""
+ 
+-msgid "git notes [--ref <notes-ref>] add [-f] [--allow-empty] [--[no-]separator|--separator=<paragraph-break>] [--[no-]stripspace] [-m <msg> | -F <file> | (-c | -C) <object>] [<object>]"
++msgid "git notes [--ref <notes-ref>] add [-f] [--allow-empty] [-m <msg> | -F <file> | (-c | -C) <object>] [<object>]"
+ msgstr ""
+ 
+-msgid "git notes [--ref <notes-ref>] append [--allow-empty] [--[no-]separator|--separator=<paragraph-break>] [--[no-]stripspace] [-m <msg> | -F <file> | (-c | -C) <object>] [<object>]"
++msgid "git notes [--ref <notes-ref>] append [--allow-empty] [-m <msg> | -F <file> | (-c | -C) <object>] [<object>]"
+ msgstr ""
+ 
+ msgid "git notes [--ref <notes-ref>] copy [-f] <from-object> <to-object>"
+@@ -12660,9 +12610,6 @@
+ msgid "git replace [-f] <object> <replacement>"
+ msgstr ""
+ 
+-msgid "git replay ([--contained] --onto <newbase> | --advance <branch>) <revision-range>..."
+-msgstr ""
+-
+ #, c-format
+ msgid "git repository gone in '%s'"
+ msgstr ""
+@@ -13484,9 +13431,6 @@
+ msgid "insane in-reply-to: %s"
+ msgstr ""
+ 
+-msgid "insert <paragraph-break> between paragraphs"
+-msgstr ""
+-
+ msgid "instead of applying the patch, output a summary for the input"
+ msgstr ""
+ 
+@@ -13751,10 +13695,6 @@
+ msgid "invalid onto: '%s'"
+ msgstr ""
+ 
+-#, c-format
+-msgid "invalid option '%s' in --stdin mode"
+-msgstr ""
+-
+ msgid "invalid option combination, ignoring --threads"
+ msgstr ""
+ 
+@@ -13784,10 +13724,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "invalid pathspec: %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "invalid pattern: %s"
+ msgstr ""
+ 
+@@ -13993,9 +13929,6 @@
+ msgid "leave the rejected hunks in corresponding *.rej files"
+ msgstr ""
+ 
+-msgid "legacy use of lone '-m' detected: please use '--diff-merges=on,hide' instead, as '-m' may imply '-p'"
+-msgstr ""
+-
+ msgid "let files replace directories and vice-versa"
+ msgstr ""
+ 
+@@ -14185,9 +14118,6 @@
+ msgid "make reflogs head nodes (default)"
+ msgstr ""
+ 
+-msgid "make replay advance given branch"
+-msgstr ""
+-
+ msgid "make sure the patch is applicable to the current index"
+ msgstr ""
+ 
+@@ -14674,9 +14604,6 @@
+ msgid "need exactly one range"
+ msgstr ""
+ 
+-msgid "need some commits to replay"
+-msgstr ""
+-
+ msgid "need two commit ranges"
+ msgstr ""
+ 
+@@ -15447,9 +15374,6 @@
+ msgid "option '%s' must come before non-option arguments"
+ msgstr ""
+ 
+-msgid "option --onto or --advance is mandatory"
+-msgstr ""
+-
+ #, c-format
+ msgid "option `%s' expects \"%s\" or \"%s\""
+ msgstr ""
+@@ -15641,9 +15565,6 @@
+ msgid "pack prefix %s does not begin with objdir %s"
+ msgstr ""
+ 
+-msgid "pack prefix to store a pack containing filtered out objects"
+-msgstr ""
+-
+ msgid "pack prefix to store a pack containing pruned objects"
+ msgstr ""
+ 
+@@ -16064,9 +15985,6 @@
+ msgid "print extra information on screen"
+ msgstr ""
+ 
+-msgid "print filtered out objects to stdout"
+-msgstr ""
+-
+ msgid "print list of file formats, protocols and other developer interfaces"
+ msgstr ""
+ 
+@@ -16752,9 +16670,6 @@
+ msgid "remove submodule working trees even if they contain local changes"
+ msgstr ""
+ 
+-msgid "remove unnecessary whitespace"
+-msgstr ""
+-
+ msgid "remove whole directories"
+ msgstr ""
+ 
+@@ -16826,15 +16741,6 @@
+ msgid "replacement %s not found for %s"
+ msgstr ""
+ 
+-msgid "replay onto given commit"
+-msgstr ""
+-
+-msgid "replaying down to root commit is not supported yet!"
+-msgstr ""
+-
+-msgid "replaying merge commits is not supported yet!"
+-msgstr ""
+-
+ msgid "repo"
+ msgstr ""
+ 
+@@ -17023,6 +16929,9 @@
+ msgid "revert failed"
+ msgstr ""
+ 
++msgid "revert is already in progress"
++msgstr ""
++
+ msgid "revert staged set of changes back to the HEAD version"
+ msgstr ""
+ 
+@@ -18004,9 +17913,6 @@
+ msgid "submodule git dir '%s' is inside git dir '%.*s'"
+ msgstr ""
+ 
+-msgid "submodule status failed"
+-msgstr ""
+-
+ msgid "suboptimal pack - out of memory"
+ msgstr ""
+ 
+@@ -18220,9 +18126,6 @@
+ msgid "the '--set-upstream' option is no longer supported. Please use '--track' or '--set-upstream-to' instead."
+ msgstr ""
+ 
+-msgid "the --no-curl option to imap-send has been deprecated"
+-msgstr ""
+-
+ msgid ""
+ "the add.interactive.useBuiltin setting has been removed!\n"
+ "See its entry in 'git help config' for details."
+@@ -18481,7 +18384,11 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "try \"git %s (--continue | %s--abort | --quit)\""
++msgid "try \"git cherry-pick (--continue | %s--abort | --quit)\""
++msgstr ""
++
++#, c-format
++msgid "try \"git revert (--continue | %s--abort | --quit)\""
+ msgstr ""
+ 
+ msgid "try to match the new branch name with a remote-tracking branch"
+@@ -19174,6 +19081,9 @@
+ msgid "unhandled object '%s' given."
+ msgstr ""
+ 
++msgid "unhandled options"
++msgstr ""
++
+ msgid "unknown"
+ msgstr ""
+ 
