@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2023-07-07 22:57+0000\n"
+"POT-Creation-Date: 2023-07-12 22:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -798,7 +798,7 @@ msgstr ""
 #: alias.c:73 builtin/cat-file.c:1061 builtin/notes.c:452 builtin/notes.c:514
 #: builtin/notes.c:596 builtin/notes.c:608 builtin/notes.c:691
 #: builtin/notes.c:765 builtin/notes.c:916 builtin/notes.c:1068
-#: builtin/notes.c:1090 builtin/prune-packed.c:26 builtin/receive-pack.c:2514
+#: builtin/notes.c:1090 builtin/prune-packed.c:26 builtin/receive-pack.c:2515
 #: builtin/tag.c:604
 msgid "too many arguments"
 msgstr ""
@@ -827,8 +827,8 @@ msgstr ""
 #: builtin/merge.c:1426 builtin/merge.c:1428 builtin/pack-objects.c:4386
 #: builtin/push.c:649 builtin/push.c:687 builtin/push.c:693 builtin/push.c:698
 #: builtin/rebase.c:1257 builtin/rebase.c:1259 builtin/rebase.c:1268
-#: builtin/repack.c:951 builtin/repack.c:957 builtin/repack.c:959
-#: builtin/repack.c:1010 builtin/replay.c:324 builtin/reset.c:373
+#: builtin/repack.c:943 builtin/repack.c:949 builtin/repack.c:951
+#: builtin/repack.c:1002 builtin/replay.c:324 builtin/reset.c:373
 #: builtin/reset.c:410 builtin/rev-list.c:557 builtin/show-branch.c:722
 #: builtin/show-branch.c:727 builtin/stash.c:1772 builtin/stash.c:1775
 #: builtin/submodule--helper.c:1206 builtin/submodule--helper.c:2952
@@ -1939,7 +1939,7 @@ msgstr ""
 
 #: branch.c:473
 #, c-format
-msgid "cannot force update the branch '%s' checked out at '%s'"
+msgid "cannot force update the branch '%s' in use at '%s'"
 msgstr ""
 
 #: branch.c:498
@@ -2494,7 +2494,7 @@ msgid "allow fall back on 3way merging if needed"
 msgstr ""
 
 #: builtin/am.c:2338 builtin/init-db.c:91 builtin/prune-packed.c:17
-#: builtin/repack.c:903 builtin/stash.c:1016
+#: builtin/repack.c:895 builtin/stash.c:1016
 msgid "be quiet"
 msgstr ""
 
@@ -2543,8 +2543,8 @@ msgstr ""
 #: builtin/am.c:2379 builtin/commit.c:1540 builtin/fmt-merge-msg.c:19
 #: builtin/fmt-merge-msg.c:22 builtin/grep.c:970 builtin/merge.c:271
 #: builtin/pull.c:149 builtin/pull.c:211 builtin/pull.c:228
-#: builtin/rebase.c:1107 builtin/repack.c:914 builtin/repack.c:918
-#: builtin/repack.c:920 builtin/show-branch.c:661 builtin/show-ref.c:169
+#: builtin/rebase.c:1107 builtin/repack.c:906 builtin/repack.c:910
+#: builtin/repack.c:912 builtin/show-branch.c:661 builtin/show-ref.c:169
 #: builtin/tag.c:456 parse-options.h:215 parse-options.h:276
 #: parse-options.h:524
 msgid "n"
@@ -4801,7 +4801,7 @@ msgstr ""
 
 #: builtin/clone.c:140 builtin/column.c:28 builtin/fmt-merge-msg.c:28
 #: builtin/init-db.c:94 builtin/merge-file.c:50 builtin/merge.c:298
-#: builtin/pack-objects.c:4254 builtin/repack.c:928
+#: builtin/pack-objects.c:4254 builtin/repack.c:920
 #: builtin/submodule--helper.c:3284 t/helper/test-simple-ipc.c:596
 #: t/helper/test-simple-ipc.c:598
 msgid "name"
@@ -5189,7 +5189,7 @@ msgid ""
 msgstr ""
 
 #: builtin/commit-graph.c:57 builtin/fetch.c:2198 builtin/log.c:1949
-#: builtin/repack.c:934 builtin/repack.c:936
+#: builtin/repack.c:926 builtin/repack.c:928
 msgid "dir"
 msgstr ""
 
@@ -10745,7 +10745,7 @@ msgstr ""
 msgid "wrote %<PRIu32> objects while expecting %<PRIu32>"
 msgstr ""
 
-#: builtin/pack-objects.c:1570 builtin/repack.c:985
+#: builtin/pack-objects.c:1570 builtin/repack.c:977
 msgid "disabling bitmap writing, as some objects are not being packed"
 msgstr ""
 
@@ -12250,7 +12250,7 @@ msgstr ""
 msgid "git receive-pack <git-dir>"
 msgstr ""
 
-#: builtin/receive-pack.c:1272
+#: builtin/receive-pack.c:1273
 msgid ""
 "By default, updating the current branch in a non-bare repository\n"
 "is denied, because it will make the index and work tree inconsistent\n"
@@ -12267,7 +12267,7 @@ msgid ""
 "'receive.denyCurrentBranch' configuration variable to 'refuse'."
 msgstr ""
 
-#: builtin/receive-pack.c:1292
+#: builtin/receive-pack.c:1293
 msgid ""
 "By default, deleting the current branch is denied, because the next\n"
 "'git clone' won't result in any file checked out, causing confusion.\n"
@@ -12279,11 +12279,11 @@ msgid ""
 "To squelch this message, you can set it to 'refuse'."
 msgstr ""
 
-#: builtin/receive-pack.c:2501
+#: builtin/receive-pack.c:2502
 msgid "quiet"
 msgstr ""
 
-#: builtin/receive-pack.c:2516
+#: builtin/receive-pack.c:2517
 msgid "you must specify a directory"
 msgstr ""
 
@@ -12908,188 +12908,188 @@ msgid ""
 "--no-write-bitmap-index or disable the pack.writeBitmaps configuration."
 msgstr ""
 
-#: builtin/repack.c:207
+#: builtin/repack.c:199
 msgid "could not start pack-objects to repack promisor objects"
 msgstr ""
 
-#: builtin/repack.c:286 builtin/repack.c:722
+#: builtin/repack.c:278 builtin/repack.c:714
 msgid "repack: Expecting full hex object ID lines only from pack-objects."
 msgstr ""
 
-#: builtin/repack.c:310
+#: builtin/repack.c:302
 msgid "could not finish pack-objects to repack promisor objects"
 msgstr ""
 
-#: builtin/repack.c:322
+#: builtin/repack.c:314
 #, c-format
 msgid "cannot open index for %s"
 msgstr ""
 
-#: builtin/repack.c:414
+#: builtin/repack.c:406
 #, c-format
 msgid "pack %s too large to consider in geometric progression"
 msgstr ""
 
-#: builtin/repack.c:447 builtin/repack.c:454 builtin/repack.c:459
+#: builtin/repack.c:439 builtin/repack.c:446 builtin/repack.c:451
 #, c-format
 msgid "pack %s too large to roll up"
 msgstr ""
 
-#: builtin/repack.c:555
+#: builtin/repack.c:547
 #, c-format
 msgid "could not open tempfile %s for writing"
 msgstr ""
 
-#: builtin/repack.c:573
+#: builtin/repack.c:565
 msgid "could not close refs snapshot tempfile"
 msgstr ""
 
-#: builtin/repack.c:702
+#: builtin/repack.c:694
 #, c-format
 msgid "could not remove stale bitmap: %s"
 msgstr ""
 
-#: builtin/repack.c:852
+#: builtin/repack.c:844
 #, c-format
 msgid "pack prefix %s does not begin with objdir %s"
 msgstr ""
 
-#: builtin/repack.c:886
+#: builtin/repack.c:878
 msgid "pack everything in a single pack"
 msgstr ""
 
-#: builtin/repack.c:888
+#: builtin/repack.c:880
 msgid "same as -a, and turn unreachable objects loose"
 msgstr ""
 
-#: builtin/repack.c:891
+#: builtin/repack.c:883
 msgid "same as -a, pack unreachable cruft objects separately"
 msgstr ""
 
-#: builtin/repack.c:893 builtin/repack.c:910
+#: builtin/repack.c:885 builtin/repack.c:902
 msgid "approxidate"
 msgstr ""
 
-#: builtin/repack.c:894
+#: builtin/repack.c:886
 msgid "with --cruft, expire objects older than this"
 msgstr ""
 
-#: builtin/repack.c:896
+#: builtin/repack.c:888
 msgid "remove redundant packs, and run git-prune-packed"
 msgstr ""
 
-#: builtin/repack.c:898
+#: builtin/repack.c:890
 msgid "pass --no-reuse-delta to git-pack-objects"
 msgstr ""
 
-#: builtin/repack.c:900
+#: builtin/repack.c:892
 msgid "pass --no-reuse-object to git-pack-objects"
 msgstr ""
 
-#: builtin/repack.c:902
+#: builtin/repack.c:894
 msgid "do not run git-update-server-info"
 msgstr ""
 
-#: builtin/repack.c:905
+#: builtin/repack.c:897
 msgid "pass --local to git-pack-objects"
 msgstr ""
 
-#: builtin/repack.c:907
+#: builtin/repack.c:899
 msgid "write bitmap index"
 msgstr ""
 
-#: builtin/repack.c:909
+#: builtin/repack.c:901
 msgid "pass --delta-islands to git-pack-objects"
 msgstr ""
 
-#: builtin/repack.c:911
+#: builtin/repack.c:903
 msgid "with -A, do not loosen objects older than this"
 msgstr ""
 
-#: builtin/repack.c:913
+#: builtin/repack.c:905
 msgid "with -a, repack unreachable objects"
 msgstr ""
 
-#: builtin/repack.c:915
+#: builtin/repack.c:907
 msgid "size of the window used for delta compression"
 msgstr ""
 
-#: builtin/repack.c:916 builtin/repack.c:922
+#: builtin/repack.c:908 builtin/repack.c:914
 msgid "bytes"
 msgstr ""
 
-#: builtin/repack.c:917
+#: builtin/repack.c:909
 msgid "same as the above, but limit memory size instead of entries count"
 msgstr ""
 
-#: builtin/repack.c:919
+#: builtin/repack.c:911
 msgid "limits the maximum delta depth"
 msgstr ""
 
-#: builtin/repack.c:921
+#: builtin/repack.c:913
 msgid "limits the maximum number of threads"
 msgstr ""
 
-#: builtin/repack.c:923
+#: builtin/repack.c:915
 msgid "maximum size of each packfile"
 msgstr ""
 
-#: builtin/repack.c:924 list-objects-filter-options.h:121
+#: builtin/repack.c:916 list-objects-filter-options.h:121
 msgid "args"
 msgstr ""
 
-#: builtin/repack.c:925 list-objects-filter-options.h:122
+#: builtin/repack.c:917 list-objects-filter-options.h:122
 msgid "object filtering"
 msgstr ""
 
-#: builtin/repack.c:927
+#: builtin/repack.c:919
 msgid "repack objects in packs marked with .keep"
 msgstr ""
 
-#: builtin/repack.c:929
+#: builtin/repack.c:921
 msgid "do not repack this pack"
 msgstr ""
 
-#: builtin/repack.c:931
+#: builtin/repack.c:923
 msgid "find a geometric progression with factor <N>"
 msgstr ""
 
-#: builtin/repack.c:933
+#: builtin/repack.c:925
 msgid "write a multi-pack index of the resulting packs"
 msgstr ""
 
-#: builtin/repack.c:935
+#: builtin/repack.c:927
 msgid "pack prefix to store a pack containing pruned objects"
 msgstr ""
 
-#: builtin/repack.c:937
+#: builtin/repack.c:929
 msgid "pack prefix to store a pack containing filtered out objects"
 msgstr ""
 
-#: builtin/repack.c:947
+#: builtin/repack.c:939
 msgid "cannot delete packs in a precious-objects repo"
 msgstr ""
 
-#: builtin/repack.c:1082
+#: builtin/repack.c:1074
 #, c-format
 msgid "option '%s' can only be used along with '%s'"
 msgstr ""
 
-#: builtin/repack.c:1112
+#: builtin/repack.c:1104
 msgid "Nothing new to pack."
 msgstr ""
 
-#: builtin/repack.c:1210
+#: builtin/repack.c:1202
 #, c-format
 msgid "renaming pack to '%s' failed"
 msgstr ""
 
-#: builtin/repack.c:1212
+#: builtin/repack.c:1204
 #, c-format
 msgid "pack-objects did not write a '%s' file for pack %s-%s"
 msgstr ""
 
-#: builtin/repack.c:1215 sequencer.c:4244
+#: builtin/repack.c:1207 sequencer.c:4244
 #, c-format
 msgid "could not unlink: %s"
 msgstr ""
@@ -17212,74 +17212,74 @@ msgstr ""
 msgid "too many commits to write graph"
 msgstr ""
 
-#: commit-graph.c:2581
+#: commit-graph.c:2577
 msgid "the commit-graph file has incorrect checksum and is likely corrupt"
 msgstr ""
 
-#: commit-graph.c:2591
+#: commit-graph.c:2587
 #, c-format
 msgid "commit-graph has incorrect OID order: %s then %s"
 msgstr ""
 
-#: commit-graph.c:2601 commit-graph.c:2616
+#: commit-graph.c:2597 commit-graph.c:2612
 #, c-format
 msgid "commit-graph has incorrect fanout value: fanout[%d] = %u != %u"
 msgstr ""
 
-#: commit-graph.c:2608
+#: commit-graph.c:2604
 #, c-format
 msgid "failed to parse commit %s from commit-graph"
 msgstr ""
 
-#: commit-graph.c:2626
-msgid "Verifying commits in commit graph"
-msgstr ""
-
-#: commit-graph.c:2641
+#: commit-graph.c:2633
 #, c-format
 msgid "failed to parse commit %s from object database for commit-graph"
 msgstr ""
 
-#: commit-graph.c:2648
+#: commit-graph.c:2640
 #, c-format
 msgid "root tree OID for commit %s in commit-graph is %s != %s"
 msgstr ""
 
-#: commit-graph.c:2658
+#: commit-graph.c:2650
 #, c-format
 msgid "commit-graph parent list for commit %s is too long"
 msgstr ""
 
-#: commit-graph.c:2667
+#: commit-graph.c:2659
 #, c-format
 msgid "commit-graph parent for %s is %s != %s"
 msgstr ""
 
-#: commit-graph.c:2681
+#: commit-graph.c:2673
 #, c-format
 msgid "commit-graph parent list for commit %s terminates early"
 msgstr ""
 
-#: commit-graph.c:2686
+#: commit-graph.c:2678
 #, c-format
 msgid ""
 "commit-graph has generation number zero for commit %s, but non-zero elsewhere"
 msgstr ""
 
-#: commit-graph.c:2690
+#: commit-graph.c:2682
 #, c-format
 msgid ""
 "commit-graph has non-zero generation number for commit %s, but zero elsewhere"
 msgstr ""
 
-#: commit-graph.c:2707
+#: commit-graph.c:2699
 #, c-format
 msgid "commit-graph generation for commit %s is %<PRIuMAX> < %<PRIuMAX>"
 msgstr ""
 
-#: commit-graph.c:2713
+#: commit-graph.c:2705
 #, c-format
 msgid "commit date for commit %s in commit-graph is %<PRIuMAX> != %<PRIuMAX>"
+msgstr ""
+
+#: commit-graph.c:2730
+msgid "Verifying commits in commit graph"
 msgstr ""
 
 #: commit.c:62
@@ -18368,7 +18368,7 @@ msgstr ""
 msgid "could not archive missing directory '%s'"
 msgstr ""
 
-#: diagnose.c:180 dir.c:2442
+#: diagnose.c:180 dir.c:2457
 #, c-format
 msgid "could not open directory '%s'"
 msgstr ""
@@ -19050,60 +19050,60 @@ msgstr ""
 msgid "No such path '%s' in the diff"
 msgstr ""
 
-#: dir.c:591
+#: dir.c:606
 #, c-format
 msgid "pathspec '%s' did not match any file(s) known to git"
 msgstr ""
 
-#: dir.c:729 dir.c:736 dir.c:765 dir.c:778
+#: dir.c:744 dir.c:751 dir.c:780 dir.c:793
 #, c-format
 msgid "unrecognized pattern: '%s'"
 msgstr ""
 
-#: dir.c:793 dir.c:807
+#: dir.c:808 dir.c:822
 #, c-format
 msgid "unrecognized negative pattern: '%s'"
 msgstr ""
 
-#: dir.c:823
+#: dir.c:838
 #, c-format
 msgid "your sparse-checkout file may have issues: pattern '%s' is repeated"
 msgstr ""
 
-#: dir.c:831
+#: dir.c:846
 msgid "disabling cone pattern matching"
 msgstr ""
 
-#: dir.c:1215
+#: dir.c:1230
 #, c-format
 msgid "cannot use %s as an exclude file"
 msgstr ""
 
-#: dir.c:2745
+#: dir.c:2760
 msgid "failed to get kernel name and information"
 msgstr ""
 
-#: dir.c:2882
+#: dir.c:2897
 msgid "untracked cache is disabled on this system or location"
 msgstr ""
 
-#: dir.c:3170 dir.c:3208
+#: dir.c:3185 dir.c:3223
 msgid ""
 "No directory name could be guessed.\n"
 "Please specify a directory on the command line"
 msgstr ""
 
-#: dir.c:3900
+#: dir.c:3915
 #, c-format
 msgid "index file corrupt in repo %s"
 msgstr ""
 
-#: dir.c:3947 dir.c:3952
+#: dir.c:3962 dir.c:3967
 #, c-format
 msgid "could not create directories for %s"
 msgstr ""
 
-#: dir.c:3981
+#: dir.c:3996
 #, c-format
 msgid "could not migrate git directory from '%s' to '%s'"
 msgstr ""
@@ -22336,32 +22336,32 @@ msgstr ""
 msgid "parse_object_buffer failed on %s for %s"
 msgstr ""
 
-#: ref-filter.c:2366
+#: ref-filter.c:2367
 #, c-format
 msgid "malformed object at '%s'"
 msgstr ""
 
-#: ref-filter.c:2456
+#: ref-filter.c:2457
 #, c-format
 msgid "ignoring ref with broken name %s"
 msgstr ""
 
-#: ref-filter.c:2461 refs.c:770
+#: ref-filter.c:2462 refs.c:770
 #, c-format
 msgid "ignoring broken ref %s"
 msgstr ""
 
-#: ref-filter.c:2881
+#: ref-filter.c:2882
 #, c-format
 msgid "format: %%(end) atom missing"
 msgstr ""
 
-#: ref-filter.c:2992
+#: ref-filter.c:2993
 #, c-format
 msgid "malformed object name %s"
 msgstr ""
 
-#: ref-filter.c:2997
+#: ref-filter.c:2998
 #, c-format
 msgid "option `%s' must point to a commit"
 msgstr ""
@@ -22448,25 +22448,25 @@ msgstr ""
 msgid "update_ref failed for ref '%s': %s"
 msgstr ""
 
-#: refs.c:2194
+#: refs.c:2218
 #, c-format
 msgid "multiple updates for ref '%s' not allowed"
 msgstr ""
 
-#: refs.c:2277
+#: refs.c:2301
 msgid "ref updates forbidden inside quarantine environment"
 msgstr ""
 
-#: refs.c:2288
+#: refs.c:2312
 msgid "ref updates aborted by hook"
 msgstr ""
 
-#: refs.c:2396 refs.c:2426
+#: refs.c:2420 refs.c:2450
 #, c-format
 msgid "'%s' exists; cannot create '%s'"
 msgstr ""
 
-#: refs.c:2402 refs.c:2437
+#: refs.c:2426 refs.c:2461
 #, c-format
 msgid "cannot process '%s' and '%s' at the same time"
 msgstr ""
@@ -22476,13 +22476,13 @@ msgstr ""
 msgid "could not remove reference %s"
 msgstr ""
 
-#: refs/files-backend.c:1311 refs/packed-backend.c:1735
-#: refs/packed-backend.c:1745
+#: refs/files-backend.c:1311 refs/packed-backend.c:1719
+#: refs/packed-backend.c:1729
 #, c-format
 msgid "could not delete reference %s: %s"
 msgstr ""
 
-#: refs/files-backend.c:1314 refs/packed-backend.c:1748
+#: refs/files-backend.c:1314 refs/packed-backend.c:1732
 #, c-format
 msgid "could not delete references: %s"
 msgstr ""
@@ -25320,7 +25320,7 @@ msgstr ""
 msgid "worktree and untracked commit have duplicate entries: %s"
 msgstr ""
 
-#: upload-pack.c:1637
+#: upload-pack.c:1641
 msgid "expected flush after fetch arguments"
 msgstr ""
 
