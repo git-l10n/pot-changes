@@ -1,0 +1,305 @@
+
+
+#################### Thu, 13 Jul 2023 08:03:34 +0000 ####################
+
+--- po/git.pot.old	2023-07-13 08:03:34.118430435 +0000
++++ po/git.pot.new	2023-07-13 08:03:34.214430569 +0000
+@@ -1182,6 +1182,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "'%s' and '%s' cannot be used together"
++msgstr ""
++
++#, c-format
+ msgid "'%s' and pathspec arguments cannot be used together"
+ msgstr ""
+ 
+@@ -2052,6 +2056,9 @@
+ msgid "<char>"
+ msgstr ""
+ 
++msgid "<commit-ish>"
++msgstr ""
++
+ msgid "<count>"
+ msgstr ""
+ 
+@@ -2090,6 +2097,9 @@
+ msgid "<object>:<path> required, only <object> '%s' given"
+ msgstr ""
+ 
++msgid "<paragraph-break>"
++msgstr ""
++
+ msgid "<param1,param2>..."
+ msgstr ""
+ 
+@@ -3030,7 +3040,7 @@
+ msgid "Compressing objects"
+ msgstr ""
+ 
+-msgid "Compute object ID and optionally creates a blob from a file"
++msgid "Compute object ID and optionally create an object from a file"
+ msgstr ""
+ 
+ msgid "Compute unique ID for a patch"
+@@ -3983,6 +3993,13 @@
+ msgid "HEAD of working tree %s is not updated"
+ msgstr ""
+ 
++#, c-format
++msgid ""
++"HEAD points to an invalid (or orphaned) reference.\n"
++"HEAD path: '%s'\n"
++"HEAD contents: '%s'"
++msgstr ""
++
+ msgid "Helper programs to interact with remote repositories"
+ msgstr ""
+ 
+@@ -4065,6 +4082,24 @@
+ msgstr ""
+ 
+ #, c-format
++msgid ""
++"If you meant to create a worktree containing a new orphan branch\n"
++"(branch with no commits) for this repository, you can do so\n"
++"using the --orphan flag:\n"
++"\n"
++"\tgit worktree add --orphan %s\n"
++msgstr ""
++
++#, c-format
++msgid ""
++"If you meant to create a worktree containing a new orphan branch\n"
++"(branch with no commits) for this repository, you can do so\n"
++"using the --orphan flag:\n"
++"\n"
++"\tgit worktree add --orphan -b %s %s\n"
++msgstr ""
++
++#, c-format
+ msgid "If you prefer to skip this patch, run \"%s --skip\" instead."
+ msgstr ""
+ 
+@@ -4556,6 +4591,11 @@
+ msgid "No local changes to save"
+ msgstr ""
+ 
++msgid ""
++"No local or remote refs exist despite at least one remote\n"
++"present, stopping; use 'add -f' to overide or fetch a remote first"
++msgstr ""
++
+ msgid "No match"
+ msgstr ""
+ 
+@@ -4588,6 +4628,9 @@
+ msgid "No pathspec was given. Which files should I remove?"
+ msgstr ""
+ 
++msgid "No possible source branch, inferring '--orphan'"
++msgstr ""
++
+ msgid "No previous hunk"
+ msgstr ""
+ 
+@@ -8152,6 +8195,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "cannot clone submodule '%s' without a URL"
++msgstr ""
++
++#, c-format
+ msgid "cannot close written %s file '%s'"
+ msgstr ""
+ 
+@@ -9363,7 +9410,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "could not lookup commit %s"
++msgid "could not lookup commit '%s'"
+ msgstr ""
+ 
+ #, c-format
+@@ -9977,6 +10024,9 @@
+ msgid "create thin packs"
+ msgstr ""
+ 
++msgid "create unborn/orphaned branch"
++msgstr ""
++
+ msgid "create/reset and checkout a branch"
+ msgstr ""
+ 
+@@ -11278,6 +11328,9 @@
+ msgid "failed to read orderfile '%s'"
+ msgstr ""
+ 
++msgid "failed to read patch"
++msgstr ""
++
+ msgid "failed to read ref NOTES_MERGE_PARTIAL"
+ msgstr ""
+ 
+@@ -12037,7 +12090,7 @@
+ msgid ""
+ "git cat-file (--batch | --batch-check | --batch-command) [--batch-all-objects]\n"
+ "             [--buffer] [--follow-symlinks] [--unordered]\n"
+-"             [--textconv | --filters] [-z]"
++"             [--textconv | --filters] [-Z]"
+ msgstr ""
+ 
+ msgid ""
+@@ -12366,10 +12419,10 @@
+ msgid "git notes [--ref <notes-ref>] [list [<object>]]"
+ msgstr ""
+ 
+-msgid "git notes [--ref <notes-ref>] add [-f] [--allow-empty] [-m <msg> | -F <file> | (-c | -C) <object>] [<object>]"
++msgid "git notes [--ref <notes-ref>] add [-f] [--allow-empty] [--[no-]separator|--separator=<paragraph-break>] [--[no-]stripspace] [-m <msg> | -F <file> | (-c | -C) <object>] [<object>]"
+ msgstr ""
+ 
+-msgid "git notes [--ref <notes-ref>] append [--allow-empty] [-m <msg> | -F <file> | (-c | -C) <object>] [<object>]"
++msgid "git notes [--ref <notes-ref>] append [--allow-empty] [--[no-]separator|--separator=<paragraph-break>] [--[no-]stripspace] [-m <msg> | -F <file> | (-c | -C) <object>] [<object>]"
+ msgstr ""
+ 
+ msgid "git notes [--ref <notes-ref>] copy [-f] <from-object> <to-object>"
+@@ -12435,7 +12488,7 @@
+ msgid "git pack-objects [<options>] <base-name> [< <ref-list> | < <object-list>]"
+ msgstr ""
+ 
+-msgid "git pack-refs [--all] [--no-prune]"
++msgid "git pack-refs [--all] [--no-prune] [--include <pattern>] [--exclude <pattern>]"
+ msgstr ""
+ 
+ msgid "git patch-id [--stable | --unstable | --verbatim]"
+@@ -12808,7 +12861,7 @@
+ 
+ msgid ""
+ "git worktree add [-f] [--detach] [--checkout] [--lock [--reason <string>]]\n"
+-"                 [-b <new-branch>] <path> [<commit-ish>]"
++"                 [--orphan] [(-b | -B) <new-branch>] <path> [<commit-ish>]"
+ msgstr ""
+ 
+ msgid "git worktree list [-v | --porcelain [-z]]"
+@@ -13384,6 +13437,9 @@
+ msgid "insane in-reply-to: %s"
+ msgstr ""
+ 
++msgid "insert <paragraph-break> between paragraphs"
++msgstr ""
++
+ msgid "instead of applying the patch, output a summary for the input"
+ msgstr ""
+ 
+@@ -13548,6 +13604,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "invalid extra cruft tip: '%s'"
++msgstr ""
++
++#, c-format
+ msgid "invalid file: '%s'"
+ msgstr ""
+ 
+@@ -13644,6 +13704,10 @@
+ msgid "invalid onto: '%s'"
+ msgstr ""
+ 
++#, c-format
++msgid "invalid option '%s' in --stdin mode"
++msgstr ""
++
+ msgid "invalid option combination, ignoring --threads"
+ msgstr ""
+ 
+@@ -15387,6 +15451,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "options '%s', and '%s' cannot be used together"
++msgstr ""
++
++#, c-format
+ msgid "options '%s=%s' and '%s=%s' cannot be used together"
+ msgstr ""
+ 
+@@ -15645,6 +15713,9 @@
+ msgid "patch fragment without header at line %d: %.*s"
+ msgstr ""
+ 
++msgid "patch too large"
++msgstr ""
++
+ #, c-format
+ msgid "patch with only garbage at line %d"
+ msgstr ""
+@@ -15773,6 +15844,10 @@
+ msgid "pathspec '%s' matches files outside the current directory"
+ msgstr ""
+ 
++#, c-format
++msgid "pathspec magic not supported by --follow: %s"
++msgstr ""
++
+ msgid "path|tree-ish"
+ msgstr ""
+ 
+@@ -16408,6 +16483,12 @@
+ msgid "reference repository '%s' is shallow"
+ msgstr ""
+ 
++msgid "references to exclude"
++msgstr ""
++
++msgid "references to include"
++msgstr ""
++
+ msgid "refmap"
+ msgstr ""
+ 
+@@ -16605,6 +16686,9 @@
+ msgid "remove submodule working trees even if they contain local changes"
+ msgstr ""
+ 
++msgid "remove unnecessary whitespace"
++msgstr ""
++
+ msgid "remove whole directories"
+ msgstr ""
+ 
+@@ -17768,6 +17852,9 @@
+ msgid "status: waiting for good commit(s), bad commit known\n"
+ msgstr ""
+ 
++msgid "stdin and stdout is NUL-terminated"
++msgstr ""
++
+ msgid "stdin has NUL-terminated arguments"
+ msgstr ""
+ 
+@@ -18486,6 +18573,9 @@
+ msgid "unable to dup bundle descriptor"
+ msgstr ""
+ 
++msgid "unable to enumerate additional recent objects"
++msgstr ""
++
+ msgid "unable to fdopen alternates lockfile"
+ msgstr ""
+ 
+@@ -19206,6 +19296,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unreachable: invalid reference: %s"
++msgstr ""
++
++#, c-format
+ msgid "unrecognized %%(%.*s) argument: %s"
+ msgstr ""
+ 
