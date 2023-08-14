@@ -826,3 +826,69 @@ level=error msg="config variable 'commitGraph.changedPathsVersion' in manpage do
 level=error msg="    >> msgid   \"attempting to write a commit-graph, but 'commitgraph.changedPathsVersion' (%d) is not supported\""
 
 ERROR: fail to execute "git-po-helper check-pot"
+
+
+#################### Mon, 14 Aug 2023 18:58:00 +0000 ####################
+
+--- po/git.pot.old	2023-08-14 18:57:59.865253053 +0000
++++ po/git.pot.new	2023-08-14 18:57:59.997252863 +0000
+@@ -8674,6 +8674,9 @@
+ msgid "cannot use --filter with --stdin-packs"
+ msgstr ""
+ 
++msgid "cannot use --filter without --stdout"
++msgstr ""
++
+ msgid "cannot use --max-pack-size with --cruft"
+ msgstr ""
+ 
+@@ -10081,6 +10084,9 @@
+ msgid "create reflog for new branch"
+ msgstr ""
+ 
++msgid "create repository within 'src' directory"
++msgstr ""
++
+ msgid "create the branch's reflog"
+ msgstr ""
+ 
+@@ -15472,10 +15478,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "option '%s' can only be used along with '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "option '%s' must come before non-option arguments"
+ msgstr ""
+ 
+@@ -15670,9 +15672,6 @@
+ msgid "pack prefix %s does not begin with objdir %s"
+ msgstr ""
+ 
+-msgid "pack prefix to store a pack containing filtered out objects"
+-msgstr ""
+-
+ msgid "pack prefix to store a pack containing pruned objects"
+ msgstr ""
+ 
+@@ -17168,7 +17167,9 @@
+ "Commands:\n"
+ msgstr ""
+ 
+-msgid "scalar clone [<options>] [--] <repo> [<dir>]"
++msgid ""
++"scalar clone [--single-branch] [--branch <main-branch>] [--full-clone]\n"
++"\t[--[no-]src] <url> [<enlistment>]"
+ msgstr ""
+ 
+ msgid "scalar delete <enlistment>"
+
+
+-------------------- git-po-helper check-pot --------------------
+
+level=error msg="config variable 'commitGraph.changedPathsVersion' in manpage does not match string in pot file:"
+level=error msg="    >> msgid   \"attempting to write a commit-graph, but 'commitgraph.changedPathsVersion' (%d) is not supported\""
+
+ERROR: fail to execute "git-po-helper check-pot"
