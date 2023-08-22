@@ -1032,3 +1032,72 @@ level=error msg="config variable 'commitGraph.changedPathsVersion' in manpage do
 level=error msg="    >> msgid   \"attempting to write a commit-graph, but 'commitgraph.changedPathsVersion' (%d) is not supported\""
 
 ERROR: fail to execute "git-po-helper check-pot"
+
+
+#################### Tue, 22 Aug 2023 21:57:53 +0000 ####################
+
+--- po/git.pot.old	2023-08-22 21:57:53.852003139 +0000
++++ po/git.pot.new	2023-08-22 21:57:53.976009447 +0000
+@@ -12694,10 +12694,6 @@
+ msgid "git replay ([--contained] --onto <newbase> | --advance <branch>) <revision-range>..."
+ msgstr ""
+ 
+-#, c-format
+-msgid "git repository gone in '%s'"
+-msgstr ""
+-
+ msgid "git rerere [clear | forget <pathspec>... | diff | status | remaining | gc]"
+ msgstr ""
+ 
+@@ -16798,7 +16794,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "removing stale scalar.repo '%s'"
++msgid "removed stale scalar.repo '%s'"
+ msgstr ""
+ 
+ msgid "rename"
+@@ -16935,6 +16931,10 @@
+ msgid "repository '%s' not found"
+ msgstr ""
+ 
++#, c-format
++msgid "repository at '%s' has different owner"
++msgstr ""
++
+ msgid ""
+ "repository has been updated, but unable to write\n"
+ "new_index file. Check that disk is not full and quota is\n"
+@@ -16944,6 +16944,10 @@
+ msgid "repository lacks the necessary blob to perform 3-way merge."
+ msgstr ""
+ 
++#, c-format
++msgid "repository not found in '%s'"
++msgstr ""
++
+ msgid "repository on the other end cannot be shallow"
+ msgstr ""
+ 
+@@ -18409,6 +18413,12 @@
+ msgid "to clone from a local repository"
+ msgstr ""
+ 
++#, c-format
++msgid ""
++"to unregister this repository from Scalar, run\n"
++"\tgit config --global --unset --fixed-value scalar.repo \"%s\""
++msgstr ""
++
+ msgid "toggle the use of a sparse index"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-pot --------------------
+
+level=error msg="config variable 'commitGraph.changedPathsVersion' in manpage does not match string in pot file:"
+level=error msg="    >> msgid   \"attempting to write a commit-graph, but 'commitgraph.changedPathsVersion' (%d) is not supported\""
+
+ERROR: fail to execute "git-po-helper check-pot"

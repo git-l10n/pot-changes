@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2023-08-22 04:57+0000\n"
+"POT-Creation-Date: 2023-08-22 21:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -23096,7 +23096,7 @@ msgstr ""
 msgid "'%s' does not exist"
 msgstr ""
 
-#: scalar.c:42 scalar.c:54 scalar.c:383 scalar.c:481 scalar.c:676
+#: scalar.c:42 scalar.c:54 scalar.c:383 scalar.c:481 scalar.c:677
 #, c-format
 msgid "could not switch to '%s'"
 msgstr ""
@@ -23253,63 +23253,75 @@ msgstr ""
 
 #: scalar.c:686
 #, c-format
-msgid "removing stale scalar.repo '%s'"
+msgid "removed stale scalar.repo '%s'"
 msgstr ""
 
-#: scalar.c:690
+#: scalar.c:696
 #, c-format
-msgid "git repository gone in '%s'"
+msgid "repository at '%s' has different owner"
 msgstr ""
 
-#: scalar.c:730
+#: scalar.c:704
+#, c-format
+msgid "repository not found in '%s'"
+msgstr ""
+
+#: scalar.c:720
+#, c-format
+msgid ""
+"to unregister this repository from Scalar, run\n"
+"\tgit config --global --unset --fixed-value scalar.repo \"%s\""
+msgstr ""
+
+#: scalar.c:752
 msgid ""
 "scalar run <task> [<enlistment>]\n"
 "Tasks:\n"
 msgstr ""
 
-#: scalar.c:748
+#: scalar.c:770
 #, c-format
 msgid "no such task: '%s'"
 msgstr ""
 
-#: scalar.c:780
+#: scalar.c:802
 msgid "scalar unregister [<enlistment>]"
 msgstr ""
 
-#: scalar.c:827
+#: scalar.c:849
 msgid "scalar delete <enlistment>"
 msgstr ""
 
-#: scalar.c:842
+#: scalar.c:864
 msgid "refusing to delete current working directory"
 msgstr ""
 
-#: scalar.c:876
+#: scalar.c:898
 msgid "include Git version"
 msgstr ""
 
-#: scalar.c:878
+#: scalar.c:900
 msgid "include Git's build options"
 msgstr ""
 
-#: scalar.c:882
+#: scalar.c:904
 msgid "scalar verbose [-v | --verbose] [--build-options]"
 msgstr ""
 
-#: scalar.c:925
+#: scalar.c:947
 msgid "-C requires a <directory>"
 msgstr ""
 
-#: scalar.c:927
+#: scalar.c:949
 #, c-format
 msgid "could not change to '%s'"
 msgstr ""
 
-#: scalar.c:933
+#: scalar.c:955
 msgid "-c requires a <key>=<value> argument"
 msgstr ""
 
-#: scalar.c:951
+#: scalar.c:973
 msgid ""
 "scalar [-C <directory>] [-c <key>=<value>] <command> [<options>]\n"
 "\n"
@@ -24307,28 +24319,28 @@ msgstr ""
 msgid "failed to stat '%*s%s%s'"
 msgstr ""
 
-#: setup.c:1452
+#: setup.c:1453
 msgid "Unable to read current working directory"
 msgstr ""
 
-#: setup.c:1461 setup.c:1467
+#: setup.c:1462 setup.c:1468
 #, c-format
 msgid "cannot change to '%s'"
 msgstr ""
 
-#: setup.c:1472
+#: setup.c:1473
 #, c-format
 msgid "not a git repository (or any of the parent directories): %s"
 msgstr ""
 
-#: setup.c:1478
+#: setup.c:1479
 #, c-format
 msgid ""
 "not a git repository (or any parent up to mount point %s)\n"
 "Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set)."
 msgstr ""
 
-#: setup.c:1489
+#: setup.c:1490
 #, c-format
 msgid ""
 "detected dubious ownership in repository at '%s'\n"
@@ -24337,7 +24349,7 @@ msgid ""
 "\tgit config --global --add safe.directory %s"
 msgstr ""
 
-#: setup.c:1500
+#: setup.c:1501
 #, c-format
 msgid "cannot use bare repository '%s' (safe.bareRepository is '%s')"
 msgstr ""
