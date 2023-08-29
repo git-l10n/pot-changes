@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2023-08-25 18:57+0000\n"
+"POT-Creation-Date: 2023-08-29 21:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -1696,12 +1696,12 @@ msgstr ""
 msgid "ignoring overly large gitattributes file '%s'"
 msgstr ""
 
-#: attr.c:834
+#: attr.c:854
 #, c-format
 msgid "ignoring overly large gitattributes blob '%s'"
 msgstr ""
 
-#: attr.c:1191
+#: attr.c:1212
 msgid "bad --attr-source or GIT_ATTR_SOURCE"
 msgstr ""
 
@@ -4997,7 +4997,7 @@ msgstr ""
 msgid "Too many arguments."
 msgstr ""
 
-#: builtin/clone.c:950 scalar.c:452
+#: builtin/clone.c:950 scalar.c:456
 msgid "You must specify a repository to clone."
 msgstr ""
 
@@ -7621,7 +7621,7 @@ msgstr ""
 msgid "failed to parse '%s' value '%s'"
 msgstr ""
 
-#: builtin/gc.c:504 setup.c:1755
+#: builtin/gc.c:504 setup.c:1745
 #, c-format
 msgid "cannot stat '%s'"
 msgstr ""
@@ -8627,7 +8627,7 @@ msgstr ""
 msgid "bad %s"
 msgstr ""
 
-#: builtin/index-pack.c:1850 builtin/init-db.c:158 setup.c:2106
+#: builtin/index-pack.c:1850 builtin/init-db.c:158 setup.c:2096
 #, c-format
 msgid "unknown hash algorithm '%s'"
 msgstr ""
@@ -10175,7 +10175,7 @@ msgid "can not move directory into itself"
 msgstr ""
 
 #: builtin/mv.c:308
-msgid "cannot move directory over file"
+msgid "destination already exists"
 msgstr ""
 
 #: builtin/mv.c:323
@@ -11290,7 +11290,7 @@ msgstr ""
 msgid "<remote>"
 msgstr ""
 
-#: builtin/pull.c:469 builtin/pull.c:484 builtin/pull.c:489 scalar.c:413
+#: builtin/pull.c:469 builtin/pull.c:484 builtin/pull.c:489 scalar.c:414
 msgid "<branch>"
 msgstr ""
 
@@ -22992,7 +22992,7 @@ msgstr ""
 msgid "'%s' does not exist"
 msgstr ""
 
-#: scalar.c:42 scalar.c:54 scalar.c:383 scalar.c:474 scalar.c:669
+#: scalar.c:42 scalar.c:54 scalar.c:383 scalar.c:481 scalar.c:677
 #, c-format
 msgid "could not switch to '%s'"
 msgstr ""
@@ -23063,143 +23063,166 @@ msgstr ""
 msgid "failed to delete enlistment directory"
 msgstr ""
 
-#: scalar.c:414
+#: scalar.c:415
 msgid "branch to checkout after clone"
 msgstr ""
 
-#: scalar.c:416
+#: scalar.c:417
 msgid "when cloning, create full working directory"
 msgstr ""
 
-#: scalar.c:418
+#: scalar.c:419
 msgid "only download metadata for the branch that will be checked out"
 msgstr ""
 
-#: scalar.c:423
-msgid "scalar clone [<options>] [--] <repo> [<dir>]"
+#: scalar.c:422
+msgid "create repository within 'src' directory"
 msgstr ""
 
-#: scalar.c:448
+#: scalar.c:426
+msgid ""
+"scalar clone [--single-branch] [--branch <main-branch>] [--full-clone]\n"
+"\t[--[no-]src] <url> [<enlistment>]"
+msgstr ""
+
+#: scalar.c:452
 #, c-format
 msgid "cannot deduce worktree name from '%s'"
 msgstr ""
 
-#: scalar.c:457
+#: scalar.c:461
 #, c-format
 msgid "directory '%s' exists already"
 msgstr ""
 
-#: scalar.c:484
+#: scalar.c:491
 #, c-format
 msgid "failed to get default branch for '%s'"
 msgstr ""
 
-#: scalar.c:495
+#: scalar.c:502
 #, c-format
 msgid "could not configure remote in '%s'"
 msgstr ""
 
-#: scalar.c:504
+#: scalar.c:511
 #, c-format
 msgid "could not configure '%s'"
 msgstr ""
 
-#: scalar.c:509
+#: scalar.c:516
 msgid "partial clone failed; attempting full clone"
 msgstr ""
 
-#: scalar.c:513
+#: scalar.c:520
 msgid "could not configure for full clone"
 msgstr ""
 
-#: scalar.c:550
+#: scalar.c:557
 msgid "scalar diagnose [<enlistment>]"
 msgstr ""
 
-#: scalar.c:572
+#: scalar.c:579
 msgid "`scalar list` does not take arguments"
 msgstr ""
 
-#: scalar.c:585
+#: scalar.c:592
 msgid "scalar register [<enlistment>]"
 msgstr ""
 
-#: scalar.c:632
+#: scalar.c:639
 msgid "reconfigure all registered enlistments"
 msgstr ""
 
-#: scalar.c:636
+#: scalar.c:643
 msgid "scalar reconfigure [--all | <enlistment>]"
 msgstr ""
 
-#: scalar.c:654
+#: scalar.c:661
 msgid "--all or <enlistment>, but not both"
-msgstr ""
-
-#: scalar.c:676
-#, c-format
-msgid "could not remove stale scalar.repo '%s'"
-msgstr ""
-
-#: scalar.c:679
-#, c-format
-msgid "removing stale scalar.repo '%s'"
 msgstr ""
 
 #: scalar.c:683
 #, c-format
-msgid "git repository gone in '%s'"
+msgid "could not remove stale scalar.repo '%s'"
 msgstr ""
 
-#: scalar.c:723
+#: scalar.c:686
+#, c-format
+msgid "removed stale scalar.repo '%s'"
+msgstr ""
+
+#: scalar.c:696
+#, c-format
+msgid "repository at '%s' has different owner"
+msgstr ""
+
+#: scalar.c:701
+#, c-format
+msgid "repository at '%s' has a format issue"
+msgstr ""
+
+#: scalar.c:709
+#, c-format
+msgid "repository not found in '%s'"
+msgstr ""
+
+#: scalar.c:725
+#, c-format
+msgid ""
+"to unregister this repository from Scalar, run\n"
+"\tgit config --global --unset --fixed-value scalar.repo \"%s\""
+msgstr ""
+
+#: scalar.c:757
 msgid ""
 "scalar run <task> [<enlistment>]\n"
 "Tasks:\n"
 msgstr ""
 
-#: scalar.c:741
+#: scalar.c:775
 #, c-format
 msgid "no such task: '%s'"
 msgstr ""
 
-#: scalar.c:773
+#: scalar.c:807
 msgid "scalar unregister [<enlistment>]"
 msgstr ""
 
-#: scalar.c:820
+#: scalar.c:854
 msgid "scalar delete <enlistment>"
 msgstr ""
 
-#: scalar.c:835
+#: scalar.c:869
 msgid "refusing to delete current working directory"
 msgstr ""
 
-#: scalar.c:869
+#: scalar.c:903
 msgid "include Git version"
 msgstr ""
 
-#: scalar.c:871
+#: scalar.c:905
 msgid "include Git's build options"
 msgstr ""
 
-#: scalar.c:875
+#: scalar.c:909
 msgid "scalar verbose [-v | --verbose] [--build-options]"
 msgstr ""
 
-#: scalar.c:918
+#: scalar.c:952
 msgid "-C requires a <directory>"
 msgstr ""
 
-#: scalar.c:920
+#: scalar.c:954
 #, c-format
 msgid "could not change to '%s'"
 msgstr ""
 
-#: scalar.c:926
+#: scalar.c:960
 msgid "-c requires a <key>=<value> argument"
 msgstr ""
 
-#: scalar.c:944
+#: scalar.c:978
 msgid ""
 "scalar [-C <directory>] [-c <key>=<value>] <command> [<options>]\n"
 "\n"
@@ -24206,28 +24229,28 @@ msgstr ""
 msgid "failed to stat '%*s%s%s'"
 msgstr ""
 
-#: setup.c:1464
+#: setup.c:1453
 msgid "Unable to read current working directory"
 msgstr ""
 
-#: setup.c:1473 setup.c:1479
+#: setup.c:1462 setup.c:1468
 #, c-format
 msgid "cannot change to '%s'"
 msgstr ""
 
-#: setup.c:1484
+#: setup.c:1473
 #, c-format
 msgid "not a git repository (or any of the parent directories): %s"
 msgstr ""
 
-#: setup.c:1490
+#: setup.c:1479
 #, c-format
 msgid ""
 "not a git repository (or any parent up to mount point %s)\n"
 "Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set)."
 msgstr ""
 
-#: setup.c:1501
+#: setup.c:1490
 #, c-format
 msgid ""
 "detected dubious ownership in repository at '%s'\n"
@@ -24236,111 +24259,111 @@ msgid ""
 "\tgit config --global --add safe.directory %s"
 msgstr ""
 
-#: setup.c:1512
+#: setup.c:1501
 #, c-format
 msgid "cannot use bare repository '%s' (safe.bareRepository is '%s')"
 msgstr ""
 
-#: setup.c:1641
+#: setup.c:1631
 #, c-format
 msgid ""
 "problem with core.sharedRepository filemode value (0%.3o).\n"
 "The owner of files must always have read and write permissions."
 msgstr ""
 
-#: setup.c:1705
+#: setup.c:1695
 msgid "fork failed"
 msgstr ""
 
-#: setup.c:1710
+#: setup.c:1700
 msgid "setsid failed"
 msgstr ""
 
-#: setup.c:1761
+#: setup.c:1751
 #, c-format
 msgid "cannot stat template '%s'"
 msgstr ""
 
-#: setup.c:1766
+#: setup.c:1756
 #, c-format
 msgid "cannot opendir '%s'"
 msgstr ""
 
-#: setup.c:1778
+#: setup.c:1768
 #, c-format
 msgid "cannot readlink '%s'"
 msgstr ""
 
-#: setup.c:1780
+#: setup.c:1770
 #, c-format
 msgid "cannot symlink '%s' '%s'"
 msgstr ""
 
-#: setup.c:1786
+#: setup.c:1776
 #, c-format
 msgid "cannot copy '%s' to '%s'"
 msgstr ""
 
-#: setup.c:1790
+#: setup.c:1780
 #, c-format
 msgid "ignoring template %s"
 msgstr ""
 
-#: setup.c:1821
+#: setup.c:1811
 #, c-format
 msgid "templates not found in %s"
 msgstr ""
 
-#: setup.c:1836
+#: setup.c:1826
 #, c-format
 msgid "not copying templates from '%s': %s"
 msgstr ""
 
-#: setup.c:1990
+#: setup.c:1980
 #, c-format
 msgid "invalid initial branch name: '%s'"
 msgstr ""
 
-#: setup.c:2081
+#: setup.c:2071
 #, c-format
 msgid "unable to handle file type %d"
 msgstr ""
 
-#: setup.c:2084
+#: setup.c:2074
 #, c-format
 msgid "unable to move %s to %s"
 msgstr ""
 
-#: setup.c:2100
+#: setup.c:2090
 msgid "attempt to reinitialize repository with different hash"
 msgstr ""
 
-#: setup.c:2125 setup.c:2128
+#: setup.c:2115 setup.c:2118
 #, c-format
 msgid "%s already exists"
 msgstr ""
 
-#: setup.c:2162
+#: setup.c:2152
 #, c-format
 msgid "re-init: ignored --initial-branch=%s"
 msgstr ""
 
-#: setup.c:2193
+#: setup.c:2183
 #, c-format
 msgid "Reinitialized existing shared Git repository in %s%s\n"
 msgstr ""
 
-#: setup.c:2194
+#: setup.c:2184
 #, c-format
 msgid "Reinitialized existing Git repository in %s%s\n"
 msgstr ""
 
-#: setup.c:2198
+#: setup.c:2188
 #, c-format
 msgid "Initialized empty shared Git repository in %s%s\n"
 msgstr ""
 
-#: setup.c:2199
+#: setup.c:2189
 #, c-format
 msgid "Initialized empty Git repository in %s%s\n"
 msgstr ""
