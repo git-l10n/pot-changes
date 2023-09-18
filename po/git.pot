@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2023-09-13 18:57+0000\n"
+"POT-Creation-Date: 2023-09-18 21:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -826,8 +826,8 @@ msgstr ""
 #: builtin/merge-base.c:172 builtin/merge.c:1405 builtin/merge.c:1407
 #: builtin/pack-objects.c:4401 builtin/push.c:643 builtin/push.c:681
 #: builtin/push.c:687 builtin/push.c:692 builtin/rebase.c:1257
-#: builtin/rebase.c:1259 builtin/rebase.c:1268 builtin/repack.c:863
-#: builtin/repack.c:869 builtin/repack.c:871 builtin/repack.c:922
+#: builtin/rebase.c:1259 builtin/rebase.c:1268 builtin/repack.c:974
+#: builtin/repack.c:980 builtin/repack.c:982 builtin/repack.c:1032
 #: builtin/reset.c:376 builtin/reset.c:413 builtin/rev-list.c:557
 #: builtin/show-branch.c:722 builtin/show-branch.c:727 builtin/stash.c:1768
 #: builtin/stash.c:1771 builtin/submodule--helper.c:1205
@@ -2490,7 +2490,7 @@ msgid "allow fall back on 3way merging if needed"
 msgstr ""
 
 #: builtin/am.c:2338 builtin/init-db.c:91 builtin/prune-packed.c:17
-#: builtin/repack.c:819 builtin/stash.c:1016
+#: builtin/repack.c:930 builtin/stash.c:1016
 msgid "be quiet"
 msgstr ""
 
@@ -2535,8 +2535,8 @@ msgstr ""
 #: builtin/am.c:2376 builtin/commit.c:1540 builtin/fmt-merge-msg.c:19
 #: builtin/fmt-merge-msg.c:22 builtin/grep.c:969 builtin/merge.c:250
 #: builtin/pull.c:149 builtin/pull.c:211 builtin/pull.c:228
-#: builtin/rebase.c:1107 builtin/repack.c:830 builtin/repack.c:834
-#: builtin/repack.c:836 builtin/show-branch.c:661 builtin/show-ref.c:169
+#: builtin/rebase.c:1107 builtin/repack.c:941 builtin/repack.c:945
+#: builtin/repack.c:947 builtin/show-branch.c:661 builtin/show-ref.c:169
 #: builtin/tag.c:456 parse-options.h:215 parse-options.h:276
 #: parse-options.h:524
 msgid "n"
@@ -4790,7 +4790,7 @@ msgstr ""
 
 #: builtin/clone.c:140 builtin/column.c:28 builtin/fmt-merge-msg.c:28
 #: builtin/init-db.c:94 builtin/merge-file.c:50 builtin/merge.c:277
-#: builtin/pack-objects.c:4269 builtin/repack.c:842
+#: builtin/pack-objects.c:4269 builtin/repack.c:953
 #: builtin/submodule--helper.c:3283 t/helper/test-simple-ipc.c:596
 #: t/helper/test-simple-ipc.c:598
 msgid "name"
@@ -5166,7 +5166,7 @@ msgid ""
 msgstr ""
 
 #: builtin/commit-graph.c:57 builtin/fetch.c:2198 builtin/log.c:1940
-#: builtin/repack.c:848
+#: builtin/repack.c:959
 msgid "dir"
 msgstr ""
 
@@ -10734,7 +10734,7 @@ msgstr ""
 msgid "wrote %<PRIu32> objects while expecting %<PRIu32>"
 msgstr ""
 
-#: builtin/pack-objects.c:1570 builtin/repack.c:897
+#: builtin/pack-objects.c:1570 builtin/repack.c:1008
 msgid "disabling bitmap writing, as some objects are not being packed"
 msgstr ""
 
@@ -12890,181 +12890,181 @@ msgstr ""
 msgid "be verbose; must be placed before a subcommand"
 msgstr ""
 
-#: builtin/repack.c:41
+#: builtin/repack.c:40
 msgid "git repack [<options>]"
 msgstr ""
 
-#: builtin/repack.c:46
+#: builtin/repack.c:45
 msgid ""
 "Incremental repacks are incompatible with bitmap indexes.  Use\n"
 "--no-write-bitmap-index or disable the pack.writeBitmaps configuration."
 msgstr ""
 
-#: builtin/repack.c:196
+#: builtin/repack.c:273
 msgid "could not start pack-objects to repack promisor objects"
 msgstr ""
 
-#: builtin/repack.c:275 builtin/repack.c:757 builtin/repack.c:1021
+#: builtin/repack.c:352 builtin/repack.c:869 builtin/repack.c:1132
 msgid "repack: Expecting full hex object ID lines only from pack-objects."
 msgstr ""
 
-#: builtin/repack.c:299
+#: builtin/repack.c:376
 msgid "could not finish pack-objects to repack promisor objects"
 msgstr ""
 
-#: builtin/repack.c:313
+#: builtin/repack.c:390
 #, c-format
 msgid "cannot open index for %s"
 msgstr ""
 
-#: builtin/repack.c:402
+#: builtin/repack.c:480
 #, c-format
 msgid "pack %s too large to consider in geometric progression"
 msgstr ""
 
-#: builtin/repack.c:436 builtin/repack.c:444 builtin/repack.c:450
+#: builtin/repack.c:514 builtin/repack.c:522 builtin/repack.c:528
 #, c-format
 msgid "pack %s too large to roll up"
 msgstr ""
 
-#: builtin/repack.c:543
+#: builtin/repack.c:647
 #, c-format
 msgid "could not open tempfile %s for writing"
 msgstr ""
 
-#: builtin/repack.c:561
+#: builtin/repack.c:665
 msgid "could not close refs snapshot tempfile"
 msgstr ""
 
-#: builtin/repack.c:690
+#: builtin/repack.c:801
 #, c-format
 msgid "could not remove stale bitmap: %s"
 msgstr ""
 
-#: builtin/repack.c:802
+#: builtin/repack.c:913
 msgid "pack everything in a single pack"
 msgstr ""
 
-#: builtin/repack.c:804
+#: builtin/repack.c:915
 msgid "same as -a, and turn unreachable objects loose"
 msgstr ""
 
-#: builtin/repack.c:807
+#: builtin/repack.c:918
 msgid "same as -a, pack unreachable cruft objects separately"
 msgstr ""
 
-#: builtin/repack.c:809 builtin/repack.c:826
+#: builtin/repack.c:920 builtin/repack.c:937
 msgid "approxidate"
 msgstr ""
 
-#: builtin/repack.c:810
+#: builtin/repack.c:921
 msgid "with --cruft, expire objects older than this"
 msgstr ""
 
-#: builtin/repack.c:812
+#: builtin/repack.c:923
 msgid "remove redundant packs, and run git-prune-packed"
 msgstr ""
 
-#: builtin/repack.c:814
+#: builtin/repack.c:925
 msgid "pass --no-reuse-delta to git-pack-objects"
 msgstr ""
 
-#: builtin/repack.c:816
+#: builtin/repack.c:927
 msgid "pass --no-reuse-object to git-pack-objects"
 msgstr ""
 
-#: builtin/repack.c:818
+#: builtin/repack.c:929
 msgid "do not run git-update-server-info"
 msgstr ""
 
-#: builtin/repack.c:821
+#: builtin/repack.c:932
 msgid "pass --local to git-pack-objects"
 msgstr ""
 
-#: builtin/repack.c:823
+#: builtin/repack.c:934
 msgid "write bitmap index"
 msgstr ""
 
-#: builtin/repack.c:825
+#: builtin/repack.c:936
 msgid "pass --delta-islands to git-pack-objects"
 msgstr ""
 
-#: builtin/repack.c:827
+#: builtin/repack.c:938
 msgid "with -A, do not loosen objects older than this"
 msgstr ""
 
-#: builtin/repack.c:829
+#: builtin/repack.c:940
 msgid "with -a, repack unreachable objects"
 msgstr ""
 
-#: builtin/repack.c:831
+#: builtin/repack.c:942
 msgid "size of the window used for delta compression"
 msgstr ""
 
-#: builtin/repack.c:832 builtin/repack.c:838
+#: builtin/repack.c:943 builtin/repack.c:949
 msgid "bytes"
 msgstr ""
 
-#: builtin/repack.c:833
+#: builtin/repack.c:944
 msgid "same as the above, but limit memory size instead of entries count"
 msgstr ""
 
-#: builtin/repack.c:835
+#: builtin/repack.c:946
 msgid "limits the maximum delta depth"
 msgstr ""
 
-#: builtin/repack.c:837
+#: builtin/repack.c:948
 msgid "limits the maximum number of threads"
 msgstr ""
 
-#: builtin/repack.c:839
+#: builtin/repack.c:950
 msgid "maximum size of each packfile"
 msgstr ""
 
-#: builtin/repack.c:841
+#: builtin/repack.c:952
 msgid "repack objects in packs marked with .keep"
 msgstr ""
 
-#: builtin/repack.c:843
+#: builtin/repack.c:954
 msgid "do not repack this pack"
 msgstr ""
 
-#: builtin/repack.c:845
+#: builtin/repack.c:956
 msgid "find a geometric progression with factor <N>"
 msgstr ""
 
-#: builtin/repack.c:847
+#: builtin/repack.c:958
 msgid "write a multi-pack index of the resulting packs"
 msgstr ""
 
-#: builtin/repack.c:849
+#: builtin/repack.c:960
 msgid "pack prefix to store a pack containing pruned objects"
 msgstr ""
 
-#: builtin/repack.c:859
+#: builtin/repack.c:970
 msgid "cannot delete packs in a precious-objects repo"
 msgstr ""
 
-#: builtin/repack.c:1032
+#: builtin/repack.c:1143
 msgid "Nothing new to pack."
 msgstr ""
 
-#: builtin/repack.c:1037
+#: builtin/repack.c:1148
 #, c-format
 msgid "pack prefix %s does not begin with objdir %s"
 msgstr ""
 
-#: builtin/repack.c:1123
+#: builtin/repack.c:1232
 #, c-format
 msgid "renaming pack to '%s' failed"
 msgstr ""
 
-#: builtin/repack.c:1125
+#: builtin/repack.c:1234
 #, c-format
 msgid "pack-objects did not write a '%s' file for pack %s-%s"
 msgstr ""
 
-#: builtin/repack.c:1128 sequencer.c:4240
+#: builtin/repack.c:1237 sequencer.c:4240
 #, c-format
 msgid "could not unlink: %s"
 msgstr ""
@@ -19944,78 +19944,78 @@ msgstr ""
 msgid "quoted CRLF detected"
 msgstr ""
 
-#: merge-ort.c:1790 merge-recursive.c:1225
+#: merge-ort.c:1773 merge-recursive.c:1225
 #, c-format
 msgid "Failed to merge submodule %s (not checked out)"
 msgstr ""
 
-#: merge-ort.c:1799
+#: merge-ort.c:1782
 #, c-format
 msgid "Failed to merge submodule %s (no merge base)"
 msgstr ""
 
-#: merge-ort.c:1809 merge-recursive.c:1232
+#: merge-ort.c:1792 merge-recursive.c:1232
 #, c-format
 msgid "Failed to merge submodule %s (commits not present)"
 msgstr ""
 
-#: merge-ort.c:1820 merge-recursive.c:1239
+#: merge-ort.c:1803 merge-recursive.c:1239
 #, c-format
 msgid "Failed to merge submodule %s (commits don't follow merge-base)"
 msgstr ""
 
-#: merge-ort.c:1831 merge-ort.c:1840
+#: merge-ort.c:1814 merge-ort.c:1823
 #, c-format
 msgid "Note: Fast-forwarding submodule %s to %s"
 msgstr ""
 
-#: merge-ort.c:1864
+#: merge-ort.c:1847
 #, c-format
 msgid "Failed to merge submodule %s"
 msgstr ""
 
-#: merge-ort.c:1872
+#: merge-ort.c:1855
 #, c-format
 msgid ""
 "Failed to merge submodule %s, but a possible merge resolution exists: %s"
 msgstr ""
 
-#: merge-ort.c:1883
+#: merge-ort.c:1866
 #, c-format
 msgid ""
 "Failed to merge submodule %s, but multiple possible merges exist:\n"
 "%s"
 msgstr ""
 
-#: merge-ort.c:2125 merge-recursive.c:1386
-msgid "Failed to execute internal merge"
+#: merge-ort.c:2108 merge-recursive.c:1386
+msgid "failed to execute internal merge"
 msgstr ""
 
-#: merge-ort.c:2130 merge-recursive.c:1391
+#: merge-ort.c:2113 merge-recursive.c:1391
 #, c-format
-msgid "Unable to add %s to database"
+msgid "unable to add %s to database"
 msgstr ""
 
-#: merge-ort.c:2138 merge-recursive.c:1424
+#: merge-ort.c:2120 merge-recursive.c:1424
 #, c-format
 msgid "Auto-merging %s"
 msgstr ""
 
-#: merge-ort.c:2278 merge-recursive.c:2146
+#: merge-ort.c:2260 merge-recursive.c:2146
 #, c-format
 msgid ""
 "CONFLICT (implicit dir rename): Existing file/dir at %s in the way of "
 "implicit directory rename(s) putting the following path(s) there: %s."
 msgstr ""
 
-#: merge-ort.c:2290 merge-recursive.c:2156
+#: merge-ort.c:2272 merge-recursive.c:2156
 #, c-format
 msgid ""
 "CONFLICT (implicit dir rename): Cannot map more than one path to %s; "
 "implicit directory renames tried to put these paths there: %s"
 msgstr ""
 
-#: merge-ort.c:2349
+#: merge-ort.c:2331
 #, c-format
 msgid ""
 "CONFLICT (directory rename split): Unclear where to rename %s to; it was "
@@ -20023,47 +20023,47 @@ msgid ""
 "majority of the files."
 msgstr ""
 
-#: merge-ort.c:2531 merge-recursive.c:2492
+#: merge-ort.c:2513 merge-recursive.c:2492
 #, c-format
 msgid ""
 "WARNING: Avoiding applying %s -> %s rename to %s, because %s itself was "
 "renamed."
 msgstr ""
 
-#: merge-ort.c:2705 merge-recursive.c:3275
+#: merge-ort.c:2687 merge-recursive.c:3275
 #, c-format
 msgid ""
 "Path updated: %s added in %s inside a directory that was renamed in %s; "
 "moving it to %s."
 msgstr ""
 
-#: merge-ort.c:2713 merge-recursive.c:3282
+#: merge-ort.c:2695 merge-recursive.c:3282
 #, c-format
 msgid ""
 "Path updated: %s renamed to %s in %s, inside a directory that was renamed in "
 "%s; moving it to %s."
 msgstr ""
 
-#: merge-ort.c:2727 merge-recursive.c:3278
+#: merge-ort.c:2709 merge-recursive.c:3278
 #, c-format
 msgid ""
 "CONFLICT (file location): %s added in %s inside a directory that was renamed "
 "in %s, suggesting it should perhaps be moved to %s."
 msgstr ""
 
-#: merge-ort.c:2736 merge-recursive.c:3285
+#: merge-ort.c:2718 merge-recursive.c:3285
 #, c-format
 msgid ""
 "CONFLICT (file location): %s renamed to %s in %s, inside a directory that "
 "was renamed in %s, suggesting it should perhaps be moved to %s."
 msgstr ""
 
-#: merge-ort.c:2895
+#: merge-ort.c:2877
 #, c-format
 msgid "CONFLICT (rename/rename): %s renamed to %s in %s and to %s in %s."
 msgstr ""
 
-#: merge-ort.c:2993
+#: merge-ort.c:2975
 #, c-format
 msgid ""
 "CONFLICT (rename involved in collision): rename of %s -> %s has content "
@@ -20071,60 +20071,60 @@ msgid ""
 "markers."
 msgstr ""
 
-#: merge-ort.c:3013 merge-ort.c:3038
+#: merge-ort.c:2995 merge-ort.c:3020
 #, c-format
 msgid "CONFLICT (rename/delete): %s renamed to %s in %s, but deleted in %s."
 msgstr ""
 
-#: merge-ort.c:3521 merge-recursive.c:3036
+#: merge-ort.c:3499 merge-recursive.c:3036
 #, c-format
 msgid "cannot read object %s"
 msgstr ""
 
-#: merge-ort.c:3524 merge-recursive.c:3039
+#: merge-ort.c:3502 merge-recursive.c:3039
 #, c-format
 msgid "object %s is not a blob"
 msgstr ""
 
-#: merge-ort.c:3959
+#: merge-ort.c:3937
 #, c-format
 msgid ""
 "CONFLICT (file/directory): directory in the way of %s from %s; moving it to "
 "%s instead."
 msgstr ""
 
-#: merge-ort.c:4042
+#: merge-ort.c:4020
 #, c-format
 msgid ""
 "CONFLICT (distinct types): %s had different types on each side; renamed both "
 "of them so each can be recorded somewhere."
 msgstr ""
 
-#: merge-ort.c:4051
+#: merge-ort.c:4029
 #, c-format
 msgid ""
 "CONFLICT (distinct types): %s had different types on each side; renamed one "
 "of them so each can be recorded somewhere."
 msgstr ""
 
-#: merge-ort.c:4138 merge-recursive.c:3115
+#: merge-ort.c:4116 merge-recursive.c:3115
 msgid "content"
 msgstr ""
 
-#: merge-ort.c:4140 merge-recursive.c:3119
+#: merge-ort.c:4118 merge-recursive.c:3119
 msgid "add/add"
 msgstr ""
 
-#: merge-ort.c:4142 merge-recursive.c:3164
+#: merge-ort.c:4120 merge-recursive.c:3164
 msgid "submodule"
 msgstr ""
 
-#: merge-ort.c:4145 merge-recursive.c:3165
+#: merge-ort.c:4123 merge-recursive.c:3165
 #, c-format
 msgid "CONFLICT (%s): Merge conflict in %s"
 msgstr ""
 
-#: merge-ort.c:4190
+#: merge-ort.c:4168
 #, c-format
 msgid ""
 "CONFLICT (modify/delete): %s deleted in %s and modified in %s.  Version %s "
@@ -20137,14 +20137,14 @@ msgstr ""
 #. commit that needs to be merged.  For example:
 #.  - go to submodule (mysubmodule), and either merge commit abc1234"
 #.
-#: merge-ort.c:4560
+#: merge-ort.c:4538
 #, c-format
 msgid ""
 " - go to submodule (%s), and either merge commit %s\n"
 "   or update to an existing commit which has merged those changes\n"
 msgstr ""
 
-#: merge-ort.c:4571
+#: merge-ort.c:4549
 #, c-format
 msgid ""
 "Recursive merging with submodules currently only supports trivial cases.\n"
@@ -20162,7 +20162,7 @@ msgstr ""
 #. TRANSLATORS: The %s arguments are: 1) tree hash of a merge
 #. base, and 2-3) the trees for the two trees we're merging.
 #.
-#: merge-ort.c:4976
+#: merge-ort.c:4953
 #, c-format
 msgid "collecting merge info failed for trees %s, %s, %s"
 msgstr ""
