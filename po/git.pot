@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2023-09-14 22:57+0000\n"
+"POT-Creation-Date: 2023-09-20 19:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -1824,7 +1824,7 @@ msgstr ""
 #: builtin/pack-objects.c:3422 builtin/pack-objects.c:3580
 #: builtin/pack-objects.c:4063 builtin/pack-objects.c:4078
 #: builtin/shortlog.c:273 midx.c:1123 pack-bitmap.c:1067 pack-bitmap.c:2188
-#: remote.c:2200 sequencer.c:2468 sequencer.c:5275 submodule.c:919
+#: remote.c:2200 sequencer.c:2468 sequencer.c:5271 submodule.c:919
 msgid "revision walk setup failed"
 msgstr ""
 
@@ -7261,7 +7261,7 @@ msgstr ""
 
 #: builtin/fsck.c:341 builtin/gc.c:1913 builtin/rebase.c:216
 #: rebase-interactive.c:122 rerere.c:476 rerere.c:684 sequencer.c:4044
-#: sequencer.c:4070 sequencer.c:6252
+#: sequencer.c:4070 sequencer.c:6248
 #, c-format
 msgid "could not write '%s'"
 msgstr ""
@@ -11831,7 +11831,7 @@ msgid "ignoring invalid allow_rerere_autoupdate: '%s'"
 msgstr ""
 
 #: builtin/rebase.c:553 builtin/rebase.c:1370 builtin/rm.c:420 sequencer.c:415
-#: sequencer.c:5126
+#: sequencer.c:5122
 #, c-format
 msgid "could not remove '%s'"
 msgstr ""
@@ -15493,84 +15493,98 @@ msgid "write index in this format"
 msgstr ""
 
 #: builtin/update-index.c:1094
-msgid "enable or disable split index"
+msgid "report on-disk index format version"
 msgstr ""
 
 #: builtin/update-index.c:1096
-msgid "enable/disable untracked cache"
+msgid "enable or disable split index"
 msgstr ""
 
 #: builtin/update-index.c:1098
-msgid "test if the filesystem supports untracked cache"
+msgid "enable/disable untracked cache"
 msgstr ""
 
 #: builtin/update-index.c:1100
-msgid "enable untracked cache without testing the filesystem"
+msgid "test if the filesystem supports untracked cache"
 msgstr ""
 
 #: builtin/update-index.c:1102
-msgid "write out the index even if is not flagged as changed"
+msgid "enable untracked cache without testing the filesystem"
 msgstr ""
 
 #: builtin/update-index.c:1104
-msgid "enable or disable file system monitor"
+msgid "write out the index even if is not flagged as changed"
 msgstr ""
 
 #: builtin/update-index.c:1106
+msgid "enable or disable file system monitor"
+msgstr ""
+
+#: builtin/update-index.c:1108
 msgid "mark files as fsmonitor valid"
 msgstr ""
 
-#: builtin/update-index.c:1109
+#: builtin/update-index.c:1111
 msgid "clear fsmonitor valid bit"
 msgstr ""
 
-#: builtin/update-index.c:1226
+#: builtin/update-index.c:1188
+#, c-format
+msgid "%d\n"
+msgstr ""
+
+#: builtin/update-index.c:1197
+#, c-format
+msgid "index-version: was %d, set to %d"
+msgstr ""
+
+#: builtin/update-index.c:1233
 msgid ""
 "core.splitIndex is set to false; remove or change it, if you really want to "
 "enable split index"
 msgstr ""
 
-#: builtin/update-index.c:1235
+#: builtin/update-index.c:1242
 msgid ""
 "core.splitIndex is set to true; remove or change it, if you really want to "
 "disable split index"
 msgstr ""
 
-#: builtin/update-index.c:1247
+#: builtin/update-index.c:1254
 msgid ""
 "core.untrackedCache is set to true; remove or change it, if you really want "
 "to disable the untracked cache"
 msgstr ""
 
-#: builtin/update-index.c:1251
+#: builtin/update-index.c:1258
 msgid "Untracked cache disabled"
 msgstr ""
 
-#: builtin/update-index.c:1259
+#: builtin/update-index.c:1266
 msgid ""
 "core.untrackedCache is set to false; remove or change it, if you really want "
 "to enable the untracked cache"
 msgstr ""
 
-#: builtin/update-index.c:1263
+#: builtin/update-index.c:1270
 #, c-format
 msgid "Untracked cache enabled for '%s'"
 msgstr ""
 
-#: builtin/update-index.c:1288
+#: builtin/update-index.c:1295
 msgid "core.fsmonitor is unset; set it if you really want to enable fsmonitor"
 msgstr ""
 
-#: builtin/update-index.c:1293
+#: builtin/update-index.c:1300
 msgid "fsmonitor enabled"
 msgstr ""
 
-#: builtin/update-index.c:1297
+#: builtin/update-index.c:1304
 msgid ""
 "core.fsmonitor is set; remove it if you really want to disable fsmonitor"
 msgstr ""
 
-#: builtin/update-index.c:1301
+#: builtin/update-index.c:1308
 msgid "fsmonitor disabled"
 msgstr ""
 
@@ -18325,19 +18339,19 @@ msgstr ""
 msgid "multiple merge bases found"
 msgstr ""
 
-#: diff-no-index.c:279
+#: diff-no-index.c:280
 msgid "cannot compare stdin to a directory"
 msgstr ""
 
-#: diff-no-index.c:282
+#: diff-no-index.c:283
 msgid "cannot compare a named pipe to a directory"
 msgstr ""
 
-#: diff-no-index.c:296
+#: diff-no-index.c:297
 msgid "git diff --no-index [<options>] <path> <path>"
 msgstr ""
 
-#: diff-no-index.c:322
+#: diff-no-index.c:323
 msgid ""
 "Not a git repository. Use --no-index to compare two paths outside a working "
 "tree"
@@ -19018,7 +19032,7 @@ msgid "hint: Waiting for your editor to close the file...%c"
 msgstr ""
 
 #: editor.c:150 sequencer.c:521 sequencer.c:3440 sequencer.c:3454
-#: sequencer.c:3707 sequencer.c:6032 wrapper.c:690
+#: sequencer.c:3707 sequencer.c:6028 wrapper.c:690
 #, c-format
 msgid "could not write to '%s'"
 msgstr ""
@@ -21723,7 +21737,7 @@ msgstr ""
 msgid "could not read `log` output"
 msgstr ""
 
-#: range-diff.c:103 sequencer.c:6016
+#: range-diff.c:103 sequencer.c:6012
 #, c-format
 msgid "could not parse commit '%s'"
 msgstr ""
@@ -23475,7 +23489,7 @@ msgstr ""
 msgid " (root-commit)"
 msgstr ""
 
-#: sequencer.c:1441 sequencer.c:5094
+#: sequencer.c:1441 sequencer.c:5090
 msgid "could not parse HEAD"
 msgstr ""
 
@@ -23502,13 +23516,13 @@ msgstr ""
 msgid "corrupt author: missing date information"
 msgstr ""
 
-#: sequencer.c:1652 sequencer.c:4888 t/helper/test-fast-rebase.c:211
+#: sequencer.c:1652 sequencer.c:4884 t/helper/test-fast-rebase.c:211
 #: t/helper/test-fast-rebase.c:227
 #, c-format
 msgid "could not update %s"
 msgstr ""
 
-#: sequencer.c:1701 sequencer.c:5098
+#: sequencer.c:1701 sequencer.c:5094
 #, c-format
 msgid "could not parse commit %s"
 msgstr ""
@@ -23706,7 +23720,7 @@ msgstr ""
 msgid "malformed options sheet: '%s'"
 msgstr ""
 
-#: sequencer.c:3197 sequencer.c:5278
+#: sequencer.c:3197 sequencer.c:5274
 msgid "empty commit set passed"
 msgstr ""
 
@@ -23733,7 +23747,7 @@ msgstr ""
 msgid "could not create sequencer directory '%s'"
 msgstr ""
 
-#: sequencer.c:3289 sequencer.c:4970
+#: sequencer.c:3289 sequencer.c:4966
 msgid "no cherry-pick or revert in progress"
 msgstr ""
 
@@ -23786,7 +23800,7 @@ msgid ""
 "try \"git %s --continue\""
 msgstr ""
 
-#: sequencer.c:3576 sequencer.c:4868
+#: sequencer.c:3576 sequencer.c:4864
 msgid "cannot read HEAD"
 msgstr ""
 
@@ -24008,106 +24022,106 @@ msgstr ""
 msgid "unknown command %d"
 msgstr ""
 
-#: sequencer.c:4876
+#: sequencer.c:4872
 msgid "could not read orig-head"
 msgstr ""
 
-#: sequencer.c:4881
+#: sequencer.c:4877
 msgid "could not read 'onto'"
 msgstr ""
 
-#: sequencer.c:4895
+#: sequencer.c:4891
 #, c-format
 msgid "could not update HEAD to %s"
 msgstr ""
 
-#: sequencer.c:4946
+#: sequencer.c:4942
 #, c-format
 msgid "Successfully rebased and updated %s.\n"
 msgstr ""
 
-#: sequencer.c:4999
+#: sequencer.c:4995
 msgid "cannot rebase: You have unstaged changes."
 msgstr ""
 
-#: sequencer.c:5013
+#: sequencer.c:5009
 msgid "cannot amend non-existing commit"
 msgstr ""
 
-#: sequencer.c:5015
+#: sequencer.c:5011
 #, c-format
 msgid "invalid file: '%s'"
 msgstr ""
 
-#: sequencer.c:5017
+#: sequencer.c:5013
 #, c-format
 msgid "invalid contents: '%s'"
 msgstr ""
 
-#: sequencer.c:5020
+#: sequencer.c:5016
 msgid ""
 "\n"
 "You have uncommitted changes in your working tree. Please, commit them\n"
 "first and then run 'git rebase --continue' again."
 msgstr ""
 
-#: sequencer.c:5056 sequencer.c:5104
+#: sequencer.c:5052 sequencer.c:5100
 #, c-format
 msgid "could not write file: '%s'"
 msgstr ""
 
-#: sequencer.c:5124
+#: sequencer.c:5120
 msgid "could not remove CHERRY_PICK_HEAD"
 msgstr ""
 
-#: sequencer.c:5134
+#: sequencer.c:5130
 msgid "could not commit staged changes."
 msgstr ""
 
-#: sequencer.c:5255
+#: sequencer.c:5251
 #, c-format
 msgid "%s: can't cherry-pick a %s"
 msgstr ""
 
-#: sequencer.c:5259
+#: sequencer.c:5255
 #, c-format
 msgid "%s: bad revision"
 msgstr ""
 
-#: sequencer.c:5294
+#: sequencer.c:5290
 msgid "can't revert as initial commit"
 msgstr ""
 
-#: sequencer.c:5593 sequencer.c:5829
+#: sequencer.c:5589 sequencer.c:5825
 #, c-format
 msgid "skipped previously applied commit %s"
 msgstr ""
 
-#: sequencer.c:5663 sequencer.c:5845
+#: sequencer.c:5659 sequencer.c:5841
 msgid "use --reapply-cherry-picks to include skipped commits"
 msgstr ""
 
-#: sequencer.c:5810
+#: sequencer.c:5806
 msgid "make_script: unhandled options"
 msgstr ""
 
-#: sequencer.c:5815
+#: sequencer.c:5811
 msgid "make_script: error preparing revisions"
 msgstr ""
 
-#: sequencer.c:6209 sequencer.c:6226
+#: sequencer.c:6205 sequencer.c:6222
 msgid "nothing to do"
 msgstr ""
 
-#: sequencer.c:6246
+#: sequencer.c:6242
 msgid "could not skip unnecessary pick commands"
 msgstr ""
 
-#: sequencer.c:6346
+#: sequencer.c:6342
 msgid "the script was already rearranged."
 msgstr ""
 
-#: sequencer.c:6503 sequencer.c:6511
+#: sequencer.c:6499 sequencer.c:6507
 #, c-format
 msgid "update-refs file at '%s' is invalid"
 msgstr ""
