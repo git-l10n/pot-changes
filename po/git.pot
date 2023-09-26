@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2023-09-25 23:57+0000\n"
+"POT-Creation-Date: 2023-09-26 22:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -2314,7 +2314,7 @@ msgid "invalid ident line: %.*s"
 msgstr ""
 
 #: builtin/am.c:1371 builtin/checkout.c:822 builtin/clone.c:738
-#: commit-graph.c:1125
+#: commit-graph.c:1156
 #, c-format
 msgid "unable to parse commit %s"
 msgstr ""
@@ -3035,7 +3035,7 @@ msgid "show work cost statistics"
 msgstr ""
 
 #: builtin/blame.c:885 builtin/checkout.c:1608 builtin/clone.c:110
-#: builtin/commit-graph.c:82 builtin/commit-graph.c:237 builtin/fetch.c:2183
+#: builtin/commit-graph.c:84 builtin/commit-graph.c:254 builtin/fetch.c:2183
 #: builtin/merge.c:288 builtin/multi-pack-index.c:130
 #: builtin/multi-pack-index.c:182 builtin/multi-pack-index.c:209
 #: builtin/multi-pack-index.c:238 builtin/pull.c:127 builtin/push.c:620
@@ -5178,80 +5178,85 @@ msgstr ""
 msgid "the object directory to store the graph"
 msgstr ""
 
-#: builtin/commit-graph.c:80
+#: builtin/commit-graph.c:82
 msgid "if the commit-graph is split, only verify the tip file"
 msgstr ""
 
-#: builtin/commit-graph.c:107
+#: builtin/commit-graph.c:111
 #, c-format
 msgid "Could not open commit-graph '%s'"
 msgstr ""
 
-#: builtin/commit-graph.c:145
+#: builtin/commit-graph.c:115
+#, c-format
+msgid "could not open commit-graph chain '%s'"
+msgstr ""
+
+#: builtin/commit-graph.c:162
 #, c-format
 msgid "unrecognized --split argument, %s"
 msgstr ""
 
-#: builtin/commit-graph.c:158
+#: builtin/commit-graph.c:175
 #, c-format
 msgid "unexpected non-hex object ID: %s"
 msgstr ""
 
-#: builtin/commit-graph.c:163
+#: builtin/commit-graph.c:180
 #, c-format
 msgid "invalid object: %s"
 msgstr ""
 
-#: builtin/commit-graph.c:183 parse-options-cb.c:24 parse-options-cb.c:28
+#: builtin/commit-graph.c:200 parse-options-cb.c:24 parse-options-cb.c:28
 #, c-format
 msgid "option `%s' expects a numerical value"
 msgstr ""
 
-#: builtin/commit-graph.c:214
+#: builtin/commit-graph.c:231
 msgid "start walk at all refs"
 msgstr ""
 
-#: builtin/commit-graph.c:216
+#: builtin/commit-graph.c:233
 msgid "scan pack-indexes listed by stdin for commits"
 msgstr ""
 
-#: builtin/commit-graph.c:218
+#: builtin/commit-graph.c:235
 msgid "start walk at commits listed by stdin"
 msgstr ""
 
-#: builtin/commit-graph.c:220
+#: builtin/commit-graph.c:237
 msgid "include all commits already in the commit-graph file"
 msgstr ""
 
-#: builtin/commit-graph.c:222
+#: builtin/commit-graph.c:239
 msgid "enable computation for changed paths"
 msgstr ""
 
-#: builtin/commit-graph.c:224
+#: builtin/commit-graph.c:241
 msgid "allow writing an incremental commit-graph file"
 msgstr ""
 
-#: builtin/commit-graph.c:228
+#: builtin/commit-graph.c:245
 msgid "maximum number of commits in a non-base split commit-graph"
 msgstr ""
 
-#: builtin/commit-graph.c:230
+#: builtin/commit-graph.c:247
 msgid "maximum ratio between two levels of a split commit-graph"
 msgstr ""
 
-#: builtin/commit-graph.c:232
+#: builtin/commit-graph.c:249
 msgid "only expire files older than a given date-time"
 msgstr ""
 
-#: builtin/commit-graph.c:234
+#: builtin/commit-graph.c:251
 msgid "maximum number of changed-path Bloom filters to compute"
 msgstr ""
 
-#: builtin/commit-graph.c:260
+#: builtin/commit-graph.c:277
 msgid "use at most one of --reachable, --stdin-commits, or --stdin-packs"
 msgstr ""
 
-#: builtin/commit-graph.c:291
+#: builtin/commit-graph.c:308
 msgid "Collecting commits from input"
 msgstr ""
 
@@ -10796,7 +10801,7 @@ msgstr ""
 msgid "unable to pack objects reachable from tag %s"
 msgstr ""
 
-#: builtin/pack-objects.c:3106 commit-graph.c:1387
+#: builtin/pack-objects.c:3106 commit-graph.c:1418
 #, c-format
 msgid "unable to get type of object %s"
 msgstr ""
@@ -14149,7 +14154,7 @@ msgstr ""
 msgid "toggle the use of a sparse index"
 msgstr ""
 
-#: builtin/sparse-checkout.c:486 commit-graph.c:1939 midx.c:1251
+#: builtin/sparse-checkout.c:486 commit-graph.c:1970 midx.c:1251
 #: sequencer.c:4270
 #, c-format
 msgid "unable to create leading directories of %s"
@@ -16127,7 +16132,7 @@ msgstr ""
 msgid "only useful for debugging"
 msgstr ""
 
-#: bulk-checkin.c:349
+#: bulk-checkin.c:348
 msgid "core.fsyncMethod = batch is unsupported on this platform"
 msgstr ""
 
@@ -17093,221 +17098,221 @@ msgstr ""
 msgid "commit-graph file is too small to hold %u chunks"
 msgstr ""
 
-#: commit-graph.c:481
+#: commit-graph.c:506
 msgid "commit-graph has no base graphs chunk"
 msgstr ""
 
-#: commit-graph.c:491
+#: commit-graph.c:516
 msgid "commit-graph chain does not match"
 msgstr ""
 
-#: commit-graph.c:503
+#: commit-graph.c:528
 #, c-format
 msgid "commit count in base graph too high: %<PRIuMAX>"
 msgstr ""
 
-#: commit-graph.c:549
+#: commit-graph.c:586
 #, c-format
 msgid "invalid commit-graph chain: line '%s' not a hash"
 msgstr ""
 
-#: commit-graph.c:573
+#: commit-graph.c:610
 msgid "unable to find all commit-graph files"
 msgstr ""
 
-#: commit-graph.c:759 commit-graph.c:796
+#: commit-graph.c:790 commit-graph.c:827
 msgid "invalid commit position. commit-graph is likely corrupt"
 msgstr ""
 
-#: commit-graph.c:780
+#: commit-graph.c:811
 #, c-format
 msgid "could not find commit %s"
 msgstr ""
 
-#: commit-graph.c:813
+#: commit-graph.c:844
 msgid "commit-graph requires overflow generation data but has none"
 msgstr ""
 
-#: commit-graph.c:1418
+#: commit-graph.c:1449
 msgid "Loading known commits in commit graph"
 msgstr ""
 
-#: commit-graph.c:1435
+#: commit-graph.c:1466
 msgid "Expanding reachable commits in commit graph"
 msgstr ""
 
-#: commit-graph.c:1455
+#: commit-graph.c:1486
 msgid "Clearing commit marks in commit graph"
 msgstr ""
 
-#: commit-graph.c:1572
+#: commit-graph.c:1603
 msgid "Computing commit graph topological levels"
 msgstr ""
 
-#: commit-graph.c:1606
+#: commit-graph.c:1637
 msgid "Computing commit graph generation numbers"
 msgstr ""
 
-#: commit-graph.c:1682
+#: commit-graph.c:1713
 msgid "Computing commit changed paths Bloom filters"
 msgstr ""
 
-#: commit-graph.c:1760
+#: commit-graph.c:1791
 msgid "Collecting referenced commits"
 msgstr ""
 
-#: commit-graph.c:1786
+#: commit-graph.c:1817
 #, c-format
 msgid "Finding commits for commit graph in %<PRIuMAX> pack"
 msgid_plural "Finding commits for commit graph in %<PRIuMAX> packs"
 msgstr[0] ""
 msgstr[1] ""
 
-#: commit-graph.c:1799
+#: commit-graph.c:1830
 #, c-format
 msgid "error adding pack %s"
 msgstr ""
 
-#: commit-graph.c:1803
+#: commit-graph.c:1834
 #, c-format
 msgid "error opening index for %s"
 msgstr ""
 
-#: commit-graph.c:1841
+#: commit-graph.c:1872
 msgid "Finding commits for commit graph among packed objects"
 msgstr ""
 
-#: commit-graph.c:1859
+#: commit-graph.c:1890
 msgid "Finding extra edges in commit graph"
 msgstr ""
 
-#: commit-graph.c:1908
+#: commit-graph.c:1939
 msgid "failed to write correct number of base graph ids"
 msgstr ""
 
-#: commit-graph.c:1953
+#: commit-graph.c:1984
 msgid "unable to create temporary graph layer"
 msgstr ""
 
-#: commit-graph.c:1958
+#: commit-graph.c:1989
 #, c-format
 msgid "unable to adjust shared permissions for '%s'"
 msgstr ""
 
-#: commit-graph.c:2015
+#: commit-graph.c:2046
 #, c-format
 msgid "Writing out commit graph in %d pass"
 msgid_plural "Writing out commit graph in %d passes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: commit-graph.c:2052
+#: commit-graph.c:2083
 msgid "unable to open commit-graph chain file"
 msgstr ""
 
-#: commit-graph.c:2068
+#: commit-graph.c:2099
 msgid "failed to rename base commit-graph file"
 msgstr ""
 
-#: commit-graph.c:2089
+#: commit-graph.c:2120
 msgid "failed to rename temporary commit-graph file"
 msgstr ""
 
-#: commit-graph.c:2133
+#: commit-graph.c:2164
 #, c-format
 msgid "cannot merge graphs with %<PRIuMAX>, %<PRIuMAX> commits"
 msgstr ""
 
-#: commit-graph.c:2195
+#: commit-graph.c:2226
 #, c-format
 msgid "cannot merge graph %s, too many commits: %<PRIuMAX>"
 msgstr ""
 
-#: commit-graph.c:2232
+#: commit-graph.c:2263
 msgid "Scanning merged commits"
 msgstr ""
 
-#: commit-graph.c:2276
+#: commit-graph.c:2307
 msgid "Merging commit-graph"
 msgstr ""
 
-#: commit-graph.c:2388
+#: commit-graph.c:2419
 msgid "attempting to write a commit-graph, but 'core.commitGraph' is disabled"
 msgstr ""
 
-#: commit-graph.c:2395
+#: commit-graph.c:2426
 #, c-format
 msgid ""
 "attempting to write a commit-graph, but 'commitgraph."
 "changedPathsVersion' (%d) is not supported"
 msgstr ""
 
-#: commit-graph.c:2511
+#: commit-graph.c:2542
 msgid "too many commits to write graph"
 msgstr ""
 
-#: commit-graph.c:2606
+#: commit-graph.c:2637
 msgid "the commit-graph file has incorrect checksum and is likely corrupt"
 msgstr ""
 
-#: commit-graph.c:2616
+#: commit-graph.c:2647
 #, c-format
 msgid "commit-graph has incorrect OID order: %s then %s"
 msgstr ""
 
-#: commit-graph.c:2626 commit-graph.c:2641
+#: commit-graph.c:2657 commit-graph.c:2672
 #, c-format
 msgid "commit-graph has incorrect fanout value: fanout[%d] = %u != %u"
 msgstr ""
 
-#: commit-graph.c:2633
+#: commit-graph.c:2664
 #, c-format
 msgid "failed to parse commit %s from commit-graph"
 msgstr ""
 
-#: commit-graph.c:2662
+#: commit-graph.c:2693
 #, c-format
 msgid "failed to parse commit %s from object database for commit-graph"
 msgstr ""
 
-#: commit-graph.c:2669
+#: commit-graph.c:2700
 #, c-format
 msgid "root tree OID for commit %s in commit-graph is %s != %s"
 msgstr ""
 
-#: commit-graph.c:2679
+#: commit-graph.c:2710
 #, c-format
 msgid "commit-graph parent list for commit %s is too long"
 msgstr ""
 
-#: commit-graph.c:2688
+#: commit-graph.c:2719
 #, c-format
 msgid "commit-graph parent for %s is %s != %s"
 msgstr ""
 
-#: commit-graph.c:2702
+#: commit-graph.c:2733
 #, c-format
 msgid "commit-graph parent list for commit %s terminates early"
 msgstr ""
 
-#: commit-graph.c:2724
+#: commit-graph.c:2755
 #, c-format
 msgid "commit-graph generation for commit %s is %<PRIuMAX> < %<PRIuMAX>"
 msgstr ""
 
-#: commit-graph.c:2730
+#: commit-graph.c:2761
 #, c-format
 msgid "commit date for commit %s in commit-graph is %<PRIuMAX> != %<PRIuMAX>"
 msgstr ""
 
-#: commit-graph.c:2737
+#: commit-graph.c:2768
 #, c-format
 msgid ""
 "commit-graph has both zero and non-zero generations (e.g., commits '%s' and "
 "'%s')"
 msgstr ""
 
-#: commit-graph.c:2761
+#: commit-graph.c:2792
 msgid "Verifying commits in commit graph"
 msgstr ""
 
@@ -24869,26 +24874,26 @@ msgstr ""
 msgid "could not read input file '%s'"
 msgstr ""
 
-#: trailer.c:1027 wrapper.c:728
+#: trailer.c:1047 wrapper.c:728
 #, c-format
 msgid "could not stat %s"
 msgstr ""
 
-#: trailer.c:1029
+#: trailer.c:1049
 #, c-format
 msgid "file %s is not a regular file"
 msgstr ""
 
-#: trailer.c:1031
+#: trailer.c:1051
 #, c-format
 msgid "file %s is not writable by user"
 msgstr ""
 
-#: trailer.c:1043
+#: trailer.c:1063
 msgid "could not open temporary file"
 msgstr ""
 
-#: trailer.c:1096
+#: trailer.c:1124
 #, c-format
 msgid "could not rename temporary file to %s"
 msgstr ""
