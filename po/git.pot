@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2023-09-25 23:57+0000\n"
+"POT-Creation-Date: 2023-09-28 21:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -2315,7 +2315,7 @@ msgid "invalid ident line: %.*s"
 msgstr ""
 
 #: builtin/am.c:1371 builtin/checkout.c:822 builtin/clone.c:738
-#: commit-graph.c:1126
+#: commit-graph.c:1155
 #, c-format
 msgid "unable to parse commit %s"
 msgstr ""
@@ -3036,7 +3036,7 @@ msgid "show work cost statistics"
 msgstr ""
 
 #: builtin/blame.c:885 builtin/checkout.c:1608 builtin/clone.c:110
-#: builtin/commit-graph.c:82 builtin/commit-graph.c:237 builtin/fetch.c:2183
+#: builtin/commit-graph.c:84 builtin/commit-graph.c:254 builtin/fetch.c:2183
 #: builtin/merge.c:288 builtin/multi-pack-index.c:130
 #: builtin/multi-pack-index.c:182 builtin/multi-pack-index.c:209
 #: builtin/multi-pack-index.c:238 builtin/pull.c:127 builtin/push.c:620
@@ -5179,80 +5179,85 @@ msgstr ""
 msgid "the object directory to store the graph"
 msgstr ""
 
-#: builtin/commit-graph.c:80
+#: builtin/commit-graph.c:82
 msgid "if the commit-graph is split, only verify the tip file"
 msgstr ""
 
-#: builtin/commit-graph.c:107
+#: builtin/commit-graph.c:111
 #, c-format
 msgid "Could not open commit-graph '%s'"
 msgstr ""
 
-#: builtin/commit-graph.c:145
+#: builtin/commit-graph.c:115
+#, c-format
+msgid "could not open commit-graph chain '%s'"
+msgstr ""
+
+#: builtin/commit-graph.c:162
 #, c-format
 msgid "unrecognized --split argument, %s"
 msgstr ""
 
-#: builtin/commit-graph.c:158
+#: builtin/commit-graph.c:175
 #, c-format
 msgid "unexpected non-hex object ID: %s"
 msgstr ""
 
-#: builtin/commit-graph.c:163
+#: builtin/commit-graph.c:180
 #, c-format
 msgid "invalid object: %s"
 msgstr ""
 
-#: builtin/commit-graph.c:183 parse-options-cb.c:24 parse-options-cb.c:28
+#: builtin/commit-graph.c:200 parse-options-cb.c:24 parse-options-cb.c:28
 #, c-format
 msgid "option `%s' expects a numerical value"
 msgstr ""
 
-#: builtin/commit-graph.c:214
+#: builtin/commit-graph.c:231
 msgid "start walk at all refs"
 msgstr ""
 
-#: builtin/commit-graph.c:216
+#: builtin/commit-graph.c:233
 msgid "scan pack-indexes listed by stdin for commits"
 msgstr ""
 
-#: builtin/commit-graph.c:218
+#: builtin/commit-graph.c:235
 msgid "start walk at commits listed by stdin"
 msgstr ""
 
-#: builtin/commit-graph.c:220
+#: builtin/commit-graph.c:237
 msgid "include all commits already in the commit-graph file"
 msgstr ""
 
-#: builtin/commit-graph.c:222
+#: builtin/commit-graph.c:239
 msgid "enable computation for changed paths"
 msgstr ""
 
-#: builtin/commit-graph.c:224
+#: builtin/commit-graph.c:241
 msgid "allow writing an incremental commit-graph file"
 msgstr ""
 
-#: builtin/commit-graph.c:228
+#: builtin/commit-graph.c:245
 msgid "maximum number of commits in a non-base split commit-graph"
 msgstr ""
 
-#: builtin/commit-graph.c:230
+#: builtin/commit-graph.c:247
 msgid "maximum ratio between two levels of a split commit-graph"
 msgstr ""
 
-#: builtin/commit-graph.c:232
+#: builtin/commit-graph.c:249
 msgid "only expire files older than a given date-time"
 msgstr ""
 
-#: builtin/commit-graph.c:234
+#: builtin/commit-graph.c:251
 msgid "maximum number of changed-path Bloom filters to compute"
 msgstr ""
 
-#: builtin/commit-graph.c:260
+#: builtin/commit-graph.c:277
 msgid "use at most one of --reachable, --stdin-commits, or --stdin-packs"
 msgstr ""
 
-#: builtin/commit-graph.c:291
+#: builtin/commit-graph.c:308
 msgid "Collecting commits from input"
 msgstr ""
 
@@ -10792,7 +10797,7 @@ msgstr ""
 msgid "unable to pack objects reachable from tag %s"
 msgstr ""
 
-#: builtin/pack-objects.c:3106 commit-graph.c:1388
+#: builtin/pack-objects.c:3106 commit-graph.c:1417
 #, c-format
 msgid "unable to get type of object %s"
 msgstr ""
@@ -14064,7 +14069,7 @@ msgstr ""
 msgid "toggle the use of a sparse index"
 msgstr ""
 
-#: builtin/sparse-checkout.c:486 commit-graph.c:1936 midx.c:1251
+#: builtin/sparse-checkout.c:486 commit-graph.c:1965 midx.c:1251
 #: sequencer.c:4245
 #, c-format
 msgid "unable to create leading directories of %s"
@@ -17004,214 +17009,214 @@ msgstr ""
 msgid "commit-graph file is too small to hold %u chunks"
 msgstr ""
 
-#: commit-graph.c:484
+#: commit-graph.c:509
 msgid "commit-graph has no base graphs chunk"
 msgstr ""
 
-#: commit-graph.c:494
+#: commit-graph.c:519
 msgid "commit-graph chain does not match"
 msgstr ""
 
-#: commit-graph.c:506
+#: commit-graph.c:531
 #, c-format
 msgid "commit count in base graph too high: %<PRIuMAX>"
 msgstr ""
 
-#: commit-graph.c:552
+#: commit-graph.c:587
 #, c-format
 msgid "invalid commit-graph chain: line '%s' not a hash"
 msgstr ""
 
-#: commit-graph.c:576
+#: commit-graph.c:611
 msgid "unable to find all commit-graph files"
 msgstr ""
 
-#: commit-graph.c:761 commit-graph.c:798
+#: commit-graph.c:790 commit-graph.c:827
 msgid "invalid commit position. commit-graph is likely corrupt"
 msgstr ""
 
-#: commit-graph.c:782
+#: commit-graph.c:811
 #, c-format
 msgid "could not find commit %s"
 msgstr ""
 
-#: commit-graph.c:815
+#: commit-graph.c:844
 msgid "commit-graph requires overflow generation data but has none"
 msgstr ""
 
-#: commit-graph.c:1419
+#: commit-graph.c:1448
 msgid "Loading known commits in commit graph"
 msgstr ""
 
-#: commit-graph.c:1436
+#: commit-graph.c:1465
 msgid "Expanding reachable commits in commit graph"
 msgstr ""
 
-#: commit-graph.c:1456
+#: commit-graph.c:1485
 msgid "Clearing commit marks in commit graph"
 msgstr ""
 
-#: commit-graph.c:1573
+#: commit-graph.c:1602
 msgid "Computing commit graph topological levels"
 msgstr ""
 
-#: commit-graph.c:1607
+#: commit-graph.c:1636
 msgid "Computing commit graph generation numbers"
 msgstr ""
 
-#: commit-graph.c:1681
+#: commit-graph.c:1710
 msgid "Computing commit changed paths Bloom filters"
 msgstr ""
 
-#: commit-graph.c:1757
+#: commit-graph.c:1786
 msgid "Collecting referenced commits"
 msgstr ""
 
-#: commit-graph.c:1783
+#: commit-graph.c:1812
 #, c-format
 msgid "Finding commits for commit graph in %<PRIuMAX> pack"
 msgid_plural "Finding commits for commit graph in %<PRIuMAX> packs"
 msgstr[0] ""
 msgstr[1] ""
 
-#: commit-graph.c:1796
+#: commit-graph.c:1825
 #, c-format
 msgid "error adding pack %s"
 msgstr ""
 
-#: commit-graph.c:1800
+#: commit-graph.c:1829
 #, c-format
 msgid "error opening index for %s"
 msgstr ""
 
-#: commit-graph.c:1838
+#: commit-graph.c:1867
 msgid "Finding commits for commit graph among packed objects"
 msgstr ""
 
-#: commit-graph.c:1856
+#: commit-graph.c:1885
 msgid "Finding extra edges in commit graph"
 msgstr ""
 
-#: commit-graph.c:1905
+#: commit-graph.c:1934
 msgid "failed to write correct number of base graph ids"
 msgstr ""
 
-#: commit-graph.c:1950
+#: commit-graph.c:1979
 msgid "unable to create temporary graph layer"
 msgstr ""
 
-#: commit-graph.c:1955
+#: commit-graph.c:1984
 #, c-format
 msgid "unable to adjust shared permissions for '%s'"
 msgstr ""
 
-#: commit-graph.c:2012
+#: commit-graph.c:2041
 #, c-format
 msgid "Writing out commit graph in %d pass"
 msgid_plural "Writing out commit graph in %d passes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: commit-graph.c:2049
+#: commit-graph.c:2078
 msgid "unable to open commit-graph chain file"
 msgstr ""
 
-#: commit-graph.c:2065
+#: commit-graph.c:2094
 msgid "failed to rename base commit-graph file"
 msgstr ""
 
-#: commit-graph.c:2086
+#: commit-graph.c:2115
 msgid "failed to rename temporary commit-graph file"
 msgstr ""
 
-#: commit-graph.c:2130
+#: commit-graph.c:2159
 #, c-format
 msgid "cannot merge graphs with %<PRIuMAX>, %<PRIuMAX> commits"
 msgstr ""
 
-#: commit-graph.c:2192
+#: commit-graph.c:2221
 #, c-format
 msgid "cannot merge graph %s, too many commits: %<PRIuMAX>"
 msgstr ""
 
-#: commit-graph.c:2229
+#: commit-graph.c:2258
 msgid "Scanning merged commits"
 msgstr ""
 
-#: commit-graph.c:2273
+#: commit-graph.c:2302
 msgid "Merging commit-graph"
 msgstr ""
 
-#: commit-graph.c:2385
+#: commit-graph.c:2414
 msgid "attempting to write a commit-graph, but 'core.commitGraph' is disabled"
 msgstr ""
 
-#: commit-graph.c:2492
+#: commit-graph.c:2521
 msgid "too many commits to write graph"
 msgstr ""
 
-#: commit-graph.c:2584
+#: commit-graph.c:2613
 msgid "the commit-graph file has incorrect checksum and is likely corrupt"
 msgstr ""
 
-#: commit-graph.c:2594
+#: commit-graph.c:2623
 #, c-format
 msgid "commit-graph has incorrect OID order: %s then %s"
 msgstr ""
 
-#: commit-graph.c:2604 commit-graph.c:2619
+#: commit-graph.c:2633 commit-graph.c:2648
 #, c-format
 msgid "commit-graph has incorrect fanout value: fanout[%d] = %u != %u"
 msgstr ""
 
-#: commit-graph.c:2611
+#: commit-graph.c:2640
 #, c-format
 msgid "failed to parse commit %s from commit-graph"
 msgstr ""
 
-#: commit-graph.c:2640
+#: commit-graph.c:2669
 #, c-format
 msgid "failed to parse commit %s from object database for commit-graph"
 msgstr ""
 
-#: commit-graph.c:2647
+#: commit-graph.c:2676
 #, c-format
 msgid "root tree OID for commit %s in commit-graph is %s != %s"
 msgstr ""
 
-#: commit-graph.c:2657
+#: commit-graph.c:2686
 #, c-format
 msgid "commit-graph parent list for commit %s is too long"
 msgstr ""
 
-#: commit-graph.c:2666
+#: commit-graph.c:2695
 #, c-format
 msgid "commit-graph parent for %s is %s != %s"
 msgstr ""
 
-#: commit-graph.c:2680
+#: commit-graph.c:2709
 #, c-format
 msgid "commit-graph parent list for commit %s terminates early"
 msgstr ""
 
-#: commit-graph.c:2702
+#: commit-graph.c:2731
 #, c-format
 msgid "commit-graph generation for commit %s is %<PRIuMAX> < %<PRIuMAX>"
 msgstr ""
 
-#: commit-graph.c:2708
+#: commit-graph.c:2737
 #, c-format
 msgid "commit date for commit %s in commit-graph is %<PRIuMAX> != %<PRIuMAX>"
 msgstr ""
 
-#: commit-graph.c:2715
+#: commit-graph.c:2744
 #, c-format
 msgid ""
 "commit-graph has both zero and non-zero generations (e.g., commits '%s' and "
 "'%s')"
 msgstr ""
 
-#: commit-graph.c:2739
+#: commit-graph.c:2768
 msgid "Verifying commits in commit graph"
 msgstr ""
 
@@ -22074,250 +22079,250 @@ msgstr ""
 msgid "%s: 'preserve' superseded by 'merges'"
 msgstr ""
 
-#: ref-filter.c:49 wt-status.c:2093
+#: ref-filter.c:51 wt-status.c:2093
 msgid "gone"
-msgstr ""
-
-#: ref-filter.c:50
-#, c-format
-msgid "ahead %d"
-msgstr ""
-
-#: ref-filter.c:51
-#, c-format
-msgid "behind %d"
 msgstr ""
 
 #: ref-filter.c:52
 #, c-format
+msgid "ahead %d"
+msgstr ""
+
+#: ref-filter.c:53
+#, c-format
+msgid "behind %d"
+msgstr ""
+
+#: ref-filter.c:54
+#, c-format
 msgid "ahead %d, behind %d"
 msgstr ""
 
-#: ref-filter.c:249
+#: ref-filter.c:259
 #, c-format
 msgid "%%(%.*s) does not take arguments"
 msgstr ""
 
-#: ref-filter.c:257
+#: ref-filter.c:267
 #, c-format
 msgid "unrecognized %%(%.*s) argument: %s"
 msgstr ""
 
-#: ref-filter.c:370
+#: ref-filter.c:380
 #, c-format
 msgid "expected format: %%(color:<color>)"
 msgstr ""
 
-#: ref-filter.c:372
+#: ref-filter.c:382
 #, c-format
 msgid "unrecognized color: %%(color:%s)"
 msgstr ""
 
-#: ref-filter.c:394
+#: ref-filter.c:404
 #, c-format
 msgid "Integer value expected refname:lstrip=%s"
 msgstr ""
 
-#: ref-filter.c:398
+#: ref-filter.c:408
 #, c-format
 msgid "Integer value expected refname:rstrip=%s"
 msgstr ""
 
-#: ref-filter.c:568
+#: ref-filter.c:578
 #, c-format
 msgid "expected %%(trailers:key=<value>)"
 msgstr ""
 
-#: ref-filter.c:570
+#: ref-filter.c:580
 #, c-format
 msgid "unknown %%(trailers) argument: %s"
 msgstr ""
 
-#: ref-filter.c:602
+#: ref-filter.c:612
 #, c-format
 msgid "positive value expected contents:lines=%s"
 msgstr ""
 
-#: ref-filter.c:628
+#: ref-filter.c:638
 #, c-format
 msgid "argument expected for %s"
 msgstr ""
 
-#: ref-filter.c:632
+#: ref-filter.c:642
 #, c-format
 msgid "positive value expected %s=%s"
 msgstr ""
 
-#: ref-filter.c:636
+#: ref-filter.c:646
 #, c-format
 msgid "cannot fully parse %s=%s"
 msgstr ""
 
-#: ref-filter.c:646 ref-filter.c:656
+#: ref-filter.c:656 ref-filter.c:666
 #, c-format
 msgid "value expected %s="
 msgstr ""
 
-#: ref-filter.c:715
+#: ref-filter.c:725
 #, c-format
 msgid "positive value expected '%s' in %%(%s)"
 msgstr ""
 
-#: ref-filter.c:766
+#: ref-filter.c:810
 #, c-format
 msgid "expected format: %%(align:<width>,<position>)"
 msgstr ""
 
-#: ref-filter.c:778
+#: ref-filter.c:822
 #, c-format
 msgid "unrecognized position:%s"
 msgstr ""
 
-#: ref-filter.c:785
+#: ref-filter.c:829
 #, c-format
 msgid "unrecognized width:%s"
 msgstr ""
 
-#: ref-filter.c:794
+#: ref-filter.c:838
 #, c-format
 msgid "unrecognized %%(%s) argument: %s"
 msgstr ""
 
-#: ref-filter.c:802
+#: ref-filter.c:846
 #, c-format
 msgid "positive width expected with the %%(align) atom"
 msgstr ""
 
-#: ref-filter.c:841
+#: ref-filter.c:885
 #, c-format
 msgid "expected format: %%(ahead-behind:<committish>)"
 msgstr ""
 
-#: ref-filter.c:964
+#: ref-filter.c:1008
 #, c-format
 msgid "malformed field name: %.*s"
 msgstr ""
 
-#: ref-filter.c:991
+#: ref-filter.c:1035
 #, c-format
 msgid "unknown field name: %.*s"
 msgstr ""
 
-#: ref-filter.c:995
+#: ref-filter.c:1039
 #, c-format
 msgid ""
 "not a git repository, but the field '%.*s' requires access to object data"
 msgstr ""
 
-#: ref-filter.c:1128 ref-filter.c:1195 ref-filter.c:1232 ref-filter.c:1234
+#: ref-filter.c:1172 ref-filter.c:1239 ref-filter.c:1276 ref-filter.c:1278
 #, c-format
 msgid "format: %%(%s) atom used without a %%(%s) atom"
 msgstr ""
 
-#: ref-filter.c:1197
+#: ref-filter.c:1241
 #, c-format
 msgid "format: %%(then) atom used more than once"
 msgstr ""
 
-#: ref-filter.c:1199
+#: ref-filter.c:1243
 #, c-format
 msgid "format: %%(then) atom used after %%(else)"
 msgstr ""
 
-#: ref-filter.c:1236
+#: ref-filter.c:1280
 #, c-format
 msgid "format: %%(else) atom used more than once"
 msgstr ""
 
-#: ref-filter.c:1252
+#: ref-filter.c:1296
 #, c-format
 msgid "format: %%(end) atom used without corresponding atom"
 msgstr ""
 
-#: ref-filter.c:1314
+#: ref-filter.c:1358
 #, c-format
 msgid "malformed format string %s"
 msgstr ""
 
-#: ref-filter.c:1320
+#: ref-filter.c:1364
 #, c-format
 msgid "this command reject atom %%(%.*s)"
 msgstr ""
 
-#: ref-filter.c:1327
+#: ref-filter.c:1371
 #, c-format
 msgid "--format=%.*s cannot be used with --python, --shell, --tcl"
 msgstr ""
 
-#: ref-filter.c:1827
+#: ref-filter.c:1909
 msgid "failed to run 'describe'"
 msgstr ""
 
-#: ref-filter.c:2126
+#: ref-filter.c:2208
 #, c-format
 msgid "(no branch, rebasing %s)"
 msgstr ""
 
-#: ref-filter.c:2129
+#: ref-filter.c:2211
 #, c-format
 msgid "(no branch, rebasing detached HEAD %s)"
 msgstr ""
 
-#: ref-filter.c:2132
+#: ref-filter.c:2214
 #, c-format
 msgid "(no branch, bisect started on %s)"
 msgstr ""
 
-#: ref-filter.c:2136
+#: ref-filter.c:2218
 #, c-format
 msgid "(HEAD detached at %s)"
 msgstr ""
 
-#: ref-filter.c:2139
+#: ref-filter.c:2221
 #, c-format
 msgid "(HEAD detached from %s)"
 msgstr ""
 
-#: ref-filter.c:2142
+#: ref-filter.c:2224
 msgid "(no branch)"
 msgstr ""
 
-#: ref-filter.c:2176 ref-filter.c:2406
+#: ref-filter.c:2258 ref-filter.c:2488
 #, c-format
 msgid "missing object %s for %s"
 msgstr ""
 
-#: ref-filter.c:2186
+#: ref-filter.c:2268
 #, c-format
 msgid "parse_object_buffer failed on %s for %s"
 msgstr ""
 
-#: ref-filter.c:2616
+#: ref-filter.c:2698
 #, c-format
 msgid "malformed object at '%s'"
 msgstr ""
 
-#: ref-filter.c:2702
+#: ref-filter.c:2784
 #, c-format
 msgid "ignoring ref with broken name %s"
 msgstr ""
 
-#: ref-filter.c:2707 refs.c:770
+#: ref-filter.c:2789 refs.c:770
 #, c-format
 msgid "ignoring broken ref %s"
 msgstr ""
 
-#: ref-filter.c:3127
+#: ref-filter.c:3209
 #, c-format
 msgid "format: %%(end) atom missing"
 msgstr ""
 
-#: ref-filter.c:3238
+#: ref-filter.c:3320
 #, c-format
 msgid "malformed object name %s"
 msgstr ""
 
-#: ref-filter.c:3243
+#: ref-filter.c:3325
 #, c-format
 msgid "option `%s' must point to a commit"
 msgstr ""
