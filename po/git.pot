@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2023-10-07 01:20+0000\n"
+"POT-Creation-Date: 2023-10-10 22:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -826,8 +826,8 @@ msgstr ""
 #: builtin/merge-base.c:172 builtin/merge.c:1404 builtin/merge.c:1406
 #: builtin/pack-objects.c:4401 builtin/push.c:643 builtin/push.c:681
 #: builtin/push.c:687 builtin/push.c:692 builtin/rebase.c:1257
-#: builtin/rebase.c:1259 builtin/rebase.c:1268 builtin/repack.c:1207
-#: builtin/repack.c:1213 builtin/repack.c:1215 builtin/repack.c:1265
+#: builtin/rebase.c:1259 builtin/rebase.c:1268 builtin/repack.c:1208
+#: builtin/repack.c:1214 builtin/repack.c:1216 builtin/repack.c:1266
 #: builtin/reset.c:376 builtin/reset.c:413 builtin/rev-list.c:557
 #: builtin/show-branch.c:722 builtin/show-branch.c:727 builtin/stash.c:1768
 #: builtin/stash.c:1771 builtin/submodule--helper.c:1205
@@ -1052,7 +1052,7 @@ msgstr ""
 msgid "cannot checkout %s"
 msgstr ""
 
-#: apply.c:3439 apply.c:3450 apply.c:3496 midx.c:97 pack-mtimes.c:42
+#: apply.c:3439 apply.c:3450 apply.c:3496 midx.c:124 pack-mtimes.c:42
 #: pack-revindex.c:223 setup.c:325
 #, c-format
 msgid "failed to read %s"
@@ -1822,7 +1822,7 @@ msgstr ""
 #: builtin/log.c:1785 builtin/log.c:2229 builtin/log.c:2527 builtin/merge.c:418
 #: builtin/pack-objects.c:3422 builtin/pack-objects.c:3580
 #: builtin/pack-objects.c:4063 builtin/pack-objects.c:4078
-#: builtin/shortlog.c:273 midx.c:1123 pack-bitmap.c:1067 pack-bitmap.c:2188
+#: builtin/shortlog.c:273 midx.c:1159 pack-bitmap.c:1067 pack-bitmap.c:2188
 #: remote.c:2200 sequencer.c:2468 sequencer.c:5271 submodule.c:919
 msgid "revision walk setup failed"
 msgstr ""
@@ -2314,7 +2314,7 @@ msgid "invalid ident line: %.*s"
 msgstr ""
 
 #: builtin/am.c:1371 builtin/checkout.c:822 builtin/clone.c:738
-#: commit-graph.c:1148
+#: commit-graph.c:1233
 #, c-format
 msgid "unable to parse commit %s"
 msgstr ""
@@ -2489,7 +2489,7 @@ msgid "allow fall back on 3way merging if needed"
 msgstr ""
 
 #: builtin/am.c:2339 builtin/init-db.c:91 builtin/prune-packed.c:17
-#: builtin/repack.c:1158 builtin/stash.c:1016
+#: builtin/repack.c:1159 builtin/stash.c:1016
 msgid "be quiet"
 msgstr ""
 
@@ -2534,8 +2534,8 @@ msgstr ""
 #: builtin/am.c:2377 builtin/commit.c:1540 builtin/fmt-merge-msg.c:19
 #: builtin/fmt-merge-msg.c:22 builtin/grep.c:969 builtin/merge.c:250
 #: builtin/pull.c:149 builtin/pull.c:211 builtin/pull.c:228
-#: builtin/rebase.c:1107 builtin/repack.c:1169 builtin/repack.c:1173
-#: builtin/repack.c:1175 builtin/show-branch.c:661 builtin/show-ref.c:169
+#: builtin/rebase.c:1107 builtin/repack.c:1170 builtin/repack.c:1174
+#: builtin/repack.c:1176 builtin/show-branch.c:661 builtin/show-ref.c:169
 #: builtin/tag.c:456 parse-options.h:215 parse-options.h:276
 #: parse-options.h:523
 msgid "n"
@@ -3781,16 +3781,16 @@ msgstr ""
 
 #: builtin/cat-file.c:925
 msgid ""
+"git cat-file (--textconv | --filters)\n"
+"             [<rev>:<path|tree-ish> | --path=<path|tree-ish> <rev>]"
+msgstr ""
+
+#: builtin/cat-file.c:927
+msgid ""
 "git cat-file (--batch | --batch-check | --batch-command) [--batch-all-"
 "objects]\n"
 "             [--buffer] [--follow-symlinks] [--unordered]\n"
 "             [--textconv | --filters] [-Z]"
-msgstr ""
-
-#: builtin/cat-file.c:928
-msgid ""
-"git cat-file (--textconv | --filters)\n"
-"             [<rev>:<path|tree-ish> | --path=<path|tree-ish> <rev>]"
 msgstr ""
 
 #: builtin/cat-file.c:934
@@ -4592,7 +4592,7 @@ msgstr ""
 msgid "Would skip repository %s\n"
 msgstr ""
 
-#: builtin/clean.c:42 midx.c:1632
+#: builtin/clean.c:42 midx.c:1668
 #, c-format
 msgid "failed to remove %s"
 msgstr ""
@@ -4794,7 +4794,7 @@ msgstr ""
 
 #: builtin/clone.c:140 builtin/column.c:28 builtin/fmt-merge-msg.c:28
 #: builtin/init-db.c:94 builtin/merge-file.c:50 builtin/merge.c:277
-#: builtin/pack-objects.c:4269 builtin/repack.c:1182
+#: builtin/pack-objects.c:4269 builtin/repack.c:1183
 #: builtin/submodule--helper.c:3299 t/helper/test-simple-ipc.c:597
 #: t/helper/test-simple-ipc.c:599
 msgid "name"
@@ -5170,7 +5170,7 @@ msgid ""
 msgstr ""
 
 #: builtin/commit-graph.c:57 builtin/fetch.c:2198 builtin/log.c:1939
-#: builtin/repack.c:1188 builtin/repack.c:1190
+#: builtin/repack.c:1189 builtin/repack.c:1191
 msgid "dir"
 msgstr ""
 
@@ -7649,7 +7649,7 @@ msgstr ""
 msgid "pack unreferenced objects separately"
 msgstr ""
 
-#: builtin/gc.c:594 builtin/repack.c:1149
+#: builtin/gc.c:594 builtin/repack.c:1150
 msgid "with --cruft, limit the size of new cruft packs"
 msgstr ""
 
@@ -10751,7 +10751,7 @@ msgstr ""
 msgid "wrote %<PRIu32> objects while expecting %<PRIu32>"
 msgstr ""
 
-#: builtin/pack-objects.c:1570 builtin/repack.c:1241
+#: builtin/pack-objects.c:1570 builtin/repack.c:1242
 msgid "disabling bitmap writing, as some objects are not being packed"
 msgstr ""
 
@@ -10804,7 +10804,7 @@ msgstr ""
 msgid "unable to pack objects reachable from tag %s"
 msgstr ""
 
-#: builtin/pack-objects.c:3106 commit-graph.c:1410
+#: builtin/pack-objects.c:3106 commit-graph.c:1495
 #, c-format
 msgid "unable to get type of object %s"
 msgstr ""
@@ -12954,139 +12954,139 @@ msgstr ""
 msgid "could not remove stale bitmap: %s"
 msgstr ""
 
-#: builtin/repack.c:1107
+#: builtin/repack.c:1108
 #, c-format
 msgid "pack prefix %s does not begin with objdir %s"
 msgstr ""
 
-#: builtin/repack.c:1139
+#: builtin/repack.c:1140
 msgid "pack everything in a single pack"
 msgstr ""
 
-#: builtin/repack.c:1141
+#: builtin/repack.c:1142
 msgid "same as -a, and turn unreachable objects loose"
 msgstr ""
 
-#: builtin/repack.c:1144
+#: builtin/repack.c:1145
 msgid "same as -a, pack unreachable cruft objects separately"
 msgstr ""
 
-#: builtin/repack.c:1146 builtin/repack.c:1165
+#: builtin/repack.c:1147 builtin/repack.c:1166
 msgid "approxidate"
 msgstr ""
 
-#: builtin/repack.c:1147
+#: builtin/repack.c:1148
 msgid "with --cruft, expire objects older than this"
 msgstr ""
 
-#: builtin/repack.c:1151
+#: builtin/repack.c:1152
 msgid "remove redundant packs, and run git-prune-packed"
 msgstr ""
 
-#: builtin/repack.c:1153
+#: builtin/repack.c:1154
 msgid "pass --no-reuse-delta to git-pack-objects"
 msgstr ""
 
-#: builtin/repack.c:1155
+#: builtin/repack.c:1156
 msgid "pass --no-reuse-object to git-pack-objects"
 msgstr ""
 
-#: builtin/repack.c:1157
+#: builtin/repack.c:1158
 msgid "do not run git-update-server-info"
 msgstr ""
 
-#: builtin/repack.c:1160
+#: builtin/repack.c:1161
 msgid "pass --local to git-pack-objects"
 msgstr ""
 
-#: builtin/repack.c:1162
+#: builtin/repack.c:1163
 msgid "write bitmap index"
 msgstr ""
 
-#: builtin/repack.c:1164
+#: builtin/repack.c:1165
 msgid "pass --delta-islands to git-pack-objects"
 msgstr ""
 
-#: builtin/repack.c:1166
+#: builtin/repack.c:1167
 msgid "with -A, do not loosen objects older than this"
 msgstr ""
 
-#: builtin/repack.c:1168
+#: builtin/repack.c:1169
 msgid "with -a, repack unreachable objects"
 msgstr ""
 
-#: builtin/repack.c:1170
+#: builtin/repack.c:1171
 msgid "size of the window used for delta compression"
 msgstr ""
 
-#: builtin/repack.c:1171
+#: builtin/repack.c:1172
 msgid "bytes"
 msgstr ""
 
-#: builtin/repack.c:1172
+#: builtin/repack.c:1173
 msgid "same as the above, but limit memory size instead of entries count"
 msgstr ""
 
-#: builtin/repack.c:1174
+#: builtin/repack.c:1175
 msgid "limits the maximum delta depth"
 msgstr ""
 
-#: builtin/repack.c:1176
+#: builtin/repack.c:1177
 msgid "limits the maximum number of threads"
 msgstr ""
 
-#: builtin/repack.c:1178
+#: builtin/repack.c:1179
 msgid "maximum size of each packfile"
 msgstr ""
 
-#: builtin/repack.c:1181
+#: builtin/repack.c:1182
 msgid "repack objects in packs marked with .keep"
 msgstr ""
 
-#: builtin/repack.c:1183
+#: builtin/repack.c:1184
 msgid "do not repack this pack"
 msgstr ""
 
-#: builtin/repack.c:1185
+#: builtin/repack.c:1186
 msgid "find a geometric progression with factor <N>"
 msgstr ""
 
-#: builtin/repack.c:1187
+#: builtin/repack.c:1188
 msgid "write a multi-pack index of the resulting packs"
 msgstr ""
 
-#: builtin/repack.c:1189
+#: builtin/repack.c:1190
 msgid "pack prefix to store a pack containing pruned objects"
 msgstr ""
 
-#: builtin/repack.c:1191
+#: builtin/repack.c:1192
 msgid "pack prefix to store a pack containing filtered out objects"
 msgstr ""
 
-#: builtin/repack.c:1203
+#: builtin/repack.c:1204
 msgid "cannot delete packs in a precious-objects repo"
 msgstr ""
 
-#: builtin/repack.c:1341
+#: builtin/repack.c:1342
 #, c-format
 msgid "option '%s' can only be used along with '%s'"
 msgstr ""
 
-#: builtin/repack.c:1371
+#: builtin/repack.c:1372
 msgid "Nothing new to pack."
 msgstr ""
 
-#: builtin/repack.c:1468
+#: builtin/repack.c:1469
 #, c-format
 msgid "renaming pack to '%s' failed"
 msgstr ""
 
-#: builtin/repack.c:1470
+#: builtin/repack.c:1471
 #, c-format
 msgid "pack-objects did not write a '%s' file for pack %s-%s"
 msgstr ""
 
-#: builtin/repack.c:1473 sequencer.c:4240
+#: builtin/repack.c:1474 sequencer.c:4240
 #, c-format
 msgid "could not unlink: %s"
 msgstr ""
@@ -14081,7 +14081,7 @@ msgstr ""
 msgid "toggle the use of a sparse index"
 msgstr ""
 
-#: builtin/sparse-checkout.c:486 commit-graph.c:1958 midx.c:1251
+#: builtin/sparse-checkout.c:486 commit-graph.c:2043 midx.c:1287
 #: sequencer.c:4245
 #, c-format
 msgid "unable to create leading directories of %s"
@@ -16234,26 +16234,31 @@ msgstr ""
 msgid "index-pack died"
 msgstr ""
 
-#: chunk-format.c:120
+#: chunk-format.c:121
 msgid "terminating chunk id appears earlier than expected"
 msgstr ""
 
-#: chunk-format.c:129
+#: chunk-format.c:125
+#, c-format
+msgid "chunk id %<PRIx32> not %d-byte aligned"
+msgstr ""
+
+#: chunk-format.c:135
 #, c-format
 msgid "improper chunk offset(s) %<PRIx64> and %<PRIx64>"
 msgstr ""
 
-#: chunk-format.c:136
+#: chunk-format.c:142
 #, c-format
 msgid "duplicate chunk ID %<PRIx32> found"
 msgstr ""
 
-#: chunk-format.c:150
+#: chunk-format.c:156
 #, c-format
 msgid "final chunk has non-zero id %<PRIx32>"
 msgstr ""
 
-#: chunk-format.c:196
+#: chunk-format.c:210
 msgid "invalid hash version"
 msgstr ""
 
@@ -16307,7 +16312,7 @@ msgid "Move objects and refs by archive"
 msgstr ""
 
 #: command-list.h:65
-msgid "Provide content or type and size information for repository objects"
+msgid "Provide contents or details of repository objects"
 msgstr ""
 
 #: command-list.h:66
@@ -17002,234 +17007,242 @@ msgstr ""
 msgid "commit-graph file is too small"
 msgstr ""
 
-#: commit-graph.c:356
+#: commit-graph.c:424
 #, c-format
 msgid "commit-graph signature %X does not match signature %X"
 msgstr ""
 
-#: commit-graph.c:363
+#: commit-graph.c:431
 #, c-format
 msgid "commit-graph version %X does not match version %X"
 msgstr ""
 
-#: commit-graph.c:370
+#: commit-graph.c:438
 #, c-format
 msgid "commit-graph hash version %X does not match version %X"
 msgstr ""
 
-#: commit-graph.c:385
+#: commit-graph.c:453
 #, c-format
 msgid "commit-graph file is too small to hold %u chunks"
 msgstr ""
 
-#: commit-graph.c:509
+#: commit-graph.c:579
 msgid "commit-graph has no base graphs chunk"
 msgstr ""
 
-#: commit-graph.c:519
+#: commit-graph.c:584
+msgid "commit-graph base graphs chunk is too small"
+msgstr ""
+
+#: commit-graph.c:594
 msgid "commit-graph chain does not match"
 msgstr ""
 
-#: commit-graph.c:529
+#: commit-graph.c:604
 #, c-format
 msgid "commit count in base graph too high: %<PRIuMAX>"
 msgstr ""
 
-#: commit-graph.c:587
+#: commit-graph.c:662
 #, c-format
 msgid "invalid commit-graph chain: line '%s' not a hash"
 msgstr ""
 
-#: commit-graph.c:613
+#: commit-graph.c:688
 msgid "unable to find all commit-graph files"
 msgstr ""
 
-#: commit-graph.c:783 commit-graph.c:820
+#: commit-graph.c:858 commit-graph.c:895
 msgid "invalid commit position. commit-graph is likely corrupt"
 msgstr ""
 
-#: commit-graph.c:804
+#: commit-graph.c:879
 #, c-format
 msgid "could not find commit %s"
 msgstr ""
 
-#: commit-graph.c:837
+#: commit-graph.c:912
 msgid "commit-graph requires overflow generation data but has none"
 msgstr ""
 
-#: commit-graph.c:1441
+#: commit-graph.c:916
+msgid "commit-graph overflow generation data is too small"
+msgstr ""
+
+#: commit-graph.c:1526
 msgid "Loading known commits in commit graph"
 msgstr ""
 
-#: commit-graph.c:1458
+#: commit-graph.c:1543
 msgid "Expanding reachable commits in commit graph"
 msgstr ""
 
-#: commit-graph.c:1478
+#: commit-graph.c:1563
 msgid "Clearing commit marks in commit graph"
 msgstr ""
 
-#: commit-graph.c:1595
+#: commit-graph.c:1680
 msgid "Computing commit graph topological levels"
 msgstr ""
 
-#: commit-graph.c:1629
+#: commit-graph.c:1714
 msgid "Computing commit graph generation numbers"
 msgstr ""
 
-#: commit-graph.c:1703
+#: commit-graph.c:1788
 msgid "Computing commit changed paths Bloom filters"
 msgstr ""
 
-#: commit-graph.c:1779
+#: commit-graph.c:1864
 msgid "Collecting referenced commits"
 msgstr ""
 
-#: commit-graph.c:1805
+#: commit-graph.c:1890
 #, c-format
 msgid "Finding commits for commit graph in %<PRIuMAX> pack"
 msgid_plural "Finding commits for commit graph in %<PRIuMAX> packs"
 msgstr[0] ""
 msgstr[1] ""
 
-#: commit-graph.c:1818
+#: commit-graph.c:1903
 #, c-format
 msgid "error adding pack %s"
 msgstr ""
 
-#: commit-graph.c:1822
+#: commit-graph.c:1907
 #, c-format
 msgid "error opening index for %s"
 msgstr ""
 
-#: commit-graph.c:1860
+#: commit-graph.c:1945
 msgid "Finding commits for commit graph among packed objects"
 msgstr ""
 
-#: commit-graph.c:1878
+#: commit-graph.c:1963
 msgid "Finding extra edges in commit graph"
 msgstr ""
 
-#: commit-graph.c:1927
+#: commit-graph.c:2012
 msgid "failed to write correct number of base graph ids"
 msgstr ""
 
-#: commit-graph.c:1972
+#: commit-graph.c:2057
 msgid "unable to create temporary graph layer"
 msgstr ""
 
-#: commit-graph.c:1977
+#: commit-graph.c:2062
 #, c-format
 msgid "unable to adjust shared permissions for '%s'"
 msgstr ""
 
-#: commit-graph.c:2034
+#: commit-graph.c:2119
 #, c-format
 msgid "Writing out commit graph in %d pass"
 msgid_plural "Writing out commit graph in %d passes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: commit-graph.c:2071
+#: commit-graph.c:2156
 msgid "unable to open commit-graph chain file"
 msgstr ""
 
-#: commit-graph.c:2087
+#: commit-graph.c:2172
 msgid "failed to rename base commit-graph file"
 msgstr ""
 
-#: commit-graph.c:2110
+#: commit-graph.c:2195
 msgid "failed to rename temporary commit-graph file"
 msgstr ""
 
-#: commit-graph.c:2154
+#: commit-graph.c:2239
 #, c-format
 msgid "cannot merge graphs with %<PRIuMAX>, %<PRIuMAX> commits"
 msgstr ""
 
-#: commit-graph.c:2216
+#: commit-graph.c:2301
 #, c-format
 msgid "cannot merge graph %s, too many commits: %<PRIuMAX>"
 msgstr ""
 
-#: commit-graph.c:2253
+#: commit-graph.c:2338
 msgid "Scanning merged commits"
 msgstr ""
 
-#: commit-graph.c:2297
+#: commit-graph.c:2382
 msgid "Merging commit-graph"
 msgstr ""
 
-#: commit-graph.c:2409
+#: commit-graph.c:2494
 msgid "attempting to write a commit-graph, but 'core.commitGraph' is disabled"
 msgstr ""
 
-#: commit-graph.c:2516
+#: commit-graph.c:2601
 msgid "too many commits to write graph"
 msgstr ""
 
-#: commit-graph.c:2609
+#: commit-graph.c:2694
 msgid "the commit-graph file has incorrect checksum and is likely corrupt"
 msgstr ""
 
-#: commit-graph.c:2619
+#: commit-graph.c:2704
 #, c-format
 msgid "commit-graph has incorrect OID order: %s then %s"
 msgstr ""
 
-#: commit-graph.c:2629 commit-graph.c:2644
+#: commit-graph.c:2714 commit-graph.c:2729
 #, c-format
 msgid "commit-graph has incorrect fanout value: fanout[%d] = %u != %u"
 msgstr ""
 
-#: commit-graph.c:2636
+#: commit-graph.c:2721
 #, c-format
 msgid "failed to parse commit %s from commit-graph"
 msgstr ""
 
-#: commit-graph.c:2665
+#: commit-graph.c:2750
 #, c-format
 msgid "failed to parse commit %s from object database for commit-graph"
 msgstr ""
 
-#: commit-graph.c:2672
+#: commit-graph.c:2757
 #, c-format
 msgid "root tree OID for commit %s in commit-graph is %s != %s"
 msgstr ""
 
-#: commit-graph.c:2682
+#: commit-graph.c:2767
 #, c-format
 msgid "commit-graph parent list for commit %s is too long"
 msgstr ""
 
-#: commit-graph.c:2691
+#: commit-graph.c:2776
 #, c-format
 msgid "commit-graph parent for %s is %s != %s"
 msgstr ""
 
-#: commit-graph.c:2705
+#: commit-graph.c:2790
 #, c-format
 msgid "commit-graph parent list for commit %s terminates early"
 msgstr ""
 
-#: commit-graph.c:2727
+#: commit-graph.c:2812
 #, c-format
 msgid "commit-graph generation for commit %s is %<PRIuMAX> < %<PRIuMAX>"
 msgstr ""
 
-#: commit-graph.c:2733
+#: commit-graph.c:2818
 #, c-format
 msgid "commit date for commit %s in commit-graph is %<PRIuMAX> != %<PRIuMAX>"
 msgstr ""
 
-#: commit-graph.c:2740
+#: commit-graph.c:2825
 #, c-format
 msgid ""
 "commit-graph has both zero and non-zero generations (e.g., commits '%s' and "
 "'%s')"
 msgstr ""
 
-#: commit-graph.c:2764
+#: commit-graph.c:2849
 msgid "Verifying commits in commit graph"
 msgstr ""
 
@@ -20001,35 +20014,35 @@ msgid ""
 "%s"
 msgstr ""
 
-#: merge-ort.c:2108 merge-recursive.c:1386
+#: merge-ort.c:2109 merge-recursive.c:1386
 msgid "failed to execute internal merge"
 msgstr ""
 
-#: merge-ort.c:2113 merge-recursive.c:1391
+#: merge-ort.c:2114 merge-recursive.c:1391
 #, c-format
 msgid "unable to add %s to database"
 msgstr ""
 
-#: merge-ort.c:2120 merge-recursive.c:1424
+#: merge-ort.c:2121 merge-recursive.c:1424
 #, c-format
 msgid "Auto-merging %s"
 msgstr ""
 
-#: merge-ort.c:2260 merge-recursive.c:2146
+#: merge-ort.c:2261 merge-recursive.c:2146
 #, c-format
 msgid ""
 "CONFLICT (implicit dir rename): Existing file/dir at %s in the way of "
 "implicit directory rename(s) putting the following path(s) there: %s."
 msgstr ""
 
-#: merge-ort.c:2272 merge-recursive.c:2156
+#: merge-ort.c:2273 merge-recursive.c:2156
 #, c-format
 msgid ""
 "CONFLICT (implicit dir rename): Cannot map more than one path to %s; "
 "implicit directory renames tried to put these paths there: %s"
 msgstr ""
 
-#: merge-ort.c:2331
+#: merge-ort.c:2332
 #, c-format
 msgid ""
 "CONFLICT (directory rename split): Unclear where to rename %s to; it was "
@@ -20037,47 +20050,47 @@ msgid ""
 "majority of the files."
 msgstr ""
 
-#: merge-ort.c:2513 merge-recursive.c:2492
+#: merge-ort.c:2514 merge-recursive.c:2492
 #, c-format
 msgid ""
 "WARNING: Avoiding applying %s -> %s rename to %s, because %s itself was "
 "renamed."
 msgstr ""
 
-#: merge-ort.c:2687 merge-recursive.c:3275
+#: merge-ort.c:2688 merge-recursive.c:3275
 #, c-format
 msgid ""
 "Path updated: %s added in %s inside a directory that was renamed in %s; "
 "moving it to %s."
 msgstr ""
 
-#: merge-ort.c:2695 merge-recursive.c:3282
+#: merge-ort.c:2696 merge-recursive.c:3282
 #, c-format
 msgid ""
 "Path updated: %s renamed to %s in %s, inside a directory that was renamed in "
 "%s; moving it to %s."
 msgstr ""
 
-#: merge-ort.c:2709 merge-recursive.c:3278
+#: merge-ort.c:2710 merge-recursive.c:3278
 #, c-format
 msgid ""
 "CONFLICT (file location): %s added in %s inside a directory that was renamed "
 "in %s, suggesting it should perhaps be moved to %s."
 msgstr ""
 
-#: merge-ort.c:2718 merge-recursive.c:3285
+#: merge-ort.c:2719 merge-recursive.c:3285
 #, c-format
 msgid ""
 "CONFLICT (file location): %s renamed to %s in %s, inside a directory that "
 "was renamed in %s, suggesting it should perhaps be moved to %s."
 msgstr ""
 
-#: merge-ort.c:2877
+#: merge-ort.c:2878
 #, c-format
 msgid "CONFLICT (rename/rename): %s renamed to %s in %s and to %s in %s."
 msgstr ""
 
-#: merge-ort.c:2975
+#: merge-ort.c:2976
 #, c-format
 msgid ""
 "CONFLICT (rename involved in collision): rename of %s -> %s has content "
@@ -20085,60 +20098,60 @@ msgid ""
 "markers."
 msgstr ""
 
-#: merge-ort.c:2995 merge-ort.c:3020
+#: merge-ort.c:2996 merge-ort.c:3021
 #, c-format
 msgid "CONFLICT (rename/delete): %s renamed to %s in %s, but deleted in %s."
 msgstr ""
 
-#: merge-ort.c:3499 merge-recursive.c:3036
+#: merge-ort.c:3500 merge-recursive.c:3036
 #, c-format
 msgid "cannot read object %s"
 msgstr ""
 
-#: merge-ort.c:3502 merge-recursive.c:3039
+#: merge-ort.c:3503 merge-recursive.c:3039
 #, c-format
 msgid "object %s is not a blob"
 msgstr ""
 
-#: merge-ort.c:3937
+#: merge-ort.c:3938
 #, c-format
 msgid ""
 "CONFLICT (file/directory): directory in the way of %s from %s; moving it to "
 "%s instead."
 msgstr ""
 
-#: merge-ort.c:4020
+#: merge-ort.c:4021
 #, c-format
 msgid ""
 "CONFLICT (distinct types): %s had different types on each side; renamed both "
 "of them so each can be recorded somewhere."
 msgstr ""
 
-#: merge-ort.c:4029
+#: merge-ort.c:4030
 #, c-format
 msgid ""
 "CONFLICT (distinct types): %s had different types on each side; renamed one "
 "of them so each can be recorded somewhere."
 msgstr ""
 
-#: merge-ort.c:4116 merge-recursive.c:3115
+#: merge-ort.c:4117 merge-recursive.c:3115
 msgid "content"
 msgstr ""
 
-#: merge-ort.c:4118 merge-recursive.c:3119
+#: merge-ort.c:4119 merge-recursive.c:3119
 msgid "add/add"
 msgstr ""
 
-#: merge-ort.c:4120 merge-recursive.c:3164
+#: merge-ort.c:4121 merge-recursive.c:3164
 msgid "submodule"
 msgstr ""
 
-#: merge-ort.c:4123 merge-recursive.c:3165
+#: merge-ort.c:4124 merge-recursive.c:3165
 #, c-format
 msgid "CONFLICT (%s): Merge conflict in %s"
 msgstr ""
 
-#: merge-ort.c:4168
+#: merge-ort.c:4169
 #, c-format
 msgid ""
 "CONFLICT (modify/delete): %s deleted in %s and modified in %s.  Version %s "
@@ -20151,14 +20164,14 @@ msgstr ""
 #. commit that needs to be merged.  For example:
 #.  - go to submodule (mysubmodule), and either merge commit abc1234"
 #.
-#: merge-ort.c:4538
+#: merge-ort.c:4539
 #, c-format
 msgid ""
 " - go to submodule (%s), and either merge commit %s\n"
 "   or update to an existing commit which has merged those changes\n"
 msgstr ""
 
-#: merge-ort.c:4549
+#: merge-ort.c:4550
 #, c-format
 msgid ""
 "Recursive merging with submodules currently only supports trivial cases.\n"
@@ -20176,7 +20189,7 @@ msgstr ""
 #. TRANSLATORS: The %s arguments are: 1) tree hash of a merge
 #. base, and 2-3) the trees for the two trees we're merging.
 #.
-#: merge-ort.c:4953
+#: merge-ort.c:4954
 #, c-format
 msgid "collecting merge info failed for trees %s, %s, %s"
 msgstr ""
@@ -20450,210 +20463,226 @@ msgstr ""
 msgid "multi-pack-index OID fanout is of the wrong size"
 msgstr ""
 
-#: midx.c:104
+#: midx.c:85
+msgid "multi-pack-index OID lookup chunk is the wrong size"
+msgstr ""
+
+#: midx.c:98
+msgid "multi-pack-index object offset chunk is the wrong size"
+msgstr ""
+
+#: midx.c:131
 #, c-format
 msgid "multi-pack-index file %s is too small"
 msgstr ""
 
-#: midx.c:120
+#: midx.c:147
 #, c-format
 msgid "multi-pack-index signature 0x%08x does not match signature 0x%08x"
 msgstr ""
 
-#: midx.c:125
+#: midx.c:152
 #, c-format
 msgid "multi-pack-index version %d not recognized"
 msgstr ""
 
-#: midx.c:130
+#: midx.c:157
 #, c-format
 msgid "multi-pack-index hash version %u does not match version %u"
 msgstr ""
 
-#: midx.c:147
-msgid "multi-pack-index missing required pack-name chunk"
+#: midx.c:175
+msgid "multi-pack-index required pack-name chunk missing or corrupted"
 msgstr ""
 
-#: midx.c:149
-msgid "multi-pack-index missing required OID fanout chunk"
+#: midx.c:177
+msgid "multi-pack-index required OID fanout chunk missing or corrupted"
 msgstr ""
 
-#: midx.c:151
-msgid "multi-pack-index missing required OID lookup chunk"
+#: midx.c:179
+msgid "multi-pack-index required OID lookup chunk missing or corrupted"
 msgstr ""
 
-#: midx.c:153
-msgid "multi-pack-index missing required object offsets chunk"
+#: midx.c:181
+msgid "multi-pack-index required object offsets chunk missing or corrupted"
 msgstr ""
 
-#: midx.c:172
+#: midx.c:203
+msgid "multi-pack-index pack-name chunk is too short"
+msgstr ""
+
+#: midx.c:207
 #, c-format
 msgid "multi-pack-index pack names out of order: '%s' before '%s'"
 msgstr ""
 
-#: midx.c:220
+#: midx.c:255
 #, c-format
 msgid "bad pack-int-id: %u (%u total packs)"
 msgstr ""
 
-#: midx.c:270
+#: midx.c:305
 msgid "multi-pack-index stores a 64-bit offset, but off_t is too small"
 msgstr ""
 
-#: midx.c:502
+#: midx.c:309
+msgid "multi-pack-index large offset out of bounds"
+msgstr ""
+
+#: midx.c:538
 #, c-format
 msgid "failed to add packfile '%s'"
 msgstr ""
 
-#: midx.c:508
+#: midx.c:544
 #, c-format
 msgid "failed to open pack-index '%s'"
 msgstr ""
 
-#: midx.c:576
+#: midx.c:612
 #, c-format
 msgid "failed to locate object %d in packfile"
 msgstr ""
 
-#: midx.c:963
+#: midx.c:999
 msgid "cannot store reverse index file"
 msgstr ""
 
-#: midx.c:1071
+#: midx.c:1107
 #, c-format
 msgid "could not parse line: %s"
 msgstr ""
 
-#: midx.c:1073
+#: midx.c:1109
 #, c-format
 msgid "malformed line: %s"
 msgstr ""
 
-#: midx.c:1264
+#: midx.c:1300
 msgid "ignoring existing multi-pack-index; checksum mismatch"
 msgstr ""
 
-#: midx.c:1289
+#: midx.c:1325
 msgid "could not load pack"
 msgstr ""
 
-#: midx.c:1295
+#: midx.c:1331
 #, c-format
 msgid "could not open index for %s"
 msgstr ""
 
-#: midx.c:1306
+#: midx.c:1342
 msgid "Adding packfiles to multi-pack-index"
 msgstr ""
 
-#: midx.c:1349
+#: midx.c:1385
 #, c-format
 msgid "unknown preferred pack: '%s'"
 msgstr ""
 
-#: midx.c:1394
+#: midx.c:1430
 #, c-format
 msgid "cannot select preferred pack %s with no objects"
 msgstr ""
 
-#: midx.c:1426
+#: midx.c:1462
 #, c-format
 msgid "did not see pack-file %s to drop"
 msgstr ""
 
-#: midx.c:1472
+#: midx.c:1508
 #, c-format
 msgid "preferred pack '%s' is expired"
 msgstr ""
 
-#: midx.c:1485
+#: midx.c:1521
 msgid "no pack files to index."
 msgstr ""
 
-#: midx.c:1492
+#: midx.c:1528
 msgid "refusing to write multi-pack .bitmap without any objects"
 msgstr ""
 
-#: midx.c:1557
+#: midx.c:1593
 msgid "could not write multi-pack bitmap"
 msgstr ""
 
-#: midx.c:1571
+#: midx.c:1607
 msgid "could not write multi-pack-index"
 msgstr ""
 
-#: midx.c:1665
+#: midx.c:1701
 #, c-format
 msgid "failed to clear multi-pack-index at %s"
 msgstr ""
 
-#: midx.c:1728
+#: midx.c:1764
 msgid "multi-pack-index file exists, but failed to parse"
 msgstr ""
 
-#: midx.c:1736
+#: midx.c:1772
 msgid "incorrect checksum"
 msgstr ""
 
-#: midx.c:1739
+#: midx.c:1775
 msgid "Looking for referenced packfiles"
 msgstr ""
 
-#: midx.c:1754
+#: midx.c:1790
 #, c-format
 msgid ""
 "oid fanout out of order: fanout[%d] = %<PRIx32> > %<PRIx32> = fanout[%d]"
 msgstr ""
 
-#: midx.c:1759
+#: midx.c:1795
 msgid "the midx contains no oid"
 msgstr ""
 
-#: midx.c:1768
+#: midx.c:1804
 msgid "Verifying OID order in multi-pack-index"
 msgstr ""
 
-#: midx.c:1777
+#: midx.c:1813
 #, c-format
 msgid "oid lookup out of order: oid[%d] = %s >= %s = oid[%d]"
 msgstr ""
 
-#: midx.c:1797
+#: midx.c:1833
 msgid "Sorting objects by packfile"
 msgstr ""
 
-#: midx.c:1804
+#: midx.c:1840
 msgid "Verifying object offsets"
 msgstr ""
 
-#: midx.c:1820
+#: midx.c:1856
 #, c-format
 msgid "failed to load pack entry for oid[%d] = %s"
 msgstr ""
 
-#: midx.c:1826
+#: midx.c:1862
 #, c-format
 msgid "failed to load pack-index for packfile %s"
 msgstr ""
 
-#: midx.c:1835
+#: midx.c:1871
 #, c-format
 msgid "incorrect object offset for oid[%d] = %s: %<PRIx64> != %<PRIx64>"
 msgstr ""
 
-#: midx.c:1862
+#: midx.c:1898
 msgid "Counting referenced objects"
 msgstr ""
 
-#: midx.c:1872
+#: midx.c:1908
 msgid "Finding and deleting unreferenced packfiles"
 msgstr ""
 
-#: midx.c:2070
+#: midx.c:2106
 msgid "could not start pack-objects"
 msgstr ""
 
-#: midx.c:2090
+#: midx.c:2126
 msgid "could not finish pack-objects"
 msgstr ""
 
@@ -21347,6 +21376,10 @@ msgstr ""
 #: pack-revindex.c:337
 #, c-format
 msgid "invalid rev-index position at %<PRIu64>: %<PRIu32> != %<PRIu32>"
+msgstr ""
+
+#: pack-revindex.c:351
+msgid "multi-pack-index reverse-index chunk is the wrong size"
 msgstr ""
 
 #: pack-write.c:249
