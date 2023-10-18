@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2023-10-17 22:58+0000\n"
+"POT-Creation-Date: 2023-10-18 21:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -208,7 +208,7 @@ msgid "unstaged"
 msgstr ""
 
 #: add-interactive.c:1163 apply.c:5067 apply.c:5070 builtin/am.c:2372
-#: builtin/am.c:2375 builtin/bugreport.c:119 builtin/clone.c:144
+#: builtin/am.c:2375 builtin/bugreport.c:141 builtin/clone.c:144
 #: builtin/diagnose.c:25 builtin/fetch.c:2155 builtin/hook.c:31
 #: builtin/merge.c:274 builtin/pull.c:201 builtin/submodule--helper.c:1777
 #: builtin/submodule--helper.c:1780
@@ -2185,7 +2185,8 @@ msgid "index file corrupt"
 msgstr ""
 
 #: builtin/add.c:571 builtin/am.c:2003 builtin/am.c:2037 builtin/checkout.c:637
-#: builtin/checkout.c:915 builtin/clone.c:747 builtin/stash.c:304 merge.c:109
+#: builtin/checkout.c:915 builtin/clone.c:747 builtin/commit.c:458
+#: builtin/commit.c:482 builtin/commit.c:530 builtin/stash.c:304 merge.c:109
 #: rerere.c:704
 msgid "unable to write new index file"
 msgstr ""
@@ -2541,7 +2542,7 @@ msgstr ""
 msgid "n"
 msgstr ""
 
-#: builtin/am.c:2384 builtin/branch.c:758 builtin/bugreport.c:121
+#: builtin/am.c:2384 builtin/branch.c:758 builtin/bugreport.c:143
 #: builtin/cat-file.c:954 builtin/cat-file.c:958 builtin/cat-file.c:965
 #: builtin/diagnose.c:27 builtin/for-each-ref.c:48 builtin/ls-files.c:646
 #: builtin/ls-tree.c:374 builtin/replace.c:567 builtin/tag.c:529
@@ -3579,34 +3580,34 @@ msgid ""
 "'--set-upstream-to' instead."
 msgstr ""
 
-#: builtin/bugreport.c:21
+#: builtin/bugreport.c:22
 msgid "git version:\n"
 msgstr ""
 
-#: builtin/bugreport.c:27
+#: builtin/bugreport.c:28
 #, c-format
 msgid "uname() failed with error '%s' (%d)\n"
 msgstr ""
 
-#: builtin/bugreport.c:37
+#: builtin/bugreport.c:38
 msgid "compiler info: "
 msgstr ""
 
-#: builtin/bugreport.c:40
+#: builtin/bugreport.c:41
 msgid "libc info: "
 msgstr ""
 
-#: builtin/bugreport.c:54
+#: builtin/bugreport.c:55
 msgid "not run from a git repository - no hooks to show\n"
 msgstr ""
 
-#: builtin/bugreport.c:67
+#: builtin/bugreport.c:68
 msgid ""
 "git bugreport [(-o | --output-directory) <path>] [(-s | --suffix) <format>]\n"
 "              [--diagnose[=<mode>]]"
 msgstr ""
 
-#: builtin/bugreport.c:75
+#: builtin/bugreport.c:76
 msgid ""
 "Thank you for filling out a Git bug report!\n"
 "Please answer the following questions to help us understand your issue.\n"
@@ -3625,49 +3626,54 @@ msgid ""
 "You can delete any lines you don't wish to share.\n"
 msgstr ""
 
-#: builtin/bugreport.c:116 builtin/commit.c:1527 builtin/commit.c:1531
+#: builtin/bugreport.c:138 builtin/commit.c:1527 builtin/commit.c:1531
 #: builtin/commit.c:1692 builtin/fast-export.c:1191 builtin/fast-export.c:1194
 #: builtin/fast-export.c:1197 builtin/rebase.c:1175 parse-options.h:580
 msgid "mode"
 msgstr ""
 
-#: builtin/bugreport.c:117
+#: builtin/bugreport.c:139
 msgid ""
 "create an additional zip archive of detailed diagnostics (default 'stats')"
 msgstr ""
 
-#: builtin/bugreport.c:120
+#: builtin/bugreport.c:142
 msgid "specify a destination for the bugreport file(s)"
 msgstr ""
 
-#: builtin/bugreport.c:122
+#: builtin/bugreport.c:144
 msgid "specify a strftime format suffix for the filename(s)"
 msgstr ""
 
-#: builtin/bugreport.c:145 builtin/diagnose.c:53
+#: builtin/bugreport.c:167 builtin/diagnose.c:53
 #, c-format
 msgid "could not create leading directories for '%s'"
 msgstr ""
 
-#: builtin/bugreport.c:158 builtin/diagnose.c:59
-#, c-format
-msgid "unable to create diagnostics archive %s"
-msgstr ""
-
-#: builtin/bugreport.c:166
+#: builtin/bugreport.c:174
 msgid "System Info"
 msgstr ""
 
-#: builtin/bugreport.c:169
+#: builtin/bugreport.c:177
 msgid "Enabled Hooks"
 msgstr ""
 
-#: builtin/bugreport.c:176
+#: builtin/bugreport.c:189
+#, c-format
+msgid "unable to open '%s'"
+msgstr ""
+
+#: builtin/bugreport.c:193
 #, c-format
 msgid "unable to write to %s"
 msgstr ""
 
-#: builtin/bugreport.c:186
+#: builtin/bugreport.c:205 builtin/diagnose.c:59
+#, c-format
+msgid "unable to create diagnostics archive %s"
+msgstr ""
+
+#: builtin/bugreport.c:217
 #, c-format
 msgid "Created new report at '%s'.\n"
 msgstr ""
@@ -5407,10 +5413,6 @@ msgstr ""
 msgid "Failed to update main cache tree"
 msgstr ""
 
-#: builtin/commit.c:458 builtin/commit.c:482 builtin/commit.c:530
-msgid "unable to write new_index file"
-msgstr ""
-
 #: builtin/commit.c:511
 msgid "cannot do a partial commit during a merge."
 msgstr ""
@@ -5884,7 +5886,7 @@ msgstr ""
 #: builtin/commit.c:1864
 msgid ""
 "repository has been updated, but unable to write\n"
-"new_index file. Check that disk is not full and quota is\n"
+"new index file. Check that disk is not full and quota is\n"
 "not exceeded, and then \"git restore --staged :/\" to recover."
 msgstr ""
 
