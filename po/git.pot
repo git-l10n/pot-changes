@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2023-10-22 18:57+0000\n"
+"POT-Creation-Date: 2023-10-23 21:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -2673,7 +2673,7 @@ msgstr ""
 
 #: builtin/bisect.c:29
 msgid ""
-"git bisect start [--term-{new,bad}=<term> --term-{old,good}=<term>]    [--no-"
+"git bisect start [--term-(new|bad)=<term> --term-(old|good)=<term>]    [--no-"
 "checkout] [--first-parent] [<bad> [<good>...]] [--]    [<pathspec>...]"
 msgstr ""
 
@@ -2694,7 +2694,7 @@ msgid "git bisect replay <logfile>"
 msgstr ""
 
 #: builtin/bisect.c:49
-msgid "git bisect run <cmd>..."
+msgid "git bisect run <cmd> [<arg>...]"
 msgstr ""
 
 #: builtin/bisect.c:136
@@ -3205,30 +3205,30 @@ msgstr ""
 #, c-format
 msgid ""
 "deleting branch '%s' that has been merged to\n"
-"         '%s', but not yet merged to HEAD."
+"         '%s', but not yet merged to HEAD"
 msgstr ""
 
 #: builtin/branch.c:179
 #, c-format
 msgid ""
 "not deleting branch '%s' that is not yet merged to\n"
-"         '%s', even though it is merged to HEAD."
+"         '%s', even though it is merged to HEAD"
 msgstr ""
 
 #: builtin/branch.c:193
 #, c-format
-msgid "Couldn't look up commit object for '%s'"
+msgid "couldn't look up commit object for '%s'"
 msgstr ""
 
 #: builtin/branch.c:197
 #, c-format
 msgid ""
-"The branch '%s' is not fully merged.\n"
-"If you are sure you want to delete it, run 'git branch -D %s'."
+"the branch '%s' is not fully merged.\n"
+"If you are sure you want to delete it, run 'git branch -D %s'"
 msgstr ""
 
 #: builtin/branch.c:210
-msgid "Update of config-file failed"
+msgid "update of config-file failed"
 msgstr ""
 
 #: builtin/branch.c:245
@@ -3237,12 +3237,12 @@ msgstr ""
 
 #: builtin/branch.c:263
 #, c-format
-msgid "Cannot delete branch '%s' used by worktree at '%s'"
+msgid "cannot delete branch '%s' used by worktree at '%s'"
 msgstr ""
 
 #: builtin/branch.c:278
 #, c-format
-msgid "remote-tracking branch '%s' not found."
+msgid "remote-tracking branch '%s' not found"
 msgstr ""
 
 #: builtin/branch.c:289
@@ -3254,7 +3254,7 @@ msgstr ""
 
 #: builtin/branch.c:293
 #, c-format
-msgid "branch '%s' not found."
+msgid "branch '%s' not found"
 msgstr ""
 
 #: builtin/branch.c:326
@@ -3282,12 +3282,12 @@ msgstr ""
 
 #: builtin/branch.c:521
 #, c-format
-msgid "Branch %s is being rebased at %s"
+msgid "branch %s is being rebased at %s"
 msgstr ""
 
 #: builtin/branch.c:525
 #, c-format
-msgid "Branch %s is being bisected at %s"
+msgid "branch %s is being bisected at %s"
 msgstr ""
 
 #: builtin/branch.c:554
@@ -3297,48 +3297,48 @@ msgstr ""
 
 #: builtin/branch.c:581
 #, c-format
-msgid "Invalid branch name: '%s'"
+msgid "invalid branch name: '%s'"
 msgstr ""
 
 #: builtin/branch.c:597 builtin/branch.c:881 builtin/branch.c:926
 #, c-format
-msgid "No commit on branch '%s' yet."
+msgid "no commit on branch '%s' yet"
 msgstr ""
 
 #: builtin/branch.c:599 builtin/branch.c:882
 #, c-format
-msgid "No branch named '%s'."
+msgid "no branch named '%s'"
 msgstr ""
 
 #: builtin/branch.c:627
-msgid "Branch rename failed"
+msgid "branch rename failed"
 msgstr ""
 
 #: builtin/branch.c:629
-msgid "Branch copy failed"
+msgid "branch copy failed"
 msgstr ""
 
 #: builtin/branch.c:633
 #, c-format
-msgid "Created a copy of a misnamed branch '%s'"
+msgid "created a copy of a misnamed branch '%s'"
 msgstr ""
 
 #: builtin/branch.c:636
 #, c-format
-msgid "Renamed a misnamed branch '%s' away"
+msgid "renamed a misnamed branch '%s' away"
 msgstr ""
 
 #: builtin/branch.c:643
 #, c-format
-msgid "Branch renamed to %s, but HEAD is not updated!"
+msgid "branch renamed to %s, but HEAD is not updated"
 msgstr ""
 
 #: builtin/branch.c:650
-msgid "Branch is renamed, but update of config-file failed"
+msgid "branch is renamed, but update of config-file failed"
 msgstr ""
 
 #: builtin/branch.c:652
-msgid "Branch is copied, but update of config-file failed"
+msgid "branch is copied, but update of config-file failed"
 msgstr ""
 
 #: builtin/branch.c:672
@@ -3489,8 +3489,8 @@ msgstr ""
 msgid "format to use for the output"
 msgstr ""
 
-#: builtin/branch.c:776 builtin/submodule--helper.c:2802 submodule.c:1236
-msgid "Failed to resolve HEAD as a valid ref."
+#: builtin/branch.c:776
+msgid "failed to resolve HEAD as a valid ref"
 msgstr ""
 
 #: builtin/branch.c:780 builtin/clone.c:717
@@ -3512,7 +3512,7 @@ msgid "branch name required"
 msgstr ""
 
 #: builtin/branch.c:869
-msgid "Cannot give description to detached HEAD"
+msgid "cannot give description to detached HEAD"
 msgstr ""
 
 #: builtin/branch.c:875
@@ -3520,11 +3520,11 @@ msgid "cannot edit description of more than one branch"
 msgstr ""
 
 #: builtin/branch.c:895
-msgid "cannot copy the current branch while not on any."
+msgid "cannot copy the current branch while not on any"
 msgstr ""
 
 #: builtin/branch.c:896
-msgid "cannot rename the current branch while not on any."
+msgid "cannot rename the current branch while not on any"
 msgstr ""
 
 #: builtin/branch.c:902
@@ -3542,7 +3542,7 @@ msgstr ""
 #: builtin/branch.c:918
 #, c-format
 msgid ""
-"could not set upstream of HEAD to %s when it does not point to any branch."
+"could not set upstream of HEAD to %s when it does not point to any branch"
 msgstr ""
 
 #: builtin/branch.c:921 builtin/branch.c:950
@@ -3560,24 +3560,24 @@ msgid "too many arguments to unset upstream"
 msgstr ""
 
 #: builtin/branch.c:948
-msgid "could not unset upstream of HEAD when it does not point to any branch."
+msgid "could not unset upstream of HEAD when it does not point to any branch"
 msgstr ""
 
 #: builtin/branch.c:954
 #, c-format
-msgid "Branch '%s' has no upstream information"
+msgid "branch '%s' has no upstream information"
 msgstr ""
 
 #: builtin/branch.c:968
 msgid ""
-"The -a, and -r, options to 'git branch' do not take a branch name.\n"
+"the -a, and -r, options to 'git branch' do not take a branch name.\n"
 "Did you mean to use: -a|-r --list <pattern>?"
 msgstr ""
 
 #: builtin/branch.c:972
 msgid ""
 "the '--set-upstream' option is no longer supported. Please use '--track' or "
-"'--set-upstream-to' instead."
+"'--set-upstream-to' instead"
 msgstr ""
 
 #: builtin/bugreport.c:21
@@ -14958,6 +14958,10 @@ msgid ""
 "[-N|--no-fetch] [-f|--force] [--checkout|--merge|--rebase] [--[no-]recommend-"
 "shallow] [--reference <repository>] [--recursive] [--[no-]single-branch] "
 "[--] [<path>...]"
+msgstr ""
+
+#: builtin/submodule--helper.c:2802 submodule.c:1236
+msgid "Failed to resolve HEAD as a valid ref."
 msgstr ""
 
 #: builtin/submodule--helper.c:2868
