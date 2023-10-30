@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2023-10-23 21:57+0000\n"
+"POT-Creation-Date: 2023-10-30 02:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -24,7 +24,7 @@ msgid "Huh (%s)?"
 msgstr ""
 
 #: add-interactive.c:542 add-interactive.c:850 builtin/merge.c:382
-#: builtin/rebase.c:1302 builtin/rebase.c:1729 reset.c:140 sequencer.c:3655
+#: builtin/rebase.c:1300 builtin/rebase.c:1713 reset.c:140 sequencer.c:3655
 #: sequencer.c:4136 sequencer.c:4513
 msgid "could not read index"
 msgstr ""
@@ -825,8 +825,8 @@ msgstr ""
 #: builtin/log.c:2105 builtin/ls-files.c:756 builtin/merge-base.c:166
 #: builtin/merge-base.c:172 builtin/merge.c:1404 builtin/merge.c:1406
 #: builtin/pack-objects.c:4401 builtin/push.c:643 builtin/push.c:681
-#: builtin/push.c:687 builtin/push.c:692 builtin/rebase.c:1257
-#: builtin/rebase.c:1259 builtin/rebase.c:1268 builtin/repack.c:1208
+#: builtin/push.c:687 builtin/push.c:692 builtin/rebase.c:1255
+#: builtin/rebase.c:1257 builtin/rebase.c:1266 builtin/repack.c:1208
 #: builtin/repack.c:1214 builtin/repack.c:1216 builtin/repack.c:1266
 #: builtin/reset.c:376 builtin/reset.c:413 builtin/rev-list.c:557
 #: builtin/show-branch.c:722 builtin/show-branch.c:727 builtin/stash.c:1774
@@ -1312,7 +1312,7 @@ msgid_plural "%d lines applied after fixing whitespace errors."
 msgstr[0] ""
 msgstr[1] ""
 
-#: apply.c:5040 builtin/add.c:571 builtin/mv.c:567 builtin/rm.c:441
+#: apply.c:5040 builtin/mv.c:567 builtin/rm.c:441
 msgid "Unable to write new index file"
 msgstr ""
 
@@ -1390,7 +1390,7 @@ msgstr ""
 
 #: apply.c:5108 builtin/am.c:2356 builtin/am.c:2359
 #: builtin/interpret-trailers.c:105 builtin/interpret-trailers.c:107
-#: builtin/pack-objects.c:4285 builtin/rebase.c:1112
+#: builtin/pack-objects.c:4285 builtin/rebase.c:1110
 msgid "action"
 msgstr ""
 
@@ -1661,47 +1661,47 @@ msgstr ""
 msgid "Argument not supported for format '%s': -%d"
 msgstr ""
 
-#: attr.c:207
+#: attr.c:209
 #, c-format
 msgid "%.*s is not a valid attribute name"
 msgstr ""
 
-#: attr.c:235
+#: attr.c:237
 msgid "unable to add additional attribute"
 msgstr ""
 
-#: attr.c:357
+#: attr.c:359
 #, c-format
 msgid "ignoring overly long attributes line %d"
 msgstr ""
 
-#: attr.c:372
+#: attr.c:374
 #, c-format
 msgid "%s not allowed: %s:%d"
 msgstr ""
 
-#: attr.c:411
+#: attr.c:413
 msgid ""
 "Negative patterns are ignored in git attributes\n"
 "Use '\\!' for literal leading exclamation."
 msgstr ""
 
-#: attr.c:734
+#: attr.c:736
 #, c-format
 msgid "cannot fstat gitattributes file '%s'"
 msgstr ""
 
-#: attr.c:739
+#: attr.c:741
 #, c-format
 msgid "ignoring overly large gitattributes file '%s'"
 msgstr ""
 
-#: attr.c:854
+#: attr.c:856
 #, c-format
 msgid "ignoring overly large gitattributes blob '%s'"
 msgstr ""
 
-#: attr.c:1212
+#: attr.c:1229
 msgid "bad --attr-source or GIT_ATTR_SOURCE"
 msgstr ""
 
@@ -2020,26 +2020,26 @@ msgid ""
 "See its entry in 'git help config' for details."
 msgstr ""
 
-#: builtin/add.c:185 builtin/rev-parse.c:1027
-msgid "Could not read the index"
+#: builtin/add.c:185
+msgid "could not read the index"
 msgstr ""
 
 #: builtin/add.c:200
 msgid "editing patch failed"
 msgstr ""
 
-#: builtin/add.c:203
+#: builtin/add.c:203 read-cache.c:3209
 #, c-format
-msgid "Could not stat '%s'"
+msgid "could not stat '%s'"
 msgstr ""
 
 #: builtin/add.c:205
-msgid "Empty patch. Aborted."
+msgid "empty patch. aborted"
 msgstr ""
 
 #: builtin/add.c:211
 #, c-format
-msgid "Could not apply '%s'"
+msgid "could not apply '%s'"
 msgstr ""
 
 #: builtin/add.c:220
@@ -2184,6 +2184,13 @@ msgstr ""
 msgid "index file corrupt"
 msgstr ""
 
+#: builtin/add.c:571 builtin/am.c:2003 builtin/am.c:2037 builtin/checkout.c:637
+#: builtin/checkout.c:913 builtin/clone.c:747 builtin/commit.c:458
+#: builtin/commit.c:482 builtin/commit.c:530 builtin/stash.c:304 merge.c:108
+#: rerere.c:712
+msgid "unable to write new index file"
+msgstr ""
+
 #: builtin/am.c:195 builtin/mailinfo.c:48 mailinfo.c:1257
 #, c-format
 msgid "bad action '%s' for '%s'"
@@ -2233,13 +2240,13 @@ msgstr ""
 msgid "fseek failed"
 msgstr ""
 
-#: builtin/am.c:757 builtin/am.c:849 builtin/rebase.c:690 sequencer.c:913
+#: builtin/am.c:757 builtin/am.c:849 builtin/rebase.c:676 sequencer.c:913
 #: wrapper.c:199 wrapper.c:369
 #, c-format
 msgid "could not open '%s' for reading"
 msgstr ""
 
-#: builtin/am.c:766 builtin/rebase.c:644 editor.c:148 sequencer.c:4259
+#: builtin/am.c:766 builtin/rebase.c:630 editor.c:148 sequencer.c:4259
 #: wrapper.c:197 wrapper.c:367
 #, c-format
 msgid "could not open '%s' for writing"
@@ -2432,12 +2439,6 @@ msgid ""
 "You might run `git rm` on a file to accept \"deleted by them\" for it."
 msgstr ""
 
-#: builtin/am.c:2003 builtin/am.c:2037 builtin/checkout.c:637
-#: builtin/checkout.c:913 builtin/clone.c:747 builtin/stash.c:304 merge.c:108
-#: rerere.c:712
-msgid "unable to write new index file"
-msgstr ""
-
 #: builtin/am.c:2053 builtin/am.c:2057 builtin/am.c:2069 builtin/reset.c:399
 #: builtin/reset.c:407
 #, c-format
@@ -2534,7 +2535,7 @@ msgstr ""
 #: builtin/am.c:2377 builtin/commit.c:1540 builtin/fmt-merge-msg.c:19
 #: builtin/fmt-merge-msg.c:22 builtin/grep.c:969 builtin/merge.c:250
 #: builtin/pull.c:149 builtin/pull.c:211 builtin/pull.c:228
-#: builtin/rebase.c:1107 builtin/repack.c:1170 builtin/repack.c:1174
+#: builtin/rebase.c:1105 builtin/repack.c:1170 builtin/repack.c:1174
 #: builtin/repack.c:1176 builtin/show-branch.c:661 builtin/show-ref.c:169
 #: builtin/tag.c:456 parse-options.h:215 parse-options.h:276
 #: parse-options.h:523
@@ -2594,12 +2595,12 @@ msgid "use current timestamp for author date"
 msgstr ""
 
 #: builtin/am.c:2420 builtin/commit-tree.c:113 builtin/commit.c:1666
-#: builtin/merge.c:289 builtin/pull.c:186 builtin/rebase.c:1163
+#: builtin/merge.c:289 builtin/pull.c:186 builtin/rebase.c:1161
 #: builtin/revert.c:107 builtin/tag.c:471
 msgid "key-id"
 msgstr ""
 
-#: builtin/am.c:2421 builtin/rebase.c:1164
+#: builtin/am.c:2421 builtin/rebase.c:1162
 msgid "GPG-sign commits"
 msgstr ""
 
@@ -3627,7 +3628,7 @@ msgstr ""
 
 #: builtin/bugreport.c:116 builtin/commit.c:1527 builtin/commit.c:1531
 #: builtin/commit.c:1692 builtin/fast-export.c:1191 builtin/fast-export.c:1194
-#: builtin/fast-export.c:1197 builtin/rebase.c:1174 parse-options.h:578
+#: builtin/fast-export.c:1197 builtin/rebase.c:1172 parse-options.h:578
 msgid "mode"
 msgstr ""
 
@@ -4825,7 +4826,7 @@ msgid "create a shallow clone since a specific time"
 msgstr ""
 
 #: builtin/clone.c:150 builtin/fetch.c:2188 builtin/fetch.c:2211
-#: builtin/pull.c:225 builtin/pull.c:250 builtin/rebase.c:1083
+#: builtin/pull.c:225 builtin/pull.c:250 builtin/rebase.c:1081
 msgid "revision"
 msgstr ""
 
@@ -5407,10 +5408,6 @@ msgstr ""
 msgid "Failed to update main cache tree"
 msgstr ""
 
-#: builtin/commit.c:458 builtin/commit.c:482 builtin/commit.c:530
-msgid "unable to write new_index file"
-msgstr ""
-
 #: builtin/commit.c:511
 msgid "cannot do a partial commit during a merge."
 msgstr ""
@@ -5884,7 +5881,7 @@ msgstr ""
 #: builtin/commit.c:1864
 msgid ""
 "repository has been updated, but unable to write\n"
-"new_index file. Check that disk is not full and quota is\n"
+"new index file. Check that disk is not full and quota is\n"
 "not exceeded, and then \"git restore --staged :/\" to recover."
 msgstr ""
 
@@ -6080,7 +6077,7 @@ msgstr ""
 msgid "invalid key pattern: %s"
 msgstr ""
 
-#: builtin/config.c:379 config.c:3233
+#: builtin/config.c:379 config.c:3249
 #, c-format
 msgid "invalid pattern: %s"
 msgstr ""
@@ -9354,7 +9351,7 @@ msgstr ""
 msgid "do not print remote URL"
 msgstr ""
 
-#: builtin/ls-remote.c:65 builtin/ls-remote.c:67 builtin/rebase.c:1167
+#: builtin/ls-remote.c:65 builtin/ls-remote.c:67 builtin/rebase.c:1165
 msgid "exec"
 msgstr ""
 
@@ -9764,7 +9761,7 @@ msgid "verify that the named commit has a valid GPG signature"
 msgstr ""
 
 #: builtin/merge.c:267 builtin/notes.c:888 builtin/pull.c:179
-#: builtin/rebase.c:1180 builtin/revert.c:104
+#: builtin/rebase.c:1178 builtin/revert.c:104
 msgid "strategy"
 msgstr ""
 
@@ -11095,7 +11092,7 @@ msgstr ""
 msgid "pack.deltaCacheLimit is too high, forcing %d"
 msgstr ""
 
-#: builtin/pack-objects.c:4381 config.c:1804
+#: builtin/pack-objects.c:4381 config.c:1820
 #, c-format
 msgid "bad pack compression level %d"
 msgstr ""
@@ -11283,7 +11280,7 @@ msgid ""
 "for your current branch, you must specify a branch on the command line."
 msgstr ""
 
-#: builtin/pull.c:462 builtin/rebase.c:1031
+#: builtin/pull.c:462 builtin/rebase.c:1029
 msgid "You are not currently on a branch."
 msgstr ""
 
@@ -11300,7 +11297,7 @@ msgid "See git-pull(1) for details."
 msgstr ""
 
 #: builtin/pull.c:469 builtin/pull.c:475 builtin/pull.c:484
-#: builtin/rebase.c:1037
+#: builtin/rebase.c:1035
 msgid "<remote>"
 msgstr ""
 
@@ -11308,7 +11305,7 @@ msgstr ""
 msgid "<branch>"
 msgstr ""
 
-#: builtin/pull.c:477 builtin/rebase.c:1029
+#: builtin/pull.c:477 builtin/rebase.c:1027
 msgid "There is no tracking information for the current branch."
 msgstr ""
 
@@ -11358,7 +11355,7 @@ msgstr ""
 msgid "pull with rebase"
 msgstr ""
 
-#: builtin/pull.c:1053 builtin/rebase.c:1737
+#: builtin/pull.c:1053 builtin/rebase.c:1721
 msgid "Please commit or stash them."
 msgstr ""
 
@@ -11823,33 +11820,33 @@ msgstr ""
 msgid "a base commit must be provided with --upstream or --onto"
 msgstr ""
 
-#: builtin/rebase.c:402
+#: builtin/rebase.c:388
 #, c-format
 msgid "%s requires the merge backend"
 msgstr ""
 
-#: builtin/rebase.c:445
+#: builtin/rebase.c:431
 #, c-format
 msgid "invalid onto: '%s'"
 msgstr ""
 
-#: builtin/rebase.c:462
+#: builtin/rebase.c:448
 #, c-format
 msgid "invalid orig-head: '%s'"
 msgstr ""
 
-#: builtin/rebase.c:487
+#: builtin/rebase.c:473
 #, c-format
 msgid "ignoring invalid allow_rerere_autoupdate: '%s'"
 msgstr ""
 
-#: builtin/rebase.c:553 builtin/rebase.c:1370 builtin/rm.c:420 sequencer.c:415
+#: builtin/rebase.c:539 builtin/rebase.c:1368 builtin/rm.c:420 sequencer.c:415
 #: sequencer.c:5122
 #, c-format
 msgid "could not remove '%s'"
 msgstr ""
 
-#: builtin/rebase.c:590
+#: builtin/rebase.c:576
 msgid ""
 "Resolve all conflicts manually, mark them as resolved with\n"
 "\"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\n"
@@ -11858,7 +11855,7 @@ msgid ""
 "abort\"."
 msgstr ""
 
-#: builtin/rebase.c:676
+#: builtin/rebase.c:662
 #, c-format
 msgid ""
 "\n"
@@ -11870,36 +11867,36 @@ msgid ""
 "As a result, git cannot rebase them."
 msgstr ""
 
-#: builtin/rebase.c:772
+#: builtin/rebase.c:758
 #, c-format
 msgid "Unknown rebase-merges mode: %s"
 msgstr ""
 
-#: builtin/rebase.c:853
+#: builtin/rebase.c:839
 #, c-format
 msgid "could not switch to %s"
 msgstr ""
 
-#: builtin/rebase.c:933 builtin/rebase.c:949 builtin/rebase.c:966
-#: builtin/rebase.c:1525
+#: builtin/rebase.c:919 builtin/rebase.c:935 builtin/rebase.c:952
+#: builtin/rebase.c:1509
 msgid "apply options and merge options cannot be used together"
 msgstr ""
 
-#: builtin/rebase.c:983
+#: builtin/rebase.c:969
 #, c-format
 msgid ""
 "unrecognized empty type '%s'; valid values are \"drop\", \"keep\", and "
 "\"ask\"."
 msgstr ""
 
-#: builtin/rebase.c:1006
+#: builtin/rebase.c:1004
 msgid ""
 "--rebase-merges with an empty string argument is deprecated and will stop "
 "working in a future version of Git. Use --rebase-merges without an argument "
 "instead, which does the same thing."
 msgstr ""
 
-#: builtin/rebase.c:1023
+#: builtin/rebase.c:1021
 #, c-format
 msgid ""
 "%s\n"
@@ -11910,7 +11907,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: builtin/rebase.c:1039
+#: builtin/rebase.c:1037
 #, c-format
 msgid ""
 "If you wish to set tracking information for this branch you can do so with:\n"
@@ -11919,208 +11916,208 @@ msgid ""
 "\n"
 msgstr ""
 
-#: builtin/rebase.c:1052
+#: builtin/rebase.c:1050
 msgid "exec commands cannot contain newlines"
 msgstr ""
 
-#: builtin/rebase.c:1056
+#: builtin/rebase.c:1054
 msgid "empty exec command"
 msgstr ""
 
-#: builtin/rebase.c:1084
+#: builtin/rebase.c:1082
 msgid "rebase onto given branch instead of upstream"
 msgstr ""
 
-#: builtin/rebase.c:1086
+#: builtin/rebase.c:1084
 msgid "use the merge-base of upstream and branch as the current base"
 msgstr ""
 
-#: builtin/rebase.c:1088
+#: builtin/rebase.c:1086
 msgid "allow pre-rebase hook to run"
 msgstr ""
 
-#: builtin/rebase.c:1090
+#: builtin/rebase.c:1088
 msgid "be quiet. implies --no-stat"
 msgstr ""
 
-#: builtin/rebase.c:1093
+#: builtin/rebase.c:1091
 msgid "display a diffstat of what changed upstream"
 msgstr ""
 
-#: builtin/rebase.c:1096
+#: builtin/rebase.c:1094
 msgid "do not show diffstat of what changed upstream"
 msgstr ""
 
-#: builtin/rebase.c:1099
+#: builtin/rebase.c:1097
 msgid "add a Signed-off-by trailer to each commit"
 msgstr ""
 
-#: builtin/rebase.c:1102
+#: builtin/rebase.c:1100
 msgid "make committer date match author date"
 msgstr ""
 
-#: builtin/rebase.c:1104
+#: builtin/rebase.c:1102
 msgid "ignore author date and use current date"
 msgstr ""
 
-#: builtin/rebase.c:1106
+#: builtin/rebase.c:1104
 msgid "synonym of --reset-author-date"
 msgstr ""
 
-#: builtin/rebase.c:1108 builtin/rebase.c:1112
+#: builtin/rebase.c:1106 builtin/rebase.c:1110
 msgid "passed to 'git apply'"
 msgstr ""
 
-#: builtin/rebase.c:1110
+#: builtin/rebase.c:1108
 msgid "ignore changes in whitespace"
 msgstr ""
 
-#: builtin/rebase.c:1114 builtin/rebase.c:1117
+#: builtin/rebase.c:1112 builtin/rebase.c:1115
 msgid "cherry-pick all commits, even if unchanged"
 msgstr ""
 
-#: builtin/rebase.c:1119
+#: builtin/rebase.c:1117
 msgid "continue"
 msgstr ""
 
-#: builtin/rebase.c:1122
+#: builtin/rebase.c:1120
 msgid "skip current patch and continue"
 msgstr ""
 
-#: builtin/rebase.c:1124
+#: builtin/rebase.c:1122
 msgid "abort and check out the original branch"
 msgstr ""
 
-#: builtin/rebase.c:1127
+#: builtin/rebase.c:1125
 msgid "abort but keep HEAD where it is"
 msgstr ""
 
-#: builtin/rebase.c:1128
+#: builtin/rebase.c:1126
 msgid "edit the todo list during an interactive rebase"
 msgstr ""
 
-#: builtin/rebase.c:1131
+#: builtin/rebase.c:1129
 msgid "show the patch file being applied or merged"
 msgstr ""
 
-#: builtin/rebase.c:1134
+#: builtin/rebase.c:1132
 msgid "use apply strategies to rebase"
 msgstr ""
 
-#: builtin/rebase.c:1138
+#: builtin/rebase.c:1136
 msgid "use merging strategies to rebase"
 msgstr ""
 
-#: builtin/rebase.c:1142
+#: builtin/rebase.c:1140
 msgid "let the user edit the list of commits to rebase"
 msgstr ""
 
-#: builtin/rebase.c:1146
+#: builtin/rebase.c:1144
 msgid "(REMOVED) was: try to recreate merges instead of ignoring them"
 msgstr ""
 
-#: builtin/rebase.c:1151
+#: builtin/rebase.c:1149
 msgid "how to handle commits that become empty"
 msgstr ""
 
-#: builtin/rebase.c:1154
+#: builtin/rebase.c:1152
 msgid "keep commits which start empty"
 msgstr ""
 
-#: builtin/rebase.c:1158
+#: builtin/rebase.c:1156
 msgid "move commits that begin with squash!/fixup! under -i"
 msgstr ""
 
-#: builtin/rebase.c:1161
+#: builtin/rebase.c:1159
 msgid "update branches that point to commits that are being rebased"
 msgstr ""
 
-#: builtin/rebase.c:1168
+#: builtin/rebase.c:1166
 msgid "add exec lines after each commit of the editable list"
 msgstr ""
 
-#: builtin/rebase.c:1172
+#: builtin/rebase.c:1170
 msgid "allow rebasing commits with empty messages"
 msgstr ""
 
-#: builtin/rebase.c:1175
+#: builtin/rebase.c:1173
 msgid "try to rebase merges instead of skipping them"
 msgstr ""
 
-#: builtin/rebase.c:1178
+#: builtin/rebase.c:1176
 msgid "use 'merge-base --fork-point' to refine upstream"
 msgstr ""
 
-#: builtin/rebase.c:1180
+#: builtin/rebase.c:1178
 msgid "use the given merge strategy"
 msgstr ""
 
-#: builtin/rebase.c:1182 builtin/revert.c:105
+#: builtin/rebase.c:1180 builtin/revert.c:105
 msgid "option"
 msgstr ""
 
-#: builtin/rebase.c:1183
+#: builtin/rebase.c:1181
 msgid "pass the argument through to the merge strategy"
 msgstr ""
 
-#: builtin/rebase.c:1186
+#: builtin/rebase.c:1184
 msgid "rebase all reachable commits up to the root(s)"
 msgstr ""
 
-#: builtin/rebase.c:1189
+#: builtin/rebase.c:1187
 msgid "automatically re-schedule any `exec` that fails"
 msgstr ""
 
-#: builtin/rebase.c:1191
+#: builtin/rebase.c:1189
 msgid "apply all changes, even those already present upstream"
 msgstr ""
 
-#: builtin/rebase.c:1211
+#: builtin/rebase.c:1209
 msgid "It looks like 'git am' is in progress. Cannot rebase."
 msgstr ""
 
-#: builtin/rebase.c:1220
+#: builtin/rebase.c:1218
 msgid ""
 "`rebase --preserve-merges` (-p) is no longer supported.\n"
 "Use `git rebase --abort` to terminate current rebase.\n"
 "Or downgrade to v2.33, or earlier, to complete the rebase."
 msgstr ""
 
-#: builtin/rebase.c:1242
+#: builtin/rebase.c:1240
 msgid ""
 "--preserve-merges was replaced by --rebase-merges\n"
 "Note: Your `pull.rebase` configuration may also be set to 'preserve',\n"
 "which is no longer supported; use 'merges' instead"
 msgstr ""
 
-#: builtin/rebase.c:1271
+#: builtin/rebase.c:1269
 msgid "No rebase in progress?"
 msgstr ""
 
-#: builtin/rebase.c:1274
+#: builtin/rebase.c:1272
 msgid "The --edit-todo action can only be used during interactive rebase."
 msgstr ""
 
-#: builtin/rebase.c:1298 t/helper/test-fast-rebase.c:132
+#: builtin/rebase.c:1296 t/helper/test-fast-rebase.c:132
 msgid "Cannot read HEAD"
 msgstr ""
 
-#: builtin/rebase.c:1310
+#: builtin/rebase.c:1308
 msgid ""
 "You must edit all merge conflicts and then\n"
 "mark them as resolved using git add"
 msgstr ""
 
-#: builtin/rebase.c:1325
+#: builtin/rebase.c:1323
 msgid "could not discard worktree changes"
 msgstr ""
 
-#: builtin/rebase.c:1350
+#: builtin/rebase.c:1348
 #, c-format
 msgid "could not move back to %s"
 msgstr ""
 
-#: builtin/rebase.c:1396
+#: builtin/rebase.c:1394
 #, c-format
 msgid ""
 "It seems that there is already a %s directory, and\n"
@@ -12133,122 +12130,118 @@ msgid ""
 "valuable there.\n"
 msgstr ""
 
-#: builtin/rebase.c:1425
+#: builtin/rebase.c:1423
 msgid "switch `C' expects a numerical value"
 msgstr ""
 
-#: builtin/rebase.c:1496
-msgid "--strategy requires --merge or --interactive"
-msgstr ""
-
-#: builtin/rebase.c:1528
+#: builtin/rebase.c:1512
 msgid ""
 "apply options are incompatible with rebase.autoSquash.  Consider adding --no-"
 "autosquash"
 msgstr ""
 
-#: builtin/rebase.c:1530
+#: builtin/rebase.c:1514
 msgid ""
 "apply options are incompatible with rebase.rebaseMerges.  Consider adding --"
 "no-rebase-merges"
 msgstr ""
 
-#: builtin/rebase.c:1532
+#: builtin/rebase.c:1516
 msgid ""
 "apply options are incompatible with rebase.updateRefs.  Consider adding --no-"
 "update-refs"
 msgstr ""
 
-#: builtin/rebase.c:1559
+#: builtin/rebase.c:1543
 #, c-format
 msgid "Unknown rebase backend: %s"
 msgstr ""
 
-#: builtin/rebase.c:1588
+#: builtin/rebase.c:1572
 msgid "--reschedule-failed-exec requires --exec or --interactive"
 msgstr ""
 
-#: builtin/rebase.c:1619
+#: builtin/rebase.c:1603
 #, c-format
 msgid "invalid upstream '%s'"
 msgstr ""
 
-#: builtin/rebase.c:1625
+#: builtin/rebase.c:1609
 msgid "Could not create new root commit"
 msgstr ""
 
-#: builtin/rebase.c:1669
+#: builtin/rebase.c:1653
 #, c-format
 msgid "no such branch/commit '%s'"
 msgstr ""
 
-#: builtin/rebase.c:1676 builtin/submodule--helper.c:53
+#: builtin/rebase.c:1660 builtin/submodule--helper.c:53
 #: builtin/submodule--helper.c:2397
 #, c-format
 msgid "No such ref: %s"
 msgstr ""
 
-#: builtin/rebase.c:1688
+#: builtin/rebase.c:1672
 msgid "Could not resolve HEAD to a commit"
 msgstr ""
 
-#: builtin/rebase.c:1704
+#: builtin/rebase.c:1688
 #, c-format
 msgid "'%s': need exactly one merge base with branch"
 msgstr ""
 
-#: builtin/rebase.c:1707
+#: builtin/rebase.c:1691
 #, c-format
 msgid "'%s': need exactly one merge base"
 msgstr ""
 
-#: builtin/rebase.c:1716
+#: builtin/rebase.c:1700
 #, c-format
 msgid "Does not point to a valid commit '%s'"
 msgstr ""
 
-#: builtin/rebase.c:1769
+#: builtin/rebase.c:1753
 msgid "HEAD is up to date."
 msgstr ""
 
-#: builtin/rebase.c:1771
+#: builtin/rebase.c:1755
 #, c-format
 msgid "Current branch %s is up to date.\n"
 msgstr ""
 
-#: builtin/rebase.c:1779
+#: builtin/rebase.c:1763
 msgid "HEAD is up to date, rebase forced."
 msgstr ""
 
-#: builtin/rebase.c:1781
+#: builtin/rebase.c:1765
 #, c-format
 msgid "Current branch %s is up to date, rebase forced.\n"
 msgstr ""
 
-#: builtin/rebase.c:1789
+#: builtin/rebase.c:1773
 msgid "The pre-rebase hook refused to rebase."
 msgstr ""
 
-#: builtin/rebase.c:1796
+#: builtin/rebase.c:1780
 #, c-format
 msgid "Changes to %s:\n"
 msgstr ""
 
-#: builtin/rebase.c:1799
+#: builtin/rebase.c:1783
 #, c-format
 msgid "Changes from %s to %s:\n"
 msgstr ""
 
-#: builtin/rebase.c:1823
+#: builtin/rebase.c:1807
 #, c-format
 msgid "First, rewinding head to replay your work on top of it...\n"
 msgstr ""
 
-#: builtin/rebase.c:1835
+#: builtin/rebase.c:1819
 msgid "Could not detach HEAD"
 msgstr ""
 
-#: builtin/rebase.c:1843
+#: builtin/rebase.c:1827
 #, c-format
 msgid "Fast-forwarded %s to %s.\n"
 msgstr ""
@@ -12548,7 +12541,7 @@ msgstr ""
 msgid "could not set '%s'"
 msgstr ""
 
-#: builtin/remote.c:679 builtin/remote.c:902 builtin/remote.c:910 config.c:3414
+#: builtin/remote.c:679 builtin/remote.c:902 builtin/remote.c:910 config.c:3430
 #, c-format
 msgid "could not unset '%s'"
 msgstr ""
@@ -13585,6 +13578,10 @@ msgstr ""
 
 #: builtin/rev-parse.c:929 setup.c:440
 msgid "this operation must be run in a work tree"
+msgstr ""
+
+#: builtin/rev-parse.c:1027
+msgid "Could not read the index"
 msgstr ""
 
 #: builtin/rev-parse.c:1057
@@ -17544,7 +17541,7 @@ msgstr ""
 msgid "cannot restore terminal settings"
 msgstr ""
 
-#: config.c:146
+#: config.c:147
 #, c-format
 msgid ""
 "exceeded maximum include depth (%d) while including\n"
@@ -17554,343 +17551,343 @@ msgid ""
 "This might be due to circular includes."
 msgstr ""
 
-#: config.c:164
+#: config.c:165
 #, c-format
 msgid "could not expand include path '%s'"
 msgstr ""
 
-#: config.c:175
+#: config.c:176
 msgid "relative config includes must come from files"
 msgstr ""
 
-#: config.c:226
+#: config.c:227
 msgid "relative config include conditionals must come from files"
 msgstr ""
 
-#: config.c:364
+#: config.c:365
 msgid ""
 "remote URLs cannot be configured in file directly or indirectly included by "
 "includeIf.hasconfig:remote.*.url"
 msgstr ""
 
-#: config.c:511
+#: config.c:512
 #, c-format
 msgid "invalid config format: %s"
 msgstr ""
 
-#: config.c:515
+#: config.c:516
 #, c-format
 msgid "missing environment variable name for configuration '%.*s'"
 msgstr ""
 
-#: config.c:520
+#: config.c:521
 #, c-format
 msgid "missing environment variable '%s' for configuration '%.*s'"
 msgstr ""
 
-#: config.c:556
+#: config.c:557
 #, c-format
 msgid "key does not contain a section: %s"
 msgstr ""
 
-#: config.c:561
+#: config.c:562
 #, c-format
 msgid "key does not contain variable name: %s"
 msgstr ""
 
-#: config.c:583 sequencer.c:2960
+#: config.c:584 sequencer.c:2960
 #, c-format
 msgid "invalid key: %s"
 msgstr ""
 
-#: config.c:588
+#: config.c:589
 #, c-format
 msgid "invalid key (newline): %s"
 msgstr ""
 
-#: config.c:612
+#: config.c:613
 msgid "empty config key"
 msgstr ""
 
-#: config.c:644 config.c:656
+#: config.c:645 config.c:657
 #, c-format
 msgid "bogus config parameter: %s"
 msgstr ""
 
-#: config.c:671 config.c:688 config.c:695 config.c:704
+#: config.c:672 config.c:689 config.c:696 config.c:705
 #, c-format
 msgid "bogus format in %s"
 msgstr ""
 
-#: config.c:734
+#: config.c:735
 #, c-format
 msgid "bogus count in %s"
 msgstr ""
 
-#: config.c:738
+#: config.c:739
 #, c-format
 msgid "too many entries in %s"
 msgstr ""
 
-#: config.c:748
+#: config.c:749
 #, c-format
 msgid "missing config key %s"
 msgstr ""
 
-#: config.c:756
+#: config.c:757
 #, c-format
 msgid "missing config value %s"
 msgstr ""
 
-#: config.c:1125
+#: config.c:1126
 #, c-format
 msgid "bad config line %d in blob %s"
 msgstr ""
 
-#: config.c:1129
+#: config.c:1130
 #, c-format
 msgid "bad config line %d in file %s"
 msgstr ""
 
-#: config.c:1133
+#: config.c:1134
 #, c-format
 msgid "bad config line %d in standard input"
 msgstr ""
 
-#: config.c:1137
+#: config.c:1138
 #, c-format
 msgid "bad config line %d in submodule-blob %s"
 msgstr ""
 
-#: config.c:1141
+#: config.c:1142
 #, c-format
 msgid "bad config line %d in command line %s"
 msgstr ""
 
-#: config.c:1145
+#: config.c:1146
 #, c-format
 msgid "bad config line %d in %s"
 msgstr ""
 
-#: config.c:1174
+#: config.c:1175
 msgid "out of range"
 msgstr ""
 
-#: config.c:1174
+#: config.c:1175
 msgid "invalid unit"
 msgstr ""
 
-#: config.c:1175
+#: config.c:1176
 #, c-format
 msgid "bad numeric config value '%s' for '%s': %s"
 msgstr ""
 
-#: config.c:1188
+#: config.c:1189
 #, c-format
 msgid "bad numeric config value '%s' for '%s' in blob %s: %s"
 msgstr ""
 
-#: config.c:1191
+#: config.c:1192
 #, c-format
 msgid "bad numeric config value '%s' for '%s' in file %s: %s"
 msgstr ""
 
-#: config.c:1194
+#: config.c:1195
 #, c-format
 msgid "bad numeric config value '%s' for '%s' in standard input: %s"
 msgstr ""
 
-#: config.c:1197
+#: config.c:1198
 #, c-format
 msgid "bad numeric config value '%s' for '%s' in submodule-blob %s: %s"
 msgstr ""
 
-#: config.c:1200
+#: config.c:1201
 #, c-format
 msgid "bad numeric config value '%s' for '%s' in command line %s: %s"
 msgstr ""
 
-#: config.c:1203
+#: config.c:1204
 #, c-format
 msgid "bad numeric config value '%s' for '%s' in %s: %s"
 msgstr ""
 
-#: config.c:1286
+#: config.c:1287
 #, c-format
 msgid "invalid value for variable %s"
 msgstr ""
 
-#: config.c:1307
+#: config.c:1308
 #, c-format
 msgid "ignoring unknown core.fsync component '%s'"
 msgstr ""
 
-#: config.c:1334
+#: config.c:1335
 #, c-format
 msgid "bad boolean config value '%s' for '%s'"
 msgstr ""
 
-#: config.c:1352
+#: config.c:1353
 #, c-format
 msgid "failed to expand user dir in: '%s'"
 msgstr ""
 
-#: config.c:1361
+#: config.c:1362
 #, c-format
 msgid "'%s' for '%s' is not a valid timestamp"
 msgstr ""
 
-#: config.c:1455
+#: config.c:1456
 #, c-format
 msgid "abbrev length out of range: %d"
 msgstr ""
 
-#: config.c:1469 config.c:1480
+#: config.c:1470 config.c:1481
 #, c-format
 msgid "bad zlib compression level %d"
 msgstr ""
 
-#: config.c:1570
+#: config.c:1571
 msgid "core.commentChar should only be one ASCII character"
 msgstr ""
 
-#: config.c:1604
+#: config.c:1605
 #, c-format
 msgid "ignoring unknown core.fsyncMethod value '%s'"
 msgstr ""
 
-#: config.c:1610
+#: config.c:1611
 msgid "core.fsyncObjectFiles is deprecated; use core.fsync instead"
 msgstr ""
 
-#: config.c:1626
+#: config.c:1627
 #, c-format
 msgid "invalid mode for object creation: %s"
 msgstr ""
 
-#: config.c:1715
+#: config.c:1716
 #, c-format
 msgid "malformed value for %s"
 msgstr ""
 
-#: config.c:1741
+#: config.c:1742
 #, c-format
 msgid "malformed value for %s: %s"
 msgstr ""
 
-#: config.c:1742
+#: config.c:1743
 msgid "must be one of nothing, matching, simple, upstream or current"
 msgstr ""
 
-#: config.c:1936
+#: config.c:1952
 #, c-format
 msgid "unable to load config blob object '%s'"
 msgstr ""
 
-#: config.c:1939
+#: config.c:1955
 #, c-format
 msgid "reference '%s' does not point to a blob"
 msgstr ""
 
-#: config.c:1958
+#: config.c:1974
 #, c-format
 msgid "unable to resolve config blob '%s'"
 msgstr ""
 
-#: config.c:2048
+#: config.c:2064
 msgid "unable to parse command-line config"
 msgstr ""
 
-#: config.c:2473
+#: config.c:2489
 msgid "unknown error occurred while reading the configuration files"
 msgstr ""
 
-#: config.c:2693
+#: config.c:2709
 #, c-format
 msgid "Invalid %s: '%s'"
 msgstr ""
 
-#: config.c:2738
+#: config.c:2754
 #, c-format
 msgid "splitIndex.maxPercentChange value '%d' should be between 0 and 100"
 msgstr ""
 
-#: config.c:2770
+#: config.c:2786
 #, c-format
 msgid "unable to parse '%s' from command-line config"
 msgstr ""
 
-#: config.c:2772
+#: config.c:2788
 #, c-format
 msgid "bad config variable '%s' in file '%s' at line %d"
 msgstr ""
 
-#: config.c:2859
+#: config.c:2875
 #, c-format
 msgid "invalid section name '%s'"
 msgstr ""
 
-#: config.c:2892
+#: config.c:2908
 #, c-format
 msgid "%s has multiple values"
 msgstr ""
 
-#: config.c:2921
+#: config.c:2937
 #, c-format
 msgid "failed to write new configuration file %s"
 msgstr ""
 
-#: config.c:3185 config.c:3531
+#: config.c:3201 config.c:3547
 #, c-format
 msgid "could not lock config file %s"
 msgstr ""
 
-#: config.c:3196
+#: config.c:3212
 #, c-format
 msgid "opening %s"
 msgstr ""
 
-#: config.c:3259
+#: config.c:3275
 #, c-format
 msgid "invalid config file %s"
 msgstr ""
 
-#: config.c:3272 config.c:3544
+#: config.c:3288 config.c:3560
 #, c-format
 msgid "fstat on %s failed"
 msgstr ""
 
-#: config.c:3283
+#: config.c:3299
 #, c-format
 msgid "unable to mmap '%s'%s"
 msgstr ""
 
-#: config.c:3293 config.c:3549
+#: config.c:3309 config.c:3565
 #, c-format
 msgid "chmod on %s failed"
 msgstr ""
 
-#: config.c:3378 config.c:3656
+#: config.c:3394 config.c:3672
 #, c-format
 msgid "could not write config file %s"
 msgstr ""
 
-#: config.c:3412
+#: config.c:3428
 #, c-format
 msgid "could not set '%s' to '%s'"
 msgstr ""
 
-#: config.c:3522
+#: config.c:3538
 #, c-format
 msgid "invalid section name: %s"
 msgstr ""
 
-#: config.c:3562
+#: config.c:3578
 #, c-format
 msgid "refusing to work with overly long line in '%s' on line %<PRIuMAX>"
 msgstr ""
 
-#: config.c:3701
+#: config.c:3717
 #, c-format
 msgid "missing value for '%s'"
 msgstr ""
@@ -21664,25 +21661,30 @@ msgstr ""
 
 #: pathspec.c:473
 #, c-format
+msgid "'%s' is outside the directory tree"
+msgstr ""
+
+#: pathspec.c:478
+#, c-format
 msgid "%s: '%s' is outside repository at '%s'"
 msgstr ""
 
-#: pathspec.c:547
+#: pathspec.c:552
 #, c-format
 msgid "'%s' (mnemonic: '%c')"
 msgstr ""
 
-#: pathspec.c:564
+#: pathspec.c:569
 #, c-format
 msgid "%s: pathspec magic not supported by this command: %s"
 msgstr ""
 
-#: pathspec.c:631
+#: pathspec.c:636
 #, c-format
 msgid "pathspec '%s' is beyond a symbolic link"
 msgstr ""
 
-#: pathspec.c:676
+#: pathspec.c:681
 #, c-format
 msgid "line is badly quoted: %s"
 msgstr ""
@@ -21985,11 +21987,6 @@ msgstr ""
 
 #: read-cache.c:3138
 msgid "failed to convert to a sparse-index"
-msgstr ""
-
-#: read-cache.c:3209
-#, c-format
-msgid "could not stat '%s'"
 msgstr ""
 
 #: read-cache.c:3222
@@ -26258,7 +26255,7 @@ msgstr ""
 msgid "Failed to open for writing %s: %s"
 msgstr ""
 
-#: git-send-email.perl:868
+#: git-send-email.perl:871
 msgid ""
 "Lines beginning in \"GIT:\" will be removed.\n"
 "Consider including an overall diffstat or table of contents\n"
@@ -26267,37 +26264,37 @@ msgid ""
 "Clear the body content if you don't wish to send a summary.\n"
 msgstr ""
 
-#: git-send-email.perl:892
-#, perl-format
-msgid "Failed to open %s: %s"
-msgstr ""
-
-#: git-send-email.perl:909
+#: git-send-email.perl:898
 #, perl-format
 msgid "Failed to open %s.final: %s"
 msgstr ""
 
-#: git-send-email.perl:952
+#: git-send-email.perl:901
+#, perl-format
+msgid "Failed to open %s: %s"
+msgstr ""
+
+#: git-send-email.perl:953
 msgid "Summary email is empty, skipping it\n"
 msgstr ""
 
 #. TRANSLATORS: please keep [y/N] as is.
-#: git-send-email.perl:1003
+#: git-send-email.perl:1001
 #, perl-format
 msgid "Are you sure you want to use <%s> [y/N]? "
 msgstr ""
 
-#: git-send-email.perl:1058
+#: git-send-email.perl:1030
 msgid ""
 "The following files are 8bit, but do not declare a Content-Transfer-"
 "Encoding.\n"
 msgstr ""
 
-#: git-send-email.perl:1063
+#: git-send-email.perl:1035
 msgid "Which 8bit encoding should I declare [UTF-8]? "
 msgstr ""
 
-#: git-send-email.perl:1071
+#: git-send-email.perl:1043
 #, perl-format
 msgid ""
 "Refusing to send because the patch\n"
@@ -26306,20 +26303,20 @@ msgid ""
 "want to send.\n"
 msgstr ""
 
-#: git-send-email.perl:1078
+#: git-send-email.perl:1050
 msgid "To whom should the emails be sent (if anyone)?"
 msgstr ""
 
-#: git-send-email.perl:1096
+#: git-send-email.perl:1068
 #, perl-format
 msgid "fatal: alias '%s' expands to itself\n"
 msgstr ""
 
-#: git-send-email.perl:1108
+#: git-send-email.perl:1080
 msgid "Message-ID to be used as In-Reply-To for the first email (if any)? "
 msgstr ""
 
-#: git-send-email.perl:1170 git-send-email.perl:1178
+#: git-send-email.perl:1142 git-send-email.perl:1150
 #, perl-format
 msgid "error: unable to extract a valid address from: %s\n"
 msgstr ""
@@ -26327,16 +26324,16 @@ msgstr ""
 #. TRANSLATORS: Make sure to include [q] [d] [e] in your
 #. translation. The program will only accept English input
 #. at this point.
-#: git-send-email.perl:1182
+#: git-send-email.perl:1154
 msgid "What to do with this address? ([q]uit|[d]rop|[e]dit): "
 msgstr ""
 
-#: git-send-email.perl:1498
+#: git-send-email.perl:1470
 #, perl-format
 msgid "CA path \"%s\" does not exist"
 msgstr ""
 
-#: git-send-email.perl:1588
+#: git-send-email.perl:1560
 msgid ""
 "    The Cc list above has been expanded by additional\n"
 "    addresses found in the patch commit message. By default\n"
@@ -26353,117 +26350,117 @@ msgstr ""
 #. TRANSLATORS: Make sure to include [y] [n] [e] [q] [a] in your
 #. translation. The program will only accept English input
 #. at this point.
-#: git-send-email.perl:1603
+#: git-send-email.perl:1575
 msgid "Send this email? ([y]es|[n]o|[e]dit|[q]uit|[a]ll): "
 msgstr ""
 
-#: git-send-email.perl:1606
+#: git-send-email.perl:1578
 msgid "Send this email reply required"
 msgstr ""
 
-#: git-send-email.perl:1640
+#: git-send-email.perl:1612
 msgid "The required SMTP server is not properly defined."
 msgstr ""
 
-#: git-send-email.perl:1687
+#: git-send-email.perl:1659
 #, perl-format
 msgid "Server does not support STARTTLS! %s"
 msgstr ""
 
-#: git-send-email.perl:1692 git-send-email.perl:1696
+#: git-send-email.perl:1664 git-send-email.perl:1668
 #, perl-format
 msgid "STARTTLS failed! %s"
 msgstr ""
 
-#: git-send-email.perl:1705
+#: git-send-email.perl:1677
 msgid "Unable to initialize SMTP properly. Check config and use --smtp-debug."
 msgstr ""
 
-#: git-send-email.perl:1723
+#: git-send-email.perl:1695
 #, perl-format
 msgid "Failed to send %s\n"
 msgstr ""
 
-#: git-send-email.perl:1726
+#: git-send-email.perl:1698
 #, perl-format
 msgid "Dry-Sent %s\n"
 msgstr ""
 
-#: git-send-email.perl:1726
+#: git-send-email.perl:1698
 #, perl-format
 msgid "Sent %s\n"
 msgstr ""
 
-#: git-send-email.perl:1728
+#: git-send-email.perl:1700
 msgid "Dry-OK. Log says:\n"
 msgstr ""
 
-#: git-send-email.perl:1728
+#: git-send-email.perl:1700
 msgid "OK. Log says:\n"
 msgstr ""
 
-#: git-send-email.perl:1747
+#: git-send-email.perl:1719
 msgid "Result: "
 msgstr ""
 
-#: git-send-email.perl:1750
+#: git-send-email.perl:1722
 msgid "Result: OK\n"
 msgstr ""
 
-#: git-send-email.perl:1764
+#: git-send-email.perl:1736
 #, perl-format
 msgid "can't open file %s"
 msgstr ""
 
-#: git-send-email.perl:1813 git-send-email.perl:1833
+#: git-send-email.perl:1785 git-send-email.perl:1805
 #, perl-format
 msgid "(mbox) Adding cc: %s from line '%s'\n"
 msgstr ""
 
-#: git-send-email.perl:1819
+#: git-send-email.perl:1791
 #, perl-format
 msgid "(mbox) Adding to: %s from line '%s'\n"
 msgstr ""
 
-#: git-send-email.perl:1876
+#: git-send-email.perl:1848
 #, perl-format
 msgid "(non-mbox) Adding cc: %s from line '%s'\n"
 msgstr ""
 
-#: git-send-email.perl:1911
+#: git-send-email.perl:1883
 #, perl-format
 msgid "(body) Adding cc: %s from line '%s'\n"
 msgstr ""
 
-#: git-send-email.perl:2040
+#: git-send-email.perl:2012
 #, perl-format
 msgid "(%s) Could not execute '%s'"
 msgstr ""
 
-#: git-send-email.perl:2042
+#: git-send-email.perl:2014
 #, perl-format
 msgid "(%s) Malformed output from '%s'"
 msgstr ""
 
-#: git-send-email.perl:2051
+#: git-send-email.perl:2023
 #, perl-format
 msgid "(%s) failed to close pipe to '%s'"
 msgstr ""
 
-#: git-send-email.perl:2095
+#: git-send-email.perl:2067
 #, perl-format
 msgid "(%s) Adding %s: %s from: '%s'\n"
 msgstr ""
 
-#: git-send-email.perl:2127
+#: git-send-email.perl:2099
 msgid "cannot send message as 7bit"
 msgstr ""
 
-#: git-send-email.perl:2135
+#: git-send-email.perl:2107
 msgid "invalid transfer encoding"
 msgstr ""
 
-#: git-send-email.perl:2188
+#: git-send-email.perl:2160
 #, perl-format
 msgid ""
 "fatal: %s: rejected by %s hook\n"
@@ -26471,25 +26468,25 @@ msgid ""
 "warning: no patches were sent\n"
 msgstr ""
 
-#: git-send-email.perl:2198 git-send-email.perl:2251 git-send-email.perl:2261
+#: git-send-email.perl:2170 git-send-email.perl:2223 git-send-email.perl:2233
 #, perl-format
 msgid "unable to open %s: %s\n"
 msgstr ""
 
-#: git-send-email.perl:2201
+#: git-send-email.perl:2173
 #, perl-format
 msgid ""
 "fatal: %s:%d is longer than 998 characters\n"
 "warning: no patches were sent\n"
 msgstr ""
 
-#: git-send-email.perl:2219
+#: git-send-email.perl:2191
 #, perl-format
 msgid "Skipping %s with backup suffix '%s'.\n"
 msgstr ""
 
 #. TRANSLATORS: please keep "[y|N]" as is.
-#: git-send-email.perl:2223
+#: git-send-email.perl:2195
 #, perl-format
 msgid "Do you really want to send %s? [y|N]: "
 msgstr ""
