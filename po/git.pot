@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2023-11-02 17:20+0000\n"
+"POT-Creation-Date: 2023-11-03 01:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -828,7 +828,7 @@ msgstr ""
 #: builtin/push.c:687 builtin/push.c:692 builtin/rebase.c:1255
 #: builtin/rebase.c:1257 builtin/rebase.c:1266 builtin/repack.c:1208
 #: builtin/repack.c:1214 builtin/repack.c:1216 builtin/repack.c:1266
-#: builtin/replay.c:310 builtin/reset.c:376 builtin/reset.c:413
+#: builtin/replay.c:311 builtin/reset.c:376 builtin/reset.c:413
 #: builtin/rev-list.c:562 builtin/show-branch.c:722 builtin/show-branch.c:727
 #: builtin/stash.c:1775 builtin/stash.c:1778 builtin/submodule--helper.c:1205
 #: builtin/submodule--helper.c:2961 builtin/tag.c:576 builtin/tag.c:622
@@ -4509,7 +4509,7 @@ msgstr ""
 
 #: builtin/checkout.c:1880 builtin/checkout.c:1882 builtin/checkout.c:1935
 #: builtin/checkout.c:1937 builtin/clone.c:142 builtin/remote.c:174
-#: builtin/remote.c:176 builtin/replay.c:291 builtin/submodule--helper.c:2944
+#: builtin/remote.c:176 builtin/replay.c:292 builtin/submodule--helper.c:2944
 #: builtin/submodule--helper.c:3290 builtin/worktree.c:783
 #: builtin/worktree.c:785
 msgid "branch"
@@ -4831,7 +4831,7 @@ msgstr ""
 
 #: builtin/clone.c:150 builtin/fetch.c:2186 builtin/fetch.c:2209
 #: builtin/pull.c:225 builtin/pull.c:250 builtin/rebase.c:1081
-#: builtin/replay.c:294
+#: builtin/replay.c:295
 msgid "revision"
 msgstr ""
 
@@ -8815,7 +8815,7 @@ msgid ""
 "<file>"
 msgstr ""
 
-#: builtin/log.c:286 builtin/log.c:2110 builtin/replay.c:317
+#: builtin/log.c:286 builtin/log.c:2110 builtin/replay.c:331
 #: builtin/shortlog.c:440 bundle.c:528
 #, c-format
 msgid "unrecognized argument: %s"
@@ -13376,34 +13376,39 @@ msgstr ""
 #: builtin/replay.c:286
 msgid ""
 "git replay ([--contained] --onto <newbase> | --advance <branch>) <revision-"
-"range>..."
+"range>... # EXPERIMENTAL"
 msgstr ""
 
-#: builtin/replay.c:292
+#: builtin/replay.c:293
 msgid "make replay advance given branch"
 msgstr ""
 
-#: builtin/replay.c:295
+#: builtin/replay.c:296
 msgid "replay onto given commit"
 msgstr ""
 
-#: builtin/replay.c:297
+#: builtin/replay.c:298
 msgid "advance all branches contained in revision-range"
 msgstr ""
 
-#: builtin/replay.c:305
+#: builtin/replay.c:306
 msgid "option --onto or --advance is mandatory"
 msgstr ""
 
-#: builtin/replay.c:334
+#: builtin/replay.c:326
+#, c-format
+msgid "option '%s' will be overridden"
+msgstr ""
+
+#: builtin/replay.c:348
 msgid "error preparing revisions"
 msgstr ""
 
-#: builtin/replay.c:349
+#: builtin/replay.c:363
 msgid "replaying down to root commit is not supported yet!"
 msgstr ""
 
-#: builtin/replay.c:351
+#: builtin/replay.c:365
 msgid "replaying merge commits is not supported yet!"
 msgstr ""
 
@@ -16824,7 +16829,7 @@ msgid "Create, list, delete refs to replace objects"
 msgstr ""
 
 #: command-list.h:160
-msgid "Replay commits on a new base, works on bare repos too"
+msgid "EXPERIMENTAL: Replay commits on a new base, works with bare repos too"
 msgstr ""
 
 #: command-list.h:161
