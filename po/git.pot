@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2023-11-07 03:57+0000\n"
+"POT-Creation-Date: 2023-11-08 04:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -828,14 +828,14 @@ msgstr ""
 #: builtin/push.c:687 builtin/push.c:692 builtin/rebase.c:1255
 #: builtin/rebase.c:1257 builtin/rebase.c:1266 builtin/repack.c:1208
 #: builtin/repack.c:1214 builtin/repack.c:1216 builtin/repack.c:1266
-#: builtin/reset.c:376 builtin/reset.c:413 builtin/rev-list.c:557
+#: builtin/reset.c:376 builtin/reset.c:413 builtin/rev-list.c:562
 #: builtin/show-branch.c:722 builtin/show-branch.c:727 builtin/stash.c:1774
 #: builtin/stash.c:1777 builtin/submodule--helper.c:1205
 #: builtin/submodule--helper.c:2961 builtin/tag.c:539 builtin/tag.c:585
 #: builtin/worktree.c:1055 parse-options.c:1312 range-diff.c:572
-#: revision.c:2383 revision.c:2387 revision.c:2396 revision.c:2401
-#: revision.c:2632 revision.c:3031 revision.c:3035 revision.c:3043
-#: revision.c:3046 revision.c:3048
+#: revision.c:2392 revision.c:2396 revision.c:2405 revision.c:2410
+#: revision.c:2641 revision.c:3040 revision.c:3044 revision.c:3052
+#: revision.c:3055 revision.c:3057
 #, c-format
 msgid "options '%s' and '%s' cannot be used together"
 msgstr ""
@@ -1642,7 +1642,7 @@ msgstr ""
 #: builtin/fast-export.c:1249 builtin/index-pack.c:1872 builtin/log.c:2273
 #: builtin/reset.c:385 builtin/reset.c:446 builtin/rm.c:289
 #: builtin/stash.c:1786 builtin/worktree.c:820 builtin/worktree.c:1057
-#: fetch-pack.c:344 http-fetch.c:150 http-fetch.c:159 revision.c:3050
+#: fetch-pack.c:344 http-fetch.c:150 http-fetch.c:159 revision.c:3059
 #, c-format
 msgid "the option '%s' requires '%s'"
 msgstr ""
@@ -2216,7 +2216,7 @@ msgid "could not parse author script"
 msgstr ""
 
 #: builtin/am.c:417 builtin/am.c:462 builtin/am.c:467 builtin/am.c:1459
-#: builtin/am.c:2145 builtin/replace.c:467 commit.c:60 sequencer.c:3255
+#: builtin/am.c:2145 builtin/replace.c:467 commit.c:61 sequencer.c:3255
 #, c-format
 msgid "could not parse %s"
 msgstr ""
@@ -2321,7 +2321,7 @@ msgid "invalid ident line: %.*s"
 msgstr ""
 
 #: builtin/am.c:1378 builtin/checkout.c:822 builtin/clone.c:738
-#: commit-graph.c:1233
+#: commit-graph.c:1237
 #, c-format
 msgid "unable to parse commit %s"
 msgstr ""
@@ -2531,7 +2531,7 @@ msgstr ""
 #: builtin/fmt-merge-msg.c:22 builtin/grep.c:978 builtin/merge.c:250
 #: builtin/pull.c:149 builtin/pull.c:211 builtin/pull.c:228
 #: builtin/rebase.c:1105 builtin/repack.c:1170 builtin/repack.c:1174
-#: builtin/repack.c:1176 builtin/show-branch.c:661 builtin/show-ref.c:169
+#: builtin/repack.c:1176 builtin/show-branch.c:661 builtin/show-ref.c:301
 #: builtin/tag.c:456 parse-options.h:215 parse-options.h:276
 #: parse-options.h:526
 msgid "n"
@@ -4698,7 +4698,7 @@ msgstr ""
 #: builtin/clean.c:940 builtin/describe.c:588 builtin/describe.c:590
 #: builtin/grep.c:996 builtin/log.c:260 builtin/log.c:262
 #: builtin/ls-files.c:619 builtin/name-rev.c:570 builtin/name-rev.c:572
-#: builtin/pack-refs.c:28 builtin/pack-refs.c:30 builtin/show-ref.c:176
+#: builtin/pack-refs.c:28 builtin/pack-refs.c:30 builtin/show-ref.c:308
 #: ref-filter.h:120
 msgid "pattern"
 msgstr ""
@@ -4794,7 +4794,7 @@ msgid "use --reference only while cloning"
 msgstr ""
 
 #: builtin/clone.c:140 builtin/column.c:28 builtin/fmt-merge-msg.c:28
-#: builtin/init-db.c:94 builtin/merge-file.c:50 builtin/merge.c:277
+#: builtin/init-db.c:94 builtin/merge-file.c:54 builtin/merge.c:277
 #: builtin/pack-objects.c:4269 builtin/repack.c:1183
 #: builtin/submodule--helper.c:3299 t/helper/test-simple-ipc.c:597
 #: t/helper/test-simple-ipc.c:599
@@ -9540,46 +9540,59 @@ msgstr ""
 msgid "find where <commit> forked from reflog of <ref>"
 msgstr ""
 
-#: builtin/merge-file.c:11
+#: builtin/merge-file.c:14
 msgid ""
 "git merge-file [<options>] [-L <name1> [-L <orig> [-L <name2>]]] <file1> "
 "<orig-file> <file2>"
 msgstr ""
 
-#: builtin/merge-file.c:37
+#: builtin/merge-file.c:40
 msgid "send results to standard output"
 msgstr ""
 
-#: builtin/merge-file.c:38
+#: builtin/merge-file.c:41
+msgid "use object IDs instead of filenames"
+msgstr ""
+
+#: builtin/merge-file.c:42
 msgid "use a diff3 based merge"
 msgstr ""
 
-#: builtin/merge-file.c:39
+#: builtin/merge-file.c:43
 msgid "use a zealous diff3 based merge"
 msgstr ""
 
-#: builtin/merge-file.c:41
+#: builtin/merge-file.c:45
 msgid "for conflicts, use our version"
 msgstr ""
 
-#: builtin/merge-file.c:43
+#: builtin/merge-file.c:47
 msgid "for conflicts, use their version"
 msgstr ""
 
-#: builtin/merge-file.c:45
+#: builtin/merge-file.c:49
 msgid "for conflicts, use a union version"
 msgstr ""
 
-#: builtin/merge-file.c:48
+#: builtin/merge-file.c:52
 msgid "for conflicts, use this marker size"
 msgstr ""
 
-#: builtin/merge-file.c:49
+#: builtin/merge-file.c:53
 msgid "do not warn about conflicts"
 msgstr ""
 
-#: builtin/merge-file.c:51
+#: builtin/merge-file.c:55
 msgid "set labels for file1/orig-file/file2"
+msgstr ""
+
+#: builtin/merge-file.c:93
+#, c-format
+msgid "object '%s' does not exist"
+msgstr ""
+
+#: builtin/merge-file.c:124
+msgid "Could not write object file"
 msgstr ""
 
 #: builtin/merge-recursive.c:51
@@ -10801,7 +10814,7 @@ msgstr ""
 msgid "unable to pack objects reachable from tag %s"
 msgstr ""
 
-#: builtin/pack-objects.c:3106 commit-graph.c:1495
+#: builtin/pack-objects.c:3106 commit-graph.c:1499
 #, c-format
 msgid "unable to get type of object %s"
 msgstr ""
@@ -13470,16 +13483,16 @@ msgstr ""
 msgid "unable to get disk usage of %s"
 msgstr ""
 
-#: builtin/rev-list.c:653
+#: builtin/rev-list.c:658
 #, c-format
 msgid "invalid value for '%s': '%s', the only allowed format is '%s'"
 msgstr ""
 
-#: builtin/rev-list.c:693
+#: builtin/rev-list.c:698
 msgid "rev-list does not support display of notes"
 msgstr ""
 
-#: builtin/rev-list.c:698
+#: builtin/rev-list.c:703
 #, c-format
 msgid "marked counting and '%s' cannot be used together"
 msgstr ""
@@ -13564,15 +13577,15 @@ msgstr ""
 msgid "unknown mode for --abbrev-ref: %s"
 msgstr ""
 
-#: builtin/rev-parse.c:896 revision.c:2703 revision.c:2737
+#: builtin/rev-parse.c:896 revision.c:2712 revision.c:2746
 msgid "--exclude-hidden cannot be used together with --branches"
 msgstr ""
 
-#: builtin/rev-parse.c:902 revision.c:2714 revision.c:2744
+#: builtin/rev-parse.c:902 revision.c:2723 revision.c:2753
 msgid "--exclude-hidden cannot be used together with --tags"
 msgstr ""
 
-#: builtin/rev-parse.c:912 revision.c:2719 revision.c:2751
+#: builtin/rev-parse.c:912 revision.c:2728 revision.c:2760
 msgid "--exclude-hidden cannot be used together with --remotes"
 msgstr ""
 
@@ -13989,45 +14002,73 @@ msgstr ""
 
 #: builtin/show-ref.c:14
 msgid ""
-"git show-ref [-q | --quiet] [--verify] [--head] [-d | --dereference]\n"
+"git show-ref [--head] [-d | --dereference]\n"
 "             [-s | --hash[=<n>]] [--abbrev[=<n>]] [--tags]\n"
 "             [--heads] [--] [<pattern>...]"
 msgstr ""
 
 #: builtin/show-ref.c:17
+msgid ""
+"git show-ref --verify [-q | --quiet] [-d | --dereference]\n"
+"             [-s | --hash[=<n>]] [--abbrev[=<n>]]\n"
+"             [--] [<ref>...]"
+msgstr ""
+
+#: builtin/show-ref.c:20
 msgid "git show-ref --exclude-existing[=<pattern>]"
 msgstr ""
 
-#: builtin/show-ref.c:159
+#: builtin/show-ref.c:21
+msgid "git show-ref --exists <ref>"
+msgstr ""
+
+#: builtin/show-ref.c:243
+msgid "reference does not exist"
+msgstr ""
+
+#: builtin/show-ref.c:247
+msgid "failed to look up reference"
+msgstr ""
+
+#: builtin/show-ref.c:290
 msgid "only show tags (can be combined with heads)"
 msgstr ""
 
-#: builtin/show-ref.c:160
+#: builtin/show-ref.c:291
 msgid "only show heads (can be combined with tags)"
 msgstr ""
 
-#: builtin/show-ref.c:161
+#: builtin/show-ref.c:292
+msgid "check for reference existence without resolving"
+msgstr ""
+
+#: builtin/show-ref.c:293
 msgid "stricter reference checking, requires exact ref path"
 msgstr ""
 
-#: builtin/show-ref.c:164 builtin/show-ref.c:166
+#: builtin/show-ref.c:296 builtin/show-ref.c:298
 msgid "show the HEAD reference, even if it would be filtered out"
 msgstr ""
 
-#: builtin/show-ref.c:168
+#: builtin/show-ref.c:300
 msgid "dereference tags into object IDs"
 msgstr ""
 
-#: builtin/show-ref.c:170
+#: builtin/show-ref.c:302
 msgid "only show SHA1 hash using <n> digits"
 msgstr ""
 
-#: builtin/show-ref.c:174
+#: builtin/show-ref.c:306
 msgid "do not print results to stdout (useful with --verify)"
 msgstr ""
 
-#: builtin/show-ref.c:176
+#: builtin/show-ref.c:308
 msgid "show refs from stdin that aren't in local repository"
+msgstr ""
+
+#: builtin/show-ref.c:319
+#, c-format
+msgid "only one of '%s', '%s' or '%s' can be given"
 msgstr ""
 
 #: builtin/sparse-checkout.c:27
@@ -14078,7 +14119,7 @@ msgstr ""
 msgid "toggle the use of a sparse index"
 msgstr ""
 
-#: builtin/sparse-checkout.c:486 commit-graph.c:2043 midx.c:1287
+#: builtin/sparse-checkout.c:486 commit-graph.c:2047 midx.c:1287
 #: sequencer.c:4245
 #, c-format
 msgid "unable to create leading directories of %s"
@@ -17071,188 +17112,188 @@ msgstr ""
 msgid "commit-graph overflow generation data is too small"
 msgstr ""
 
-#: commit-graph.c:1526
+#: commit-graph.c:1530
 msgid "Loading known commits in commit graph"
 msgstr ""
 
-#: commit-graph.c:1543
+#: commit-graph.c:1547
 msgid "Expanding reachable commits in commit graph"
 msgstr ""
 
-#: commit-graph.c:1563
+#: commit-graph.c:1567
 msgid "Clearing commit marks in commit graph"
 msgstr ""
 
-#: commit-graph.c:1680
+#: commit-graph.c:1684
 msgid "Computing commit graph topological levels"
 msgstr ""
 
-#: commit-graph.c:1714
+#: commit-graph.c:1718
 msgid "Computing commit graph generation numbers"
 msgstr ""
 
-#: commit-graph.c:1788
+#: commit-graph.c:1792
 msgid "Computing commit changed paths Bloom filters"
 msgstr ""
 
-#: commit-graph.c:1864
+#: commit-graph.c:1868
 msgid "Collecting referenced commits"
 msgstr ""
 
-#: commit-graph.c:1890
+#: commit-graph.c:1894
 #, c-format
 msgid "Finding commits for commit graph in %<PRIuMAX> pack"
 msgid_plural "Finding commits for commit graph in %<PRIuMAX> packs"
 msgstr[0] ""
 msgstr[1] ""
 
-#: commit-graph.c:1903
+#: commit-graph.c:1907
 #, c-format
 msgid "error adding pack %s"
 msgstr ""
 
-#: commit-graph.c:1907
+#: commit-graph.c:1911
 #, c-format
 msgid "error opening index for %s"
 msgstr ""
 
-#: commit-graph.c:1945
+#: commit-graph.c:1949
 msgid "Finding commits for commit graph among packed objects"
 msgstr ""
 
-#: commit-graph.c:1963
+#: commit-graph.c:1967
 msgid "Finding extra edges in commit graph"
 msgstr ""
 
-#: commit-graph.c:2012
+#: commit-graph.c:2016
 msgid "failed to write correct number of base graph ids"
 msgstr ""
 
-#: commit-graph.c:2057
+#: commit-graph.c:2061
 msgid "unable to create temporary graph layer"
 msgstr ""
 
-#: commit-graph.c:2062
+#: commit-graph.c:2066
 #, c-format
 msgid "unable to adjust shared permissions for '%s'"
 msgstr ""
 
-#: commit-graph.c:2119
+#: commit-graph.c:2123
 #, c-format
 msgid "Writing out commit graph in %d pass"
 msgid_plural "Writing out commit graph in %d passes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: commit-graph.c:2156
+#: commit-graph.c:2160
 msgid "unable to open commit-graph chain file"
 msgstr ""
 
-#: commit-graph.c:2172
+#: commit-graph.c:2176
 msgid "failed to rename base commit-graph file"
 msgstr ""
 
-#: commit-graph.c:2195
+#: commit-graph.c:2199
 msgid "failed to rename temporary commit-graph file"
 msgstr ""
 
-#: commit-graph.c:2239
+#: commit-graph.c:2243
 #, c-format
 msgid "cannot merge graphs with %<PRIuMAX>, %<PRIuMAX> commits"
 msgstr ""
 
-#: commit-graph.c:2301
+#: commit-graph.c:2305
 #, c-format
 msgid "cannot merge graph %s, too many commits: %<PRIuMAX>"
 msgstr ""
 
-#: commit-graph.c:2338
+#: commit-graph.c:2342
 msgid "Scanning merged commits"
 msgstr ""
 
-#: commit-graph.c:2382
+#: commit-graph.c:2386
 msgid "Merging commit-graph"
 msgstr ""
 
-#: commit-graph.c:2494
+#: commit-graph.c:2498
 msgid "attempting to write a commit-graph, but 'core.commitGraph' is disabled"
 msgstr ""
 
-#: commit-graph.c:2601
+#: commit-graph.c:2605
 msgid "too many commits to write graph"
 msgstr ""
 
-#: commit-graph.c:2694
+#: commit-graph.c:2698
 msgid "the commit-graph file has incorrect checksum and is likely corrupt"
 msgstr ""
 
-#: commit-graph.c:2704
+#: commit-graph.c:2708
 #, c-format
 msgid "commit-graph has incorrect OID order: %s then %s"
 msgstr ""
 
-#: commit-graph.c:2714 commit-graph.c:2729
+#: commit-graph.c:2718 commit-graph.c:2733
 #, c-format
 msgid "commit-graph has incorrect fanout value: fanout[%d] = %u != %u"
 msgstr ""
 
-#: commit-graph.c:2721
+#: commit-graph.c:2725
 #, c-format
 msgid "failed to parse commit %s from commit-graph"
 msgstr ""
 
-#: commit-graph.c:2750
+#: commit-graph.c:2754
 #, c-format
 msgid "failed to parse commit %s from object database for commit-graph"
 msgstr ""
 
-#: commit-graph.c:2757
+#: commit-graph.c:2761
 #, c-format
 msgid "root tree OID for commit %s in commit-graph is %s != %s"
 msgstr ""
 
-#: commit-graph.c:2767
+#: commit-graph.c:2771
 #, c-format
 msgid "commit-graph parent list for commit %s is too long"
 msgstr ""
 
-#: commit-graph.c:2776
+#: commit-graph.c:2780
 #, c-format
 msgid "commit-graph parent for %s is %s != %s"
 msgstr ""
 
-#: commit-graph.c:2790
+#: commit-graph.c:2794
 #, c-format
 msgid "commit-graph parent list for commit %s terminates early"
 msgstr ""
 
-#: commit-graph.c:2812
+#: commit-graph.c:2816
 #, c-format
 msgid "commit-graph generation for commit %s is %<PRIuMAX> < %<PRIuMAX>"
 msgstr ""
 
-#: commit-graph.c:2818
+#: commit-graph.c:2822
 #, c-format
 msgid "commit date for commit %s in commit-graph is %<PRIuMAX> != %<PRIuMAX>"
 msgstr ""
 
-#: commit-graph.c:2825
+#: commit-graph.c:2829
 #, c-format
 msgid ""
 "commit-graph has both zero and non-zero generations (e.g., commits '%s' and "
 "'%s')"
 msgstr ""
 
-#: commit-graph.c:2849
+#: commit-graph.c:2853
 msgid "Verifying commits in commit graph"
 msgstr ""
 
-#: commit.c:62
+#: commit.c:63
 #, c-format
 msgid "%s %s is not a commit!"
 msgstr ""
 
-#: commit.c:264
+#: commit.c:265
 msgid ""
 "Support for <GIT_DIR>/info/grafts is deprecated\n"
 "and will be removed in a future Git version.\n"
@@ -17264,27 +17305,32 @@ msgid ""
 "\"git config advice.graftFileDeprecated false\""
 msgstr ""
 
-#: commit.c:1333
+#: commit.c:585
+#, c-format
+msgid "commit %s exists in commit-graph but not in the object database"
+msgstr ""
+
+#: commit.c:1347
 #, c-format
 msgid "Commit %s has an untrusted GPG signature, allegedly by %s."
 msgstr ""
 
-#: commit.c:1337
+#: commit.c:1351
 #, c-format
 msgid "Commit %s has a bad GPG signature allegedly by %s."
 msgstr ""
 
-#: commit.c:1340
+#: commit.c:1354
 #, c-format
 msgid "Commit %s does not have a GPG signature."
 msgstr ""
 
-#: commit.c:1343
+#: commit.c:1357
 #, c-format
 msgid "Commit %s has a good GPG signature by %s\n"
 msgstr ""
 
-#: commit.c:1598
+#: commit.c:1612
 msgid ""
 "Warning: commit message did not conform to UTF-8.\n"
 "You may want to amend it after fixing the message, or set the config\n"
@@ -19079,7 +19125,7 @@ msgstr ""
 msgid "could not stat file '%s'"
 msgstr ""
 
-#: environment.c:149
+#: environment.c:162
 #, c-format
 msgid "bad git namespace path \"%s\""
 msgstr ""
@@ -19937,7 +19983,7 @@ msgstr ""
 msgid "entry '%s' in tree %s has blob mode, but is not a blob"
 msgstr ""
 
-#: list-objects.c:398
+#: list-objects.c:401
 #, c-format
 msgid "unable to load root tree for commit %s"
 msgstr ""
@@ -23000,48 +23046,48 @@ msgstr ""
 msgid "failed to find tree of %s"
 msgstr ""
 
-#: revision.c:1593
+#: revision.c:1602
 #, c-format
 msgid "unsupported section for hidden refs: %s"
 msgstr ""
 
-#: revision.c:1596
+#: revision.c:1605
 msgid "--exclude-hidden= passed more than once"
 msgstr ""
 
-#: revision.c:1776
+#: revision.c:1785
 #, c-format
 msgid "resolve-undo records `%s` which is missing"
 msgstr ""
 
-#: revision.c:2297
+#: revision.c:2306
 #, c-format
 msgid "could not get commit for ancestry-path argument %s"
 msgstr ""
 
-#: revision.c:2428
+#: revision.c:2437
 msgid "--unpacked=<packfile> no longer supported"
 msgstr ""
 
-#: revision.c:2825
+#: revision.c:2834
 #, c-format
 msgid "invalid option '%s' in --stdin mode"
 msgstr ""
 
-#: revision.c:2846
+#: revision.c:2855
 msgid "your current branch appears to be broken"
 msgstr ""
 
-#: revision.c:2849
+#: revision.c:2858
 #, c-format
 msgid "your current branch '%s' does not have any commits yet"
 msgstr ""
 
-#: revision.c:3037
+#: revision.c:3046
 msgid "object filtering requires --objects"
 msgstr ""
 
-#: revision.c:3054
+#: revision.c:3063
 msgid "-L does not yet support diff formats besides -p and -s"
 msgstr ""
 
