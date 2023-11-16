@@ -519,3 +519,486 @@ ERROR: fail to execute "git-po-helper check-pot"
  msgid "write out the index even if is not flagged as changed"
  msgstr ""
  
+
+
+#################### Thu, 16 Nov 2023 08:57:28 +0000 ####################
+
+--- po/git.pot.old	2023-11-16 08:57:28.366462256 +0000
++++ po/git.pot.new	2023-11-16 08:57:28.442462620 +0000
+@@ -778,6 +778,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "%s is already in progress"
++msgstr ""
++
++#, c-format
+ msgid "%s is incompatible with %s"
+ msgstr ""
+ 
+@@ -1182,6 +1186,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "'%s' already specified as '%s'"
++msgstr ""
++
++#, c-format
+ msgid "'%s' and '%s' cannot be used together"
+ msgstr ""
+ 
+@@ -1866,6 +1874,9 @@
+ msgid "--non-matching is only valid with --verbose"
+ msgstr ""
+ 
++msgid "--onto and --advance are incompatible"
++msgstr ""
++
+ msgid "--open-files-in-pager only works on the worktree"
+ msgstr ""
+ 
+@@ -3422,6 +3433,9 @@
+ msgid "Dry-Sent %s\n"
+ msgstr ""
+ 
++msgid "EXPERIMENTAL: Replay commits on a new base, works with bare repos too"
++msgstr ""
++
+ msgid "Emit [broken] object attributes"
+ msgstr ""
+ 
+@@ -3534,6 +3548,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Failed to convert object from %s to %s"
++msgstr ""
++
++#, c-format
+ msgid "Failed to copy notes from '%s' to '%s'"
+ msgstr ""
+ 
+@@ -7260,6 +7278,9 @@
+ msgid "additionally, your index contains uncommitted changes."
+ msgstr ""
+ 
++msgid "advance all branches contained in revision-range"
++msgstr ""
++
+ #, c-format
+ msgid "affected file '%s' is beyond a symbolic link"
+ msgstr ""
+@@ -7300,6 +7321,9 @@
+ msgid "alias of --%s"
+ msgstr ""
+ 
++msgid "all positive revisions given must be references"
++msgstr ""
++
+ msgid "allow -s and -t to work with broken/corrupt objects"
+ msgstr ""
+ 
+@@ -7484,9 +7508,6 @@
+ msgid "apply options and merge options cannot be used together"
+ msgstr ""
+ 
+-msgid "apply options are incompatible with rebase.autoSquash.  Consider adding --no-autosquash"
+-msgstr ""
+-
+ msgid "apply options are incompatible with rebase.rebaseMerges.  Consider adding --no-rebase-merges"
+ msgstr ""
+ 
+@@ -7518,6 +7539,9 @@
+ msgid "argument expected for %s"
+ msgstr ""
+ 
++msgid "argument to --advance must be a reference"
++msgstr ""
++
+ #, c-format
+ msgid "argument to --packfile must be a valid hash (got '%s')"
+ msgstr ""
+@@ -7549,6 +7573,10 @@
+ msgid "attempting to mmap %<PRIuMAX> over limit %<PRIuMAX>"
+ msgstr ""
+ 
++#, c-format
++msgid "attempting to write a commit-graph, but 'commitgraph.changedPathsVersion' (%d) is not supported"
++msgstr ""
++
+ msgid "attempting to write a commit-graph, but 'core.commitGraph' is disabled"
+ msgstr ""
+ 
+@@ -7572,6 +7600,10 @@
+ msgid "bad %s"
+ msgstr ""
+ 
++#, c-format
++msgid "bad %s in commit"
++msgstr ""
++
+ msgid "bad --attr-source or GIT_ATTR_SOURCE"
+ msgstr ""
+ 
+@@ -8112,6 +8144,12 @@
+ msgid "cannot abort from a branch yet to be born"
+ msgstr ""
+ 
++msgid "cannot advance target with multiple source branches because ordering would be ill-defined"
++msgstr ""
++
++msgid "cannot advance target with multiple sources because ordering would be ill-defined"
++msgstr ""
++
+ msgid "cannot amend non-existing commit"
+ msgstr ""
+ 
+@@ -8309,10 +8347,20 @@
+ msgid "cannot have both --quiet and --verbose"
+ msgstr ""
+ 
++msgid "cannot implicitly determine correct base for --onto"
++msgstr ""
++
++msgid "cannot implicitly determine whether this is an --advance or --onto operation"
++msgstr ""
++
+ msgid "cannot inherit upstream tracking configuration of multiple refs when rebasing is requested"
+ msgstr ""
+ 
+ #, c-format
++msgid "cannot map object %s to %s"
++msgstr ""
++
++#, c-format
+ msgid "cannot merge graph %s, too many commits: %<PRIuMAX>"
+ msgstr ""
+ 
+@@ -8686,9 +8734,6 @@
+ msgid "cherry-pick failed"
+ msgstr ""
+ 
+-msgid "cherry-pick is already in progress"
+-msgstr ""
+-
+ #, c-format
+ msgid "chmod on %s failed"
+ msgstr ""
+@@ -8848,12 +8893,30 @@
+ msgid "commit your changes or stash them to proceed."
+ msgstr ""
+ 
++msgid "commit-graph OID lookup chunk is the wrong size"
++msgstr ""
++
+ msgid "commit-graph base graphs chunk is too small"
+ msgstr ""
+ 
+ msgid "commit-graph chain does not match"
+ msgstr ""
+ 
++msgid "commit-graph chain file too small"
++msgstr ""
++
++msgid "commit-graph changed-path index chunk is too small"
++msgstr ""
++
++msgid "commit-graph commit data chunk is wrong size"
++msgstr ""
++
++msgid "commit-graph extra-edges pointer out of bounds"
++msgstr ""
++
++msgid "commit-graph fanout values out of order"
++msgstr ""
++
+ msgid "commit-graph file is too small"
+ msgstr ""
+ 
+@@ -8865,6 +8928,9 @@
+ msgid "commit-graph generation for commit %s is %<PRIuMAX> < %<PRIuMAX>"
+ msgstr ""
+ 
++msgid "commit-graph generations chunk is wrong size"
++msgstr ""
++
+ #, c-format
+ msgid "commit-graph has both zero and non-zero generations (e.g., commits '%s' and '%s')"
+ msgstr ""
+@@ -8884,6 +8950,9 @@
+ msgid "commit-graph hash version %X does not match version %X"
+ msgstr ""
+ 
++msgid "commit-graph oid fanout chunk is wrong size"
++msgstr ""
++
+ msgid "commit-graph overflow generation data is too small"
+ msgstr ""
+ 
+@@ -8899,6 +8968,9 @@
+ msgid "commit-graph parent list for commit %s terminates early"
+ msgstr ""
+ 
++msgid "commit-graph required OID fanout chunk missing or corrupted"
++msgstr ""
++
+ msgid "commit-graph requires overflow generation data but has none"
+ msgstr ""
+ 
+@@ -9911,6 +9983,10 @@
+ msgid "could not write index"
+ msgstr ""
+ 
++#, c-format
++msgid "could not write loose object index %s"
++msgstr ""
++
+ msgid "could not write multi-pack bitmap"
+ msgstr ""
+ 
+@@ -10323,6 +10399,10 @@
+ msgid "disable rename detection"
+ msgstr ""
+ 
++#, c-format
++msgid "disabling Bloom filters for commit-graph layer '%s' due to incompatible settings"
++msgstr ""
++
+ msgid "disabling bitmap writing, as some objects are not being packed"
+ msgstr ""
+ 
+@@ -11102,6 +11182,9 @@
+ msgid "failed to create temporary file"
+ msgstr ""
+ 
++msgid "failed to decode tree entry"
++msgstr ""
++
+ #, c-format
+ msgid "failed to delete '%s'"
+ msgstr ""
+@@ -11269,6 +11352,10 @@
+ msgid "failed to make %s readable"
+ msgstr ""
+ 
++#, c-format
++msgid "failed to map tree entry for %s"
++msgstr ""
++
+ msgid "failed to modify sparse-index config"
+ msgstr ""
+ 
+@@ -11521,6 +11608,10 @@
+ msgid "failed to write correct number of base graph ids"
+ msgstr ""
+ 
++#, c-format
++msgid "failed to write loose object index %s\n"
++msgstr ""
++
+ msgid "failed to write multi-pack-index"
+ msgstr ""
+ 
+@@ -12645,6 +12736,9 @@
+ msgid "git replace [-f] <object> <replacement>"
+ msgstr ""
+ 
++msgid "git replay ([--contained] --onto <newbase> | --advance <branch>) <revision-range>... # EXPERIMENTAL"
++msgstr ""
++
+ msgid "git rerere [clear | forget <pathspec>... | diff | status | remaining | gc]"
+ msgstr ""
+ 
+@@ -13304,6 +13398,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "ignoring too-small changed-path chunk (%<PRIuMAX> < %<PRIuMAX>) in commit-graph file"
++msgstr ""
++
++#, c-format
+ msgid "ignoring unknown core.fsync component '%s'"
+ msgstr ""
+ 
+@@ -14172,6 +14270,9 @@
+ msgid "make reflogs head nodes (default)"
+ msgstr ""
+ 
++msgid "make replay advance given branch"
++msgstr ""
++
+ msgid "make sure the patch is applicable to the current index"
+ msgstr ""
+ 
+@@ -14428,6 +14529,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "missing mapping of %s to %s"
++msgstr ""
++
++#, c-format
+ msgid "missing notes on source object %s. Cannot copy."
+ msgstr ""
+ 
+@@ -14535,9 +14640,6 @@
+ msgid "multi-pack-index OID fanout is of the wrong size"
+ msgstr ""
+ 
+-msgid "multi-pack-index OID lookup chunk is the wrong size"
+-msgstr ""
+-
+ #, c-format
+ msgid "multi-pack-index file %s is too small"
+ msgstr ""
+@@ -14552,9 +14654,6 @@
+ msgid "multi-pack-index large offset out of bounds"
+ msgstr ""
+ 
+-msgid "multi-pack-index object offset chunk is the wrong size"
+-msgstr ""
+-
+ #, c-format
+ msgid "multi-pack-index pack names out of order: '%s' before '%s'"
+ msgstr ""
+@@ -14673,6 +14772,9 @@
+ msgid "need exactly one range"
+ msgstr ""
+ 
++msgid "need some commits to replay"
++msgstr ""
++
+ msgid "need two commit ranges"
+ msgstr ""
+ 
+@@ -14836,6 +14938,9 @@
+ msgid "no note found for object %s."
+ msgstr ""
+ 
++msgid "no object format specified"
++msgstr ""
++
+ msgid "no pack files to index."
+ msgstr ""
+ 
+@@ -15467,6 +15572,9 @@
+ msgid "option '%s' must come before non-option arguments"
+ msgstr ""
+ 
++msgid "option --onto or --advance is mandatory"
++msgstr ""
++
+ #, c-format
+ msgid "option `%s' expects \"%s\" or \"%s\""
+ msgstr ""
+@@ -16853,6 +16961,15 @@
+ msgid "replacement %s not found for %s"
+ msgstr ""
+ 
++msgid "replay onto given commit"
++msgstr ""
++
++msgid "replaying down to root commit is not supported yet!"
++msgstr ""
++
++msgid "replaying merge commits is not supported yet!"
++msgstr ""
++
+ msgid "repo"
+ msgstr ""
+ 
+@@ -17056,9 +17173,6 @@
+ msgid "revert failed"
+ msgstr ""
+ 
+-msgid "revert is already in progress"
+-msgstr ""
+-
+ msgid "revert staged set of changes back to the HEAD version"
+ msgstr ""
+ 
+@@ -17792,6 +17906,10 @@
+ msgid "some prerequisite commits exist in the object store, but are not connected to the repository's history"
+ msgstr ""
+ 
++#, c-format
++msgid "some rev walking options will be overridden as '%s' bit in 'struct rev_info' will be forced"
++msgstr ""
++
+ msgid "sort output according to the number of commits per author"
+ msgstr ""
+ 
+@@ -18527,11 +18645,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "try \"git cherry-pick (--continue | %s--abort | --quit)\""
+-msgstr ""
+-
+-#, c-format
+-msgid "try \"git revert (--continue | %s--abort | --quit)\""
++msgid "try \"git %s (--continue | %s--abort | --quit)\""
+ msgstr ""
+ 
+ msgid "try to match the new branch name with a remote-tracking branch"
+@@ -18822,6 +18936,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unable to map %s %s in commit object"
++msgstr ""
++
++#, c-format
+ msgid "unable to mmap %s"
+ msgstr ""
+ 
+@@ -18856,6 +18974,10 @@
+ msgid "unable to open %s: %s\n"
+ msgstr ""
+ 
++#, c-format
++msgid "unable to open '%s'"
++msgstr ""
++
+ msgid "unable to open commit-graph chain file"
+ msgstr ""
+ 
+@@ -19232,9 +19354,6 @@
+ msgid "unhandled object '%s' given."
+ msgstr ""
+ 
+-msgid "unhandled options"
+-msgstr ""
+-
+ msgid "unknown"
+ msgstr ""
+ 
+@@ -19560,6 +19679,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unsupported object format: %s"
++msgstr ""
++
++#, c-format
+ msgid "unsupported section for hidden refs: %s"
+ msgstr ""
+ 
+@@ -20190,6 +20313,9 @@
+ msgid "write multi-pack index containing only given indexes"
+ msgstr ""
+ 
++msgid "write new objects to a pack instead of as loose"
++msgstr ""
++
+ msgid "write out the index even if is not flagged as changed"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-pot --------------------
+
+level=error msg="config variable 'commitGraph.changedPathsVersion' in manpage does not match string in pot file:"
+level=error msg="    >> msgid   \"attempting to write a commit-graph, but 'commitgraph.changedPathsVersion' (%d) is not supported\""
+
+ERROR: fail to execute "git-po-helper check-pot"
