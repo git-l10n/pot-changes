@@ -1,0 +1,101 @@
+
+
+#################### Mon, 27 Nov 2023 14:57:34 +0000 ####################
+
+--- po/git.pot.old	2023-11-27 14:57:34.030510293 +0000
++++ po/git.pot.new	2023-11-27 14:57:34.102510422 +0000
+@@ -782,10 +782,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "%s is incompatible with %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "%s is neither a commit nor blob"
+ msgstr ""
+ 
+@@ -1579,6 +1575,9 @@
+ msgid "(%s) failed to close pipe to '%s'"
+ msgstr ""
+ 
++msgid "(EXPERIMENTAL!) git replay ([--contained] --onto <newbase> | --advance <branch>) <revision-range>..."
++msgstr ""
++
+ #, c-format
+ msgid "(HEAD detached at %s)"
+ msgstr ""
+@@ -1735,9 +1734,6 @@
+ msgid "--branch or --default required"
+ msgstr ""
+ 
+-msgid "--bundle-uri is incompatible with --depth, --shallow-since, and --shallow-exclude"
+-msgstr ""
+-
+ msgid "--check does not make sense"
+ msgstr ""
+ 
+@@ -1833,9 +1829,6 @@
+ msgid "--merge-base does not work with ranges"
+ msgstr ""
+ 
+-msgid "--merge-base is incompatible with --stdin"
+-msgstr ""
+-
+ msgid "--merge-base only works with two commits"
+ msgstr ""
+ 
+@@ -4046,7 +4039,7 @@
+ 
+ #, c-format
+ msgid ""
+-"If you meant to create a worktree containing a new orphan branch\n"
++"If you meant to create a worktree containing a new unborn branch\n"
+ "(branch with no commits) for this repository, you can do so\n"
+ "using the --orphan flag:\n"
+ "\n"
+@@ -4055,7 +4048,7 @@
+ 
+ #, c-format
+ msgid ""
+-"If you meant to create a worktree containing a new orphan branch\n"
++"If you meant to create a worktree containing a new unborn branch\n"
+ "(branch with no commits) for this repository, you can do so\n"
+ "using the --orphan flag:\n"
+ "\n"
+@@ -10100,7 +10093,7 @@
+ msgid "create thin packs"
+ msgstr ""
+ 
+-msgid "create unborn/orphaned branch"
++msgid "create unborn branch"
+ msgstr ""
+ 
+ msgid "create/reset and checkout a branch"
+@@ -12732,9 +12725,6 @@
+ msgid "git replace [-f] <object> <replacement>"
+ msgstr ""
+ 
+-msgid "git replay ([--contained] --onto <newbase> | --advance <branch>) <revision-range>... # EXPERIMENTAL"
+-msgstr ""
+-
+ msgid "git rerere [clear | forget <pathspec>... | diff | status | remaining | gc]"
+ msgstr ""
+ 
+@@ -14820,7 +14810,7 @@
+ msgid "new object is the same as the old one: '%s'"
+ msgstr ""
+ 
+-msgid "new unparented branch"
++msgid "new unborn branch"
+ msgstr ""
+ 
+ msgid "new-branch"
+
+
+-------------------- git-po-helper check-pot --------------------
+
+level=error msg="config variable 'commitGraph.changedPathsVersion' in manpage does not match string in pot file:"
+level=error msg="    >> msgid   \"attempting to write a commit-graph, but 'commitgraph.changedPathsVersion' (%d) is not supported\""
+
+ERROR: fail to execute "git-po-helper check-pot"
