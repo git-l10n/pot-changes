@@ -1,0 +1,201 @@
+
+
+#################### Sun, 10 Dec 2023 07:57:17 +0000 ####################
+
+--- po/git.pot.old	2023-12-10 07:57:17.906064488 +0000
++++ po/git.pot.new	2023-12-10 07:57:17.978065149 +0000
+@@ -778,10 +778,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "%s is incompatible with %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "%s is neither a commit nor blob"
+ msgstr ""
+ 
+@@ -1571,6 +1567,9 @@
+ msgid "(%s) failed to close pipe to '%s'"
+ msgstr ""
+ 
++msgid "(EXPERIMENTAL!) git replay ([--contained] --onto <newbase> | --advance <branch>) <revision-range>..."
++msgstr ""
++
+ #, c-format
+ msgid "(HEAD detached at %s)"
+ msgstr ""
+@@ -1727,9 +1726,6 @@
+ msgid "--branch or --default required"
+ msgstr ""
+ 
+-msgid "--bundle-uri is incompatible with --depth, --shallow-since, and --shallow-exclude"
+-msgstr ""
+-
+ msgid "--check does not make sense"
+ msgstr ""
+ 
+@@ -1825,9 +1821,6 @@
+ msgid "--merge-base does not work with ranges"
+ msgstr ""
+ 
+-msgid "--merge-base is incompatible with --stdin"
+-msgstr ""
+-
+ msgid "--merge-base only works with two commits"
+ msgstr ""
+ 
+@@ -1866,6 +1859,9 @@
+ msgid "--non-matching is only valid with --verbose"
+ msgstr ""
+ 
++msgid "--onto and --advance are incompatible"
++msgstr ""
++
+ msgid "--open-files-in-pager only works on the worktree"
+ msgstr ""
+ 
+@@ -3422,6 +3418,9 @@
+ msgid "Dry-Sent %s\n"
+ msgstr ""
+ 
++msgid "EXPERIMENTAL: Replay commits on a new base, works with bare repos too"
++msgstr ""
++
+ msgid "Emit [broken] object attributes"
+ msgstr ""
+ 
+@@ -7260,6 +7259,9 @@
+ msgid "additionally, your index contains uncommitted changes."
+ msgstr ""
+ 
++msgid "advance all branches contained in revision-range"
++msgstr ""
++
+ #, c-format
+ msgid "affected file '%s' is beyond a symbolic link"
+ msgstr ""
+@@ -7300,6 +7302,9 @@
+ msgid "alias of --%s"
+ msgstr ""
+ 
++msgid "all positive revisions given must be references"
++msgstr ""
++
+ msgid "allow -s and -t to work with broken/corrupt objects"
+ msgstr ""
+ 
+@@ -7515,6 +7520,9 @@
+ msgid "argument expected for %s"
+ msgstr ""
+ 
++msgid "argument to --advance must be a reference"
++msgstr ""
++
+ #, c-format
+ msgid "argument to --packfile must be a valid hash (got '%s')"
+ msgstr ""
+@@ -8109,6 +8117,12 @@
+ msgid "cannot abort from a branch yet to be born"
+ msgstr ""
+ 
++msgid "cannot advance target with multiple source branches because ordering would be ill-defined"
++msgstr ""
++
++msgid "cannot advance target with multiple sources because ordering would be ill-defined"
++msgstr ""
++
+ msgid "cannot amend non-existing commit"
+ msgstr ""
+ 
+@@ -8306,6 +8320,12 @@
+ msgid "cannot have both --quiet and --verbose"
+ msgstr ""
+ 
++msgid "cannot implicitly determine correct base for --onto"
++msgstr ""
++
++msgid "cannot implicitly determine whether this is an --advance or --onto operation"
++msgstr ""
++
+ msgid "cannot inherit upstream tracking configuration of multiple refs when rebasing is requested"
+ msgstr ""
+ 
+@@ -9717,10 +9737,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "could not remove reference %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "could not remove stale bitmap: %s"
+ msgstr ""
+ 
+@@ -14206,6 +14222,9 @@
+ msgid "make reflogs head nodes (default)"
+ msgstr ""
+ 
++msgid "make replay advance given branch"
++msgstr ""
++
+ msgid "make sure the patch is applicable to the current index"
+ msgstr ""
+ 
+@@ -14707,6 +14726,9 @@
+ msgid "need exactly one range"
+ msgstr ""
+ 
++msgid "need some commits to replay"
++msgstr ""
++
+ msgid "need two commit ranges"
+ msgstr ""
+ 
+@@ -15501,6 +15523,9 @@
+ msgid "option '%s' must come before non-option arguments"
+ msgstr ""
+ 
++msgid "option --onto or --advance is mandatory"
++msgstr ""
++
+ #, c-format
+ msgid "option `%s' expects \"%s\" or \"%s\""
+ msgstr ""
+@@ -16887,6 +16912,15 @@
+ msgid "replacement %s not found for %s"
+ msgstr ""
+ 
++msgid "replay onto given commit"
++msgstr ""
++
++msgid "replaying down to root commit is not supported yet!"
++msgstr ""
++
++msgid "replaying merge commits is not supported yet!"
++msgstr ""
++
+ msgid "repo"
+ msgstr ""
+ 
+@@ -17826,6 +17860,10 @@
+ msgid "some prerequisite commits exist in the object store, but are not connected to the repository's history"
+ msgstr ""
+ 
++#, c-format
++msgid "some rev walking options will be overridden as '%s' bit in 'struct rev_info' will be forced"
++msgstr ""
++
+ msgid "sort output according to the number of commits per author"
+ msgstr ""
+ 
+@@ -19266,9 +19304,6 @@
+ msgid "unhandled object '%s' given."
+ msgstr ""
+ 
+-msgid "unhandled options"
+-msgstr ""
+-
+ msgid "unknown"
+ msgstr ""
+ 
