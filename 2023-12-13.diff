@@ -1,0 +1,69 @@
+
+
+#################### Wed, 13 Dec 2023 22:57:25 +0000 ####################
+
+--- po/git.pot.old	2023-12-13 22:57:25.752758314 +0000
++++ po/git.pot.new	2023-12-13 22:57:25.824757834 +0000
+@@ -778,10 +778,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "%s is already in progress"
+-msgstr ""
+-
+-#, c-format
+ msgid "%s is neither a commit nor blob"
+ msgstr ""
+ 
+@@ -8708,6 +8704,9 @@
+ msgid "cherry-pick failed"
+ msgstr ""
+ 
++msgid "cherry-pick is already in progress"
++msgstr ""
++
+ #, c-format
+ msgid "chmod on %s failed"
+ msgstr ""
+@@ -17136,6 +17135,9 @@
+ msgid "revert failed"
+ msgstr ""
+ 
++msgid "revert is already in progress"
++msgstr ""
++
+ msgid "revert staged set of changes back to the HEAD version"
+ msgstr ""
+ 
+@@ -18608,7 +18610,11 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "try \"git %s (--continue | %s--abort | --quit)\""
++msgid "try \"git cherry-pick (--continue | %s--abort | --quit)\""
++msgstr ""
++
++#, c-format
++msgid "try \"git revert (--continue | %s--abort | --quit)\""
+ msgstr ""
+ 
+ msgid "try to match the new branch name with a remote-tracking branch"
+@@ -18937,10 +18943,6 @@
+ msgid "unable to open %s: %s\n"
+ msgstr ""
+ 
+-#, c-format
+-msgid "unable to open '%s'"
+-msgstr ""
+-
+ msgid "unable to open commit-graph chain file"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-pot --------------------
+
+level=error msg="config variable 'commitGraph.changedPathsVersion' in manpage does not match string in pot file:"
+level=error msg="    >> msgid   \"attempting to write a commit-graph, but 'commitgraph.changedPathsVersion' (%d) is not supported\""
+
+ERROR: fail to execute "git-po-helper check-pot"
