@@ -574,3 +574,518 @@
  msgid "write out the index even if is not flagged as changed"
  msgstr ""
  
+
+
+#################### Fri, 15 Dec 2023 23:57:21 +0000 ####################
+
+--- po/git.pot.old	2023-12-15 23:57:20.970936491 +0000
++++ po/git.pot.new	2023-12-15 23:57:21.042936224 +0000
+@@ -778,10 +778,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "%s is incompatible with %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "%s is neither a commit nor blob"
+ msgstr ""
+ 
+@@ -1182,7 +1178,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "'%s' and '%s' cannot be used together"
++msgid "'%s' already specified as '%s'"
+ msgstr ""
+ 
+ #, c-format
+@@ -1571,6 +1567,9 @@
+ msgid "(%s) failed to close pipe to '%s'"
+ msgstr ""
+ 
++msgid "(EXPERIMENTAL!) git replay ([--contained] --onto <newbase> | --advance <branch>) <revision-range>..."
++msgstr ""
++
+ #, c-format
+ msgid "(HEAD detached at %s)"
+ msgstr ""
+@@ -1727,9 +1726,6 @@
+ msgid "--branch or --default required"
+ msgstr ""
+ 
+-msgid "--bundle-uri is incompatible with --depth, --shallow-since, and --shallow-exclude"
+-msgstr ""
+-
+ msgid "--check does not make sense"
+ msgstr ""
+ 
+@@ -1767,15 +1763,6 @@
+ msgid "--dump-aliases incompatible with other options\n"
+ msgstr ""
+ 
+-msgid "--exclude-hidden cannot be used together with --branches"
+-msgstr ""
+-
+-msgid "--exclude-hidden cannot be used together with --remotes"
+-msgstr ""
+-
+-msgid "--exclude-hidden cannot be used together with --tags"
+-msgstr ""
+-
+ msgid "--exclude-hidden= passed more than once"
+ msgstr ""
+ 
+@@ -1825,9 +1812,6 @@
+ msgid "--merge-base does not work with ranges"
+ msgstr ""
+ 
+-msgid "--merge-base is incompatible with --stdin"
+-msgstr ""
+-
+ msgid "--merge-base only works with two commits"
+ msgstr ""
+ 
+@@ -1866,6 +1850,9 @@
+ msgid "--non-matching is only valid with --verbose"
+ msgstr ""
+ 
++msgid "--onto and --advance are incompatible"
++msgstr ""
++
+ msgid "--open-files-in-pager only works on the worktree"
+ msgstr ""
+ 
+@@ -2008,9 +1995,6 @@
+ msgid "-n requires an argument"
+ msgstr ""
+ 
+-msgid "-x and -X cannot be used together"
+-msgstr ""
+-
+ msgid "-z only makes sense with --stdin"
+ msgstr ""
+ 
+@@ -2058,9 +2042,6 @@
+ msgid "<char>"
+ msgstr ""
+ 
+-msgid "<commit-ish>"
+-msgstr ""
+-
+ msgid "<count>"
+ msgstr ""
+ 
+@@ -3422,6 +3403,9 @@
+ msgid "Dry-Sent %s\n"
+ msgstr ""
+ 
++msgid "EXPERIMENTAL: Replay commits on a new base, works with bare repos too"
++msgstr ""
++
+ msgid "Emit [broken] object attributes"
+ msgstr ""
+ 
+@@ -3534,6 +3518,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Failed to convert object from %s to %s"
++msgstr ""
++
++#, c-format
+ msgid "Failed to copy notes from '%s' to '%s'"
+ msgstr ""
+ 
+@@ -4028,7 +4016,7 @@
+ 
+ #, c-format
+ msgid ""
+-"If you meant to create a worktree containing a new orphan branch\n"
++"If you meant to create a worktree containing a new unborn branch\n"
+ "(branch with no commits) for this repository, you can do so\n"
+ "using the --orphan flag:\n"
+ "\n"
+@@ -4037,7 +4025,7 @@
+ 
+ #, c-format
+ msgid ""
+-"If you meant to create a worktree containing a new orphan branch\n"
++"If you meant to create a worktree containing a new unborn branch\n"
+ "(branch with no commits) for this repository, you can do so\n"
+ "using the --orphan flag:\n"
+ "\n"
+@@ -7263,6 +7251,9 @@
+ msgid "additionally, your index contains uncommitted changes."
+ msgstr ""
+ 
++msgid "advance all branches contained in revision-range"
++msgstr ""
++
+ #, c-format
+ msgid "affected file '%s' is beyond a symbolic link"
+ msgstr ""
+@@ -7303,6 +7294,9 @@
+ msgid "alias of --%s"
+ msgstr ""
+ 
++msgid "all positive revisions given must be references"
++msgstr ""
++
+ msgid "allow -s and -t to work with broken/corrupt objects"
+ msgstr ""
+ 
+@@ -7518,6 +7512,9 @@
+ msgid "argument expected for %s"
+ msgstr ""
+ 
++msgid "argument to --advance must be a reference"
++msgstr ""
++
+ #, c-format
+ msgid "argument to --packfile must be a valid hash (got '%s')"
+ msgstr ""
+@@ -7549,6 +7546,10 @@
+ msgid "attempting to mmap %<PRIuMAX> over limit %<PRIuMAX>"
+ msgstr ""
+ 
++#, c-format
++msgid "attempting to write a commit-graph, but 'commitgraph.changedPathsVersion' (%d) is not supported"
++msgstr ""
++
+ msgid "attempting to write a commit-graph, but 'core.commitGraph' is disabled"
+ msgstr ""
+ 
+@@ -7572,6 +7573,10 @@
+ msgid "bad %s"
+ msgstr ""
+ 
++#, c-format
++msgid "bad %s in commit"
++msgstr ""
++
+ msgid "bad --attr-source or GIT_ATTR_SOURCE"
+ msgstr ""
+ 
+@@ -8112,6 +8117,12 @@
+ msgid "cannot abort from a branch yet to be born"
+ msgstr ""
+ 
++msgid "cannot advance target with multiple source branches because ordering would be ill-defined"
++msgstr ""
++
++msgid "cannot advance target with multiple sources because ordering would be ill-defined"
++msgstr ""
++
+ msgid "cannot amend non-existing commit"
+ msgstr ""
+ 
+@@ -8309,10 +8320,20 @@
+ msgid "cannot have both --quiet and --verbose"
+ msgstr ""
+ 
++msgid "cannot implicitly determine correct base for --onto"
++msgstr ""
++
++msgid "cannot implicitly determine whether this is an --advance or --onto operation"
++msgstr ""
++
+ msgid "cannot inherit upstream tracking configuration of multiple refs when rebasing is requested"
+ msgstr ""
+ 
+ #, c-format
++msgid "cannot map object %s to %s"
++msgstr ""
++
++#, c-format
+ msgid "cannot merge graph %s, too many commits: %<PRIuMAX>"
+ msgstr ""
+ 
+@@ -8926,12 +8947,6 @@
+ msgid "commit-graph required OID fanout chunk missing or corrupted"
+ msgstr ""
+ 
+-msgid "commit-graph required OID lookup chunk missing or corrupted"
+-msgstr ""
+-
+-msgid "commit-graph required commit data chunk missing or corrupted"
+-msgstr ""
+-
+ msgid "commit-graph requires overflow generation data but has none"
+ msgstr ""
+ 
+@@ -9730,10 +9745,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "could not remove reference %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "could not remove stale bitmap: %s"
+ msgstr ""
+ 
+@@ -9954,6 +9965,10 @@
+ msgid "could not write index"
+ msgstr ""
+ 
++#, c-format
++msgid "could not write loose object index %s"
++msgstr ""
++
+ msgid "could not write multi-pack bitmap"
+ msgstr ""
+ 
+@@ -10071,7 +10086,7 @@
+ msgid "create thin packs"
+ msgstr ""
+ 
+-msgid "create unborn/orphaned branch"
++msgid "create unborn branch"
+ msgstr ""
+ 
+ msgid "create/reset and checkout a branch"
+@@ -10366,6 +10381,10 @@
+ msgid "disable rename detection"
+ msgstr ""
+ 
++#, c-format
++msgid "disabling Bloom filters for commit-graph layer '%s' due to incompatible settings"
++msgstr ""
++
+ msgid "disabling bitmap writing, as some objects are not being packed"
+ msgstr ""
+ 
+@@ -11145,6 +11164,9 @@
+ msgid "failed to create temporary file"
+ msgstr ""
+ 
++msgid "failed to decode tree entry"
++msgstr ""
++
+ #, c-format
+ msgid "failed to delete '%s'"
+ msgstr ""
+@@ -11312,6 +11334,10 @@
+ msgid "failed to make %s readable"
+ msgstr ""
+ 
++#, c-format
++msgid "failed to map tree entry for %s"
++msgstr ""
++
+ msgid "failed to modify sparse-index config"
+ msgstr ""
+ 
+@@ -11564,6 +11590,10 @@
+ msgid "failed to write correct number of base graph ids"
+ msgstr ""
+ 
++#, c-format
++msgid "failed to write loose object index %s\n"
++msgstr ""
++
+ msgid "failed to write multi-pack-index"
+ msgstr ""
+ 
+@@ -14223,6 +14253,9 @@
+ msgid "make reflogs head nodes (default)"
+ msgstr ""
+ 
++msgid "make replay advance given branch"
++msgstr ""
++
+ msgid "make sure the patch is applicable to the current index"
+ msgstr ""
+ 
+@@ -14479,6 +14512,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "missing mapping of %s to %s"
++msgstr ""
++
++#, c-format
+ msgid "missing notes on source object %s. Cannot copy."
+ msgstr ""
+ 
+@@ -14586,9 +14623,6 @@
+ msgid "multi-pack-index OID fanout is of the wrong size"
+ msgstr ""
+ 
+-msgid "multi-pack-index OID lookup chunk is the wrong size"
+-msgstr ""
+-
+ #, c-format
+ msgid "multi-pack-index file %s is too small"
+ msgstr ""
+@@ -14603,9 +14637,6 @@
+ msgid "multi-pack-index large offset out of bounds"
+ msgstr ""
+ 
+-msgid "multi-pack-index object offset chunk is the wrong size"
+-msgstr ""
+-
+ #, c-format
+ msgid "multi-pack-index pack names out of order: '%s' before '%s'"
+ msgstr ""
+@@ -14724,6 +14755,9 @@
+ msgid "need exactly one range"
+ msgstr ""
+ 
++msgid "need some commits to replay"
++msgstr ""
++
+ msgid "need two commit ranges"
+ msgstr ""
+ 
+@@ -14773,7 +14807,7 @@
+ msgid "new object is the same as the old one: '%s'"
+ msgstr ""
+ 
+-msgid "new unparented branch"
++msgid "new unborn branch"
+ msgstr ""
+ 
+ msgid "new-branch"
+@@ -14887,6 +14921,9 @@
+ msgid "no note found for object %s."
+ msgstr ""
+ 
++msgid "no object format specified"
++msgstr ""
++
+ msgid "no pack files to index."
+ msgstr ""
+ 
+@@ -15423,10 +15460,6 @@
+ msgid "only one config file at a time"
+ msgstr ""
+ 
+-#, c-format
+-msgid "only one of '%s', '%s' or '%s' can be given"
+-msgstr ""
+-
+ msgid "only one pattern can be given with -l"
+ msgstr ""
+ 
+@@ -15507,6 +15540,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "option '%s' and commit-ish cannot be used together"
++msgstr ""
++
++#, c-format
+ msgid "option '%s' and commit-ishes cannot be used together"
+ msgstr ""
+ 
+@@ -15518,6 +15555,9 @@
+ msgid "option '%s' must come before non-option arguments"
+ msgstr ""
+ 
++msgid "option --onto or --advance is mandatory"
++msgstr ""
++
+ #, c-format
+ msgid "option `%s' expects \"%s\" or \"%s\""
+ msgstr ""
+@@ -15582,10 +15622,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "options '%s', and '%s' cannot be used together"
+-msgstr ""
+-
+-#, c-format
+ msgid "options '-%c', '-%c', and '%s' cannot be used together"
+ msgstr ""
+ 
+@@ -16904,6 +16940,15 @@
+ msgid "replacement %s not found for %s"
+ msgstr ""
+ 
++msgid "replay onto given commit"
++msgstr ""
++
++msgid "replaying down to root commit is not supported yet!"
++msgstr ""
++
++msgid "replaying merge commits is not supported yet!"
++msgstr ""
++
+ msgid "repo"
+ msgstr ""
+ 
+@@ -17843,6 +17888,10 @@
+ msgid "some prerequisite commits exist in the object store, but are not connected to the repository's history"
+ msgstr ""
+ 
++#, c-format
++msgid "some rev walking options will be overridden as '%s' bit in 'struct rev_info' will be forced"
++msgstr ""
++
+ msgid "sort output according to the number of commits per author"
+ msgstr ""
+ 
+@@ -18877,6 +18926,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unable to map %s %s in commit object"
++msgstr ""
++
++#, c-format
+ msgid "unable to mmap %s"
+ msgstr ""
+ 
+@@ -19287,9 +19340,6 @@
+ msgid "unhandled object '%s' given."
+ msgstr ""
+ 
+-msgid "unhandled options"
+-msgstr ""
+-
+ msgid "unknown"
+ msgstr ""
+ 
+@@ -19436,6 +19486,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unknown style '%s' given for '%s'"
++msgstr ""
++
++#, c-format
+ msgid "unknown subcommand: `%s'"
+ msgstr ""
+ 
+@@ -19615,6 +19669,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unsupported object format: %s"
++msgstr ""
++
++#, c-format
+ msgid "unsupported section for hidden refs: %s"
+ msgstr ""
+ 
+@@ -20245,6 +20303,9 @@
+ msgid "write multi-pack index containing only given indexes"
+ msgstr ""
+ 
++msgid "write new objects to a pack instead of as loose"
++msgstr ""
++
+ msgid "write out the index even if is not flagged as changed"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-pot --------------------
+
+level=error msg="config variable 'commitGraph.changedPathsVersion' in manpage does not match string in pot file:"
+level=error msg="    >> msgid   \"attempting to write a commit-graph, but 'commitgraph.changedPathsVersion' (%d) is not supported\""
+
+ERROR: fail to execute "git-po-helper check-pot"
