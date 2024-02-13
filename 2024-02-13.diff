@@ -283,3 +283,307 @@
  msgid "unsupported section for hidden refs: %s"
  msgstr ""
  
+
+
+#################### Tue, 13 Feb 2024 20:57:33 +0000 ####################
+
+--- po/git.pot.old	2024-02-13 20:57:33.317043978 +0000
++++ po/git.pot.new	2024-02-13 20:57:33.389043881 +0000
+@@ -802,6 +802,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "%s must be non-negative"
++msgstr ""
++
++#, c-format
+ msgid "%s not allowed: %s:%d"
+ msgstr ""
+ 
+@@ -1178,6 +1182,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "'%s' already specified as '%s'"
++msgstr ""
++
++#, c-format
+ msgid "'%s' and pathspec arguments cannot be used together"
+ msgstr ""
+ 
+@@ -3514,6 +3522,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Failed to convert object from %s to %s"
++msgstr ""
++
++#, c-format
+ msgid "Failed to copy notes from '%s' to '%s'"
+ msgstr ""
+ 
+@@ -7369,6 +7381,9 @@
+ msgid "also consider packs and alternate objects"
+ msgstr ""
+ 
++msgid "also include HEAD ref and pseudorefs"
++msgstr ""
++
+ msgid "also read contacts from stdin"
+ msgstr ""
+ 
+@@ -7545,6 +7560,10 @@
+ msgid "attempting to mmap %<PRIuMAX> over limit %<PRIuMAX>"
+ msgstr ""
+ 
++#, c-format
++msgid "attempting to write a commit-graph, but 'commitgraph.changedPathsVersion' (%d) is not supported"
++msgstr ""
++
+ msgid "attempting to write a commit-graph, but 'core.commitGraph' is disabled"
+ msgstr ""
+ 
+@@ -7571,6 +7590,10 @@
+ msgid "bad %s"
+ msgstr ""
+ 
++#, c-format
++msgid "bad %s in commit"
++msgstr ""
++
+ msgid "bad --attr-source or GIT_ATTR_SOURCE"
+ msgstr ""
+ 
+@@ -7730,6 +7753,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "bad ref for %s"
++msgstr ""
++
++#, c-format
+ msgid "bad replace ref name: %s"
+ msgstr ""
+ 
+@@ -8324,6 +8351,30 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "cannot lock ref '%s': error reading reference"
++msgstr ""
++
++#, c-format
++msgid "cannot lock ref '%s': is at %s but expected %s"
++msgstr ""
++
++#, c-format
++msgid "cannot lock ref '%s': reference already exists"
++msgstr ""
++
++#, c-format
++msgid "cannot lock ref '%s': reference is missing but expected %s"
++msgstr ""
++
++#, c-format
++msgid "cannot lock ref '%s': unable to resolve reference '%s'"
++msgstr ""
++
++#, c-format
++msgid "cannot map object %s to %s"
++msgstr ""
++
++#, c-format
+ msgid "cannot merge graph %s, too many commits: %<PRIuMAX>"
+ msgstr ""
+ 
+@@ -9553,6 +9604,10 @@
+ msgid "could not parse HEAD commit"
+ msgstr ""
+ 
++#, c-format
++msgid "could not parse as tree '%s'"
++msgstr ""
++
+ msgid "could not parse author script"
+ msgstr ""
+ 
+@@ -9965,6 +10020,10 @@
+ msgid "could not write index"
+ msgstr ""
+ 
++#, c-format
++msgid "could not write loose object index %s"
++msgstr ""
++
+ msgid "could not write multi-pack bitmap"
+ msgstr ""
+ 
+@@ -10377,6 +10436,10 @@
+ msgid "disable rename detection"
+ msgstr ""
+ 
++#, c-format
++msgid "disabling Bloom filters for commit-graph layer '%s' due to incompatible settings"
++msgstr ""
++
+ msgid "disabling bitmap writing, as some objects are not being packed"
+ msgstr ""
+ 
+@@ -11160,6 +11223,9 @@
+ msgid "failed to create temporary file"
+ msgstr ""
+ 
++msgid "failed to decode tree entry"
++msgstr ""
++
+ #, c-format
+ msgid "failed to delete '%s'"
+ msgstr ""
+@@ -11327,6 +11393,10 @@
+ msgid "failed to make %s readable"
+ msgstr ""
+ 
++#, c-format
++msgid "failed to map tree entry for %s"
++msgstr ""
++
+ msgid "failed to modify sparse-index config"
+ msgstr ""
+ 
+@@ -11579,6 +11649,10 @@
+ msgid "failed to write correct number of base graph ids"
+ msgstr ""
+ 
++#, c-format
++msgid "failed to write loose object index %s\n"
++msgstr ""
++
+ msgid "failed to write multi-pack-index"
+ msgstr ""
+ 
+@@ -14498,6 +14572,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "missing mapping of %s to %s"
++msgstr ""
++
++#, c-format
+ msgid "missing notes on source object %s. Cannot copy."
+ msgstr ""
+ 
+@@ -14675,6 +14753,14 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "multiple updates for '%s' (including one via symref '%s') are not allowed"
++msgstr ""
++
++#, c-format
++msgid "multiple updates for 'HEAD' (including one via its referent '%s') are not allowed"
++msgstr ""
++
++#, c-format
+ msgid "multiple updates for ref '%s' not allowed"
+ msgstr ""
+ 
+@@ -14909,6 +14995,9 @@
+ msgid "no note found for object %s."
+ msgstr ""
+ 
++msgid "no object format specified"
++msgstr ""
++
+ msgid "no pack files to index."
+ msgstr ""
+ 
+@@ -16650,6 +16739,18 @@
+ msgid "refmap"
+ msgstr ""
+ 
++#, c-format
++msgid "refname %s is a symbolic ref, copying it is not supported"
++msgstr ""
++
++#, c-format
++msgid "refname %s not found"
++msgstr ""
++
++#, c-format
++msgid "refname is dangerous: %s"
++msgstr ""
++
+ msgid "reformat multiline trailer values as single-line values"
+ msgstr ""
+ 
+@@ -16668,6 +16769,14 @@
+ msgid "refspec"
+ msgstr ""
+ 
++#, c-format
++msgid "reftable: transaction failure: %s"
++msgstr ""
++
++#, c-format
++msgid "reftable: transaction prepare: %s"
++msgstr ""
++
+ #. TRANSLATORS: the first %s will be replaced by a git
+ #. notes command: 'add', 'merge', 'remove', etc.
+ #.
+@@ -18629,6 +18738,14 @@
+ msgid "trying to write commit not in index"
+ msgstr ""
+ 
++#, c-format
++msgid "trying to write non-commit object %s to branch '%s'"
++msgstr ""
++
++#, c-format
++msgid "trying to write ref '%s' with nonexistent object %s"
++msgstr ""
++
+ msgid "two output directories?"
+ msgstr ""
+ 
+@@ -18912,6 +19029,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unable to map %s %s in commit object"
++msgstr ""
++
++#, c-format
+ msgid "unable to mmap %s"
+ msgstr ""
+ 
+@@ -19064,6 +19185,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unable to read tree %s"
++msgstr ""
++
++#, c-format
+ msgid "unable to read tree (%s)"
+ msgstr ""
+ 
+@@ -19655,6 +19780,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unsupported object format: %s"
++msgstr ""
++
++#, c-format
+ msgid "unsupported section for hidden refs: %s"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-pot --------------------
+
+level=error msg="config variable 'commitGraph.changedPathsVersion' in manpage does not match string in pot file:"
+level=error msg="    >> msgid   \"attempting to write a commit-graph, but 'commitgraph.changedPathsVersion' (%d) is not supported\""
+
+ERROR: fail to execute "git-po-helper check-pot"
