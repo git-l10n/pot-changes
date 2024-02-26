@@ -43,9 +43,9 @@ jobs:
           ) &&
           if diff footprint.remote footprint.last
           then
-            echo ::set-output name=status::skip
+            echo "status=skip" >> $GITHUB_OUTPUT
           else
-            echo ::set-output name=status::no
+            echo "status=no" >> $GITHUB_OUTPUT
           fi
       - name: clone pot/${{ matrix.branch }} branch of current repository
         if: steps.skip-if-redundant.outputs.status != 'skip'
