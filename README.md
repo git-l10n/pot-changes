@@ -9,6 +9,6 @@ git.git repository and show diffs on a daily basis.
 Please switch to the following branch to access the "po/git.pot" file
 generated from the corresponding branch of the git.git repository.
 
- * [pot/main](../../tree/pot/main)
+ * [pot/master](../../tree/pot/master)
  * [pot/next](../../tree/pot/next)
  * [pot/seen](../../tree/pot/seen)
