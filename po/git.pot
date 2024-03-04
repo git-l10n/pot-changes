@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2024-03-02 21:57+0000\n"
+"POT-Creation-Date: 2024-03-04 22:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -817,7 +817,7 @@ msgstr ""
 #: builtin/add.c:391 builtin/add.c:403 builtin/branch.c:828
 #: builtin/checkout-index.c:275 builtin/checkout.c:482 builtin/checkout.c:485
 #: builtin/checkout.c:1759 builtin/checkout.c:1869 builtin/checkout.c:1872
-#: builtin/clean.c:974 builtin/clone.c:976 builtin/clone.c:981
+#: builtin/clean.c:964 builtin/clone.c:976 builtin/clone.c:981
 #: builtin/commit.c:367 builtin/commit.c:370 builtin/commit.c:1215
 #: builtin/commit.c:1271 builtin/commit.c:1288 builtin/describe.c:614
 #: builtin/diff-tree.c:164 builtin/difftool.c:744 builtin/fast-export.c:1262
@@ -835,7 +835,7 @@ msgstr ""
 #: builtin/submodule--helper.c:2960 builtin/tag.c:559 builtin/tag.c:606
 #: builtin/worktree.c:730 builtin/worktree.c:733 builtin/worktree.c:806
 #: builtin/worktree.c:809 builtin/worktree.c:812 builtin/worktree.c:1053
-#: parse-options.c:280 parse-options.c:1317 range-diff.c:572 revision.c:2460
+#: parse-options.c:280 parse-options.c:1326 range-diff.c:572 revision.c:2460
 #: revision.c:2465 revision.c:2469 revision.c:2478 revision.c:2483
 #: revision.c:2714 revision.c:2785 revision.c:2797 revision.c:2803
 #: revision.c:2822 revision.c:2830 revision.c:2838 revision.c:3121
@@ -2198,7 +2198,7 @@ msgid ""
 msgstr ""
 
 #: builtin/add.c:462 builtin/check-ignore.c:185 builtin/checkout.c:565
-#: builtin/checkout.c:780 builtin/clean.c:1024 builtin/commit.c:387
+#: builtin/checkout.c:780 builtin/clean.c:1014 builtin/commit.c:387
 #: builtin/diff-tree.c:131 builtin/grep.c:556 builtin/mv.c:202
 #: builtin/reset.c:455 builtin/rm.c:302 builtin/submodule--helper.c:208
 #: builtin/submodule--helper.c:3239 read-cache.c:2060 read-cache.c:2378
@@ -4748,16 +4748,8 @@ msgstr ""
 msgid "remove only ignored files"
 msgstr ""
 
-#: builtin/clean.c:959
-msgid ""
-"clean.requireForce set to true and neither -i, -n, nor -f given; refusing to "
-"clean"
-msgstr ""
-
-#: builtin/clean.c:962
-msgid ""
-"clean.requireForce defaults to true and neither -i, -n, nor -f given; "
-"refusing to clean"
+#: builtin/clean.c:954
+msgid "clean.requireForce is true and -f not given: refusing to clean"
 msgstr ""
 
 #: builtin/clone.c:57
@@ -5036,7 +5028,7 @@ msgstr ""
 msgid "You must specify a repository to clone."
 msgstr ""
 
-#: builtin/clone.c:968 builtin/init-db.c:170 setup.c:2192
+#: builtin/clone.c:968 builtin/init-db.c:170 setup.c:2165
 #, c-format
 msgid "unknown ref storage format '%s'"
 msgstr ""
@@ -8377,7 +8369,7 @@ msgstr ""
 msgid "'%s' is aliased to '%s'"
 msgstr ""
 
-#: builtin/help.c:585 git.c:395
+#: builtin/help.c:585 git.c:393
 #, c-format
 msgid "bad alias.%s string: %s"
 msgstr ""
@@ -8668,7 +8660,7 @@ msgstr ""
 msgid "bad %s"
 msgstr ""
 
-#: builtin/index-pack.c:1843 builtin/init-db.c:164 setup.c:2173
+#: builtin/index-pack.c:1843 builtin/init-db.c:164 setup.c:2146
 #, c-format
 msgid "unknown hash algorithm '%s'"
 msgstr ""
@@ -10768,7 +10760,7 @@ msgstr ""
 msgid "use notes from <notes-ref>"
 msgstr ""
 
-#: builtin/notes.c:1123 builtin/remote.c:1783 parse-options.c:858
+#: builtin/notes.c:1123 builtin/remote.c:1783 parse-options.c:867
 #, c-format
 msgid "unknown subcommand: `%s'"
 msgstr ""
@@ -16096,7 +16088,7 @@ msgstr ""
 msgid "try to match the new branch name with a remote-tracking branch"
 msgstr ""
 
-#: builtin/worktree.c:804 diff.c:4827 parse-options.c:1313
+#: builtin/worktree.c:804 diff.c:4827 parse-options.c:1322
 #, c-format
 msgid "options '%s', '%s', and '%s' cannot be used together"
 msgstr ""
@@ -18719,7 +18711,7 @@ msgstr ""
 msgid "pathspec magic not supported by --follow: %s"
 msgstr ""
 
-#: diff.c:4823 parse-options.c:1309
+#: diff.c:4823 parse-options.c:1318
 #, c-format
 msgid "options '%s', '%s', '%s', and '%s' cannot be used together"
 msgstr ""
@@ -19704,63 +19696,63 @@ msgstr ""
 msgid "unknown option: %s\n"
 msgstr ""
 
-#: git.c:390
+#: git.c:388
 #, c-format
 msgid "while expanding alias '%s': '%s'"
 msgstr ""
 
-#: git.c:399
+#: git.c:397
 #, c-format
 msgid ""
 "alias '%s' changes environment variables.\n"
 "You can use '!git' in the alias to do this"
 msgstr ""
 
-#: git.c:406
+#: git.c:404
 #, c-format
 msgid "empty alias for %s"
 msgstr ""
 
-#: git.c:409
+#: git.c:407
 #, c-format
 msgid "recursive alias: %s"
 msgstr ""
 
-#: git.c:490
+#: git.c:484
 msgid "write failure on standard output"
 msgstr ""
 
-#: git.c:492
+#: git.c:486
 msgid "unknown write failure on standard output"
 msgstr ""
 
-#: git.c:494
+#: git.c:488
 msgid "close failed on standard output"
 msgstr ""
 
-#: git.c:846
+#: git.c:840
 #, c-format
 msgid "alias loop detected: expansion of '%s' does not terminate:%s"
 msgstr ""
 
-#: git.c:896
+#: git.c:890
 #, c-format
 msgid "cannot handle %s as a builtin"
 msgstr ""
 
-#: git.c:907
+#: git.c:901
 #, c-format
 msgid ""
 "usage: %s\n"
 "\n"
 msgstr ""
 
-#: git.c:933
+#: git.c:927
 #, c-format
 msgid "expansion of alias '%s' failed; '%s' is not a git command\n"
 msgstr ""
 
-#: git.c:945
+#: git.c:939
 #, c-format
 msgid "failed to run command '%s': %s\n"
 msgstr ""
@@ -21801,45 +21793,45 @@ msgstr ""
 msgid "%s expects a non-negative integer value with an optional k/m/g suffix"
 msgstr ""
 
-#: parse-options.c:434
+#: parse-options.c:440
 #, c-format
 msgid "ambiguous option: %s (could be --%s%s or --%s%s)"
 msgstr ""
 
-#: parse-options.c:480 parse-options.c:488
+#: parse-options.c:489 parse-options.c:497
 #, c-format
 msgid "did you mean `--%s` (with two dashes)?"
 msgstr ""
 
-#: parse-options.c:767 parse-options.c:1230
+#: parse-options.c:776 parse-options.c:1239
 #, c-format
 msgid "alias of --%s"
 msgstr ""
 
-#: parse-options.c:1030
+#: parse-options.c:1039
 msgid "need a subcommand"
 msgstr ""
 
-#: parse-options.c:1036
+#: parse-options.c:1045
 #, c-format
 msgid "unknown option `%s'"
 msgstr ""
 
-#: parse-options.c:1038
+#: parse-options.c:1047
 #, c-format
 msgid "unknown switch `%c'"
 msgstr ""
 
-#: parse-options.c:1040
+#: parse-options.c:1049
 #, c-format
 msgid "unknown non-ascii option in string: `%s'"
 msgstr ""
 
-#: parse-options.c:1069
+#: parse-options.c:1078
 msgid "..."
 msgstr ""
 
-#: parse-options.c:1106
+#: parse-options.c:1115
 #, c-format
 msgid "usage: %s"
 msgstr ""
@@ -21847,7 +21839,7 @@ msgstr ""
 #. TRANSLATORS: the colon here should align with the
 #. one in "usage: %s" translation.
 #.
-#: parse-options.c:1121
+#: parse-options.c:1130
 #, c-format
 msgid "   or: %s"
 msgstr ""
@@ -21871,21 +21863,21 @@ msgstr ""
 #. translated) N_() usage string, which contained embedded
 #. newlines before we split it up.
 #.
-#: parse-options.c:1142
+#: parse-options.c:1151
 #, c-format
 msgid "%*s%s"
 msgstr ""
 
-#: parse-options.c:1165
+#: parse-options.c:1174
 #, c-format
 msgid "    %s"
 msgstr ""
 
-#: parse-options.c:1222
+#: parse-options.c:1231
 msgid "-NUM"
 msgstr ""
 
-#: parse-options.c:1251
+#: parse-options.c:1260
 #, c-format
 msgid "opposite of --no-%s"
 msgstr ""
@@ -24802,46 +24794,46 @@ msgstr ""
 msgid "re-init: ignored --initial-branch=%s"
 msgstr ""
 
-#: setup.c:2148
+#: setup.c:2121
 #, c-format
 msgid "unable to handle file type %d"
 msgstr ""
 
-#: setup.c:2151
+#: setup.c:2124
 #, c-format
 msgid "unable to move %s to %s"
 msgstr ""
 
-#: setup.c:2167
+#: setup.c:2140
 msgid "attempt to reinitialize repository with different hash"
 msgstr ""
 
-#: setup.c:2186
+#: setup.c:2159
 msgid ""
 "attempt to reinitialize repository with different reference storage format"
 msgstr ""
 
-#: setup.c:2213 setup.c:2216
+#: setup.c:2185 setup.c:2188
 #, c-format
 msgid "%s already exists"
 msgstr ""
 
-#: setup.c:2287
+#: setup.c:2257
 #, c-format
 msgid "Reinitialized existing shared Git repository in %s%s\n"
 msgstr ""
 
-#: setup.c:2288
+#: setup.c:2258
 #, c-format
 msgid "Reinitialized existing Git repository in %s%s\n"
 msgstr ""
 
-#: setup.c:2292
+#: setup.c:2262
 #, c-format
 msgid "Initialized empty shared Git repository in %s%s\n"
 msgstr ""
 
-#: setup.c:2293
+#: setup.c:2263
 #, c-format
 msgid "Initialized empty Git repository in %s%s\n"
 msgstr ""
