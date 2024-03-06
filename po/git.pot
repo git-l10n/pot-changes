@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2024-02-29 23:57+0000\n"
+"POT-Creation-Date: 2024-03-06 22:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -817,7 +817,7 @@ msgstr ""
 #: builtin/add.c:391 builtin/add.c:403 builtin/branch.c:828
 #: builtin/checkout-index.c:275 builtin/checkout.c:482 builtin/checkout.c:485
 #: builtin/checkout.c:1757 builtin/checkout.c:1867 builtin/checkout.c:1870
-#: builtin/clean.c:974 builtin/clone.c:976 builtin/clone.c:981
+#: builtin/clean.c:964 builtin/clone.c:976 builtin/clone.c:981
 #: builtin/commit.c:367 builtin/commit.c:370 builtin/commit.c:1215
 #: builtin/commit.c:1271 builtin/commit.c:1288 builtin/describe.c:614
 #: builtin/diff-tree.c:164 builtin/difftool.c:744 builtin/fast-export.c:1262
@@ -1393,7 +1393,7 @@ msgid "ensure at least <n> lines of context match"
 msgstr ""
 
 #: apply.c:5118 builtin/am.c:2327 builtin/am.c:2330
-#: builtin/interpret-trailers.c:202 builtin/interpret-trailers.c:204
+#: builtin/interpret-trailers.c:105 builtin/interpret-trailers.c:107
 #: builtin/pack-objects.c:4376 builtin/rebase.c:1100
 msgid "action"
 msgstr ""
@@ -2198,7 +2198,7 @@ msgid ""
 msgstr ""
 
 #: builtin/add.c:462 builtin/check-ignore.c:185 builtin/checkout.c:565
-#: builtin/checkout.c:780 builtin/clean.c:1024 builtin/commit.c:387
+#: builtin/checkout.c:780 builtin/clean.c:1014 builtin/commit.c:387
 #: builtin/diff-tree.c:131 builtin/grep.c:556 builtin/mv.c:202
 #: builtin/reset.c:455 builtin/rm.c:302 builtin/submodule--helper.c:208
 #: builtin/submodule--helper.c:3239 read-cache.c:2060 read-cache.c:2378
@@ -4748,16 +4748,8 @@ msgstr ""
 msgid "remove only ignored files"
 msgstr ""
 
-#: builtin/clean.c:959
-msgid ""
-"clean.requireForce set to true and neither -i, -n, nor -f given; refusing to "
-"clean"
-msgstr ""
-
-#: builtin/clean.c:962
-msgid ""
-"clean.requireForce defaults to true and neither -i, -n, nor -f given; "
-"refusing to clean"
+#: builtin/clean.c:954
+msgid "clean.requireForce is true and -f not given: refusing to clean"
 msgstr ""
 
 #: builtin/clone.c:57
@@ -5809,7 +5801,7 @@ msgstr ""
 msgid "the commit is authored by me now (used with -C/-c/--amend)"
 msgstr ""
 
-#: builtin/commit.c:1651 builtin/interpret-trailers.c:213
+#: builtin/commit.c:1651 builtin/interpret-trailers.c:116
 msgid "trailer"
 msgstr ""
 
@@ -8740,99 +8732,66 @@ msgstr ""
 msgid "--separate-git-dir incompatible with bare repository"
 msgstr ""
 
-#: builtin/interpret-trailers.c:17
+#: builtin/interpret-trailers.c:16
 msgid ""
 "git interpret-trailers [--in-place] [--trim-empty]\n"
 "                       [(--trailer (<key>|<keyAlias>)[(=|:)<value>])...]\n"
 "                       [--parse] [<file>...]"
 msgstr ""
 
-#: builtin/interpret-trailers.c:105 wrapper.c:728
-#, c-format
-msgid "could not stat %s"
-msgstr ""
-
-#: builtin/interpret-trailers.c:107
-#, c-format
-msgid "file %s is not a regular file"
-msgstr ""
-
-#: builtin/interpret-trailers.c:109
-#, c-format
-msgid "file %s is not writable by user"
-msgstr ""
-
-#: builtin/interpret-trailers.c:121
-msgid "could not open temporary file"
-msgstr ""
-
-#: builtin/interpret-trailers.c:130
-#, c-format
-msgid "could not read input file '%s'"
-msgstr ""
-
-#: builtin/interpret-trailers.c:133 builtin/mktag.c:92 imap-send.c:1568
-msgid "could not read from stdin"
-msgstr ""
-
-#: builtin/interpret-trailers.c:186
-#, c-format
-msgid "could not rename temporary file to %s"
-msgstr ""
-
-#: builtin/interpret-trailers.c:197
+#: builtin/interpret-trailers.c:100
 msgid "edit files in place"
 msgstr ""
 
-#: builtin/interpret-trailers.c:198
+#: builtin/interpret-trailers.c:101
 msgid "trim empty trailers"
 msgstr ""
 
-#: builtin/interpret-trailers.c:200
+#: builtin/interpret-trailers.c:103
 msgid "placement"
 msgstr ""
 
-#: builtin/interpret-trailers.c:201
+#: builtin/interpret-trailers.c:104
 msgid "where to place the new trailer"
 msgstr ""
 
-#: builtin/interpret-trailers.c:203
+#: builtin/interpret-trailers.c:106
 msgid "action if trailer already exists"
 msgstr ""
 
-#: builtin/interpret-trailers.c:205
+#: builtin/interpret-trailers.c:108
 msgid "action if trailer is missing"
 msgstr ""
 
-#: builtin/interpret-trailers.c:207
+#: builtin/interpret-trailers.c:110
 msgid "output only the trailers"
 msgstr ""
 
-#: builtin/interpret-trailers.c:208
+#: builtin/interpret-trailers.c:111
 msgid "do not apply trailer.* configuration variables"
 msgstr ""
 
-#: builtin/interpret-trailers.c:209
+#: builtin/interpret-trailers.c:112
 msgid "reformat multiline trailer values as single-line values"
 msgstr ""
 
-#: builtin/interpret-trailers.c:210
+#: builtin/interpret-trailers.c:113
 msgid "alias for --only-trailers --only-input --unfold"
 msgstr ""
 
-#: builtin/interpret-trailers.c:212
+#: builtin/interpret-trailers.c:115
 msgid "do not treat \"---\" as the end of input"
 msgstr ""
 
-#: builtin/interpret-trailers.c:214
+#: builtin/interpret-trailers.c:117
 msgid "trailer(s) to add"
 msgstr ""
 
-#: builtin/interpret-trailers.c:225
+#: builtin/interpret-trailers.c:128
 msgid "--trailer with --only-input does not make sense"
 msgstr ""
 
-#: builtin/interpret-trailers.c:235
+#: builtin/interpret-trailers.c:138
 msgid "no input file given for in-place editing"
 msgstr ""
 
@@ -10160,6 +10119,10 @@ msgstr ""
 #: builtin/mktag.c:63
 #, c-format
 msgid "object '%s' tagged as '%s', but is a '%s' type"
+msgstr ""
+
+#: builtin/mktag.c:92 imap-send.c:1568 trailer.c:785
+msgid "could not read from stdin"
 msgstr ""
 
 #: builtin/mktag.c:101
@@ -19286,17 +19249,17 @@ msgid ""
 "Please specify a directory on the command line"
 msgstr ""
 
-#: dir.c:3948
+#: dir.c:3968
 #, c-format
 msgid "index file corrupt in repo %s"
 msgstr ""
 
-#: dir.c:3995 dir.c:4000
+#: dir.c:4015 dir.c:4020
 #, c-format
 msgid "could not create directories for %s"
 msgstr ""
 
-#: dir.c:4029
+#: dir.c:4049
 #, c-format
 msgid "could not migrate git directory from '%s' to '%s'"
 msgstr ""
@@ -22751,75 +22714,75 @@ msgstr ""
 msgid "could not delete references: %s"
 msgstr ""
 
-#: refs/reftable-backend.c:409
+#: refs/reftable-backend.c:410
 #, c-format
 msgid "refname is dangerous: %s"
 msgstr ""
 
-#: refs/reftable-backend.c:801
+#: refs/reftable-backend.c:803
 #, c-format
 msgid "trying to write ref '%s' with nonexistent object %s"
 msgstr ""
 
-#: refs/reftable-backend.c:808
+#: refs/reftable-backend.c:810
 #, c-format
 msgid "trying to write non-commit object %s to branch '%s'"
 msgstr ""
 
-#: refs/reftable-backend.c:834
+#: refs/reftable-backend.c:836
 #, c-format
 msgid ""
 "multiple updates for 'HEAD' (including one via its referent '%s') are not "
 "allowed"
 msgstr ""
 
-#: refs/reftable-backend.c:882
+#: refs/reftable-backend.c:884
 #, c-format
 msgid "cannot lock ref '%s': unable to resolve reference '%s'"
 msgstr ""
 
-#: refs/reftable-backend.c:900
+#: refs/reftable-backend.c:902
 #, c-format
 msgid "cannot lock ref '%s': error reading reference"
 msgstr ""
 
-#: refs/reftable-backend.c:936
+#: refs/reftable-backend.c:938
 #, c-format
 msgid ""
 "multiple updates for '%s' (including one via symref '%s') are not allowed"
 msgstr ""
 
-#: refs/reftable-backend.c:955
+#: refs/reftable-backend.c:957
 #, c-format
 msgid "cannot lock ref '%s': reference already exists"
 msgstr ""
 
-#: refs/reftable-backend.c:959
+#: refs/reftable-backend.c:961
 #, c-format
 msgid "cannot lock ref '%s': reference is missing but expected %s"
 msgstr ""
 
-#: refs/reftable-backend.c:964
+#: refs/reftable-backend.c:966
 #, c-format
 msgid "cannot lock ref '%s': is at %s but expected %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1003
+#: refs/reftable-backend.c:1005
 #, c-format
 msgid "reftable: transaction prepare: %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1192
+#: refs/reftable-backend.c:1194
 #, c-format
 msgid "reftable: transaction failure: %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1348
+#: refs/reftable-backend.c:1350
 #, c-format
 msgid "refname %s not found"
 msgstr ""
 
-#: refs/reftable-backend.c:1352
+#: refs/reftable-backend.c:1354
 #, c-format
 msgid "refname %s is a symbolic ref, copying it is not supported"
 msgstr ""
@@ -25160,6 +25123,35 @@ msgstr ""
 #: trailer.c:762
 #, c-format
 msgid "empty trailer token in trailer '%.*s'"
+msgstr ""
+
+#: trailer.c:782
+#, c-format
+msgid "could not read input file '%s'"
+msgstr ""
+
+#: trailer.c:1056 wrapper.c:728
+#, c-format
+msgid "could not stat %s"
+msgstr ""
+
+#: trailer.c:1058
+#, c-format
+msgid "file %s is not a regular file"
+msgstr ""
+
+#: trailer.c:1060
+#, c-format
+msgid "file %s is not writable by user"
+msgstr ""
+
+#: trailer.c:1072
+msgid "could not open temporary file"
+msgstr ""
+
+#: trailer.c:1123
+#, c-format
+msgid "could not rename temporary file to %s"
 msgstr ""
 
 #: transport-helper.c:66 transport-helper.c:95
