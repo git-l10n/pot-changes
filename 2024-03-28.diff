@@ -1,0 +1,183 @@
+
+
+#################### Thu, 28 Mar 2024 23:57:39 +0000 ####################
+
+--- po/git.pot.old	2024-03-28 23:57:39.507581123 +0000
++++ po/git.pot.new	2024-03-28 23:57:39.579581140 +0000
+@@ -173,7 +173,7 @@
+ "\n"
+ "Write a message for tag:\n"
+ "  %s\n"
+-"Lines starting with '%c' will be ignored.\n"
++"Lines starting with '%s' will be ignored.\n"
+ msgstr ""
+ 
+ #, c-format
+@@ -181,7 +181,7 @@
+ "\n"
+ "Write a message for tag:\n"
+ "  %s\n"
+-"Lines starting with '%c' will be kept; you may remove them yourself if you want to.\n"
++"Lines starting with '%s' will be kept; you may remove them yourself if you want to.\n"
+ msgstr ""
+ 
+ msgid ""
+@@ -720,6 +720,10 @@
+ msgid "%s cannot be resolved to branch"
+ msgstr ""
+ 
++#, c-format
++msgid "%s cannot contain newline"
++msgstr ""
++
+ #. TRANSLATORS: This is a line of ambiguous commit
+ #. object output. E.g.:
+ #. *
+@@ -810,6 +814,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "%s must have at least one character"
++msgstr ""
++
++#, c-format
+ msgid "%s not allowed: %s:%d"
+ msgstr ""
+ 
+@@ -1694,7 +1702,7 @@
+ "---\n"
+ "To remove '%c' lines, make them ' ' lines (context).\n"
+ "To remove '%c' lines, delete them.\n"
+-"Lines starting with %c will be removed.\n"
++"Lines starting with %s will be removed.\n"
+ msgstr ""
+ 
+ msgid "--[no-]exclude-standard cannot be used for tracked contents"
+@@ -1744,6 +1752,9 @@
+ msgid "--command must be the first argument"
+ msgstr ""
+ 
++msgid "--comment is only applicable to add/set/replace operations"
++msgstr ""
++
+ msgid "--contents and --reverse do not blend well."
+ msgstr ""
+ 
+@@ -1771,6 +1782,9 @@
+ msgid "--dump-aliases incompatible with other options\n"
+ msgstr ""
+ 
++msgid "--empty=ask is deprecated; use '--empty=stop' instead."
++msgstr ""
++
+ msgid "--exclude-hidden= passed more than once"
+ msgstr ""
+ 
+@@ -4267,7 +4281,7 @@
+ 
+ #, c-format
+ msgid ""
+-"Lines starting with '%c' will be ignored, and an empty message aborts\n"
++"Lines starting with '%s' will be ignored, and an empty message aborts\n"
+ "the commit.\n"
+ msgstr ""
+ 
+@@ -4848,7 +4862,7 @@
+ msgid ""
+ "Please edit the description for the branch\n"
+ "  %s\n"
+-"Lines starting with '%c' will be stripped.\n"
++"Lines starting with '%s' will be stripped.\n"
+ msgstr ""
+ 
+ msgid ""
+@@ -4860,25 +4874,25 @@
+ #, c-format
+ msgid ""
+ "Please enter the commit message for your changes. Lines starting\n"
+-"with '%c' will be ignored, and an empty message aborts the commit.\n"
++"with '%s' will be ignored, and an empty message aborts the commit.\n"
+ msgstr ""
+ 
+ #, c-format
+ msgid ""
+ "Please enter the commit message for your changes. Lines starting\n"
+-"with '%c' will be ignored.\n"
++"with '%s' will be ignored.\n"
+ msgstr ""
+ 
+ #, c-format
+ msgid ""
+ "Please enter the commit message for your changes. Lines starting\n"
+-"with '%c' will be kept; you may remove them yourself if you want to.\n"
++"with '%s' will be kept; you may remove them yourself if you want to.\n"
+ msgstr ""
+ 
+ #, c-format
+ msgid ""
+ "Please enter the commit message for your changes. Lines starting\n"
+-"with '%c' will be kept; you may remove them yourself if you want to.\n"
++"with '%s' will be kept; you may remove them yourself if you want to.\n"
+ "An empty message aborts the commit.\n"
+ msgstr ""
+ 
+@@ -9103,9 +9117,6 @@
+ msgid "copy out the files from named stage"
+ msgstr ""
+ 
+-msgid "core.commentChar should only be one ASCII character"
+-msgstr ""
+-
+ msgid "core.fsmonitor is set; remove it if you really want to disable fsmonitor"
+ msgstr ""
+ 
+@@ -10289,6 +10300,9 @@
+ msgid "deprecated: use --annotate-stdin instead"
+ msgstr ""
+ 
++msgid "deprecated: use --empty=keep instead"
++msgstr ""
++
+ msgid "depth"
+ msgstr ""
+ 
+@@ -13271,6 +13285,9 @@
+ msgid "http transport does not support %s"
+ msgstr ""
+ 
++msgid "human-readable comment string (# will be prepended as needed)"
++msgstr ""
++
+ #, c-format
+ msgid ""
+ "hunks do not overlap:\n"
+@@ -14076,9 +14093,6 @@
+ msgid "keep non patch brackets in subject"
+ msgstr ""
+ 
+-msgid "keep redundant, empty commits"
+-msgstr ""
+-
+ msgid "keep subject"
+ msgstr ""
+ 
+@@ -14981,6 +14995,10 @@
+ msgid "no merge given, only parents."
+ msgstr ""
+ 
++#, c-format
++msgid "no multi-line comment allowed: '%s'"
++msgstr ""
++
+ msgid "no name was given and auto-detection is disabled"
+ msgstr ""
+ 
+@@ -19708,7 +19726,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unrecognized empty type '%s'; valid values are \"drop\", \"keep\", and \"ask\"."
++msgid "unrecognized empty type '%s'; valid values are \"drop\", \"keep\", and \"stop\"."
+ msgstr ""
+ 
+ #, c-format
