@@ -6554,3 +6554,3281 @@ level=error msg="config variable 'commitGraph.changedPathsVersion' in manpage do
 level=error msg="    >> msgid   \"attempting to write a commit-graph, but 'commitgraph.changedPathsVersion' (%d) is not supported\""
 
 ERROR: fail to execute "git-po-helper check-pot"
+
+
+#################### Fri, 29 Mar 2024 17:57:30 +0000 ####################
+
+--- po/git.pot.old	2024-03-29 17:57:30.207092528 +0000
++++ po/git.pot.new	2024-03-29 17:57:30.279093690 +0000
+@@ -173,7 +173,7 @@
+ "\n"
+ "Write a message for tag:\n"
+ "  %s\n"
+-"Lines starting with '%s' will be ignored.\n"
++"Lines starting with '%c' will be ignored.\n"
+ msgstr ""
+ 
+ #, c-format
+@@ -181,7 +181,7 @@
+ "\n"
+ "Write a message for tag:\n"
+ "  %s\n"
+-"Lines starting with '%s' will be kept; you may remove them yourself if you want to.\n"
++"Lines starting with '%c' will be kept; you may remove them yourself if you want to.\n"
+ msgstr ""
+ 
+ msgid ""
+@@ -362,7 +362,7 @@
+ msgid "  (use \"git merge --abort\" to abort the merge)"
+ msgstr ""
+ 
+-msgid "  (use \"git pull\" if you want to integrate the remote branch with yours)\n"
++msgid "  (use \"git pull\" to merge the remote branch into yours)\n"
+ msgstr ""
+ 
+ msgid "  (use \"git pull\" to update your local branch)\n"
+@@ -623,10 +623,6 @@
+ msgstr[1] ""
+ 
+ #, c-format
+-msgid "%d\n"
+-msgstr ""
+-
+-#, c-format
+ msgid "%d (FSCK_IGNORE?) should never trigger this callback"
+ msgstr ""
+ 
+@@ -683,6 +679,10 @@
+ msgid "%s - not something we can merge"
+ msgstr ""
+ 
++#, c-format
++msgid "%s : incompatible with something else"
++msgstr ""
++
+ #. TRANSLATORS: This is a line of ambiguous object
+ #. output shown when we cannot look up or parse the
+ #. object in question. E.g. "deadbeef [bad object]".
+@@ -720,10 +720,6 @@
+ msgid "%s cannot be resolved to branch"
+ msgstr ""
+ 
+-#, c-format
+-msgid "%s cannot contain newline"
+-msgstr ""
+-
+ #. TRANSLATORS: This is a line of ambiguous commit
+ #. object output. E.g.:
+ #. *
+@@ -750,10 +746,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "%s exists but is a symbolic ref"
+-msgstr ""
+-
+-#, c-format
+ msgid "%s expects <n>/<m> form"
+ msgstr ""
+ 
+@@ -786,6 +778,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "%s is incompatible with %s"
++msgstr ""
++
++#, c-format
+ msgid "%s is neither a commit nor blob"
+ msgstr ""
+ 
+@@ -810,26 +806,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "%s must be between 0 and 100, using default"
+-msgstr ""
+-
+-#, c-format
+-msgid "%s must be non-negative"
+-msgstr ""
+-
+-#, c-format
+-msgid "%s must be non-negative, using default"
+-msgstr ""
+-
+-#, c-format
+-msgid "%s must be positive, using default"
+-msgstr ""
+-
+-#, c-format
+-msgid "%s must have at least one character"
+-msgstr ""
+-
+-#, c-format
+ msgid "%s not allowed: %s:%d"
+ msgstr ""
+ 
+@@ -1056,11 +1032,11 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "%s: invalid sha1 pointer in cache-tree of %s"
++msgid "%s: invalid sha1 pointer in cache-tree"
+ msgstr ""
+ 
+ #, c-format
+-msgid "%s: invalid sha1 pointer in resolve-undo of %s"
++msgid "%s: invalid sha1 pointer in resolve-undo"
+ msgstr ""
+ 
+ #, c-format
+@@ -1206,10 +1182,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "'%s' already specified as '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "'%s' and pathspec arguments cannot be used together"
+ msgstr ""
+ 
+@@ -1322,11 +1294,11 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "'%s' is a symlink, refusing to clone with --local"
++msgid "'%s' is aliased to '%s'"
+ msgstr ""
+ 
+ #, c-format
+-msgid "'%s' is aliased to '%s'"
++msgid "'%s' is already checked out at '%s'"
+ msgstr ""
+ 
+ #, c-format
+@@ -1338,10 +1310,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "'%s' is already used by worktree at '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "'%s' is not a .git file, error code %d"
+ msgstr ""
+ 
+@@ -1418,10 +1386,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "'%s' is outside the directory tree"
+-msgstr ""
+-
+-#, c-format
+ msgid "'%s' matched multiple (%d) remote tracking branches"
+ msgstr ""
+ 
+@@ -1462,10 +1426,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "'%s', '%s', or '%s' cannot be used when checking out of a tree"
+-msgstr ""
+-
+-#, c-format
+ msgid ""
+ "'%s': cmd for supported man viewer.\n"
+ "Please consider using 'man.<tool>.path' instead."
+@@ -1588,16 +1548,9 @@
+ msgstr ""
+ 
+ #, perl-format
+-msgid "(%s) Malformed output from '%s'"
+-msgstr ""
+-
+-#, perl-format
+ msgid "(%s) failed to close pipe to '%s'"
+ msgstr ""
+ 
+-msgid "(EXPERIMENTAL!) git replay ([--contained] --onto <newbase> | --advance <branch>) <revision-range>..."
+-msgstr ""
+-
+ #, c-format
+ msgid "(HEAD detached at %s)"
+ msgstr ""
+@@ -1714,7 +1667,7 @@
+ "---\n"
+ "To remove '%c' lines, make them ' ' lines (context).\n"
+ "To remove '%c' lines, delete them.\n"
+-"Lines starting with %s will be removed.\n"
++"Lines starting with %c will be removed.\n"
+ msgstr ""
+ 
+ msgid "--[no-]exclude-standard cannot be used for tracked contents"
+@@ -1754,6 +1707,9 @@
+ msgid "--branch or --default required"
+ msgstr ""
+ 
++msgid "--bundle-uri is incompatible with --depth, --shallow-since, and --shallow-exclude"
++msgstr ""
++
+ msgid "--check does not make sense"
+ msgstr ""
+ 
+@@ -1764,9 +1720,6 @@
+ msgid "--command must be the first argument"
+ msgstr ""
+ 
+-msgid "--comment is only applicable to add/set/replace operations"
+-msgstr ""
+-
+ msgid "--contents and --reverse do not blend well."
+ msgstr ""
+ 
+@@ -1794,7 +1747,13 @@
+ msgid "--dump-aliases incompatible with other options\n"
+ msgstr ""
+ 
+-msgid "--empty=ask is deprecated; use '--empty=stop' instead."
++msgid "--exclude-hidden cannot be used together with --branches"
++msgstr ""
++
++msgid "--exclude-hidden cannot be used together with --remotes"
++msgstr ""
++
++msgid "--exclude-hidden cannot be used together with --tags"
+ msgstr ""
+ 
+ msgid "--exclude-hidden= passed more than once"
+@@ -1843,10 +1802,13 @@
+ msgid "--max-pack-size cannot be used to build a pack for transfer"
+ msgstr ""
+ 
+-msgid "--merge requires one of the pseudorefs MERGE_HEAD, CHERRY_PICK_HEAD, REVERT_HEAD or REBASE_HEAD"
++msgid "--merge-base does not work with ranges"
+ msgstr ""
+ 
+-msgid "--merge-base does not work with ranges"
++msgid "--merge-base is incompatible with --stdin"
++msgstr ""
++
++msgid "--merge-base only works with commits"
+ msgstr ""
+ 
+ msgid "--merge-base only works with two commits"
+@@ -1887,9 +1849,6 @@
+ msgid "--non-matching is only valid with --verbose"
+ msgstr ""
+ 
+-msgid "--onto and --advance are incompatible"
+-msgstr ""
+-
+ msgid "--open-files-in-pager only works on the worktree"
+ msgstr ""
+ 
+@@ -1920,9 +1879,6 @@
+ msgid "--raw only makes sense with --edit"
+ msgstr ""
+ 
+-msgid "--rebase-merges with an empty string argument is deprecated and will stop working in a future version of Git. Use --rebase-merges without an argument instead, which does the same thing."
+-msgstr ""
+-
+ msgid "--recurse-submodules can only be used to create branches"
+ msgstr ""
+ 
+@@ -1965,6 +1921,9 @@
+ msgid "--stdin requires a git repository"
+ msgstr ""
+ 
++msgid "--strategy requires --merge or --interactive"
++msgstr ""
++
+ msgid "--thin cannot be used to build an indexable pack"
+ msgstr ""
+ 
+@@ -2032,6 +1991,9 @@
+ msgid "-n requires an argument"
+ msgstr ""
+ 
++msgid "-x and -X cannot be used together"
++msgstr ""
++
+ msgid "-z only makes sense with --stdin"
+ msgstr ""
+ 
+@@ -2117,10 +2079,7 @@
+ msgid "<object>:<path> required, only <object> '%s' given"
+ msgstr ""
+ 
+-msgid "<paragraph-break>"
+-msgstr ""
+-
+-msgid "<param1>,<param2>..."
++msgid "<param1,param2>..."
+ msgstr ""
+ 
+ msgid "<path>"
+@@ -2559,6 +2518,34 @@
+ msgid "Blaming lines"
+ msgstr ""
+ 
++#, c-format
++msgid "Branch %s is being bisected at %s"
++msgstr ""
++
++#, c-format
++msgid "Branch %s is being rebased at %s"
++msgstr ""
++
++#, c-format
++msgid "Branch '%s' has no upstream information"
++msgstr ""
++
++msgid "Branch copy failed"
++msgstr ""
++
++msgid "Branch is copied, but update of config-file failed"
++msgstr ""
++
++msgid "Branch is renamed, but update of config-file failed"
++msgstr ""
++
++msgid "Branch rename failed"
++msgstr ""
++
++#, c-format
++msgid "Branch renamed to %s, but HEAD is not updated!"
++msgstr ""
++
+ msgid "Build a tree-object from ls-tree formatted text"
+ msgstr ""
+ 
+@@ -2752,6 +2739,10 @@
+ msgid "Cannot copy notes. Found existing notes for object %s. Use '-f' to overwrite existing notes"
+ msgstr ""
+ 
++#, c-format
++msgid "Cannot delete branch '%s' checked out at '%s'"
++msgstr ""
++
+ msgid "Cannot determine remote HEAD"
+ msgstr ""
+ 
+@@ -2780,6 +2771,9 @@
+ msgid "Cannot fetch both %s and %s to %s"
+ msgstr ""
+ 
++msgid "Cannot give description to detached HEAD"
++msgstr ""
++
+ msgid "Cannot initialize stash"
+ msgstr ""
+ 
+@@ -2893,8 +2887,7 @@
+ msgid "Checking %s link"
+ msgstr ""
+ 
+-#, c-format
+-msgid "Checking cache tree of %s"
++msgid "Checking cache tree"
+ msgstr ""
+ 
+ msgid "Checking connectivity"
+@@ -3025,7 +3018,7 @@
+ msgid "Compressing objects"
+ msgstr ""
+ 
+-msgid "Compute object ID and optionally create an object from a file"
++msgid "Compute object ID and optionally creates a blob from a file"
+ msgstr ""
+ 
+ msgid "Compute unique ID for a patch"
+@@ -3079,6 +3072,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Could not apply '%s'"
++msgstr ""
++
++#, c-format
+ msgid "Could not create directory for '%s'"
+ msgstr ""
+ 
+@@ -3219,6 +3216,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Could not stat '%s'"
++msgstr ""
++
++#, c-format
+ msgid "Could not unset core.worktree setting in submodule '%s'"
+ msgstr ""
+ 
+@@ -3229,7 +3230,11 @@
+ msgid "Could not write new index file."
+ msgstr ""
+ 
+-msgid "Could not write object file"
++msgid "Could not write patch"
++msgstr ""
++
++#, c-format
++msgid "Couldn't look up commit object for '%s'"
+ msgstr ""
+ 
+ msgid "Count unpacked number of objects and their disk consumption"
+@@ -3263,6 +3268,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Created a copy of a misnamed branch '%s'"
++msgstr ""
++
++#, c-format
+ msgid "Created autostash: %s\n"
+ msgstr ""
+ 
+@@ -3393,16 +3402,6 @@
+ msgstr ""
+ 
+ msgid ""
+-"Diverging branches can't be fast-forwarded, you need to either:\n"
+-"\n"
+-"\tgit merge --no-ff\n"
+-"\n"
+-"or:\n"
+-"\n"
+-"\tgit rebase\n"
+-msgstr ""
+-
+-msgid ""
+ "Do not modify or remove the line above.\n"
+ "Everything below it will be ignored."
+ msgstr ""
+@@ -3440,9 +3439,6 @@
+ msgid "Dry-Sent %s\n"
+ msgstr ""
+ 
+-msgid "EXPERIMENTAL: Replay commits on a new base, works with bare repos too"
+-msgstr ""
+-
+ msgid "Emit [broken] object attributes"
+ msgstr ""
+ 
+@@ -3452,6 +3448,9 @@
+ msgid "Empty commit message."
+ msgstr ""
+ 
++msgid "Empty patch. Aborted."
++msgstr ""
++
+ msgid "Enabled Hooks"
+ msgstr ""
+ 
+@@ -3555,11 +3554,10 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "Failed to convert object from %s to %s"
++msgid "Failed to copy notes from '%s' to '%s'"
+ msgstr ""
+ 
+-#, c-format
+-msgid "Failed to copy notes from '%s' to '%s'"
++msgid "Failed to execute internal merge"
+ msgstr ""
+ 
+ #, c-format
+@@ -3609,10 +3607,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "Failed to merge submodule %s (repository corrupt)"
+-msgstr ""
+-
+-#, c-format
+ msgid "Failed to merge submodule %s, but a possible merge resolution exists: %s"
+ msgstr ""
+ 
+@@ -3967,13 +3961,6 @@
+ msgid "HEAD of working tree %s is not updated"
+ msgstr ""
+ 
+-#, c-format
+-msgid ""
+-"HEAD points to an invalid (or orphaned) reference.\n"
+-"HEAD path: '%s'\n"
+-"HEAD contents: '%s'"
+-msgstr ""
+-
+ msgid "Helper programs to interact with remote repositories"
+ msgstr ""
+ 
+@@ -4038,10 +4025,6 @@
+ "which will accept this suggestion.\n"
+ msgstr ""
+ 
+-#, c-format
+-msgid "If you are sure you want to delete it, run 'git branch -D %s'"
+-msgstr ""
+-
+ msgid ""
+ "If you intend to update such entries, try one of the following:\n"
+ "* Use the --sparse option.\n"
+@@ -4060,25 +4043,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid ""
+-"If you meant to create a worktree containing a new unborn branch\n"
+-"(branch with no commits) for this repository, you can do so\n"
+-"using the --orphan flag:\n"
+-"\n"
+-"    git worktree add --orphan %s\n"
+-msgstr ""
+-
+-#, c-format
+-msgid ""
+-"If you meant to create a worktree containing a new unborn branch\n"
+-"(branch with no commits) for this repository, you can do so\n"
+-"using the --orphan flag:\n"
+-"\n"
+-"    git worktree add --orphan -b %s %s\n"
+-msgstr ""
+-
+-#, c-format
+-msgid "If you prefer to skip this patch, run \"%s --skip\" instead.\n"
++msgid "If you prefer to skip this patch, run \"%s --skip\" instead."
+ msgstr ""
+ 
+ msgid "If you want to detach HEAD at the commit, try again with the --detach option."
+@@ -4185,6 +4150,10 @@
+ msgid "Invalid back reference"
+ msgstr ""
+ 
++#, c-format
++msgid "Invalid branch name: '%s'"
++msgstr ""
++
+ msgid "Invalid character class name"
+ msgstr ""
+ 
+@@ -4239,6 +4208,10 @@
+ msgid "Invalid update mode '%s' configured for submodule path '%s'"
+ msgstr ""
+ 
++#, c-format
++msgid "It is not possible to %s because you have unmerged files."
++msgstr ""
++
+ msgid "It looks like 'git am' is in progress. Cannot rebase."
+ msgstr ""
+ 
+@@ -4293,7 +4266,7 @@
+ 
+ #, c-format
+ msgid ""
+-"Lines starting with '%s' will be ignored, and an empty message aborts\n"
++"Lines starting with '%c' will be ignored, and an empty message aborts\n"
+ "the commit.\n"
+ msgstr ""
+ 
+@@ -4338,9 +4311,6 @@
+ msgid "Low-level Commands / Syncing Repositories"
+ msgstr ""
+ 
+-msgid "MIDX does not contain the BTMP chunk"
+-msgstr ""
+-
+ msgid "Main Porcelain Commands"
+ msgstr ""
+ 
+@@ -4487,6 +4457,10 @@
+ msgid "No branch name specified"
+ msgstr ""
+ 
++#, c-format
++msgid "No branch named '%s'."
++msgstr ""
++
+ msgid "No changes"
+ msgstr ""
+ 
+@@ -4515,6 +4489,10 @@
+ msgid "No commands remaining."
+ msgstr ""
+ 
++#, c-format
++msgid "No commit on branch '%s' yet."
++msgstr ""
++
+ msgid "No commit specified and merge.defaultToUpstream not set."
+ msgstr ""
+ 
+@@ -4556,11 +4534,6 @@
+ msgid "No local changes to save"
+ msgstr ""
+ 
+-msgid ""
+-"No local or remote refs exist despite at least one remote\n"
+-"present, stopping; use 'add -f' to override or fetch a remote first"
+-msgstr ""
+-
+ msgid "No match"
+ msgstr ""
+ 
+@@ -4593,15 +4566,15 @@
+ msgid "No pathspec was given. Which files should I remove?"
+ msgstr ""
+ 
+-msgid "No possible source branch, inferring '--orphan'"
+-msgstr ""
+-
+ msgid "No previous hunk"
+ msgstr ""
+ 
+ msgid "No previous regular expression"
+ msgstr ""
+ 
++msgid "No rebase in progress?"
++msgstr ""
++
+ #, c-format
+ msgid ""
+ "No refs in common and none specified; doing nothing.\n"
+@@ -4874,7 +4847,7 @@
+ msgid ""
+ "Please edit the description for the branch\n"
+ "  %s\n"
+-"Lines starting with '%s' will be stripped.\n"
++"Lines starting with '%c' will be stripped.\n"
+ msgstr ""
+ 
+ msgid ""
+@@ -4886,25 +4859,25 @@
+ #, c-format
+ msgid ""
+ "Please enter the commit message for your changes. Lines starting\n"
+-"with '%s' will be ignored, and an empty message aborts the commit.\n"
++"with '%c' will be ignored, and an empty message aborts the commit.\n"
+ msgstr ""
+ 
+ #, c-format
+ msgid ""
+ "Please enter the commit message for your changes. Lines starting\n"
+-"with '%s' will be ignored.\n"
++"with '%c' will be ignored.\n"
+ msgstr ""
+ 
+ #, c-format
+ msgid ""
+ "Please enter the commit message for your changes. Lines starting\n"
+-"with '%s' will be kept; you may remove them yourself if you want to.\n"
++"with '%c' will be kept; you may remove them yourself if you want to.\n"
+ msgstr ""
+ 
+ #, c-format
+ msgid ""
+ "Please enter the commit message for your changes. Lines starting\n"
+-"with '%s' will be kept; you may remove them yourself if you want to.\n"
++"with '%c' will be kept; you may remove them yourself if you want to.\n"
+ "An empty message aborts the commit.\n"
+ msgstr ""
+ 
+@@ -4984,7 +4957,7 @@
+ msgid "Protocol v0 and v1 capabilities"
+ msgstr ""
+ 
+-msgid "Provide contents or details of repository objects"
++msgid "Provide content or type and size information for repository objects"
+ msgstr ""
+ 
+ msgid "Providing usernames and passwords to Git"
+@@ -5055,9 +5028,6 @@
+ msgid "Rebasing (%d/%d)%s"
+ msgstr ""
+ 
+-msgid "Rebasing is not possible because you have unmerged files."
+-msgstr ""
+-
+ msgid "Receive missing objects from another repository"
+ msgstr ""
+ 
+@@ -5208,6 +5178,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Renamed a misnamed branch '%s' away"
++msgstr ""
++
++#, c-format
+ msgid "Renaming %s to %s\n"
+ msgstr ""
+ 
+@@ -5337,9 +5311,6 @@
+ msgid "See 'git help status' for information on how to improve this."
+ msgstr ""
+ 
+-msgid "See `man git check-ref-format`"
+-msgstr ""
+-
+ msgid "See git-pull(1) for details."
+ msgstr ""
+ 
+@@ -5435,7 +5406,7 @@
+ msgid "Show information about files in the index and the working tree"
+ msgstr ""
+ 
+-msgid "Show logs with differences each commit introduces"
++msgid "Show logs with difference each commit introduces"
+ msgstr ""
+ 
+ msgid "Show packed archive index"
+@@ -5731,6 +5702,11 @@
+ msgstr ""
+ 
+ msgid ""
++"The -a, and -r, options to 'git branch' do not take a branch name.\n"
++"Did you mean to use: -a|-r --list <pattern>?"
++msgstr ""
++
++msgid ""
+ "The -b/--binary option has been a no-op for long time, and\n"
+ "it will be removed. Please do not use it anymore."
+ msgstr ""
+@@ -5779,6 +5755,12 @@
+ msgstr ""
+ 
+ #, c-format
++msgid ""
++"The branch '%s' is not fully merged.\n"
++"If you are sure you want to delete it, run 'git branch -D %s'."
++msgstr ""
++
++#, c-format
+ msgid "The bundle contains this ref:"
+ msgid_plural "The bundle contains these %<PRIuMAX> refs:"
+ msgstr[0] ""
+@@ -5796,14 +5778,6 @@
+ msgstr[0] ""
+ msgstr[1] ""
+ 
+-#, c-format
+-msgid "The bundle uses this filter: %s"
+-msgstr ""
+-
+-#, c-format
+-msgid "The bundle uses this hash algorithm: %s"
+-msgstr ""
+-
+ #. TRANSLATORS: The argument is the list of ambiguous
+ #. objects composed in show_ambiguous_object(). See
+ #. its "TRANSLATORS" comments for details.
+@@ -6120,7 +6094,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "To record the empty patch as an empty commit, run \"%s --allow-empty\".\n"
++msgid "To record the empty patch as an empty commit, run \"%s --allow-empty\"."
+ msgstr ""
+ 
+ #, c-format
+@@ -6138,7 +6112,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "Total %<PRIu32> (delta %<PRIu32>), reused %<PRIu32> (delta %<PRIu32>), pack-reused %<PRIu32> (from %<PRIuMAX>)"
++msgid "Total %<PRIu32> (delta %<PRIu32>), reused %<PRIu32> (delta %<PRIu32>), pack-reused %<PRIu32>"
+ msgstr ""
+ 
+ msgid "Trailing backslash"
+@@ -6177,6 +6151,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Unable to add %s to database"
++msgstr ""
++
++#, c-format
+ msgid "Unable to add merge result for '%s'"
+ msgstr ""
+ 
+@@ -6290,11 +6268,11 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "Unknown rebase backend: %s"
++msgid "Unknown mode: %s"
+ msgstr ""
+ 
+ #, c-format
+-msgid "Unknown rebase-merges mode: %s"
++msgid "Unknown rebase backend: %s"
+ msgstr ""
+ 
+ #, c-format
+@@ -6371,6 +6349,9 @@
+ msgid "Update auxiliary info file to help dumb servers"
+ msgstr ""
+ 
++msgid "Update of config-file failed"
++msgstr ""
++
+ msgid "Update remote refs along with associated objects"
+ msgstr ""
+ 
+@@ -6405,16 +6386,16 @@
+ 
+ msgid ""
+ "Updates were rejected because a pushed branch tip is behind its remote\n"
+-"counterpart. If you want to integrate the remote changes, use 'git pull'\n"
+-"before pushing again.\n"
++"counterpart. Check out this branch and integrate the remote changes\n"
++"(e.g. 'git pull ...') before pushing again.\n"
+ "See the 'Note about fast-forwards' in 'git push --help' for details."
+ msgstr ""
+ 
+ msgid ""
+-"Updates were rejected because the remote contains work that you do not\n"
+-"have locally. This is usually caused by another repository pushing to\n"
+-"the same ref. If you want to integrate the remote changes, use\n"
+-"'git pull' before pushing again.\n"
++"Updates were rejected because the remote contains work that you do\n"
++"not have locally. This is usually caused by another repository pushing\n"
++"to the same ref. You may want to first integrate the remote changes\n"
++"(e.g., 'git pull ...') before pushing again.\n"
+ "See the 'Note about fast-forwards' in 'git push --help' for details."
+ msgstr ""
+ 
+@@ -6422,16 +6403,16 @@
+ msgstr ""
+ 
+ msgid ""
+-"Updates were rejected because the tip of the remote-tracking branch has\n"
+-"been updated since the last checkout. If you want to integrate the\n"
+-"remote changes, use 'git pull' before pushing again.\n"
+-"See the 'Note about fast-forwards' in 'git push --help' for details."
++"Updates were rejected because the tip of the remote-tracking\n"
++"branch has been updated since the last checkout. You may want\n"
++"to integrate those changes locally (e.g., 'git pull ...')\n"
++"before forcing an update.\n"
+ msgstr ""
+ 
+ msgid ""
+ "Updates were rejected because the tip of your current branch is behind\n"
+-"its remote counterpart. If you want to integrate the remote changes,\n"
+-"use 'git pull' before pushing again.\n"
++"its remote counterpart. Integrate the remote changes (e.g.\n"
++"'git pull ...') before pushing again.\n"
+ "See the 'Note about fast-forwards' in 'git push --help' for details."
+ msgstr ""
+ 
+@@ -6593,7 +6574,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "When you have resolved this problem, run \"%s --continue\".\n"
++msgid "When you have resolved this problem, run \"%s --continue\"."
+ msgstr ""
+ 
+ msgid "Which 8bit encoding should I declare [UTF-8]? "
+@@ -7296,9 +7277,6 @@
+ msgid "additionally, your index contains uncommitted changes."
+ msgstr ""
+ 
+-msgid "advance all branches contained in revision-range"
+-msgstr ""
+-
+ #, c-format
+ msgid "affected file '%s' is beyond a symbolic link"
+ msgstr ""
+@@ -7328,9 +7306,6 @@
+ msgid "alias for --log (deprecated)"
+ msgstr ""
+ 
+-msgid "alias for --only-trailers --only-input --unfold"
+-msgstr ""
+-
+ #, c-format
+ msgid "alias loop detected: expansion of '%s' does not terminate:%s"
+ msgstr ""
+@@ -7339,9 +7314,6 @@
+ msgid "alias of --%s"
+ msgstr ""
+ 
+-msgid "all positive revisions given must be references"
+-msgstr ""
+-
+ msgid "allow -s and -t to work with broken/corrupt objects"
+ msgstr ""
+ 
+@@ -7418,9 +7390,6 @@
+ msgid "also consider packs and alternate objects"
+ msgstr ""
+ 
+-msgid "also include HEAD ref and pseudorefs"
+-msgstr ""
+-
+ msgid "also read contacts from stdin"
+ msgstr ""
+ 
+@@ -7458,7 +7427,7 @@
+ msgid "amend previous commit"
+ msgstr ""
+ 
+-msgid "and made changes to the index and/or the working tree.\n"
++msgid "and made changes to the index and/or the working tree\n"
+ msgstr ""
+ 
+ msgid ""
+@@ -7529,7 +7498,7 @@
+ msgid "apply options and merge options cannot be used together"
+ msgstr ""
+ 
+-msgid "apply options are incompatible with rebase.rebaseMerges.  Consider adding --no-rebase-merges"
++msgid "apply options are incompatible with rebase.autosquash.  Consider adding --no-autosquash"
+ msgstr ""
+ 
+ msgid "apply options are incompatible with rebase.updateRefs.  Consider adding --no-update-refs"
+@@ -7557,13 +7526,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "argument expected for %s"
+-msgstr ""
+-
+-msgid "argument to --advance must be a reference"
+-msgstr ""
+-
+-#, c-format
+ msgid "argument to --packfile must be a valid hash (got '%s')"
+ msgstr ""
+ 
+@@ -7587,24 +7549,13 @@
+ msgid "attempt to reinitialize repository with different hash"
+ msgstr ""
+ 
+-msgid "attempt to reinitialize repository with different reference storage format"
+-msgstr ""
+-
+ msgid "attempt to remove non-existent note is not an error"
+ msgstr ""
+ 
+ #, c-format
+-msgid "attempted to store non-selected commit: '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "attempting to mmap %<PRIuMAX> over limit %<PRIuMAX>"
+ msgstr ""
+ 
+-#, c-format
+-msgid "attempting to write a commit-graph, but 'commitgraph.changedPathsVersion' (%d) is not supported"
+-msgstr ""
+-
+ msgid "attempting to write a commit-graph, but 'core.commitGraph' is disabled"
+ msgstr ""
+ 
+@@ -7614,18 +7565,12 @@
+ msgid "author"
+ msgstr ""
+ 
+-msgid "auto-pack refs as needed"
+-msgstr ""
+-
+ msgid "automatically re-schedule any `exec` that fails"
+ msgstr ""
+ 
+ msgid "automatically stash/stash pop before and after"
+ msgstr ""
+ 
+-msgid "autostash reference is a symref"
+-msgstr ""
+-
+ #, c-format
+ msgid "available git commands in '%s'"
+ msgstr ""
+@@ -7634,28 +7579,6 @@
+ msgid "bad %s"
+ msgstr ""
+ 
+-#. TRANSLATORS: %s is a command like "ls-tree".
+-#, c-format
+-msgid "bad %s format: %%%.*s"
+-msgstr ""
+-
+-#. TRANSLATORS: The first %s is a command like "ls-tree".
+-#, c-format
+-msgid "bad %s format: element '%s' does not end in ')'"
+-msgstr ""
+-
+-#. TRANSLATORS: The first %s is a command like "ls-tree".
+-#, c-format
+-msgid "bad %s format: element '%s' does not start with '('"
+-msgstr ""
+-
+-#, c-format
+-msgid "bad %s in commit"
+-msgstr ""
+-
+-msgid "bad --attr-source or GIT_ATTR_SOURCE"
+-msgstr ""
+-
+ #, c-format
+ msgid "bad --color-moved argument: %s"
+ msgstr ""
+@@ -7687,10 +7610,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "bad boolean environment value '%s' for '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "bad config line %d in %s"
+ msgstr ""
+ 
+@@ -7734,6 +7653,30 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "bad ls-files format: %%%.*s"
++msgstr ""
++
++#, c-format
++msgid "bad ls-files format: element '%s' does not end in ')'"
++msgstr ""
++
++#, c-format
++msgid "bad ls-files format: element '%s' does not start with '('"
++msgstr ""
++
++#, c-format
++msgid "bad ls-tree format: %%%.*s"
++msgstr ""
++
++#, c-format
++msgid "bad ls-tree format: element '%s' does not end in ')'"
++msgstr ""
++
++#, c-format
++msgid "bad ls-tree format: element '%s' does not start with '('"
++msgstr ""
++
++#, c-format
+ msgid "bad mergetag in commit '%s'"
+ msgstr ""
+ 
+@@ -7908,10 +7851,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "bitmap file '%s' has invalid checksum"
+-msgstr ""
+-
+-#, c-format
+ msgid "blob expected for %s '%s'"
+ msgstr ""
+ 
+@@ -7963,14 +7902,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "branch %s is being bisected at %s"
+-msgstr ""
+-
+-#, c-format
+-msgid "branch %s is being rebased at %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "branch '%s' does not exist"
+ msgstr ""
+ 
+@@ -7979,17 +7910,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "branch '%s' has no upstream information"
+-msgstr ""
+-
+-#, c-format
+-msgid "branch '%s' not found"
+-msgstr ""
+-
+-#, c-format
+-msgid ""
+-"branch '%s' not found.\n"
+-"Did you forget --remote?"
++msgid "branch '%s' not found."
+ msgstr ""
+ 
+ #, c-format
+@@ -8004,28 +7925,12 @@
+ msgid "branch '%s' set up to track:"
+ msgstr ""
+ 
+-msgid "branch copy failed"
+-msgstr ""
+-
+-msgid "branch is copied, but update of config-file failed"
+-msgstr ""
+-
+-msgid "branch is renamed, but update of config-file failed"
+-msgstr ""
+-
+ msgid "branch name required"
+ msgstr ""
+ 
+ msgid "branch of repository to add as submodule"
+ msgstr ""
+ 
+-msgid "branch rename failed"
+-msgstr ""
+-
+-#, c-format
+-msgid "branch renamed to %s, but HEAD is not updated"
+-msgstr ""
+-
+ msgid "branch to checkout after clone"
+ msgstr ""
+ 
+@@ -8169,12 +8074,6 @@
+ msgid "cannot abort from a branch yet to be born"
+ msgstr ""
+ 
+-msgid "cannot advance target with multiple source branches because ordering would be ill-defined"
+-msgstr ""
+-
+-msgid "cannot advance target with multiple sources because ordering would be ill-defined"
+-msgstr ""
+-
+ msgid "cannot amend non-existing commit"
+ msgstr ""
+ 
+@@ -8215,22 +8114,12 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "cannot clone submodule '%s' without a URL"
+-msgstr ""
+-
+-#, c-format
+ msgid "cannot close written %s file '%s'"
+ msgstr ""
+ 
+ msgid "cannot come back to cwd"
+ msgstr ""
+ 
+-msgid "cannot compare a named pipe to a directory"
+-msgstr ""
+-
+-msgid "cannot compare stdin to a directory"
+-msgstr ""
+-
+ #, c-format
+ msgid ""
+ "cannot continue with staged changes in the following files:\n"
+@@ -8241,7 +8130,7 @@
+ msgid "cannot copy '%s' to '%s'"
+ msgstr ""
+ 
+-msgid "cannot copy the current branch while not on any"
++msgid "cannot copy the current branch while not on any."
+ msgstr ""
+ 
+ #, c-format
+@@ -8271,10 +8160,6 @@
+ msgid "cannot deflate request; zlib end error %d"
+ msgstr ""
+ 
+-#, c-format
+-msgid "cannot delete branch '%s' used by worktree at '%s'"
+-msgstr ""
+-
+ msgid "cannot delete packs in a precious-objects repo"
+ msgstr ""
+ 
+@@ -8319,7 +8204,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "cannot force update the branch '%s' used by worktree at '%s'"
++msgid "cannot force update the branch '%s' checked out at '%s'"
+ msgstr ""
+ 
+ #, c-format
+@@ -8337,19 +8222,12 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "cannot fully parse %s=%s"
+-msgstr ""
+-
+-#, c-format
+ msgid "cannot get commit message for %s"
+ msgstr ""
+ 
+ msgid "cannot get patch id"
+ msgstr ""
+ 
+-msgid "cannot give description to detached HEAD"
+-msgstr ""
+-
+ #, c-format
+ msgid "cannot handle %s as a builtin"
+ msgstr ""
+@@ -8372,47 +8250,9 @@
+ msgid "cannot have both --quiet and --verbose"
+ msgstr ""
+ 
+-msgid "cannot implicitly determine correct base for --onto"
+-msgstr ""
+-
+-msgid "cannot implicitly determine whether this is an --advance or --onto operation"
+-msgstr ""
+-
+ msgid "cannot inherit upstream tracking configuration of multiple refs when rebasing is requested"
+ msgstr ""
+ 
+-#, c-format
+-msgid "cannot lock ref '%s': error reading reference"
+-msgstr ""
+-
+-#, c-format
+-msgid "cannot lock ref '%s': is at %s but expected %s"
+-msgstr ""
+-
+-#, c-format
+-msgid "cannot lock ref '%s': reference already exists"
+-msgstr ""
+-
+-#, c-format
+-msgid "cannot lock ref '%s': reference is missing but expected %s"
+-msgstr ""
+-
+-#, c-format
+-msgid "cannot lock ref '%s': unable to resolve reference '%s'"
+-msgstr ""
+-
+-#, c-format
+-msgid "cannot map object %s to %s"
+-msgstr ""
+-
+-#, c-format
+-msgid "cannot merge graph %s, too many commits: %<PRIuMAX>"
+-msgstr ""
+-
+-#, c-format
+-msgid "cannot merge graphs with %<PRIuMAX>, %<PRIuMAX> commits"
+-msgstr ""
+-
+ msgid "cannot merge without a current revision"
+ msgstr ""
+ 
+@@ -8434,6 +8274,9 @@
+ "use 'move -f -f' to override or unlock first"
+ msgstr ""
+ 
++msgid "cannot move directory over file"
++msgstr ""
++
+ #, c-format
+ msgid "cannot open %s"
+ msgstr ""
+@@ -8564,7 +8407,7 @@
+ "use 'remove -f -f' to override or unlock first"
+ msgstr ""
+ 
+-msgid "cannot rename the current branch while not on any"
++msgid "cannot rename the current branch while not on any."
+ msgstr ""
+ 
+ msgid "cannot repack to clean up"
+@@ -8678,9 +8521,18 @@
+ msgid "cannot use %s as an exclude file"
+ msgstr ""
+ 
++msgid "cannot use --contents with final commit object name"
++msgstr ""
++
+ msgid "cannot use --filter with --stdin-packs"
+ msgstr ""
+ 
++msgid "cannot use --filter without --stdout"
++msgstr ""
++
++msgid "cannot use --max-pack-size with --cruft"
++msgstr ""
++
+ msgid "cannot use --stdin-packs with --cruft"
+ msgstr ""
+ 
+@@ -8736,9 +8588,6 @@
+ msgid "check for forced-updates on all updated branches"
+ msgstr ""
+ 
+-msgid "check for reference existence without resolving"
+-msgstr ""
+-
+ msgid "check if - even missing - files are ignored in dry run"
+ msgstr ""
+ 
+@@ -8792,10 +8641,6 @@
+ msgid "choose all items"
+ msgstr ""
+ 
+-#, c-format
+-msgid "chunk id %<PRIx32> not %d-byte aligned"
+-msgstr ""
+-
+ msgid ""
+ "clean               - start cleaning\n"
+ "filter by pattern   - exclude items from deletion\n"
+@@ -8806,7 +8651,10 @@
+ "?                   - help for prompt selection"
+ msgstr ""
+ 
+-msgid "clean.requireForce is true and -f not given: refusing to clean"
++msgid "clean.requireForce defaults to true and neither -i, -n, nor -f given; refusing to clean"
++msgstr ""
++
++msgid "clean.requireForce set to true and neither -i, -n, nor -f given; refusing to clean"
+ msgstr ""
+ 
+ msgid "clear all previously-defined decoration filters"
+@@ -8895,10 +8743,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "commit %s exists in commit-graph but not in the object database"
+-msgstr ""
+-
+-#, c-format
+ msgid "commit %s is a merge but no -m option was given."
+ msgstr ""
+ 
+@@ -8922,10 +8766,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "commit count in base graph too high: %<PRIuMAX>"
+-msgstr ""
+-
+-#, c-format
+ msgid "commit date for commit %s in commit-graph is %<PRIuMAX> != %<PRIuMAX>"
+ msgstr ""
+ 
+@@ -8938,30 +8778,9 @@
+ msgid "commit your changes or stash them to proceed."
+ msgstr ""
+ 
+-msgid "commit-graph OID lookup chunk is the wrong size"
+-msgstr ""
+-
+-msgid "commit-graph base graphs chunk is too small"
+-msgstr ""
+-
+ msgid "commit-graph chain does not match"
+ msgstr ""
+ 
+-msgid "commit-graph chain file too small"
+-msgstr ""
+-
+-msgid "commit-graph changed-path index chunk is too small"
+-msgstr ""
+-
+-msgid "commit-graph commit data chunk is wrong size"
+-msgstr ""
+-
+-msgid "commit-graph extra-edges pointer out of bounds"
+-msgstr ""
+-
+-msgid "commit-graph fanout values out of order"
+-msgstr ""
+-
+ msgid "commit-graph file is too small"
+ msgstr ""
+ 
+@@ -8973,11 +8792,8 @@
+ msgid "commit-graph generation for commit %s is %<PRIuMAX> < %<PRIuMAX>"
+ msgstr ""
+ 
+-msgid "commit-graph generations chunk is wrong size"
+-msgstr ""
+-
+ #, c-format
+-msgid "commit-graph has both zero and non-zero generations (e.g., commits '%s' and '%s')"
++msgid "commit-graph has generation number zero for commit %s, but non-zero elsewhere"
+ msgstr ""
+ 
+ #, c-format
+@@ -8992,13 +8808,11 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "commit-graph hash version %X does not match version %X"
+-msgstr ""
+-
+-msgid "commit-graph oid fanout chunk is wrong size"
++msgid "commit-graph has non-zero generation number for commit %s, but zero elsewhere"
+ msgstr ""
+ 
+-msgid "commit-graph overflow generation data is too small"
++#, c-format
++msgid "commit-graph hash version %X does not match version %X"
+ msgstr ""
+ 
+ #, c-format
+@@ -9013,15 +8827,6 @@
+ msgid "commit-graph parent list for commit %s terminates early"
+ msgstr ""
+ 
+-msgid "commit-graph required OID fanout chunk missing or corrupted"
+-msgstr ""
+-
+-msgid "commit-graph required OID lookup chunk missing or corrupted"
+-msgstr ""
+-
+-msgid "commit-graph required commit data chunk missing or corrupted"
+-msgstr ""
+-
+ msgid "commit-graph requires overflow generation data but has none"
+ msgstr ""
+ 
+@@ -9140,6 +8945,9 @@
+ msgid "copy out the files from named stage"
+ msgstr ""
+ 
++msgid "core.commentChar should only be one character"
++msgstr ""
++
+ msgid "core.fsmonitor is set; remove it if you really want to disable fsmonitor"
+ msgstr ""
+ 
+@@ -9221,12 +9029,6 @@
+ msgid "corrupted bitmap index file (too short to fit lookup table)"
+ msgstr ""
+ 
+-msgid "corrupted bitmap index file (too short to fit pseudo-merge table header)"
+-msgstr ""
+-
+-msgid "corrupted bitmap index file (too short to fit pseudo-merge table)"
+-msgstr ""
+-
+ msgid "corrupted bitmap index file (wrong header)"
+ msgstr ""
+ 
+@@ -9249,10 +9051,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "could not apply '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "could not archive missing directory '%s'"
+ msgstr ""
+ 
+@@ -9382,16 +9180,10 @@
+ msgid "could not determine HEAD revision"
+ msgstr ""
+ 
+-msgid "could not determine MIDX preferred pack"
+-msgstr ""
+-
+ #, c-format
+ msgid "could not determine free disk size for '%s'"
+ msgstr ""
+ 
+-msgid "could not determine preferred pack"
+-msgstr ""
+-
+ msgid "could not discard worktree changes"
+ msgstr ""
+ 
+@@ -9440,10 +9232,6 @@
+ msgid "could not find commit from NOTES_MERGE_PARTIAL."
+ msgstr ""
+ 
+-#, c-format
+-msgid "could not find created worktree '%s'"
+-msgstr ""
+-
+ msgid "could not find exact merge base"
+ msgstr ""
+ 
+@@ -9456,10 +9244,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "could not find pseudo-merge for commit %s at offset %<PRIuMAX>"
+-msgstr ""
+-
+-#, c-format
+ msgid "could not finish '%s'"
+ msgstr ""
+ 
+@@ -9489,7 +9273,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "could not get commit for --ancestry-path argument %s"
++msgid "could not get commit for ancestry-path argument %s"
+ msgstr ""
+ 
+ #, c-format
+@@ -9525,10 +9309,6 @@
+ msgid "could not initialize submodule at path '%s'"
+ msgstr ""
+ 
+-#, c-format
+-msgid "could not load bitmapped pack %<PRIu32>"
+-msgstr ""
+-
+ msgid "could not load cruft pack .mtimes"
+ msgstr ""
+ 
+@@ -9539,6 +9319,9 @@
+ msgid "could not lock '%s'"
+ msgstr ""
+ 
++msgid "could not lock HEAD"
++msgstr ""
++
+ #, c-format
+ msgid "could not lock config file %s"
+ msgstr ""
+@@ -9548,7 +9331,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "could not lookup commit '%s'"
++msgid "could not lookup commit %s"
+ msgstr ""
+ 
+ #, c-format
+@@ -9595,10 +9378,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "could not open commit-graph chain '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "could not open directory '%s'"
+ msgstr ""
+ 
+@@ -9639,10 +9418,6 @@
+ msgid "could not parse HEAD commit"
+ msgstr ""
+ 
+-#, c-format
+-msgid "could not parse as tree '%s'"
+-msgstr ""
+-
+ msgid "could not parse author script"
+ msgstr ""
+ 
+@@ -9764,10 +9539,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "could not read extended pseudo-merge table for commit %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "could not read file '%s'"
+ msgstr ""
+ 
+@@ -9815,9 +9586,6 @@
+ msgid "could not read tagged object '%s'"
+ msgstr ""
+ 
+-msgid "could not read the index"
+-msgstr ""
+-
+ #, c-format
+ msgid "could not recurse into submodule '%s'"
+ msgstr ""
+@@ -9839,6 +9607,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "could not remove reference %s"
++msgstr ""
++
++#, c-format
+ msgid "could not remove stale bitmap: %s"
+ msgstr ""
+ 
+@@ -9847,6 +9619,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "could not rename '%s' to '%s'"
++msgstr ""
++
++#, c-format
+ msgid "could not rename temporary file to %s"
+ msgstr ""
+ 
+@@ -9921,7 +9697,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "could not set upstream of HEAD to %s when it does not point to any branch"
++msgid "could not set upstream of HEAD to %s when it does not point to any branch."
+ msgstr ""
+ 
+ #, c-format
+@@ -9939,9 +9715,6 @@
+ msgid "could not stage '%s'"
+ msgstr ""
+ 
+-msgid "could not start 'git column'"
+-msgstr ""
+-
+ #, c-format
+ msgid "could not start 'git status' in submodule '%s'"
+ msgstr ""
+@@ -10021,7 +9794,7 @@
+ msgid "could not unset '%s'"
+ msgstr ""
+ 
+-msgid "could not unset upstream of HEAD when it does not point to any branch"
++msgid "could not unset upstream of HEAD when it does not point to any branch."
+ msgstr ""
+ 
+ #, c-format
+@@ -10062,10 +9835,6 @@
+ msgid "could not write index"
+ msgstr ""
+ 
+-#, c-format
+-msgid "could not write loose object index %s"
+-msgstr ""
+-
+ msgid "could not write multi-pack bitmap"
+ msgstr ""
+ 
+@@ -10103,10 +9872,6 @@
+ msgid "couldn't hash object from '%s'"
+ msgstr ""
+ 
+-#, c-format
+-msgid "couldn't look up commit object for '%s'"
+-msgstr ""
+-
+ msgid "couldn't look up newly created commit"
+ msgstr ""
+ 
+@@ -10135,7 +9900,7 @@
+ msgid "create a cruft pack"
+ msgstr ""
+ 
+-msgid "create a mirror repository (implies --bare)"
++msgid "create a mirror repository (implies bare)"
+ msgstr ""
+ 
+ msgid "create a new branch"
+@@ -10174,18 +9939,12 @@
+ msgid "create reflog for new branch"
+ msgstr ""
+ 
+-msgid "create repository within 'src' directory"
+-msgstr ""
+-
+ msgid "create the branch's reflog"
+ msgstr ""
+ 
+ msgid "create thin packs"
+ msgstr ""
+ 
+-msgid "create unborn branch"
+-msgstr ""
+-
+ msgid "create/reset and checkout a branch"
+ msgstr ""
+ 
+@@ -10193,10 +9952,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "created a copy of a misnamed branch '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "creating '%s' failed"
+ msgstr ""
+ 
+@@ -10214,6 +9969,9 @@
+ msgid "credential-cache--daemon unavailable; no unix socket support"
+ msgstr ""
+ 
++msgid "current working directory is untracked"
++msgstr ""
++
+ msgid "daemon failed to start"
+ msgstr ""
+ 
+@@ -10316,7 +10074,7 @@
+ #, c-format
+ msgid ""
+ "deleting branch '%s' that has been merged to\n"
+-"         '%s', but not yet merged to HEAD"
++"         '%s', but not yet merged to HEAD."
+ msgstr ""
+ 
+ msgid "delta base offset is out of bound"
+@@ -10337,9 +10095,6 @@
+ msgid "deprecated: use --annotate-stdin instead"
+ msgstr ""
+ 
+-msgid "deprecated: use --empty=keep instead"
+-msgstr ""
+-
+ msgid "depth"
+ msgstr ""
+ 
+@@ -10356,7 +10111,7 @@
+ msgid "dereference tags into object IDs"
+ msgstr ""
+ 
+-msgid "descend at most <n> levels"
++msgid "descend at most <depth> levels"
+ msgstr ""
+ 
+ #, c-format
+@@ -10367,9 +10122,6 @@
+ msgid "destination '%s' is not a directory"
+ msgstr ""
+ 
+-msgid "destination already exists"
+-msgstr ""
+-
+ msgid "destination directory does not exist"
+ msgstr ""
+ 
+@@ -10481,10 +10233,6 @@
+ msgid "disable rename detection"
+ msgstr ""
+ 
+-#, c-format
+-msgid "disabling Bloom filters for commit-graph layer '%s' due to incompatible settings"
+-msgstr ""
+-
+ msgid "disabling bitmap writing, as some objects are not being packed"
+ msgstr ""
+ 
+@@ -10512,7 +10260,7 @@
+ msgid "do not actually prune any entries"
+ msgstr ""
+ 
+-msgid "do not apply trailer.* configuration variables"
++msgid "do not apply config rules"
+ msgstr ""
+ 
+ msgid "do not check if another worktree is holding the given ref"
+@@ -10558,10 +10306,10 @@
+ msgid "do not order objects before emitting them"
+ msgstr ""
+ 
+-msgid "do not output a newline after empty formatted refs"
++msgid "do not pack objects in promisor packfiles"
+ msgstr ""
+ 
+-msgid "do not pack objects in promisor packfiles"
++msgid "do not pass --keep-cr flag to git-mailsplit independent of am.keepcr"
+ msgstr ""
+ 
+ msgid "do not pretty-print contents for --edit"
+@@ -10621,7 +10369,7 @@
+ msgid "do not touch index-only entries"
+ msgstr ""
+ 
+-msgid "do not treat \"---\" as the end of input"
++msgid "do not treat --- specially"
+ msgstr ""
+ 
+ msgid "do not treat root commits as boundaries (Default: off)"
+@@ -10753,10 +10501,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "duplicate entry when writing bitmap index: %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "duplicate parent %s ignored"
+ msgstr ""
+ 
+@@ -10844,9 +10588,6 @@
+ msgid "empty mbox: '%s'"
+ msgstr ""
+ 
+-msgid "empty patch. aborted"
+-msgstr ""
+-
+ #, c-format
+ msgid "empty trailer token in trailer '%.*s'"
+ msgstr ""
+@@ -11001,9 +10742,6 @@
+ msgid "exclude guides"
+ msgstr ""
+ 
+-msgid "exclude refs which match pattern"
+-msgstr ""
+-
+ msgid "exec"
+ msgstr ""
+ 
+@@ -11022,7 +10760,7 @@
+ #, c-format
+ msgid ""
+ "execution succeeded: %s\n"
+-"but left changes to the index and/or the working tree.\n"
++"but left changes to the index and/or the working tree\n"
+ "Commit or stash your changes, and then run\n"
+ "\n"
+ "  git rebase --continue\n"
+@@ -11094,10 +10832,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "expected format: %%(ahead-behind:<committish>)"
+-msgstr ""
+-
+-#, c-format
+ msgid "expected format: %%(align:<width>,<position>)"
+ msgstr ""
+ 
+@@ -11164,14 +10898,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "extended pseudo-merge lookup out-of-bounds (%<PRIu32> >= %<PRIu32>)"
+-msgstr ""
+-
+-#, c-format
+-msgid "extended pseudo-merge read out-of-bounds (%<PRIuMAX> >= %<PRIuMAX>)"
+-msgstr ""
+-
+-#, c-format
+ msgid "external diff died, stopping at %s"
+ msgstr ""
+ 
+@@ -11188,10 +10914,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "extra command line parameter '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "failed reading ssh signing data buffer from '%s'"
+ msgstr ""
+ 
+@@ -11280,9 +11002,6 @@
+ msgid "failed to create temporary file"
+ msgstr ""
+ 
+-msgid "failed to decode tree entry"
+-msgstr ""
+-
+ #, c-format
+ msgid "failed to delete '%s'"
+ msgstr ""
+@@ -11320,9 +11039,6 @@
+ msgid "failed to exec '%s'"
+ msgstr ""
+ 
+-msgid "failed to execute internal merge"
+-msgstr ""
+-
+ #, c-format
+ msgid "failed to expand path '%s'"
+ msgstr ""
+@@ -11331,9 +11047,6 @@
+ msgid "failed to expand user dir in: '%s'"
+ msgstr ""
+ 
+-msgid "failed to feed promisor objects to pack-objects"
+-msgstr ""
+-
+ msgid "failed to fetch advertised bundles"
+ msgstr ""
+ 
+@@ -11439,16 +11152,9 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "failed to load pseudo-merge regex for %s: '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "failed to locate object %d in packfile"
+ msgstr ""
+ 
+-msgid "failed to look up reference"
+-msgstr ""
+-
+ #, c-format
+ msgid "failed to lstat '%s'"
+ msgstr ""
+@@ -11457,10 +11163,6 @@
+ msgid "failed to make %s readable"
+ msgstr ""
+ 
+-#, c-format
+-msgid "failed to map tree entry for %s"
+-msgstr ""
+-
+ msgid "failed to modify sparse-index config"
+ msgstr ""
+ 
+@@ -11540,9 +11242,6 @@
+ msgid "failed to read orderfile '%s'"
+ msgstr ""
+ 
+-msgid "failed to read patch"
+-msgstr ""
+-
+ msgid "failed to read ref NOTES_MERGE_PARTIAL"
+ msgstr ""
+ 
+@@ -11585,9 +11284,6 @@
+ msgid "failed to resolve '%s' as a valid ref."
+ msgstr ""
+ 
+-msgid "failed to resolve HEAD as a valid ref"
+-msgstr ""
+-
+ msgid "failed to resolve NOTES_MERGE_REF"
+ msgstr ""
+ 
+@@ -11601,9 +11297,6 @@
+ msgid "failed to run 'crontab'; your system might not support 'cron'"
+ msgstr ""
+ 
+-msgid "failed to run 'describe'"
+-msgstr ""
+-
+ #, c-format
+ msgid "failed to run 'git status' on '%s'"
+ msgstr ""
+@@ -11622,9 +11315,6 @@
+ msgid "failed to set extensions.worktreeConfig setting"
+ msgstr ""
+ 
+-msgid "failed to set up maintenance schedule"
+-msgstr ""
+-
+ msgid "failed to sign the push certificate"
+ msgstr ""
+ 
+@@ -11713,10 +11403,6 @@
+ msgid "failed to write correct number of base graph ids"
+ msgstr ""
+ 
+-#, c-format
+-msgid "failed to write loose object index %s\n"
+-msgstr ""
+-
+ msgid "failed to write multi-pack-index"
+ msgstr ""
+ 
+@@ -12257,13 +11943,13 @@
+ msgid "git bisect reset [<commit>]"
+ msgstr ""
+ 
+-msgid "git bisect run <cmd> [<arg>...]"
++msgid "git bisect run <cmd>..."
+ msgstr ""
+ 
+ msgid "git bisect skip [(<rev>|<range>)...]"
+ msgstr ""
+ 
+-msgid "git bisect start [--term-(new|bad)=<term> --term-(old|good)=<term>]    [--no-checkout] [--first-parent] [<bad> [<good>...]] [--]    [<pathspec>...]"
++msgid "git bisect start [--term-{new,bad}=<term> --term-{old,good}=<term>]    [--no-checkout] [--first-parent] [<bad> [<good>...]] [--]    [<pathspec>...]"
+ msgstr ""
+ 
+ msgid "git blame [<options>] [<rev-opts>] [<rev>] [--] <file>"
+@@ -12294,13 +11980,12 @@
+ msgstr ""
+ 
+ msgid ""
+-"git bugreport [(-o | --output-directory) <path>]\n"
+-"              [(-s | --suffix) <format> | --no-suffix]\n"
++"git bugreport [(-o | --output-directory) <path>] [(-s | --suffix) <format>]\n"
+ "              [--diagnose[=<mode>]]"
+ msgstr ""
+ 
+ msgid ""
+-"git bundle create [-q | --quiet | --progress]\n"
++"git bundle create [-q | --quiet | --progress | --all-progress] [--all-progress-implied]\n"
+ "                  [--version=<version>] <file> <git-rev-list-args>"
+ msgstr ""
+ 
+@@ -12316,7 +12001,7 @@
+ msgid ""
+ "git cat-file (--batch | --batch-check | --batch-command) [--batch-all-objects]\n"
+ "             [--buffer] [--follow-symlinks] [--unordered]\n"
+-"             [--textconv | --filters] [-Z]"
++"             [--textconv | --filters] [-z]"
+ msgstr ""
+ 
+ msgid ""
+@@ -12404,7 +12089,7 @@
+ "git commit-graph write [--object-dir <dir>] [--append]\n"
+ "                       [--split[=<strategy>]] [--reachable | --stdin-packs | --stdin-commits]\n"
+ "                       [--changed-paths] [--[no-]max-new-filters <n>] [--[no-]progress]\n"
+-"                       <split-options>"
++"                       <split options>"
+ msgstr ""
+ 
+ msgid "git commit-tree <tree> [(-p <parent>)...]"
+@@ -12550,14 +12235,13 @@
+ msgid ""
+ "git init [-q | --quiet] [--bare] [--template=<template-directory>]\n"
+ "         [--separate-git-dir <git-dir>] [--object-format=<format>]\n"
+-"         [--ref-format=<format>]\n"
+ "         [-b <branch-name> | --initial-branch=<branch-name>]\n"
+ "         [--shared[=<permissions>]] [<directory>]"
+ msgstr ""
+ 
+ msgid ""
+ "git interpret-trailers [--in-place] [--trim-empty]\n"
+-"                       [(--trailer (<key>|<key-alias>)[(=|:)<value>])...]\n"
++"                       [(--trailer <token>[(=|:)<value>])...]\n"
+ "                       [--parse] [<file>...]"
+ msgstr ""
+ 
+@@ -12646,10 +12330,10 @@
+ msgid "git notes [--ref <notes-ref>] [list [<object>]]"
+ msgstr ""
+ 
+-msgid "git notes [--ref <notes-ref>] add [-f] [--allow-empty] [--[no-]separator|--separator=<paragraph-break>] [--[no-]stripspace] [-m <msg> | -F <file> | (-c | -C) <object>] [<object>]"
++msgid "git notes [--ref <notes-ref>] add [-f] [--allow-empty] [-m <msg> | -F <file> | (-c | -C) <object>] [<object>]"
+ msgstr ""
+ 
+-msgid "git notes [--ref <notes-ref>] append [--allow-empty] [--[no-]separator|--separator=<paragraph-break>] [--[no-]stripspace] [-m <msg> | -F <file> | (-c | -C) <object>] [<object>]"
++msgid "git notes [--ref <notes-ref>] append [--allow-empty] [-m <msg> | -F <file> | (-c | -C) <object>] [<object>]"
+ msgstr ""
+ 
+ msgid "git notes [--ref <notes-ref>] copy [-f] <from-object> <to-object>"
+@@ -12715,7 +12399,7 @@
+ msgid "git pack-objects [<options>] <base-name> [< <ref-list> | < <object-list>]"
+ msgstr ""
+ 
+-msgid "git pack-refs [--all] [--no-prune] [--auto] [--include <pattern>] [--exclude <pattern>]"
++msgid "git pack-refs [--all] [--no-prune]"
+ msgstr ""
+ 
+ msgid "git patch-id [--stable | --unstable | --verbatim]"
+@@ -12771,9 +12455,6 @@
+ "                  [--dry-run | -n] [--verbose] [--all [--single-worktree] | <refs>...]"
+ msgstr ""
+ 
+-msgid "git reflog list"
+-msgstr ""
+-
+ msgid "git remote [-v | --verbose] show [-n] <name>"
+ msgstr ""
+ 
+@@ -12846,6 +12527,10 @@
+ msgid "git replace [-f] <object> <replacement>"
+ msgstr ""
+ 
++#, c-format
++msgid "git repository gone in '%s'"
++msgstr ""
++
+ msgid "git rerere [clear | forget <pathspec>... | diff | status | remaining | gc]"
+ msgstr ""
+ 
+@@ -12923,30 +12608,18 @@
+ msgid "git show-ref --exclude-existing[=<pattern>]"
+ msgstr ""
+ 
+-msgid "git show-ref --exists <ref>"
+-msgstr ""
+-
+-msgid ""
+-"git show-ref --verify [-q | --quiet] [-d | --dereference]\n"
+-"             [-s | --hash[=<n>]] [--abbrev[=<n>]]\n"
+-"             [--] [<ref>...]"
+-msgstr ""
+-
+ msgid ""
+-"git show-ref [--head] [-d | --dereference]\n"
++"git show-ref [-q | --quiet] [--verify] [--head] [-d | --dereference]\n"
+ "             [-s | --hash[=<n>]] [--abbrev[=<n>]] [--tags]\n"
+ "             [--heads] [--] [<pattern>...]"
+ msgstr ""
+ 
+-msgid "git sparse-checkout (init | list | set | add | reapply | disable | check-rules) [<options>]"
++msgid "git sparse-checkout (init | list | set | add | reapply | disable) [<options>]"
+ msgstr ""
+ 
+ msgid "git sparse-checkout add [--skip-checks] (--stdin | <patterns>)"
+ msgstr ""
+ 
+-msgid "git sparse-checkout check-rules [-z] [--skip-checks][--[no-]cone] [--rules-file <file>]"
+-msgstr ""
+-
+ msgid "git sparse-checkout set [--[no-]cone] [--[no-]sparse-index] [--skip-checks] (--stdin | <patterns>)"
+ msgstr ""
+ 
+@@ -13096,7 +12769,7 @@
+ 
+ msgid ""
+ "git worktree add [-f] [--detach] [--checkout] [--lock [--reason <string>]]\n"
+-"                 [--orphan] [(-b | -B) <new-branch>] <path> [<commit-ish>]"
++"                 [-b <new-branch>] <path> [<commit-ish>]"
+ msgstr ""
+ 
+ msgid "git worktree list [-v | --porcelain [-z]]"
+@@ -13192,10 +12865,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "got bad config --config=%s"
+-msgstr ""
+-
+-#, c-format
+ msgid ""
+ "gpg failed to sign the data:\n"
+ "%s"
+@@ -13270,7 +12939,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "helper %s does not support '--force'"
++msgid "helper %s does not support 'force'"
+ msgstr ""
+ 
+ #, c-format
+@@ -13320,12 +12989,6 @@
+ msgid "historical option -- no-op"
+ msgstr ""
+ 
+-msgid "historical; does nothing"
+-msgstr ""
+-
+-msgid "historical; same as --progress"
+-msgstr ""
+-
+ msgid "how to handle commits that become empty"
+ msgstr ""
+ 
+@@ -13342,9 +13005,6 @@
+ msgid "http transport does not support %s"
+ msgstr ""
+ 
+-msgid "human-readable comment string (# will be prepended as needed)"
+-msgstr ""
+-
+ #, c-format
+ msgid ""
+ "hunks do not overlap:\n"
+@@ -13508,10 +13168,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "ignoring too-small changed-path chunk (%<PRIuMAX> < %<PRIuMAX>) in commit-graph file"
+-msgstr ""
+-
+-#, c-format
+ msgid "ignoring unknown core.fsync component '%s'"
+ msgstr ""
+ 
+@@ -13531,9 +13187,7 @@
+ msgid "illegal label name: '%.*s'"
+ msgstr ""
+ 
+-msgid ""
+-"import all tags and associated objects when fetching\n"
+-"or do not fetch any tag at all (--no-tags)"
++msgid "import all tags and associated objects when fetching"
+ msgstr ""
+ 
+ msgid "import marks from this file"
+@@ -13636,10 +13290,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "index-version: was %d, set to %d"
+-msgstr ""
+-
+-#, c-format
+ msgid ""
+ "index.version set, but the value is invalid.\n"
+ "Using version %i"
+@@ -13685,9 +13335,6 @@
+ msgid "insane in-reply-to: %s"
+ msgstr ""
+ 
+-msgid "insert <paragraph-break> between paragraphs"
+-msgstr ""
+-
+ msgid "instead of applying the patch, output a summary for the input"
+ msgstr ""
+ 
+@@ -13803,19 +13450,12 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "invalid branch name: '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "invalid branch.%s.merge; cannot rebase onto > 1 branch"
+ msgstr ""
+ 
+ msgid "invalid characters in host name"
+ msgstr ""
+ 
+-msgid "invalid checksum"
+-msgstr ""
+-
+ #, c-format
+ msgid "invalid color value: %.*s"
+ msgstr ""
+@@ -13856,10 +13496,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "invalid extra cruft tip: '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "invalid file: '%s'"
+ msgstr ""
+ 
+@@ -13956,10 +13592,6 @@
+ msgid "invalid onto: '%s'"
+ msgstr ""
+ 
+-#, c-format
+-msgid "invalid option '%s' in --stdin mode"
+-msgstr ""
+-
+ msgid "invalid option combination, ignoring --threads"
+ msgstr ""
+ 
+@@ -13971,10 +13603,6 @@
+ msgid "invalid orig-head: '%s'"
+ msgstr ""
+ 
+-#, c-format
+-msgid "invalid pack.allowPackReuse value: '%s'"
+-msgstr ""
+-
+ msgid "invalid packet"
+ msgstr ""
+ 
+@@ -14033,14 +13661,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "invalid rev-index for pack '%s'"
+-msgstr ""
+-
+-#, c-format
+-msgid "invalid rev-index position at %<PRIu64>: %<PRIu32> != %<PRIu32>"
+-msgstr ""
+-
+-#, c-format
+ msgid "invalid section name '%s'"
+ msgstr ""
+ 
+@@ -14126,10 +13746,12 @@
+ "/ - search for a hunk matching the given regex\n"
+ "s - split the current hunk into smaller hunks\n"
+ "e - manually edit the current hunk\n"
+-"p - print the current hunk\n"
+ "? - print help\n"
+ msgstr ""
+ 
++msgid "join whitespace-continued values"
++msgstr ""
++
+ msgid "just hash any random garbage to create corrupt objects for debugging Git"
+ msgstr ""
+ 
+@@ -14151,6 +13773,9 @@
+ msgid "keep non patch brackets in subject"
+ msgstr ""
+ 
++msgid "keep redundant, empty commits"
++msgstr ""
++
+ msgid "keep subject"
+ msgstr ""
+ 
+@@ -14382,9 +14007,6 @@
+ msgid "make reflogs head nodes (default)"
+ msgstr ""
+ 
+-msgid "make replay advance given branch"
+-msgstr ""
+-
+ msgid "make sure the patch is applicable to the current index"
+ msgstr ""
+ 
+@@ -14641,10 +14263,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "missing mapping of %s to %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "missing notes on source object %s. Cannot copy."
+ msgstr ""
+ 
+@@ -14752,9 +14370,6 @@
+ msgid "multi-pack-index OID fanout is of the wrong size"
+ msgstr ""
+ 
+-msgid "multi-pack-index OID lookup chunk is the wrong size"
+-msgstr ""
+-
+ #, c-format
+ msgid "multi-pack-index file %s is too small"
+ msgstr ""
+@@ -14766,32 +14381,20 @@
+ msgid "multi-pack-index hash version %u does not match version %u"
+ msgstr ""
+ 
+-msgid "multi-pack-index large offset out of bounds"
++msgid "multi-pack-index missing required OID fanout chunk"
+ msgstr ""
+ 
+-msgid "multi-pack-index object offset chunk is the wrong size"
++msgid "multi-pack-index missing required OID lookup chunk"
+ msgstr ""
+ 
+-#, c-format
+-msgid "multi-pack-index pack names out of order: '%s' before '%s'"
++msgid "multi-pack-index missing required object offsets chunk"
+ msgstr ""
+ 
+-msgid "multi-pack-index pack-name chunk is too short"
++msgid "multi-pack-index missing required pack-name chunk"
+ msgstr ""
+ 
+-msgid "multi-pack-index required OID fanout chunk missing or corrupted"
+-msgstr ""
+-
+-msgid "multi-pack-index required OID lookup chunk missing or corrupted"
+-msgstr ""
+-
+-msgid "multi-pack-index required object offsets chunk missing or corrupted"
+-msgstr ""
+-
+-msgid "multi-pack-index required pack-name chunk missing or corrupted"
+-msgstr ""
+-
+-msgid "multi-pack-index reverse-index chunk is the wrong size"
++#, c-format
++msgid "multi-pack-index pack names out of order: '%s' before '%s'"
+ msgstr ""
+ 
+ #, c-format
+@@ -14822,14 +14425,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "multiple updates for '%s' (including one via symref '%s') are not allowed"
+-msgstr ""
+-
+-#, c-format
+-msgid "multiple updates for 'HEAD' (including one via its referent '%s') are not allowed"
+-msgstr ""
+-
+-#, c-format
+ msgid "multiple updates for ref '%s' not allowed"
+ msgstr ""
+ 
+@@ -14898,9 +14493,6 @@
+ msgid "need exactly one range"
+ msgstr ""
+ 
+-msgid "need some commits to replay"
+-msgstr ""
+-
+ msgid "need two commit ranges"
+ msgstr ""
+ 
+@@ -14950,7 +14542,7 @@
+ msgid "new object is the same as the old one: '%s'"
+ msgstr ""
+ 
+-msgid "new unborn branch"
++msgid "new unparented branch"
+ msgstr ""
+ 
+ msgid "new-branch"
+@@ -14969,14 +14561,6 @@
+ msgid "no URLs configured for remote '%s'"
+ msgstr ""
+ 
+-#, c-format
+-msgid "no attribute source given for --attr-source\n"
+-msgstr ""
+-
+-#, c-format
+-msgid "no branch named '%s'"
+-msgstr ""
+-
+ msgid "no branches given, and HEAD is not valid"
+ msgstr ""
+ 
+@@ -14994,10 +14578,6 @@
+ msgid "no cherry-pick or revert in progress"
+ msgstr ""
+ 
+-#, c-format
+-msgid "no commit on branch '%s' yet"
+-msgstr ""
+-
+ msgid "no commits parsed."
+ msgstr ""
+ 
+@@ -15053,10 +14633,6 @@
+ msgid "no merge given, only parents."
+ msgstr ""
+ 
+-#, c-format
+-msgid "no multi-line comment allowed: '%s'"
+-msgstr ""
+-
+ msgid "no name was given and auto-detection is disabled"
+ msgstr ""
+ 
+@@ -15068,9 +14644,6 @@
+ msgid "no note found for object %s."
+ msgstr ""
+ 
+-msgid "no object format specified"
+-msgstr ""
+-
+ msgid "no pack files to index."
+ msgstr ""
+ 
+@@ -15087,9 +14660,6 @@
+ msgid "no pattern given"
+ msgstr ""
+ 
+-msgid "no rebase in progress"
+-msgstr ""
+-
+ #, c-format
+ msgid "no reflog for '%s'"
+ msgstr ""
+@@ -15310,7 +14880,7 @@
+ #, c-format
+ msgid ""
+ "not deleting branch '%s' that is not yet merged to\n"
+-"         '%s', even though it is merged to HEAD"
++"         '%s', even though it is merged to HEAD."
+ msgstr ""
+ 
+ msgid "not handling anything other than two heads merge."
+@@ -15469,10 +15039,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "object '%s' does not exist"
+-msgstr ""
+-
+-#, c-format
+ msgid "object '%s' does not have a unique type"
+ msgstr ""
+ 
+@@ -15674,10 +15240,6 @@
+ msgid "operation not supported by protocol"
+ msgstr ""
+ 
+-#, c-format
+-msgid "opposite of --no-%s"
+-msgstr ""
+-
+ msgid "option"
+ msgstr ""
+ 
+@@ -15690,24 +15252,13 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "option '%s' and commit-ish cannot be used together"
+-msgstr ""
+-
+-#, c-format
+ msgid "option '%s' and commit-ishes cannot be used together"
+ msgstr ""
+ 
+ #, c-format
+-msgid "option '%s' can only be used along with '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "option '%s' must come before non-option arguments"
+ msgstr ""
+ 
+-msgid "option --onto or --advance is mandatory"
+-msgstr ""
+-
+ #, c-format
+ msgid "option `%s' expects \"%s\" or \"%s\""
+ msgstr ""
+@@ -15772,9 +15323,16 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "options '%s=%s' and '%s=%s' cannot be used together"
++msgstr ""
++
++#, c-format
+ msgid "options '-%c', '-%c', and '%s' cannot be used together"
+ msgstr ""
+ 
++msgid "or do not fetch any tag at all (--no-tags)"
++msgstr ""
++
+ #, c-format
+ msgid "ordered %u objects, expected %<PRIu32>"
+ msgstr ""
+@@ -15786,10 +15344,6 @@
+ msgid "out of range"
+ msgstr ""
+ 
+-#, c-format
+-msgid "out-of-bounds read: (%<PRIuMAX> >= %<PRIuMAX>)"
+-msgstr ""
+-
+ msgid "output a binary diff that can be applied"
+ msgstr ""
+ 
+@@ -15892,9 +15446,6 @@
+ msgid "pack prefix %s does not begin with objdir %s"
+ msgstr ""
+ 
+-msgid "pack prefix to store a pack containing filtered out objects"
+-msgstr ""
+-
+ msgid "pack prefix to store a pack containing pruned objects"
+ msgstr ""
+ 
+@@ -16030,9 +15581,6 @@
+ msgid "patch fragment without header at line %d: %.*s"
+ msgstr ""
+ 
+-msgid "patch too large"
+-msgstr ""
+-
+ #, c-format
+ msgid "patch with only garbage at line %d"
+ msgstr ""
+@@ -16157,14 +15705,6 @@
+ msgid "pathspec '%s' is beyond a symbolic link"
+ msgstr ""
+ 
+-#, c-format
+-msgid "pathspec '%s' matches files outside the current directory"
+-msgstr ""
+-
+-#, c-format
+-msgid "pathspec magic not supported by --follow: %s"
+-msgstr ""
+-
+ msgid "path|tree-ish"
+ msgstr ""
+ 
+@@ -16195,7 +15735,7 @@
+ msgid "pick hunks and update selectively"
+ msgstr ""
+ 
+-msgid "placement"
++msgid "please commit or stash them."
+ msgstr ""
+ 
+ msgid "please fix this using 'git rebase --edit-todo'."
+@@ -16223,10 +15763,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "positive value expected %s=%s"
+-msgstr ""
+-
+-#, c-format
+ msgid "positive value expected '%s' in %%(%s)"
+ msgstr ""
+ 
+@@ -16510,28 +16046,9 @@
+ msgid "prune unreferenced objects"
+ msgstr ""
+ 
+-#, c-format
+-msgid "pseudo-merge group '%s' has unstable threshold before stable one"
+-msgstr ""
+-
+-#, c-format
+-msgid "pseudo-merge group '%s' missing required pattern"
+-msgstr ""
+-
+-#, c-format
+-msgid "pseudo-merge index out of range (%<PRIu32> >= %<PRIuMAX>)"
+-msgstr ""
+-
+-#, c-format
+-msgid "pseudo-merge regex from config has too many capture groups (max=%<PRIuMAX>)"
+-msgstr ""
+-
+ msgid "pull with rebase"
+ msgstr ""
+ 
+-msgid "push all branches"
+-msgstr ""
+-
+ msgid "push all refs"
+ msgstr ""
+ 
+@@ -16555,7 +16072,7 @@
+ msgid "push refspecs for '%s' do not include '%s'"
+ msgstr ""
+ 
+-msgid "push tags (can't be used with --all or --branches or --mirror)"
++msgid "push tags (can't be used with --all or --mirror)"
+ msgstr ""
+ 
+ msgid "query push URLs rather than fetch URLs"
+@@ -16663,9 +16180,6 @@
+ msgid "read patterns from standard in"
+ msgstr ""
+ 
+-msgid "read reference patterns from stdin"
+-msgstr ""
+-
+ msgid "read refs from stdin"
+ msgstr ""
+ 
+@@ -16797,9 +16311,6 @@
+ msgid "reference '%s' does not point to a blob"
+ msgstr ""
+ 
+-msgid "reference does not exist"
+-msgstr ""
+-
+ #, c-format
+ msgid "reference is not a tree: %s"
+ msgstr ""
+@@ -16826,30 +16337,9 @@
+ msgid "reference repository '%s' is shallow"
+ msgstr ""
+ 
+-msgid "references to exclude"
+-msgstr ""
+-
+-msgid "references to include"
+-msgstr ""
+-
+ msgid "refmap"
+ msgstr ""
+ 
+-#, c-format
+-msgid "refname %s is a symbolic ref, copying it is not supported"
+-msgstr ""
+-
+-#, c-format
+-msgid "refname %s not found"
+-msgstr ""
+-
+-#, c-format
+-msgid "refname is dangerous: %s"
+-msgstr ""
+-
+-msgid "reformat multiline trailer values as single-line values"
+-msgstr ""
+-
+ msgid "refresh even if index contains unmerged entries"
+ msgstr ""
+ 
+@@ -16865,14 +16355,6 @@
+ msgid "refspec"
+ msgstr ""
+ 
+-#, c-format
+-msgid "reftable: transaction failure: %s"
+-msgstr ""
+-
+-#, c-format
+-msgid "reftable: transaction prepare: %s"
+-msgstr ""
+-
+ #. TRANSLATORS: the first %s will be replaced by a git
+ #. notes command: 'add', 'merge', 'remove', etc.
+ #.
+@@ -16905,9 +16387,6 @@
+ msgid "refusing to move '%s' into an existing git dir"
+ msgstr ""
+ 
+-msgid "refusing to run without --i-still-use-this"
+-msgstr ""
+-
+ #, c-format
+ msgid "refusing to update ref with bad name '%s'"
+ msgstr ""
+@@ -17015,7 +16494,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "remote-tracking branch '%s' not found"
++msgid "remote-tracking branch '%s' not found."
+ msgstr ""
+ 
+ msgid "removal patch leaves file contents"
+@@ -17052,14 +16531,11 @@
+ msgid "remove submodule working trees even if they contain local changes"
+ msgstr ""
+ 
+-msgid "remove unnecessary whitespace"
+-msgstr ""
+-
+ msgid "remove whole directories"
+ msgstr ""
+ 
+ #, c-format
+-msgid "removed stale scalar.repo '%s'"
++msgid "removing stale scalar.repo '%s'"
+ msgstr ""
+ 
+ msgid "rename"
+@@ -17071,10 +16547,6 @@
+ msgid "renamed"
+ msgstr ""
+ 
+-#, c-format
+-msgid "renamed a misnamed branch '%s' away"
+-msgstr ""
+-
+ msgid "renamed:"
+ msgstr ""
+ 
+@@ -17130,15 +16602,6 @@
+ msgid "replacement %s not found for %s"
+ msgstr ""
+ 
+-msgid "replay onto given commit"
+-msgstr ""
+-
+-msgid "replaying down to root commit is not supported yet!"
+-msgstr ""
+-
+-msgid "replaying merge commits is not supported yet!"
+-msgstr ""
+-
+ msgid "repo"
+ msgstr ""
+ 
+@@ -17163,9 +16626,6 @@
+ msgid "report archived files on stderr"
+ msgstr ""
+ 
+-msgid "report on-disk index format version"
+-msgstr ""
+-
+ msgid "report pruned notes"
+ msgstr ""
+ 
+@@ -17203,27 +16663,15 @@
+ msgid "repository '%s' not found"
+ msgstr ""
+ 
+-#, c-format
+-msgid "repository at '%s' has a format issue"
+-msgstr ""
+-
+-#, c-format
+-msgid "repository at '%s' has different owner"
+-msgstr ""
+-
+ msgid ""
+ "repository has been updated, but unable to write\n"
+-"new index file. Check that disk is not full and quota is\n"
++"new_index file. Check that disk is not full and quota is\n"
+ "not exceeded, and then \"git restore --staged :/\" to recover."
+ msgstr ""
+ 
+ msgid "repository lacks the necessary blob to perform 3-way merge."
+ msgstr ""
+ 
+-#, c-format
+-msgid "repository not found in '%s'"
+-msgstr ""
+-
+ msgid "repository on the other end cannot be shallow"
+ msgstr ""
+ 
+@@ -17451,9 +16899,7 @@
+ "Commands:\n"
+ msgstr ""
+ 
+-msgid ""
+-"scalar clone [--single-branch] [--branch <main-branch>] [--full-clone]\n"
+-"\t[--[no-]src] <url> [<enlistment>]"
++msgid "scalar clone [<options>] [--] <repo> [<dir>]"
+ msgstr ""
+ 
+ msgid "scalar delete <enlistment>"
+@@ -17601,6 +17047,9 @@
+ msgid "set modification time of archive entries"
+ msgstr ""
+ 
++msgid "set parsing options"
++msgstr ""
++
+ msgid "set refs/remotes/<name>/HEAD according to remote"
+ msgstr ""
+ 
+@@ -18078,10 +17527,6 @@
+ msgid "some prerequisite commits exist in the object store, but are not connected to the repository's history"
+ msgstr ""
+ 
+-#, c-format
+-msgid "some rev walking options will be overridden as '%s' bit in 'struct rev_info' will be forced"
+-msgstr ""
+-
+ msgid "sort output according to the number of commits per author"
+ msgstr ""
+ 
+@@ -18154,9 +17599,6 @@
+ msgid "specify the hash algorithm to use"
+ msgstr ""
+ 
+-msgid "specify the reference format to use"
+-msgstr ""
+-
+ msgid "specifying a master branch makes no sense with --mirror"
+ msgstr ""
+ 
+@@ -18252,9 +17694,6 @@
+ msgid "status: waiting for good commit(s), bad commit known\n"
+ msgstr ""
+ 
+-msgid "stdin and stdout is NUL-terminated"
+-msgstr ""
+-
+ msgid "stdin has NUL-terminated arguments"
+ msgstr ""
+ 
+@@ -18409,7 +17848,7 @@
+ msgid "synonym for --dirstat=cumulative"
+ msgstr ""
+ 
+-msgid "synonym for --dirstat=files,<param1>,<param2>..."
++msgid "synonym for --dirstat=files,param1,param2..."
+ msgstr ""
+ 
+ msgid "synonym for --files-with-matches"
+@@ -18483,9 +17922,6 @@
+ msgid "terminate entries with NUL byte"
+ msgstr ""
+ 
+-msgid "terminate input and output files by a NUL character"
+-msgstr ""
+-
+ msgid "terminate input and output records by a NUL character"
+ msgstr ""
+ 
+@@ -18542,12 +17978,7 @@
+ msgid "the '--no-[external-commands|aliases]' options can only be used with '--all'"
+ msgstr ""
+ 
+-msgid "the '--set-upstream' option is no longer supported. Please use '--track' or '--set-upstream-to' instead"
+-msgstr ""
+-
+-msgid ""
+-"the -a, and -r, options to 'git branch' do not take a branch name.\n"
+-"Did you mean to use: -a|-r --list <pattern>?"
++msgid "the '--set-upstream' option is no longer supported. Please use '--track' or '--set-upstream-to' instead."
+ msgstr ""
+ 
+ msgid ""
+@@ -18555,10 +17986,6 @@
+ "See its entry in 'git help config' for details."
+ msgstr ""
+ 
+-#, c-format
+-msgid "the branch '%s' is not fully merged"
+-msgstr ""
+-
+ msgid "the commit is authored by me now (used with -C/-c/--amend)"
+ msgstr ""
+ 
+@@ -18705,12 +18132,6 @@
+ msgid "to clone from a local repository"
+ msgstr ""
+ 
+-#, c-format
+-msgid ""
+-"to unregister this repository from Scalar, run\n"
+-"\tgit config --global --unset --fixed-value scalar.repo \"%s\""
+-msgstr ""
+-
+ msgid "toggle the use of a sparse index"
+ msgstr ""
+ 
+@@ -18759,9 +18180,6 @@
+ msgid "too many entries in %s"
+ msgstr ""
+ 
+-msgid "too many pseudo-merges"
+-msgstr ""
+-
+ msgid "too-short tree file"
+ msgstr ""
+ 
+@@ -18837,14 +18255,6 @@
+ msgid "trying to write commit not in index"
+ msgstr ""
+ 
+-#, c-format
+-msgid "trying to write non-commit object %s to branch '%s'"
+-msgstr ""
+-
+-#, c-format
+-msgid "trying to write ref '%s' with nonexistent object %s"
+-msgstr ""
+-
+ msgid "two output directories?"
+ msgstr ""
+ 
+@@ -18875,10 +18285,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unable to add %s to database"
+-msgstr ""
+-
+-#, c-format
+ msgid "unable to add '%s' to index"
+ msgstr ""
+ 
+@@ -18919,10 +18325,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unable to compact stack: %s"
+-msgstr ""
+-
+-#, c-format
+ msgid ""
+ "unable to connect to %s:\n"
+ "%s"
+@@ -19007,9 +18409,6 @@
+ msgid "unable to dup bundle descriptor"
+ msgstr ""
+ 
+-msgid "unable to enumerate additional recent objects"
+-msgstr ""
+-
+ msgid "unable to fdopen alternates lockfile"
+ msgstr ""
+ 
+@@ -19060,9 +18459,6 @@
+ msgid "unable to get object type for %s"
+ msgstr ""
+ 
+-msgid "unable to get random bytes"
+-msgstr ""
+-
+ #, c-format
+ msgid "unable to get size of %s"
+ msgstr ""
+@@ -19103,14 +18499,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unable to load pack: '%s', disabling pack-reuse"
+-msgstr ""
+-
+-#, c-format
+-msgid "unable to load rev-index for pack '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "unable to load root tree for commit %s"
+ msgstr ""
+ 
+@@ -19132,10 +18520,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unable to map %s %s in commit object"
+-msgstr ""
+-
+-#, c-format
+ msgid "unable to mmap %s"
+ msgstr ""
+ 
+@@ -19258,10 +18642,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unable to read branch description file '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "unable to read commit message from '%s'"
+ msgstr ""
+ 
+@@ -19288,10 +18668,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unable to read tree %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "unable to read tree (%s)"
+ msgstr ""
+ 
+@@ -19454,6 +18830,9 @@
+ msgid "unable to write new index file"
+ msgstr ""
+ 
++msgid "unable to write new_index file"
++msgstr ""
++
+ msgid "unable to write note object"
+ msgstr ""
+ 
+@@ -19550,15 +18929,14 @@
+ msgid "unhandled object '%s' given."
+ msgstr ""
+ 
+-msgid "unknown"
++msgid "unhandled options"
+ msgstr ""
+ 
+-#, c-format
+-msgid "unknown %%(trailers) argument: %s"
++msgid "unknown"
+ msgstr ""
+ 
+ #, c-format
+-msgid "unknown --mirror argument: %s"
++msgid "unknown %%(trailers) argument: %s"
+ msgstr ""
+ 
+ #, c-format
+@@ -19570,16 +18948,9 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unknown argument `%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "unknown argument to --path-format: %s"
+ msgstr ""
+ 
+-msgid "unknown arguments supplied with --stdin"
+-msgstr ""
+-
+ msgid "unknown branch type"
+ msgstr ""
+ 
+@@ -19611,10 +18982,6 @@
+ msgid "unknown commit %s"
+ msgstr ""
+ 
+-#, c-format
+-msgid "unknown conflict style '%s'"
+-msgstr ""
+-
+ msgid "unknown error occurred while reading the configuration files"
+ msgstr ""
+ 
+@@ -19639,6 +19006,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unknown mirror argument: %s"
++msgstr ""
++
++#, c-format
+ msgid "unknown mode for --abbrev-ref: %s"
+ msgstr ""
+ 
+@@ -19686,10 +19057,6 @@
+ msgid "unknown preferred pack: '%s'"
+ msgstr ""
+ 
+-#, c-format
+-msgid "unknown ref storage format '%s'"
+-msgstr ""
+-
+ msgid "unknown repository extension found:"
+ msgid_plural "unknown repository extensions found:"
+ msgstr[0] ""
+@@ -19704,10 +19071,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unknown style '%s' given for '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "unknown subcommand: `%s'"
+ msgstr ""
+ 
+@@ -19732,10 +19095,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unknown value for object-format: %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "unknown variable '%s'"
+ msgstr ""
+ 
+@@ -19763,10 +19122,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unreachable: invalid reference: %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "unrecognized %%(%.*s) argument: %s"
+ msgstr ""
+ 
+@@ -19811,7 +19166,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unrecognized empty type '%s'; valid values are \"drop\", \"keep\", and \"stop\"."
++msgid "unrecognized empty type '%s'; valid values are \"drop\", \"keep\", and \"ask\"."
+ msgstr ""
+ 
+ #, c-format
+@@ -19891,10 +19246,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unsupported object format: %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "unsupported section for hidden refs: %s"
+ msgstr ""
+ 
+@@ -19931,9 +19282,6 @@
+ msgid "update ignored files (default)"
+ msgstr ""
+ 
+-msgid "update of config-file failed"
+-msgstr ""
+-
+ msgid "update stat information in the index file"
+ msgstr ""
+ 
+@@ -20129,9 +19477,6 @@
+ msgid "use basic POSIX regular expressions (default)"
+ msgstr ""
+ 
+-msgid "use branch description from file"
+-msgstr ""
+-
+ msgid "use colored output"
+ msgstr ""
+ 
+@@ -20141,9 +19486,6 @@
+ msgid "use current timestamp for author date"
+ msgstr ""
+ 
+-msgid "use default prefixes a/ and b/"
+-msgstr ""
+-
+ msgid "use empty blobs as rename source"
+ msgstr ""
+ 
+@@ -20177,18 +19519,12 @@
+ msgid "use notes from <notes-ref>"
+ msgstr ""
+ 
+-msgid "use object IDs instead of filenames"
+-msgstr ""
+-
+ msgid "use overlay mode"
+ msgstr ""
+ 
+ msgid "use overlay mode (default)"
+ msgstr ""
+ 
+-msgid "use patterns in <file> instead of the current ones."
+-msgstr ""
+-
+ msgid "use per-worktree config file"
+ msgstr ""
+ 
+@@ -20305,10 +19641,6 @@
+ msgid "value '%s' of pattern has no '*'"
+ msgstr ""
+ 
+-#, c-format
+-msgid "value expected %s="
+-msgstr ""
+-
+ msgid "value is \"true\" or \"false\""
+ msgstr ""
+ 
+@@ -20415,9 +19747,6 @@
+ msgid "when run from subdir, exclude changes outside and show relative paths"
+ msgstr ""
+ 
+-msgid "when used with --rules-file interpret patterns as cone mode patterns"
+-msgstr ""
+-
+ msgid "where the new submodule will be cloned to"
+ msgstr ""
+ 
+@@ -20454,12 +19783,6 @@
+ msgid "with --batch[-check]: ignores stdin, batches all known objects"
+ msgstr ""
+ 
+-msgid "with --cruft, expire objects older than this"
+-msgstr ""
+-
+-msgid "with --cruft, limit the size of new cruft packs"
+-msgstr ""
+-
+ msgid "with --get, use default value when missing entry"
+ msgstr ""
+ 
+@@ -20472,6 +19795,9 @@
+ msgid "with -A, do not loosen objects older than this"
+ msgstr ""
+ 
++msgid "with -C, expire objects older than this"
++msgstr ""
++
+ msgid "with -a, repack unreachable objects"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-pot --------------------
+
+level=error msg="config variable 'rebase.autoSquash' in manpage does not match string in pot file:"
+level=error msg="    >> msgid   \"apply options are incompatible with rebase.autosquash.  Consider adding --no-autosquash\""
+
+ERROR: fail to execute "git-po-helper check-pot"
