@@ -200,3 +200,183 @@ level=error msg="config variable 'commitGraph.changedPathsVersion' in manpage do
 level=error msg="    >> msgid   \"attempting to write a commit-graph, but 'commitgraph.changedPathsVersion' (%d) is not supported\""
 
 ERROR: fail to execute "git-po-helper check-pot"
+
+
+#################### Mon, 01 Apr 2024 23:57:19 +0000 ####################
+
+--- po/git.pot.old	2024-04-01 23:57:19.509955006 +0000
++++ po/git.pot.new	2024-04-01 23:57:19.581954481 +0000
+@@ -810,10 +810,22 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "%s must be between 0 and 100, using default"
++msgstr ""
++
++#, c-format
+ msgid "%s must be non-negative"
+ msgstr ""
+ 
+ #, c-format
++msgid "%s must be non-negative, using default"
++msgstr ""
++
++#, c-format
++msgid "%s must be positive, using default"
++msgstr ""
++
++#, c-format
+ msgid "%s must have at least one character"
+ msgstr ""
+ 
+@@ -7576,6 +7588,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "attempted to store non-selected commit: '%s'"
++msgstr ""
++
++#, c-format
+ msgid "attempting to mmap %<PRIuMAX> over limit %<PRIuMAX>"
+ msgstr ""
+ 
+@@ -9199,6 +9215,12 @@
+ msgid "corrupted bitmap index file (too short to fit lookup table)"
+ msgstr ""
+ 
++msgid "corrupted bitmap index file (too short to fit pseudo-merge table header)"
++msgstr ""
++
++msgid "corrupted bitmap index file (too short to fit pseudo-merge table)"
++msgstr ""
++
+ msgid "corrupted bitmap index file (wrong header)"
+ msgstr ""
+ 
+@@ -9428,6 +9450,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "could not find pseudo-merge for commit %s at offset %<PRIuMAX>"
++msgstr ""
++
++#, c-format
+ msgid "could not finish '%s'"
+ msgstr ""
+ 
+@@ -9732,6 +9758,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "could not read extended pseudo-merge table for commit %s"
++msgstr ""
++
++#, c-format
+ msgid "could not read file '%s'"
+ msgstr ""
+ 
+@@ -10717,6 +10747,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "duplicate entry when writing bitmap index: %s"
++msgstr ""
++
++#, c-format
+ msgid "duplicate parent %s ignored"
+ msgstr ""
+ 
+@@ -11124,6 +11158,14 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "extended pseudo-merge lookup out-of-bounds (%<PRIu32> >= %<PRIu32>)"
++msgstr ""
++
++#, c-format
++msgid "extended pseudo-merge read out-of-bounds (%<PRIuMAX> >= %<PRIuMAX>)"
++msgstr ""
++
++#, c-format
+ msgid "external diff died, stopping at %s"
+ msgstr ""
+ 
+@@ -11391,6 +11433,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "failed to load pseudo-merge regex for %s: '%s'"
++msgstr ""
++
++#, c-format
+ msgid "failed to locate object %d in packfile"
+ msgstr ""
+ 
+@@ -13018,13 +13064,13 @@
+ msgid "git update-index [<options>] [--] [<file>...]"
+ msgstr ""
+ 
+-msgid "git update-ref [<options>]    <refname> <new-val> [<old-val>]"
++msgid "git update-ref [<options>]    <refname> <new-oid> [<old-oid>]"
+ msgstr ""
+ 
+ msgid "git update-ref [<options>] --stdin [-z]"
+ msgstr ""
+ 
+-msgid "git update-ref [<options>] -d <refname> [<old-val>]"
++msgid "git update-ref [<options>] -d <refname> [<old-oid>]"
+ msgstr ""
+ 
+ msgid "git verify-commit [-v | --verbose] [--raw] <commit>..."
+@@ -15734,6 +15780,10 @@
+ msgid "out of range"
+ msgstr ""
+ 
++#, c-format
++msgid "out-of-bounds read: (%<PRIuMAX> >= %<PRIuMAX>)"
++msgstr ""
++
+ msgid "output a binary diff that can be applied"
+ msgstr ""
+ 
+@@ -16454,6 +16504,22 @@
+ msgid "prune unreferenced objects"
+ msgstr ""
+ 
++#, c-format
++msgid "pseudo-merge group '%s' has unstable threshold before stable one"
++msgstr ""
++
++#, c-format
++msgid "pseudo-merge group '%s' missing required pattern"
++msgstr ""
++
++#, c-format
++msgid "pseudo-merge index out of range (%<PRIu32> >= %<PRIuMAX>)"
++msgstr ""
++
++#, c-format
++msgid "pseudo-merge regex from config has too many capture groups (max=%<PRIuMAX>)"
++msgstr ""
++
+ msgid "pull with rebase"
+ msgstr ""
+ 
+@@ -18687,6 +18753,9 @@
+ msgid "too many entries in %s"
+ msgstr ""
+ 
++msgid "too many pseudo-merges"
++msgstr ""
++
+ msgid "too-short tree file"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-pot --------------------
+
+level=error msg="config variable 'commitGraph.changedPathsVersion' in manpage does not match string in pot file:"
+level=error msg="    >> msgid   \"attempting to write a commit-graph, but 'commitgraph.changedPathsVersion' (%d) is not supported\""
+
+ERROR: fail to execute "git-po-helper check-pot"
