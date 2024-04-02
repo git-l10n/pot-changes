@@ -1,0 +1,93 @@
+
+
+#################### Tue, 02 Apr 2024 22:57:43 +0000 ####################
+
+--- po/git.pot.old	2024-04-02 22:57:43.375640053 +0000
++++ po/git.pot.new	2024-04-02 22:57:43.451639992 +0000
+@@ -1118,7 +1118,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "%shint: %.*s%s\n"
++msgid "%shint:%s%.*s%s\n"
+ msgstr ""
+ 
+ #, c-format
+@@ -4370,10 +4370,7 @@
+ msgid "Maybe you want to use 'update --init'?"
+ msgstr ""
+ 
+-msgid ""
+-"Maybe you wanted to say 'git add .'?\n"
+-"Turn this message off by running\n"
+-"\"git config advice.addEmptyPathspec false\""
++msgid "Maybe you wanted to say 'git add .'?"
+ msgstr ""
+ 
+ msgid "Memory exhausted"
+@@ -6452,10 +6449,7 @@
+ msgid "Use 'git am --show-current-patch=diff' to see the failed patch"
+ msgstr ""
+ 
+-msgid ""
+-"Use -f if you really want to add them.\n"
+-"Turn this message off by running\n"
+-"\"git config advice.addIgnoredFile false\""
++msgid "Use -f if you really want to add them."
+ msgstr ""
+ 
+ msgid "Use binary search to find the commit that introduced a bug"
+@@ -7594,6 +7588,9 @@
+ msgid "author"
+ msgstr ""
+ 
++msgid "auto-pack refs as needed"
++msgstr ""
++
+ msgid "automatically re-schedule any `exec` that fails"
+ msgstr ""
+ 
+@@ -12658,7 +12655,7 @@
+ msgid "git pack-objects [<options>] <base-name> [< <ref-list> | < <object-list>]"
+ msgstr ""
+ 
+-msgid "git pack-refs [--all] [--no-prune] [--include <pattern>] [--exclude <pattern>]"
++msgid "git pack-refs [--all] [--no-prune] [--auto] [--include <pattern>] [--exclude <pattern>]"
+ msgstr ""
+ 
+ msgid "git patch-id [--stable | --unstable | --verbatim]"
+@@ -13013,13 +13010,13 @@
+ msgid "git update-index [<options>] [--] [<file>...]"
+ msgstr ""
+ 
+-msgid "git update-ref [<options>]    <refname> <new-val> [<old-val>]"
++msgid "git update-ref [<options>]    <refname> <new-oid> [<old-oid>]"
+ msgstr ""
+ 
+ msgid "git update-ref [<options>] --stdin [-z]"
+ msgstr ""
+ 
+-msgid "git update-ref [<options>] -d <refname> [<old-val>]"
++msgid "git update-ref [<options>] -d <refname> [<old-oid>]"
+ msgstr ""
+ 
+ msgid "git verify-commit [-v | --verbose] [--raw] <commit>..."
+@@ -14069,6 +14066,7 @@
+ "/ - search for a hunk matching the given regex\n"
+ "s - split the current hunk into smaller hunks\n"
+ "e - manually edit the current hunk\n"
++"p - print the current hunk\n"
+ "? - print help\n"
+ msgstr ""
+ 
+@@ -18838,6 +18836,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unable to compact stack: %s"
++msgstr ""
++
++#, c-format
+ msgid ""
+ "unable to connect to %s:\n"
+ "%s"
