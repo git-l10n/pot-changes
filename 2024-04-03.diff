@@ -1,0 +1,533 @@
+
+
+#################### Wed, 03 Apr 2024 16:57:47 +0000 ####################
+
+--- po/git.pot.old	2024-04-03 16:57:47.868408576 +0000
++++ po/git.pot.new	2024-04-03 16:57:47.940409274 +0000
+@@ -173,7 +173,7 @@
+ "\n"
+ "Write a message for tag:\n"
+ "  %s\n"
+-"Lines starting with '%s' will be ignored.\n"
++"Lines starting with '%c' will be ignored.\n"
+ msgstr ""
+ 
+ #, c-format
+@@ -181,7 +181,7 @@
+ "\n"
+ "Write a message for tag:\n"
+ "  %s\n"
+-"Lines starting with '%s' will be kept; you may remove them yourself if you want to.\n"
++"Lines starting with '%c' will be kept; you may remove them yourself if you want to.\n"
+ msgstr ""
+ 
+ msgid ""
+@@ -720,10 +720,6 @@
+ msgid "%s cannot be resolved to branch"
+ msgstr ""
+ 
+-#, c-format
+-msgid "%s cannot contain newline"
+-msgstr ""
+-
+ #. TRANSLATORS: This is a line of ambiguous commit
+ #. object output. E.g.:
+ #. *
+@@ -810,26 +806,10 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "%s must be between 0 and 100, using default"
+-msgstr ""
+-
+-#, c-format
+ msgid "%s must be non-negative"
+ msgstr ""
+ 
+ #, c-format
+-msgid "%s must be non-negative, using default"
+-msgstr ""
+-
+-#, c-format
+-msgid "%s must be positive, using default"
+-msgstr ""
+-
+-#, c-format
+-msgid "%s must have at least one character"
+-msgstr ""
+-
+-#, c-format
+ msgid "%s not allowed: %s:%d"
+ msgstr ""
+ 
+@@ -1130,7 +1110,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "%shint:%s%.*s%s\n"
++msgid "%shint: %.*s%s\n"
+ msgstr ""
+ 
+ #, c-format
+@@ -1714,7 +1694,7 @@
+ "---\n"
+ "To remove '%c' lines, make them ' ' lines (context).\n"
+ "To remove '%c' lines, delete them.\n"
+-"Lines starting with %s will be removed.\n"
++"Lines starting with %c will be removed.\n"
+ msgstr ""
+ 
+ msgid "--[no-]exclude-standard cannot be used for tracked contents"
+@@ -1764,9 +1744,6 @@
+ msgid "--command must be the first argument"
+ msgstr ""
+ 
+-msgid "--comment is only applicable to add/set/replace operations"
+-msgstr ""
+-
+ msgid "--contents and --reverse do not blend well."
+ msgstr ""
+ 
+@@ -1794,9 +1771,6 @@
+ msgid "--dump-aliases incompatible with other options\n"
+ msgstr ""
+ 
+-msgid "--empty=ask is deprecated; use '--empty=stop' instead."
+-msgstr ""
+-
+ msgid "--exclude-hidden= passed more than once"
+ msgstr ""
+ 
+@@ -4078,7 +4052,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "If you prefer to skip this patch, run \"%s --skip\" instead.\n"
++msgid "If you prefer to skip this patch, run \"%s --skip\" instead."
+ msgstr ""
+ 
+ msgid "If you want to detach HEAD at the commit, try again with the --detach option."
+@@ -4293,7 +4267,7 @@
+ 
+ #, c-format
+ msgid ""
+-"Lines starting with '%s' will be ignored, and an empty message aborts\n"
++"Lines starting with '%c' will be ignored, and an empty message aborts\n"
+ "the commit.\n"
+ msgstr ""
+ 
+@@ -4382,7 +4356,10 @@
+ msgid "Maybe you want to use 'update --init'?"
+ msgstr ""
+ 
+-msgid "Maybe you wanted to say 'git add .'?"
++msgid ""
++"Maybe you wanted to say 'git add .'?\n"
++"Turn this message off by running\n"
++"\"git config advice.addEmptyPathspec false\""
+ msgstr ""
+ 
+ msgid "Memory exhausted"
+@@ -4871,7 +4848,7 @@
+ msgid ""
+ "Please edit the description for the branch\n"
+ "  %s\n"
+-"Lines starting with '%s' will be stripped.\n"
++"Lines starting with '%c' will be stripped.\n"
+ msgstr ""
+ 
+ msgid ""
+@@ -4883,25 +4860,25 @@
+ #, c-format
+ msgid ""
+ "Please enter the commit message for your changes. Lines starting\n"
+-"with '%s' will be ignored, and an empty message aborts the commit.\n"
++"with '%c' will be ignored, and an empty message aborts the commit.\n"
+ msgstr ""
+ 
+ #, c-format
+ msgid ""
+ "Please enter the commit message for your changes. Lines starting\n"
+-"with '%s' will be ignored.\n"
++"with '%c' will be ignored.\n"
+ msgstr ""
+ 
+ #, c-format
+ msgid ""
+ "Please enter the commit message for your changes. Lines starting\n"
+-"with '%s' will be kept; you may remove them yourself if you want to.\n"
++"with '%c' will be kept; you may remove them yourself if you want to.\n"
+ msgstr ""
+ 
+ #, c-format
+ msgid ""
+ "Please enter the commit message for your changes. Lines starting\n"
+-"with '%s' will be kept; you may remove them yourself if you want to.\n"
++"with '%c' will be kept; you may remove them yourself if you want to.\n"
+ "An empty message aborts the commit.\n"
+ msgstr ""
+ 
+@@ -6117,7 +6094,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "To record the empty patch as an empty commit, run \"%s --allow-empty\".\n"
++msgid "To record the empty patch as an empty commit, run \"%s --allow-empty\"."
+ msgstr ""
+ 
+ #, c-format
+@@ -6461,7 +6438,10 @@
+ msgid "Use 'git am --show-current-patch=diff' to see the failed patch"
+ msgstr ""
+ 
+-msgid "Use -f if you really want to add them."
++msgid ""
++"Use -f if you really want to add them.\n"
++"Turn this message off by running\n"
++"\"git config advice.addIgnoredFile false\""
+ msgstr ""
+ 
+ msgid "Use binary search to find the commit that introduced a bug"
+@@ -6587,7 +6567,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "When you have resolved this problem, run \"%s --continue\".\n"
++msgid "When you have resolved this problem, run \"%s --continue\"."
+ msgstr ""
+ 
+ msgid "Which 8bit encoding should I declare [UTF-8]? "
+@@ -7588,17 +7568,9 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "attempted to store non-selected commit: '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "attempting to mmap %<PRIuMAX> over limit %<PRIuMAX>"
+ msgstr ""
+ 
+-#, c-format
+-msgid "attempting to write a commit-graph, but 'commitgraph.changedPathsVersion' (%d) is not supported"
+-msgstr ""
+-
+ msgid "attempting to write a commit-graph, but 'core.commitGraph' is disabled"
+ msgstr ""
+ 
+@@ -7608,9 +7580,6 @@
+ msgid "author"
+ msgstr ""
+ 
+-msgid "auto-pack refs as needed"
+-msgstr ""
+-
+ msgid "automatically re-schedule any `exec` that fails"
+ msgstr ""
+ 
+@@ -7628,21 +7597,6 @@
+ msgid "bad %s"
+ msgstr ""
+ 
+-#. TRANSLATORS: %s is a command like "ls-tree".
+-#, c-format
+-msgid "bad %s format: %%%.*s"
+-msgstr ""
+-
+-#. TRANSLATORS: The first %s is a command like "ls-tree".
+-#, c-format
+-msgid "bad %s format: element '%s' does not end in ')'"
+-msgstr ""
+-
+-#. TRANSLATORS: The first %s is a command like "ls-tree".
+-#, c-format
+-msgid "bad %s format: element '%s' does not start with '('"
+-msgstr ""
+-
+ #, c-format
+ msgid "bad %s in commit"
+ msgstr ""
+@@ -7728,6 +7682,30 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "bad ls-files format: %%%.*s"
++msgstr ""
++
++#, c-format
++msgid "bad ls-files format: element '%s' does not end in ')'"
++msgstr ""
++
++#, c-format
++msgid "bad ls-files format: element '%s' does not start with '('"
++msgstr ""
++
++#, c-format
++msgid "bad ls-tree format: %%%.*s"
++msgstr ""
++
++#, c-format
++msgid "bad ls-tree format: element '%s' does not end in ')'"
++msgstr ""
++
++#, c-format
++msgid "bad ls-tree format: element '%s' does not start with '('"
++msgstr ""
++
++#, c-format
+ msgid "bad mergetag in commit '%s'"
+ msgstr ""
+ 
+@@ -9134,6 +9112,9 @@
+ msgid "copy out the files from named stage"
+ msgstr ""
+ 
++msgid "core.commentChar should only be one ASCII character"
++msgstr ""
++
+ msgid "core.fsmonitor is set; remove it if you really want to disable fsmonitor"
+ msgstr ""
+ 
+@@ -9215,12 +9196,6 @@
+ msgid "corrupted bitmap index file (too short to fit lookup table)"
+ msgstr ""
+ 
+-msgid "corrupted bitmap index file (too short to fit pseudo-merge table header)"
+-msgstr ""
+-
+-msgid "corrupted bitmap index file (too short to fit pseudo-merge table)"
+-msgstr ""
+-
+ msgid "corrupted bitmap index file (wrong header)"
+ msgstr ""
+ 
+@@ -9450,10 +9425,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "could not find pseudo-merge for commit %s at offset %<PRIuMAX>"
+-msgstr ""
+-
+-#, c-format
+ msgid "could not finish '%s'"
+ msgstr ""
+ 
+@@ -9758,10 +9729,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "could not read extended pseudo-merge table for commit %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "could not read file '%s'"
+ msgstr ""
+ 
+@@ -10331,9 +10298,6 @@
+ msgid "deprecated: use --annotate-stdin instead"
+ msgstr ""
+ 
+-msgid "deprecated: use --empty=keep instead"
+-msgstr ""
+-
+ msgid "depth"
+ msgstr ""
+ 
+@@ -10475,10 +10439,6 @@
+ msgid "disable rename detection"
+ msgstr ""
+ 
+-#, c-format
+-msgid "disabling Bloom filters for commit-graph layer '%s' due to incompatible settings"
+-msgstr ""
+-
+ msgid "disabling bitmap writing, as some objects are not being packed"
+ msgstr ""
+ 
+@@ -10747,10 +10707,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "duplicate entry when writing bitmap index: %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "duplicate parent %s ignored"
+ msgstr ""
+ 
+@@ -11158,14 +11114,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "extended pseudo-merge lookup out-of-bounds (%<PRIu32> >= %<PRIu32>)"
+-msgstr ""
+-
+-#, c-format
+-msgid "extended pseudo-merge read out-of-bounds (%<PRIuMAX> >= %<PRIuMAX>)"
+-msgstr ""
+-
+-#, c-format
+ msgid "external diff died, stopping at %s"
+ msgstr ""
+ 
+@@ -11433,10 +11381,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "failed to load pseudo-merge regex for %s: '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "failed to locate object %d in packfile"
+ msgstr ""
+ 
+@@ -12709,7 +12653,7 @@
+ msgid "git pack-objects [<options>] <base-name> [< <ref-list> | < <object-list>]"
+ msgstr ""
+ 
+-msgid "git pack-refs [--all] [--no-prune] [--auto] [--include <pattern>] [--exclude <pattern>]"
++msgid "git pack-refs [--all] [--no-prune] [--include <pattern>] [--exclude <pattern>]"
+ msgstr ""
+ 
+ msgid "git patch-id [--stable | --unstable | --verbatim]"
+@@ -13064,13 +13008,13 @@
+ msgid "git update-index [<options>] [--] [<file>...]"
+ msgstr ""
+ 
+-msgid "git update-ref [<options>]    <refname> <new-oid> [<old-oid>]"
++msgid "git update-ref [<options>]    <refname> <new-val> [<old-val>]"
+ msgstr ""
+ 
+ msgid "git update-ref [<options>] --stdin [-z]"
+ msgstr ""
+ 
+-msgid "git update-ref [<options>] -d <refname> [<old-oid>]"
++msgid "git update-ref [<options>] -d <refname> [<old-val>]"
+ msgstr ""
+ 
+ msgid "git verify-commit [-v | --verbose] [--raw] <commit>..."
+@@ -13336,9 +13280,6 @@
+ msgid "http transport does not support %s"
+ msgstr ""
+ 
+-msgid "human-readable comment string (# will be prepended as needed)"
+-msgstr ""
+-
+ #, c-format
+ msgid ""
+ "hunks do not overlap:\n"
+@@ -14120,7 +14061,6 @@
+ "/ - search for a hunk matching the given regex\n"
+ "s - split the current hunk into smaller hunks\n"
+ "e - manually edit the current hunk\n"
+-"p - print the current hunk\n"
+ "? - print help\n"
+ msgstr ""
+ 
+@@ -14145,6 +14085,9 @@
+ msgid "keep non patch brackets in subject"
+ msgstr ""
+ 
++msgid "keep redundant, empty commits"
++msgstr ""
++
+ msgid "keep subject"
+ msgstr ""
+ 
+@@ -15047,10 +14990,6 @@
+ msgid "no merge given, only parents."
+ msgstr ""
+ 
+-#, c-format
+-msgid "no multi-line comment allowed: '%s'"
+-msgstr ""
+-
+ msgid "no name was given and auto-detection is disabled"
+ msgstr ""
+ 
+@@ -15780,10 +15719,6 @@
+ msgid "out of range"
+ msgstr ""
+ 
+-#, c-format
+-msgid "out-of-bounds read: (%<PRIuMAX> >= %<PRIuMAX>)"
+-msgstr ""
+-
+ msgid "output a binary diff that can be applied"
+ msgstr ""
+ 
+@@ -16504,22 +16439,6 @@
+ msgid "prune unreferenced objects"
+ msgstr ""
+ 
+-#, c-format
+-msgid "pseudo-merge group '%s' has unstable threshold before stable one"
+-msgstr ""
+-
+-#, c-format
+-msgid "pseudo-merge group '%s' missing required pattern"
+-msgstr ""
+-
+-#, c-format
+-msgid "pseudo-merge index out of range (%<PRIu32> >= %<PRIuMAX>)"
+-msgstr ""
+-
+-#, c-format
+-msgid "pseudo-merge regex from config has too many capture groups (max=%<PRIuMAX>)"
+-msgstr ""
+-
+ msgid "pull with rebase"
+ msgstr ""
+ 
+@@ -18753,9 +18672,6 @@
+ msgid "too many entries in %s"
+ msgstr ""
+ 
+-msgid "too many pseudo-merges"
+-msgstr ""
+-
+ msgid "too-short tree file"
+ msgstr ""
+ 
+@@ -18913,10 +18829,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unable to compact stack: %s"
+-msgstr ""
+-
+-#, c-format
+ msgid ""
+ "unable to connect to %s:\n"
+ "%s"
+@@ -19605,10 +19517,6 @@
+ msgid "unknown commit %s"
+ msgstr ""
+ 
+-#, c-format
+-msgid "unknown conflict style '%s'"
+-msgstr ""
+-
+ msgid "unknown error occurred while reading the configuration files"
+ msgstr ""
+ 
+@@ -19726,10 +19634,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unknown value for object-format: %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "unknown variable '%s'"
+ msgstr ""
+ 
+@@ -19805,7 +19709,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unrecognized empty type '%s'; valid values are \"drop\", \"keep\", and \"stop\"."
++msgid "unrecognized empty type '%s'; valid values are \"drop\", \"keep\", and \"ask\"."
+ msgstr ""
+ 
+ #, c-format
