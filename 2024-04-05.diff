@@ -1,0 +1,144 @@
+
+
+#################### Fri, 05 Apr 2024 18:57:31 +0000 ####################
+
+--- po/git.pot.old	2024-04-05 18:57:31.220206130 +0000
++++ po/git.pot.new	2024-04-05 18:57:31.292206332 +0000
+@@ -173,7 +173,7 @@
+ "\n"
+ "Write a message for tag:\n"
+ "  %s\n"
+-"Lines starting with '%c' will be ignored.\n"
++"Lines starting with '%s' will be ignored.\n"
+ msgstr ""
+ 
+ #, c-format
+@@ -181,7 +181,7 @@
+ "\n"
+ "Write a message for tag:\n"
+ "  %s\n"
+-"Lines starting with '%c' will be kept; you may remove them yourself if you want to.\n"
++"Lines starting with '%s' will be kept; you may remove them yourself if you want to.\n"
+ msgstr ""
+ 
+ msgid ""
+@@ -720,6 +720,10 @@
+ msgid "%s cannot be resolved to branch"
+ msgstr ""
+ 
++#, c-format
++msgid "%s cannot contain newline"
++msgstr ""
++
+ #. TRANSLATORS: This is a line of ambiguous commit
+ #. object output. E.g.:
+ #. *
+@@ -810,6 +814,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "%s must have at least one character"
++msgstr ""
++
++#, c-format
+ msgid "%s not allowed: %s:%d"
+ msgstr ""
+ 
+@@ -1694,7 +1702,7 @@
+ "---\n"
+ "To remove '%c' lines, make them ' ' lines (context).\n"
+ "To remove '%c' lines, delete them.\n"
+-"Lines starting with %c will be removed.\n"
++"Lines starting with %s will be removed.\n"
+ msgstr ""
+ 
+ msgid "--[no-]exclude-standard cannot be used for tracked contents"
+@@ -1744,6 +1752,9 @@
+ msgid "--command must be the first argument"
+ msgstr ""
+ 
++msgid "--comment is only applicable to add/set/replace operations"
++msgstr ""
++
+ msgid "--contents and --reverse do not blend well."
+ msgstr ""
+ 
+@@ -4270,7 +4281,7 @@
+ 
+ #, c-format
+ msgid ""
+-"Lines starting with '%c' will be ignored, and an empty message aborts\n"
++"Lines starting with '%s' will be ignored, and an empty message aborts\n"
+ "the commit.\n"
+ msgstr ""
+ 
+@@ -4851,7 +4862,7 @@
+ msgid ""
+ "Please edit the description for the branch\n"
+ "  %s\n"
+-"Lines starting with '%c' will be stripped.\n"
++"Lines starting with '%s' will be stripped.\n"
+ msgstr ""
+ 
+ msgid ""
+@@ -4863,25 +4874,25 @@
+ #, c-format
+ msgid ""
+ "Please enter the commit message for your changes. Lines starting\n"
+-"with '%c' will be ignored, and an empty message aborts the commit.\n"
++"with '%s' will be ignored, and an empty message aborts the commit.\n"
+ msgstr ""
+ 
+ #, c-format
+ msgid ""
+ "Please enter the commit message for your changes. Lines starting\n"
+-"with '%c' will be ignored.\n"
++"with '%s' will be ignored.\n"
+ msgstr ""
+ 
+ #, c-format
+ msgid ""
+ "Please enter the commit message for your changes. Lines starting\n"
+-"with '%c' will be kept; you may remove them yourself if you want to.\n"
++"with '%s' will be kept; you may remove them yourself if you want to.\n"
+ msgstr ""
+ 
+ #, c-format
+ msgid ""
+ "Please enter the commit message for your changes. Lines starting\n"
+-"with '%c' will be kept; you may remove them yourself if you want to.\n"
++"with '%s' will be kept; you may remove them yourself if you want to.\n"
+ "An empty message aborts the commit.\n"
+ msgstr ""
+ 
+@@ -9106,9 +9117,6 @@
+ msgid "copy out the files from named stage"
+ msgstr ""
+ 
+-msgid "core.commentChar should only be one ASCII character"
+-msgstr ""
+-
+ msgid "core.fsmonitor is set; remove it if you really want to disable fsmonitor"
+ msgstr ""
+ 
+@@ -13277,6 +13285,9 @@
+ msgid "http transport does not support %s"
+ msgstr ""
+ 
++msgid "human-readable comment string (# will be prepended as needed)"
++msgstr ""
++
+ #, c-format
+ msgid ""
+ "hunks do not overlap:\n"
+@@ -14984,6 +14995,10 @@
+ msgid "no merge given, only parents."
+ msgstr ""
+ 
++#, c-format
++msgid "no multi-line comment allowed: '%s'"
++msgstr ""
++
+ msgid "no name was given and auto-detection is disabled"
+ msgstr ""
+ 
