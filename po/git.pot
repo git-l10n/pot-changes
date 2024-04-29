@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2024-04-27 21:57+0000\n"
+"POT-Creation-Date: 2024-04-29 17:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -843,7 +843,7 @@ msgstr ""
 #: builtin/pack-objects.c:4497 builtin/rebase.c:1245 builtin/rebase.c:1247
 #: builtin/rebase.c:1256 builtin/repack.c:1260 builtin/replay.c:311
 #: builtin/reset.c:379 builtin/reset.c:416 builtin/rev-list.c:573
-#: builtin/rev-parse.c:917 builtin/rev-parse.c:924 builtin/rev-parse.c:935
+#: builtin/rev-parse.c:916 builtin/rev-parse.c:923 builtin/rev-parse.c:934
 #: builtin/show-branch.c:722 builtin/show-branch.c:727 builtin/stash.c:1773
 #: builtin/stash.c:1776 builtin/submodule--helper.c:1203
 #: builtin/submodule--helper.c:2959 builtin/tag.c:559 builtin/tag.c:606
@@ -1071,7 +1071,7 @@ msgid "cannot checkout %s"
 msgstr ""
 
 #: apply.c:3447 apply.c:3458 apply.c:3504 midx.c:110 pack-mtimes.c:42
-#: pack-revindex.c:223 setup.c:324
+#: pack-revindex.c:223 setup.c:325
 #, c-format
 msgid "failed to read %s"
 msgstr ""
@@ -1720,10 +1720,14 @@ msgid "ignoring overly large gitattributes blob '%s'"
 msgstr ""
 
 #: attr.c:1239
+msgid "cannot use --attr-source or GIT_ATTR_SOURCE without repo"
+msgstr ""
+
+#: attr.c:1247
 msgid "bad --attr-source or GIT_ATTR_SOURCE"
 msgstr ""
 
-#: attr.c:1286 read-cache.c:797
+#: attr.c:1299 read-cache.c:797
 #, c-format
 msgid "unable to stat '%s'"
 msgstr ""
@@ -2235,8 +2239,8 @@ msgstr ""
 #: builtin/blame.c:760 builtin/fetch.c:169 builtin/pack-objects.c:3856
 #: builtin/pull.c:46 builtin/pull.c:48 builtin/pull.c:323 builtin/revert.c:66
 #: config.c:1414 diff-merges.c:94 gpg-interface.c:744 gpg-interface.c:759
-#: ls-refs.c:36 parallel-checkout.c:47 sequencer.c:3069 setup.c:590 setup.c:602
-#: setup.c:620
+#: ls-refs.c:36 parallel-checkout.c:47 sequencer.c:3069 setup.c:643 setup.c:655
+#: setup.c:673
 #, c-format
 msgid "invalid value for '%s': '%s'"
 msgstr ""
@@ -3172,7 +3176,7 @@ msgstr ""
 msgid "process only line range <start>,<end> or function :<funcname>"
 msgstr ""
 
-#: builtin/blame.c:971
+#: builtin/blame.c:970
 msgid "--progress can't be used with --incremental or porcelain formats"
 msgstr ""
 
@@ -3184,18 +3188,18 @@ msgstr ""
 #. your language may need more or fewer display
 #. columns.
 #.
-#: builtin/blame.c:1022
+#: builtin/blame.c:1021
 msgid "4 years, 11 months ago"
 msgstr ""
 
-#: builtin/blame.c:1138
+#: builtin/blame.c:1137
 #, c-format
 msgid "file %s has only %lu line"
 msgid_plural "file %s has only %lu lines"
 msgstr[0] ""
 msgstr[1] ""
 
-#: builtin/blame.c:1186
+#: builtin/blame.c:1185
 msgid "Blaming lines"
 msgstr ""
 
@@ -3740,7 +3744,7 @@ msgstr ""
 msgid "do not show progress meter"
 msgstr ""
 
-#: builtin/bundle.c:79 builtin/bundle.c:195 builtin/pack-objects.c:4293
+#: builtin/bundle.c:79 builtin/bundle.c:200 builtin/pack-objects.c:4293
 msgid "show progress meter"
 msgstr ""
 
@@ -3764,16 +3768,20 @@ msgstr ""
 msgid "do not show bundle details"
 msgstr ""
 
-#: builtin/bundle.c:154
+#: builtin/bundle.c:144 bundle.c:229
+msgid "need a repository to verify a bundle"
+msgstr ""
+
+#: builtin/bundle.c:159
 #, c-format
 msgid "%s is okay\n"
 msgstr ""
 
-#: builtin/bundle.c:210
+#: builtin/bundle.c:215
 msgid "Need a repository to unbundle."
 msgstr ""
 
-#: builtin/bundle.c:213
+#: builtin/bundle.c:218
 msgid "Unbundling objects"
 msgstr ""
 
@@ -4946,7 +4954,7 @@ msgid "info: Could not add alternate for '%s': %s\n"
 msgstr ""
 
 #: builtin/clone.c:320 builtin/diff.c:93 builtin/rm.c:143 grep.c:1940
-#: setup.c:192
+#: setup.c:193
 #, c-format
 msgid "failed to stat '%s'"
 msgstr ""
@@ -5049,7 +5057,7 @@ msgstr ""
 msgid "You must specify a repository to clone."
 msgstr ""
 
-#: builtin/clone.c:967 builtin/init-db.c:170 setup.c:2191
+#: builtin/clone.c:967 builtin/init-db.c:170 setup.c:2244
 #, c-format
 msgid "unknown ref storage format '%s'"
 msgstr ""
@@ -5259,7 +5267,7 @@ msgstr ""
 msgid "invalid object: %s"
 msgstr ""
 
-#: builtin/commit-graph.c:199 parse-options-cb.c:24 parse-options-cb.c:28
+#: builtin/commit-graph.c:199 parse-options-cb.c:25 parse-options-cb.c:29
 #, c-format
 msgid "option `%s' expects a numerical value"
 msgstr ""
@@ -6492,26 +6500,26 @@ msgstr ""
 msgid "%s...%s: no merge base"
 msgstr ""
 
-#: builtin/diff.c:499
+#: builtin/diff.c:508
 msgid "Not a git repository"
 msgstr ""
 
-#: builtin/diff.c:545 builtin/grep.c:749
+#: builtin/diff.c:554 builtin/grep.c:749
 #, c-format
 msgid "invalid object '%s' given."
 msgstr ""
 
-#: builtin/diff.c:561
+#: builtin/diff.c:570
 #, c-format
 msgid "more than two blobs given: '%s'"
 msgstr ""
 
-#: builtin/diff.c:566
+#: builtin/diff.c:575
 #, c-format
 msgid "unhandled object '%s' given."
 msgstr ""
 
-#: builtin/diff.c:600
+#: builtin/diff.c:609
 #, c-format
 msgid "%s...%s: multiple merge bases, using %s"
 msgstr ""
@@ -7690,7 +7698,7 @@ msgstr ""
 msgid "failed to parse '%s' value '%s'"
 msgstr ""
 
-#: builtin/gc.c:557 setup.c:1820
+#: builtin/gc.c:557 setup.c:1873
 #, c-format
 msgid "cannot stat '%s'"
 msgstr ""
@@ -8694,7 +8702,7 @@ msgstr ""
 msgid "bad %s"
 msgstr ""
 
-#: builtin/index-pack.c:1843 builtin/init-db.c:164 setup.c:2172
+#: builtin/index-pack.c:1843 builtin/init-db.c:164 setup.c:2225
 #, c-format
 msgid "unknown hash algorithm '%s'"
 msgstr ""
@@ -10984,7 +10992,7 @@ msgstr ""
 msgid "not a rev '%s'"
 msgstr ""
 
-#: builtin/pack-objects.c:4142 builtin/rev-parse.c:1126
+#: builtin/pack-objects.c:4142 builtin/rev-parse.c:1125
 #, c-format
 msgid "bad revision '%s'"
 msgstr ""
@@ -13703,63 +13711,63 @@ msgid ""
 "Run \"git rev-parse --parseopt -h\" for more information on the first usage."
 msgstr ""
 
-#: builtin/rev-parse.c:736
+#: builtin/rev-parse.c:735
 msgid "--resolve-git-dir requires an argument"
 msgstr ""
 
-#: builtin/rev-parse.c:739
+#: builtin/rev-parse.c:738
 #, c-format
 msgid "not a gitdir '%s'"
 msgstr ""
 
-#: builtin/rev-parse.c:767
+#: builtin/rev-parse.c:766
 msgid "--git-path requires an argument"
 msgstr ""
 
-#: builtin/rev-parse.c:777
+#: builtin/rev-parse.c:776
 msgid "-n requires an argument"
 msgstr ""
 
-#: builtin/rev-parse.c:791
+#: builtin/rev-parse.c:790
 msgid "--path-format requires an argument"
 msgstr ""
 
-#: builtin/rev-parse.c:797
+#: builtin/rev-parse.c:796
 #, c-format
 msgid "unknown argument to --path-format: %s"
 msgstr ""
 
-#: builtin/rev-parse.c:804
+#: builtin/rev-parse.c:803
 msgid "--default requires an argument"
 msgstr ""
 
-#: builtin/rev-parse.c:810
+#: builtin/rev-parse.c:809
 msgid "--prefix requires an argument"
 msgstr ""
 
-#: builtin/rev-parse.c:843
+#: builtin/rev-parse.c:842
 msgid "no object format specified"
 msgstr ""
 
-#: builtin/rev-parse.c:855
+#: builtin/rev-parse.c:854
 #, c-format
 msgid "unsupported object format: %s"
 msgstr ""
 
-#: builtin/rev-parse.c:895
+#: builtin/rev-parse.c:894
 #, c-format
 msgid "unknown mode for --abbrev-ref: %s"
 msgstr ""
 
-#: builtin/rev-parse.c:953 setup.c:439
+#: builtin/rev-parse.c:952 setup.c:492
 msgid "this operation must be run in a work tree"
 msgstr ""
 
-#: builtin/rev-parse.c:1051
+#: builtin/rev-parse.c:1050
 msgid "Could not read the index"
 msgstr ""
 
-#: builtin/rev-parse.c:1081
+#: builtin/rev-parse.c:1080
 #, c-format
 msgid "unknown mode for --show-object-format: %s"
 msgstr ""
@@ -15351,11 +15359,11 @@ msgstr ""
 msgid "recursively dereference (default)"
 msgstr ""
 
-#: builtin/symbolic-ref.c:51 builtin/update-ref.c:567
+#: builtin/symbolic-ref.c:51 builtin/update-ref.c:719
 msgid "reason"
 msgstr ""
 
-#: builtin/symbolic-ref.c:51 builtin/update-ref.c:567
+#: builtin/symbolic-ref.c:51 builtin/update-ref.c:719
 msgid "reason of the update"
 msgstr ""
 
@@ -15480,7 +15488,7 @@ msgstr ""
 msgid "replace the tag if exists"
 msgstr ""
 
-#: builtin/tag.c:488 builtin/update-ref.c:573
+#: builtin/tag.c:488 builtin/update-ref.c:725
 msgid "create a reflog"
 msgstr ""
 
@@ -15826,19 +15834,19 @@ msgstr ""
 msgid "git update-ref [<options>] --stdin [-z]"
 msgstr ""
 
-#: builtin/update-ref.c:568
+#: builtin/update-ref.c:720
 msgid "delete the reference"
 msgstr ""
 
-#: builtin/update-ref.c:570
+#: builtin/update-ref.c:722
 msgid "update <refname> not the one it points to"
 msgstr ""
 
-#: builtin/update-ref.c:571
+#: builtin/update-ref.c:723
 msgid "stdin has NUL-terminated arguments"
 msgstr ""
 
-#: builtin/update-ref.c:572
+#: builtin/update-ref.c:724
 msgid "read updates from stdin"
 msgstr ""
 
@@ -16352,10 +16360,6 @@ msgstr ""
 
 #: bundle.c:220
 msgid "Repository lacks these prerequisite commits:"
-msgstr ""
-
-#: bundle.c:229
-msgid "need a repository to verify a bundle"
 msgstr ""
 
 #: bundle.c:249
@@ -21812,22 +21816,22 @@ msgstr ""
 msgid "offset beyond end of pack index for %s (truncated index?)"
 msgstr ""
 
-#: parse-options-cb.c:45
+#: parse-options-cb.c:46
 #, c-format
 msgid "malformed expiration date '%s'"
 msgstr ""
 
-#: parse-options-cb.c:58
+#: parse-options-cb.c:59
 #, c-format
 msgid "option `%s' expects \"always\", \"auto\", or \"never\""
 msgstr ""
 
-#: parse-options-cb.c:136 parse-options-cb.c:153
+#: parse-options-cb.c:137 parse-options-cb.c:154
 #, c-format
 msgid "malformed object name '%s'"
 msgstr ""
 
-#: parse-options-cb.c:313
+#: parse-options-cb.c:314
 #, c-format
 msgid "option `%s' expects \"%s\" or \"%s\""
 msgstr ""
@@ -21988,7 +21992,7 @@ msgstr ""
 msgid "failed to parse %s"
 msgstr ""
 
-#: path.c:917
+#: path.c:864
 #, c-format
 msgid "Could not make %s writable by group"
 msgstr ""
@@ -23020,143 +23024,143 @@ msgstr ""
 msgid "unknown value for object-format: %s"
 msgstr ""
 
-#: remote-curl.c:309
+#: remote-curl.c:326
 #, c-format
 msgid "%sinfo/refs not valid: is this a git repository?"
 msgstr ""
 
-#: remote-curl.c:410
+#: remote-curl.c:427
 msgid "invalid server response; expected service, got flush packet"
 msgstr ""
 
-#: remote-curl.c:441
+#: remote-curl.c:458
 #, c-format
 msgid "invalid server response; got '%s'"
 msgstr ""
 
-#: remote-curl.c:502
+#: remote-curl.c:519
 #, c-format
 msgid "repository '%s' not found"
 msgstr ""
 
-#: remote-curl.c:506
+#: remote-curl.c:523
 #, c-format
 msgid "Authentication failed for '%s'"
 msgstr ""
 
-#: remote-curl.c:510
+#: remote-curl.c:527
 #, c-format
 msgid "unable to access '%s' with http.pinnedPubkey configuration: %s"
 msgstr ""
 
-#: remote-curl.c:514
+#: remote-curl.c:531
 #, c-format
 msgid "unable to access '%s': %s"
 msgstr ""
 
-#: remote-curl.c:520
+#: remote-curl.c:537
 #, c-format
 msgid "redirecting to %s"
 msgstr ""
 
-#: remote-curl.c:654
+#: remote-curl.c:671
 msgid "shouldn't have EOF when not gentle on EOF"
 msgstr ""
 
-#: remote-curl.c:666
+#: remote-curl.c:683
 msgid "remote server sent unexpected response end packet"
 msgstr ""
 
-#: remote-curl.c:737
+#: remote-curl.c:754
 msgid "unable to rewind rpc post data - try increasing http.postBuffer"
 msgstr ""
 
-#: remote-curl.c:763
+#: remote-curl.c:780
 #, c-format
 msgid "remote-curl: bad line length character: %.4s"
 msgstr ""
 
-#: remote-curl.c:765
+#: remote-curl.c:782
 msgid "remote-curl: unexpected response end packet"
 msgstr ""
 
-#: remote-curl.c:841
+#: remote-curl.c:858
 #, c-format
 msgid "RPC failed; %s"
 msgstr ""
 
-#: remote-curl.c:881
+#: remote-curl.c:898
 msgid "cannot handle pushes this big"
 msgstr ""
 
-#: remote-curl.c:1003
+#: remote-curl.c:1020
 #, c-format
 msgid "cannot deflate request; zlib deflate error %d"
 msgstr ""
 
-#: remote-curl.c:1007
+#: remote-curl.c:1024
 #, c-format
 msgid "cannot deflate request; zlib end error %d"
 msgstr ""
 
-#: remote-curl.c:1058
+#: remote-curl.c:1075
 #, c-format
 msgid "%d bytes of length header were received"
 msgstr ""
 
-#: remote-curl.c:1060
+#: remote-curl.c:1077
 #, c-format
 msgid "%d bytes of body are still expected"
 msgstr ""
 
-#: remote-curl.c:1152
+#: remote-curl.c:1169
 msgid "dumb http transport does not support shallow capabilities"
 msgstr ""
 
-#: remote-curl.c:1167
+#: remote-curl.c:1184
 msgid "fetch failed."
 msgstr ""
 
-#: remote-curl.c:1215
+#: remote-curl.c:1232
 msgid "cannot fetch by sha1 over smart http"
 msgstr ""
 
-#: remote-curl.c:1259 remote-curl.c:1265
+#: remote-curl.c:1276 remote-curl.c:1282
 #, c-format
 msgid "protocol error: expected sha/ref, got '%s'"
 msgstr ""
 
-#: remote-curl.c:1277 remote-curl.c:1418
+#: remote-curl.c:1294 remote-curl.c:1435
 #, c-format
 msgid "http transport does not support %s"
 msgstr ""
 
-#: remote-curl.c:1305
+#: remote-curl.c:1322
 msgid "protocol error: expected '<url> <path>', missing space"
 msgstr ""
 
-#: remote-curl.c:1311
+#: remote-curl.c:1328
 #, c-format
 msgid "failed to download file at URL '%s'"
 msgstr ""
 
-#: remote-curl.c:1336
+#: remote-curl.c:1353
 msgid "git-http-push failed"
 msgstr ""
 
-#: remote-curl.c:1538
+#: remote-curl.c:1555
 msgid "remote-curl: usage: git remote-curl <remote> [<url>]"
 msgstr ""
 
-#: remote-curl.c:1570
+#: remote-curl.c:1587
 msgid "remote-curl: error reading command stream from git"
 msgstr ""
 
-#: remote-curl.c:1579
+#: remote-curl.c:1596
 msgid "remote-curl: fetch attempted without a local repo"
 msgstr ""
 
-#: remote-curl.c:1626
+#: remote-curl.c:1643
 #, c-format
 msgid "remote-curl: unknown command '%s' from git"
 msgstr ""
@@ -24724,19 +24728,19 @@ msgstr ""
 msgid "update-refs file at '%s' is invalid"
 msgstr ""
 
-#: setup.c:149
+#: setup.c:150
 #, c-format
 msgid "'%s' is outside repository at '%s'"
 msgstr ""
 
-#: setup.c:201
+#: setup.c:202
 #, c-format
 msgid ""
 "%s: no such path in the working tree.\n"
 "Use 'git <command> -- <path>...' to specify paths that do not exist locally."
 msgstr ""
 
-#: setup.c:214
+#: setup.c:215
 #, c-format
 msgid ""
 "ambiguous argument '%s': unknown revision or path not in the working tree.\n"
@@ -24744,12 +24748,12 @@ msgid ""
 "'git <command> [<revision>...] -- [<file>...]'"
 msgstr ""
 
-#: setup.c:280
+#: setup.c:281
 #, c-format
 msgid "option '%s' must come before non-option arguments"
 msgstr ""
 
-#: setup.c:299
+#: setup.c:300
 #, c-format
 msgid ""
 "ambiguous argument '%s': both revision and filename\n"
@@ -24757,108 +24761,108 @@ msgid ""
 "'git <command> [<revision>...] -- [<file>...]'"
 msgstr ""
 
-#: setup.c:435
+#: setup.c:488
 msgid "unable to set up work tree using invalid config"
 msgstr ""
 
-#: setup.c:607
+#: setup.c:660
 #, c-format
 msgid "'%s' already specified as '%s'"
 msgstr ""
 
-#: setup.c:791
+#: setup.c:844
 #, c-format
 msgid "Expected git repo version <= %d, found %d"
 msgstr ""
 
-#: setup.c:799
+#: setup.c:852
 msgid "unknown repository extension found:"
 msgid_plural "unknown repository extensions found:"
 msgstr[0] ""
 msgstr[1] ""
 
-#: setup.c:813
+#: setup.c:866
 msgid "repo version is 0, but v1-only extension found:"
 msgid_plural "repo version is 0, but v1-only extensions found:"
 msgstr[0] ""
 msgstr[1] ""
 
-#: setup.c:834
+#: setup.c:887
 #, c-format
 msgid "error opening '%s'"
 msgstr ""
 
-#: setup.c:836
+#: setup.c:889
 #, c-format
 msgid "too large to be a .git file: '%s'"
 msgstr ""
 
-#: setup.c:838
+#: setup.c:891
 #, c-format
 msgid "error reading %s"
 msgstr ""
 
-#: setup.c:840
+#: setup.c:893
 #, c-format
 msgid "invalid gitfile format: %s"
 msgstr ""
 
-#: setup.c:842
+#: setup.c:895
 #, c-format
 msgid "no path in gitfile: %s"
 msgstr ""
 
-#: setup.c:844
+#: setup.c:897
 #, c-format
 msgid "not a git repository: %s"
 msgstr ""
 
-#: setup.c:946
+#: setup.c:999
 #, c-format
 msgid "'$%s' too big"
 msgstr ""
 
-#: setup.c:960
+#: setup.c:1013
 #, c-format
 msgid "not a git repository: '%s'"
 msgstr ""
 
-#: setup.c:989 setup.c:991 setup.c:1022
+#: setup.c:1042 setup.c:1044 setup.c:1075
 #, c-format
 msgid "cannot chdir to '%s'"
 msgstr ""
 
-#: setup.c:994 setup.c:1050 setup.c:1060 setup.c:1099 setup.c:1107
+#: setup.c:1047 setup.c:1103 setup.c:1113 setup.c:1152 setup.c:1160
 msgid "cannot come back to cwd"
 msgstr ""
 
-#: setup.c:1121
+#: setup.c:1174
 #, c-format
 msgid "failed to stat '%*s%s%s'"
 msgstr ""
 
-#: setup.c:1521
+#: setup.c:1574
 msgid "Unable to read current working directory"
 msgstr ""
 
-#: setup.c:1530 setup.c:1536
+#: setup.c:1583 setup.c:1589
 #, c-format
 msgid "cannot change to '%s'"
 msgstr ""
 
-#: setup.c:1541
+#: setup.c:1594
 #, c-format
 msgid "not a git repository (or any of the parent directories): %s"
 msgstr ""
 
-#: setup.c:1547
+#: setup.c:1600
 #, c-format
 msgid ""
 "not a git repository (or any parent up to mount point %s)\n"
 "Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set)."
 msgstr ""
 
-#: setup.c:1558
+#: setup.c:1611
 #, c-format
 msgid ""
 "detected dubious ownership in repository at '%s'\n"
@@ -24867,116 +24871,116 @@ msgid ""
 "\tgit config --global --add safe.directory %s"
 msgstr ""
 
-#: setup.c:1569
+#: setup.c:1622
 #, c-format
 msgid "cannot use bare repository '%s' (safe.bareRepository is '%s')"
 msgstr ""
 
-#: setup.c:1703
+#: setup.c:1756
 #, c-format
 msgid ""
 "problem with core.sharedRepository filemode value (0%.3o).\n"
 "The owner of files must always have read and write permissions."
 msgstr ""
 
-#: setup.c:1770
+#: setup.c:1823
 msgid "fork failed"
 msgstr ""
 
-#: setup.c:1775
+#: setup.c:1828
 msgid "setsid failed"
 msgstr ""
 
-#: setup.c:1826
+#: setup.c:1879
 #, c-format
 msgid "cannot stat template '%s'"
 msgstr ""
 
-#: setup.c:1831
+#: setup.c:1884
 #, c-format
 msgid "cannot opendir '%s'"
 msgstr ""
 
-#: setup.c:1843
+#: setup.c:1896
 #, c-format
 msgid "cannot readlink '%s'"
 msgstr ""
 
-#: setup.c:1845
+#: setup.c:1898
 #, c-format
 msgid "cannot symlink '%s' '%s'"
 msgstr ""
 
-#: setup.c:1851
+#: setup.c:1904
 #, c-format
 msgid "cannot copy '%s' to '%s'"
 msgstr ""
 
-#: setup.c:1855
+#: setup.c:1908
 #, c-format
 msgid "ignoring template %s"
 msgstr ""
 
-#: setup.c:1886
+#: setup.c:1939
 #, c-format
 msgid "templates not found in %s"
 msgstr ""
 
-#: setup.c:1901
+#: setup.c:1954
 #, c-format
 msgid "not copying templates from '%s': %s"
 msgstr ""
 
-#: setup.c:2001
+#: setup.c:2054
 #, c-format
 msgid "invalid initial branch name: '%s'"
 msgstr ""
 
-#: setup.c:2010
+#: setup.c:2063
 #, c-format
 msgid "re-init: ignored --initial-branch=%s"
 msgstr ""
 
-#: setup.c:2147
+#: setup.c:2200
 #, c-format
 msgid "unable to handle file type %d"
 msgstr ""
 
-#: setup.c:2150
+#: setup.c:2203
 #, c-format
 msgid "unable to move %s to %s"
 msgstr ""
 
-#: setup.c:2166
+#: setup.c:2219
 msgid "attempt to reinitialize repository with different hash"
 msgstr ""
 
-#: setup.c:2185
+#: setup.c:2238
 msgid ""
 "attempt to reinitialize repository with different reference storage format"
 msgstr ""
 
-#: setup.c:2211 setup.c:2214
+#: setup.c:2264 setup.c:2267
 #, c-format
 msgid "%s already exists"
 msgstr ""
 
-#: setup.c:2283
+#: setup.c:2336
 #, c-format
 msgid "Reinitialized existing shared Git repository in %s%s\n"
 msgstr ""
 
-#: setup.c:2284
+#: setup.c:2337
 #, c-format
 msgid "Reinitialized existing Git repository in %s%s\n"
 msgstr ""
 
-#: setup.c:2288
+#: setup.c:2341
 #, c-format
 msgid "Initialized empty shared Git repository in %s%s\n"
 msgstr ""
 
-#: setup.c:2289
+#: setup.c:2342
 #, c-format
 msgid "Initialized empty Git repository in %s%s\n"
 msgstr ""
