@@ -1,0 +1,285 @@
+
+
+#################### Fri, 03 May 2024 23:57:18 +0000 ####################
+
+--- po/git.pot.old	2024-05-03 23:57:18.759009237 +0000
++++ po/git.pot.new	2024-05-03 23:57:18.831009744 +0000
+@@ -1749,6 +1749,9 @@
+ msgid "--anonymize-map token cannot be empty"
+ msgstr ""
+ 
++msgid "--append cannot be used with --value=<pattern>"
++msgstr ""
++
+ msgid "--atomic can only be used when fetching from one remote"
+ msgstr ""
+ 
+@@ -1790,6 +1793,9 @@
+ msgid "--default requires an argument"
+ msgstr ""
+ 
++msgid "--default= cannot be used with --all or --url="
++msgstr ""
++
+ msgid "--delete doesn't make sense without any refs"
+ msgstr ""
+ 
+@@ -1817,6 +1823,9 @@
+ msgid "--fixed-value only applies with 'value-pattern'"
+ msgstr ""
+ 
++msgid "--fixed-value only applies with --value=<pattern>"
++msgstr ""
++
+ msgid "--follow requires exactly one pathspec"
+ msgstr ""
+ 
+@@ -1994,6 +2003,9 @@
+ msgid "--untracked not supported with --recurse-submodules"
+ msgstr ""
+ 
++msgid "--url= cannot be used with --all, --regexp or --value"
++msgstr ""
++
+ msgid "--verify with no packfile name given"
+ msgstr ""
+ 
+@@ -3397,6 +3409,9 @@
+ msgid "Display help information about Git"
+ msgstr ""
+ 
++msgid "Display options"
++msgstr ""
++
+ msgid "Display version information about Git"
+ msgstr ""
+ 
+@@ -3773,6 +3788,12 @@
+ msgid "File not found: %s"
+ msgstr ""
+ 
++msgid "Filter"
++msgstr ""
++
++msgid "Filter options"
++msgstr ""
++
+ msgid "Filtering content"
+ msgstr ""
+ 
+@@ -6176,6 +6197,9 @@
+ msgid "Type"
+ msgstr ""
+ 
++msgid "URL"
++msgstr ""
++
+ #, c-format
+ msgid "URL '%s' uses plaintext credentials"
+ msgstr ""
+@@ -7224,6 +7248,9 @@
+ msgid "add a Signed-off-by trailer to the commit message"
+ msgstr ""
+ 
++msgid "add a new line without altering any existing values"
++msgstr ""
++
+ msgid "add a new variable: name value"
+ msgstr ""
+ 
+@@ -8696,9 +8723,6 @@
+ msgid "cannot use %s as an exclude file"
+ msgstr ""
+ 
+-msgid "cannot use --attr-source or GIT_ATTR_SOURCE without repo"
+-msgstr ""
+-
+ msgid "cannot use --filter with --stdin-packs"
+ msgstr ""
+ 
+@@ -11945,10 +11969,10 @@
+ msgid "find line movements within and across files"
+ msgstr ""
+ 
+-msgid "find the color configured: slot [default]"
++msgid "find the color configured: slot [<default>]"
+ msgstr ""
+ 
+-msgid "find the color setting: slot [stdout-is-tty]"
++msgid "find the color setting: slot [<stdout-is-tty>]"
+ msgstr ""
+ 
+ msgid "find the tag that comes after the commit"
+@@ -12192,16 +12216,16 @@
+ msgid "generate the diff in raw format"
+ msgstr ""
+ 
+-msgid "get all values: key [value-pattern]"
++msgid "get all values: key [<value-pattern>]"
+ msgstr ""
+ 
+ msgid "get value specific for the URL: section[.var] URL"
+ msgstr ""
+ 
+-msgid "get value: name [value-pattern]"
++msgid "get value: name [<value-pattern>]"
+ msgstr ""
+ 
+-msgid "get values for regexp: name-regex [value-pattern]"
++msgid "get values for regexp: name-regex [<value-pattern>]"
+ msgstr ""
+ 
+ #, c-format
+@@ -12215,9 +12239,10 @@
+ msgid ""
+ "git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n"
+ "           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n"
+-"           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n"
+-"           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n"
+-"           [--config-env=<name>=<envvar>] <command> [<args>]"
++"           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n"
++"           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n"
++"           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n"
++"           <command> [<args>]"
+ msgstr ""
+ 
+ msgid "git add [<options>] [--] <pathspec>..."
+@@ -12454,7 +12479,31 @@
+ msgid "git commit-tree: failed to read '%s'"
+ msgstr ""
+ 
+-msgid "git config [<options>]"
++msgid "git config [<file-option>] --get-colorbool <name> [<stdout-is-tty>]"
++msgstr ""
++
++msgid "git config edit [<file-option>]"
++msgstr ""
++
++msgid "git config get [<file-option>] [<display-option>] [--includes] [--all] [--regexp=<regexp>] [--value=<value>] [--fixed-value] [--default=<default>] <name>"
++msgstr ""
++
++msgid "git config list [<file-option>] [<display-option>] [--includes]"
++msgstr ""
++
++msgid "git config remove-section [<file-option>] <name>"
++msgstr ""
++
++msgid "git config rename-section [<file-option>] <old-name> <new-name>"
++msgstr ""
++
++msgid "git config set [<file-option>] [--type=<type>] [--all] [--value=<value>] [--fixed-value] <name> <value>"
++msgstr ""
++
++msgid "git config set [<file-option>] [--type=<type>] [--comment=<message>] [--all] [--value=<value>] [--fixed-value] <name> <value>"
++msgstr ""
++
++msgid "git config unset [<file-option>] [--all] [--value=<value>] [--fixed-value] <name> <value>"
+ msgstr ""
+ 
+ msgid "git describe <blob>"
+@@ -13762,6 +13811,9 @@
+ msgid "interpret patterns as fixed strings"
+ msgstr ""
+ 
++msgid "interpret the name as a regular expression"
++msgstr ""
++
+ msgid "interrupt transfer after <n> seconds of inactivity"
+ msgstr ""
+ 
+@@ -15632,9 +15684,6 @@
+ msgid "only found copies from modified paths due to too many files."
+ msgstr ""
+ 
+-msgid "only one action at a time"
+-msgstr ""
+-
+ msgid "only one batch option may be specified"
+ msgstr ""
+ 
+@@ -17066,10 +17115,10 @@
+ msgid "remove a section: name"
+ msgstr ""
+ 
+-msgid "remove a variable: name [value-pattern]"
++msgid "remove a variable: name [<value-pattern>]"
+ msgstr ""
+ 
+-msgid "remove all matches: name [value-pattern]"
++msgid "remove all matches: name [<value-pattern>]"
+ msgstr ""
+ 
+ msgid "remove ignored files, too"
+@@ -17137,7 +17186,7 @@
+ msgid "repair: %s: %s"
+ msgstr ""
+ 
+-msgid "replace all matching variables: name value [value-pattern]"
++msgid "replace all matching variables: name value [<value-pattern>]"
+ msgstr ""
+ 
+ #, c-format
+@@ -17147,6 +17196,9 @@
+ msgid "replace existing notes"
+ msgstr ""
+ 
++msgid "replace multi-valued config option with new value"
++msgstr ""
++
+ #, c-format
+ msgid "replace ref '%s' already exists"
+ msgstr ""
+@@ -17324,6 +17376,9 @@
+ msgid "return all URLs"
+ msgstr ""
+ 
++msgid "return all values for multi-valued config options"
++msgstr ""
++
+ msgid "return success even if repository was not registered"
+ msgstr ""
+ 
+@@ -17764,6 +17819,15 @@
+ msgid "show commits in topological order"
+ msgstr ""
+ 
++msgid "show config keys in addition to their values"
++msgstr ""
++
++msgid "show config matching the given URL"
++msgstr ""
++
++msgid "show config with values matching the pattern"
++msgstr ""
++
+ msgid "show context between diff hunks up to the specified number of lines"
+ msgstr ""
+ 
+@@ -20178,6 +20242,9 @@
+ msgid "use default prefixes a/ and b/"
+ msgstr ""
+ 
++msgid "use default value when missing entry"
++msgstr ""
++
+ msgid "use empty blobs as rename source"
+ msgstr ""
+ 
+@@ -20250,6 +20317,9 @@
+ msgid "use string equality when comparing values to 'value-pattern'"
+ msgstr ""
+ 
++msgid "use string equality when comparing values to value pattern"
++msgstr ""
++
+ msgid "use symlinks in dir-diff mode"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-pot --------------------
+
+level=error msg="config variable 'commitGraph.changedPathsVersion' in manpage does not match string in pot file:"
+level=error msg="    >> msgid   \"attempting to write a commit-graph, but 'commitgraph.changedPathsVersion' (%d) is not supported\""
+
+ERROR: fail to execute "git-po-helper check-pot"
