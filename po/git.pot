@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2024-05-02 19:57+0000\n"
+"POT-Creation-Date: 2024-05-07 01:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -675,65 +675,65 @@ msgstr ""
 msgid "Only binary files changed."
 msgstr ""
 
-#: advice.c:92
+#: advice.c:93
 #, c-format
 msgid ""
 "\n"
 "Disable this message with \"git config advice.%s false\""
 msgstr ""
 
-#: advice.c:108
+#: advice.c:109
 #, c-format
 msgid "%shint:%s%.*s%s\n"
 msgstr ""
 
-#: advice.c:196
+#: advice.c:203
 msgid "Cherry-picking is not possible because you have unmerged files."
 msgstr ""
 
-#: advice.c:198
+#: advice.c:205
 msgid "Committing is not possible because you have unmerged files."
 msgstr ""
 
-#: advice.c:200
+#: advice.c:207
 msgid "Merging is not possible because you have unmerged files."
 msgstr ""
 
-#: advice.c:202
+#: advice.c:209
 msgid "Pulling is not possible because you have unmerged files."
 msgstr ""
 
-#: advice.c:204
+#: advice.c:211
 msgid "Reverting is not possible because you have unmerged files."
 msgstr ""
 
-#: advice.c:206
+#: advice.c:213
 msgid "Rebasing is not possible because you have unmerged files."
 msgstr ""
 
-#: advice.c:215
+#: advice.c:222
 msgid ""
 "Fix them up in the work tree, and then use 'git add/rm <file>'\n"
 "as appropriate to mark resolution and make a commit."
 msgstr ""
 
-#: advice.c:223
+#: advice.c:230
 msgid "Exiting because of an unresolved conflict."
 msgstr ""
 
-#: advice.c:228 builtin/merge.c:1379
+#: advice.c:235 builtin/merge.c:1379
 msgid "You have not concluded your merge (MERGE_HEAD exists)."
 msgstr ""
 
-#: advice.c:230
+#: advice.c:237
 msgid "Please, commit your changes before merging."
 msgstr ""
 
-#: advice.c:231
+#: advice.c:238
 msgid "Exiting because of unfinished merge."
 msgstr ""
 
-#: advice.c:237
+#: advice.c:244
 msgid ""
 "Diverging branches can't be fast-forwarded, you need to either:\n"
 "\n"
@@ -744,11 +744,11 @@ msgid ""
 "\tgit rebase\n"
 msgstr ""
 
-#: advice.c:244
+#: advice.c:251
 msgid "Not possible to fast-forward, aborting."
 msgstr ""
 
-#: advice.c:254
+#: advice.c:261
 #, c-format
 msgid ""
 "The following paths and/or pathspecs matched paths that exist\n"
@@ -756,14 +756,14 @@ msgid ""
 "updated in the index:\n"
 msgstr ""
 
-#: advice.c:261
+#: advice.c:268
 msgid ""
 "If you intend to update such entries, try one of the following:\n"
 "* Use the --sparse option.\n"
 "* Disable or modify the sparsity rules."
 msgstr ""
 
-#: advice.c:269
+#: advice.c:276
 #, c-format
 msgid ""
 "Note: switching to '%s'.\n"
@@ -786,7 +786,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: advice.c:296
+#: advice.c:303
 #, c-format
 msgid ""
 "The following paths have been moved outside the\n"
@@ -794,7 +794,7 @@ msgid ""
 "modifications.\n"
 msgstr ""
 
-#: advice.c:303
+#: advice.c:310
 msgid ""
 "To correct the sparsity of these paths, do the following:\n"
 "* Use \"git add --sparse <paths>\" to update the index\n"
@@ -1714,16 +1714,16 @@ msgstr ""
 msgid "ignoring overly large gitattributes file '%s'"
 msgstr ""
 
-#: attr.c:866
+#: attr.c:778
 #, c-format
 msgid "ignoring overly large gitattributes blob '%s'"
 msgstr ""
 
-#: attr.c:1239
+#: attr.c:1238
 msgid "bad --attr-source or GIT_ATTR_SOURCE"
 msgstr ""
 
-#: attr.c:1286 read-cache.c:797
+#: attr.c:1285 read-cache.c:797
 #, c-format
 msgid "unable to stat '%s'"
 msgstr ""
@@ -8398,12 +8398,12 @@ msgstr ""
 msgid "no info viewer handled the request"
 msgstr ""
 
-#: builtin/help.c:571 builtin/help.c:582 git.c:363
+#: builtin/help.c:571 builtin/help.c:582 git.c:368
 #, c-format
 msgid "'%s' is aliased to '%s'"
 msgstr ""
 
-#: builtin/help.c:585 git.c:393
+#: builtin/help.c:585 git.c:398
 #, c-format
 msgid "bad alias.%s string: %s"
 msgstr ""
@@ -19655,13 +19655,15 @@ msgstr ""
 msgid ""
 "git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n"
 "           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n"
-"           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--"
-"bare]\n"
-"           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n"
-"           [--config-env=<name>=<envvar>] <command> [<args>]"
+"           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-"
+"lazy-fetch]\n"
+"           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n"
+"           [--work-tree=<path>] [--namespace=<name>] [--config-"
+"env=<name>=<envvar>]\n"
+"           <command> [<args>]"
 msgstr ""
 
-#: git.c:44
+#: git.c:45
 msgid ""
 "'git help -a' and 'git help -g' list available subcommands and some\n"
 "concept guides. See 'git help <command>' or 'git help <concept>'\n"
@@ -19669,98 +19671,98 @@ msgid ""
 "See 'git help git' for an overview of the system."
 msgstr ""
 
-#: git.c:108 help.c:395
+#: git.c:109 help.c:395
 #, c-format
 msgid "unsupported command listing type '%s'"
 msgstr ""
 
-#: git.c:202 git.c:230 git.c:300
+#: git.c:203 git.c:231 git.c:301
 #, c-format
 msgid "no directory given for '%s' option\n"
 msgstr ""
 
-#: git.c:216
+#: git.c:217
 #, c-format
 msgid "no namespace given for --namespace\n"
 msgstr ""
 
-#: git.c:252
+#: git.c:253
 #, c-format
 msgid "-c expects a configuration string\n"
 msgstr ""
 
-#: git.c:260
+#: git.c:261
 #, c-format
 msgid "no config key given for --config-env\n"
 msgstr ""
 
-#: git.c:327
+#: git.c:328
 #, c-format
 msgid "no attribute source given for --attr-source\n"
 msgstr ""
 
-#: git.c:341
+#: git.c:346
 #, c-format
 msgid "unknown option: %s\n"
 msgstr ""
 
-#: git.c:388
+#: git.c:393
 #, c-format
 msgid "while expanding alias '%s': '%s'"
 msgstr ""
 
-#: git.c:397
+#: git.c:402
 #, c-format
 msgid ""
 "alias '%s' changes environment variables.\n"
 "You can use '!git' in the alias to do this"
 msgstr ""
 
-#: git.c:404
+#: git.c:409
 #, c-format
 msgid "empty alias for %s"
 msgstr ""
 
-#: git.c:407
+#: git.c:412
 #, c-format
 msgid "recursive alias: %s"
 msgstr ""
 
-#: git.c:484
+#: git.c:489
 msgid "write failure on standard output"
 msgstr ""
 
-#: git.c:486
+#: git.c:491
 msgid "unknown write failure on standard output"
 msgstr ""
 
-#: git.c:488
+#: git.c:493
 msgid "close failed on standard output"
 msgstr ""
 
-#: git.c:840
+#: git.c:845
 #, c-format
 msgid "alias loop detected: expansion of '%s' does not terminate:%s"
 msgstr ""
 
-#: git.c:890
+#: git.c:895
 #, c-format
 msgid "cannot handle %s as a builtin"
 msgstr ""
 
-#: git.c:901
+#: git.c:906
 #, c-format
 msgid ""
 "usage: %s\n"
 "\n"
 msgstr ""
 
-#: git.c:927
+#: git.c:932
 #, c-format
 msgid "expansion of alias '%s' failed; '%s' is not a git command\n"
 msgstr ""
 
-#: git.c:939
+#: git.c:944
 #, c-format
 msgid "failed to run command '%s': %s\n"
 msgstr ""
