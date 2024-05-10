@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2024-05-09 21:57+0000\n"
+"POT-Creation-Date: 2024-05-10 22:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -1582,7 +1582,7 @@ msgid "prepend prefix to each pathname in the archive"
 msgstr ""
 
 #: archive.c:647 archive.c:653 builtin/blame.c:899 builtin/blame.c:903
-#: builtin/blame.c:904 builtin/commit-tree.c:107 builtin/config.c:758
+#: builtin/blame.c:904 builtin/commit-tree.c:107 builtin/config.c:71
 #: builtin/fast-export.c:1198 builtin/fast-export.c:1200
 #: builtin/fast-export.c:1204 builtin/gc.c:1526 builtin/gc.c:1591
 #: builtin/grep.c:992 builtin/hash-object.c:112 builtin/ls-files.c:610
@@ -4757,8 +4757,8 @@ msgstr ""
 msgid "remove whole directories"
 msgstr ""
 
-#: builtin/clean.c:939 builtin/config.c:851 builtin/config.c:893
-#: builtin/config.c:947 builtin/describe.c:585 builtin/describe.c:587
+#: builtin/clean.c:939 builtin/config.c:874 builtin/config.c:927
+#: builtin/config.c:983 builtin/describe.c:585 builtin/describe.c:587
 #: builtin/grep.c:994 builtin/log.c:258 builtin/log.c:260
 #: builtin/ls-files.c:607 builtin/name-rev.c:570 builtin/name-rev.c:572
 #: builtin/pack-refs.c:32 builtin/pack-refs.c:34 builtin/show-ref.c:314
@@ -5989,62 +5989,154 @@ msgid ""
 "[--value=<value>] [--fixed-value] <name> <value>"
 msgstr ""
 
-#: builtin/config.c:161
+#: builtin/config.c:66
+msgid "Config file location"
+msgstr ""
+
+#: builtin/config.c:67
+msgid "use global config file"
+msgstr ""
+
+#: builtin/config.c:68
+msgid "use system config file"
+msgstr ""
+
+#: builtin/config.c:69
+msgid "use repository config file"
+msgstr ""
+
+#: builtin/config.c:70
+msgid "use per-worktree config file"
+msgstr ""
+
+#: builtin/config.c:71 builtin/gc.c:1526 builtin/gc.c:1591
+msgid "use given config file"
+msgstr ""
+
+#: builtin/config.c:72
+msgid "blob-id"
+msgstr ""
+
+#: builtin/config.c:72
+msgid "read config from given blob object"
+msgstr ""
+
+#: builtin/config.c:88
+msgid "Type"
+msgstr ""
+
+#: builtin/config.c:89 builtin/hash-object.c:105
+msgid "type"
+msgstr ""
+
+#: builtin/config.c:89
+msgid "value is given this type"
+msgstr ""
+
+#: builtin/config.c:90
+msgid "value is \"true\" or \"false\""
+msgstr ""
+
+#: builtin/config.c:91
+msgid "value is decimal number"
+msgstr ""
+
+#: builtin/config.c:92
+msgid "value is --bool or --int"
+msgstr ""
+
+#: builtin/config.c:93
+msgid "value is --bool or string"
+msgstr ""
+
+#: builtin/config.c:94
+msgid "value is a path (file or directory name)"
+msgstr ""
+
+#: builtin/config.c:95
+msgid "value is an expiry date"
+msgstr ""
+
+#: builtin/config.c:98
+msgid "Display options"
+msgstr ""
+
+#: builtin/config.c:99
+msgid "terminate values with NUL byte"
+msgstr ""
+
+#: builtin/config.c:100
+msgid "show variable names only"
+msgstr ""
+
+#: builtin/config.c:101
+msgid "show origin of config (file, standard input, blob, command line)"
+msgstr ""
+
+#: builtin/config.c:102
+msgid "show scope of config (worktree, local, global, system, command)"
+msgstr ""
+
+#: builtin/config.c:103
+msgid "show config keys in addition to their values"
+msgstr ""
+
+#: builtin/config.c:168
 #, c-format
 msgid "unrecognized --type argument, %s"
 msgstr ""
 
-#: builtin/config.c:173
+#: builtin/config.c:180
 msgid "only one type at a time"
 msgstr ""
 
-#: builtin/config.c:186
+#: builtin/config.c:193
 #, c-format
 msgid "wrong number of arguments, should be %d"
 msgstr ""
 
-#: builtin/config.c:188
+#: builtin/config.c:195
 #, c-format
 msgid "wrong number of arguments, should be from %d to %d"
 msgstr ""
 
-#: builtin/config.c:354
+#: builtin/config.c:395
 #, c-format
 msgid "invalid key pattern: %s"
 msgstr ""
 
-#: builtin/config.c:376 config.c:3360
+#: builtin/config.c:419 config.c:3360
 #, c-format
 msgid "invalid pattern: %s"
 msgstr ""
 
-#: builtin/config.c:396
+#: builtin/config.c:440
 #, c-format
 msgid "failed to format default config value: %s"
 msgstr ""
 
-#: builtin/config.c:461
+#: builtin/config.c:505
 #, c-format
 msgid "cannot parse color '%s'"
 msgstr ""
 
-#: builtin/config.c:506
+#: builtin/config.c:556
 msgid "unable to parse default color value"
 msgstr ""
 
-#: builtin/config.c:561 builtin/config.c:1026
+#: builtin/config.c:621 builtin/config.c:1074
 msgid "not in a git directory"
 msgstr ""
 
-#: builtin/config.c:564
+#: builtin/config.c:624
 msgid "writing to stdin is not supported"
 msgstr ""
 
-#: builtin/config.c:567
+#: builtin/config.c:627
 msgid "writing config blobs is not supported"
 msgstr ""
 
-#: builtin/config.c:659
+#: builtin/config.c:722
 #, c-format
 msgid ""
 "# This is Git's per-user configuration file.\n"
@@ -6054,329 +6146,238 @@ msgid ""
 "#\temail = %s\n"
 msgstr ""
 
-#: builtin/config.c:674
+#: builtin/config.c:743
 msgid "only one config file at a time"
 msgstr ""
 
-#: builtin/config.c:680
+#: builtin/config.c:749
 msgid "--local can only be used inside a git repository"
 msgstr ""
 
-#: builtin/config.c:682
+#: builtin/config.c:751
 msgid "--blob can only be used inside a git repository"
 msgstr ""
 
-#: builtin/config.c:684
+#: builtin/config.c:753
 msgid "--worktree can only be used inside a git repository"
 msgstr ""
 
-#: builtin/config.c:703 builtin/gc.c:1566 builtin/gc.c:1634
+#: builtin/config.c:772 builtin/gc.c:1566 builtin/gc.c:1634
 msgid "$HOME not set"
 msgstr ""
 
-#: builtin/config.c:716
+#: builtin/config.c:785
 msgid ""
 "--worktree cannot be used with multiple working trees unless the config\n"
 "extension worktreeConfig is enabled. Please read \"CONFIGURATION FILE\"\n"
 "section in \"git help worktree\" for details"
 msgstr ""
 
-#: builtin/config.c:753
-msgid "Config file location"
-msgstr ""
-
-#: builtin/config.c:754
-msgid "use global config file"
-msgstr ""
-
-#: builtin/config.c:755
-msgid "use system config file"
-msgstr ""
-
-#: builtin/config.c:756
-msgid "use repository config file"
-msgstr ""
-
-#: builtin/config.c:757
-msgid "use per-worktree config file"
-msgstr ""
-
-#: builtin/config.c:758 builtin/gc.c:1526 builtin/gc.c:1591
-msgid "use given config file"
-msgstr ""
-
-#: builtin/config.c:759
-msgid "blob-id"
-msgstr ""
-
-#: builtin/config.c:759
-msgid "read config from given blob object"
-msgstr ""
-
-#: builtin/config.c:762
-msgid "Type"
-msgstr ""
-
-#: builtin/config.c:763 builtin/hash-object.c:105
-msgid "type"
-msgstr ""
-
-#: builtin/config.c:763
-msgid "value is given this type"
-msgstr ""
-
-#: builtin/config.c:764
-msgid "value is \"true\" or \"false\""
-msgstr ""
-
-#: builtin/config.c:765
-msgid "value is decimal number"
-msgstr ""
-
-#: builtin/config.c:766
-msgid "value is --bool or --int"
-msgstr ""
-
-#: builtin/config.c:767
-msgid "value is --bool or string"
-msgstr ""
-
-#: builtin/config.c:768
-msgid "value is a path (file or directory name)"
-msgstr ""
-
-#: builtin/config.c:769
-msgid "value is an expiry date"
-msgstr ""
-
-#: builtin/config.c:772
-msgid "Display options"
-msgstr ""
-
-#: builtin/config.c:773
-msgid "terminate values with NUL byte"
-msgstr ""
-
-#: builtin/config.c:774
-msgid "show variable names only"
-msgstr ""
-
-#: builtin/config.c:775
-msgid "show origin of config (file, standard input, blob, command line)"
-msgstr ""
-
-#: builtin/config.c:776
-msgid "show scope of config (worktree, local, global, system, command)"
-msgstr ""
-
-#: builtin/config.c:780
-msgid "Action"
-msgstr ""
-
-#: builtin/config.c:781
-msgid "get value: name [<value-pattern>]"
-msgstr ""
-
-#: builtin/config.c:782
-msgid "get all values: key [<value-pattern>]"
-msgstr ""
-
-#: builtin/config.c:783
-msgid "get values for regexp: name-regex [<value-pattern>]"
-msgstr ""
-
-#: builtin/config.c:784
-msgid "get value specific for the URL: section[.var] URL"
-msgstr ""
-
-#: builtin/config.c:785
-msgid "replace all matching variables: name value [<value-pattern>]"
-msgstr ""
-
-#: builtin/config.c:786
-msgid "add a new variable: name value"
-msgstr ""
-
-#: builtin/config.c:787
-msgid "remove a variable: name [<value-pattern>]"
-msgstr ""
-
-#: builtin/config.c:788
-msgid "remove all matches: name [<value-pattern>]"
-msgstr ""
-
-#: builtin/config.c:789
-msgid "rename section: old-name new-name"
-msgstr ""
-
-#: builtin/config.c:790
-msgid "remove a section: name"
-msgstr ""
-
-#: builtin/config.c:791
-msgid "list all"
-msgstr ""
-
-#: builtin/config.c:792
-msgid "open an editor"
-msgstr ""
-
-#: builtin/config.c:793
-msgid "find the color configured: slot [<default>]"
-msgstr ""
-
-#: builtin/config.c:794
-msgid "find the color setting: slot [<stdout-is-tty>]"
-msgstr ""
-
-#: builtin/config.c:797 builtin/config.c:815 builtin/config.c:856
-#: builtin/config.c:895
+#: builtin/config.c:834 builtin/config.c:878 builtin/config.c:929
+#: builtin/config.c:1163
 msgid "Other"
 msgstr ""
 
-#: builtin/config.c:798 builtin/config.c:799 builtin/config.c:858
-#: builtin/config.c:896
-msgid "value"
-msgstr ""
-
-#: builtin/config.c:798
-msgid "with --get, use default value when missing entry"
-msgstr ""
-
-#: builtin/config.c:799 builtin/config.c:896
-msgid "human-readable comment string (# will be prepended as needed)"
-msgstr ""
-
-#: builtin/config.c:800
-msgid "use string equality when comparing values to 'value-pattern'"
-msgstr ""
-
-#: builtin/config.c:801 builtin/config.c:816 builtin/config.c:857
+#: builtin/config.c:836 builtin/config.c:880 builtin/config.c:1169
 msgid "respect include directives on lookup"
 msgstr ""
 
-#: builtin/config.c:832 builtin/config.c:1195
+#: builtin/config.c:852 builtin/config.c:1266
 #, c-format
 msgid "unable to read config file '%s'"
 msgstr ""
 
-#: builtin/config.c:835 builtin/config.c:1198
+#: builtin/config.c:855 builtin/config.c:1269
 msgid "error processing config file(s)"
 msgstr ""
 
-#: builtin/config.c:848
+#: builtin/config.c:871
 msgid "Filter options"
 msgstr ""
 
-#: builtin/config.c:849
+#: builtin/config.c:872
 msgid "return all values for multi-valued config options"
 msgstr ""
 
-#: builtin/config.c:850
+#: builtin/config.c:873
 msgid "interpret the name as a regular expression"
 msgstr ""
 
-#: builtin/config.c:851 builtin/config.c:893 builtin/config.c:947
+#: builtin/config.c:874 builtin/config.c:927 builtin/config.c:983
 msgid "show config with values matching the pattern"
 msgstr ""
 
-#: builtin/config.c:852 builtin/config.c:894 builtin/config.c:948
+#: builtin/config.c:875 builtin/config.c:928 builtin/config.c:984
+#: builtin/config.c:1167
 msgid "use string equality when comparing values to value pattern"
 msgstr ""
 
-#: builtin/config.c:853
+#: builtin/config.c:876
 msgid "URL"
 msgstr ""
 
-#: builtin/config.c:853
+#: builtin/config.c:876
 msgid "show config matching the given URL"
 msgstr ""
 
-#: builtin/config.c:855
-msgid "show config keys in addition to their values"
+#: builtin/config.c:882 builtin/config.c:930 builtin/config.c:1165
+#: builtin/config.c:1166
+msgid "value"
 msgstr ""
 
-#: builtin/config.c:858
+#: builtin/config.c:882
 msgid "use default value when missing entry"
 msgstr ""
 
-#: builtin/config.c:867 builtin/config.c:958 builtin/config.c:1177
+#: builtin/config.c:892 builtin/config.c:994 builtin/config.c:1250
 msgid "--fixed-value only applies with 'value-pattern'"
 msgstr ""
 
-#: builtin/config.c:869
+#: builtin/config.c:895
 msgid "--default= cannot be used with --all or --url="
 msgstr ""
 
-#: builtin/config.c:871
+#: builtin/config.c:899
 msgid "--url= cannot be used with --all, --regexp or --value"
 msgstr ""
 
-#: builtin/config.c:891 builtin/config.c:945
+#: builtin/config.c:925 builtin/config.c:981
 msgid "Filter"
 msgstr ""
 
-#: builtin/config.c:892 builtin/config.c:946
+#: builtin/config.c:926 builtin/config.c:982
 msgid "replace multi-valued config option with new value"
 msgstr ""
 
-#: builtin/config.c:897
+#: builtin/config.c:930 builtin/config.c:1166
+msgid "human-readable comment string (# will be prepended as needed)"
+msgstr ""
+
+#: builtin/config.c:931
 msgid "add a new line without altering any existing values"
 msgstr ""
 
-#: builtin/config.c:910
+#: builtin/config.c:943
 msgid "--fixed-value only applies with --value=<pattern>"
 msgstr ""
 
-#: builtin/config.c:912
+#: builtin/config.c:945
 msgid "--append cannot be used with --value=<pattern>"
 msgstr ""
 
-#: builtin/config.c:930 builtin/config.c:1210
+#: builtin/config.c:964 builtin/config.c:1281
 #, c-format
 msgid ""
 "cannot overwrite multiple values with a single value\n"
 "       Use a regexp, --add or --replace-all to change %s."
 msgstr ""
 
-#: builtin/config.c:991 builtin/config.c:1016 builtin/config.c:1284
-#: builtin/config.c:1296
+#: builtin/config.c:1032 builtin/config.c:1061 builtin/config.c:1355
+#: builtin/config.c:1367
 #, c-format
 msgid "no such section: %s"
 msgstr ""
 
-#: builtin/config.c:1028
+#: builtin/config.c:1076
 msgid "editing stdin is not supported"
 msgstr ""
 
-#: builtin/config.c:1030
+#: builtin/config.c:1078
 msgid "editing blobs is not supported"
 msgstr ""
 
-#: builtin/config.c:1044
+#: builtin/config.c:1092
 #, c-format
 msgid "cannot create configuration file %s"
 msgstr ""
 
-#: builtin/config.c:1112
+#: builtin/config.c:1147
+msgid "Action"
+msgstr ""
+
+#: builtin/config.c:1148
+msgid "get value: name [<value-pattern>]"
+msgstr ""
+
+#: builtin/config.c:1149
+msgid "get all values: key [<value-pattern>]"
+msgstr ""
+
+#: builtin/config.c:1150
+msgid "get values for regexp: name-regex [<value-pattern>]"
+msgstr ""
+
+#: builtin/config.c:1151
+msgid "get value specific for the URL: section[.var] URL"
+msgstr ""
+
+#: builtin/config.c:1152
+msgid "replace all matching variables: name value [<value-pattern>]"
+msgstr ""
+
+#: builtin/config.c:1153
+msgid "add a new variable: name value"
+msgstr ""
+
+#: builtin/config.c:1154
+msgid "remove a variable: name [<value-pattern>]"
+msgstr ""
+
+#: builtin/config.c:1155
+msgid "remove all matches: name [<value-pattern>]"
+msgstr ""
+
+#: builtin/config.c:1156
+msgid "rename section: old-name new-name"
+msgstr ""
+
+#: builtin/config.c:1157
+msgid "remove a section: name"
+msgstr ""
+
+#: builtin/config.c:1158
+msgid "list all"
+msgstr ""
+
+#: builtin/config.c:1159
+msgid "open an editor"
+msgstr ""
+
+#: builtin/config.c:1160
+msgid "find the color configured: slot [<default>]"
+msgstr ""
+
+#: builtin/config.c:1161
+msgid "find the color setting: slot [<stdout-is-tty>]"
+msgstr ""
+
+#: builtin/config.c:1165
+msgid "with --get, use default value when missing entry"
+msgstr ""
+
+#: builtin/config.c:1184
 msgid "--get-color and variable type are incoherent"
 msgstr ""
 
-#: builtin/config.c:1126
+#: builtin/config.c:1194
+msgid "no action specified"
+msgstr ""
+
+#: builtin/config.c:1199
 msgid "--name-only is only applicable to --list or --get-regexp"
 msgstr ""
 
-#: builtin/config.c:1132
+#: builtin/config.c:1205
 msgid ""
 "--show-origin is only applicable to --get, --get-all, --get-regexp, and --"
 "list"
 msgstr ""
 
-#: builtin/config.c:1138
+#: builtin/config.c:1211
 msgid "--default is only applicable to --get"
 msgstr ""
 
-#: builtin/config.c:1144
+#: builtin/config.c:1217
 msgid "--comment is only applicable to add/set/replace operations"
 msgstr ""
 
@@ -22995,143 +22996,143 @@ msgstr ""
 msgid "ignoring dangling symref %s"
 msgstr ""
 
-#: refs.c:1104
+#: refs.c:1082
 #, c-format
 msgid "log for ref %s has gap after %s"
 msgstr ""
 
-#: refs.c:1110
+#: refs.c:1088
 #, c-format
 msgid "log for ref %s unexpectedly ended on %s"
 msgstr ""
 
-#: refs.c:1180
+#: refs.c:1158
 #, c-format
 msgid "log for %s is empty"
 msgstr ""
 
-#: refs.c:1281
+#: refs.c:1259
 #, c-format
 msgid "refusing to update ref with bad name '%s'"
 msgstr ""
 
-#: refs.c:1288
+#: refs.c:1266
 #, c-format
 msgid "refusing to update pseudoref '%s'"
 msgstr ""
 
-#: refs.c:1373
+#: refs.c:1351
 #, c-format
 msgid "update_ref failed for ref '%s': %s"
 msgstr ""
 
-#: refs.c:2254
+#: refs.c:2232
 #, c-format
 msgid "multiple updates for ref '%s' not allowed"
 msgstr ""
 
-#: refs.c:2349
+#: refs.c:2327
 msgid "ref updates forbidden inside quarantine environment"
 msgstr ""
 
-#: refs.c:2360
+#: refs.c:2338
 msgid "ref updates aborted by hook"
 msgstr ""
 
-#: refs.c:2468 refs.c:2498
+#: refs.c:2446 refs.c:2476
 #, c-format
 msgid "'%s' exists; cannot create '%s'"
 msgstr ""
 
-#: refs.c:2474 refs.c:2509
+#: refs.c:2452 refs.c:2487
 #, c-format
 msgid "cannot process '%s' and '%s' at the same time"
 msgstr ""
 
-#: refs.c:2643 refs.c:2653
+#: refs.c:2621 refs.c:2631
 #, c-format
 msgid "could not delete reference %s: %s"
 msgstr ""
 
-#: refs.c:2656
+#: refs.c:2634
 #, c-format
 msgid "could not delete references: %s"
 msgstr ""
 
-#: refs/reftable-backend.c:436
+#: refs/reftable-backend.c:433
 #, c-format
 msgid "refname is dangerous: %s"
 msgstr ""
 
-#: refs/reftable-backend.c:817
+#: refs/reftable-backend.c:814
 #, c-format
 msgid "trying to write ref '%s' with nonexistent object %s"
 msgstr ""
 
-#: refs/reftable-backend.c:824
+#: refs/reftable-backend.c:821
 #, c-format
 msgid "trying to write non-commit object %s to branch '%s'"
 msgstr ""
 
-#: refs/reftable-backend.c:850
+#: refs/reftable-backend.c:847
 #, c-format
 msgid ""
 "multiple updates for 'HEAD' (including one via its referent '%s') are not "
 "allowed"
 msgstr ""
 
-#: refs/reftable-backend.c:898
+#: refs/reftable-backend.c:895
 #, c-format
 msgid "cannot lock ref '%s': unable to resolve reference '%s'"
 msgstr ""
 
-#: refs/reftable-backend.c:916
+#: refs/reftable-backend.c:913
 #, c-format
 msgid "cannot lock ref '%s': error reading reference"
 msgstr ""
 
-#: refs/reftable-backend.c:954
+#: refs/reftable-backend.c:951
 #, c-format
 msgid ""
 "multiple updates for '%s' (including one via symref '%s') are not allowed"
 msgstr ""
 
-#: refs/reftable-backend.c:978
+#: refs/reftable-backend.c:975
 #, c-format
 msgid "cannot lock ref '%s': reference already exists"
 msgstr ""
 
-#: refs/reftable-backend.c:982
+#: refs/reftable-backend.c:979
 #, c-format
 msgid "cannot lock ref '%s': reference is missing but expected %s"
 msgstr ""
 
-#: refs/reftable-backend.c:987
+#: refs/reftable-backend.c:984
 #, c-format
 msgid "cannot lock ref '%s': is at %s but expected %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1026
+#: refs/reftable-backend.c:1023
 #, c-format
 msgid "reftable: transaction prepare: %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1251
+#: refs/reftable-backend.c:1248
 #, c-format
 msgid "reftable: transaction failure: %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1285
+#: refs/reftable-backend.c:1282
 #, c-format
 msgid "unable to compact stack: %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1335
+#: refs/reftable-backend.c:1332
 #, c-format
 msgid "refname %s not found"
 msgstr ""
 
-#: refs/reftable-backend.c:1339
+#: refs/reftable-backend.c:1336
 #, c-format
 msgid "refname %s is a symbolic ref, copying it is not supported"
 msgstr ""
