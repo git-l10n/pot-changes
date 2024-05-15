@@ -1,0 +1,283 @@
+
+
+#################### Wed, 15 May 2024 18:57:38 +0000 ####################
+
+--- po/git.pot.old	2024-05-15 18:57:38.824886752 +0000
++++ po/git.pot.new	2024-05-15 18:57:38.896887129 +0000
+@@ -1729,6 +1729,9 @@
+ msgid "--anonymize-map token cannot be empty"
+ msgstr ""
+ 
++msgid "--append cannot be used with --value=<pattern>"
++msgstr ""
++
+ msgid "--atomic can only be used when fetching from one remote"
+ msgstr ""
+ 
+@@ -1770,6 +1773,9 @@
+ msgid "--default requires an argument"
+ msgstr ""
+ 
++msgid "--default= cannot be used with --all or --url="
++msgstr ""
++
+ msgid "--delete doesn't make sense without any refs"
+ msgstr ""
+ 
+@@ -1797,6 +1803,9 @@
+ msgid "--fixed-value only applies with 'value-pattern'"
+ msgstr ""
+ 
++msgid "--fixed-value only applies with --value=<pattern>"
++msgstr ""
++
+ msgid "--follow requires exactly one pathspec"
+ msgstr ""
+ 
+@@ -1974,6 +1983,9 @@
+ msgid "--untracked not supported with --recurse-submodules"
+ msgstr ""
+ 
++msgid "--url= cannot be used with --all, --regexp or --value"
++msgstr ""
++
+ msgid "--verify with no packfile name given"
+ msgstr ""
+ 
+@@ -3377,6 +3389,9 @@
+ msgid "Display help information about Git"
+ msgstr ""
+ 
++msgid "Display options"
++msgstr ""
++
+ msgid "Display version information about Git"
+ msgstr ""
+ 
+@@ -3753,6 +3768,12 @@
+ msgid "File not found: %s"
+ msgstr ""
+ 
++msgid "Filter"
++msgstr ""
++
++msgid "Filter options"
++msgstr ""
++
+ msgid "Filtering content"
+ msgstr ""
+ 
+@@ -6156,6 +6177,9 @@
+ msgid "Type"
+ msgstr ""
+ 
++msgid "URL"
++msgstr ""
++
+ #, c-format
+ msgid "URL '%s' uses plaintext credentials"
+ msgstr ""
+@@ -7222,6 +7246,9 @@
+ msgid "add a Signed-off-by trailer to the commit message"
+ msgstr ""
+ 
++msgid "add a new line without altering any existing values"
++msgstr ""
++
+ msgid "add a new variable: name value"
+ msgstr ""
+ 
+@@ -11903,10 +11930,10 @@
+ msgid "find line movements within and across files"
+ msgstr ""
+ 
+-msgid "find the color configured: slot [default]"
++msgid "find the color configured: slot [<default>]"
+ msgstr ""
+ 
+-msgid "find the color setting: slot [stdout-is-tty]"
++msgid "find the color setting: slot [<stdout-is-tty>]"
+ msgstr ""
+ 
+ msgid "find the tag that comes after the commit"
+@@ -12150,16 +12177,16 @@
+ msgid "generate the diff in raw format"
+ msgstr ""
+ 
+-msgid "get all values: key [value-pattern]"
++msgid "get all values: key [<value-pattern>]"
+ msgstr ""
+ 
+ msgid "get value specific for the URL: section[.var] URL"
+ msgstr ""
+ 
+-msgid "get value: name [value-pattern]"
++msgid "get value: name [<value-pattern>]"
+ msgstr ""
+ 
+-msgid "get values for regexp: name-regex [value-pattern]"
++msgid "get values for regexp: name-regex [<value-pattern>]"
+ msgstr ""
+ 
+ #, c-format
+@@ -12412,7 +12439,31 @@
+ msgid "git commit-tree: failed to read '%s'"
+ msgstr ""
+ 
+-msgid "git config [<options>]"
++msgid "git config [<file-option>] --get-colorbool <name> [<stdout-is-tty>]"
++msgstr ""
++
++msgid "git config edit [<file-option>]"
++msgstr ""
++
++msgid "git config get [<file-option>] [<display-option>] [--includes] [--all] [--regexp=<regexp>] [--value=<value>] [--fixed-value] [--default=<default>] <name>"
++msgstr ""
++
++msgid "git config list [<file-option>] [<display-option>] [--includes]"
++msgstr ""
++
++msgid "git config remove-section [<file-option>] <name>"
++msgstr ""
++
++msgid "git config rename-section [<file-option>] <old-name> <new-name>"
++msgstr ""
++
++msgid "git config set [<file-option>] [--type=<type>] [--all] [--value=<value>] [--fixed-value] <name> <value>"
++msgstr ""
++
++msgid "git config set [<file-option>] [--type=<type>] [--comment=<message>] [--all] [--value=<value>] [--fixed-value] <name> <value>"
++msgstr ""
++
++msgid "git config unset [<file-option>] [--all] [--value=<value>] [--fixed-value] <name> <value>"
+ msgstr ""
+ 
+ msgid "git describe <blob>"
+@@ -13043,6 +13094,7 @@
+ 
+ msgid ""
+ "git tag [-a | -s | -u <key-id>] [-f] [-m <msg> | -F <file>] [-e]\n"
++"        [(--trailer <token>[(=|:)<value>])...]\n"
+ "        <tagname> [<commit> | <object>]"
+ msgstr ""
+ 
+@@ -13728,6 +13780,9 @@
+ msgid "interpret patterns as fixed strings"
+ msgstr ""
+ 
++msgid "interpret the name as a regular expression"
++msgstr ""
++
+ msgid "interrupt transfer after <n> seconds of inactivity"
+ msgstr ""
+ 
+@@ -15601,9 +15656,6 @@
+ msgid "only found copies from modified paths due to too many files."
+ msgstr ""
+ 
+-msgid "only one action at a time"
+-msgstr ""
+-
+ msgid "only one batch option may be specified"
+ msgstr ""
+ 
+@@ -17011,10 +17063,10 @@
+ msgid "remove a section: name"
+ msgstr ""
+ 
+-msgid "remove a variable: name [value-pattern]"
++msgid "remove a variable: name [<value-pattern>]"
+ msgstr ""
+ 
+-msgid "remove all matches: name [value-pattern]"
++msgid "remove all matches: name [<value-pattern>]"
+ msgstr ""
+ 
+ msgid "remove ignored files, too"
+@@ -17082,7 +17134,7 @@
+ msgid "repair: %s: %s"
+ msgstr ""
+ 
+-msgid "replace all matching variables: name value [value-pattern]"
++msgid "replace all matching variables: name value [<value-pattern>]"
+ msgstr ""
+ 
+ #, c-format
+@@ -17092,6 +17144,9 @@
+ msgid "replace existing notes"
+ msgstr ""
+ 
++msgid "replace multi-valued config option with new value"
++msgstr ""
++
+ #, c-format
+ msgid "replace ref '%s' already exists"
+ msgstr ""
+@@ -17269,6 +17324,9 @@
+ msgid "return all URLs"
+ msgstr ""
+ 
++msgid "return all values for multi-valued config options"
++msgstr ""
++
+ msgid "return success even if repository was not registered"
+ msgstr ""
+ 
+@@ -17709,6 +17767,15 @@
+ msgid "show commits in topological order"
+ msgstr ""
+ 
++msgid "show config keys in addition to their values"
++msgstr ""
++
++msgid "show config matching the given URL"
++msgstr ""
++
++msgid "show config with values matching the pattern"
++msgstr ""
++
+ msgid "show context between diff hunks up to the specified number of lines"
+ msgstr ""
+ 
+@@ -19248,6 +19315,10 @@
+ msgid "unable to read config file '%s'"
+ msgstr ""
+ 
++#, c-format
++msgid "unable to read from external diff, stopping at %s"
++msgstr ""
++
+ msgid "unable to read from mktree"
+ msgstr ""
+ 
+@@ -19439,6 +19510,10 @@
+ msgid "unable to write object to database"
+ msgstr ""
+ 
++#, c-format
++msgid "unable to write output of external diff, stopping at %s"
++msgstr ""
++
+ msgid "unable to write parameters to config file"
+ msgstr ""
+ 
+@@ -20120,6 +20195,9 @@
+ msgid "use default prefixes a/ and b/"
+ msgstr ""
+ 
++msgid "use default value when missing entry"
++msgstr ""
++
+ msgid "use empty blobs as rename source"
+ msgstr ""
+ 
+@@ -20192,6 +20270,9 @@
+ msgid "use string equality when comparing values to 'value-pattern'"
+ msgstr ""
+ 
++msgid "use string equality when comparing values to value pattern"
++msgstr ""
++
+ msgid "use symlinks in dir-diff mode"
+ msgstr ""
+ 
