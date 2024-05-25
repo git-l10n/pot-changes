@@ -324,3 +324,324 @@ level=error msg="config variable 'commitGraph.changedPathsVersion' in manpage do
 level=error msg="    >> msgid   \"attempting to write a commit-graph, but 'commitgraph.changedPathsVersion' (%d) is not supported\""
 
 ERROR: fail to execute "git-po-helper check-pot"
+
+
+#################### Sat, 25 May 2024 17:57:19 +0000 ####################
+
+--- po/git.pot.old	2024-05-25 17:57:19.354808176 +0000
++++ po/git.pot.new	2024-05-25 17:57:19.426807787 +0000
+@@ -810,22 +810,10 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "%s must be between 0 and 1, using default"
+-msgstr ""
+-
+-#, c-format
+ msgid "%s must be non-negative"
+ msgstr ""
+ 
+ #, c-format
+-msgid "%s must be non-negative, using default"
+-msgstr ""
+-
+-#, c-format
+-msgid "%s must be positive, using default"
+-msgstr ""
+-
+-#, c-format
+ msgid "%s must have at least one character"
+ msgstr ""
+ 
+@@ -1258,14 +1246,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "'%s' does not accept merge commits, please use '%s'"
+-msgstr ""
+-
+-#, c-format
+-msgid "'%s' does not accept merge commits, please use '%s' followed by '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "'%s' does not appear to be a valid revision"
+ msgstr ""
+ 
+@@ -3456,11 +3436,11 @@
+ msgid "Dropped %s (%s)"
+ msgstr ""
+ 
+-msgid "Dry-OK. Log says:"
++msgid "Dry-OK. Log says:\n"
+ msgstr ""
+ 
+ #, perl-format
+-msgid "Dry-Sent %s"
++msgid "Dry-Sent %s\n"
+ msgstr ""
+ 
+ msgid "EXPERIMENTAL: Replay commits on a new base, works with bare repos too"
+@@ -4794,7 +4774,7 @@
+ msgid "Nothing was applied.\n"
+ msgstr ""
+ 
+-msgid "OK. Log says:"
++msgid "OK. Log says:\n"
+ msgstr ""
+ 
+ #, c-format
+@@ -4824,10 +4804,6 @@
+ msgid "Only one StGIT patch series can be applied at once"
+ msgstr ""
+ 
+-#, c-format
+-msgid "Only one letter is expected, got '%s'"
+-msgstr ""
+-
+ msgid "Options related to fetching"
+ msgstr ""
+ 
+@@ -5289,7 +5265,7 @@
+ msgid "Result: "
+ msgstr ""
+ 
+-msgid "Result: OK"
++msgid "Result: OK\n"
+ msgstr ""
+ 
+ msgid "Retrieve and store user credentials"
+@@ -5404,7 +5380,7 @@
+ msgstr ""
+ 
+ #, perl-format
+-msgid "Sent %s"
++msgid "Sent %s\n"
+ msgstr ""
+ 
+ #, c-format
+@@ -7222,6 +7198,24 @@
+ msgid "action when quoted CR is found"
+ msgstr ""
+ 
++#, c-format
++msgid ""
++"active `%s` hook found during `git clone`:\n"
++"\t%s\n"
++"For security reasons, this is disallowed by default.\n"
++"If this is intentional and the hook should actually be run, please\n"
++"run the command again with `GIT_CLONE_PROTECTION_ACTIVE=false`"
++msgstr ""
++
++#, c-format
++msgid ""
++"active `core.hooksPath` found in the local repository config:\n"
++"\t%s\n"
++"For security reasons, this is disallowed by default.\n"
++"If this is intentional and the hook should actually be run, please\n"
++"run the command again with `GIT_CLONE_PROTECTION_ACTIVE=false`"
++msgstr ""
++
+ msgid "add 'prunable' annotation to worktrees older than <time>"
+ msgstr ""
+ 
+@@ -7640,17 +7634,9 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "attempted to store non-selected commit: '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "attempting to mmap %<PRIuMAX> over limit %<PRIuMAX>"
+ msgstr ""
+ 
+-#, c-format
+-msgid "attempting to write a commit-graph, but 'commitgraph.changedPathsVersion' (%d) is not supported"
+-msgstr ""
+-
+ msgid "attempting to write a commit-graph, but 'core.commitGraph' is disabled"
+ msgstr ""
+ 
+@@ -8653,9 +8639,6 @@
+ msgid "cannot specify pathnames with --stdin"
+ msgstr ""
+ 
+-msgid "cannot squash merge commit into another commit"
+-msgstr ""
+-
+ #, c-format
+ msgid "cannot start proxy %s"
+ msgstr ""
+@@ -8727,9 +8710,6 @@
+ msgid "cannot use %s as an exclude file"
+ msgstr ""
+ 
+-msgid "cannot use --attr-source or GIT_ATTR_SOURCE without repo"
+-msgstr ""
+-
+ msgid "cannot use --filter with --stdin-packs"
+ msgstr ""
+ 
+@@ -9273,12 +9253,6 @@
+ msgid "corrupted bitmap index file (too short to fit lookup table)"
+ msgstr ""
+ 
+-msgid "corrupted bitmap index file (too short to fit pseudo-merge table header)"
+-msgstr ""
+-
+-msgid "corrupted bitmap index file (too short to fit pseudo-merge table)"
+-msgstr ""
+-
+ msgid "corrupted bitmap index file (wrong header)"
+ msgstr ""
+ 
+@@ -9508,10 +9482,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "could not find pseudo-merge for commit %s at offset %<PRIuMAX>"
+-msgstr ""
+-
+-#, c-format
+ msgid "could not finish '%s'"
+ msgstr ""
+ 
+@@ -9816,10 +9786,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "could not read extended pseudo-merge table for commit %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "could not read file '%s'"
+ msgstr ""
+ 
+@@ -10536,10 +10502,6 @@
+ msgid "disable rename detection"
+ msgstr ""
+ 
+-#, c-format
+-msgid "disabling Bloom filters for commit-graph layer '%s' due to incompatible settings"
+-msgstr ""
+-
+ msgid "disabling bitmap writing, as some objects are not being packed"
+ msgstr ""
+ 
+@@ -10808,10 +10770,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "duplicate entry when writing bitmap index: %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "duplicate parent %s ignored"
+ msgstr ""
+ 
+@@ -11231,18 +11189,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "extended pseudo-merge entry is too short (%<PRIuMAX> >= %<PRIuMAX>)"
+-msgstr ""
+-
+-#, c-format
+-msgid "extended pseudo-merge lookup out-of-bounds (%<PRIu32> >= %<PRIu32>)"
+-msgstr ""
+-
+-#, c-format
+-msgid "extended pseudo-merge read out-of-bounds (%<PRIuMAX> >= %<PRIuMAX>)"
+-msgstr ""
+-
+-#, c-format
+ msgid "external diff died, stopping at %s"
+ msgstr ""
+ 
+@@ -11510,10 +11456,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "failed to load pseudo-merge regex for %s: '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "failed to locate object %d in packfile"
+ msgstr ""
+ 
+@@ -15083,9 +15025,6 @@
+ msgid "no URLs configured for remote '%s'"
+ msgstr ""
+ 
+-msgid "no action specified"
+-msgstr ""
+-
+ #, c-format
+ msgid "no attribute source given for --attr-source\n"
+ msgstr ""
+@@ -15900,10 +15839,6 @@
+ msgid "out of range"
+ msgstr ""
+ 
+-#, c-format
+-msgid "out-of-bounds read: (%<PRIuMAX> >= %<PRIuMAX>)"
+-msgstr ""
+-
+ msgid "output a binary diff that can be applied"
+ msgstr ""
+ 
+@@ -16624,22 +16559,6 @@
+ msgid "prune unreferenced objects"
+ msgstr ""
+ 
+-#, c-format
+-msgid "pseudo-merge group '%s' has unstable threshold before stable one"
+-msgstr ""
+-
+-#, c-format
+-msgid "pseudo-merge group '%s' missing required pattern"
+-msgstr ""
+-
+-#, c-format
+-msgid "pseudo-merge index out of range (%<PRIu32> >= %<PRIuMAX>)"
+-msgstr ""
+-
+-#, c-format
+-msgid "pseudo-merge regex from config has too many capture groups (max=%<PRIuMAX>)"
+-msgstr ""
+-
+ msgid "pull with rebase"
+ msgstr ""
+ 
+@@ -17023,10 +16942,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "refusing to update pseudoref '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "refusing to update ref with bad name '%s'"
+ msgstr ""
+ 
+@@ -18895,9 +18810,6 @@
+ msgid "too many entries in %s"
+ msgstr ""
+ 
+-msgid "too many pseudo-merges"
+-msgstr ""
+-
+ msgid "too-short tree file"
+ msgstr ""
+ 
+@@ -20348,6 +20260,9 @@
+ msgid "use stateless RPC protocol"
+ msgstr ""
+ 
++msgid "use string equality when comparing values to 'value-pattern'"
++msgstr ""
++
+ msgid "use string equality when comparing values to value pattern"
+ msgstr ""
+ 
