@@ -1,0 +1,71 @@
+
+
+#################### Thu, 30 May 2024 23:57:28 +0000 ####################
+
+--- po/git.pot.old	2024-05-30 23:57:28.122215708 +0000
++++ po/git.pot.new	2024-05-30 23:57:28.194216604 +0000
+@@ -1258,11 +1258,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "'%s' does not accept merge commits, please use '%s'"
+-msgstr ""
+-
+-#, c-format
+-msgid "'%s' does not accept merge commits, please use '%s' followed by '%s'"
++msgid "'%s' does not accept merge commits"
+ msgstr ""
+ 
+ #, c-format
+@@ -1540,6 +1536,16 @@
+ msgid "'crontab' died"
+ msgstr ""
+ 
++#. TRANSLATORS: 'edit', 'merge -C' and 'break' should
++#. not be translated.
++#.
++msgid ""
++"'edit' does not take a merge commit. If you wanted to\n"
++"replay the merge, use 'merge -C' on the commit, and then\n"
++"'break' to give the control back to you so that you can\n"
++"do 'git commit --amend && git rebase --continue'."
++msgstr ""
++
+ msgid "'git apply --cached' failed"
+ msgstr ""
+ 
+@@ -1584,9 +1590,26 @@
+ msgid "'option' without a matching 'ok/error' directive"
+ msgstr ""
+ 
++#. TRANSLATORS: 'pick' and 'merge -C' should not be
++#. translated.
++#.
++msgid ""
++"'pick' does not take a merge commit. If you wanted to\n"
++"replay the merge, use 'merge -C' on the commit."
++msgstr ""
++
+ msgid "'prepare-commit-msg' hook failed"
+ msgstr ""
+ 
++#. TRANSLATORS: 'reword' and 'merge -c' should not be
++#. translated.
++#.
++msgid ""
++"'reword' does not take a merge commit. If you wanted to\n"
++"replay the merge and reword the commit message, use\n"
++"'merge -c' on the commit"
++msgstr ""
++
+ #, perl-format
+ msgid "(%s) Adding %s: %s from: '%s'\n"
+ msgstr ""
+
+
+-------------------- git-po-helper check-pot --------------------
+
+level=error msg="config variable 'commitGraph.changedPathsVersion' in manpage does not match string in pot file:"
+level=error msg="    >> msgid   \"attempting to write a commit-graph, but 'commitgraph.changedPathsVersion' (%d) is not supported\""
+
+ERROR: fail to execute "git-po-helper check-pot"
