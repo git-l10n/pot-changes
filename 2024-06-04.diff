@@ -30,3 +30,69 @@ level=error msg="config variable 'commitGraph.changedPathsVersion' in manpage do
 level=error msg="    >> msgid   \"attempting to write a commit-graph, but 'commitgraph.changedPathsVersion' (%d) is not supported\""
 
 ERROR: fail to execute "git-po-helper check-pot"
+
+
+#################### Tue, 04 Jun 2024 22:57:28 +0000 ####################
+
+--- po/git.pot.old	2024-06-04 22:57:28.432584012 +0000
++++ po/git.pot.new	2024-06-04 22:57:28.508583835 +0000
+@@ -10423,6 +10423,9 @@
+ msgid "delta chain depth %d is too deep, forcing %d"
+ msgstr ""
+ 
++msgid "deprecated synonym for --branches"
++msgstr ""
++
+ msgid "deprecated: use --annotate-stdin instead"
+ msgstr ""
+ 
+@@ -12701,7 +12704,7 @@
+ msgstr ""
+ 
+ msgid ""
+-"git ls-remote [--heads] [--tags] [--refs] [--upload-pack=<exec>]\n"
++"git ls-remote [--branches] [--tags] [--refs] [--upload-pack=<exec>]\n"
+ "              [-q | --quiet] [--exit-code] [--get-url] [--sort=<key>]\n"
+ "              [--symref] [<repository> [<patterns>...]]"
+ msgstr ""
+@@ -13067,8 +13070,8 @@
+ 
+ msgid ""
+ "git show-ref [--head] [-d | --dereference]\n"
+-"             [-s | --hash[=<n>]] [--abbrev[=<n>]] [--tags]\n"
+-"             [--heads] [--] [<pattern>...]"
++"             [-s | --hash[=<n>]] [--abbrev[=<n>]] [--branches] [--tags]\n"
++"             [--] [<pattern>...]"
+ msgstr ""
+ 
+ msgid "git sparse-checkout (init | list | set | add | reapply | disable | check-rules) [<options>]"
+@@ -14378,7 +14381,7 @@
+ msgid "limit the summary size"
+ msgstr ""
+ 
+-msgid "limit to heads"
++msgid "limit to branches"
+ msgstr ""
+ 
+ msgid "limit to tags"
+@@ -15791,10 +15794,10 @@
+ msgid "only show SHA1 hash using <n> digits"
+ msgstr ""
+ 
+-msgid "only show heads (can be combined with tags)"
++msgid "only show branches (can be combined with tags)"
+ msgstr ""
+ 
+-msgid "only show tags (can be combined with heads)"
++msgid "only show tags (can be combined with branches)"
+ msgstr ""
+ 
+ msgid "only show trees"
+
+
+-------------------- git-po-helper check-pot --------------------
+
+level=error msg="config variable 'commitGraph.changedPathsVersion' in manpage does not match string in pot file:"
+level=error msg="    >> msgid   \"attempting to write a commit-graph, but 'commitgraph.changedPathsVersion' (%d) is not supported\""
+
+ERROR: fail to execute "git-po-helper check-pot"
