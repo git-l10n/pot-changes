@@ -1,0 +1,180 @@
+
+
+#################### Fri, 07 Jun 2024 19:57:31 +0000 ####################
+
+--- po/git.pot.old	2024-06-07 19:57:31.809904279 +0000
++++ po/git.pot.new	2024-06-07 19:57:31.885904978 +0000
+@@ -8366,6 +8366,9 @@
+ msgid "cannot edit description of more than one branch"
+ msgstr ""
+ 
++msgid "cannot expire packs from an incremental multi-pack-index"
++msgstr ""
++
+ #, c-format
+ msgid "cannot feed the input to external filter '%s'"
+ msgstr ""
+@@ -8462,6 +8465,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "cannot lock ref '%s': expected symref with target '%s': but is a regular ref"
++msgstr ""
++
++#, c-format
+ msgid "cannot lock ref '%s': is at %s but expected %s"
+ msgstr ""
+ 
+@@ -8643,6 +8650,9 @@
+ msgid "cannot rename the current branch while not on any"
+ msgstr ""
+ 
++msgid "cannot repack an incremental multi-pack-index"
++msgstr ""
++
+ msgid "cannot repack to clean up"
+ msgstr ""
+ 
+@@ -8754,10 +8764,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "cannot update regular ref: '%s': symref target '%s' set"
+-msgstr ""
+-
+-#, c-format
+ msgid "cannot use %s as an exclude file"
+ msgstr ""
+ 
+@@ -8798,6 +8804,9 @@
+ msgid "cannot write bundle version %d with algorithm %s"
+ msgstr ""
+ 
++msgid "cannot write incremental MIDX with bitmap"
++msgstr ""
++
+ msgid "cannot write split index for a sparse index"
+ msgstr ""
+ 
+@@ -13922,6 +13931,9 @@
+ msgid "invalid Date line"
+ msgstr ""
+ 
++msgid "invalid MIDX object position, MIDX is likely corrupt"
++msgstr ""
++
+ msgid "invalid URL scheme name or missing '://' suffix"
+ msgstr ""
+ 
+@@ -14081,6 +14093,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "invalid multi-pack-index chain: line '%s' not a hash"
++msgstr ""
++
++#, c-format
+ msgid "invalid number of threads specified (%d)"
+ msgstr ""
+ 
+@@ -14923,6 +14939,9 @@
+ msgid "multi-pack-index OID lookup chunk is the wrong size"
+ msgstr ""
+ 
++msgid "multi-pack-index chain file too small"
++msgstr ""
++
+ #, c-format
+ msgid "multi-pack-index file %s is too small"
+ msgstr ""
+@@ -15664,6 +15683,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "object count in base MIDX too high: %<PRIuMAX>"
++msgstr ""
++
++#, c-format
+ msgid "object directory %s does not exist; check .git/objects/info/alternates"
+ msgstr ""
+ 
+@@ -16021,6 +16044,10 @@
+ msgid "pack compression level"
+ msgstr ""
+ 
++#, c-format
++msgid "pack count in base MIDX too high: %<PRIuMAX>"
++msgstr ""
++
+ msgid "pack everything"
+ msgstr ""
+ 
+@@ -19164,6 +19191,9 @@
+ msgid "unable to create load_index_extensions thread: %s"
+ msgstr ""
+ 
++msgid "unable to create temporary MIDX layer"
++msgstr ""
++
+ msgid "unable to create temporary file"
+ msgstr ""
+ 
+@@ -19212,6 +19242,9 @@
+ msgid "unable to find all commit-graph files"
+ msgstr ""
+ 
++msgid "unable to find all multi-pack index files"
++msgstr ""
++
+ #, c-format
+ msgid "unable to find filename in patch at line %d"
+ msgstr ""
+@@ -19296,6 +19329,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unable to link '%s' to '%s'"
++msgstr ""
++
++#, c-format
+ msgid "unable to load config blob object '%s'"
+ msgstr ""
+ 
+@@ -19381,6 +19418,9 @@
+ msgid "unable to open loose object %s"
+ msgstr ""
+ 
++msgid "unable to open multi-pack-index chain file"
++msgstr ""
++
+ #, c-format
+ msgid "unable to open or read %s"
+ msgstr ""
+@@ -19502,6 +19542,9 @@
+ msgid "unable to remove %s from index"
+ msgstr ""
+ 
++msgid "unable to rename new multi-pack-index layer"
++msgstr ""
++
+ #, c-format
+ msgid "unable to rename temporary '*.%s' file to '%s'"
+ msgstr ""
+@@ -20704,6 +20747,9 @@
+ msgid "write a multi-pack index of the resulting packs"
+ msgstr ""
+ 
++msgid "write a new incremental MIDX"
++msgstr ""
++
+ msgid "write bitmap index"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-pot --------------------
+
+level=error msg="config variable 'commitGraph.changedPathsVersion' in manpage does not match string in pot file:"
+level=error msg="    >> msgid   \"attempting to write a commit-graph, but 'commitgraph.changedPathsVersion' (%d) is not supported\""
+
+ERROR: fail to execute "git-po-helper check-pot"
