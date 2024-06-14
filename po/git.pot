@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2024-06-13 20:57+0000\n"
+"POT-Creation-Date: 2024-06-14 19:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -2577,7 +2577,7 @@ msgstr ""
 #: builtin/fmt-merge-msg.c:22 builtin/grep.c:976 builtin/merge.c:244
 #: builtin/pull.c:144 builtin/pull.c:206 builtin/pull.c:223
 #: builtin/rebase.c:1112 builtin/repack.c:1173 builtin/repack.c:1177
-#: builtin/repack.c:1179 builtin/show-branch.c:664 builtin/show-ref.c:307
+#: builtin/repack.c:1179 builtin/show-branch.c:664 builtin/show-ref.c:309
 #: builtin/tag.c:486 parse-options.h:215 parse-options.h:276
 #: parse-options.h:526
 msgid "n"
@@ -4771,7 +4771,7 @@ msgstr ""
 #: builtin/config.c:985 builtin/describe.c:585 builtin/describe.c:587
 #: builtin/grep.c:994 builtin/log.c:274 builtin/log.c:276
 #: builtin/ls-files.c:607 builtin/name-rev.c:570 builtin/name-rev.c:572
-#: builtin/pack-refs.c:32 builtin/pack-refs.c:34 builtin/show-ref.c:314
+#: builtin/pack-refs.c:32 builtin/pack-refs.c:34 builtin/show-ref.c:316
 #: ref-filter.h:133
 msgid "pattern"
 msgstr ""
@@ -4929,12 +4929,12 @@ msgstr ""
 msgid "set config inside the new repository"
 msgstr ""
 
-#: builtin/clone.c:164 builtin/fetch.c:2233 builtin/ls-remote.c:81
+#: builtin/clone.c:164 builtin/fetch.c:2233 builtin/ls-remote.c:84
 #: builtin/pull.c:236 builtin/push.c:623 builtin/send-pack.c:195
 msgid "server-specific"
 msgstr ""
 
-#: builtin/clone.c:164 builtin/fetch.c:2233 builtin/ls-remote.c:81
+#: builtin/clone.c:164 builtin/fetch.c:2233 builtin/ls-remote.c:84
 #: builtin/pull.c:237 builtin/push.c:623 builtin/send-pack.c:196
 msgid "option to transmit"
 msgstr ""
@@ -9565,7 +9565,7 @@ msgstr ""
 
 #: builtin/ls-remote.c:12
 msgid ""
-"git ls-remote [--heads] [--tags] [--refs] [--upload-pack=<exec>]\n"
+"git ls-remote [--branches] [--tags] [--refs] [--upload-pack=<exec>]\n"
 "              [-q | --quiet] [--exit-code] [--get-url] [--sort=<key>]\n"
 "              [--symref] [<repository> [<patterns>...]]"
 msgstr ""
@@ -9587,22 +9587,26 @@ msgid "limit to tags"
 msgstr ""
 
 #: builtin/ls-remote.c:71
-msgid "limit to heads"
+msgid "limit to branches"
 msgstr ""
 
-#: builtin/ls-remote.c:72
+#: builtin/ls-remote.c:73 builtin/show-ref.c:299
+msgid "deprecated synonym for --branches"
+msgstr ""
+
+#: builtin/ls-remote.c:75
 msgid "do not show peeled tags"
 msgstr ""
 
-#: builtin/ls-remote.c:74
+#: builtin/ls-remote.c:77
 msgid "take url.<base>.insteadOf into account"
 msgstr ""
 
-#: builtin/ls-remote.c:77
+#: builtin/ls-remote.c:80
 msgid "exit with exit code 2 if no matching refs are found"
 msgstr ""
 
-#: builtin/ls-remote.c:80
+#: builtin/ls-remote.c:83
 msgid "show underlying ref in addition to the object pointed by it"
 msgstr ""
 
@@ -14324,8 +14328,8 @@ msgstr ""
 #: builtin/show-ref.c:13
 msgid ""
 "git show-ref [--head] [-d | --dereference]\n"
-"             [-s | --hash[=<n>]] [--abbrev[=<n>]] [--tags]\n"
-"             [--heads] [--] [<pattern>...]"
+"             [-s | --hash[=<n>]] [--abbrev[=<n>]] [--branches] [--tags]\n"
+"             [--] [<pattern>...]"
 msgstr ""
 
 #: builtin/show-ref.c:16
@@ -14352,38 +14356,38 @@ msgid "failed to look up reference"
 msgstr ""
 
 #: builtin/show-ref.c:296
-msgid "only show tags (can be combined with heads)"
+msgid "only show tags (can be combined with branches)"
 msgstr ""
 
 #: builtin/show-ref.c:297
-msgid "only show heads (can be combined with tags)"
+msgid "only show branches (can be combined with tags)"
 msgstr ""
 
-#: builtin/show-ref.c:298
+#: builtin/show-ref.c:300
 msgid "check for reference existence without resolving"
 msgstr ""
 
-#: builtin/show-ref.c:299
+#: builtin/show-ref.c:301
 msgid "stricter reference checking, requires exact ref path"
 msgstr ""
 
-#: builtin/show-ref.c:302 builtin/show-ref.c:304
+#: builtin/show-ref.c:304 builtin/show-ref.c:306
 msgid "show the HEAD reference, even if it would be filtered out"
 msgstr ""
 
-#: builtin/show-ref.c:306
+#: builtin/show-ref.c:308
 msgid "dereference tags into object IDs"
 msgstr ""
 
-#: builtin/show-ref.c:308
+#: builtin/show-ref.c:310
 msgid "only show SHA1 hash using <n> digits"
 msgstr ""
 
-#: builtin/show-ref.c:312
+#: builtin/show-ref.c:314
 msgid "do not print results to stdout (useful with --verify)"
 msgstr ""
 
-#: builtin/show-ref.c:314
+#: builtin/show-ref.c:316
 msgid "show refs from stdin that aren't in local repository"
 msgstr ""
 
