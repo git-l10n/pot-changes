@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2024-06-14 19:57+0000\n"
+"POT-Creation-Date: 2024-06-14 22:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -1867,8 +1867,8 @@ msgstr ""
 #: builtin/log.c:1903 builtin/log.c:2362 builtin/log.c:2673 builtin/merge.c:412
 #: builtin/pack-objects.c:3519 builtin/pack-objects.c:3677
 #: builtin/pack-objects.c:4167 builtin/pack-objects.c:4182
-#: builtin/shortlog.c:272 midx-write.c:780 pack-bitmap.c:1144
-#: pack-bitmap.c:2540 remote.c:2209 sequencer.c:2537 sequencer.c:5489
+#: builtin/shortlog.c:272 midx-write.c:780 pack-bitmap.c:1149
+#: pack-bitmap.c:2545 remote.c:2209 sequencer.c:2537 sequencer.c:5489
 #: submodule.c:922
 msgid "revision walk setup failed"
 msgstr ""
@@ -10996,7 +10996,7 @@ msgstr ""
 msgid "Counting objects"
 msgstr ""
 
-#: builtin/pack-objects.c:2536 pack-bitmap.c:1717 pack-bitmap.c:1723
+#: builtin/pack-objects.c:2536 pack-bitmap.c:1722 pack-bitmap.c:1728
 #, c-format
 msgid "unable to get size of %s"
 msgstr ""
@@ -21728,135 +21728,139 @@ msgstr ""
 msgid "corrupted bitmap index file (too short to fit pseudo-merge table)"
 msgstr ""
 
-#: pack-bitmap.c:286
+#: pack-bitmap.c:244
+msgid "corrupted bitmap index file, pseudo-merge table too short"
+msgstr ""
+
+#: pack-bitmap.c:291
 #, c-format
 msgid "duplicate entry in bitmap index: '%s'"
 msgstr ""
 
-#: pack-bitmap.c:330
+#: pack-bitmap.c:335
 #, c-format
 msgid "corrupt ewah bitmap: truncated header for entry %d"
 msgstr ""
 
-#: pack-bitmap.c:337
+#: pack-bitmap.c:342
 #, c-format
 msgid "corrupt ewah bitmap: commit index %u out of range"
 msgstr ""
 
-#: pack-bitmap.c:345
+#: pack-bitmap.c:350
 msgid "corrupted bitmap pack index"
 msgstr ""
 
-#: pack-bitmap.c:351
+#: pack-bitmap.c:356
 msgid "invalid XOR offset in bitmap pack index"
 msgstr ""
 
-#: pack-bitmap.c:397 pack-bitmap.c:481
+#: pack-bitmap.c:402 pack-bitmap.c:486
 msgid "cannot fstat bitmap file"
 msgstr ""
 
-#: pack-bitmap.c:423
+#: pack-bitmap.c:428
 msgid "checksum doesn't match in MIDX and bitmap"
 msgstr ""
 
-#: pack-bitmap.c:428
+#: pack-bitmap.c:433
 msgid "multi-pack bitmap is missing required reverse index"
 msgstr ""
 
-#: pack-bitmap.c:434
+#: pack-bitmap.c:439
 #, c-format
 msgid "could not open pack %s"
 msgstr ""
 
-#: pack-bitmap.c:441 t/helper/test-read-midx.c:92
+#: pack-bitmap.c:446 t/helper/test-read-midx.c:92
 msgid "could not determine MIDX preferred pack"
 msgstr ""
 
-#: pack-bitmap.c:447
+#: pack-bitmap.c:452
 #, c-format
 msgid "preferred pack (%s) is invalid"
 msgstr ""
 
-#: pack-bitmap.c:701
+#: pack-bitmap.c:706
 msgid "corrupt bitmap lookup table: triplet position out of index"
 msgstr ""
 
-#: pack-bitmap.c:795
+#: pack-bitmap.c:800
 msgid "corrupt bitmap lookup table: xor chain exceeds entry count"
 msgstr ""
 
-#: pack-bitmap.c:806
+#: pack-bitmap.c:811
 #, c-format
 msgid "corrupt bitmap lookup table: commit index %u out of range"
 msgstr ""
 
-#: pack-bitmap.c:831 pack-bitmap.c:849
+#: pack-bitmap.c:836 pack-bitmap.c:854
 #, c-format
 msgid "corrupt ewah bitmap: truncated header for bitmap of commit \"%s\""
 msgstr ""
 
-#: pack-bitmap.c:2268
+#: pack-bitmap.c:2273
 #, c-format
 msgid "unable to load pack: '%s', disabling pack-reuse"
 msgstr ""
 
-#: pack-bitmap.c:2292
+#: pack-bitmap.c:2297
 msgid "unable to compute preferred pack, disabling pack-reuse"
 msgstr ""
 
-#: pack-bitmap.c:2455
+#: pack-bitmap.c:2460
 #, c-format
 msgid "object '%s' not found in type bitmaps"
 msgstr ""
 
-#: pack-bitmap.c:2459
+#: pack-bitmap.c:2464
 #, c-format
 msgid "object '%s' does not have a unique type"
 msgstr ""
 
-#: pack-bitmap.c:2463
+#: pack-bitmap.c:2468
 #, c-format
 msgid "object '%s': real type '%s', expected: '%s'"
 msgstr ""
 
-#: pack-bitmap.c:2478 pack-bitmap.c:2493
+#: pack-bitmap.c:2483 pack-bitmap.c:2498
 #, c-format
 msgid "object not in bitmap: '%s'"
 msgstr ""
 
-#: pack-bitmap.c:2510 pack-bitmap.c:2576 pack-bitmap.c:2584
+#: pack-bitmap.c:2515 pack-bitmap.c:2581 pack-bitmap.c:2589
 msgid "failed to load bitmap indexes"
 msgstr ""
 
-#: pack-bitmap.c:2513
+#: pack-bitmap.c:2518
 msgid "you must specify exactly one commit to test"
 msgstr ""
 
-#: pack-bitmap.c:2531
+#: pack-bitmap.c:2536
 #, c-format
 msgid "commit '%s' doesn't have an indexed bitmap"
 msgstr ""
 
-#: pack-bitmap.c:2558
+#: pack-bitmap.c:2563
 msgid "mismatch in bitmap results"
 msgstr ""
 
-#: pack-bitmap.c:2705 pack-bitmap.c:2731
+#: pack-bitmap.c:2710 pack-bitmap.c:2736
 #, c-format
 msgid "pseudo-merge index out of range (%<PRIu32> >= %<PRIuMAX>)"
 msgstr ""
 
-#: pack-bitmap.c:2903
+#: pack-bitmap.c:2908
 #, c-format
 msgid "could not find '%s' in pack '%s' at offset %<PRIuMAX>"
 msgstr ""
 
-#: pack-bitmap.c:2940
+#: pack-bitmap.c:2945
 #, c-format
 msgid "unable to get disk usage of '%s'"
 msgstr ""
 
-#: pack-bitmap.c:3013
+#: pack-bitmap.c:3018
 #, c-format
 msgid "bitmap file '%s' has invalid checksum"
 msgstr ""
