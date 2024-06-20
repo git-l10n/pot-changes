@@ -1,0 +1,134 @@
+
+
+#################### Thu, 20 Jun 2024 23:57:40 +0000 ####################
+
+--- po/git.pot.old	2024-06-20 23:57:40.217584080 +0000
++++ po/git.pot.new	2024-06-20 23:57:40.289585108 +0000
+@@ -1246,6 +1246,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "'%s' does not accept merge commits"
++msgstr ""
++
++#, c-format
+ msgid "'%s' does not appear to be a valid revision"
+ msgstr ""
+ 
+@@ -1520,6 +1524,16 @@
+ msgid "'crontab' died"
+ msgstr ""
+ 
++#. TRANSLATORS: 'edit', 'merge -C' and 'break' should
++#. not be translated.
++#.
++msgid ""
++"'edit' does not take a merge commit. If you wanted to\n"
++"replay the merge, use 'merge -C' on the commit, and then\n"
++"'break' to give the control back to you so that you can\n"
++"do 'git commit --amend && git rebase --continue'."
++msgstr ""
++
+ msgid "'git apply --cached' failed"
+ msgstr ""
+ 
+@@ -1564,9 +1578,26 @@
+ msgid "'option' without a matching 'ok/error' directive"
+ msgstr ""
+ 
++#. TRANSLATORS: 'pick' and 'merge -C' should not be
++#. translated.
++#.
++msgid ""
++"'pick' does not take a merge commit. If you wanted to\n"
++"replay the merge, use 'merge -C' on the commit."
++msgstr ""
++
+ msgid "'prepare-commit-msg' hook failed"
+ msgstr ""
+ 
++#. TRANSLATORS: 'reword' and 'merge -c' should not be
++#. translated.
++#.
++msgid ""
++"'reword' does not take a merge commit. If you wanted to\n"
++"replay the merge and reword the commit message, use\n"
++"'merge -c' on the commit"
++msgstr ""
++
+ #, perl-format
+ msgid "(%s) Adding %s: %s from: '%s'\n"
+ msgstr ""
+@@ -8411,6 +8442,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "cannot lock ref '%s': expected symref with target '%s': but is a regular ref"
++msgstr ""
++
++#, c-format
+ msgid "cannot lock ref '%s': is at %s but expected %s"
+ msgstr ""
+ 
+@@ -8632,6 +8667,9 @@
+ msgid "cannot specify pathnames with --stdin"
+ msgstr ""
+ 
++msgid "cannot squash merge commit into another commit"
++msgstr ""
++
+ #, c-format
+ msgid "cannot start proxy %s"
+ msgstr ""
+@@ -10355,6 +10393,9 @@
+ msgid "delta chain depth %d is too deep, forcing %d"
+ msgstr ""
+ 
++msgid "deprecated synonym for --branches"
++msgstr ""
++
+ msgid "deprecated: use --annotate-stdin instead"
+ msgstr ""
+ 
+@@ -12609,7 +12650,7 @@
+ msgstr ""
+ 
+ msgid ""
+-"git ls-remote [--heads] [--tags] [--refs] [--upload-pack=<exec>]\n"
++"git ls-remote [--branches] [--tags] [--refs] [--upload-pack=<exec>]\n"
+ "              [-q | --quiet] [--exit-code] [--get-url] [--sort=<key>]\n"
+ "              [--symref] [<repository> [<patterns>...]]"
+ msgstr ""
+@@ -12975,8 +13016,8 @@
+ 
+ msgid ""
+ "git show-ref [--head] [-d | --dereference]\n"
+-"             [-s | --hash[=<n>]] [--abbrev[=<n>]] [--tags]\n"
+-"             [--heads] [--] [<pattern>...]"
++"             [-s | --hash[=<n>]] [--abbrev[=<n>]] [--branches] [--tags]\n"
++"             [--] [<pattern>...]"
+ msgstr ""
+ 
+ msgid "git sparse-checkout (init | list | set | add | reapply | disable | check-rules) [<options>]"
+@@ -14285,7 +14326,7 @@
+ msgid "limit the summary size"
+ msgstr ""
+ 
+-msgid "limit to heads"
++msgid "limit to branches"
+ msgstr ""
+ 
+ msgid "limit to tags"
+@@ -15698,10 +15739,10 @@
+ msgid "only show SHA1 hash using <n> digits"
+ msgstr ""
+ 
+-msgid "only show heads (can be combined with tags)"
++msgid "only show branches (can be combined with tags)"
+ msgstr ""
+ 
+-msgid "only show tags (can be combined with heads)"
++msgid "only show tags (can be combined with branches)"
+ msgstr ""
+ 
+ msgid "only show trees"
