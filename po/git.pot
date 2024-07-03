@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2024-07-02 01:20+0000\n"
+"POT-Creation-Date: 2024-07-03 05:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -836,7 +836,7 @@ msgstr ""
 #: apply.c:157 archive.c:685 builtin/add.c:381 builtin/add.c:383
 #: builtin/add.c:389 builtin/add.c:401 builtin/branch.c:837
 #: builtin/checkout-index.c:275 builtin/checkout.c:485 builtin/checkout.c:488
-#: builtin/checkout.c:1791 builtin/checkout.c:1901 builtin/checkout.c:1904
+#: builtin/checkout.c:1798 builtin/checkout.c:1908 builtin/checkout.c:1911
 #: builtin/clean.c:963 builtin/clone.c:1015 builtin/clone.c:1020
 #: builtin/commit.c:360 builtin/commit.c:363 builtin/commit.c:1230
 #: builtin/commit.c:1286 builtin/commit.c:1303 builtin/describe.c:617
@@ -1657,7 +1657,7 @@ msgstr ""
 msgid "Unexpected option --remote"
 msgstr ""
 
-#: archive.c:681 builtin/add.c:404 builtin/add.c:436 builtin/checkout.c:1910
+#: archive.c:681 builtin/add.c:404 builtin/add.c:436 builtin/checkout.c:1917
 #: builtin/clone.c:1249 builtin/clone.c:1252 builtin/commit.c:372
 #: builtin/fast-export.c:1247 builtin/index-pack.c:1863 builtin/log.c:2408
 #: builtin/reset.c:391 builtin/reset.c:452 builtin/rm.c:288
@@ -2108,7 +2108,7 @@ msgstr ""
 msgid "interactive picking"
 msgstr ""
 
-#: builtin/add.c:242 builtin/checkout.c:1726 builtin/reset.c:366
+#: builtin/add.c:242 builtin/checkout.c:1733 builtin/reset.c:366
 msgid "select hunks interactively"
 msgstr ""
 
@@ -2200,7 +2200,7 @@ msgstr ""
 msgid "--chmod param '%s' must be either -x or +x"
 msgstr ""
 
-#: builtin/add.c:429 builtin/checkout.c:1898 builtin/commit.c:366
+#: builtin/add.c:429 builtin/checkout.c:1905 builtin/commit.c:366
 #: builtin/reset.c:385 builtin/rm.c:282 builtin/stash.c:1789
 #, c-format
 msgid "'%s' and pathspec arguments cannot be used together"
@@ -3073,7 +3073,7 @@ msgstr ""
 msgid "show work cost statistics"
 msgstr ""
 
-#: builtin/blame.c:888 builtin/checkout.c:1680 builtin/clone.c:109
+#: builtin/blame.c:888 builtin/checkout.c:1687 builtin/clone.c:109
 #: builtin/commit-graph.c:83 builtin/commit-graph.c:253 builtin/fetch.c:2207
 #: builtin/merge.c:286 builtin/multi-pack-index.c:131
 #: builtin/multi-pack-index.c:190 builtin/multi-pack-index.c:217
@@ -3402,7 +3402,7 @@ msgstr ""
 msgid "suppress informational messages"
 msgstr ""
 
-#: builtin/branch.c:728 builtin/checkout.c:1698
+#: builtin/branch.c:728 builtin/checkout.c:1705
 #: builtin/submodule--helper.c:3066
 msgid "set branch tracking configuration"
 msgstr ""
@@ -4017,7 +4017,7 @@ msgstr ""
 msgid "which tree-ish to check attributes at"
 msgstr ""
 
-#: builtin/check-ignore.c:22 builtin/checkout.c:1676 builtin/gc.c:626
+#: builtin/check-ignore.c:22 builtin/checkout.c:1683 builtin/gc.c:626
 #: builtin/worktree.c:790
 msgid "suppress progress reporting"
 msgstr ""
@@ -4378,7 +4378,7 @@ msgstr ""
 msgid "invalid reference: %s"
 msgstr ""
 
-#: builtin/checkout.c:1446 builtin/checkout.c:1872
+#: builtin/checkout.c:1446 builtin/checkout.c:1879
 #, c-format
 msgid "reference is not a tree: %s"
 msgstr ""
@@ -4442,192 +4442,197 @@ msgstr ""
 msgid "you are switching branch while bisecting"
 msgstr ""
 
-#: builtin/checkout.c:1576
+#: builtin/checkout.c:1580
 msgid "paths cannot be used with switching branches"
 msgstr ""
 
-#: builtin/checkout.c:1579 builtin/checkout.c:1583 builtin/checkout.c:1587
+#: builtin/checkout.c:1583 builtin/checkout.c:1587 builtin/checkout.c:1595
 #, c-format
 msgid "'%s' cannot be used with switching branches"
 msgstr ""
 
-#: builtin/checkout.c:1591 builtin/checkout.c:1594 builtin/checkout.c:1597
-#: builtin/checkout.c:1602 builtin/checkout.c:1607
+#: builtin/checkout.c:1593
+#, c-format
+msgid "'%s' needs the paths to check out"
+msgstr ""
+
+#: builtin/checkout.c:1600 builtin/checkout.c:1603 builtin/checkout.c:1606
+#: builtin/checkout.c:1611 builtin/checkout.c:1616
 #, c-format
 msgid "'%s' cannot be used with '%s'"
 msgstr ""
 
-#: builtin/checkout.c:1604
+#: builtin/checkout.c:1613
 #, c-format
 msgid "'%s' cannot take <start-point>"
 msgstr ""
 
-#: builtin/checkout.c:1612
+#: builtin/checkout.c:1621
 #, c-format
 msgid "Cannot switch branch to a non-commit '%s'"
 msgstr ""
 
-#: builtin/checkout.c:1619
+#: builtin/checkout.c:1626
 msgid "missing branch or commit argument"
 msgstr ""
 
-#: builtin/checkout.c:1664
+#: builtin/checkout.c:1671
 #, c-format
 msgid "unknown conflict style '%s'"
 msgstr ""
 
-#: builtin/checkout.c:1681
+#: builtin/checkout.c:1688
 msgid "perform a 3-way merge with the new branch"
 msgstr ""
 
-#: builtin/checkout.c:1682 builtin/log.c:2096 parse-options.h:542
+#: builtin/checkout.c:1689 builtin/log.c:2096 parse-options.h:542
 msgid "style"
 msgstr ""
 
-#: builtin/checkout.c:1683
+#: builtin/checkout.c:1690
 msgid "conflict style (merge, diff3, or zdiff3)"
 msgstr ""
 
-#: builtin/checkout.c:1696 builtin/worktree.c:785
+#: builtin/checkout.c:1703 builtin/worktree.c:785
 msgid "detach HEAD at named commit"
 msgstr ""
 
-#: builtin/checkout.c:1701
+#: builtin/checkout.c:1708
 msgid "force checkout (throw away local modifications)"
 msgstr ""
 
-#: builtin/checkout.c:1703
+#: builtin/checkout.c:1710
 msgid "new-branch"
 msgstr ""
 
-#: builtin/checkout.c:1703
+#: builtin/checkout.c:1710
 msgid "new unborn branch"
 msgstr ""
 
-#: builtin/checkout.c:1705 builtin/merge.c:290
+#: builtin/checkout.c:1712 builtin/merge.c:290
 msgid "update ignored files (default)"
 msgstr ""
 
-#: builtin/checkout.c:1708
+#: builtin/checkout.c:1715
 msgid "do not check if another worktree is holding the given ref"
 msgstr ""
 
-#: builtin/checkout.c:1721
+#: builtin/checkout.c:1728
 msgid "checkout our version for unmerged files"
 msgstr ""
 
-#: builtin/checkout.c:1724
+#: builtin/checkout.c:1731
 msgid "checkout their version for unmerged files"
 msgstr ""
 
-#: builtin/checkout.c:1728
+#: builtin/checkout.c:1735
 msgid "do not limit pathspecs to sparse entries only"
 msgstr ""
 
-#: builtin/checkout.c:1787
+#: builtin/checkout.c:1794
 #, c-format
 msgid "options '-%c', '-%c', and '%s' cannot be used together"
 msgstr ""
 
-#: builtin/checkout.c:1828
+#: builtin/checkout.c:1835
 msgid "--track needs a branch name"
 msgstr ""
 
-#: builtin/checkout.c:1833
+#: builtin/checkout.c:1840
 #, c-format
 msgid "missing branch name; try -%c"
 msgstr ""
 
-#: builtin/checkout.c:1865
+#: builtin/checkout.c:1872
 #, c-format
 msgid "could not resolve %s"
 msgstr ""
 
-#: builtin/checkout.c:1881
+#: builtin/checkout.c:1888
 msgid "invalid path specification"
 msgstr ""
 
-#: builtin/checkout.c:1888
+#: builtin/checkout.c:1895
 #, c-format
 msgid "'%s' is not a commit and a branch '%s' cannot be created from it"
 msgstr ""
 
-#: builtin/checkout.c:1892
+#: builtin/checkout.c:1899
 #, c-format
 msgid "git checkout: --detach does not take a path argument '%s'"
 msgstr ""
 
-#: builtin/checkout.c:1917
+#: builtin/checkout.c:1924
 msgid ""
 "git checkout: --ours/--theirs, --force and --merge are incompatible when\n"
 "checking out of the index."
 msgstr ""
 
-#: builtin/checkout.c:1922
+#: builtin/checkout.c:1929
 msgid "you must specify path(s) to restore"
 msgstr ""
 
-#: builtin/checkout.c:1954 builtin/checkout.c:1956 builtin/checkout.c:2001
-#: builtin/checkout.c:2003 builtin/clone.c:141 builtin/remote.c:174
+#: builtin/checkout.c:1961 builtin/checkout.c:1963 builtin/checkout.c:2008
+#: builtin/checkout.c:2010 builtin/clone.c:141 builtin/remote.c:174
 #: builtin/remote.c:176 builtin/replay.c:296 builtin/submodule--helper.c:3021
 #: builtin/submodule--helper.c:3367 builtin/worktree.c:780
 #: builtin/worktree.c:782
 msgid "branch"
 msgstr ""
 
-#: builtin/checkout.c:1955
+#: builtin/checkout.c:1962
 msgid "create and checkout a new branch"
 msgstr ""
 
-#: builtin/checkout.c:1957
+#: builtin/checkout.c:1964
 msgid "create/reset and checkout a branch"
 msgstr ""
 
-#: builtin/checkout.c:1958
+#: builtin/checkout.c:1965
 msgid "create reflog for new branch"
 msgstr ""
 
-#: builtin/checkout.c:1960
+#: builtin/checkout.c:1967
 msgid "second guess 'git checkout <no-such-branch>' (default)"
 msgstr ""
 
-#: builtin/checkout.c:1961
+#: builtin/checkout.c:1968
 msgid "use overlay mode (default)"
 msgstr ""
 
-#: builtin/checkout.c:2002
+#: builtin/checkout.c:2009
 msgid "create and switch to a new branch"
 msgstr ""
 
-#: builtin/checkout.c:2004
+#: builtin/checkout.c:2011
 msgid "create/reset and switch to a branch"
 msgstr ""
 
-#: builtin/checkout.c:2006
+#: builtin/checkout.c:2013
 msgid "second guess 'git switch <no-such-branch>'"
 msgstr ""
 
-#: builtin/checkout.c:2008
+#: builtin/checkout.c:2015
 msgid "throw away local modifications"
 msgstr ""
 
-#: builtin/checkout.c:2038
+#: builtin/checkout.c:2045
 msgid "which tree-ish to checkout from"
 msgstr ""
 
-#: builtin/checkout.c:2040
+#: builtin/checkout.c:2047
 msgid "restore the index"
 msgstr ""
 
-#: builtin/checkout.c:2042
+#: builtin/checkout.c:2049
 msgid "restore the working tree (default)"
 msgstr ""
 
-#: builtin/checkout.c:2044
+#: builtin/checkout.c:2051
 msgid "ignore unmerged entries"
 msgstr ""
 
-#: builtin/checkout.c:2045
+#: builtin/checkout.c:2052
 msgid "use overlay mode"
 msgstr ""
 
@@ -24169,33 +24174,33 @@ msgstr ""
 msgid "failed to sign the push certificate"
 msgstr ""
 
-#: send-pack.c:442
+#: send-pack.c:451
 msgid "send-pack: unable to fork off fetch subprocess"
 msgstr ""
 
-#: send-pack.c:464
+#: send-pack.c:473
 msgid "push negotiation failed; proceeding anyway with push"
 msgstr ""
 
-#: send-pack.c:539
+#: send-pack.c:548
 msgid "the receiving end does not support this repository's hash algorithm"
 msgstr ""
 
-#: send-pack.c:548
+#: send-pack.c:557
 msgid "the receiving end does not support --signed push"
 msgstr ""
 
-#: send-pack.c:550
+#: send-pack.c:559
 msgid ""
 "not sending a push certificate since the receiving end does not support --"
 "signed push"
 msgstr ""
 
-#: send-pack.c:557
+#: send-pack.c:566
 msgid "the receiving end does not support --atomic push"
 msgstr ""
 
-#: send-pack.c:562
+#: send-pack.c:571
 msgid "the receiving end does not support push options"
 msgstr ""
 
