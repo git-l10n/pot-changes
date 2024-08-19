@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2024-08-16 21:57+0000\n"
+"POT-Creation-Date: 2024-08-19 19:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -846,7 +846,7 @@ msgstr ""
 #: builtin/ls-files.c:744 builtin/merge-base.c:174 builtin/merge-base.c:180
 #: builtin/merge-tree.c:594 builtin/merge.c:1419 builtin/merge.c:1421
 #: builtin/pack-objects.c:4509 builtin/rebase.c:1262 builtin/rebase.c:1264
-#: builtin/rebase.c:1273 builtin/repack.c:1264 builtin/replay.c:321
+#: builtin/rebase.c:1273 builtin/repack.c:1260 builtin/replay.c:321
 #: builtin/reset.c:382 builtin/reset.c:419 builtin/rev-list.c:575
 #: builtin/rev-parse.c:937 builtin/rev-parse.c:944 builtin/rev-parse.c:955
 #: builtin/show-branch.c:728 builtin/show-branch.c:733 builtin/stash.c:1784
@@ -1075,7 +1075,7 @@ msgstr ""
 msgid "cannot checkout %s"
 msgstr ""
 
-#: apply.c:3474 apply.c:3485 apply.c:3531 midx.c:114 pack-mtimes.c:42
+#: apply.c:3474 apply.c:3485 apply.c:3531 midx.c:116 pack-mtimes.c:42
 #: pack-revindex.c:225 setup.c:328
 #, c-format
 msgid "failed to read %s"
@@ -1867,7 +1867,7 @@ msgstr ""
 #: builtin/log.c:1905 builtin/log.c:2364 builtin/log.c:2677 builtin/merge.c:417
 #: builtin/pack-objects.c:3520 builtin/pack-objects.c:3678
 #: builtin/pack-objects.c:4169 builtin/pack-objects.c:4184
-#: builtin/shortlog.c:272 midx-write.c:782 pack-bitmap.c:1152
+#: builtin/shortlog.c:272 midx-write.c:815 pack-bitmap.c:1152
 #: pack-bitmap.c:2548 remote.c:2221 sequencer.c:2540 sequencer.c:5528
 #: submodule.c:924
 msgid "revision walk setup failed"
@@ -1951,7 +1951,7 @@ msgstr ""
 #. you'll probably want to swap the "%s" and leading " " space
 #. around.
 #.
-#: branch.c:306 object-name.c:488
+#: branch.c:306 object-name.c:492
 #, c-format
 msgid "  %s\n"
 msgstr ""
@@ -3075,8 +3075,8 @@ msgstr ""
 #: builtin/blame.c:888 builtin/checkout.c:1687 builtin/clone.c:109
 #: builtin/commit-graph.c:83 builtin/commit-graph.c:253 builtin/fetch.c:2208
 #: builtin/merge.c:286 builtin/multi-pack-index.c:131
-#: builtin/multi-pack-index.c:188 builtin/multi-pack-index.c:215
-#: builtin/multi-pack-index.c:244 builtin/pull.c:122 builtin/push.c:586
+#: builtin/multi-pack-index.c:190 builtin/multi-pack-index.c:217
+#: builtin/multi-pack-index.c:246 builtin/pull.c:122 builtin/push.c:586
 #: builtin/remote.c:708 builtin/send-pack.c:197
 msgid "force progress reporting"
 msgstr ""
@@ -4661,7 +4661,7 @@ msgstr ""
 msgid "Would skip repository %s\n"
 msgstr ""
 
-#: builtin/clean.c:41 midx.c:513
+#: builtin/clean.c:41 midx.c:753
 #, c-format
 msgid "failed to remove %s"
 msgstr ""
@@ -10366,14 +10366,18 @@ msgid "write multi-pack bitmap"
 msgstr ""
 
 #: builtin/multi-pack-index.c:133
-msgid "write multi-pack index containing only given indexes"
+msgid "write a new incremental MIDX"
 msgstr ""
 
 #: builtin/multi-pack-index.c:135
+msgid "write multi-pack index containing only given indexes"
+msgstr ""
+
+#: builtin/multi-pack-index.c:137
 msgid "refs snapshot for selecting bitmap commits"
 msgstr ""
 
-#: builtin/multi-pack-index.c:242
+#: builtin/multi-pack-index.c:244
 msgid ""
 "during repack, collect pack-files of smaller size into a batch that is "
 "larger than this size"
@@ -10977,7 +10981,7 @@ msgstr ""
 msgid "wrote %<PRIu32> objects while expecting %<PRIu32>"
 msgstr ""
 
-#: builtin/pack-objects.c:1649 builtin/repack.c:1240
+#: builtin/pack-objects.c:1649 builtin/repack.c:1236
 msgid "disabling bitmap writing, as some objects are not being packed"
 msgstr ""
 
@@ -13328,26 +13332,26 @@ msgstr ""
 msgid "cannot delete packs in a precious-objects repo"
 msgstr ""
 
-#: builtin/repack.c:1340
+#: builtin/repack.c:1336
 #, c-format
 msgid "option '%s' can only be used along with '%s'"
 msgstr ""
 
-#: builtin/repack.c:1370
+#: builtin/repack.c:1366
 msgid "Nothing new to pack."
 msgstr ""
 
-#: builtin/repack.c:1467
+#: builtin/repack.c:1463
 #, c-format
 msgid "renaming pack to '%s' failed"
 msgstr ""
 
-#: builtin/repack.c:1469
+#: builtin/repack.c:1465
 #, c-format
 msgid "pack-objects did not write a '%s' file for pack %s-%s"
 msgstr ""
 
-#: builtin/repack.c:1472 sequencer.c:4396
+#: builtin/repack.c:1468 sequencer.c:4396
 #, c-format
 msgid "could not unlink: %s"
 msgstr ""
@@ -14445,7 +14449,7 @@ msgstr ""
 msgid "toggle the use of a sparse index"
 msgstr ""
 
-#: builtin/sparse-checkout.c:492 commit-graph.c:2059 midx-write.c:950
+#: builtin/sparse-checkout.c:492 commit-graph.c:2059 midx-write.c:1087
 #: sequencer.c:4401
 #, c-format
 msgid "unable to create leading directories of %s"
@@ -17563,7 +17567,7 @@ msgstr ""
 msgid "unable to create temporary graph layer"
 msgstr ""
 
-#: commit-graph.c:2078
+#: commit-graph.c:2078 midx-write.c:1325
 #, c-format
 msgid "unable to adjust shared permissions for '%s'"
 msgstr ""
@@ -20972,123 +20976,157 @@ msgstr ""
 msgid "failed to read the cache"
 msgstr ""
 
-#: midx-write.c:146
+#: midx-write.c:159
 #, c-format
 msgid "failed to add packfile '%s'"
 msgstr ""
 
-#: midx-write.c:152
+#: midx-write.c:165
 #, c-format
 msgid "failed to open pack-index '%s'"
 msgstr ""
 
-#: midx-write.c:218
+#: midx-write.c:231
 #, c-format
 msgid "failed to locate object %d in packfile"
 msgstr ""
 
-#: midx-write.c:630
+#: midx-write.c:662
 msgid "cannot store reverse index file"
 msgstr ""
 
-#: midx-write.c:730
+#: midx-write.c:763
 #, c-format
 msgid "could not parse line: %s"
 msgstr ""
 
-#: midx-write.c:732
+#: midx-write.c:765
 #, c-format
 msgid "malformed line: %s"
 msgstr ""
 
-#: midx-write.c:913
+#: midx-write.c:950
 msgid "could not load pack"
 msgstr ""
 
-#: midx-write.c:916
+#: midx-write.c:955
 #, c-format
 msgid "could not open index for %s"
 msgstr ""
 
-#: midx-write.c:963
+#: midx-write.c:1001
+#, c-format
+msgid "unable to link '%s' to '%s'"
+msgstr ""
+
+#: midx-write.c:1048 midx.c:815
+#, c-format
+msgid "failed to clear multi-pack-index at %s"
+msgstr ""
+
+#: midx-write.c:1078
+msgid "cannot write incremental MIDX with bitmap"
+msgstr ""
+
+#: midx-write.c:1094
 msgid "ignoring existing multi-pack-index; checksum mismatch"
 msgstr ""
 
-#: midx-write.c:982
+#: midx-write.c:1132
 msgid "Adding packfiles to multi-pack-index"
 msgstr ""
 
-#: midx-write.c:1025
+#: midx-write.c:1178
 #, c-format
 msgid "unknown preferred pack: '%s'"
 msgstr ""
 
-#: midx-write.c:1070
+#: midx-write.c:1223
 #, c-format
 msgid "cannot select preferred pack %s with no objects"
 msgstr ""
 
-#: midx-write.c:1101
+#: midx-write.c:1254
 #, c-format
 msgid "did not see pack-file %s to drop"
 msgstr ""
 
-#: midx-write.c:1149
+#: midx-write.c:1302
 #, c-format
 msgid "preferred pack '%s' is expired"
 msgstr ""
 
-#: midx-write.c:1162
+#: midx-write.c:1320
+msgid "unable to create temporary MIDX layer"
+msgstr ""
+
+#: midx-write.c:1337
 msgid "no pack files to index."
 msgstr ""
 
-#: midx-write.c:1169
+#: midx-write.c:1344
 msgid "refusing to write multi-pack .bitmap without any objects"
 msgstr ""
 
-#: midx-write.c:1237
+#: midx-write.c:1412
 msgid "could not write multi-pack bitmap"
 msgstr ""
 
-#: midx-write.c:1256
+#: midx-write.c:1435
+msgid "unable to open multi-pack-index chain file"
+msgstr ""
+
+#: midx-write.c:1446
+msgid "unable to rename new multi-pack-index layer"
+msgstr ""
+
+#: midx-write.c:1471
 msgid "could not write multi-pack-index"
 msgstr ""
 
-#: midx-write.c:1313
+#: midx-write.c:1532
+msgid "cannot expire packs from an incremental multi-pack-index"
+msgstr ""
+
+#: midx-write.c:1537
 msgid "Counting referenced objects"
 msgstr ""
 
-#: midx-write.c:1323
+#: midx-write.c:1547
 msgid "Finding and deleting unreferenced packfiles"
 msgstr ""
 
-#: midx-write.c:1520
+#: midx-write.c:1709
+msgid "cannot repack an incremental multi-pack-index"
+msgstr ""
+
+#: midx-write.c:1746
 msgid "could not start pack-objects"
 msgstr ""
 
-#: midx-write.c:1540
+#: midx-write.c:1766
 msgid "could not finish pack-objects"
 msgstr ""
 
-#: midx.c:49
+#: midx.c:52
 msgid "multi-pack-index OID fanout is of the wrong size"
 msgstr ""
 
-#: midx.c:57
+#: midx.c:60
 #, c-format
 msgid ""
 "oid fanout out of order: fanout[%d] = %<PRIx32> > %<PRIx32> = fanout[%d]"
 msgstr ""
 
-#: midx.c:73
+#: midx.c:76
 msgid "multi-pack-index OID lookup chunk is the wrong size"
 msgstr ""
 
-#: midx.c:86
+#: midx.c:89
 msgid "multi-pack-index object offset chunk is the wrong size"
 msgstr ""
 
-#: midx.c:121
+#: midx.c:123
 #, c-format
 msgid "multi-pack-index file %s is too small"
 msgstr ""
@@ -21133,77 +21171,99 @@ msgstr ""
 msgid "multi-pack-index pack names out of order: '%s' before '%s'"
 msgstr ""
 
-#: midx.c:251
+#: midx.c:258
+msgid "multi-pack-index chain file too small"
+msgstr ""
+
+#: midx.c:274
+#, c-format
+msgid "pack count in base MIDX too high: %<PRIuMAX>"
+msgstr ""
+
+#: midx.c:280
+#, c-format
+msgid "object count in base MIDX too high: %<PRIuMAX>"
+msgstr ""
+
+#: midx.c:318
+#, c-format
+msgid "invalid multi-pack-index chain: line '%s' not a hash"
+msgstr ""
+
+#: midx.c:341
+msgid "unable to find all multi-pack index files"
+msgstr ""
+
+#: midx.c:422
+msgid "invalid MIDX object position, MIDX is likely corrupt"
+msgstr ""
+
+#: midx.c:440
 #, c-format
 msgid "bad pack-int-id: %u (%u total packs)"
 msgstr ""
 
-#: midx.c:280
+#: midx.c:491
 msgid "MIDX does not contain the BTMP chunk"
 msgstr ""
 
-#: midx.c:283
+#: midx.c:494
 #, c-format
 msgid "could not load bitmapped pack %<PRIu32>"
 msgstr ""
 
-#: midx.c:324
+#: midx.c:558
 msgid "multi-pack-index stores a 64-bit offset, but off_t is too small"
 msgstr ""
 
-#: midx.c:328
+#: midx.c:562
 msgid "multi-pack-index large offset out of bounds"
 msgstr ""
 
-#: midx.c:546
-#, c-format
-msgid "failed to clear multi-pack-index at %s"
-msgstr ""
-
-#: midx.c:609
+#: midx.c:879
 msgid "multi-pack-index file exists, but failed to parse"
 msgstr ""
 
-#: midx.c:617
+#: midx.c:887
 msgid "incorrect checksum"
 msgstr ""
 
-#: midx.c:620
+#: midx.c:890
 msgid "Looking for referenced packfiles"
 msgstr ""
 
-#: midx.c:631
+#: midx.c:901
 msgid "the midx contains no oid"
 msgstr ""
 
-#: midx.c:640
+#: midx.c:910
 msgid "Verifying OID order in multi-pack-index"
 msgstr ""
 
-#: midx.c:649
+#: midx.c:921
 #, c-format
 msgid "oid lookup out of order: oid[%d] = %s >= %s = oid[%d]"
 msgstr ""
 
-#: midx.c:669
+#: midx.c:942
 msgid "Sorting objects by packfile"
 msgstr ""
 
-#: midx.c:676
+#: midx.c:949
 msgid "Verifying object offsets"
 msgstr ""
 
-#: midx.c:692
+#: midx.c:967
 #, c-format
 msgid "failed to load pack entry for oid[%d] = %s"
 msgstr ""
 
-#: midx.c:698
+#: midx.c:973
 #, c-format
 msgid "failed to load pack-index for packfile %s"
 msgstr ""
 
-#: midx.c:707
+#: midx.c:982
 #, c-format
 msgid "incorrect object offset for oid[%d] = %s: %<PRIx64> != %<PRIx64>"
 msgstr ""
@@ -21556,7 +21616,7 @@ msgstr ""
 #. output shown when we cannot look up or parse the
 #. object in question. E.g. "deadbeef [bad object]".
 #.
-#: object-name.c:404
+#: object-name.c:408
 #, c-format
 msgid "%s [bad object]"
 msgstr ""
@@ -21566,7 +21626,7 @@ msgstr ""
 #. *
 #.    "deadbeef commit 2021-01-01 - Some Commit Message"
 #.
-#: object-name.c:431
+#: object-name.c:435
 #, c-format
 msgid "%s commit %s - %s"
 msgstr ""
@@ -21582,7 +21642,7 @@ msgstr ""
 #. The third argument is the "tag" string
 #. from object.c.
 #.
-#: object-name.c:452
+#: object-name.c:456
 #, c-format
 msgid "%s tag %s - %s"
 msgstr ""
@@ -21593,7 +21653,7 @@ msgstr ""
 #. *
 #.    "deadbeef [bad tag, could not parse it]"
 #.
-#: object-name.c:463
+#: object-name.c:467
 #, c-format
 msgid "%s [bad tag, could not parse it]"
 msgstr ""
@@ -21601,7 +21661,7 @@ msgstr ""
 #. TRANSLATORS: This is a line of ambiguous <type>
 #. object output. E.g. "deadbeef tree".
 #.
-#: object-name.c:471
+#: object-name.c:475
 #, c-format
 msgid "%s tree"
 msgstr ""
@@ -21609,12 +21669,12 @@ msgstr ""
 #. TRANSLATORS: This is a line of ambiguous <type>
 #. object output. E.g. "deadbeef blob".
 #.
-#: object-name.c:477
+#: object-name.c:481
 #, c-format
 msgid "%s blob"
 msgstr ""
 
-#: object-name.c:602
+#: object-name.c:606
 #, c-format
 msgid "short object ID %s is ambiguous"
 msgstr ""
@@ -21623,14 +21683,14 @@ msgstr ""
 #. objects composed in show_ambiguous_object(). See
 #. its "TRANSLATORS" comments for details.
 #.
-#: object-name.c:624
+#: object-name.c:628
 #, c-format
 msgid ""
 "The candidates are:\n"
 "%s"
 msgstr ""
 
-#: object-name.c:939
+#: object-name.c:946
 msgid ""
 "Git normally never creates a ref that ends with 40 hex characters\n"
 "because it will be ignored when you just specify 40-hex. These refs\n"
@@ -21643,67 +21703,67 @@ msgid ""
 "running \"git config advice.objectNameWarning false\""
 msgstr ""
 
-#: object-name.c:1060
+#: object-name.c:1067
 #, c-format
 msgid "log for '%.*s' only goes back to %s"
 msgstr ""
 
-#: object-name.c:1077
+#: object-name.c:1084
 #, c-format
 msgid "log for '%.*s' only has %d entries"
 msgstr ""
 
-#: object-name.c:1882
+#: object-name.c:1889
 #, c-format
 msgid "path '%s' exists on disk, but not in '%.*s'"
 msgstr ""
 
-#: object-name.c:1888
+#: object-name.c:1895
 #, c-format
 msgid ""
 "path '%s' exists, but not '%s'\n"
 "hint: Did you mean '%.*s:%s' aka '%.*s:./%s'?"
 msgstr ""
 
-#: object-name.c:1897
+#: object-name.c:1904
 #, c-format
 msgid "path '%s' does not exist in '%.*s'"
 msgstr ""
 
-#: object-name.c:1926
+#: object-name.c:1933
 #, c-format
 msgid ""
 "path '%s' is in the index, but not at stage %d\n"
 "hint: Did you mean ':%d:%s'?"
 msgstr ""
 
-#: object-name.c:1943
+#: object-name.c:1950
 #, c-format
 msgid ""
 "path '%s' is in the index, but not '%s'\n"
 "hint: Did you mean ':%d:%s' aka ':%d:./%s'?"
 msgstr ""
 
-#: object-name.c:1951
+#: object-name.c:1958
 #, c-format
 msgid "path '%s' exists on disk, but not in the index"
 msgstr ""
 
-#: object-name.c:1953
+#: object-name.c:1960
 #, c-format
 msgid "path '%s' does not exist (neither on disk nor in the index)"
 msgstr ""
 
-#: object-name.c:1966
+#: object-name.c:1973
 msgid "relative path syntax can't be used outside working tree"
 msgstr ""
 
-#: object-name.c:2005
+#: object-name.c:2012
 #, c-format
 msgid "<object>:<path> required, only <object> '%s' given"
 msgstr ""
 
-#: object-name.c:2124
+#: object-name.c:2131
 #, c-format
 msgid "invalid object name '%.*s'."
 msgstr ""
@@ -21829,7 +21889,7 @@ msgstr ""
 msgid "could not open pack %s"
 msgstr ""
 
-#: pack-bitmap.c:449 t/helper/test-read-midx.c:94
+#: pack-bitmap.c:449 t/helper/test-read-midx.c:104
 msgid "could not determine MIDX preferred pack"
 msgstr ""
 
@@ -22017,12 +22077,12 @@ msgstr ""
 msgid "packfile %s cannot be mapped%s"
 msgstr ""
 
-#: packfile.c:1938
+#: packfile.c:1949
 #, c-format
 msgid "offset before start of pack index for %s (corrupt index?)"
 msgstr ""
 
-#: packfile.c:1942
+#: packfile.c:1953
 #, c-format
 msgid "offset beyond end of pack index for %s (truncated index?)"
 msgstr ""
