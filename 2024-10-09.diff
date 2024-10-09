@@ -1,0 +1,387 @@
+
+
+#################### Wed, 09 Oct 2024 22:57:35 +0000 ####################
+
+--- po/git.pot.old	2024-10-09 22:57:35.453420278 +0000
++++ po/git.pot.new	2024-10-09 22:57:35.525419862 +0000
+@@ -786,10 +786,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "%s is currently not supported with remote-object-info"
+-msgstr ""
+-
+-#, c-format
+ msgid "%s is neither a commit nor blob"
+ msgstr ""
+ 
+@@ -927,10 +923,6 @@
+ msgid "%s was both %s and %s\n"
+ msgstr ""
+ 
+-#, c-format
+-msgid "%s with flags 0x%x should not be in cache-tree"
+-msgstr ""
+-
+ #. TRANSLATORS: "%s" is "<n> years"
+ #, c-format
+ msgid "%s, %<PRIuMAX> month ago"
+@@ -1592,15 +1584,6 @@
+ "to <git@vger.kernel.org>.  Thanks.\n"
+ msgstr ""
+ 
+-msgid "'git prune-packed' takes no arguments"
+-msgstr ""
+-
+-msgid "'git refs migrate' needs '--ref-format=<format>'"
+-msgstr ""
+-
+-msgid "'git refs migrate' takes no arguments"
+-msgstr ""
+-
+ msgid "'git refs verify' takes no arguments"
+ msgstr ""
+ 
+@@ -2990,8 +2973,7 @@
+ msgid "Checking patch %s..."
+ msgstr ""
+ 
+-#, c-format
+-msgid "Checking references consistency in %s"
++msgid "Checking references consistency"
+ msgstr ""
+ 
+ #, c-format
+@@ -3102,9 +3084,6 @@
+ msgid "Compressing objects"
+ msgstr ""
+ 
+-msgid "Compressing objects by path"
+-msgstr ""
+-
+ msgid "Compute object ID and optionally create an object from a file"
+ msgstr ""
+ 
+@@ -4951,10 +4930,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "Path-based delta compression using up to %d threads"
+-msgstr ""
+-
+-#, c-format
+ msgid "Pathspec '%s' is in submodule '%.*s'"
+ msgstr ""
+ 
+@@ -7281,10 +7256,6 @@
+ msgid "accept refspecs from stdin"
+ msgstr ""
+ 
+-#, c-format
+-msgid "accepted promisor remote '%s' not found"
+-msgstr ""
+-
+ msgid "act on remote-tracking branches"
+ msgstr ""
+ 
+@@ -7935,10 +7906,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "bad subtree '%.*s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "bad tree object %s"
+ msgstr ""
+ 
+@@ -8236,10 +8203,6 @@
+ msgid "bytes"
+ msgstr ""
+ 
+-#, c-format
+-msgid "cache-tree for path %.*s does not match. Expected %s got %s"
+-msgstr ""
+-
+ msgid "can not move directory into itself"
+ msgstr ""
+ 
+@@ -8833,15 +8796,9 @@
+ msgid "cannot use --attr-source or GIT_ATTR_SOURCE without repo"
+ msgstr ""
+ 
+-msgid "cannot use --filter with --path-walk"
+-msgstr ""
+-
+ msgid "cannot use --filter with --stdin-packs"
+ msgstr ""
+ 
+-msgid "cannot use --shallow with --path-walk"
+-msgstr ""
+-
+ msgid "cannot use --stdin-packs with --cruft"
+ msgstr ""
+ 
+@@ -8852,9 +8809,6 @@
+ msgid "cannot use bare repository '%s' (safe.bareRepository is '%s')"
+ msgstr ""
+ 
+-msgid "cannot use delta islands with --path-walk"
+-msgstr ""
+-
+ msgid "cannot use internal rev list with --cruft"
+ msgstr ""
+ 
+@@ -8876,6 +8830,9 @@
+ msgid "cannot write bundle version %d with algorithm %s"
+ msgstr ""
+ 
++msgid "cannot write incremental MIDX with bitmap"
++msgstr ""
++
+ msgid "cannot write split index for a sparse index"
+ msgstr ""
+ 
+@@ -9400,9 +9357,6 @@
+ msgid "corrupted bitmap pack index"
+ msgstr ""
+ 
+-msgid "corrupted cache-tree has entries not present in index"
+-msgstr ""
+-
+ #, c-format
+ msgid "could not add %s to temporary index"
+ msgstr ""
+@@ -9710,10 +9664,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "could not load reverse index for MIDX %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "could not lock '%s'"
+ msgstr ""
+ 
+@@ -10632,10 +10582,6 @@
+ msgid "directory '%s' exists already"
+ msgstr ""
+ 
+-#, c-format
+-msgid "directory '%s' is present in index, but not sparse"
+-msgstr ""
+-
+ msgid "directory from which templates will be used"
+ msgstr ""
+ 
+@@ -11721,9 +11667,6 @@
+ msgid "failed to open temporary file"
+ msgstr ""
+ 
+-msgid "failed to pack objects via path-walk"
+-msgstr ""
+-
+ #, c-format
+ msgid "failed to parse %s"
+ msgstr ""
+@@ -11866,9 +11809,6 @@
+ msgid "failed to set up maintenance schedule"
+ msgstr ""
+ 
+-msgid "failed to setup revision walk"
+-msgstr ""
+-
+ msgid "failed to sign the push certificate"
+ msgstr ""
+ 
+@@ -11946,10 +11886,6 @@
+ msgid "failed to update remote for submodule '%s'"
+ msgstr ""
+ 
+-#, c-format
+-msgid "failed to walk children of tree %s: not found"
+-msgstr ""
+-
+ msgid "failed to write archive"
+ msgstr ""
+ 
+@@ -12990,15 +12926,10 @@
+ msgid "git notes show [<object>]"
+ msgstr ""
+ 
+-msgid ""
+-"git pack-objects [-q | --progress | --all-progress] [--all-progress-implied]\n"
+-"                 [--no-reuse-delta] [--delta-base-offset] [--non-empty]\n"
+-"                 [--local] [--incremental] [--window=<n>] [--depth=<n>]\n"
+-"                 [--revs [--unpacked | --all]] [--keep-pack=<pack-name>]\n"
+-"                 [--cruft] [--cruft-expiration=<time>]\n"
+-"                 [--stdout [--filter=<filter-spec>] | <base-name>]\n"
+-"                 [--shallow] [--keep-true-parents] [--[no-]sparse]\n"
+-"                 [--path-walk] < <object-list>"
++msgid "git pack-objects --stdout [<options>] [< <ref-list> | < <object-list>]"
++msgstr ""
++
++msgid "git pack-objects [<options>] <base-name> [< <ref-list> | < <object-list>]"
+ msgstr ""
+ 
+ msgid "git pack-refs [--all] [--no-prune] [--auto] [--include <pattern>] [--exclude <pattern>]"
+@@ -13120,10 +13051,7 @@
+ msgid "git remote update [<options>] [<group> | <remote>]..."
+ msgstr ""
+ 
+-msgid ""
+-"git repack [-a] [-A] [-d] [-f] [-F] [-l] [-n] [-q] [-b] [-m]\n"
+-"[--window=<n>] [--depth=<n>] [--threads=<n>] [--keep-pack=<pack-name>]\n"
+-"[--write-midx] [--path-walk]"
++msgid "git repack [<options>]"
+ msgstr ""
+ 
+ msgid "git replace -d <object>..."
+@@ -14507,10 +14435,6 @@
+ msgid "key=value"
+ msgstr ""
+ 
+-#, c-format
+-msgid "known remote named '%s' but with url '%s' instead of '%s'"
+-msgstr ""
+-
+ msgid "label tags with mark ids"
+ msgstr ""
+ 
+@@ -14932,6 +14856,9 @@
+ msgid "missing --config=<config>"
+ msgstr ""
+ 
++msgid "missing --ref-format=<format>"
++msgstr ""
++
+ #, c-format
+ msgid "missing arguments for %s"
+ msgstr ""
+@@ -15192,9 +15119,6 @@
+ msgid "must supply remote when using --negotiate-only"
+ msgstr ""
+ 
+-msgid "must supply valid remote when using remote-object-info"
+-msgstr ""
+-
+ msgid "n"
+ msgstr ""
+ 
+@@ -16335,9 +16259,6 @@
+ msgid "pass --no-reuse-object to git-pack-objects"
+ msgstr ""
+ 
+-msgid "pass --path-walk to git-pack-objects"
+-msgstr ""
+-
+ msgid "pass -b flag to git-mailinfo"
+ msgstr ""
+ 
+@@ -17382,9 +17303,6 @@
+ msgid "remote-helper doesn't support push; refspec needed"
+ msgstr ""
+ 
+-msgid "remote-object-info requires protocol v2"
+-msgstr ""
+-
+ #, c-format
+ msgid "remote-tracking branch '%s' not found"
+ msgstr ""
+@@ -18934,9 +18852,6 @@
+ msgid "test-tool cache-tree <options> (control|prime|update)"
+ msgstr ""
+ 
+-msgid "test-tool path-walk <options> -- <revision-options>"
+-msgstr ""
+-
+ msgid "test-tool serve-v2 [<options>]"
+ msgstr ""
+ 
+@@ -19118,21 +19033,6 @@
+ "\tgit config --global --unset --fixed-value scalar.repo \"%s\""
+ msgstr ""
+ 
+-msgid "toggle inclusion of blob objects"
+-msgstr ""
+-
+-msgid "toggle inclusion of commit objects"
+-msgstr ""
+-
+-msgid "toggle inclusion of tag objects"
+-msgstr ""
+-
+-msgid "toggle inclusion of tree objects"
+-msgstr ""
+-
+-msgid "toggle pruning of uninteresting paths"
+-msgstr ""
+-
+ msgid "toggle the use of a sparse index"
+ msgstr ""
+ 
+@@ -19950,10 +19850,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unexpected argument: '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "unexpected diff status %c"
+ msgstr ""
+ 
+@@ -20005,10 +19901,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unknown '%s' value for '%s' config option"
+-msgstr ""
+-
+-#, c-format
+ msgid "unknown --mirror argument: %s"
+ msgstr ""
+ 
+@@ -20066,10 +19958,6 @@
+ msgid "unknown conflict style '%s'"
+ msgstr ""
+ 
+-#, c-format
+-msgid "unknown element '%s' from remote info"
+-msgstr ""
+-
+ msgid "unknown error occurred while reading the configuration files"
+ msgstr ""
+ 
+@@ -20701,9 +20589,6 @@
+ msgid "use the merge-base of upstream and branch as the current base"
+ msgstr ""
+ 
+-msgid "use the path-walk API to walk objects when possible"
+-msgstr ""
+-
+ msgid "use the same output mode as git-annotate (Default: off)"
+ msgstr ""
+ 
+@@ -21049,9 +20934,6 @@
+ msgid "wrong object type in link"
+ msgstr ""
+ 
+-msgid "wrong protocol version. expected v2"
+-msgstr ""
+-
+ #, c-format
+ msgid "wrote %<PRIu32> objects while expecting %<PRIu32>"
+ msgstr ""
+
+
+-------------------- git-po-helper check-pot --------------------
+
+level=error msg="config variable 'http.proactiveAuth' in manpage does not match string in pot file:"
+level=error msg="    >> msgid   \"Unknown value for http.proactiveauth\""
+level=error msg="config variable 'http.cookieFile' in manpage does not match string in pot file:"
+level=error msg="    >> msgid   \"refusing to read cookies from http.cookiefile '-'\""
+level=error msg="config variable 'http.cookieFile' in manpage does not match string in pot file:"
+level=error msg="    >> msgid   \"ignoring http.savecookies for empty http.cookiefile\""
+
+ERROR: fail to execute "git-po-helper check-pot"
