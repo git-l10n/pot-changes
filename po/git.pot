@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2024-10-10 01:20+0000\n"
+"POT-Creation-Date: 2024-10-11 21:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -1710,46 +1710,46 @@ msgstr ""
 msgid "unable to add additional attribute"
 msgstr ""
 
-#: attr.c:371
+#: attr.c:335
 #, c-format
 msgid "ignoring overly long attributes line %d"
 msgstr ""
 
-#: attr.c:386
+#: attr.c:350
 #, c-format
 msgid "%s not allowed: %s:%d"
 msgstr ""
 
-#: attr.c:425
+#: attr.c:389
 msgid ""
 "Negative patterns are ignored in git attributes\n"
 "Use '\\!' for literal leading exclamation."
 msgstr ""
 
-#: attr.c:748
+#: attr.c:712
 #, c-format
 msgid "cannot fstat gitattributes file '%s'"
 msgstr ""
 
-#: attr.c:753
+#: attr.c:717
 #, c-format
 msgid "ignoring overly large gitattributes file '%s'"
 msgstr ""
 
-#: attr.c:780
+#: attr.c:744
 #, c-format
 msgid "ignoring overly large gitattributes blob '%s'"
 msgstr ""
 
-#: attr.c:1234
+#: attr.c:1198
 msgid "cannot use --attr-source or GIT_ATTR_SOURCE without repo"
 msgstr ""
 
-#: attr.c:1242
+#: attr.c:1206
 msgid "bad --attr-source or GIT_ATTR_SOURCE"
 msgstr ""
 
-#: attr.c:1294 read-cache.c:802
+#: attr.c:1258 read-cache.c:802
 #, c-format
 msgid "unable to stat '%s'"
 msgstr ""
@@ -2110,7 +2110,7 @@ msgstr ""
 
 #: builtin/add.c:250 builtin/clean.c:936 builtin/fetch.c:2289 builtin/mv.c:191
 #: builtin/prune-packed.c:18 builtin/pull.c:211 builtin/push.c:568
-#: builtin/remote.c:1536 builtin/rm.c:251 builtin/send-pack.c:193
+#: builtin/remote.c:1540 builtin/rm.c:251 builtin/send-pack.c:193
 msgid "dry run"
 msgstr ""
 
@@ -6471,7 +6471,7 @@ msgstr ""
 msgid "credential-cache--daemon unavailable; no unix socket support"
 msgstr ""
 
-#: builtin/credential-cache.c:167 builtin/credential-cache.c:203
+#: builtin/credential-cache.c:167 builtin/credential-cache.c:204
 msgid "credential-cache unavailable; no unix socket support"
 msgstr ""
 
@@ -7087,56 +7087,46 @@ msgstr ""
 msgid "the object %s does not exist"
 msgstr ""
 
-#: builtin/fetch.c:1641 builtin/remote.c:1469
-#, c-format
-msgid "Not a valid ref: %s"
-msgstr ""
-
-#: builtin/fetch.c:1644 builtin/remote.c:1472
-#, c-format
-msgid "Could not setup %s"
-msgstr ""
-
-#: builtin/fetch.c:1837
+#: builtin/fetch.c:1835
 msgid "multiple branches detected, incompatible with --set-upstream"
 msgstr ""
 
-#: builtin/fetch.c:1849
+#: builtin/fetch.c:1847
 #, c-format
 msgid ""
 "could not set upstream of HEAD to '%s' from '%s' when it does not point to "
 "any branch."
 msgstr ""
 
-#: builtin/fetch.c:1862
+#: builtin/fetch.c:1860
 msgid "not setting upstream for a remote remote-tracking branch"
 msgstr ""
 
-#: builtin/fetch.c:1864
+#: builtin/fetch.c:1862
 msgid "not setting upstream for a remote tag"
 msgstr ""
 
-#: builtin/fetch.c:1866
+#: builtin/fetch.c:1864
 msgid "unknown branch type"
 msgstr ""
 
-#: builtin/fetch.c:1868
+#: builtin/fetch.c:1866
 msgid ""
 "no source branch found;\n"
 "you need to specify exactly one branch with the --set-upstream option"
 msgstr ""
 
-#: builtin/fetch.c:2015 builtin/fetch.c:2095
+#: builtin/fetch.c:2016 builtin/fetch.c:2096
 #, c-format
 msgid "Fetching %s\n"
 msgstr ""
 
-#: builtin/fetch.c:2026 builtin/fetch.c:2098
+#: builtin/fetch.c:2027 builtin/fetch.c:2099
 #, c-format
 msgid "could not fetch %s"
 msgstr ""
 
-#: builtin/fetch.c:2038
+#: builtin/fetch.c:2039
 #, c-format
 msgid "could not fetch '%s' (exit code: %d)\n"
 msgstr ""
@@ -8997,7 +8987,7 @@ msgstr ""
 msgid "could not read input file '%s'"
 msgstr ""
 
-#: builtin/interpret-trailers.c:133 builtin/mktag.c:95 imap-send.c:1555
+#: builtin/interpret-trailers.c:133 builtin/mktag.c:95 imap-send.c:1551
 msgid "could not read from stdin"
 msgstr ""
 
@@ -10955,7 +10945,7 @@ msgstr ""
 msgid "use notes from <notes-ref>"
 msgstr ""
 
-#: builtin/notes.c:1134 builtin/remote.c:1820 parse-options.c:873
+#: builtin/notes.c:1134 builtin/remote.c:1824 parse-options.c:873
 #, c-format
 msgid "unknown subcommand: `%s'"
 msgstr ""
@@ -13132,113 +13122,123 @@ msgid_plural "  Local refs configured for 'git push'%s:"
 msgstr[0] ""
 msgstr[1] ""
 
-#: builtin/remote.c:1433
+#: builtin/remote.c:1437
 msgid "set refs/remotes/<name>/HEAD according to remote"
 msgstr ""
 
-#: builtin/remote.c:1435
+#: builtin/remote.c:1439
 msgid "delete refs/remotes/<name>/HEAD"
 msgstr ""
 
-#: builtin/remote.c:1449
+#: builtin/remote.c:1453
 msgid "Cannot determine remote HEAD"
 msgstr ""
 
-#: builtin/remote.c:1451
+#: builtin/remote.c:1455
 msgid "Multiple remote HEAD branches. Please choose one explicitly with:"
 msgstr ""
 
-#: builtin/remote.c:1461
+#: builtin/remote.c:1465
 #, c-format
 msgid "Could not delete %s"
 msgstr ""
 
-#: builtin/remote.c:1492
+#: builtin/remote.c:1473
+#, c-format
+msgid "Not a valid ref: %s"
+msgstr ""
+
+#: builtin/remote.c:1476
+#, c-format
+msgid "Could not setup %s"
+msgstr ""
+
+#: builtin/remote.c:1496
 #, c-format
 msgid " %s will become dangling!"
 msgstr ""
 
-#: builtin/remote.c:1493
+#: builtin/remote.c:1497
 #, c-format
 msgid " %s has become dangling!"
 msgstr ""
 
-#: builtin/remote.c:1502
+#: builtin/remote.c:1506
 #, c-format
 msgid "Pruning %s"
 msgstr ""
 
-#: builtin/remote.c:1503
+#: builtin/remote.c:1507
 #, c-format
 msgid "URL: %s"
 msgstr ""
 
-#: builtin/remote.c:1517
+#: builtin/remote.c:1521
 #, c-format
 msgid " * [would prune] %s"
 msgstr ""
 
-#: builtin/remote.c:1520
+#: builtin/remote.c:1524
 #, c-format
 msgid " * [pruned] %s"
 msgstr ""
 
-#: builtin/remote.c:1568
+#: builtin/remote.c:1572
 msgid "prune remotes after fetching"
 msgstr ""
 
-#: builtin/remote.c:1631 builtin/remote.c:1687 builtin/remote.c:1743
+#: builtin/remote.c:1635 builtin/remote.c:1691 builtin/remote.c:1747
 #, c-format
 msgid "No such remote '%s'"
 msgstr ""
 
-#: builtin/remote.c:1649
+#: builtin/remote.c:1653
 msgid "add branch"
 msgstr ""
 
-#: builtin/remote.c:1656
+#: builtin/remote.c:1660
 msgid "no remote specified"
 msgstr ""
 
-#: builtin/remote.c:1672
+#: builtin/remote.c:1676
 msgid "query push URLs rather than fetch URLs"
 msgstr ""
 
-#: builtin/remote.c:1674
+#: builtin/remote.c:1678
 msgid "return all URLs"
 msgstr ""
 
-#: builtin/remote.c:1716
+#: builtin/remote.c:1720
 msgid "manipulate push URLs"
 msgstr ""
 
-#: builtin/remote.c:1718
+#: builtin/remote.c:1722
 msgid "add URL"
 msgstr ""
 
-#: builtin/remote.c:1720
+#: builtin/remote.c:1724
 msgid "delete URLs"
 msgstr ""
 
-#: builtin/remote.c:1728
+#: builtin/remote.c:1732
 msgid "--add --delete doesn't make sense"
 msgstr ""
 
-#: builtin/remote.c:1767
+#: builtin/remote.c:1771
 #, c-format
 msgid "Invalid old URL pattern: %s"
 msgstr ""
 
-#: builtin/remote.c:1775
+#: builtin/remote.c:1779
 #, c-format
 msgid "No such URL found: %s"
 msgstr ""
 
-#: builtin/remote.c:1777
+#: builtin/remote.c:1781
 msgid "Will not delete all non-push URLs"
 msgstr ""
 
-#: builtin/remote.c:1798
+#: builtin/remote.c:1802
 msgid "be verbose; must be placed before a subcommand"
 msgstr ""
 
@@ -16546,53 +16546,53 @@ msgstr ""
 msgid "insufficient capabilities"
 msgstr ""
 
-#: bundle-uri.c:578
+#: bundle-uri.c:586
 #, c-format
 msgid "file downloaded from '%s' is not a bundle"
 msgstr ""
 
-#: bundle-uri.c:628
+#: bundle-uri.c:636
 msgid "failed to store maximum creation token"
 msgstr ""
 
-#: bundle-uri.c:668
+#: bundle-uri.c:676
 #, c-format
 msgid "unrecognized bundle mode from URI '%s'"
 msgstr ""
 
-#: bundle-uri.c:712
+#: bundle-uri.c:720
 #, c-format
 msgid "exceeded bundle URI recursion limit (%d)"
 msgstr ""
 
-#: bundle-uri.c:724
+#: bundle-uri.c:732
 #, c-format
 msgid "failed to download bundle from URI '%s'"
 msgstr ""
 
-#: bundle-uri.c:732
+#: bundle-uri.c:740
 #, c-format
 msgid "file at URI '%s' is not a bundle or bundle list"
 msgstr ""
 
-#: bundle-uri.c:903
+#: bundle-uri.c:911
 #, c-format
 msgid "bundle-uri: unexpected argument: '%s'"
 msgstr ""
 
-#: bundle-uri.c:905
+#: bundle-uri.c:913
 msgid "bundle-uri: expected flush after arguments"
 msgstr ""
 
-#: bundle-uri.c:928
+#: bundle-uri.c:936
 msgid "bundle-uri: got an empty line"
 msgstr ""
 
-#: bundle-uri.c:933
+#: bundle-uri.c:941
 msgid "bundle-uri: line is not of the form 'key=value'"
 msgstr ""
 
-#: bundle-uri.c:935
+#: bundle-uri.c:943
 msgid "bundle-uri: line has empty key or value"
 msgstr ""
 
@@ -20354,51 +20354,43 @@ msgstr ""
 msgid "argument to --packfile must be a valid hash (got '%s')"
 msgstr ""
 
-#: http.c:487
+#: http.c:481
 #, c-format
 msgid "negative value for http.postBuffer; defaulting to %d"
 msgstr ""
 
-#: http.c:508
+#: http.c:502
 msgid "Delegation control is not supported with cURL < 7.22.0"
 msgstr ""
 
-#: http.c:517
-msgid "Public key pinning not supported with cURL < 7.39.0"
-msgstr ""
-
-#: http.c:565
+#: http.c:554
 msgid "Unknown value for http.proactiveauth"
 msgstr ""
 
-#: http.c:1092
-msgid "CURLSSLOPT_NO_REVOKE not supported with cURL < 7.44.0"
-msgstr ""
-
-#: http.c:1340
+#: http.c:1285
 #, c-format
 msgid "Unsupported SSL backend '%s'. Supported SSL backends:"
 msgstr ""
 
-#: http.c:1347
+#: http.c:1292
 #, c-format
 msgid "Could not set SSL backend to '%s': cURL was built without SSL backends"
 msgstr ""
 
-#: http.c:1351
+#: http.c:1296
 #, c-format
 msgid "Could not set SSL backend to '%s': already set"
 msgstr ""
 
-#: http.c:1537
+#: http.c:1481
 msgid "refusing to read cookies from http.cookiefile '-'"
 msgstr ""
 
-#: http.c:1543
+#: http.c:1487
 msgid "ignoring http.savecookies for empty http.cookiefile"
 msgstr ""
 
-#: http.c:2250
+#: http.c:2192
 #, c-format
 msgid ""
 "unable to update url base from redirection:\n"
@@ -23345,50 +23337,50 @@ msgstr ""
 msgid "update_ref failed for ref '%s': %s"
 msgstr ""
 
-#: refs.c:2170
+#: refs.c:2171
 #, c-format
 msgid "multiple updates for ref '%s' not allowed"
 msgstr ""
 
-#: refs.c:2265
+#: refs.c:2266
 msgid "ref updates forbidden inside quarantine environment"
 msgstr ""
 
-#: refs.c:2276
+#: refs.c:2277
 msgid "ref updates aborted by hook"
 msgstr ""
 
-#: refs.c:2384 refs.c:2414
+#: refs.c:2385 refs.c:2415
 #, c-format
 msgid "'%s' exists; cannot create '%s'"
 msgstr ""
 
-#: refs.c:2390 refs.c:2425
+#: refs.c:2391 refs.c:2426
 #, c-format
 msgid "cannot process '%s' and '%s' at the same time"
 msgstr ""
 
-#: refs.c:2558 refs.c:2568
+#: refs.c:2559 refs.c:2569
 #, c-format
 msgid "could not delete reference %s: %s"
 msgstr ""
 
-#: refs.c:2571
+#: refs.c:2572
 #, c-format
 msgid "could not delete references: %s"
 msgstr ""
 
-#: refs.c:2892
+#: refs.c:2893
 #, c-format
 msgid "Finished dry-run migration of refs, the result can be found at '%s'\n"
 msgstr ""
 
-#: refs.c:2927
+#: refs.c:2928
 #, c-format
 msgid "could not remove temporary migration directory '%s'"
 msgstr ""
 
-#: refs.c:2951
+#: refs.c:2952
 #, c-format
 msgid "migrated refs can be found at '%s'"
 msgstr ""
