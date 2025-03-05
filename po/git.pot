@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2025-03-04 17:58+0000\n"
+"POT-Creation-Date: 2025-03-05 22:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -1753,7 +1753,7 @@ msgstr ""
 msgid "bad --attr-source or GIT_ATTR_SOURCE"
 msgstr ""
 
-#: attr.c:1259 read-cache.c:803
+#: attr.c:1259 read-cache.c:803 refs/packed-backend.c:2072
 #, c-format
 msgid "unable to stat '%s'"
 msgstr ""
@@ -2119,7 +2119,7 @@ msgid "dry run"
 msgstr ""
 
 #: builtin/add.c:252 builtin/check-ignore.c:23 builtin/commit.c:1528
-#: builtin/count-objects.c:103 builtin/fsck.c:917 builtin/log.c:2655
+#: builtin/count-objects.c:103 builtin/fsck.c:944 builtin/log.c:2655
 #: builtin/mv.c:192 builtin/read-tree.c:128 builtin/refs.c:81
 msgid "be verbose"
 msgstr ""
@@ -2517,7 +2517,7 @@ msgid ""
 "Not rewinding to ORIG_HEAD"
 msgstr ""
 
-#: builtin/am.c:2247 builtin/bisect.c:184 builtin/tag.c:363 worktree.c:290
+#: builtin/am.c:2247 builtin/bisect.c:184 builtin/tag.c:363 worktree.c:295
 #, c-format
 msgid "failed to read '%s'"
 msgstr ""
@@ -7530,284 +7530,292 @@ msgstr ""
 msgid "got bad config --config=%s"
 msgstr ""
 
-#: builtin/fsck.c:77 builtin/fsck.c:139 builtin/fsck.c:140
+#: builtin/fsck.c:78 builtin/fsck.c:140 builtin/fsck.c:141
 msgid "unknown"
 msgstr ""
 
 #. TRANSLATORS: e.g. error in tree 01bfda: <more explanation>
-#: builtin/fsck.c:86 builtin/fsck.c:111
+#: builtin/fsck.c:87 builtin/fsck.c:112
 #, c-format
 msgid "error in %s %s: %s"
 msgstr ""
 
 #. TRANSLATORS: e.g. warning in tree 01bfda: <more explanation>
-#: builtin/fsck.c:105
+#: builtin/fsck.c:106
 #, c-format
 msgid "warning in %s %s: %s"
 msgstr ""
 
-#: builtin/fsck.c:135 builtin/fsck.c:138
+#: builtin/fsck.c:136 builtin/fsck.c:139
 #, c-format
 msgid "broken link from %7s %s"
 msgstr ""
 
-#: builtin/fsck.c:147
+#: builtin/fsck.c:148
 msgid "wrong object type in link"
 msgstr ""
 
-#: builtin/fsck.c:163
+#: builtin/fsck.c:164
 #, c-format
 msgid ""
 "broken link from %7s %s\n"
 "              to %7s %s"
 msgstr ""
 
-#: builtin/fsck.c:201 builtin/prune.c:68 connected.c:118
+#: builtin/fsck.c:202 builtin/prune.c:68 connected.c:118
 msgid "Checking connectivity"
 msgstr ""
 
-#: builtin/fsck.c:278
+#: builtin/fsck.c:279
 #, c-format
 msgid "missing %s %s"
 msgstr ""
 
-#: builtin/fsck.c:305
+#: builtin/fsck.c:306
 #, c-format
 msgid "unreachable %s %s"
 msgstr ""
 
-#: builtin/fsck.c:325
+#: builtin/fsck.c:326
 #, c-format
 msgid "dangling %s %s"
 msgstr ""
 
-#: builtin/fsck.c:335
+#: builtin/fsck.c:336
 msgid "could not create lost-found"
 msgstr ""
 
-#: builtin/fsck.c:342 builtin/gc.c:2125 builtin/rebase.c:229
+#: builtin/fsck.c:343 builtin/gc.c:2125 builtin/rebase.c:229
 #: rebase-interactive.c:127 rerere.c:488 rerere.c:699 sequencer.c:4236
 #: sequencer.c:6552
 #, c-format
 msgid "could not write '%s'"
 msgstr ""
 
-#: builtin/fsck.c:346
+#: builtin/fsck.c:347
 #, c-format
 msgid "could not finish '%s'"
 msgstr ""
 
-#: builtin/fsck.c:363
+#: builtin/fsck.c:364
 #, c-format
 msgid "Checking %s"
 msgstr ""
 
-#: builtin/fsck.c:404
+#: builtin/fsck.c:405
 #, c-format
 msgid "Checking connectivity (%d objects)"
 msgstr ""
 
-#: builtin/fsck.c:423
+#: builtin/fsck.c:424
 #, c-format
 msgid "Checking %s %s"
 msgstr ""
 
-#: builtin/fsck.c:428
+#: builtin/fsck.c:429
 msgid "broken links"
 msgstr ""
 
-#: builtin/fsck.c:437
+#: builtin/fsck.c:438
 #, c-format
 msgid "root %s"
 msgstr ""
 
-#: builtin/fsck.c:445
+#: builtin/fsck.c:446
 #, c-format
 msgid "tagged %s %s (%s) in %s"
 msgstr ""
 
-#: builtin/fsck.c:471
+#: builtin/fsck.c:472
 #, c-format
 msgid "%s: object corrupt or missing"
 msgstr ""
 
-#: builtin/fsck.c:496
+#: builtin/fsck.c:497
 #, c-format
 msgid "%s: invalid reflog entry %s"
 msgstr ""
 
-#: builtin/fsck.c:511
+#: builtin/fsck.c:512
 #, c-format
 msgid "Checking reflog %s->%s"
 msgstr ""
 
-#: builtin/fsck.c:546
+#: builtin/fsck.c:547
 #, c-format
 msgid "%s: invalid sha1 pointer %s"
 msgstr ""
 
-#: builtin/fsck.c:553
+#: builtin/fsck.c:554
 #, c-format
 msgid "%s: not a commit"
 msgstr ""
 
-#: builtin/fsck.c:608
+#: builtin/fsck.c:609
 msgid "notice: No default references"
 msgstr ""
 
-#: builtin/fsck.c:638
+#: builtin/fsck.c:639
 #, c-format
 msgid "%s: hash-path mismatch, found at: %s"
 msgstr ""
 
-#: builtin/fsck.c:641
+#: builtin/fsck.c:642
 #, c-format
 msgid "%s: object corrupt or missing: %s"
 msgstr ""
 
-#: builtin/fsck.c:645
+#: builtin/fsck.c:646
 #, c-format
 msgid "%s: object is of unknown type '%s': %s"
 msgstr ""
 
-#: builtin/fsck.c:662
+#: builtin/fsck.c:663
 #, c-format
 msgid "%s: object could not be parsed: %s"
 msgstr ""
 
-#: builtin/fsck.c:683
+#: builtin/fsck.c:684
 #, c-format
 msgid "bad sha1 file: %s"
 msgstr ""
 
-#: builtin/fsck.c:704
+#: builtin/fsck.c:705
 msgid "Checking object directory"
 msgstr ""
 
-#: builtin/fsck.c:708
+#: builtin/fsck.c:709
 msgid "Checking object directories"
 msgstr ""
 
-#: builtin/fsck.c:724
+#: builtin/fsck.c:725
 #, c-format
 msgid "Checking %s link"
 msgstr ""
 
-#: builtin/fsck.c:731 builtin/index-pack.c:954
+#: builtin/fsck.c:732 builtin/index-pack.c:954
 #, c-format
 msgid "invalid %s"
 msgstr ""
 
-#: builtin/fsck.c:738
+#: builtin/fsck.c:739
 #, c-format
 msgid "%s points to something strange (%s)"
 msgstr ""
 
-#: builtin/fsck.c:744
+#: builtin/fsck.c:745
 #, c-format
 msgid "%s: detached HEAD points at nothing"
 msgstr ""
 
-#: builtin/fsck.c:748
+#: builtin/fsck.c:749
 #, c-format
 msgid "notice: %s points to an unborn branch (%s)"
 msgstr ""
 
-#: builtin/fsck.c:760
+#: builtin/fsck.c:761
 #, c-format
 msgid "Checking cache tree of %s"
 msgstr ""
 
-#: builtin/fsck.c:765
+#: builtin/fsck.c:766
 #, c-format
 msgid "%s: invalid sha1 pointer in cache-tree of %s"
 msgstr ""
 
-#: builtin/fsck.c:774
+#: builtin/fsck.c:775
 msgid "non-tree in cache-tree"
 msgstr ""
 
-#: builtin/fsck.c:805
+#: builtin/fsck.c:806
 #, c-format
 msgid "%s: invalid sha1 pointer in resolve-undo of %s"
 msgstr ""
 
-#: builtin/fsck.c:893
+#: builtin/fsck.c:894
 #, c-format
 msgid "unable to load rev-index for pack '%s'"
 msgstr ""
 
-#: builtin/fsck.c:898
+#: builtin/fsck.c:899
 #, c-format
 msgid "invalid rev-index for pack '%s'"
 msgstr ""
 
-#: builtin/fsck.c:909
+#: builtin/fsck.c:915 builtin/fsck.c:918
+msgid "Checking ref database"
+msgstr ""
+
+#: builtin/fsck.c:936
 msgid ""
 "git fsck [--tags] [--root] [--unreachable] [--cache] [--no-reflogs]\n"
 "         [--[no-]full] [--strict] [--verbose] [--lost-found]\n"
 "         [--[no-]dangling] [--[no-]progress] [--connectivity-only]\n"
-"         [--[no-]name-objects] [<object>...]"
+"         [--[no-]name-objects] [--[no-]references] [<object>...]"
 msgstr ""
 
-#: builtin/fsck.c:918
+#: builtin/fsck.c:945
 msgid "show unreachable objects"
 msgstr ""
 
-#: builtin/fsck.c:919
+#: builtin/fsck.c:946
 msgid "show dangling objects"
 msgstr ""
 
-#: builtin/fsck.c:920
+#: builtin/fsck.c:947
 msgid "report tags"
 msgstr ""
 
-#: builtin/fsck.c:921
+#: builtin/fsck.c:948
 msgid "report root nodes"
 msgstr ""
 
-#: builtin/fsck.c:922
+#: builtin/fsck.c:949
 msgid "make index objects head nodes"
 msgstr ""
 
-#: builtin/fsck.c:923
+#: builtin/fsck.c:950
 msgid "make reflogs head nodes (default)"
 msgstr ""
 
-#: builtin/fsck.c:924
+#: builtin/fsck.c:951
 msgid "also consider packs and alternate objects"
 msgstr ""
 
-#: builtin/fsck.c:925
+#: builtin/fsck.c:952
 msgid "check only connectivity"
 msgstr ""
 
-#: builtin/fsck.c:926 builtin/mktag.c:82
+#: builtin/fsck.c:953 builtin/mktag.c:82
 msgid "enable more strict checking"
 msgstr ""
 
-#: builtin/fsck.c:928
+#: builtin/fsck.c:955
 msgid "write dangling objects in .git/lost-found"
 msgstr ""
 
-#: builtin/fsck.c:929 builtin/prune.c:164
+#: builtin/fsck.c:956 builtin/prune.c:164
 msgid "show progress"
 msgstr ""
 
-#: builtin/fsck.c:930
+#: builtin/fsck.c:957
 msgid "show verbose names for reachable objects"
 msgstr ""
 
-#: builtin/fsck.c:996 builtin/index-pack.c:286
+#: builtin/fsck.c:958
+msgid "check reference database consistency"
+msgstr ""
+
+#: builtin/fsck.c:1027 builtin/index-pack.c:286
 msgid "Checking objects"
 msgstr ""
 
-#: builtin/fsck.c:1024
+#: builtin/fsck.c:1055
 #, c-format
 msgid "%s: object missing"
 msgstr ""
 
-#: builtin/fsck.c:1035
+#: builtin/fsck.c:1066
 #, c-format
 msgid "invalid parameter: expected sha1, got '%s'"
 msgstr ""
@@ -23622,6 +23630,16 @@ msgstr ""
 msgid "Checking references consistency"
 msgstr ""
 
+#: refs/packed-backend.c:2069
+#, c-format
+msgid "unable to open '%s'"
+msgstr ""
+
+#: refs/packed-backend.c:2084
+#, c-format
+msgid "unable to read '%s'"
+msgstr ""
+
 #: refs/reftable-backend.c:691
 #, c-format
 msgid "refname is dangerous: %s"
@@ -24294,7 +24312,7 @@ msgstr ""
 msgid "cannot create async thread: %s"
 msgstr ""
 
-#: scalar.c:42 worktree.c:381
+#: scalar.c:42 worktree.c:386
 #, c-format
 msgid "'%s' does not exist"
 msgstr ""
@@ -26768,119 +26786,119 @@ msgstr ""
 msgid "Fetching objects"
 msgstr ""
 
-#: worktree.c:358
+#: worktree.c:363
 #, c-format
 msgid "'%s' at main working tree is not the repository directory"
 msgstr ""
 
-#: worktree.c:369
+#: worktree.c:374
 #, c-format
 msgid "'%s' file does not contain absolute path to the working tree location"
 msgstr ""
 
-#: worktree.c:387
+#: worktree.c:392
 #, c-format
 msgid "'%s' is not a .git file, error code %d"
 msgstr ""
 
-#: worktree.c:396
+#: worktree.c:401
 #, c-format
 msgid "'%s' does not point back to '%s'"
 msgstr ""
 
-#: worktree.c:625
+#: worktree.c:630
 msgid "not a directory"
 msgstr ""
 
-#: worktree.c:645
+#: worktree.c:650
 msgid ".git is not a file"
 msgstr ""
 
-#: worktree.c:647
+#: worktree.c:652
 msgid ".git file broken"
 msgstr ""
 
-#: worktree.c:649
+#: worktree.c:654
 msgid ".git file incorrect"
 msgstr ""
 
-#: worktree.c:651
+#: worktree.c:656
 msgid ".git file absolute/relative path mismatch"
 msgstr ""
 
-#: worktree.c:808
+#: worktree.c:813
 msgid "not a valid path"
 msgstr ""
 
-#: worktree.c:825
+#: worktree.c:830
 msgid "unable to locate repository; .git is not a file"
 msgstr ""
 
-#: worktree.c:838
+#: worktree.c:843
 msgid "unable to locate repository; .git file does not reference a repository"
 msgstr ""
 
-#: worktree.c:842
+#: worktree.c:847
 msgid "unable to locate repository; .git file broken"
 msgstr ""
 
-#: worktree.c:869
+#: worktree.c:874
 msgid "gitdir unreadable"
 msgstr ""
 
-#: worktree.c:871
+#: worktree.c:876
 msgid "gitdir absolute/relative path mismatch"
 msgstr ""
 
-#: worktree.c:879
+#: worktree.c:884
 msgid "gitdir incorrect"
 msgstr ""
 
-#: worktree.c:916
+#: worktree.c:921
 msgid "not a valid directory"
 msgstr ""
 
-#: worktree.c:925
+#: worktree.c:930
 msgid "gitdir file does not exist"
 msgstr ""
 
-#: worktree.c:931 worktree.c:942
+#: worktree.c:936 worktree.c:947
 #, c-format
 msgid "unable to read gitdir file (%s)"
 msgstr ""
 
-#: worktree.c:948
+#: worktree.c:953
 #, c-format
 msgid "short read (expected %<PRIuMAX> bytes, read %<PRIuMAX>)"
 msgstr ""
 
-#: worktree.c:956
+#: worktree.c:961
 msgid "invalid gitdir file"
 msgstr ""
 
-#: worktree.c:971
+#: worktree.c:976
 msgid "gitdir file points to non-existent location"
 msgstr ""
 
-#: worktree.c:990
+#: worktree.c:995
 #, c-format
 msgid "unable to set %s in '%s'"
 msgstr ""
 
-#: worktree.c:992
+#: worktree.c:997
 #, c-format
 msgid "unable to unset %s in '%s'"
 msgstr ""
 
-#: worktree.c:1012
+#: worktree.c:1017
 msgid "failed to set extensions.worktreeConfig setting"
 msgstr ""
 
-#: worktree.c:1074
+#: worktree.c:1079
 msgid "unable to upgrade repository format to support relative worktrees"
 msgstr ""
 
-#: worktree.c:1076
+#: worktree.c:1081
 msgid "unable to set extensions.relativeWorktrees setting"
 msgstr ""
 
