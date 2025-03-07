@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2025-03-06 21:57+0000\n"
+"POT-Creation-Date: 2025-03-07 23:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -1753,7 +1753,7 @@ msgstr ""
 msgid "bad --attr-source or GIT_ATTR_SOURCE"
 msgstr ""
 
-#: attr.c:1259 read-cache.c:803 refs/packed-backend.c:2095
+#: attr.c:1259 read-cache.c:803 refs/packed-backend.c:2090
 #, c-format
 msgid "unable to stat '%s'"
 msgstr ""
@@ -4301,7 +4301,7 @@ msgstr ""
 #: builtin/checkout.c:801 builtin/checkout.c:1273 builtin/checkout.c:1279
 #: builtin/grep.c:528 builtin/grep.c:671 builtin/grep.c:711
 #: builtin/merge-tree.c:451 builtin/merge-tree.c:456 builtin/merge-tree.c:461
-#: builtin/reset.c:123 merge-ort.c:5145 reset.c:168 sequencer.c:777
+#: builtin/reset.c:123 merge-ort.c:5152 reset.c:168 sequencer.c:777
 #: sequencer.c:4061 tree-walk.c:95
 #, c-format
 msgid "unable to read tree (%s)"
@@ -4911,7 +4911,7 @@ msgstr ""
 msgid "failed to copy file to '%s'"
 msgstr ""
 
-#: builtin/clone.c:343 refs/files-backend.c:3798
+#: builtin/clone.c:343 refs/files-backend.c:3836
 #, c-format
 msgid "failed to iterate over '%s'"
 msgstr ""
@@ -10226,7 +10226,7 @@ msgstr ""
 msgid "Already up to date. (nothing to squash)"
 msgstr ""
 
-#: builtin/merge.c:396 merge-ort-wrappers.c:37 merge-recursive.c:3547
+#: builtin/merge.c:396 merge-ort-wrappers.c:41 merge-recursive.c:3547
 msgid "Already up to date."
 msgstr ""
 
@@ -10250,7 +10250,8 @@ msgstr ""
 msgid "Bad branch.%s.mergeoptions string: %s"
 msgstr ""
 
-#: builtin/merge.c:718 builtin/merge.c:921 merge-recursive.c:3919
+#: builtin/merge.c:718 builtin/merge.c:921 merge-ort-wrappers.c:127
+#: merge-recursive.c:3919
 msgid "Unable to write index."
 msgstr ""
 
@@ -10399,7 +10400,7 @@ msgstr ""
 msgid "Updating %s..%s\n"
 msgstr ""
 
-#: builtin/merge.c:1644 merge-ort-wrappers.c:17 merge-recursive.c:3797
+#: builtin/merge.c:1644 merge-ort-wrappers.c:21 merge-recursive.c:3797
 #, c-format
 msgid ""
 "Your local changes to the following files would be overwritten by merge:\n"
@@ -15756,11 +15757,11 @@ msgstr ""
 msgid "recursively dereference (default)"
 msgstr ""
 
-#: builtin/symbolic-ref.c:58 builtin/update-ref.c:783
+#: builtin/symbolic-ref.c:58 builtin/update-ref.c:731
 msgid "reason"
 msgstr ""
 
-#: builtin/symbolic-ref.c:58 builtin/update-ref.c:783
+#: builtin/symbolic-ref.c:58 builtin/update-ref.c:731
 msgid "reason of the update"
 msgstr ""
 
@@ -15886,7 +15887,7 @@ msgstr ""
 msgid "replace the tag if exists"
 msgstr ""
 
-#: builtin/tag.c:502 builtin/update-ref.c:789
+#: builtin/tag.c:502 builtin/update-ref.c:737
 msgid "create a reflog"
 msgstr ""
 
@@ -16220,36 +16221,32 @@ msgstr ""
 msgid "fsmonitor disabled"
 msgstr ""
 
-#: builtin/update-ref.c:15
+#: builtin/update-ref.c:14
 msgid "git update-ref [<options>] -d <refname> [<old-oid>]"
 msgstr ""
 
-#: builtin/update-ref.c:16
+#: builtin/update-ref.c:15
 msgid "git update-ref [<options>]    <refname> <new-oid> [<old-oid>]"
 msgstr ""
 
-#: builtin/update-ref.c:17
-msgid "git update-ref [<options>] --stdin [-z] [--allow-partial]"
+#: builtin/update-ref.c:16
+msgid "git update-ref [<options>] --stdin [-z]"
 msgstr ""
 
-#: builtin/update-ref.c:784
+#: builtin/update-ref.c:732
 msgid "delete the reference"
 msgstr ""
 
-#: builtin/update-ref.c:786
+#: builtin/update-ref.c:734
 msgid "update <refname> not the one it points to"
 msgstr ""
 
-#: builtin/update-ref.c:787
+#: builtin/update-ref.c:735
 msgid "stdin has NUL-terminated arguments"
 msgstr ""
 
-#: builtin/update-ref.c:788
+#: builtin/update-ref.c:736
 msgid "read updates from stdin"
-msgstr ""
-
-#: builtin/update-ref.c:790
-msgid "allow partial transactions"
 msgstr ""
 
 #: builtin/update-server-info.c:19
@@ -20172,7 +20169,7 @@ msgid ""
 "See 'git help git' for an overview of the system."
 msgstr ""
 
-#: git.c:110 help.c:403
+#: git.c:110 help.c:404
 #, c-format
 msgid "unsupported command listing type '%s'"
 msgstr ""
@@ -20373,140 +20370,140 @@ msgstr ""
 msgid "'%s': short read"
 msgstr ""
 
-#: help.c:34
+#: help.c:35
 msgid "start a working area (see also: git help tutorial)"
 msgstr ""
 
-#: help.c:35
+#: help.c:36
 msgid "work on the current change (see also: git help everyday)"
 msgstr ""
 
-#: help.c:36
+#: help.c:37
 msgid "examine the history and state (see also: git help revisions)"
 msgstr ""
 
-#: help.c:37
+#: help.c:38
 msgid "grow, mark and tweak your common history"
 msgstr ""
 
-#: help.c:38
+#: help.c:39
 msgid "collaborate (see also: git help workflows)"
 msgstr ""
 
-#: help.c:42
+#: help.c:43
 msgid "Main Porcelain Commands"
 msgstr ""
 
-#: help.c:43
+#: help.c:44
 msgid "Ancillary Commands / Manipulators"
 msgstr ""
 
-#: help.c:44
+#: help.c:45
 msgid "Ancillary Commands / Interrogators"
 msgstr ""
 
-#: help.c:45
+#: help.c:46
 msgid "Interacting with Others"
 msgstr ""
 
-#: help.c:46
+#: help.c:47
 msgid "Low-level Commands / Manipulators"
 msgstr ""
 
-#: help.c:47
+#: help.c:48
 msgid "Low-level Commands / Interrogators"
 msgstr ""
 
-#: help.c:48
+#: help.c:49
 msgid "Low-level Commands / Syncing Repositories"
 msgstr ""
 
-#: help.c:49
+#: help.c:50
 msgid "Low-level Commands / Internal Helpers"
 msgstr ""
 
-#: help.c:50
+#: help.c:51
 msgid "User-facing repository, command and file interfaces"
 msgstr ""
 
-#: help.c:51
+#: help.c:52
 msgid "Developer-facing file formats, protocols and other interfaces"
 msgstr ""
 
-#: help.c:337
+#: help.c:338
 #, c-format
 msgid "available git commands in '%s'"
 msgstr ""
 
-#: help.c:344
+#: help.c:345
 msgid "git commands available from elsewhere on your $PATH"
 msgstr ""
 
-#: help.c:353
+#: help.c:354
 msgid "These are common Git commands used in various situations:"
 msgstr ""
 
-#: help.c:443
+#: help.c:444
 msgid "The Git concept guides are:"
 msgstr ""
 
-#: help.c:453
+#: help.c:454
 msgid "User-facing repository, command and file interfaces:"
 msgstr ""
 
-#: help.c:463
+#: help.c:464
 msgid "File formats, protocols and other developer interfaces:"
 msgstr ""
 
-#: help.c:491
+#: help.c:492
 msgid "External commands"
 msgstr ""
 
-#: help.c:513
+#: help.c:514
 msgid "Command aliases"
 msgstr ""
 
-#: help.c:531
+#: help.c:532
 msgid "See 'git help <command>' to read about a specific subcommand"
 msgstr ""
 
-#: help.c:634
+#: help.c:635
 #, c-format
 msgid ""
 "'%s' appears to be a git command, but we were not\n"
 "able to execute it. Maybe git-%s is broken?"
 msgstr ""
 
-#: help.c:654 help.c:755
+#: help.c:655 help.c:756
 #, c-format
 msgid "git: '%s' is not a git command. See 'git --help'."
 msgstr ""
 
-#: help.c:702
+#: help.c:703
 msgid "Uh oh. Your system reports no Git commands at all."
 msgstr ""
 
-#: help.c:724
+#: help.c:725
 #, c-format
 msgid "WARNING: You called a Git command named '%s', which does not exist."
 msgstr ""
 
-#: help.c:729
+#: help.c:730
 #, c-format
 msgid "Continuing under the assumption that you meant '%s'."
 msgstr ""
 
-#: help.c:735
+#: help.c:736
 #, c-format
 msgid "Run '%s' instead [y/N]? "
 msgstr ""
 
-#: help.c:743
+#: help.c:744
 #, c-format
 msgid "Continuing in %0.1f seconds, assuming that you meant '%s'."
 msgstr ""
 
-#: help.c:759
+#: help.c:760
 msgid ""
 "\n"
 "The most similar command is"
@@ -20516,16 +20513,16 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: help.c:811
+#: help.c:814
 msgid "git version [--build-options]"
 msgstr ""
 
-#: help.c:868
+#: help.c:871
 #, c-format
 msgid "%s: %s - %s"
 msgstr ""
 
-#: help.c:872
+#: help.c:875
 msgid ""
 "\n"
 "Did you mean this?"
@@ -20768,85 +20765,90 @@ msgstr ""
 msgid "invalid marker-size '%s', expecting an integer"
 msgstr ""
 
-#: merge-ort.c:1823 merge-recursive.c:1242
+#: merge-ort-wrappers.c:110 merge-recursive.c:3900
+#, c-format
+msgid "Could not parse object '%s'"
+msgstr ""
+
+#: merge-ort.c:1825 merge-recursive.c:1242
 #, c-format
 msgid "Failed to merge submodule %s (not checked out)"
 msgstr ""
 
-#: merge-ort.c:1832
+#: merge-ort.c:1834
 #, c-format
 msgid "Failed to merge submodule %s (no merge base)"
 msgstr ""
 
-#: merge-ort.c:1842 merge-recursive.c:1249
+#: merge-ort.c:1844 merge-recursive.c:1249
 #, c-format
 msgid "Failed to merge submodule %s (commits not present)"
 msgstr ""
 
-#: merge-ort.c:1853 merge-ort.c:1864 merge-ort.c:1884 merge-ort.c:1903
-#: merge-ort.c:1937
+#: merge-ort.c:1855 merge-ort.c:1866 merge-ort.c:1886 merge-ort.c:1905
+#: merge-ort.c:1939
 #, c-format
 msgid "error: failed to merge submodule %s (repository corrupt)"
 msgstr ""
 
-#: merge-ort.c:1873 merge-recursive.c:1268
+#: merge-ort.c:1875 merge-recursive.c:1268
 #, c-format
 msgid "Failed to merge submodule %s (commits don't follow merge-base)"
 msgstr ""
 
-#: merge-ort.c:1894 merge-ort.c:1913
+#: merge-ort.c:1896 merge-ort.c:1915
 #, c-format
 msgid "Note: Fast-forwarding submodule %s to %s"
 msgstr ""
 
-#: merge-ort.c:1945
+#: merge-ort.c:1947
 #, c-format
 msgid "Failed to merge submodule %s"
 msgstr ""
 
-#: merge-ort.c:1953
+#: merge-ort.c:1955
 #, c-format
 msgid ""
 "Failed to merge submodule %s, but a possible merge resolution exists: %s"
 msgstr ""
 
-#: merge-ort.c:1964
+#: merge-ort.c:1966
 #, c-format
 msgid ""
 "Failed to merge submodule %s, but multiple possible merges exist:\n"
 "%s"
 msgstr ""
 
-#: merge-ort.c:2210
+#: merge-ort.c:2212
 #, c-format
 msgid "error: failed to execute internal merge for %s"
 msgstr ""
 
-#: merge-ort.c:2220
+#: merge-ort.c:2222
 #, c-format
 msgid "error: unable to add %s to database"
 msgstr ""
 
-#: merge-ort.c:2230 merge-recursive.c:1472
+#: merge-ort.c:2232 merge-recursive.c:1472
 #, c-format
 msgid "Auto-merging %s"
 msgstr ""
 
-#: merge-ort.c:2372 merge-recursive.c:2194
+#: merge-ort.c:2374 merge-recursive.c:2194
 #, c-format
 msgid ""
 "CONFLICT (implicit dir rename): Existing file/dir at %s in the way of "
 "implicit directory rename(s) putting the following path(s) there: %s."
 msgstr ""
 
-#: merge-ort.c:2384 merge-recursive.c:2204
+#: merge-ort.c:2386 merge-recursive.c:2204
 #, c-format
 msgid ""
 "CONFLICT (implicit dir rename): Cannot map more than one path to %s; "
 "implicit directory renames tried to put these paths there: %s"
 msgstr ""
 
-#: merge-ort.c:2443
+#: merge-ort.c:2445
 #, c-format
 msgid ""
 "CONFLICT (directory rename split): Unclear where to rename %s to; it was "
@@ -20854,47 +20856,47 @@ msgid ""
 "majority of the files."
 msgstr ""
 
-#: merge-ort.c:2625 merge-recursive.c:2540
+#: merge-ort.c:2627 merge-recursive.c:2540
 #, c-format
 msgid ""
 "WARNING: Avoiding applying %s -> %s rename to %s, because %s itself was "
 "renamed."
 msgstr ""
 
-#: merge-ort.c:2799 merge-recursive.c:3326
+#: merge-ort.c:2801 merge-recursive.c:3326
 #, c-format
 msgid ""
 "Path updated: %s added in %s inside a directory that was renamed in %s; "
 "moving it to %s."
 msgstr ""
 
-#: merge-ort.c:2807 merge-recursive.c:3333
+#: merge-ort.c:2809 merge-recursive.c:3333
 #, c-format
 msgid ""
 "Path updated: %s renamed to %s in %s, inside a directory that was renamed in "
 "%s; moving it to %s."
 msgstr ""
 
-#: merge-ort.c:2821 merge-recursive.c:3329
+#: merge-ort.c:2823 merge-recursive.c:3329
 #, c-format
 msgid ""
 "CONFLICT (file location): %s added in %s inside a directory that was renamed "
 "in %s, suggesting it should perhaps be moved to %s."
 msgstr ""
 
-#: merge-ort.c:2830 merge-recursive.c:3336
+#: merge-ort.c:2832 merge-recursive.c:3336
 #, c-format
 msgid ""
 "CONFLICT (file location): %s renamed to %s in %s, inside a directory that "
 "was renamed in %s, suggesting it should perhaps be moved to %s."
 msgstr ""
 
-#: merge-ort.c:2991
+#: merge-ort.c:2993
 #, c-format
 msgid "CONFLICT (rename/rename): %s renamed to %s in %s and to %s in %s."
 msgstr ""
 
-#: merge-ort.c:3090
+#: merge-ort.c:3092
 #, c-format
 msgid ""
 "CONFLICT (rename involved in collision): rename of %s -> %s has content "
@@ -20902,60 +20904,60 @@ msgid ""
 "markers."
 msgstr ""
 
-#: merge-ort.c:3110 merge-ort.c:3135
+#: merge-ort.c:3112 merge-ort.c:3137
 #, c-format
 msgid "CONFLICT (rename/delete): %s renamed to %s in %s, but deleted in %s."
 msgstr ""
 
-#: merge-ort.c:3618
+#: merge-ort.c:3625
 #, c-format
 msgid "error: cannot read object %s"
 msgstr ""
 
-#: merge-ort.c:3625
+#: merge-ort.c:3632
 #, c-format
 msgid "error: object %s is not a blob"
 msgstr ""
 
-#: merge-ort.c:4061
+#: merge-ort.c:4068
 #, c-format
 msgid ""
 "CONFLICT (file/directory): directory in the way of %s from %s; moving it to "
 "%s instead."
 msgstr ""
 
-#: merge-ort.c:4144
+#: merge-ort.c:4151
 #, c-format
 msgid ""
 "CONFLICT (distinct types): %s had different types on each side; renamed both "
 "of them so each can be recorded somewhere."
 msgstr ""
 
-#: merge-ort.c:4153
+#: merge-ort.c:4160
 #, c-format
 msgid ""
 "CONFLICT (distinct types): %s had different types on each side; renamed one "
 "of them so each can be recorded somewhere."
 msgstr ""
 
-#: merge-ort.c:4240 merge-recursive.c:3166
+#: merge-ort.c:4247 merge-recursive.c:3166
 msgid "content"
 msgstr ""
 
-#: merge-ort.c:4242 merge-recursive.c:3170
+#: merge-ort.c:4249 merge-recursive.c:3170
 msgid "add/add"
 msgstr ""
 
-#: merge-ort.c:4244 merge-recursive.c:3215
+#: merge-ort.c:4251 merge-recursive.c:3215
 msgid "submodule"
 msgstr ""
 
-#: merge-ort.c:4247 merge-recursive.c:3216
+#: merge-ort.c:4254 merge-recursive.c:3216
 #, c-format
 msgid "CONFLICT (%s): Merge conflict in %s"
 msgstr ""
 
-#: merge-ort.c:4292
+#: merge-ort.c:4299
 #, c-format
 msgid ""
 "CONFLICT (modify/delete): %s deleted in %s and modified in %s.  Version %s "
@@ -20968,14 +20970,14 @@ msgstr ""
 #. commit that needs to be merged.  For example:
 #.  - go to submodule (mysubmodule), and either merge commit abc1234"
 #.
-#: merge-ort.c:4664
+#: merge-ort.c:4671
 #, c-format
 msgid ""
 " - go to submodule (%s), and either merge commit %s\n"
 "   or update to an existing commit which has merged those changes\n"
 msgstr ""
 
-#: merge-ort.c:4675
+#: merge-ort.c:4682
 #, c-format
 msgid ""
 "Recursive merging with submodules currently only supports trivial cases.\n"
@@ -20993,7 +20995,7 @@ msgstr ""
 #. TRANSLATORS: The %s arguments are: 1) tree hash of a merge
 #. base, and 2-3) the trees for the two trees we're merging.
 #.
-#: merge-ort.c:5114
+#: merge-ort.c:5121
 #, c-format
 msgid "collecting merge info failed for trees %s, %s, %s"
 msgstr ""
@@ -21277,11 +21279,6 @@ msgstr[1] ""
 
 #: merge-recursive.c:3720
 msgid "merge returned no commit"
-msgstr ""
-
-#: merge-recursive.c:3900
-#, c-format
-msgid "Could not parse object '%s'"
 msgstr ""
 
 #: merge.c:46
@@ -23575,109 +23572,109 @@ msgstr ""
 msgid "log for %s is empty"
 msgstr ""
 
-#: refs.c:1313
+#: refs.c:1261
 #, c-format
 msgid "refusing to update reflog for pseudoref '%s'"
 msgstr ""
 
-#: refs.c:1315
+#: refs.c:1263
 #, c-format
 msgid "refusing to update pseudoref '%s'"
 msgstr ""
 
-#: refs.c:1323
+#: refs.c:1271
 #, c-format
 msgid "refusing to update reflog with bad name '%s'"
 msgstr ""
 
-#: refs.c:1325
+#: refs.c:1273
 #, c-format
 msgid "refusing to update ref with bad name '%s'"
 msgstr ""
 
-#: refs.c:1346
+#: refs.c:1294
 msgid "refusing to force and skip creation of reflog"
 msgstr ""
 
-#: refs.c:1493
+#: refs.c:1441
 #, c-format
 msgid "update_ref failed for ref '%s': %s"
 msgstr ""
 
-#: refs.c:2383
+#: refs.c:2326
 #, c-format
 msgid "multiple updates for ref '%s' not allowed"
 msgstr ""
 
-#: refs.c:2481
+#: refs.c:2424
 msgid "ref updates forbidden inside quarantine environment"
 msgstr ""
 
-#: refs.c:2496
+#: refs.c:2435
 msgid "ref updates aborted by hook"
 msgstr ""
 
-#: refs.c:2630 refs.c:2680
+#: refs.c:2560 refs.c:2598
 #, c-format
 msgid "'%s' exists; cannot create '%s'"
 msgstr ""
 
-#: refs.c:2643 refs.c:2696
+#: refs.c:2566 refs.c:2609
 #, c-format
 msgid "cannot process '%s' and '%s' at the same time"
 msgstr ""
 
-#: refs.c:2866 refs.c:2876
+#: refs.c:2756 refs.c:2766
 #, c-format
 msgid "could not delete reference %s: %s"
 msgstr ""
 
-#: refs.c:2879
+#: refs.c:2769
 #, c-format
 msgid "could not delete references: %s"
 msgstr ""
 
-#: refs.c:3232
+#: refs.c:3120
 #, c-format
 msgid "Finished dry-run migration of refs, the result can be found at '%s'\n"
 msgstr ""
 
-#: refs.c:3267
+#: refs.c:3155
 #, c-format
 msgid "could not remove temporary migration directory '%s'"
 msgstr ""
 
-#: refs.c:3291
+#: refs.c:3179
 #, c-format
 msgid "migrated refs can be found at '%s'"
 msgstr ""
 
-#: refs/files-backend.c:2649 refs/reftable-backend.c:1257
+#: refs/files-backend.c:2666 refs/reftable-backend.c:1330
 #, c-format
 msgid ""
 "cannot lock ref '%s': expected symref with target '%s': but is a regular ref"
 msgstr ""
 
-#: refs/files-backend.c:3678
+#: refs/files-backend.c:3716
 #, c-format
 msgid "cannot read ref file '%s'"
 msgstr ""
 
-#: refs/files-backend.c:3765
+#: refs/files-backend.c:3803
 #, c-format
 msgid "cannot open directory %s"
 msgstr ""
 
-#: refs/files-backend.c:3818
+#: refs/files-backend.c:3856
 msgid "Checking references consistency"
 msgstr ""
 
-#: refs/packed-backend.c:2092
+#: refs/packed-backend.c:2087
 #, c-format
 msgid "unable to open '%s'"
 msgstr ""
 
-#: refs/packed-backend.c:2107
+#: refs/packed-backend.c:2102
 #, c-format
 msgid "unable to read '%s'"
 msgstr ""
@@ -23687,75 +23684,75 @@ msgstr ""
 msgid "refname is dangerous: %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1106
+#: refs/reftable-backend.c:1174
 #, c-format
 msgid "trying to write ref '%s' with nonexistent object %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1112
+#: refs/reftable-backend.c:1181
 #, c-format
 msgid "trying to write non-commit object %s to branch '%s'"
 msgstr ""
 
-#: refs/reftable-backend.c:1135
+#: refs/reftable-backend.c:1207
 #, c-format
 msgid ""
 "multiple updates for 'HEAD' (including one via its referent '%s') are not "
 "allowed"
 msgstr ""
 
-#: refs/reftable-backend.c:1182
+#: refs/reftable-backend.c:1253
 #, c-format
 msgid "cannot lock ref '%s': unable to resolve reference '%s'"
 msgstr ""
 
-#: refs/reftable-backend.c:1201
+#: refs/reftable-backend.c:1271
 #, c-format
 msgid "cannot lock ref '%s': error reading reference"
 msgstr ""
 
-#: refs/reftable-backend.c:1215
+#: refs/reftable-backend.c:1311
 #, c-format
 msgid ""
 "multiple updates for '%s' (including one via symref '%s') are not allowed"
 msgstr ""
 
-#: refs/reftable-backend.c:1270
+#: refs/reftable-backend.c:1346
 #, c-format
 msgid "cannot lock ref '%s': reference already exists"
 msgstr ""
 
-#: refs/reftable-backend.c:1275
+#: refs/reftable-backend.c:1352
 #, c-format
 msgid "cannot lock ref '%s': reference is missing but expected %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1281
+#: refs/reftable-backend.c:1357
 #, c-format
 msgid "cannot lock ref '%s': is at %s but expected %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1406
+#: refs/reftable-backend.c:1402
 #, c-format
 msgid "reftable: transaction prepare: %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1671
+#: refs/reftable-backend.c:1665
 #, c-format
 msgid "reftable: transaction failure: %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1698
+#: refs/reftable-backend.c:1692
 #, c-format
 msgid "unable to compact stack: %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1748
+#: refs/reftable-backend.c:1742
 #, c-format
 msgid "refname %s not found"
 msgstr ""
 
-#: refs/reftable-backend.c:1752
+#: refs/reftable-backend.c:1746
 #, c-format
 msgid "refname %s is a symbolic ref, copying it is not supported"
 msgstr ""
