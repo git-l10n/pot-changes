@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2025-04-17 23:57+0000\n"
+"POT-Creation-Date: 2025-04-23 22:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -855,10 +855,10 @@ msgstr ""
 #: builtin/worktree.c:743 builtin/worktree.c:746 builtin/worktree.c:823
 #: builtin/worktree.c:826 builtin/worktree.c:829 builtin/worktree.c:1077
 #: parse-options.c:286 parse-options.c:1379 range-diff.c:584 revision.c:2480
-#: revision.c:2485 revision.c:2489 revision.c:2498 revision.c:2503
-#: revision.c:2735 revision.c:2806 revision.c:2818 revision.c:2824
-#: revision.c:2844 revision.c:2854 revision.c:2864 revision.c:3151
-#: revision.c:3163
+#: revision.c:2486 revision.c:2491 revision.c:2500 revision.c:2505
+#: revision.c:2737 revision.c:2808 revision.c:2820 revision.c:2826
+#: revision.c:2846 revision.c:2856 revision.c:2866 revision.c:3153
+#: revision.c:3165
 #, c-format
 msgid "options '%s' and '%s' cannot be used together"
 msgstr ""
@@ -1070,7 +1070,7 @@ msgstr ""
 msgid "patch failed: %s:%ld"
 msgstr ""
 
-#: apply.c:3380 builtin/mv.c:535
+#: apply.c:3380 builtin/mv.c:536
 #, c-format
 msgid "cannot checkout %s"
 msgstr ""
@@ -1330,7 +1330,7 @@ msgid_plural "%d lines applied after fixing whitespace errors."
 msgstr[0] ""
 msgstr[1] ""
 
-#: apply.c:5051 builtin/mv.c:576 builtin/rm.c:443
+#: apply.c:5051 builtin/mv.c:577 builtin/rm.c:443
 msgid "Unable to write new index file"
 msgstr ""
 
@@ -1681,7 +1681,7 @@ msgstr ""
 #: builtin/fast-export.c:1349 builtin/index-pack.c:2015 builtin/log.c:2426
 #: builtin/reset.c:397 builtin/reset.c:458 builtin/rm.c:291
 #: builtin/stash.c:1826 builtin/worktree.c:835 builtin/worktree.c:1079
-#: fetch-pack.c:349 http-fetch.c:157 http-fetch.c:166 revision.c:3165
+#: fetch-pack.c:349 http-fetch.c:157 http-fetch.c:166 revision.c:3167
 #, c-format
 msgid "the option '%s' requires '%s'"
 msgstr ""
@@ -2112,7 +2112,7 @@ msgstr ""
 msgid "The following paths are ignored by one of your .gitignore files:\n"
 msgstr ""
 
-#: builtin/add.c:251 builtin/clean.c:939 builtin/fetch.c:2333 builtin/mv.c:193
+#: builtin/add.c:251 builtin/clean.c:939 builtin/fetch.c:2333 builtin/mv.c:194
 #: builtin/prune-packed.c:18 builtin/pull.c:212 builtin/push.c:570
 #: builtin/remote.c:1569 builtin/rm.c:251 builtin/send-pack.c:192
 msgid "dry run"
@@ -2120,7 +2120,7 @@ msgstr ""
 
 #: builtin/add.c:252 builtin/check-ignore.c:23 builtin/commit.c:1528
 #: builtin/count-objects.c:103 builtin/fsck.c:944 builtin/log.c:2655
-#: builtin/mv.c:192 builtin/read-tree.c:128 builtin/refs.c:81
+#: builtin/mv.c:193 builtin/read-tree.c:128 builtin/refs.c:81
 msgid "be verbose"
 msgstr ""
 
@@ -2172,7 +2172,7 @@ msgstr ""
 msgid "check if - even missing - files are ignored in dry run"
 msgstr ""
 
-#: builtin/add.c:269 builtin/mv.c:197 builtin/rm.c:258
+#: builtin/add.c:269 builtin/mv.c:198 builtin/rm.c:258
 msgid "allow updating entries outside of the sparse-checkout cone"
 msgstr ""
 
@@ -2237,7 +2237,7 @@ msgstr ""
 
 #: builtin/add.c:475 builtin/check-ignore.c:187 builtin/checkout.c:572
 #: builtin/checkout.c:788 builtin/clean.c:1018 builtin/commit.c:385
-#: builtin/diff-tree.c:134 builtin/grep.c:559 builtin/mv.c:225
+#: builtin/diff-tree.c:134 builtin/grep.c:559 builtin/mv.c:226
 #: builtin/reset.c:464 builtin/rm.c:305 builtin/submodule--helper.c:209
 #: builtin/submodule--helper.c:3397 read-cache.c:2034 read-cache.c:2354
 #: rerere.c:568 rerere.c:602 rerere.c:1137 submodule.c:1872
@@ -6674,7 +6674,7 @@ msgid "git diff-pairs -z [<diff-options>]"
 msgstr ""
 
 #: builtin/diff-pairs.c:69 builtin/log.c:302 builtin/log.c:2259
-#: builtin/replay.c:350 builtin/shortlog.c:455 bundle.c:507
+#: builtin/replay.c:350 builtin/shortlog.c:455 bundle.c:514
 #, c-format
 msgid "unrecognized argument: %s"
 msgstr ""
@@ -10542,101 +10542,105 @@ msgid ""
 msgstr ""
 
 #: builtin/mv.c:31
-msgid "git mv [<options>] <source>... <destination>"
+msgid "git mv [-v] [-f] [-n] [-k] <source> <destination>"
 msgstr ""
 
-#: builtin/mv.c:94
+#: builtin/mv.c:32
+msgid "git mv [-v] [-f] [-n] [-k] <source>... <destination-directory>"
+msgstr ""
+
+#: builtin/mv.c:95
 #, c-format
 msgid "Directory %s is in index and no submodule?"
 msgstr ""
 
-#: builtin/mv.c:96
+#: builtin/mv.c:97
 msgid "Please stage your changes to .gitmodules or stash them to proceed"
 msgstr ""
 
-#: builtin/mv.c:115
+#: builtin/mv.c:116
 #, c-format
 msgid "%.*s is in index"
 msgstr ""
 
-#: builtin/mv.c:194
+#: builtin/mv.c:195
 msgid "force move/rename even if target exists"
 msgstr ""
 
-#: builtin/mv.c:196
+#: builtin/mv.c:197
 msgid "skip move/rename errors"
 msgstr ""
 
-#: builtin/mv.c:252
+#: builtin/mv.c:253
 #, c-format
 msgid "destination '%s' is not a directory"
 msgstr ""
 
-#: builtin/mv.c:276
+#: builtin/mv.c:277
 #, c-format
 msgid "Checking rename of '%s' to '%s'\n"
 msgstr ""
 
-#: builtin/mv.c:295 builtin/mv.c:300
+#: builtin/mv.c:296 builtin/mv.c:301
 msgid "bad source"
 msgstr ""
 
-#: builtin/mv.c:313 builtin/mv.c:390
+#: builtin/mv.c:314 builtin/mv.c:391
 msgid "destination exists"
 msgstr ""
 
-#: builtin/mv.c:321
+#: builtin/mv.c:322
 msgid "can not move directory into itself"
 msgstr ""
 
-#: builtin/mv.c:326
+#: builtin/mv.c:327
 msgid "destination already exists"
 msgstr ""
 
-#: builtin/mv.c:345
+#: builtin/mv.c:346
 msgid "source directory is empty"
 msgstr ""
 
-#: builtin/mv.c:381
+#: builtin/mv.c:382
 msgid "not under version control"
 msgstr ""
 
-#: builtin/mv.c:385
+#: builtin/mv.c:386
 msgid "conflicted"
 msgstr ""
 
-#: builtin/mv.c:398 builtin/mv.c:420
+#: builtin/mv.c:399 builtin/mv.c:421
 #, c-format
 msgid "overwriting '%s'"
 msgstr ""
 
-#: builtin/mv.c:401
+#: builtin/mv.c:402
 msgid "Cannot overwrite"
 msgstr ""
 
-#: builtin/mv.c:406
+#: builtin/mv.c:407
 msgid "multiple sources for the same target"
 msgstr ""
 
-#: builtin/mv.c:410
+#: builtin/mv.c:411
 msgid "destination directory does not exist"
 msgstr ""
 
-#: builtin/mv.c:417
+#: builtin/mv.c:418
 msgid "destination exists in the index"
 msgstr ""
 
-#: builtin/mv.c:452
+#: builtin/mv.c:453
 #, c-format
 msgid "%s, source=%s, destination=%s"
 msgstr ""
 
-#: builtin/mv.c:485
+#: builtin/mv.c:486
 #, c-format
 msgid "Renaming %s to %s\n"
 msgstr ""
 
-#: builtin/mv.c:493 builtin/remote.c:857
+#: builtin/mv.c:494 builtin/remote.c:857
 #, c-format
 msgid "renaming '%s' failed"
 msgstr ""
@@ -16828,31 +16832,31 @@ msgstr ""
 msgid "pack-objects died"
 msgstr ""
 
-#: bundle.c:420
+#: bundle.c:424
 #, c-format
 msgid "ref '%s' is excluded by the rev-list options"
 msgstr ""
 
-#: bundle.c:522
+#: bundle.c:529
 #, c-format
 msgid "unsupported bundle version %d"
 msgstr ""
 
-#: bundle.c:524
+#: bundle.c:531
 #, c-format
 msgid "cannot write bundle version %d with algorithm %s"
 msgstr ""
 
-#: bundle.c:574
+#: bundle.c:580
 msgid "Refusing to create empty bundle."
 msgstr ""
 
-#: bundle.c:588
+#: bundle.c:594
 #, c-format
 msgid "cannot create '%s'"
 msgstr ""
 
-#: bundle.c:632
+#: bundle.c:638
 msgid "index-pack died"
 msgstr ""
 
@@ -24048,29 +24052,29 @@ msgstr ""
 msgid "could not get commit for --ancestry-path argument %s"
 msgstr ""
 
-#: revision.c:2530
+#: revision.c:2532
 msgid "--unpacked=<packfile> no longer supported"
 msgstr ""
 
-#: revision.c:2941
+#: revision.c:2943
 #, c-format
 msgid "invalid option '%s' in --stdin mode"
 msgstr ""
 
-#: revision.c:2963
+#: revision.c:2965
 msgid "your current branch appears to be broken"
 msgstr ""
 
-#: revision.c:2966
+#: revision.c:2968
 #, c-format
 msgid "your current branch '%s' does not have any commits yet"
 msgstr ""
 
-#: revision.c:3153
+#: revision.c:3155
 msgid "object filtering requires --objects"
 msgstr ""
 
-#: revision.c:3169
+#: revision.c:3171
 msgid "-L does not yet support diff formats besides -p and -s"
 msgstr ""
 
