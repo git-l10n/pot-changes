@@ -1,0 +1,825 @@
+
+
+#################### Wed, 23 Apr 2025 17:57:30 +0000 ####################
+
+--- po/git.pot.old	2025-04-23 17:57:30.312087288 +0000
++++ po/git.pot.new	2025-04-23 17:57:30.390086592 +0000
+@@ -461,6 +461,9 @@
+ msgid " %s will become dangling!"
+ msgstr ""
+ 
++msgid " (left unresolved)"
++msgstr ""
++
+ msgid " (root-commit)"
+ msgstr ""
+ 
+@@ -781,10 +784,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "%s expects an integer value with an optional k/m/g suffix"
+-msgstr ""
+-
+-#, c-format
+ msgid "%s failed"
+ msgstr ""
+ 
+@@ -797,7 +796,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "%s is currently not supported with remote-object-info"
++msgid "%s is a directory in %s adding as %s instead"
+ msgstr ""
+ 
+ #, c-format
+@@ -849,6 +848,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "%s points nowhere!"
++msgstr ""
++
++#, c-format
+ msgid "%s points to something strange (%s)"
+ msgstr ""
+ 
+@@ -1682,6 +1685,9 @@
+ msgid "(REMOVED) was: try to recreate merges instead of ignoring them"
+ msgstr ""
+ 
++msgid "(bad commit)\n"
++msgstr ""
++
+ #, perl-format
+ msgid "(body) Adding cc: %s from line '%s'\n"
+ msgstr ""
+@@ -2129,9 +2135,6 @@
+ msgid "-z only makes sense with --stdin"
+ msgstr ""
+ 
+-msgid "-z option used with unsupported option"
+-msgstr ""
+-
+ msgid "..."
+ msgstr ""
+ 
+@@ -2164,6 +2167,9 @@
+ msgid "4 years, 11 months ago"
+ msgstr ""
+ 
++msgid ": perhaps a D/F conflict?"
++msgstr ""
++
+ msgid "<action>"
+ msgstr ""
+ 
+@@ -2344,6 +2350,14 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Adding %s"
++msgstr ""
++
++#, c-format
++msgid "Adding as %s instead"
++msgstr ""
++
++#, c-format
+ msgid "Adding existing repo at '%s' to the index\n"
+ msgstr ""
+ 
+@@ -2694,6 +2708,34 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "CONFLICT (%s): There is a directory with name %s in %s. Adding %s as %s"
++msgstr ""
++
++#, c-format
++msgid "CONFLICT (%s/delete): %s deleted in %s and %s in %s. Version %s of %s left in tree at %s."
++msgstr ""
++
++#, c-format
++msgid "CONFLICT (%s/delete): %s deleted in %s and %s in %s. Version %s of %s left in tree."
++msgstr ""
++
++#, c-format
++msgid "CONFLICT (%s/delete): %s deleted in %s and %s to %s in %s. Version %s of %s left in tree at %s."
++msgstr ""
++
++#, c-format
++msgid "CONFLICT (%s/delete): %s deleted in %s and %s to %s in %s. Version %s of %s left in tree."
++msgstr ""
++
++#, c-format
++msgid "CONFLICT (add/add): Merge conflict in %s"
++msgstr ""
++
++#, c-format
++msgid "CONFLICT (directory rename split): Unclear where to place %s because directory %s was renamed to multiple other directories, with no destination getting a majority of the files."
++msgstr ""
++
++#, c-format
+ msgid "CONFLICT (directory rename split): Unclear where to rename %s to; it was renamed to multiple other directories, with no destination getting a majority of the files."
+ msgstr ""
+ 
+@@ -2734,6 +2776,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "CONFLICT (rename/add): Rename %s->%s in %s.  Added %s in %s"
++msgstr ""
++
++#, c-format
+ msgid "CONFLICT (rename/delete): %s renamed to %s in %s, but deleted in %s."
+ msgstr ""
+ 
+@@ -2742,6 +2788,18 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "CONFLICT (rename/rename): Rename \"%s\"->\"%s\" in branch \"%s\" rename \"%s\"->\"%s\" in \"%s\"%s"
++msgstr ""
++
++#, c-format
++msgid "CONFLICT (rename/rename): Rename %s->%s in %s. Rename %s->%s in %s"
++msgstr ""
++
++#, c-format
++msgid "CONFLICT (rename/rename): Rename directory %s->%s in %s. Rename directory %s->%s in %s"
++msgstr ""
++
++#, c-format
+ msgid "CRLF would be replaced by LF in %s"
+ msgstr ""
+ 
+@@ -3076,9 +3134,6 @@
+ msgid "Compressing objects"
+ msgstr ""
+ 
+-msgid "Compressing objects by path"
+-msgstr ""
+-
+ msgid "Compute object ID and optionally create an object from a file"
+ msgstr ""
+ 
+@@ -3534,6 +3589,10 @@
+ msgid "Error: Cannot export nested tags unless --mark-tags is specified."
+ msgstr ""
+ 
++#, c-format
++msgid "Error: Refusing to lose untracked file at %s; writing to %s instead."
++msgstr ""
++
+ msgid "Error: Your local changes to the following files would be overwritten by merge"
+ msgstr ""
+ 
+@@ -3641,6 +3700,14 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Failed to merge submodule %s (merge following commits not found)"
++msgstr ""
++
++#, c-format
++msgid "Failed to merge submodule %s (multiple merges found)"
++msgstr ""
++
++#, c-format
+ msgid "Failed to merge submodule %s (no merge base)"
+ msgstr ""
+ 
+@@ -3649,6 +3716,14 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Failed to merge submodule %s (not fast-forward)"
++msgstr ""
++
++#, c-format
++msgid "Failed to merge submodule %s (repository corrupt)"
++msgstr ""
++
++#, c-format
+ msgid "Failed to merge submodule %s, but a possible merge resolution exists: %s"
+ msgstr ""
+ 
+@@ -3751,6 +3826,14 @@
+ msgid "Fast-forwarded %s to %s.\n"
+ msgstr ""
+ 
++#, c-format
++msgid "Fast-forwarding submodule %s"
++msgstr ""
++
++#, c-format
++msgid "Fast-forwarding submodule %s to the following commit:"
++msgstr ""
++
+ #, sh-format
+ msgid "Fast-forwarding to: $pretty_name"
+ msgstr ""
+@@ -3850,6 +3933,9 @@
+ msgid "Forgot resolution for '%s'\n"
+ msgstr ""
+ 
++msgid "Found a possible merge resolution for the submodule:\n"
++msgstr ""
++
+ #, c-format
+ msgid ""
+ "Found errors in 'diff.dirstat' config variable:\n"
+@@ -4064,6 +4150,16 @@
+ msgstr ""
+ 
+ #, c-format
++msgid ""
++"If this is correct simply add it to the index for example\n"
++"by using:\n"
++"\n"
++"  git update-index --cacheinfo 160000 %s \"%s\"\n"
++"\n"
++"which will accept this suggestion.\n"
++msgstr ""
++
++#, c-format
+ msgid "If you are sure you want to delete it, run 'git branch -D %s'"
+ msgstr ""
+ 
+@@ -4440,6 +4536,9 @@
+ msgid "Merging is not possible because you have unmerged files."
+ msgstr ""
+ 
++msgid "Merging:"
++msgstr ""
++
+ msgid "Message-ID to be used as In-Reply-To for the first email (if any)? "
+ msgstr ""
+ 
+@@ -4883,10 +4982,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "Path-based delta compression using up to %d threads"
+-msgstr ""
+-
+-#, c-format
+ msgid "Pathspec '%s' is in submodule '%.*s'"
+ msgstr ""
+ 
+@@ -5146,6 +5241,18 @@
+ msgid "Refusing to create empty bundle."
+ msgstr ""
+ 
++#, c-format
++msgid "Refusing to lose dirty file at %s"
++msgstr ""
++
++#, c-format
++msgid "Refusing to lose untracked file at %s, even though it's in the way."
++msgstr ""
++
++#, c-format
++msgid "Refusing to lose untracked file at %s; adding as %s instead"
++msgstr ""
++
+ msgid "Refusing to remove current working directory\n"
+ msgstr ""
+ 
+@@ -5213,10 +5320,18 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Removing %s"
++msgstr ""
++
++#, c-format
+ msgid "Removing %s\n"
+ msgstr ""
+ 
+ #, c-format
++msgid "Removing %s to make room for subdirectory\n"
++msgstr ""
++
++#, c-format
+ msgid "Removing %s/%s: %s"
+ msgstr ""
+ 
+@@ -5489,6 +5604,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Skipped %s (merged same as existing)"
++msgstr ""
++
++#, c-format
+ msgid "Skipped patch '%s'."
+ msgstr ""
+ 
+@@ -7348,6 +7467,14 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "add_cacheinfo failed for path '%s'; merge aborting."
++msgstr ""
++
++#, c-format
++msgid "add_cacheinfo failed to refresh for path '%s'; merge aborting."
++msgstr ""
++
++#, c-format
+ msgid "added %d path\n"
+ msgid_plural "added %d paths\n"
+ msgstr[0] ""
+@@ -7922,9 +8049,6 @@
+ msgid "batch modes take no arguments"
+ msgstr ""
+ 
+-msgid "batch reference updates"
+-msgstr ""
+-
+ msgid "be more quiet"
+ msgstr ""
+ 
+@@ -7998,6 +8122,10 @@
+ msgid "blob"
+ msgstr ""
+ 
++#, c-format
++msgid "blob expected for %s '%s'"
++msgstr ""
++
+ msgid "blob-id"
+ msgstr ""
+ 
+@@ -8626,6 +8754,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "cannot read object %s"
++msgstr ""
++
++#, c-format
+ msgid "cannot read object %s '%s'"
+ msgstr ""
+ 
+@@ -8788,7 +8920,10 @@
+ msgid "cannot use --attr-source or GIT_ATTR_SOURCE without repo"
+ msgstr ""
+ 
+-msgid "cannot use --filter with --path-walk"
++msgid "cannot use --filter with --stdin-packs"
++msgstr ""
++
++msgid "cannot use --stdin-packs with --cruft"
+ msgstr ""
+ 
+ msgid "cannot use -a with -d"
+@@ -8798,9 +8933,6 @@
+ msgid "cannot use bare repository '%s' (safe.bareRepository is '%s')"
+ msgstr ""
+ 
+-msgid "cannot use delta islands with --path-walk"
+-msgstr ""
+-
+ msgid "cannot use internal rev list with --cruft"
+ msgstr ""
+ 
+@@ -8822,6 +8954,9 @@
+ msgid "cannot write bundle version %d with algorithm %s"
+ msgstr ""
+ 
++msgid "cannot write incremental MIDX with bitmap"
++msgstr ""
++
+ msgid "cannot write split index for a sparse index"
+ msgstr ""
+ 
+@@ -9668,10 +9803,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "could not load reverse index for MIDX %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "could not lock '%s'"
+ msgstr ""
+ 
+@@ -10625,6 +10756,9 @@
+ msgid "directory stat info does not change after deleting a file"
+ msgstr ""
+ 
++msgid "directory/file"
++msgstr ""
++
+ msgid "disable all output of the program"
+ msgstr ""
+ 
+@@ -10695,6 +10829,10 @@
+ msgid "do not ignore new files"
+ msgstr ""
+ 
++#, c-format
++msgid "do not know what to do with %06o %s '%s'"
++msgstr ""
++
+ msgid "do not limit pathspecs to sparse entries only"
+ msgstr ""
+ 
+@@ -10872,12 +11010,6 @@
+ msgid "drop reflogs entirely during the migration"
+ msgstr ""
+ 
+-msgid "drop reflogs from the current worktree only"
+-msgstr ""
+-
+-msgid "drop the reflogs of all references"
+-msgstr ""
+-
+ #, c-format
+ msgid "dropping %s %s -- patch contents already upstream\n"
+ msgstr ""
+@@ -11474,6 +11606,10 @@
+ msgid "failed to create output files"
+ msgstr ""
+ 
++#, c-format
++msgid "failed to create path '%s'%s"
++msgstr ""
++
+ msgid "failed to create temp xml file"
+ msgstr ""
+ 
+@@ -11520,6 +11656,9 @@
+ msgid "failed to exec '%s'"
+ msgstr ""
+ 
++msgid "failed to execute internal merge"
++msgstr ""
++
+ #, c-format
+ msgid "failed to expand path '%s'"
+ msgstr ""
+@@ -11681,13 +11820,14 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "failed to open pack-index '%s'"
++msgid "failed to open '%s': %s"
+ msgstr ""
+ 
+-msgid "failed to open temporary file"
++#, c-format
++msgid "failed to open pack-index '%s'"
+ msgstr ""
+ 
+-msgid "failed to pack objects via path-walk"
++msgid "failed to open temporary file"
+ msgstr ""
+ 
+ #, c-format
+@@ -11880,6 +12020,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "failed to symlink '%s': %s"
++msgstr ""
++
++#, c-format
+ msgid "failed to unlink '%s'"
+ msgstr ""
+ 
+@@ -12106,6 +12250,9 @@
+ msgid "file to read into hooks' stdin"
+ msgstr ""
+ 
++msgid "file/directory"
++msgstr ""
++
+ #, c-format
+ msgid "files '%s' and '%s' differ in contents"
+ msgstr ""
+@@ -12269,6 +12416,12 @@
+ msgid "found %i tags; gave up search at %s\n"
+ msgstr ""
+ 
++#, c-format
++msgid "found %u common ancestor:"
++msgid_plural "found %u common ancestors:"
++msgstr[0] ""
++msgstr[1] ""
++
+ msgid "frequency"
+ msgstr ""
+ 
+@@ -12875,10 +13028,7 @@
+ msgid "git multi-pack-index [<options>] write [--preferred-pack=<pack>][--refs-snapshot=<path>]"
+ msgstr ""
+ 
+-msgid "git mv [-v] [-f] [-n] [-k] <source> <destination>"
+-msgstr ""
+-
+-msgid "git mv [-v] [-f] [-n] [-k] <source>... <destination-directory>"
++msgid "git mv [<options>] <source>... <destination>"
+ msgstr ""
+ 
+ msgid "git name-rev [<options>] --all"
+@@ -12956,15 +13106,10 @@
+ msgid "git notes show [<object>]"
+ msgstr ""
+ 
+-msgid ""
+-"git pack-objects [-q | --progress | --all-progress] [--all-progress-implied]\n"
+-"                 [--no-reuse-delta] [--delta-base-offset] [--non-empty]\n"
+-"                 [--local] [--incremental] [--window=<n>] [--depth=<n>]\n"
+-"                 [--revs [--unpacked | --all]] [--keep-pack=<pack-name>]\n"
+-"                 [--cruft] [--cruft-expiration=<time>]\n"
+-"                 [--stdout [--filter=<filter-spec>] | <base-name>]\n"
+-"                 [--shallow] [--keep-true-parents] [--[no-]sparse]\n"
+-"                 [--name-hash-version=<n>] [--path-walk] < <object-list>"
++msgid "git pack-objects --stdout [<options>] [< <ref-list> | < <object-list>]"
++msgstr ""
++
++msgid "git pack-objects [<options>] <base-name> [< <ref-list> | < <object-list>]"
+ msgstr ""
+ 
+ msgid "git pack-refs [--all] [--no-prune] [--auto] [--include <pattern>] [--exclude <pattern>]"
+@@ -13014,9 +13159,6 @@
+ "                  [--dry-run | -n] [--verbose] <ref>@{<specifier>}..."
+ msgstr ""
+ 
+-msgid "git reflog drop [--all [--single-worktree] | <refs>...]"
+-msgstr ""
+-
+ msgid "git reflog exists <ref>"
+ msgstr ""
+ 
+@@ -13092,7 +13234,7 @@
+ msgid ""
+ "git repack [-a] [-A] [-d] [-f] [-F] [-l] [-n] [-q] [-b] [-m]\n"
+ "[--window=<n>] [--depth=<n>] [--threads=<n>] [--keep-pack=<pack-name>]\n"
+-"[--write-midx] [--name-hash-version=<n>] [--path-walk]"
++"[--write-midx] [--name-hash-version=<n>]"
+ msgstr ""
+ 
+ msgid "git replace -d <object>..."
+@@ -13338,7 +13480,7 @@
+ msgid "git update-ref [<options>]    <refname> <new-oid> [<old-oid>]"
+ msgstr ""
+ 
+-msgid "git update-ref [<options>] --stdin [-z] [--batch-updates]"
++msgid "git update-ref [<options>] --stdin [-z]"
+ msgstr ""
+ 
+ msgid "git update-ref [<options>] -d <refname> [<old-oid>]"
+@@ -14669,10 +14811,10 @@
+ msgid "look for differences that change the number of occurrences of the specified object"
+ msgstr ""
+ 
+-msgid "look for differences that change the number of occurrences of the specified string"
++msgid "look for differences that change the number of occurrences of the specified regex"
+ msgstr ""
+ 
+-msgid "look for differences where a patch contains the specified regex"
++msgid "look for differences that change the number of occurrences of the specified string"
+ msgstr ""
+ 
+ msgid "lookup config vars"
+@@ -14869,6 +15011,9 @@
+ msgid "merge commit message (for a non-fast-forward merge)"
+ msgstr ""
+ 
++msgid "merge returned no commit"
++msgstr ""
++
+ msgid "merge strategy"
+ msgstr ""
+ 
+@@ -14882,6 +15027,10 @@
+ msgid "merges with remote %s"
+ msgstr ""
+ 
++#, c-format
++msgid "merging of trees %s and %s failed"
++msgstr ""
++
+ msgid "message"
+ msgstr ""
+ 
+@@ -15008,12 +15157,18 @@
+ msgid "mode change for %s, which is not in current HEAD"
+ msgstr ""
+ 
++msgid "modified"
++msgstr ""
++
+ msgid "modified content, "
+ msgstr ""
+ 
+ msgid "modified:"
+ msgstr ""
+ 
++msgid "modify"
++msgstr ""
++
+ msgid "modify the refspec to place all refs within refs/prefetch/"
+ msgstr ""
+ 
+@@ -15175,9 +15330,6 @@
+ msgid "must supply remote when using --negotiate-only"
+ msgstr ""
+ 
+-msgid "must supply valid remote when using remote-object-info"
+-msgstr ""
+-
+ msgid "n"
+ msgstr ""
+ 
+@@ -15783,6 +15935,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "object %s is not a blob"
++msgstr ""
++
++#, c-format
+ msgid "object %s not found"
+ msgstr ""
+ 
+@@ -15854,19 +16010,9 @@
+ msgid "object type mismatch at %s"
+ msgstr ""
+ 
+-msgid "object-info capability is not enabled on the server"
+-msgstr ""
+-
+ msgid "object-info: expected flush after arguments"
+ msgstr ""
+ 
+-#, c-format
+-msgid "objects filter not supported: '%s'"
+-msgstr ""
+-
+-msgid "objects filter only supported in batch mode"
+-msgstr ""
+-
+ msgid "octopus merge cannot be executed on top of a [new root]"
+ msgstr ""
+ 
+@@ -16328,9 +16474,6 @@
+ msgid "pass --no-reuse-object to git-pack-objects"
+ msgstr ""
+ 
+-msgid "pass --path-walk to git-pack-objects"
+-msgstr ""
+-
+ msgid "pass -b flag to git-mailinfo"
+ msgstr ""
+ 
+@@ -17206,19 +17349,12 @@
+ msgid "reference repository '%s' is shallow"
+ msgstr ""
+ 
+-msgid "references specified along with --all"
+-msgstr ""
+-
+ msgid "references to exclude"
+ msgstr ""
+ 
+ msgid "references to include"
+ msgstr ""
+ 
+-#, c-format
+-msgid "reflog could not be found: '%s'"
+-msgstr ""
+-
+ msgid "refmap"
+ msgstr ""
+ 
+@@ -17284,6 +17420,10 @@
+ msgid "refusing to force and skip creation of reflog"
+ msgstr ""
+ 
++#, c-format
++msgid "refusing to lose untracked file at '%s'"
++msgstr ""
++
+ msgid "refusing to merge unrelated histories"
+ msgstr ""
+ 
+@@ -17412,16 +17552,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "remote-object-info command input overflow (no more than %d objects are allowed)"
+-msgstr ""
+-
+-msgid "remote-object-info requires objects"
+-msgstr ""
+-
+-msgid "remote-object-info requires protocol v2"
+-msgstr ""
+-
+-#, c-format
+ msgid "remote-tracking branch '%s' not found"
+ msgstr ""
+ 
+@@ -17469,9 +17599,15 @@
+ msgid "removed stale scalar.repo '%s'"
+ msgstr ""
+ 
++msgid "rename"
++msgstr ""
++
+ msgid "rename section: old-name new-name"
+ msgstr ""
+ 
++msgid "renamed"
++msgstr ""
++
+ #, c-format
+ msgid "renamed a misnamed branch '%s' away"
+ msgstr ""
+@@ -18124,7 +18260,7 @@
+ msgid "show aliases in --all"
+ msgstr ""
+ 
+-msgid "show all changes in the changeset with -S/--patch-modifies or -G/--patch-grep"
++msgid "show all changes in the changeset with -S or -G"
+ msgstr ""
+ 
+ msgid "show author email instead of name (Default: off)"
+@@ -18612,9 +18748,6 @@
+ msgid "spend extra cycles to find better match"
+ msgstr ""
+ 
+-msgid "split remote-object-info command"
+-msgstr ""
+-
+ #, c-format
+ msgid "splitIndex.maxPercentChange value '%d' should be between 0 and 100"
+ msgstr ""
+@@ -19164,9 +19297,6 @@
+ "\tgit config --global --unset --fixed-value scalar.repo \"%s\""
+ msgstr ""
+ 
+-msgid "toggle aggressive edge walk"
+-msgstr ""
+-
+ msgid "toggle inclusion of blob objects"
+ msgstr ""
+ 
+@@ -19272,7 +19402,7 @@
+ msgid "treat 'git add -N' entries as real in the index"
+ msgstr ""
+ 
+-msgid "treat <string> in -S/--patch-modifies as extended POSIX regular expression"
++msgid "treat <string> in -S as extended POSIX regular expression"
+ msgstr ""
+ 
+ msgid "treat all files as text"
+@@ -19348,6 +19478,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unable to add %s to database"
++msgstr ""
++
++#, c-format
+ msgid "unable to add '%s' to index"
+ msgstr ""
+ 
+@@ -20441,9 +20575,6 @@
+ msgid "unsupported object format: %s"
+ msgstr ""
+ 
+-msgid "unsupported protocol version. expected v2"
+-msgstr ""
+-
+ #, c-format
+ msgid "unsupported section for hidden refs: %s"
+ msgstr ""
+@@ -20799,9 +20930,6 @@
+ msgid "use the merge-base of upstream and branch as the current base"
+ msgstr ""
+ 
+-msgid "use the path-walk API to walk objects when possible"
+-msgstr ""
+-
+ msgid "use the same output mode as git-annotate (Default: off)"
+ msgstr ""
+ 
+@@ -20861,10 +20989,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "value %s for %s not in range [%<PRIdMAX>,%<PRIdMAX>]"
+-msgstr ""
+-
+-#, c-format
+ msgid "value expected %s="
+ msgstr ""
+ 
