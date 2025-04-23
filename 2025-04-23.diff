@@ -1423,3 +1423,308 @@
  msgid "unable to add '%s' to index"
  msgstr ""
  
+
+
+#################### Wed, 23 Apr 2025 22:57:27 +0000 ####################
+
+--- po/git.pot.old	2025-04-23 22:57:27.307359683 +0000
++++ po/git.pot.new	2025-04-23 22:57:27.384360112 +0000
+@@ -781,6 +781,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "%s expects an integer value with an optional k/m/g suffix"
++msgstr ""
++
++#, c-format
+ msgid "%s failed"
+ msgstr ""
+ 
+@@ -793,6 +797,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "%s is currently not supported with remote-object-info"
++msgstr ""
++
++#, c-format
+ msgid "%s is neither a commit nor blob"
+ msgstr ""
+ 
+@@ -3068,6 +3076,9 @@
+ msgid "Compressing objects"
+ msgstr ""
+ 
++msgid "Compressing objects by path"
++msgstr ""
++
+ msgid "Compute object ID and optionally create an object from a file"
+ msgstr ""
+ 
+@@ -3535,6 +3546,10 @@
+ msgid "Escape character '\\' not allowed as last character in attr value"
+ msgstr ""
+ 
++#, perl-format
++msgid "Executing token generating script: %s\n"
++msgstr ""
++
+ #, c-format
+ msgid "Executing: %s\n"
+ msgstr ""
+@@ -3603,6 +3618,10 @@
+ msgid "Failed to copy notes from '%s' to '%s'"
+ msgstr ""
+ 
++#, perl-format
++msgid "Failed to execute token generating script: %s\n"
++msgstr ""
++
+ #, c-format
+ msgid "Failed to find tree of %s."
+ msgstr ""
+@@ -3835,6 +3854,10 @@
+ "as appropriate to mark resolution and make a commit."
+ msgstr ""
+ 
++#, perl-format
++msgid "For %s TLS is required."
++msgstr ""
++
+ #, c-format
+ msgid "Forgot resolution for '%s'\n"
+ msgstr ""
+@@ -4834,6 +4857,10 @@
+ msgid "Otherwise, please use 'git rebase --skip'\n"
+ msgstr ""
+ 
++#, perl-format
++msgid "Outlook reassigned Message-ID to: %s\n"
++msgstr ""
++
+ msgid "Output information on each ref"
+ msgstr ""
+ 
+@@ -4872,6 +4899,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Path-based delta compression using up to %d threads"
++msgstr ""
++
++#, c-format
+ msgid "Pathspec '%s' is in submodule '%.*s'"
+ msgstr ""
+ 
+@@ -6562,6 +6593,9 @@
+ msgid "WARNING: You called a Git command named '%s', which does not exist."
+ msgstr ""
+ 
++msgid "Warning: Could not retrieve Message-ID from server response.\n"
++msgstr ""
++
+ msgid ""
+ "Warning: commit message did not conform to UTF-8.\n"
+ "You may want to amend it after fixing the message, or set the config\n"
+@@ -8773,10 +8807,7 @@
+ msgid "cannot use --attr-source or GIT_ATTR_SOURCE without repo"
+ msgstr ""
+ 
+-msgid "cannot use --filter with --stdin-packs"
+-msgstr ""
+-
+-msgid "cannot use --stdin-packs with --cruft"
++msgid "cannot use --filter with --path-walk"
+ msgstr ""
+ 
+ msgid "cannot use -a with -d"
+@@ -8786,6 +8817,9 @@
+ msgid "cannot use bare repository '%s' (safe.bareRepository is '%s')"
+ msgstr ""
+ 
++msgid "cannot use delta islands with --path-walk"
++msgstr ""
++
+ msgid "cannot use internal rev list with --cruft"
+ msgstr ""
+ 
+@@ -11672,6 +11706,9 @@
+ msgid "failed to open temporary file"
+ msgstr ""
+ 
++msgid "failed to pack objects via path-walk"
++msgstr ""
++
+ #, c-format
+ msgid "failed to parse %s"
+ msgstr ""
+@@ -12857,7 +12894,10 @@
+ msgid "git multi-pack-index [<options>] write [--preferred-pack=<pack>][--refs-snapshot=<path>]"
+ msgstr ""
+ 
+-msgid "git mv [<options>] <source>... <destination>"
++msgid "git mv [-v] [-f] [-n] [-k] <source> <destination>"
++msgstr ""
++
++msgid "git mv [-v] [-f] [-n] [-k] <source>... <destination-directory>"
+ msgstr ""
+ 
+ msgid "git name-rev [<options>] --all"
+@@ -12935,10 +12975,15 @@
+ msgid "git notes show [<object>]"
+ msgstr ""
+ 
+-msgid "git pack-objects --stdout [<options>] [< <ref-list> | < <object-list>]"
+-msgstr ""
+-
+-msgid "git pack-objects [<options>] <base-name> [< <ref-list> | < <object-list>]"
++msgid ""
++"git pack-objects [-q | --progress | --all-progress] [--all-progress-implied]\n"
++"                 [--no-reuse-delta] [--delta-base-offset] [--non-empty]\n"
++"                 [--local] [--incremental] [--window=<n>] [--depth=<n>]\n"
++"                 [--revs [--unpacked | --all]] [--keep-pack=<pack-name>]\n"
++"                 [--cruft] [--cruft-expiration=<time>]\n"
++"                 [--stdout [--filter=<filter-spec>] | <base-name>]\n"
++"                 [--shallow] [--keep-true-parents] [--[no-]sparse]\n"
++"                 [--name-hash-version=<n>] [--path-walk] < <object-list>"
+ msgstr ""
+ 
+ msgid "git pack-refs [--all] [--no-prune] [--auto] [--include <pattern>] [--exclude <pattern>]"
+@@ -13066,7 +13111,7 @@
+ msgid ""
+ "git repack [-a] [-A] [-d] [-f] [-F] [-l] [-n] [-q] [-b] [-m]\n"
+ "[--window=<n>] [--depth=<n>] [--threads=<n>] [--keep-pack=<pack-name>]\n"
+-"[--write-midx] [--name-hash-version=<n>]"
++"[--write-midx] [--name-hash-version=<n>] [--path-walk]"
+ msgstr ""
+ 
+ msgid "git replace -d <object>..."
+@@ -14643,10 +14688,10 @@
+ msgid "look for differences that change the number of occurrences of the specified object"
+ msgstr ""
+ 
+-msgid "look for differences that change the number of occurrences of the specified regex"
++msgid "look for differences that change the number of occurrences of the specified string"
+ msgstr ""
+ 
+-msgid "look for differences that change the number of occurrences of the specified string"
++msgid "look for differences where a patch contains the specified regex"
+ msgstr ""
+ 
+ msgid "lookup config vars"
+@@ -15149,6 +15194,9 @@
+ msgid "must supply remote when using --negotiate-only"
+ msgstr ""
+ 
++msgid "must supply valid remote when using remote-object-info"
++msgstr ""
++
+ msgid "n"
+ msgstr ""
+ 
+@@ -15825,6 +15873,9 @@
+ msgid "object type mismatch at %s"
+ msgstr ""
+ 
++msgid "object-info capability is not enabled on the server"
++msgstr ""
++
+ msgid "object-info: expected flush after arguments"
+ msgstr ""
+ 
+@@ -16296,6 +16347,9 @@
+ msgid "pass --no-reuse-object to git-pack-objects"
+ msgstr ""
+ 
++msgid "pass --path-walk to git-pack-objects"
++msgstr ""
++
+ msgid "pass -b flag to git-mailinfo"
+ msgstr ""
+ 
+@@ -17377,6 +17431,16 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "remote-object-info command input overflow (no more than %d objects are allowed)"
++msgstr ""
++
++msgid "remote-object-info requires objects"
++msgstr ""
++
++msgid "remote-object-info requires protocol v2"
++msgstr ""
++
++#, c-format
+ msgid "remote-tracking branch '%s' not found"
+ msgstr ""
+ 
+@@ -18079,7 +18143,7 @@
+ msgid "show aliases in --all"
+ msgstr ""
+ 
+-msgid "show all changes in the changeset with -S or -G"
++msgid "show all changes in the changeset with -S/--patch-modifies or -G/--patch-grep"
+ msgstr ""
+ 
+ msgid "show author email instead of name (Default: off)"
+@@ -18567,6 +18631,9 @@
+ msgid "spend extra cycles to find better match"
+ msgstr ""
+ 
++msgid "split remote-object-info command"
++msgstr ""
++
+ #, c-format
+ msgid "splitIndex.maxPercentChange value '%d' should be between 0 and 100"
+ msgstr ""
+@@ -19116,6 +19183,9 @@
+ "\tgit config --global --unset --fixed-value scalar.repo \"%s\""
+ msgstr ""
+ 
++msgid "toggle aggressive edge walk"
++msgstr ""
++
+ msgid "toggle inclusion of blob objects"
+ msgstr ""
+ 
+@@ -19221,7 +19291,7 @@
+ msgid "treat 'git add -N' entries as real in the index"
+ msgstr ""
+ 
+-msgid "treat <string> in -S as extended POSIX regular expression"
++msgid "treat <string> in -S/--patch-modifies as extended POSIX regular expression"
+ msgstr ""
+ 
+ msgid "treat all files as text"
+@@ -20390,6 +20460,9 @@
+ msgid "unsupported object format: %s"
+ msgstr ""
+ 
++msgid "unsupported protocol version. expected v2"
++msgstr ""
++
+ #, c-format
+ msgid "unsupported section for hidden refs: %s"
+ msgstr ""
+@@ -20745,6 +20818,9 @@
+ msgid "use the merge-base of upstream and branch as the current base"
+ msgstr ""
+ 
++msgid "use the path-walk API to walk objects when possible"
++msgstr ""
++
+ msgid "use the same output mode as git-annotate (Default: off)"
+ msgstr ""
+ 
+@@ -20804,6 +20880,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "value %s for %s not in range [%<PRIdMAX>,%<PRIdMAX>]"
++msgstr ""
++
++#, c-format
+ msgid "value expected %s="
+ msgstr ""
+ 
