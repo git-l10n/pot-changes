@@ -291,3 +291,830 @@
  msgid "value expected %s="
  msgstr ""
  
+
+
+#################### Thu, 24 Apr 2025 23:57:24 +0000 ####################
+
+--- po/git.pot.old	2025-04-24 23:57:24.232366803 +0000
++++ po/git.pot.new	2025-04-24 23:57:24.310366808 +0000
+@@ -461,6 +461,9 @@
+ msgid " %s will become dangling!"
+ msgstr ""
+ 
++msgid " (left unresolved)"
++msgstr ""
++
+ msgid " (root-commit)"
+ msgstr ""
+ 
+@@ -793,6 +796,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "%s is a directory in %s adding as %s instead"
++msgstr ""
++
++#, c-format
+ msgid "%s is neither a commit nor blob"
+ msgstr ""
+ 
+@@ -841,6 +848,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "%s points nowhere!"
++msgstr ""
++
++#, c-format
+ msgid "%s points to something strange (%s)"
+ msgstr ""
+ 
+@@ -1674,6 +1685,9 @@
+ msgid "(REMOVED) was: try to recreate merges instead of ignoring them"
+ msgstr ""
+ 
++msgid "(bad commit)\n"
++msgstr ""
++
+ #, perl-format
+ msgid "(body) Adding cc: %s from line '%s'\n"
+ msgstr ""
+@@ -2121,9 +2135,6 @@
+ msgid "-z only makes sense with --stdin"
+ msgstr ""
+ 
+-msgid "-z option used with unsupported option"
+-msgstr ""
+-
+ msgid "..."
+ msgstr ""
+ 
+@@ -2156,6 +2167,9 @@
+ msgid "4 years, 11 months ago"
+ msgstr ""
+ 
++msgid ": perhaps a D/F conflict?"
++msgstr ""
++
+ msgid "<action>"
+ msgstr ""
+ 
+@@ -2336,6 +2350,14 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Adding %s"
++msgstr ""
++
++#, c-format
++msgid "Adding as %s instead"
++msgstr ""
++
++#, c-format
+ msgid "Adding existing repo at '%s' to the index\n"
+ msgstr ""
+ 
+@@ -2686,6 +2708,34 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "CONFLICT (%s): There is a directory with name %s in %s. Adding %s as %s"
++msgstr ""
++
++#, c-format
++msgid "CONFLICT (%s/delete): %s deleted in %s and %s in %s. Version %s of %s left in tree at %s."
++msgstr ""
++
++#, c-format
++msgid "CONFLICT (%s/delete): %s deleted in %s and %s in %s. Version %s of %s left in tree."
++msgstr ""
++
++#, c-format
++msgid "CONFLICT (%s/delete): %s deleted in %s and %s to %s in %s. Version %s of %s left in tree at %s."
++msgstr ""
++
++#, c-format
++msgid "CONFLICT (%s/delete): %s deleted in %s and %s to %s in %s. Version %s of %s left in tree."
++msgstr ""
++
++#, c-format
++msgid "CONFLICT (add/add): Merge conflict in %s"
++msgstr ""
++
++#, c-format
++msgid "CONFLICT (directory rename split): Unclear where to place %s because directory %s was renamed to multiple other directories, with no destination getting a majority of the files."
++msgstr ""
++
++#, c-format
+ msgid "CONFLICT (directory rename split): Unclear where to rename %s to; it was renamed to multiple other directories, with no destination getting a majority of the files."
+ msgstr ""
+ 
+@@ -2726,6 +2776,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "CONFLICT (rename/add): Rename %s->%s in %s.  Added %s in %s"
++msgstr ""
++
++#, c-format
+ msgid "CONFLICT (rename/delete): %s renamed to %s in %s, but deleted in %s."
+ msgstr ""
+ 
+@@ -2734,6 +2788,18 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "CONFLICT (rename/rename): Rename \"%s\"->\"%s\" in branch \"%s\" rename \"%s\"->\"%s\" in \"%s\"%s"
++msgstr ""
++
++#, c-format
++msgid "CONFLICT (rename/rename): Rename %s->%s in %s. Rename %s->%s in %s"
++msgstr ""
++
++#, c-format
++msgid "CONFLICT (rename/rename): Rename directory %s->%s in %s. Rename directory %s->%s in %s"
++msgstr ""
++
++#, c-format
+ msgid "CRLF would be replaced by LF in %s"
+ msgstr ""
+ 
+@@ -2951,9 +3017,6 @@
+ msgid "Checking patch %s..."
+ msgstr ""
+ 
+-msgid "Checking ref database"
+-msgstr ""
+-
+ msgid "Checking references consistency"
+ msgstr ""
+ 
+@@ -3053,9 +3116,6 @@
+ msgid "Compare a tree to the working tree or index"
+ msgstr ""
+ 
+-msgid "Compare the content and mode of provided blob pairs"
+-msgstr ""
+-
+ msgid "Compare two commit ranges (e.g. two versions of a branch)"
+ msgstr ""
+ 
+@@ -3523,6 +3583,10 @@
+ msgid "Error: Cannot export nested tags unless --mark-tags is specified."
+ msgstr ""
+ 
++#, c-format
++msgid "Error: Refusing to lose untracked file at %s; writing to %s instead."
++msgstr ""
++
+ msgid "Error: Your local changes to the following files would be overwritten by merge"
+ msgstr ""
+ 
+@@ -3630,6 +3694,14 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Failed to merge submodule %s (merge following commits not found)"
++msgstr ""
++
++#, c-format
++msgid "Failed to merge submodule %s (multiple merges found)"
++msgstr ""
++
++#, c-format
+ msgid "Failed to merge submodule %s (no merge base)"
+ msgstr ""
+ 
+@@ -3638,6 +3710,14 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Failed to merge submodule %s (not fast-forward)"
++msgstr ""
++
++#, c-format
++msgid "Failed to merge submodule %s (repository corrupt)"
++msgstr ""
++
++#, c-format
+ msgid "Failed to merge submodule %s, but a possible merge resolution exists: %s"
+ msgstr ""
+ 
+@@ -3740,6 +3820,14 @@
+ msgid "Fast-forwarded %s to %s.\n"
+ msgstr ""
+ 
++#, c-format
++msgid "Fast-forwarding submodule %s"
++msgstr ""
++
++#, c-format
++msgid "Fast-forwarding submodule %s to the following commit:"
++msgstr ""
++
+ #, sh-format
+ msgid "Fast-forwarding to: $pretty_name"
+ msgstr ""
+@@ -3839,6 +3927,9 @@
+ msgid "Forgot resolution for '%s'\n"
+ msgstr ""
+ 
++msgid "Found a possible merge resolution for the submodule:\n"
++msgstr ""
++
+ #, c-format
+ msgid ""
+ "Found errors in 'diff.dirstat' config variable:\n"
+@@ -4053,6 +4144,16 @@
+ msgstr ""
+ 
+ #, c-format
++msgid ""
++"If this is correct simply add it to the index for example\n"
++"by using:\n"
++"\n"
++"  git update-index --cacheinfo 160000 %s \"%s\"\n"
++"\n"
++"which will accept this suggestion.\n"
++msgstr ""
++
++#, c-format
+ msgid "If you are sure you want to delete it, run 'git branch -D %s'"
+ msgstr ""
+ 
+@@ -4429,6 +4530,9 @@
+ msgid "Merging is not possible because you have unmerged files."
+ msgstr ""
+ 
++msgid "Merging:"
++msgstr ""
++
+ msgid "Message-ID to be used as In-Reply-To for the first email (if any)? "
+ msgstr ""
+ 
+@@ -5131,6 +5235,18 @@
+ msgid "Refusing to create empty bundle."
+ msgstr ""
+ 
++#, c-format
++msgid "Refusing to lose dirty file at %s"
++msgstr ""
++
++#, c-format
++msgid "Refusing to lose untracked file at %s, even though it's in the way."
++msgstr ""
++
++#, c-format
++msgid "Refusing to lose untracked file at %s; adding as %s instead"
++msgstr ""
++
+ msgid "Refusing to remove current working directory\n"
+ msgstr ""
+ 
+@@ -5198,10 +5314,18 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Removing %s"
++msgstr ""
++
++#, c-format
+ msgid "Removing %s\n"
+ msgstr ""
+ 
+ #, c-format
++msgid "Removing %s to make room for subdirectory\n"
++msgstr ""
++
++#, c-format
+ msgid "Removing %s/%s: %s"
+ msgstr ""
+ 
+@@ -5474,6 +5598,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Skipped %s (merged same as existing)"
++msgstr ""
++
++#, c-format
+ msgid "Skipped patch '%s'."
+ msgstr ""
+ 
+@@ -7333,6 +7461,14 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "add_cacheinfo failed for path '%s'; merge aborting."
++msgstr ""
++
++#, c-format
++msgid "add_cacheinfo failed to refresh for path '%s'; merge aborting."
++msgstr ""
++
++#, c-format
+ msgid "added %d path\n"
+ msgid_plural "added %d paths\n"
+ msgstr[0] ""
+@@ -7907,9 +8043,6 @@
+ msgid "batch modes take no arguments"
+ msgstr ""
+ 
+-msgid "batch reference updates"
+-msgstr ""
+-
+ msgid "be more quiet"
+ msgstr ""
+ 
+@@ -7983,6 +8116,10 @@
+ msgid "blob"
+ msgstr ""
+ 
++#, c-format
++msgid "blob expected for %s '%s'"
++msgstr ""
++
+ msgid "blob-id"
+ msgstr ""
+ 
+@@ -8611,6 +8748,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "cannot read object %s"
++msgstr ""
++
++#, c-format
+ msgid "cannot read object %s '%s'"
+ msgstr ""
+ 
+@@ -8807,6 +8948,9 @@
+ msgid "cannot write bundle version %d with algorithm %s"
+ msgstr ""
+ 
++msgid "cannot write incremental MIDX with bitmap"
++msgstr ""
++
+ msgid "cannot write split index for a sparse index"
+ msgstr ""
+ 
+@@ -8846,9 +8990,6 @@
+ msgid "check out all files in the index"
+ msgstr ""
+ 
+-msgid "check reference database consistency"
+-msgstr ""
+-
+ #, c-format
+ msgid "checking out '%s' failed. Try 'git bisect start <valid-branch>'."
+ msgstr ""
+@@ -9653,10 +9794,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "could not load reverse index for MIDX %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "could not lock '%s'"
+ msgstr ""
+ 
+@@ -10610,6 +10747,9 @@
+ msgid "directory stat info does not change after deleting a file"
+ msgstr ""
+ 
++msgid "directory/file"
++msgstr ""
++
+ msgid "disable all output of the program"
+ msgstr ""
+ 
+@@ -10680,6 +10820,10 @@
+ msgid "do not ignore new files"
+ msgstr ""
+ 
++#, c-format
++msgid "do not know what to do with %06o %s '%s'"
++msgstr ""
++
+ msgid "do not limit pathspecs to sparse entries only"
+ msgstr ""
+ 
+@@ -10857,12 +11001,6 @@
+ msgid "drop reflogs entirely during the migration"
+ msgstr ""
+ 
+-msgid "drop reflogs from the current worktree only"
+-msgstr ""
+-
+-msgid "drop the reflogs of all references"
+-msgstr ""
+-
+ #, c-format
+ msgid "dropping %s %s -- patch contents already upstream\n"
+ msgstr ""
+@@ -11459,6 +11597,10 @@
+ msgid "failed to create output files"
+ msgstr ""
+ 
++#, c-format
++msgid "failed to create path '%s'%s"
++msgstr ""
++
+ msgid "failed to create temp xml file"
+ msgstr ""
+ 
+@@ -11505,6 +11647,9 @@
+ msgid "failed to exec '%s'"
+ msgstr ""
+ 
++msgid "failed to execute internal merge"
++msgstr ""
++
+ #, c-format
+ msgid "failed to expand path '%s'"
+ msgstr ""
+@@ -11666,6 +11811,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "failed to open '%s': %s"
++msgstr ""
++
++#, c-format
+ msgid "failed to open pack-index '%s'"
+ msgstr ""
+ 
+@@ -11862,6 +12011,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "failed to symlink '%s': %s"
++msgstr ""
++
++#, c-format
+ msgid "failed to unlink '%s'"
+ msgstr ""
+ 
+@@ -12088,6 +12241,9 @@
+ msgid "file to read into hooks' stdin"
+ msgstr ""
+ 
++msgid "file/directory"
++msgstr ""
++
+ #, c-format
+ msgid "files '%s' and '%s' differ in contents"
+ msgstr ""
+@@ -12251,6 +12407,12 @@
+ msgid "found %i tags; gave up search at %s\n"
+ msgstr ""
+ 
++#, c-format
++msgid "found %u common ancestor:"
++msgid_plural "found %u common ancestors:"
++msgstr[0] ""
++msgstr[1] ""
++
+ msgid "frequency"
+ msgstr ""
+ 
+@@ -12679,9 +12841,6 @@
+ msgstr[0] ""
+ msgstr[1] ""
+ 
+-msgid "git diff-pairs -z [<diff-options>]"
+-msgstr ""
+-
+ msgid "git difftool [<options>] [<commit> [<commit>]] [--] [<path>...]"
+ msgstr ""
+ 
+@@ -12744,7 +12903,7 @@
+ "git fsck [--tags] [--root] [--unreachable] [--cache] [--no-reflogs]\n"
+ "         [--[no-]full] [--strict] [--verbose] [--lost-found]\n"
+ "         [--[no-]dangling] [--[no-]progress] [--connectivity-only]\n"
+-"         [--[no-]name-objects] [--[no-]references] [<object>...]"
++"         [--[no-]name-objects] [<object>...]"
+ msgstr ""
+ 
+ msgid "git fsmonitor--daemon run [<options>]"
+@@ -12857,10 +13016,7 @@
+ msgid "git multi-pack-index [<options>] write [--preferred-pack=<pack>][--refs-snapshot=<path>]"
+ msgstr ""
+ 
+-msgid "git mv [-v] [-f] [-n] [-k] <source> <destination>"
+-msgstr ""
+-
+-msgid "git mv [-v] [-f] [-n] [-k] <source>... <destination-directory>"
++msgid "git mv [<options>] <source>... <destination>"
+ msgstr ""
+ 
+ msgid "git name-rev [<options>] --all"
+@@ -12991,9 +13147,6 @@
+ "                  [--dry-run | -n] [--verbose] <ref>@{<specifier>}..."
+ msgstr ""
+ 
+-msgid "git reflog drop [--all [--single-worktree] | <refs>...]"
+-msgstr ""
+-
+ msgid "git reflog exists <ref>"
+ msgstr ""
+ 
+@@ -13315,7 +13468,7 @@
+ msgid "git update-ref [<options>]    <refname> <new-oid> [<old-oid>]"
+ msgstr ""
+ 
+-msgid "git update-ref [<options>] --stdin [-z] [--batch-updates]"
++msgid "git update-ref [<options>] --stdin [-z]"
+ msgstr ""
+ 
+ msgid "git update-ref [<options>] -d <refname> [<old-oid>]"
+@@ -13436,12 +13589,6 @@
+ msgid "got %s (%d) %s"
+ msgstr ""
+ 
+-msgid "got EOF while reading destination path"
+-msgstr ""
+-
+-msgid "got EOF while reading path"
+-msgstr ""
+-
+ #, c-format
+ msgid "got bad config --config=%s"
+ msgstr ""
+@@ -14300,9 +14447,6 @@
+ msgid "invalid quoting in push-option value: '%s'"
+ msgstr ""
+ 
+-msgid "invalid raw diff input"
+-msgstr ""
+-
+ #, c-format
+ msgid "invalid ref format: %s"
+ msgstr ""
+@@ -14488,7 +14632,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "known remote named '%s' but with URL '%s' instead of '%s'"
++msgid "known remote named '%s' but with url '%s' instead of '%s'"
+ msgstr ""
+ 
+ msgid "label tags with mark ids"
+@@ -14846,6 +14990,9 @@
+ msgid "merge commit message (for a non-fast-forward merge)"
+ msgstr ""
+ 
++msgid "merge returned no commit"
++msgstr ""
++
+ msgid "merge strategy"
+ msgstr ""
+ 
+@@ -14859,6 +15006,10 @@
+ msgid "merges with remote %s"
+ msgstr ""
+ 
++#, c-format
++msgid "merging of trees %s and %s failed"
++msgstr ""
++
+ msgid "message"
+ msgstr ""
+ 
+@@ -14985,12 +15136,18 @@
+ msgid "mode change for %s, which is not in current HEAD"
+ msgstr ""
+ 
++msgid "modified"
++msgstr ""
++
+ msgid "modified content, "
+ msgstr ""
+ 
+ msgid "modified:"
+ msgstr ""
+ 
++msgid "modify"
++msgstr ""
++
+ msgid "modify the refspec to place all refs within refs/prefetch/"
+ msgstr ""
+ 
+@@ -15367,10 +15524,6 @@
+ msgid "no object format specified"
+ msgstr ""
+ 
+-#, c-format
+-msgid "no or empty URL advertised for remote '%s'"
+-msgstr ""
+-
+ msgid "no pack files to index."
+ msgstr ""
+ 
+@@ -15757,6 +15910,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "object %s is not a blob"
++msgstr ""
++
++#, c-format
+ msgid "object %s not found"
+ msgstr ""
+ 
+@@ -15831,13 +15988,6 @@
+ msgid "object-info: expected flush after arguments"
+ msgstr ""
+ 
+-#, c-format
+-msgid "objects filter not supported: '%s'"
+-msgstr ""
+-
+-msgid "objects filter only supported in batch mode"
+-msgstr ""
+-
+ msgid "octopus merge cannot be executed on top of a [new root]"
+ msgstr ""
+ 
+@@ -16469,9 +16619,6 @@
+ msgid "pathspec '%s' matches files outside the current directory"
+ msgstr ""
+ 
+-msgid "pathspec arguments not supported"
+-msgstr ""
+-
+ #, c-format
+ msgid "pathspec magic not supported by --follow: %s"
+ msgstr ""
+@@ -17174,19 +17321,12 @@
+ msgid "reference repository '%s' is shallow"
+ msgstr ""
+ 
+-msgid "references specified along with --all"
+-msgstr ""
+-
+ msgid "references to exclude"
+ msgstr ""
+ 
+ msgid "references to include"
+ msgstr ""
+ 
+-#, c-format
+-msgid "reflog could not be found: '%s'"
+-msgstr ""
+-
+ msgid "refmap"
+ msgstr ""
+ 
+@@ -17252,6 +17392,10 @@
+ msgid "refusing to force and skip creation of reflog"
+ msgstr ""
+ 
++#, c-format
++msgid "refusing to lose untracked file at '%s'"
++msgstr ""
++
+ msgid "refusing to merge unrelated histories"
+ msgstr ""
+ 
+@@ -17427,9 +17571,15 @@
+ msgid "removed stale scalar.repo '%s'"
+ msgstr ""
+ 
++msgid "rename"
++msgstr ""
++
+ msgid "rename section: old-name new-name"
+ msgstr ""
+ 
++msgid "renamed"
++msgstr ""
++
+ #, c-format
+ msgid "renamed a misnamed branch '%s' away"
+ msgstr ""
+@@ -17730,9 +17880,6 @@
+ msgid "revision"
+ msgstr ""
+ 
+-msgid "revision arguments not allowed"
+-msgstr ""
+-
+ msgid "revision walk setup failed"
+ msgstr ""
+ 
+@@ -17913,9 +18060,6 @@
+ msgid "select handling of commit messages in an alternate encoding"
+ msgstr ""
+ 
+-msgid "select handling of signed commits"
+-msgstr ""
+-
+ msgid "select handling of signed tags"
+ msgstr ""
+ 
+@@ -19230,9 +19374,6 @@
+ msgid "treat all files as text"
+ msgstr ""
+ 
+-msgid "tree objects not supported"
+-msgstr ""
+-
+ msgid "tree-ish"
+ msgstr ""
+ 
+@@ -19300,6 +19441,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unable to add %s to database"
++msgstr ""
++
++#, c-format
+ msgid "unable to add '%s' to index"
+ msgstr ""
+ 
+@@ -19618,10 +19763,6 @@
+ msgid "unable to open %s: %s\n"
+ msgstr ""
+ 
+-#, c-format
+-msgid "unable to open '%s'"
+-msgstr ""
+-
+ msgid "unable to open commit-graph chain file"
+ msgstr ""
+ 
+@@ -19683,18 +19824,10 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unable to parse mode: %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "unable to parse object header of %s"
+ msgstr ""
+ 
+ #, c-format
+-msgid "unable to parse object id: %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "unable to parse object: %s"
+ msgstr ""
+ 
+@@ -19703,10 +19836,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unable to parse rename/copy score: %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "unable to parse sparse filter data in %s"
+ msgstr ""
+ 
+@@ -19717,10 +19846,6 @@
+ msgid "unable to read %s"
+ msgstr ""
+ 
+-#, c-format
+-msgid "unable to read '%s'"
+-msgstr ""
+-
+ msgid "unable to read alternates file"
+ msgstr ""
+ 
+@@ -20103,10 +20228,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unknown diff status: %c"
+-msgstr ""
+-
+-#, c-format
+ msgid "unknown element '%s' from remote info"
+ msgstr ""
+ 
+@@ -20961,9 +21082,6 @@
+ msgid "with --cruft, limit the size of new cruft packs"
+ msgstr ""
+ 
+-msgid "with --cruft, only repack cruft packs smaller than this"
+-msgstr ""
+-
+ msgid "with --get, use default value when missing entry"
+ msgstr ""
+ 
+@@ -20992,9 +21110,6 @@
+ msgid "working trees containing submodules cannot be moved or removed"
+ msgstr ""
+ 
+-msgid "working without -z is not supported"
+-msgstr ""
+-
+ #, c-format
+ msgid "worktree and untracked commit have duplicate entries: %s"
+ msgstr ""
