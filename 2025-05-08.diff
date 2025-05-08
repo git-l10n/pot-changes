@@ -45,3 +45,392 @@
  msgid "unknown mode for --show-object-format: %s"
  msgstr ""
  
+
+
+#################### Thu, 08 May 2025 18:58:24 +0000 ####################
+
+--- po/git.pot.old	2025-05-08 18:58:24.147228395 +0000
++++ po/git.pot.new	2025-05-08 18:58:24.225228736 +0000
+@@ -797,10 +797,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "%s is currently not supported with remote-object-info"
+-msgstr ""
+-
+-#, c-format
+ msgid "%s is neither a commit nor blob"
+ msgstr ""
+ 
+@@ -1361,15 +1357,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid ""
+-"'%s' is nominated for removal.\n"
+-"If you still use this command, please add an extra\n"
+-"option, '--i-still-use-this', on the command line\n"
+-"and let us know you still use it by sending an e-mail\n"
+-"to <git@vger.kernel.org>.  Thanks.\n"
+-msgstr ""
+-
+-#, c-format
+ msgid "'%s' is not a .git file, error code %d"
+ msgstr ""
+ 
+@@ -1620,6 +1607,14 @@
+ msgid "'git multi-pack-index repack' failed"
+ msgstr ""
+ 
++msgid ""
++"'git pack-redundant' is nominated for removal.\n"
++"If you still use this command, please add an extra\n"
++"option, '--i-still-use-this', on the command line\n"
++"and let us know you still use it by sending an e-mail\n"
++"to <git@vger.kernel.org>.  Thanks.\n"
++msgstr ""
++
+ msgid "'git refs verify' takes no arguments"
+ msgstr ""
+ 
+@@ -3077,9 +3072,6 @@
+ msgid "Compressing objects"
+ msgstr ""
+ 
+-msgid "Compressing objects by path"
+-msgstr ""
+-
+ msgid "Compute object ID and optionally create an object from a file"
+ msgstr ""
+ 
+@@ -4846,10 +4838,6 @@
+ msgid "Otherwise, please use 'git rebase --skip'\n"
+ msgstr ""
+ 
+-#, perl-format
+-msgid "Outlook reassigned Message-ID to: %s\n"
+-msgstr ""
+-
+ msgid "Output information on each ref"
+ msgstr ""
+ 
+@@ -4888,10 +4876,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "Path-based delta compression using up to %d threads"
+-msgstr ""
+-
+-#, c-format
+ msgid "Pathspec '%s' is in submodule '%.*s'"
+ msgstr ""
+ 
+@@ -6582,9 +6566,6 @@
+ msgid "WARNING: You called a Git command named '%s', which does not exist."
+ msgstr ""
+ 
+-msgid "Warning: Could not retrieve Message-ID from server response.\n"
+-msgstr ""
+-
+ msgid ""
+ "Warning: commit message did not conform to UTF-8.\n"
+ "You may want to amend it after fixing the message, or set the config\n"
+@@ -8800,7 +8781,10 @@
+ msgid "cannot use --attr-source or GIT_ATTR_SOURCE without repo"
+ msgstr ""
+ 
+-msgid "cannot use --filter with --path-walk"
++msgid "cannot use --filter with --stdin-packs"
++msgstr ""
++
++msgid "cannot use --stdin-packs with --cruft"
+ msgstr ""
+ 
+ msgid "cannot use -a with -d"
+@@ -8810,9 +8794,6 @@
+ msgid "cannot use bare repository '%s' (safe.bareRepository is '%s')"
+ msgstr ""
+ 
+-msgid "cannot use delta islands with --path-walk"
+-msgstr ""
+-
+ msgid "cannot use internal rev list with --cruft"
+ msgstr ""
+ 
+@@ -10162,10 +10143,10 @@
+ msgid "could not switch to '%s'"
+ msgstr ""
+ 
+-msgid "could not toggle maintenance"
++msgid "could not turn off maintenance"
+ msgstr ""
+ 
+-msgid "could not turn off maintenance"
++msgid "could not turn on maintenance"
+ msgstr ""
+ 
+ #, c-format
+@@ -11699,9 +11680,6 @@
+ msgid "failed to open temporary file"
+ msgstr ""
+ 
+-msgid "failed to pack objects via path-walk"
+-msgstr ""
+-
+ #, c-format
+ msgid "failed to parse %s"
+ msgstr ""
+@@ -12968,15 +12946,10 @@
+ msgid "git notes show [<object>]"
+ msgstr ""
+ 
+-msgid ""
+-"git pack-objects [-q | --progress | --all-progress] [--all-progress-implied]\n"
+-"                 [--no-reuse-delta] [--delta-base-offset] [--non-empty]\n"
+-"                 [--local] [--incremental] [--window=<n>] [--depth=<n>]\n"
+-"                 [--revs [--unpacked | --all]] [--keep-pack=<pack-name>]\n"
+-"                 [--cruft] [--cruft-expiration=<time>]\n"
+-"                 [--stdout [--filter=<filter-spec>] | <base-name>]\n"
+-"                 [--shallow] [--keep-true-parents] [--[no-]sparse]\n"
+-"                 [--name-hash-version=<n>] [--path-walk] < <object-list>"
++msgid "git pack-objects --stdout [<options>] [< <ref-list> | < <object-list>]"
++msgstr ""
++
++msgid "git pack-objects [<options>] <base-name> [< <ref-list> | < <object-list>]"
+ msgstr ""
+ 
+ msgid "git pack-refs [--all] [--no-prune] [--auto] [--include <pattern>] [--exclude <pattern>]"
+@@ -13104,7 +13077,7 @@
+ msgid ""
+ "git repack [-a] [-A] [-d] [-f] [-F] [-l] [-n] [-q] [-b] [-m]\n"
+ "[--window=<n>] [--depth=<n>] [--threads=<n>] [--keep-pack=<pack-name>]\n"
+-"[--write-midx] [--name-hash-version=<n>] [--path-walk]"
++"[--write-midx] [--name-hash-version=<n>]"
+ msgstr ""
+ 
+ msgid "git replace -d <object>..."
+@@ -14172,10 +14145,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "invalid element '%s' from remote info"
+-msgstr ""
+-
+-#, c-format
+ msgid "invalid extra cruft tip: '%s'"
+ msgstr ""
+ 
+@@ -14685,10 +14654,10 @@
+ msgid "look for differences that change the number of occurrences of the specified object"
+ msgstr ""
+ 
+-msgid "look for differences that change the number of occurrences of the specified string"
++msgid "look for differences that change the number of occurrences of the specified regex"
+ msgstr ""
+ 
+-msgid "look for differences where a patch contains the specified regex"
++msgid "look for differences that change the number of occurrences of the specified string"
+ msgstr ""
+ 
+ msgid "lookup config vars"
+@@ -15191,9 +15160,6 @@
+ msgid "must supply remote when using --negotiate-only"
+ msgstr ""
+ 
+-msgid "must supply valid remote when using remote-object-info"
+-msgstr ""
+-
+ msgid "n"
+ msgstr ""
+ 
+@@ -15870,9 +15836,6 @@
+ msgid "object type mismatch at %s"
+ msgstr ""
+ 
+-msgid "object-info capability is not enabled on the server"
+-msgstr ""
+-
+ msgid "object-info: expected flush after arguments"
+ msgstr ""
+ 
+@@ -16344,9 +16307,6 @@
+ msgid "pass --no-reuse-object to git-pack-objects"
+ msgstr ""
+ 
+-msgid "pass --path-walk to git-pack-objects"
+-msgstr ""
+-
+ msgid "pass -b flag to git-mailinfo"
+ msgstr ""
+ 
+@@ -17428,16 +17388,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "remote-object-info command input overflow (no more than %d objects are allowed)"
+-msgstr ""
+-
+-msgid "remote-object-info requires objects"
+-msgstr ""
+-
+-msgid "remote-object-info requires protocol v2"
+-msgstr ""
+-
+-#, c-format
+ msgid "remote-tracking branch '%s' not found"
+ msgstr ""
+ 
+@@ -17894,7 +17844,7 @@
+ 
+ msgid ""
+ "scalar clone [--single-branch] [--branch <main-branch>] [--full-clone]\n"
+-"\t[--[no-]src] [--[no-]tags] [--[no-]maintenance] <url> [<enlistment>]"
++"\t[--[no-]src] [--[no-]tags] <url> [<enlistment>]"
+ msgstr ""
+ 
+ msgid "scalar delete <enlistment>"
+@@ -17903,10 +17853,10 @@
+ msgid "scalar diagnose [<enlistment>]"
+ msgstr ""
+ 
+-msgid "scalar reconfigure [--maintenance=<mode>] [--all | <enlistment>]"
++msgid "scalar reconfigure [--all | <enlistment>]"
+ msgstr ""
+ 
+-msgid "scalar register [--[no-]maintenance] [<enlistment>]"
++msgid "scalar register [<enlistment>]"
+ msgstr ""
+ 
+ msgid ""
+@@ -18140,7 +18090,7 @@
+ msgid "show aliases in --all"
+ msgstr ""
+ 
+-msgid "show all changes in the changeset with -S/--patch-modifies or -G/--patch-grep"
++msgid "show all changes in the changeset with -S or -G"
+ msgstr ""
+ 
+ msgid "show author email instead of name (Default: off)"
+@@ -18452,9 +18402,6 @@
+ msgid "show work cost statistics"
+ msgstr ""
+ 
+-msgid "signal how to adjust background maintenance"
+-msgstr ""
+-
+ msgid "signature"
+ msgstr ""
+ 
+@@ -18592,9 +18539,6 @@
+ msgid "specify how differences in submodules are shown"
+ msgstr ""
+ 
+-msgid "specify if background maintenance should be enabled"
+-msgstr ""
+-
+ msgid "specify if tags should be fetched during clone"
+ msgstr ""
+ 
+@@ -18634,9 +18578,6 @@
+ msgid "spend extra cycles to find better match"
+ msgstr ""
+ 
+-msgid "split remote-object-info command"
+-msgstr ""
+-
+ #, c-format
+ msgid "splitIndex.maxPercentChange value '%d' should be between 0 and 100"
+ msgstr ""
+@@ -19086,9 +19027,6 @@
+ msgid "the note contents have been left in %s"
+ msgstr ""
+ 
+-msgid "the number of objects to write"
+-msgstr ""
+-
+ #, c-format
+ msgid "the object %s does not exist"
+ msgstr ""
+@@ -19189,9 +19127,6 @@
+ "\tgit config --global --unset --fixed-value scalar.repo \"%s\""
+ msgstr ""
+ 
+-msgid "toggle aggressive edge walk"
+-msgstr ""
+-
+ msgid "toggle inclusion of blob objects"
+ msgstr ""
+ 
+@@ -19297,7 +19232,7 @@
+ msgid "treat 'git add -N' entries as real in the index"
+ msgstr ""
+ 
+-msgid "treat <string> in -S/--patch-modifies as extended POSIX regular expression"
++msgid "treat <string> in -S as extended POSIX regular expression"
+ msgstr ""
+ 
+ msgid "treat all files as text"
+@@ -19790,6 +19725,10 @@
+ msgid "unable to read %s"
+ msgstr ""
+ 
++#, c-format
++msgid "unable to read '%s'"
++msgstr ""
++
+ msgid "unable to read alternates file"
+ msgstr ""
+ 
+@@ -20175,6 +20114,10 @@
+ msgid "unknown diff status: %c"
+ msgstr ""
+ 
++#, c-format
++msgid "unknown element '%s' from remote info"
++msgstr ""
++
+ msgid "unknown error occurred while reading the configuration files"
+ msgstr ""
+ 
+@@ -20203,10 +20146,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unknown mode for --maintenance option: %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "unknown mode for --show-object-format: %s"
+ msgstr ""
+ 
+@@ -20447,10 +20386,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unsupported field '%s' in '%s' config"
+-msgstr ""
+-
+-#, c-format
+ msgid "unsupported file mode: 0%o (SHA1: %s)"
+ msgstr ""
+ 
+@@ -20466,9 +20401,6 @@
+ msgid "unsupported object format: %s"
+ msgstr ""
+ 
+-msgid "unsupported protocol version. expected v2"
+-msgstr ""
+-
+ #, c-format
+ msgid "unsupported section for hidden refs: %s"
+ msgstr ""
+@@ -20824,9 +20756,6 @@
+ msgid "use the merge-base of upstream and branch as the current base"
+ msgstr ""
+ 
+-msgid "use the path-walk API to walk objects when possible"
+-msgstr ""
+-
+ msgid "use the same output mode as git-annotate (Default: off)"
+ msgstr ""
+ 
