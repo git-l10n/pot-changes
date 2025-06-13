@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2025-06-11 22:57+0000\n"
+"POT-Creation-Date: 2025-06-13 22:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -732,7 +732,7 @@ msgstr ""
 msgid "Exiting because of an unresolved conflict."
 msgstr ""
 
-#: advice.c:236 builtin/merge.c:1466
+#: advice.c:236 builtin/merge.c:1479
 msgid "You have not concluded your merge (MERGE_HEAD exists)."
 msgstr ""
 
@@ -823,7 +823,7 @@ msgstr ""
 #: alias.c:77 builtin/cat-file.c:1196 builtin/notes.c:451 builtin/notes.c:517
 #: builtin/notes.c:599 builtin/notes.c:611 builtin/notes.c:697
 #: builtin/notes.c:774 builtin/notes.c:928 builtin/notes.c:1091
-#: builtin/notes.c:1115 builtin/prune-packed.c:29 builtin/receive-pack.c:2603
+#: builtin/notes.c:1115 builtin/prune-packed.c:29 builtin/receive-pack.c:2601
 #: builtin/refs.c:43 builtin/tag.c:653 t/helper/test-pkt-line.c:89
 msgid "too many arguments"
 msgstr ""
@@ -850,7 +850,7 @@ msgstr ""
 #: builtin/fetch.c:2494 builtin/help.c:621 builtin/index-pack.c:2027
 #: builtin/init-db.c:120 builtin/log.c:2271 builtin/log.c:2273
 #: builtin/ls-files.c:751 builtin/merge-base.c:177 builtin/merge-base.c:183
-#: builtin/merge-tree.c:617 builtin/merge.c:1487 builtin/merge.c:1489
+#: builtin/merge-tree.c:617 builtin/merge.c:1500 builtin/merge.c:1502
 #: builtin/rebase.c:1301 builtin/rebase.c:1303 builtin/rebase.c:1312
 #: builtin/repack.c:1407 builtin/replay.c:334 builtin/reset.c:391
 #: builtin/reset.c:431 builtin/rev-parse.c:949 builtin/rev-parse.c:956
@@ -2260,7 +2260,7 @@ msgstr ""
 msgid "unable to write new index file"
 msgstr ""
 
-#: builtin/am.c:199 builtin/mailinfo.c:48 mailinfo.c:1264
+#: builtin/am.c:199 builtin/mailinfo.c:48 mailinfo.c:1267
 #, c-format
 msgid "bad action '%s' for '%s'"
 msgstr ""
@@ -2275,7 +2275,7 @@ msgstr ""
 msgid "invalid value for '%s': '%s'"
 msgstr ""
 
-#: builtin/am.c:304 builtin/commit.c:873 builtin/merge.c:1230 sequencer.c:596
+#: builtin/am.c:304 builtin/commit.c:873 builtin/merge.c:1243 sequencer.c:596
 #: sequencer.c:2078 sequencer.c:3447 sequencer.c:3898
 #, c-format
 msgid "could not read '%s'"
@@ -2419,7 +2419,7 @@ msgstr ""
 msgid "Failed to merge in the changes."
 msgstr ""
 
-#: builtin/am.c:1678 builtin/merge.c:772 sequencer.c:1578
+#: builtin/am.c:1678 builtin/merge.c:785 sequencer.c:1578
 msgid "git write-tree failed to write a tree"
 msgstr ""
 
@@ -2427,8 +2427,8 @@ msgstr ""
 msgid "applying to an empty history"
 msgstr ""
 
-#: builtin/am.c:1705 builtin/commit.c:1921 builtin/merge.c:992
-#: builtin/merge.c:1019 builtin/replay.c:80 sequencer.c:1688
+#: builtin/am.c:1705 builtin/commit.c:1921 builtin/merge.c:1005
+#: builtin/merge.c:1032 builtin/replay.c:80 sequencer.c:1688
 msgid "failed to write commit object"
 msgstr ""
 
@@ -10021,11 +10021,11 @@ msgstr ""
 msgid "could not parse as tree '%s'"
 msgstr ""
 
-#: builtin/merge-tree.c:469 builtin/merge-tree.c:474 builtin/merge.c:1293
+#: builtin/merge-tree.c:469 builtin/merge-tree.c:474 builtin/merge.c:1306
 msgid "not something we can merge"
 msgstr ""
 
-#: builtin/merge-tree.c:484 builtin/merge.c:1624
+#: builtin/merge-tree.c:484 builtin/merge.c:1637
 msgid "refusing to merge unrelated histories"
 msgstr ""
 
@@ -10085,7 +10085,7 @@ msgstr ""
 msgid "--trivial-merge is incompatible with all other options"
 msgstr ""
 
-#: builtin/merge-tree.c:608 builtin/merge.c:809
+#: builtin/merge-tree.c:608 builtin/merge.c:822
 #, c-format
 msgid "unknown strategy option: -X%s"
 msgstr ""
@@ -10139,8 +10139,8 @@ msgstr ""
 msgid "compact-summary"
 msgstr ""
 
-#: builtin/merge.c:268
-msgid "show a compactstat at the end of the merge"
+#: builtin/merge.c:268 builtin/pull.c:147
+msgid "show a compact-summary at the end of the merge"
 msgstr ""
 
 #: builtin/merge.c:277 builtin/pull.c:150
@@ -10249,203 +10249,203 @@ msgstr ""
 msgid "Bad branch.%s.mergeoptions string: %s"
 msgstr ""
 
-#: builtin/merge.c:784 builtin/merge.c:983 merge-ort-wrappers.c:131
+#: builtin/merge.c:797 builtin/merge.c:996 merge-ort-wrappers.c:131
 msgid "Unable to write index."
 msgstr ""
 
-#: builtin/merge.c:796
+#: builtin/merge.c:809
 msgid "Not handling anything other than two heads merge."
 msgstr ""
 
-#: builtin/merge.c:830 builtin/sparse-checkout.c:361
+#: builtin/merge.c:843 builtin/sparse-checkout.c:361
 #, c-format
 msgid "unable to write %s"
 msgstr ""
 
-#: builtin/merge.c:882
+#: builtin/merge.c:895
 #, c-format
 msgid "Could not read from '%s'"
 msgstr ""
 
-#: builtin/merge.c:891
+#: builtin/merge.c:904
 #, c-format
 msgid "Not committing merge; use 'git commit' to complete the merge.\n"
 msgstr ""
 
-#: builtin/merge.c:897
+#: builtin/merge.c:910
 msgid ""
 "Please enter a commit message to explain why this merge is necessary,\n"
 "especially if it merges an updated upstream into a topic branch.\n"
 "\n"
 msgstr ""
 
-#: builtin/merge.c:902
+#: builtin/merge.c:915
 msgid "An empty message aborts the commit.\n"
 msgstr ""
 
-#: builtin/merge.c:905
+#: builtin/merge.c:918
 #, c-format
 msgid ""
 "Lines starting with '%s' will be ignored, and an empty message aborts\n"
 "the commit.\n"
 msgstr ""
 
-#: builtin/merge.c:969
+#: builtin/merge.c:982
 msgid "Empty commit message."
 msgstr ""
 
-#: builtin/merge.c:986
+#: builtin/merge.c:999
 #, c-format
 msgid "Wonderful.\n"
 msgstr ""
 
-#: builtin/merge.c:1051
+#: builtin/merge.c:1064
 #, c-format
 msgid "Automatic merge failed; fix conflicts and then commit the result.\n"
 msgstr ""
 
-#: builtin/merge.c:1091
+#: builtin/merge.c:1104
 msgid "No current branch."
 msgstr ""
 
-#: builtin/merge.c:1093
+#: builtin/merge.c:1106
 msgid "No remote for the current branch."
 msgstr ""
 
-#: builtin/merge.c:1095
+#: builtin/merge.c:1108
 msgid "No default upstream defined for the current branch."
 msgstr ""
 
-#: builtin/merge.c:1100
+#: builtin/merge.c:1113
 #, c-format
 msgid "No remote-tracking branch for %s from %s"
 msgstr ""
 
-#: builtin/merge.c:1157
+#: builtin/merge.c:1170
 #, c-format
 msgid "Bad value '%s' in environment '%s'"
 msgstr ""
 
-#: builtin/merge.c:1232 editor.c:155 read-cache.c:3075 wrapper.c:688
+#: builtin/merge.c:1245 editor.c:155 read-cache.c:3075 wrapper.c:688
 #, c-format
 msgid "could not close '%s'"
 msgstr ""
 
-#: builtin/merge.c:1259
+#: builtin/merge.c:1272
 #, c-format
 msgid "not something we can merge in %s: %s"
 msgstr ""
 
-#: builtin/merge.c:1406
+#: builtin/merge.c:1419
 msgid "--abort expects no arguments"
 msgstr ""
 
-#: builtin/merge.c:1410
+#: builtin/merge.c:1423
 msgid "There is no merge to abort (MERGE_HEAD missing)."
 msgstr ""
 
-#: builtin/merge.c:1430
+#: builtin/merge.c:1443
 msgid "--quit expects no arguments"
 msgstr ""
 
-#: builtin/merge.c:1443
+#: builtin/merge.c:1456
 msgid "--continue expects no arguments"
 msgstr ""
 
-#: builtin/merge.c:1447
+#: builtin/merge.c:1460
 msgid "There is no merge in progress (MERGE_HEAD missing)."
 msgstr ""
 
-#: builtin/merge.c:1463
+#: builtin/merge.c:1476
 msgid ""
 "You have not concluded your merge (MERGE_HEAD exists).\n"
 "Please, commit your changes before you merge."
 msgstr ""
 
-#: builtin/merge.c:1470
+#: builtin/merge.c:1483
 msgid ""
 "You have not concluded your cherry-pick (CHERRY_PICK_HEAD exists).\n"
 "Please, commit your changes before you merge."
 msgstr ""
 
-#: builtin/merge.c:1473
+#: builtin/merge.c:1486
 msgid "You have not concluded your cherry-pick (CHERRY_PICK_HEAD exists)."
 msgstr ""
 
-#: builtin/merge.c:1505
+#: builtin/merge.c:1518
 msgid "No commit specified and merge.defaultToUpstream not set."
 msgstr ""
 
-#: builtin/merge.c:1522
+#: builtin/merge.c:1535
 msgid "Squash commit into empty head not supported yet"
 msgstr ""
 
-#: builtin/merge.c:1524
+#: builtin/merge.c:1537
 msgid "Non-fast-forward commit does not make sense into an empty head"
 msgstr ""
 
-#: builtin/merge.c:1529
+#: builtin/merge.c:1542
 #, c-format
 msgid "%s - not something we can merge"
 msgstr ""
 
-#: builtin/merge.c:1531
+#: builtin/merge.c:1544
 msgid "Can merge only exactly one commit into empty head"
 msgstr ""
 
-#: builtin/merge.c:1645
+#: builtin/merge.c:1658
 #, c-format
 msgid "Updating %s..%s\n"
 msgstr ""
 
-#: builtin/merge.c:1694 merge-ort-wrappers.c:21
+#: builtin/merge.c:1707 merge-ort-wrappers.c:21
 #, c-format
 msgid ""
 "Your local changes to the following files would be overwritten by merge:\n"
 "  %s"
 msgstr ""
 
-#: builtin/merge.c:1703
+#: builtin/merge.c:1716
 #, c-format
 msgid "Trying really trivial in-index merge...\n"
 msgstr ""
 
-#: builtin/merge.c:1710
+#: builtin/merge.c:1723
 #, c-format
 msgid "Nope.\n"
 msgstr ""
 
-#: builtin/merge.c:1773 builtin/merge.c:1841
+#: builtin/merge.c:1786 builtin/merge.c:1854
 #, c-format
 msgid "Rewinding the tree to pristine...\n"
 msgstr ""
 
-#: builtin/merge.c:1777
+#: builtin/merge.c:1790
 #, c-format
 msgid "Trying merge strategy %s...\n"
 msgstr ""
 
-#: builtin/merge.c:1831
+#: builtin/merge.c:1844
 #, c-format
 msgid "No merge strategy handled the merge.\n"
 msgstr ""
 
-#: builtin/merge.c:1833
+#: builtin/merge.c:1846
 #, c-format
 msgid "Merge with strategy %s failed.\n"
 msgstr ""
 
-#: builtin/merge.c:1843
+#: builtin/merge.c:1856
 #, c-format
 msgid "Using the %s strategy to prepare resolving by hand.\n"
 msgstr ""
 
-#: builtin/merge.c:1857
+#: builtin/merge.c:1870
 #, c-format
 msgid "Automatic merge went well; stopped before committing as requested\n"
 msgstr ""
 
-#: builtin/merge.c:1862
+#: builtin/merge.c:1875
 #, c-format
 msgid "When finished, apply stashed changes with `git stash pop`\n"
 msgstr ""
@@ -11669,10 +11669,6 @@ msgstr ""
 msgid "incorporate changes by rebasing rather than merging"
 msgstr ""
 
-#: builtin/pull.c:147
-msgid "show a compact-summary at the end of the merge"
-msgstr ""
-
 #: builtin/pull.c:166 builtin/revert.c:152
 msgid "allow fast-forward"
 msgstr ""
@@ -12723,11 +12719,11 @@ msgid ""
 "To squelch this message, you can set it to 'refuse'."
 msgstr ""
 
-#: builtin/receive-pack.c:2589
+#: builtin/receive-pack.c:2587
 msgid "quiet"
 msgstr ""
 
-#: builtin/receive-pack.c:2605
+#: builtin/receive-pack.c:2603
 msgid "you must specify a directory"
 msgstr ""
 
@@ -15104,8 +15100,8 @@ msgstr ""
 msgid "include ignore files"
 msgstr ""
 
-#: builtin/stash.c:2002 builtin/stash.c:2088 builtin/stash.c:2104
-#: builtin/stash.c:2154
+#: builtin/stash.c:2002 builtin/stash.c:2087 builtin/stash.c:2103
+#: builtin/stash.c:2153
 #, c-format
 msgid "cannot parse commit %s"
 msgstr ""
@@ -15119,56 +15115,56 @@ msgstr ""
 msgid "could not write commit"
 msgstr ""
 
-#: builtin/stash.c:2049
+#: builtin/stash.c:2048
 #, c-format
 msgid "not a valid revision: %s"
 msgstr ""
 
-#: builtin/stash.c:2053
+#: builtin/stash.c:2052
 #, c-format
 msgid "not a commit: %s"
 msgstr ""
 
-#: builtin/stash.c:2072
+#: builtin/stash.c:2071
 #, c-format
 msgid "%s is not a valid exported stash commit"
 msgstr ""
 
-#: builtin/stash.c:2096
+#: builtin/stash.c:2095
 #, c-format
 msgid "found root commit %s with invalid data"
 msgstr ""
 
-#: builtin/stash.c:2111
+#: builtin/stash.c:2110
 #, c-format
 msgid "found stash commit %s without expected prefix"
 msgstr ""
 
-#: builtin/stash.c:2119
+#: builtin/stash.c:2118
 #, c-format
 msgid "cannot parse parents of commit: %s"
 msgstr ""
 
-#: builtin/stash.c:2125 builtin/stash.c:2214 builtin/stash.c:2270
+#: builtin/stash.c:2124 builtin/stash.c:2213 builtin/stash.c:2269
 #, c-format
 msgid "%s does not look like a stash commit"
 msgstr ""
 
-#: builtin/stash.c:2148
+#: builtin/stash.c:2147
 #, c-format
 msgid "cannot read commit buffer for %s"
 msgstr ""
 
-#: builtin/stash.c:2164
+#: builtin/stash.c:2163
 #, c-format
 msgid "cannot save the stash for %s"
 msgstr ""
 
-#: builtin/stash.c:2248
+#: builtin/stash.c:2247
 msgid "unable to write base commit"
 msgstr ""
 
-#: builtin/stash.c:2264
+#: builtin/stash.c:2263
 #, c-format
 msgid "unable to find stash entry %s"
 msgstr ""
@@ -15978,7 +15974,7 @@ msgstr ""
 msgid "no tag message?"
 msgstr ""
 
-#: builtin/tag.c:380 builtin/tag.c:698
+#: builtin/tag.c:380 builtin/tag.c:700
 #, c-format
 msgid "The tag message has been left in %s\n"
 msgstr ""
@@ -16073,17 +16069,17 @@ msgstr ""
 msgid "'%s' is not a valid tag name."
 msgstr ""
 
-#: builtin/tag.c:664
+#: builtin/tag.c:666
 #, c-format
 msgid "tag '%s' already exists"
 msgstr ""
 
-#: builtin/tag.c:676 sequencer.c:698
+#: builtin/tag.c:678 sequencer.c:698
 #, c-format
 msgid "Invalid cleanup mode %s"
 msgstr ""
 
-#: builtin/tag.c:708
+#: builtin/tag.c:710
 #, c-format
 msgid "Updated tag '%s' (was %s)\n"
 msgstr ""
@@ -20897,7 +20893,7 @@ msgstr ""
 msgid "expected flush after ls-refs arguments"
 msgstr ""
 
-#: mailinfo.c:1057
+#: mailinfo.c:1060
 msgid "quoted CRLF detected"
 msgstr ""
 
@@ -22715,7 +22711,7 @@ msgstr ""
 msgid "unknown '%s' value for '%s' config option"
 msgstr ""
 
-#: promisor-remote.c:783
+#: promisor-remote.c:785
 #, c-format
 msgid "accepted promisor remote '%s' not found"
 msgstr ""
