@@ -1,0 +1,160 @@
+
+
+#################### Tue, 17 Jun 2025 21:57:37 +0000 ####################
+
+--- po/git.pot.old	2025-06-17 21:57:36.973688301 +0000
++++ po/git.pot.new	2025-06-17 21:57:37.053688684 +0000
+@@ -638,10 +638,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "%d (FSCK_IGNORE?) should never trigger this callback"
+-msgstr ""
+-
+-#, c-format
+ msgid "%d bytes of body are still expected"
+ msgstr ""
+ 
+@@ -3071,6 +3067,9 @@
+ msgid "Compressing objects"
+ msgstr ""
+ 
++msgid "Compressing objects by path"
++msgstr ""
++
+ msgid "Compute object ID and optionally create an object from a file"
+ msgstr ""
+ 
+@@ -4300,6 +4299,9 @@
+ msgstr[0] ""
+ msgstr[1] ""
+ 
++msgid "Limiting comparison with pathspecs is only supported if both paths are directories."
++msgstr ""
++
+ msgid ""
+ "Lines beginning in \"GIT:\" will be removed.\n"
+ "Consider including an overall diffstat or table of contents\n"
+@@ -4879,6 +4881,12 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Path-based delta compression using up to %d thread"
++msgid_plural "Path-based delta compression using up to %d threads"
++msgstr[0] ""
++msgstr[1] ""
++
++#, c-format
+ msgid "Pathspec '%s' is in submodule '%.*s'"
+ msgstr ""
+ 
+@@ -8781,6 +8789,10 @@
+ msgid "cannot use %s as an exclude file"
+ msgstr ""
+ 
++#, c-format
++msgid "cannot use %s with %s"
++msgstr ""
++
+ msgid "cannot use --attr-source or GIT_ATTR_SOURCE without repo"
+ msgstr ""
+ 
+@@ -11683,6 +11695,9 @@
+ msgid "failed to open temporary file"
+ msgstr ""
+ 
++msgid "failed to pack objects via path-walk"
++msgstr ""
++
+ #, c-format
+ msgid "failed to parse %s"
+ msgstr ""
+@@ -12674,7 +12689,7 @@
+ "             [--mode=<mode>]"
+ msgstr ""
+ 
+-msgid "git diff --no-index [<options>] <path> <path>"
++msgid "git diff --no-index [<options>] <path> <path> [<pathspec>...]"
+ msgstr ""
+ 
+ #, c-format
+@@ -12946,10 +12961,15 @@
+ msgid "git notes show [<object>]"
+ msgstr ""
+ 
+-msgid "git pack-objects --stdout [<options>] [< <ref-list> | < <object-list>]"
+-msgstr ""
+-
+-msgid "git pack-objects [<options>] <base-name> [< <ref-list> | < <object-list>]"
++msgid ""
++"git pack-objects [-q | --progress | --all-progress] [--all-progress-implied]\n"
++"                 [--no-reuse-delta] [--delta-base-offset] [--non-empty]\n"
++"                 [--local] [--incremental] [--window=<n>] [--depth=<n>]\n"
++"                 [--revs [--unpacked | --all]] [--keep-pack=<pack-name>]\n"
++"                 [--cruft] [--cruft-expiration=<time>]\n"
++"                 [--stdout [--filter=<filter-spec>] | <base-name>]\n"
++"                 [--shallow] [--keep-true-parents] [--[no-]sparse]\n"
++"                 [--name-hash-version=<n>] [--path-walk] < <object-list>"
+ msgstr ""
+ 
+ msgid "git pack-refs [--all] [--no-prune] [--auto] [--include <pattern>] [--exclude <pattern>]"
+@@ -13077,7 +13097,7 @@
+ msgid ""
+ "git repack [-a] [-A] [-d] [-f] [-F] [-l] [-n] [-q] [-b] [-m]\n"
+ "[--window=<n>] [--depth=<n>] [--threads=<n>] [--keep-pack=<pack-name>]\n"
+-"[--write-midx] [--name-hash-version=<n>]"
++"[--write-midx] [--name-hash-version=<n>] [--path-walk]"
+ msgstr ""
+ 
+ msgid "git replace -d <object>..."
+@@ -16307,6 +16327,9 @@
+ msgid "pass --no-reuse-object to git-pack-objects"
+ msgstr ""
+ 
++msgid "pass --path-walk to git-pack-objects"
++msgstr ""
++
+ msgid "pass -b flag to git-mailinfo"
+ msgstr ""
+ 
+@@ -19139,6 +19162,9 @@
+ "\tgit config --global --unset --fixed-value scalar.repo \"%s\""
+ msgstr ""
+ 
++msgid "toggle aggressive edge walk"
++msgstr ""
++
+ msgid "toggle inclusion of blob objects"
+ msgstr ""
+ 
+@@ -19279,9 +19305,6 @@
+ msgid "try to rebase merges instead of skipping them"
+ msgstr ""
+ 
+-msgid "trying to write commit not in index"
+-msgstr ""
+-
+ #, c-format
+ msgid "trying to write non-commit object %s to branch '%s'"
+ msgstr ""
+@@ -20282,10 +20305,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unreachable: invalid reference: %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "unrecognized %%(%.*s) argument: %s"
+ msgstr ""
+ 
+@@ -20772,6 +20791,9 @@
+ msgid "use the merge-base of upstream and branch as the current base"
+ msgstr ""
+ 
++msgid "use the path-walk API to walk objects when possible"
++msgstr ""
++
+ msgid "use the same output mode as git-annotate (Default: off)"
+ msgstr ""
+ 
