@@ -506,3 +506,169 @@
  msgid "use the same output mode as git-annotate (Default: off)"
  msgstr ""
  
+
+
+#################### Wed, 18 Jun 2025 19:00:03 +0000 ####################
+
+--- po/git.pot.old	2025-06-18 19:00:03.107107149 +0000
++++ po/git.pot.new	2025-06-18 19:00:03.184107805 +0000
+@@ -1097,6 +1097,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "%s: object is of unknown type '%s': %s"
++msgstr ""
++
++#, c-format
+ msgid "%s: object missing"
+ msgstr ""
+ 
+@@ -1687,9 +1691,6 @@
+ msgid "(empty) select nothing"
+ msgstr ""
+ 
+-msgid "(enable|disable|keep)"
+-msgstr ""
+-
+ msgid "(for porcelains) forget saved unresolved conflicts"
+ msgstr ""
+ 
+@@ -4300,6 +4301,9 @@
+ msgstr[0] ""
+ msgstr[1] ""
+ 
++msgid "Limiting comparison with pathspecs is only supported if both paths are directories."
++msgstr ""
++
+ msgid ""
+ "Lines beginning in \"GIT:\" will be removed.\n"
+ "Consider including an overall diffstat or table of contents\n"
+@@ -7413,6 +7417,9 @@
+ msgid "all positive revisions given must be references"
+ msgstr ""
+ 
++msgid "allow -s and -t to work with broken/corrupt objects"
++msgstr ""
++
+ msgid "allow adding an otherwise ignored submodule path"
+ msgstr ""
+ 
+@@ -10146,10 +10153,10 @@
+ msgid "could not switch to '%s'"
+ msgstr ""
+ 
+-msgid "could not toggle maintenance"
++msgid "could not turn off maintenance"
+ msgstr ""
+ 
+-msgid "could not turn off maintenance"
++msgid "could not turn on maintenance"
+ msgstr ""
+ 
+ #, c-format
+@@ -12531,7 +12538,10 @@
+ "             [<rev>:<path|tree-ish> | --path=<path|tree-ish> <rev>]"
+ msgstr ""
+ 
+-msgid "git cat-file (-e | -p | -t | -s) <object>"
++msgid "git cat-file (-e | -p) <object>"
++msgstr ""
++
++msgid "git cat-file (-t | -s) [--allow-unknown-type] <object>"
+ msgstr ""
+ 
+ msgid "git cat-file <type> <object>"
+@@ -12674,7 +12684,7 @@
+ "             [--mode=<mode>]"
+ msgstr ""
+ 
+-msgid "git diff --no-index [<options>] <path> <path>"
++msgid "git diff --no-index [<options>] <path> <path> [<pathspec>...]"
+ msgstr ""
+ 
+ #, c-format
+@@ -17844,7 +17854,7 @@
+ 
+ msgid ""
+ "scalar clone [--single-branch] [--branch <main-branch>] [--full-clone]\n"
+-"\t[--[no-]src] [--[no-]tags] [--[no-]maintenance] <url> [<enlistment>]"
++"\t[--[no-]src] [--[no-]tags] <url> [<enlistment>]"
+ msgstr ""
+ 
+ msgid "scalar delete <enlistment>"
+@@ -17853,10 +17863,10 @@
+ msgid "scalar diagnose [<enlistment>]"
+ msgstr ""
+ 
+-msgid "scalar reconfigure [--maintenance=(enable|disable|keep)] [--all | <enlistment>]"
++msgid "scalar reconfigure [--all | <enlistment>]"
+ msgstr ""
+ 
+-msgid "scalar register [--[no-]maintenance] [<enlistment>]"
++msgid "scalar register [<enlistment>]"
+ msgstr ""
+ 
+ msgid ""
+@@ -18402,9 +18412,6 @@
+ msgid "show work cost statistics"
+ msgstr ""
+ 
+-msgid "signal how to adjust background maintenance"
+-msgstr ""
+-
+ msgid "signature"
+ msgstr ""
+ 
+@@ -18542,9 +18549,6 @@
+ msgid "specify how differences in submodules are shown"
+ msgstr ""
+ 
+-msgid "specify if background maintenance should be enabled"
+-msgstr ""
+-
+ msgid "specify if tags should be fetched during clone"
+ msgstr ""
+ 
+@@ -18762,9 +18766,6 @@
+ msgid "support for protocol v2 not implemented yet"
+ msgstr ""
+ 
+-msgid "suppress all output; only exit status wanted"
+-msgstr ""
+-
+ msgid "suppress author name and timestamp (Default: off)"
+ msgstr ""
+ 
+@@ -19730,10 +19731,6 @@
+ msgid "unable to parse sparse filter data in %s"
+ msgstr ""
+ 
+-#, c-format
+-msgid "unable to parse type from header '%s' of %s"
+-msgstr ""
+-
+ msgid "unable to pass trailers to --trailers"
+ msgstr ""
+ 
+@@ -19741,6 +19738,10 @@
+ msgid "unable to read %s"
+ msgstr ""
+ 
++#, c-format
++msgid "unable to read '%s'"
++msgstr ""
++
+ msgid "unable to read alternates file"
+ msgstr ""
+ 
+@@ -20158,10 +20159,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unknown mode for --maintenance option: %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "unknown mode for --show-object-format: %s"
+ msgstr ""
+ 
