@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2025-07-09 02:43+0000\n"
+"POT-Creation-Date: 2025-07-14 20:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -1240,7 +1240,7 @@ msgstr ""
 msgid "unable to add cache entry for %s"
 msgstr ""
 
-#: apply.c:4414 builtin/bisect.c:615 builtin/gc.c:2841 builtin/gc.c:2903
+#: apply.c:4414 builtin/bisect.c:615 builtin/gc.c:2848 builtin/gc.c:2910
 #, c-format
 msgid "failed to write to '%s'"
 msgstr ""
@@ -1530,7 +1530,7 @@ msgstr ""
 msgid "git archive --remote <repo> [--exec <cmd>] --list"
 msgstr ""
 
-#: archive.c:224 archive.c:361 builtin/gc.c:799 builtin/notes.c:298
+#: archive.c:224 archive.c:361 builtin/gc.c:806 builtin/notes.c:298
 #: builtin/tag.c:640
 #, c-format
 msgid "cannot read '%s'"
@@ -1610,7 +1610,7 @@ msgstr ""
 #: archive.c:657 archive.c:671 builtin/blame.c:926 builtin/blame.c:930
 #: builtin/blame.c:931 builtin/commit-tree.c:111 builtin/config.c:71
 #: builtin/fast-export.c:1295 builtin/fast-export.c:1297
-#: builtin/fast-export.c:1301 builtin/gc.c:1893 builtin/gc.c:1959
+#: builtin/fast-export.c:1301 builtin/gc.c:1900 builtin/gc.c:1966
 #: builtin/grep.c:999 builtin/hash-object.c:92 builtin/ls-files.c:617
 #: builtin/ls-files.c:620 builtin/notes.c:490 builtin/notes.c:669
 #: builtin/read-tree.c:123 parse-options.h:339
@@ -2094,7 +2094,7 @@ msgstr ""
 msgid "editing patch failed"
 msgstr ""
 
-#: builtin/add.c:212 read-cache.c:3207
+#: builtin/add.c:212 read-cache.c:3208
 #, c-format
 msgid "could not stat '%s'"
 msgstr ""
@@ -2239,7 +2239,7 @@ msgstr ""
 #: builtin/checkout.c:789 builtin/clean.c:1018 builtin/commit.c:385
 #: builtin/diff-tree.c:134 builtin/grep.c:559 builtin/mv.c:251
 #: builtin/reset.c:464 builtin/rm.c:305 builtin/submodule--helper.c:197
-#: builtin/submodule--helper.c:3375 read-cache.c:2005 read-cache.c:2325
+#: builtin/submodule--helper.c:3375 read-cache.c:2006 read-cache.c:2326
 #: rerere.c:568 rerere.c:602 rerere.c:1138 submodule.c:1872
 msgid "index file corrupt"
 msgstr ""
@@ -4047,7 +4047,7 @@ msgstr ""
 msgid "which tree-ish to check attributes at"
 msgstr ""
 
-#: builtin/check-ignore.c:22 builtin/checkout.c:1690 builtin/gc.c:850
+#: builtin/check-ignore.c:22 builtin/checkout.c:1690 builtin/gc.c:857
 #: builtin/worktree.c:804
 msgid "suppress progress reporting"
 msgstr ""
@@ -5113,7 +5113,7 @@ msgstr ""
 
 #: builtin/clone.c:1023 builtin/init-db.c:178 builtin/refs.c:49
 #: builtin/submodule--helper.c:1884 builtin/submodule--helper.c:2848
-#: builtin/submodule--helper.c:3465 setup.c:2480 setup.c:2538
+#: builtin/submodule--helper.c:3465 setup.c:2483 setup.c:2553
 #, c-format
 msgid "unknown ref storage format '%s'"
 msgstr ""
@@ -5290,7 +5290,7 @@ msgid ""
 "                       <split-options>"
 msgstr ""
 
-#: builtin/commit-graph.c:55 builtin/fetch.c:2377 builtin/gc.c:873
+#: builtin/commit-graph.c:55 builtin/fetch.c:2377 builtin/gc.c:880
 #: builtin/log.c:2102 builtin/repack.c:1224 builtin/repack.c:1226
 msgid "dir"
 msgstr ""
@@ -5500,7 +5500,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: builtin/commit.c:303 read-cache.c:3929
+#: builtin/commit.c:303 read-cache.c:3930
 msgid "updating files failed"
 msgstr ""
 
@@ -5850,7 +5850,7 @@ msgstr ""
 msgid "override author for commit"
 msgstr ""
 
-#: builtin/commit.c:1691 builtin/gc.c:855
+#: builtin/commit.c:1691 builtin/gc.c:862
 msgid "date"
 msgstr ""
 
@@ -6011,18 +6011,19 @@ msgstr ""
 #: builtin/config.c:20
 msgid ""
 "git config get [<file-option>] [<display-option>] [--includes] [--all] [--"
-"regexp] [--value=<value>] [--fixed-value] [--default=<default>] <name>"
+"regexp] [--value=<pattern>] [--fixed-value] [--default=<default>] [--"
+"url=<url>] <name>"
 msgstr ""
 
 #: builtin/config.c:21
 msgid ""
-"git config set [<file-option>] [--type=<type>] [--all] [--value=<value>] [--"
-"fixed-value] <name> <value>"
+"git config set [<file-option>] [--type=<type>] [--all] [--value=<pattern>] "
+"[--fixed-value] <name> <value>"
 msgstr ""
 
 #: builtin/config.c:22 builtin/config.c:46
 msgid ""
-"git config unset [<file-option>] [--all] [--value=<value>] [--fixed-value] "
+"git config unset [<file-option>] [--all] [--value=<pattern>] [--fixed-value] "
 "<name>"
 msgstr ""
 
@@ -6045,14 +6046,14 @@ msgstr ""
 #: builtin/config.c:36
 msgid ""
 "git config get [<file-option>] [<display-option>] [--includes] [--all] [--"
-"regexp=<regexp>] [--value=<value>] [--fixed-value] [--default=<default>] "
+"regexp=<regexp>] [--value=<pattern>] [--fixed-value] [--default=<default>] "
 "<name>"
 msgstr ""
 
 #: builtin/config.c:41
 msgid ""
 "git config set [<file-option>] [--type=<type>] [--comment=<message>] [--all] "
-"[--value=<value>] [--fixed-value] <name> <value>"
+"[--value=<pattern>] [--fixed-value] <name> <value>"
 msgstr ""
 
 #: builtin/config.c:66
@@ -6075,7 +6076,7 @@ msgstr ""
 msgid "use per-worktree config file"
 msgstr ""
 
-#: builtin/config.c:71 builtin/gc.c:1893 builtin/gc.c:1959
+#: builtin/config.c:71 builtin/gc.c:1900 builtin/gc.c:1966
 msgid "use given config file"
 msgstr ""
 
@@ -6228,7 +6229,7 @@ msgstr ""
 msgid "--worktree can only be used inside a git repository"
 msgstr ""
 
-#: builtin/config.c:779 builtin/gc.c:1933 builtin/gc.c:2002
+#: builtin/config.c:779 builtin/gc.c:1940 builtin/gc.c:2009
 msgid "$HOME not set"
 msgstr ""
 
@@ -7573,7 +7574,7 @@ msgid ""
 "              to %7s %s"
 msgstr ""
 
-#: builtin/fsck.c:202 builtin/prune.c:68 connected.c:118
+#: builtin/fsck.c:202 builtin/prune.c:67 connected.c:118
 msgid "Checking connectivity"
 msgstr ""
 
@@ -7596,7 +7597,7 @@ msgstr ""
 msgid "could not create lost-found"
 msgstr ""
 
-#: builtin/fsck.c:343 builtin/gc.c:2359 builtin/rebase.c:229
+#: builtin/fsck.c:343 builtin/gc.c:2366 builtin/rebase.c:229
 #: rebase-interactive.c:127 rerere.c:488 rerere.c:699 sequencer.c:4236
 #: sequencer.c:6545
 #, c-format
@@ -7800,7 +7801,7 @@ msgstr ""
 msgid "write dangling objects in .git/lost-found"
 msgstr ""
 
-#: builtin/fsck.c:947 builtin/prune.c:164
+#: builtin/fsck.c:947 builtin/prune.c:162
 msgid "show progress"
 msgstr ""
 
@@ -7957,12 +7958,12 @@ msgstr ""
 msgid "failed to parse '%s' value '%s'"
 msgstr ""
 
-#: builtin/gc.c:790 setup.c:2105
+#: builtin/gc.c:797 setup.c:2108
 #, c-format
 msgid "cannot stat '%s'"
 msgstr ""
 
-#: builtin/gc.c:806
+#: builtin/gc.c:813
 #, c-format
 msgid ""
 "The last gc run reported the following. Please correct the root cause\n"
@@ -7972,277 +7973,277 @@ msgid ""
 "%s"
 msgstr ""
 
-#: builtin/gc.c:856
+#: builtin/gc.c:863
 msgid "prune unreferenced objects"
 msgstr ""
 
-#: builtin/gc.c:860
+#: builtin/gc.c:867
 msgid "pack unreferenced objects separately"
 msgstr ""
 
-#: builtin/gc.c:862 builtin/repack.c:1181
+#: builtin/gc.c:869 builtin/repack.c:1181
 msgid "with --cruft, limit the size of new cruft packs"
 msgstr ""
 
-#: builtin/gc.c:863
+#: builtin/gc.c:870
 msgid "be more thorough (increased runtime)"
 msgstr ""
 
-#: builtin/gc.c:864
+#: builtin/gc.c:871
 msgid "enable auto-gc mode"
 msgstr ""
 
-#: builtin/gc.c:867
+#: builtin/gc.c:874
 msgid "perform garbage collection in the background"
 msgstr ""
 
-#: builtin/gc.c:869
+#: builtin/gc.c:876
 msgid "force running gc even if there may be another gc running"
 msgstr ""
 
-#: builtin/gc.c:872
+#: builtin/gc.c:879
 msgid "repack all other packs except the largest pack"
 msgstr ""
 
-#: builtin/gc.c:874 builtin/repack.c:1225
+#: builtin/gc.c:881 builtin/repack.c:1225
 msgid "pack prefix to store a pack containing pruned objects"
 msgstr ""
 
-#: builtin/gc.c:876
+#: builtin/gc.c:883
 msgid "skip maintenance tasks typically done in the foreground"
 msgstr ""
 
-#: builtin/gc.c:888
+#: builtin/gc.c:895
 #, c-format
 msgid "failed to parse gc.logExpiry value %s"
 msgstr ""
 
-#: builtin/gc.c:903
+#: builtin/gc.c:910
 #, c-format
 msgid "failed to parse prune expiry value %s"
 msgstr ""
 
-#: builtin/gc.c:929
+#: builtin/gc.c:936
 #, c-format
 msgid "Auto packing the repository in background for optimum performance.\n"
 msgstr ""
 
-#: builtin/gc.c:931
+#: builtin/gc.c:938
 #, c-format
 msgid "Auto packing the repository for optimum performance.\n"
 msgstr ""
 
-#: builtin/gc.c:932
+#: builtin/gc.c:939
 #, c-format
 msgid "See \"git help gc\" for manual housekeeping.\n"
 msgstr ""
 
-#: builtin/gc.c:985
+#: builtin/gc.c:992
 #, c-format
 msgid ""
 "gc is already running on machine '%s' pid %<PRIuMAX> (use --force if not)"
 msgstr ""
 
-#: builtin/gc.c:1048
+#: builtin/gc.c:1055
 msgid ""
 "There are too many unreachable loose objects; run 'git prune' to remove them."
 msgstr ""
 
-#: builtin/gc.c:1064
+#: builtin/gc.c:1071
 msgid ""
 "git maintenance run [--auto] [--[no-]quiet] [--task=<task>] [--schedule]"
 msgstr ""
 
-#: builtin/gc.c:1074
+#: builtin/gc.c:1081
 msgid "--no-schedule is not allowed"
 msgstr ""
 
-#: builtin/gc.c:1079
+#: builtin/gc.c:1086
 #, c-format
 msgid "unrecognized --schedule argument '%s'"
 msgstr ""
 
-#: builtin/gc.c:1197
+#: builtin/gc.c:1204
 msgid "failed to write commit-graph"
 msgstr ""
 
-#: builtin/gc.c:1228
+#: builtin/gc.c:1235
 msgid "failed to prefetch remotes"
 msgstr ""
 
-#: builtin/gc.c:1362
+#: builtin/gc.c:1369
 msgid "failed to start 'git pack-objects' process"
 msgstr ""
 
-#: builtin/gc.c:1388
+#: builtin/gc.c:1395
 msgid "failed to finish 'git pack-objects' process"
 msgstr ""
 
-#: builtin/gc.c:1442
+#: builtin/gc.c:1449
 msgid "failed to write multi-pack-index"
 msgstr ""
 
-#: builtin/gc.c:1460
+#: builtin/gc.c:1467
 msgid "'git multi-pack-index expire' failed"
 msgstr ""
 
-#: builtin/gc.c:1521
+#: builtin/gc.c:1528
 msgid "'git multi-pack-index repack' failed"
 msgstr ""
 
-#: builtin/gc.c:1531
+#: builtin/gc.c:1538
 msgid ""
 "skipping incremental-repack task because core.multiPackIndex is disabled"
 msgstr ""
 
-#: builtin/gc.c:1643
+#: builtin/gc.c:1650
 #, c-format
 msgid "task '%s' failed"
 msgstr ""
 
-#: builtin/gc.c:1668
+#: builtin/gc.c:1675
 #, c-format
 msgid "lock file '%s' exists, skipping maintenance"
 msgstr ""
 
-#: builtin/gc.c:1809
+#: builtin/gc.c:1816
 #, c-format
 msgid "'%s' is not a valid task"
 msgstr ""
 
-#: builtin/gc.c:1814
+#: builtin/gc.c:1821
 #, c-format
 msgid "task '%s' cannot be selected multiple times"
 msgstr ""
 
-#: builtin/gc.c:1831
+#: builtin/gc.c:1838
 msgid "run tasks based on the state of the repository"
 msgstr ""
 
-#: builtin/gc.c:1833
+#: builtin/gc.c:1840
 msgid "perform maintenance in the background"
 msgstr ""
 
-#: builtin/gc.c:1834
+#: builtin/gc.c:1841
 msgid "frequency"
 msgstr ""
 
-#: builtin/gc.c:1835
+#: builtin/gc.c:1842
 msgid "run tasks based on frequency"
 msgstr ""
 
-#: builtin/gc.c:1838
+#: builtin/gc.c:1845
 msgid "do not report progress or other information over stderr"
 msgstr ""
 
-#: builtin/gc.c:1839
+#: builtin/gc.c:1846
 msgid "task"
 msgstr ""
 
-#: builtin/gc.c:1840
+#: builtin/gc.c:1847
 msgid "run a specific task"
 msgstr ""
 
-#: builtin/gc.c:1940
+#: builtin/gc.c:1947
 #, c-format
 msgid "unable to add '%s' value of '%s'"
 msgstr ""
 
-#: builtin/gc.c:1961
+#: builtin/gc.c:1968
 msgid "return success even if repository was not registered"
 msgstr ""
 
-#: builtin/gc.c:2010
+#: builtin/gc.c:2017
 #, c-format
 msgid "unable to unset '%s' value of '%s'"
 msgstr ""
 
-#: builtin/gc.c:2013
+#: builtin/gc.c:2020
 #, c-format
 msgid "repository '%s' is not registered"
 msgstr ""
 
-#: builtin/gc.c:2191
+#: builtin/gc.c:2198
 #, c-format
 msgid "failed to expand path '%s'"
 msgstr ""
 
-#: builtin/gc.c:2218 builtin/gc.c:2257
+#: builtin/gc.c:2225 builtin/gc.c:2264
 msgid "failed to start launchctl"
 msgstr ""
 
-#: builtin/gc.c:2337 builtin/gc.c:2803 builtin/gc.c:2876
+#: builtin/gc.c:2344 builtin/gc.c:2810 builtin/gc.c:2883
 #, c-format
 msgid "failed to create directories for '%s'"
 msgstr ""
 
-#: builtin/gc.c:2364
+#: builtin/gc.c:2371
 #, c-format
 msgid "failed to bootstrap service %s"
 msgstr ""
 
-#: builtin/gc.c:2455
+#: builtin/gc.c:2462
 msgid "failed to create temp xml file"
 msgstr ""
 
-#: builtin/gc.c:2549
+#: builtin/gc.c:2556
 msgid "failed to start schtasks"
 msgstr ""
 
-#: builtin/gc.c:2643
+#: builtin/gc.c:2650
 msgid "failed to run 'crontab -l'; your system might not support 'cron'"
 msgstr ""
 
-#: builtin/gc.c:2652
+#: builtin/gc.c:2659
 msgid "failed to create crontab temporary file"
 msgstr ""
 
-#: builtin/gc.c:2657
+#: builtin/gc.c:2664
 msgid "failed to open temporary file"
 msgstr ""
 
-#: builtin/gc.c:2707
+#: builtin/gc.c:2714
 msgid "failed to run 'crontab'; your system might not support 'cron'"
 msgstr ""
 
-#: builtin/gc.c:2712
+#: builtin/gc.c:2719
 msgid "'crontab' died"
 msgstr ""
 
-#: builtin/gc.c:2764 builtin/gc.c:2777 builtin/gc.c:2987 builtin/worktree.c:159
+#: builtin/gc.c:2771 builtin/gc.c:2784 builtin/gc.c:2994 builtin/worktree.c:159
 #: builtin/worktree.c:1340
 #, c-format
 msgid "failed to delete '%s'"
 msgstr ""
 
-#: builtin/gc.c:2846 builtin/gc.c:2908 rerere.c:501
+#: builtin/gc.c:2853 builtin/gc.c:2915 rerere.c:501
 #, c-format
 msgid "failed to flush '%s'"
 msgstr ""
 
-#: builtin/gc.c:2952
+#: builtin/gc.c:2959
 msgid "failed to start systemctl"
 msgstr ""
 
-#: builtin/gc.c:2965
+#: builtin/gc.c:2972
 msgid "failed to run systemctl"
 msgstr ""
 
-#: builtin/gc.c:3104
+#: builtin/gc.c:3111
 #, c-format
 msgid "unrecognized --scheduler argument '%s'"
 msgstr ""
 
-#: builtin/gc.c:3129
+#: builtin/gc.c:3136
 msgid "neither systemd timers nor crontab are available"
 msgstr ""
 
-#: builtin/gc.c:3144
+#: builtin/gc.c:3151
 #, c-format
 msgid "%s scheduler is not available"
 msgstr ""
 
-#: builtin/gc.c:3158
+#: builtin/gc.c:3165
 #, c-format
 msgid ""
 "unable to create '%s.lock': %s.\n"
@@ -8253,31 +8254,31 @@ msgid ""
 "crashed in this repository earlier: remove the file manually to continue."
 msgstr ""
 
-#: builtin/gc.c:3165
+#: builtin/gc.c:3172
 msgid "cannot acquire lock for scheduled background maintenance"
 msgstr ""
 
-#: builtin/gc.c:3189
+#: builtin/gc.c:3196
 msgid "git maintenance start [--scheduler=<scheduler>]"
 msgstr ""
 
-#: builtin/gc.c:3199
+#: builtin/gc.c:3206
 msgid "scheduler"
 msgstr ""
 
-#: builtin/gc.c:3200
+#: builtin/gc.c:3207
 msgid "scheduler to trigger git maintenance run"
 msgstr ""
 
-#: builtin/gc.c:3215
+#: builtin/gc.c:3222
 msgid "failed to set up maintenance schedule"
 msgstr ""
 
-#: builtin/gc.c:3218
+#: builtin/gc.c:3225
 msgid "failed to add repo to global config"
 msgstr ""
 
-#: builtin/gc.c:3241
+#: builtin/gc.c:3248
 msgid "git maintenance <subcommand> [<options>]"
 msgstr ""
 
@@ -9005,7 +9006,7 @@ msgstr ""
 msgid "bad %s"
 msgstr ""
 
-#: builtin/index-pack.c:2001 builtin/init-db.c:172 setup.c:2470 setup.c:2519
+#: builtin/index-pack.c:2001 builtin/init-db.c:172 setup.c:2473 setup.c:2534
 #, c-format
 msgid "unknown hash algorithm '%s'"
 msgstr ""
@@ -10317,7 +10318,7 @@ msgstr ""
 msgid "Bad value '%s' in environment '%s'"
 msgstr ""
 
-#: builtin/merge.c:1245 editor.c:155 read-cache.c:3075 wrapper.c:688
+#: builtin/merge.c:1245 editor.c:155 read-cache.c:3076 wrapper.c:688
 #, c-format
 msgid "could not close '%s'"
 msgstr ""
@@ -11063,7 +11064,7 @@ msgstr ""
 msgid "read object names from the standard input"
 msgstr ""
 
-#: builtin/notes.c:1082 builtin/prune.c:162 builtin/worktree.c:252
+#: builtin/notes.c:1082 builtin/prune.c:160 builtin/worktree.c:252
 msgid "do not remove, show only"
 msgstr ""
 
@@ -11632,23 +11633,23 @@ msgstr ""
 msgid "don't strip whitespace from the patch"
 msgstr ""
 
-#: builtin/prune.c:24
+#: builtin/prune.c:23
 msgid "git prune [-n] [-v] [--progress] [--expire <time>] [--] [<head>...]"
 msgstr ""
 
-#: builtin/prune.c:163
+#: builtin/prune.c:161
 msgid "report pruned objects"
 msgstr ""
 
-#: builtin/prune.c:166
+#: builtin/prune.c:164
 msgid "expire objects older than <time>"
 msgstr ""
 
-#: builtin/prune.c:168
+#: builtin/prune.c:166
 msgid "limit traversal to objects outside promisor packfiles"
 msgstr ""
 
-#: builtin/prune.c:181
+#: builtin/prune.c:179
 msgid "cannot prune in a precious-objects repo"
 msgstr ""
 
@@ -19958,7 +19959,7 @@ msgstr ""
 msgid "could not stat file '%s'"
 msgstr ""
 
-#: environment.c:189
+#: environment.c:188
 #, c-format
 msgid "bad git namespace path \"%s\""
 msgstr ""
@@ -20639,16 +20640,16 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: help.c:821
+#: help.c:823
 msgid "git version [--build-options]"
 msgstr ""
 
-#: help.c:878
+#: help.c:880
 #, c-format
 msgid "%s: %s - %s"
 msgstr ""
 
-#: help.c:882
+#: help.c:884
 msgid ""
 "\n"
 "Did you mean this?"
@@ -22864,156 +22865,156 @@ msgstr ""
 msgid "'%s' appears as both a file and as a directory"
 msgstr ""
 
-#: read-cache.c:1498
+#: read-cache.c:1499
 msgid "Refresh index"
 msgstr ""
 
-#: read-cache.c:1630
+#: read-cache.c:1631
 #, c-format
 msgid ""
 "index.version set, but the value is invalid.\n"
 "Using version %i"
 msgstr ""
 
-#: read-cache.c:1640
+#: read-cache.c:1641
 #, c-format
 msgid ""
 "GIT_INDEX_VERSION set, but the value is invalid.\n"
 "Using version %i"
 msgstr ""
 
-#: read-cache.c:1698
+#: read-cache.c:1699
 #, c-format
 msgid "bad signature 0x%08x"
 msgstr ""
 
-#: read-cache.c:1701
+#: read-cache.c:1702
 #, c-format
 msgid "bad index version %d"
 msgstr ""
 
-#: read-cache.c:1716
+#: read-cache.c:1717
 msgid "bad index file sha1 signature"
 msgstr ""
 
-#: read-cache.c:1750
+#: read-cache.c:1751
 #, c-format
 msgid "index uses %.4s extension, which we do not understand"
 msgstr ""
 
-#: read-cache.c:1752
+#: read-cache.c:1753
 #, c-format
 msgid "ignoring %.4s extension"
 msgstr ""
 
-#: read-cache.c:1800
+#: read-cache.c:1801
 #, c-format
 msgid "unknown index entry format 0x%08x"
 msgstr ""
 
-#: read-cache.c:1816
+#: read-cache.c:1817
 #, c-format
 msgid "malformed name field in the index, near path '%s'"
 msgstr ""
 
-#: read-cache.c:1884
+#: read-cache.c:1885
 msgid "unordered stage entries in index"
 msgstr ""
 
-#: read-cache.c:1887
+#: read-cache.c:1888
 #, c-format
 msgid "multiple stage entries for merged file '%s'"
 msgstr ""
 
-#: read-cache.c:1890
+#: read-cache.c:1891
 #, c-format
 msgid "unordered stage entries for '%s'"
 msgstr ""
 
-#: read-cache.c:2149
+#: read-cache.c:2150
 #, c-format
 msgid "unable to create load_cache_entries thread: %s"
 msgstr ""
 
-#: read-cache.c:2162
+#: read-cache.c:2163
 #, c-format
 msgid "unable to join load_cache_entries thread: %s"
 msgstr ""
 
-#: read-cache.c:2211
+#: read-cache.c:2212
 #, c-format
 msgid "%s: index file open failed"
 msgstr ""
 
-#: read-cache.c:2215
+#: read-cache.c:2216
 #, c-format
 msgid "%s: cannot stat the open index"
 msgstr ""
 
-#: read-cache.c:2219
+#: read-cache.c:2220
 #, c-format
 msgid "%s: index file smaller than expected"
 msgstr ""
 
-#: read-cache.c:2223
+#: read-cache.c:2224
 #, c-format
 msgid "%s: unable to map index file%s"
 msgstr ""
 
-#: read-cache.c:2267
+#: read-cache.c:2268
 #, c-format
 msgid "unable to create load_index_extensions thread: %s"
 msgstr ""
 
-#: read-cache.c:2294
+#: read-cache.c:2295
 #, c-format
 msgid "unable to join load_index_extensions thread: %s"
 msgstr ""
 
-#: read-cache.c:2337
+#: read-cache.c:2338
 #, c-format
 msgid "could not freshen shared index '%s'"
 msgstr ""
 
-#: read-cache.c:2399
+#: read-cache.c:2400
 #, c-format
 msgid "broken index, expect %s in %s, got %s"
 msgstr ""
 
-#: read-cache.c:2980
+#: read-cache.c:2981
 msgid "cannot write split index for a sparse index"
 msgstr ""
 
-#: read-cache.c:3130
+#: read-cache.c:3131
 msgid "failed to convert to a sparse-index"
 msgstr ""
 
-#: read-cache.c:3220
+#: read-cache.c:3221
 #, c-format
 msgid "unable to open git dir: %s"
 msgstr ""
 
-#: read-cache.c:3234
+#: read-cache.c:3235
 #, c-format
 msgid "unable to unlink: %s"
 msgstr ""
 
-#: read-cache.c:3266
+#: read-cache.c:3267
 #, c-format
 msgid "cannot fix permission bits on '%s'"
 msgstr ""
 
-#: read-cache.c:3429
+#: read-cache.c:3430
 #, c-format
 msgid "%s: cannot drop to stage #0"
 msgstr ""
 
-#: read-cache.c:3924
+#: read-cache.c:3925
 #, c-format
 msgid "unexpected diff status %c"
 msgstr ""
 
-#: read-cache.c:3939
+#: read-cache.c:3940
 #, c-format
 msgid "remove '%s'\n"
 msgstr ""
@@ -25455,83 +25456,83 @@ msgstr ""
 msgid "'%s' already specified as '%s'"
 msgstr ""
 
-#: setup.c:857
+#: setup.c:858
 #, c-format
 msgid "Expected git repo version <= %d, found %d"
 msgstr ""
 
-#: setup.c:865
+#: setup.c:866
 msgid "unknown repository extension found:"
 msgid_plural "unknown repository extensions found:"
 msgstr[0] ""
 msgstr[1] ""
 
-#: setup.c:879
+#: setup.c:880
 msgid "repo version is 0, but v1-only extension found:"
 msgid_plural "repo version is 0, but v1-only extensions found:"
 msgstr[0] ""
 msgstr[1] ""
 
-#: setup.c:900
+#: setup.c:901
 #, c-format
 msgid "error opening '%s'"
 msgstr ""
 
-#: setup.c:902
+#: setup.c:903
 #, c-format
 msgid "too large to be a .git file: '%s'"
 msgstr ""
 
-#: setup.c:904
+#: setup.c:905
 #, c-format
 msgid "error reading %s"
 msgstr ""
 
-#: setup.c:906
+#: setup.c:907
 #, c-format
 msgid "invalid gitfile format: %s"
 msgstr ""
 
-#: setup.c:908
+#: setup.c:909
 #, c-format
 msgid "no path in gitfile: %s"
 msgstr ""
 
-#: setup.c:910
+#: setup.c:911
 #, c-format
 msgid "not a git repository: %s"
 msgstr ""
 
-#: setup.c:1012
+#: setup.c:1013
 #, c-format
 msgid "'$%s' too big"
 msgstr ""
 
-#: setup.c:1026
+#: setup.c:1027
 #, c-format
 msgid "not a git repository: '%s'"
 msgstr ""
 
-#: setup.c:1055 setup.c:1057 setup.c:1088
+#: setup.c:1056 setup.c:1058 setup.c:1089
 #, c-format
 msgid "cannot chdir to '%s'"
 msgstr ""
 
-#: setup.c:1060 setup.c:1116 setup.c:1126 setup.c:1165 setup.c:1173
+#: setup.c:1061 setup.c:1117 setup.c:1127 setup.c:1166 setup.c:1174
 msgid "cannot come back to cwd"
 msgstr ""
 
-#: setup.c:1187
+#: setup.c:1188
 #, c-format
 msgid "failed to stat '%*s%s%s'"
 msgstr ""
 
-#: setup.c:1259
+#: setup.c:1260
 #, c-format
 msgid "safe.directory '%s' not absolute"
 msgstr ""
 
-#: setup.c:1345 setup.c:1788
+#: setup.c:1346 setup.c:1789
 #, c-format
 msgid ""
 "detected dubious ownership in repository at '%s'\n"
@@ -25540,137 +25541,137 @@ msgid ""
 "\tgit config --global --add safe.directory %s"
 msgstr ""
 
-#: setup.c:1751
+#: setup.c:1752
 msgid "Unable to read current working directory"
 msgstr ""
 
-#: setup.c:1760 setup.c:1766
+#: setup.c:1761 setup.c:1767
 #, c-format
 msgid "cannot change to '%s'"
 msgstr ""
 
-#: setup.c:1771
+#: setup.c:1772
 #, c-format
 msgid "not a git repository (or any of the parent directories): %s"
 msgstr ""
 
-#: setup.c:1777
+#: setup.c:1778
 #, c-format
 msgid ""
 "not a git repository (or any parent up to mount point %s)\n"
 "Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set)."
 msgstr ""
 
-#: setup.c:1799
+#: setup.c:1800
 #, c-format
 msgid "cannot use bare repository '%s' (safe.bareRepository is '%s')"
 msgstr ""
 
-#: setup.c:1935
+#: setup.c:1938
 #, c-format
 msgid ""
 "problem with core.sharedRepository filemode value (0%.3o).\n"
 "The owner of files must always have read and write permissions."
 msgstr ""
 
-#: setup.c:2004
+#: setup.c:2007
 msgid "fork failed"
 msgstr ""
 
-#: setup.c:2009
+#: setup.c:2012
 msgid "setsid failed"
 msgstr ""
 
-#: setup.c:2111
+#: setup.c:2114
 #, c-format
 msgid "cannot stat template '%s'"
 msgstr ""
 
-#: setup.c:2116
+#: setup.c:2119
 #, c-format
 msgid "cannot opendir '%s'"
 msgstr ""
 
-#: setup.c:2128
+#: setup.c:2131
 #, c-format
 msgid "cannot readlink '%s'"
 msgstr ""
 
-#: setup.c:2130
+#: setup.c:2133
 #, c-format
 msgid "cannot symlink '%s' '%s'"
 msgstr ""
 
-#: setup.c:2136
+#: setup.c:2139
 #, c-format
 msgid "cannot copy '%s' to '%s'"
 msgstr ""
 
-#: setup.c:2140
+#: setup.c:2143
 #, c-format
 msgid "ignoring template %s"
 msgstr ""
 
-#: setup.c:2164
+#: setup.c:2167
 #, c-format
 msgid "templates not found in %s"
 msgstr ""
 
-#: setup.c:2179
+#: setup.c:2182
 #, c-format
 msgid "not copying templates from '%s': %s"
 msgstr ""
 
-#: setup.c:2297
+#: setup.c:2300
 #, c-format
 msgid "invalid initial branch name: '%s'"
 msgstr ""
 
-#: setup.c:2306
+#: setup.c:2309
 #, c-format
 msgid "re-init: ignored --initial-branch=%s"
 msgstr ""
 
-#: setup.c:2441
+#: setup.c:2444
 #, c-format
 msgid "unable to handle file type %d"
 msgstr ""
 
-#: setup.c:2444
+#: setup.c:2447
 #, c-format
 msgid "unable to move %s to %s"
 msgstr ""
 
-#: setup.c:2513
+#: setup.c:2528
 msgid "attempt to reinitialize repository with different hash"
 msgstr ""
 
-#: setup.c:2532
+#: setup.c:2547
 msgid ""
 "attempt to reinitialize repository with different reference storage format"
 msgstr ""
 
-#: setup.c:2563 setup.c:2566
+#: setup.c:2580 setup.c:2583
 #, c-format
 msgid "%s already exists"
 msgstr ""
 
-#: setup.c:2631
+#: setup.c:2648
 #, c-format
 msgid "Reinitialized existing shared Git repository in %s%s\n"
 msgstr ""
 
-#: setup.c:2632
+#: setup.c:2649
 #, c-format
 msgid "Reinitialized existing Git repository in %s%s\n"
 msgstr ""
 
-#: setup.c:2636
+#: setup.c:2653
 #, c-format
 msgid "Initialized empty shared Git repository in %s%s\n"
 msgstr ""
 
-#: setup.c:2637
+#: setup.c:2654
 #, c-format
 msgid "Initialized empty Git repository in %s%s\n"
 msgstr ""
@@ -27793,35 +27794,40 @@ msgstr ""
 msgid "(body) Adding cc: %s from line '%s'\n"
 msgstr ""
 
-#: git-send-email.perl:2146
+#: git-send-email.perl:2121
 #, perl-format
-msgid "(%s) Could not execute '%s'"
-msgstr ""
-
-#: git-send-email.perl:2148
-#, perl-format
-msgid "(%s) Malformed output from '%s'"
+msgid "error: invalid SMTP port '%s'\n"
 msgstr ""
 
 #: git-send-email.perl:2157
 #, perl-format
+msgid "(%s) Could not execute '%s'"
+msgstr ""
+
+#: git-send-email.perl:2159
+#, perl-format
+msgid "(%s) Malformed output from '%s'"
+msgstr ""
+
+#: git-send-email.perl:2168
+#, perl-format
 msgid "(%s) failed to close pipe to '%s'"
 msgstr ""
 
-#: git-send-email.perl:2201
+#: git-send-email.perl:2212
 #, perl-format
 msgid "(%s) Adding %s: %s from: '%s'\n"
 msgstr ""
 
-#: git-send-email.perl:2233
+#: git-send-email.perl:2244
 msgid "cannot send message as 7bit"
 msgstr ""
 
-#: git-send-email.perl:2241
+#: git-send-email.perl:2252
 msgid "invalid transfer encoding"
 msgstr ""
 
-#: git-send-email.perl:2294
+#: git-send-email.perl:2305
 #, perl-format
 msgid ""
 "fatal: %s: rejected by %s hook\n"
@@ -27829,25 +27835,25 @@ msgid ""
 "warning: no patches were sent\n"
 msgstr ""
 
-#: git-send-email.perl:2304 git-send-email.perl:2357 git-send-email.perl:2367
+#: git-send-email.perl:2315 git-send-email.perl:2368 git-send-email.perl:2378
 #, perl-format
 msgid "unable to open %s: %s\n"
 msgstr ""
 
-#: git-send-email.perl:2307
+#: git-send-email.perl:2318
 #, perl-format
 msgid ""
 "fatal: %s:%d is longer than 998 characters\n"
 "warning: no patches were sent\n"
 msgstr ""
 
-#: git-send-email.perl:2325
+#: git-send-email.perl:2336
 #, perl-format
 msgid "Skipping %s with backup suffix '%s'.\n"
 msgstr ""
 
 #. TRANSLATORS: please keep "[y|N]" as is.
-#: git-send-email.perl:2329
+#: git-send-email.perl:2340
 #, perl-format
 msgid "Do you really want to send %s? [y|N]: "
 msgstr ""
