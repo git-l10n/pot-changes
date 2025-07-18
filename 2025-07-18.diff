@@ -444,3 +444,285 @@
  msgid "unsupported file mode: 0%o (SHA1: %s)"
  msgstr ""
  
+
+
+#################### Fri, 18 Jul 2025 22:58:53 +0000 ####################
+
+--- po/git.pot.old	2025-07-18 22:58:53.822467113 +0000
++++ po/git.pot.new	2025-07-18 22:58:53.899468852 +0000
+@@ -171,6 +171,23 @@
+ #, c-format
+ msgid ""
+ "\n"
++"To set a custom comment string please run\n"
++"\n"
++"%s\n"
++"where '%s' is the string you wish to use.\n"
++msgstr ""
++
++#, c-format
++msgid ""
++"\n"
++"To use the default comment string (#) please run\n"
++"\n"
++"%s"
++msgstr ""
++
++#, c-format
++msgid ""
++"\n"
+ "Write a message for tag:\n"
+ "  %s\n"
+ "Lines starting with '%s' will be ignored.\n"
+@@ -708,6 +725,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "%s cannot be negative"
++msgstr ""
++
++#, c-format
+ msgid "%s cannot be resolved to branch"
+ msgstr ""
+ 
+@@ -1231,6 +1252,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "'%s' cannot be negative"
++msgstr ""
++
++#, c-format
+ msgid "'%s' cannot be used with '%s'"
+ msgstr ""
+ 
+@@ -2168,6 +2193,9 @@
+ msgid "<char>"
+ msgstr ""
+ 
++msgid "<comment string>"
++msgstr ""
++
+ msgid "<count>"
+ msgstr ""
+ 
+@@ -3491,6 +3519,9 @@
+ msgid "EXPERIMENTAL: Replay commits on a new base, works with bare repos too"
+ msgstr ""
+ 
++msgid "EXPERIMENTAL: Show when files were last modified"
++msgstr ""
++
+ msgid "Emit [broken] object attributes"
+ msgstr ""
+ 
+@@ -5679,6 +5710,10 @@
+ msgid "Summary email is empty, skipping it\n"
+ msgstr ""
+ 
++#, c-format
++msgid "Support for '%s=auto' is deprecated and will be removed in git 3.0\n"
++msgstr ""
++
+ msgid ""
+ "Support for <GIT_DIR>/info/grafts is deprecated\n"
+ "and will be removed in a future Git version.\n"
+@@ -8196,6 +8231,9 @@
+ msgid "can not move directory into itself"
+ msgstr ""
+ 
++msgid "can only get last-modified one tree at a time"
++msgstr ""
++
+ #, c-format
+ msgid "can't change the meaning of the term '%s'"
+ msgstr ""
+@@ -11401,6 +11439,9 @@
+ msgid "expiry-date"
+ msgstr ""
+ 
++msgid "extended format will include the commit message in the output"
++msgstr ""
++
+ #, c-format
+ msgid "extended pseudo-merge entry is too short (%<PRIuMAX> >= %<PRIuMAX>)"
+ msgstr ""
+@@ -11461,6 +11502,9 @@
+ msgid "failed to close rev-list's stdin"
+ msgstr ""
+ 
++msgid "failed to convert index to a sparse index; resolve merge conflicts and try again"
++msgstr ""
++
+ msgid "failed to convert to a sparse-index"
+ msgstr ""
+ 
+@@ -11777,6 +11821,9 @@
+ msgid "failed to read '%s'"
+ msgstr ""
+ 
++msgid "failed to read index"
++msgstr ""
++
+ #, c-format
+ msgid "failed to read object '%s'."
+ msgstr ""
+@@ -11797,6 +11844,9 @@
+ msgid "failed to read the index"
+ msgstr ""
+ 
++msgid "failed to reapply sparse-checkout patterns"
++msgstr ""
++
+ #, c-format
+ msgid "failed to recurse into submodule '%s'"
+ msgstr ""
+@@ -11809,6 +11859,10 @@
+ msgid "failed to remove %s"
+ msgstr ""
+ 
++#, c-format
++msgid "failed to remove '%s'"
++msgstr ""
++
+ msgid "failed to remove 'git notes merge' worktree"
+ msgstr ""
+ 
+@@ -12214,6 +12268,9 @@
+ msgid "for conflicts, use this marker size"
+ msgstr ""
+ 
++msgid "for safety, refusing to clean without one of --force or --dry-run"
++msgstr ""
++
+ msgid "force"
+ msgstr ""
+ 
+@@ -12858,6 +12915,9 @@
+ "                       [--parse] [<file>...]"
+ msgstr ""
+ 
++msgid "git last-modified [-r] [-t] [<revision-range>] [[--] <path>...]"
++msgstr ""
++
+ msgid "git log --pretty=short | git shortlog [<options>]"
+ msgstr ""
+ 
+@@ -13255,7 +13315,7 @@
+ "             [--] [<pattern>...]"
+ msgstr ""
+ 
+-msgid "git sparse-checkout (init | list | set | add | reapply | disable | check-rules) [<options>]"
++msgid "git sparse-checkout (init | list | set | add | reapply | disable | check-rules | clean) [<options>]"
+ msgstr ""
+ 
+ msgid "git sparse-checkout add [--skip-checks] (--stdin | <patterns>)"
+@@ -14223,6 +14283,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "invalid element '%s' from remote info"
++msgstr ""
++
++#, c-format
+ msgid "invalid extra cruft tip: '%s'"
+ msgstr ""
+ 
+@@ -15216,6 +15280,12 @@
+ msgid "multiple updates for ref '%s' not allowed"
+ msgstr ""
+ 
++msgid "must be in a cone-mode sparse-checkout to clean directories"
++msgstr ""
++
++msgid "must be in a sparse-checkout to clean directories"
++msgstr ""
++
+ msgid "must be in a sparse-checkout to reapply sparsity patterns"
+ msgstr ""
+ 
+@@ -17210,6 +17280,9 @@
+ msgid "recurse into subtrees"
+ msgstr ""
+ 
++msgid "recurse into subtrees and include the tree entries too"
++msgstr ""
++
+ msgid "recurse through submodules"
+ msgstr ""
+ 
+@@ -17643,6 +17716,9 @@
+ msgid "report archived files on stderr"
+ msgstr ""
+ 
++msgid "report each affected file, not just directories"
++msgstr ""
++
+ msgid "report on-disk index format version"
+ msgstr ""
+ 
+@@ -18069,6 +18145,10 @@
+ msgid "serve up the info/refs for git-http-backend"
+ msgstr ""
+ 
++#, c-format
++msgid "server advertised a promisor remote without a name or URL: %s"
++msgstr ""
++
+ msgid "server does not support wait-for-done"
+ msgstr ""
+ 
+@@ -18881,6 +18961,10 @@
+ msgid "submodule git dir '%s' is inside git dir '%.*s'"
+ msgstr ""
+ 
++#, c-format
++msgid "submodule name '%s' already used for path '%s'"
++msgstr ""
++
+ msgid "suboptimal pack - out of memory"
+ msgstr ""
+ 
+@@ -19971,6 +20055,9 @@
+ msgid "unable to set up work tree using invalid config"
+ msgstr ""
+ 
++msgid "unable to setup last-modified"
++msgstr ""
++
+ msgid "unable to sign the tag"
+ msgstr ""
+ 
+@@ -20264,10 +20351,6 @@
+ msgid "unknown diff status: %c"
+ msgstr ""
+ 
+-#, c-format
+-msgid "unknown element '%s' from remote info"
+-msgstr ""
+-
+ msgid "unknown error occurred while reading the configuration files"
+ msgstr ""
+ 
+@@ -20288,6 +20371,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unknown last-modified argument: %s"
++msgstr ""
++
++#, c-format
+ msgid "unknown mandatory capability %s; this remote helper probably needs newer version of Git"
+ msgstr ""
+ 
+@@ -20536,6 +20623,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unsupported field '%s' in '%s' config"
++msgstr ""
++
++#, c-format
+ msgid "unsupported file mode: 0%o (SHA1: %s)"
+ msgstr ""
+ 
