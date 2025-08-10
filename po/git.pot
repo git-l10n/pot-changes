@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2025-08-08 22:58+0000\n"
+"POT-Creation-Date: 2025-08-10 02:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -859,7 +859,7 @@ msgstr ""
 #: builtin/submodule--helper.c:3092 builtin/tag.c:587 builtin/tag.c:634
 #: builtin/worktree.c:743 builtin/worktree.c:746 builtin/worktree.c:823
 #: builtin/worktree.c:826 builtin/worktree.c:829 builtin/worktree.c:1077
-#: parse-options.c:411 parse-options.c:1508 range-diff.c:584 revision.c:2476
+#: parse-options.c:411 parse-options.c:1524 range-diff.c:584 revision.c:2476
 #: revision.c:2482 revision.c:2487 revision.c:2496 revision.c:2501
 #: revision.c:2733 revision.c:2804 revision.c:2816 revision.c:2822
 #: revision.c:2842 revision.c:2852 revision.c:2862 revision.c:3149
@@ -6757,26 +6757,31 @@ msgstr ""
 msgid "%s...%s: no merge base"
 msgstr ""
 
-#: builtin/diff.c:534
+#: builtin/diff.c:501 setup.c:1064 setup.c:1120 setup.c:1130 setup.c:1169
+#: setup.c:1177
+msgid "cannot come back to cwd"
+msgstr ""
+
+#: builtin/diff.c:535
 msgid "Not a git repository"
 msgstr ""
 
-#: builtin/diff.c:580 builtin/grep.c:751
+#: builtin/diff.c:581 builtin/grep.c:751
 #, c-format
 msgid "invalid object '%s' given."
 msgstr ""
 
-#: builtin/diff.c:596
+#: builtin/diff.c:597
 #, c-format
 msgid "more than two blobs given: '%s'"
 msgstr ""
 
-#: builtin/diff.c:601
+#: builtin/diff.c:602
 #, c-format
 msgid "unhandled object '%s' given."
 msgstr ""
 
-#: builtin/diff.c:635
+#: builtin/diff.c:636
 #, c-format
 msgid "%s...%s: multiple merge bases, using %s"
 msgstr ""
@@ -7480,7 +7485,7 @@ msgid "show only <n> matched refs"
 msgstr ""
 
 #: builtin/for-each-ref.c:38
-msgid "start-after"
+msgid "marker"
 msgstr ""
 
 #: builtin/for-each-ref.c:38
@@ -9998,33 +10003,33 @@ msgstr ""
 msgid "Could not write object file"
 msgstr ""
 
-#: builtin/merge-recursive.c:57
+#: builtin/merge-recursive.c:58
 #, c-format
 msgid "unknown option %s"
 msgstr ""
 
-#: builtin/merge-recursive.c:62
+#: builtin/merge-recursive.c:63
 #, c-format
 msgid "could not parse object '%s'"
 msgstr ""
 
-#: builtin/merge-recursive.c:65
+#: builtin/merge-recursive.c:66
 #, c-format
 msgid "cannot handle more than %d base. Ignoring %s."
 msgid_plural "cannot handle more than %d bases. Ignoring %s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: builtin/merge-recursive.c:73
+#: builtin/merge-recursive.c:74
 msgid "not handling anything other than two heads merge."
 msgstr ""
 
-#: builtin/merge-recursive.c:82 builtin/merge-recursive.c:84
+#: builtin/merge-recursive.c:83 builtin/merge-recursive.c:85
 #, c-format
 msgid "could not resolve ref '%s'"
 msgstr ""
 
-#: builtin/merge-recursive.c:90
+#: builtin/merge-recursive.c:91
 #, c-format
 msgid "Merging %s with %s\n"
 msgstr ""
@@ -10146,10 +10151,6 @@ msgstr ""
 
 #: builtin/merge.c:266 builtin/pull.c:146
 msgid "(synonym to --stat)"
-msgstr ""
-
-#: builtin/merge.c:267
-msgid "compact-summary"
 msgstr ""
 
 #: builtin/merge.c:268 builtin/pull.c:149
@@ -11101,7 +11102,7 @@ msgstr ""
 msgid "use notes from <notes-ref>"
 msgstr ""
 
-#: builtin/notes.c:1155 builtin/remote.c:1964 parse-options.c:1002
+#: builtin/notes.c:1155 builtin/remote.c:1964 parse-options.c:1008
 #, c-format
 msgid "unknown subcommand: `%s'"
 msgstr ""
@@ -16775,7 +16776,7 @@ msgstr ""
 msgid "use relative paths for worktrees"
 msgstr ""
 
-#: builtin/worktree.c:821 diff.c:4897 parse-options.c:1504
+#: builtin/worktree.c:821 diff.c:4897 parse-options.c:1520
 #, c-format
 msgid "options '%s', '%s', and '%s' cannot be used together"
 msgstr ""
@@ -19453,7 +19454,7 @@ msgstr ""
 msgid "pathspec magic not supported by --follow: %s"
 msgstr ""
 
-#: diff.c:4893 parse-options.c:1500
+#: diff.c:4893 parse-options.c:1516
 #, c-format
 msgid "options '%s', '%s', '%s', and '%s' cannot be used together"
 msgstr ""
@@ -22518,26 +22519,26 @@ msgstr ""
 msgid "did you mean `--%s` (with two dashes)?"
 msgstr ""
 
-#: parse-options.c:911 parse-options.c:1411
+#: parse-options.c:911 parse-options.c:1419
 #, c-format
 msgid "alias of --%s"
 msgstr ""
 
-#: parse-options.c:1174
+#: parse-options.c:1182
 msgid "need a subcommand"
 msgstr ""
 
-#: parse-options.c:1180
+#: parse-options.c:1188
 #, c-format
 msgid "unknown option `%s'"
 msgstr ""
 
-#: parse-options.c:1182
+#: parse-options.c:1190
 #, c-format
 msgid "unknown switch `%c'"
 msgstr ""
 
-#: parse-options.c:1184
+#: parse-options.c:1192
 #, c-format
 msgid "unknown non-ascii option in string: `%s'"
 msgstr ""
@@ -22554,7 +22555,7 @@ msgstr ""
 #. "%s" without any placeholder signal.  Most
 #. translations leave this message as is.
 #.
-#: parse-options.c:1221
+#: parse-options.c:1229
 #, c-format
 msgid "[=<%s>]"
 msgstr ""
@@ -22571,7 +22572,7 @@ msgstr ""
 #. "%s" without any placeholder signal.  Most
 #. translations leave this message as is.
 #.
-#: parse-options.c:1236
+#: parse-options.c:1244
 #, c-format
 msgid "[<%s>]"
 msgstr ""
@@ -22586,16 +22587,16 @@ msgstr ""
 #. may use "%s" without any placeholder signal.  Most
 #. translations leave this message as is.
 #.
-#: parse-options.c:1249
+#: parse-options.c:1257
 #, c-format
 msgid " <%s>"
 msgstr ""
 
-#: parse-options.c:1250
+#: parse-options.c:1258
 msgid "..."
 msgstr ""
 
-#: parse-options.c:1287
+#: parse-options.c:1295
 #, c-format
 msgid "usage: %s"
 msgstr ""
@@ -22603,7 +22604,7 @@ msgstr ""
 #. TRANSLATORS: the colon here should align with the
 #. one in "usage: %s" translation.
 #.
-#: parse-options.c:1302
+#: parse-options.c:1310
 #, c-format
 msgid "   or: %s"
 msgstr ""
@@ -22627,21 +22628,21 @@ msgstr ""
 #. translated) N_() usage string, which contained embedded
 #. newlines before we split it up.
 #.
-#: parse-options.c:1323
+#: parse-options.c:1331
 #, c-format
 msgid "%*s%s"
 msgstr ""
 
-#: parse-options.c:1346
+#: parse-options.c:1354
 #, c-format
 msgid "    %s"
 msgstr ""
 
-#: parse-options.c:1403
+#: parse-options.c:1411
 msgid "-NUM"
 msgstr ""
 
-#: parse-options.c:1432
+#: parse-options.c:1440
 #, c-format
 msgid "opposite of --no-%s"
 msgstr ""
@@ -25747,10 +25748,6 @@ msgstr ""
 msgid "cannot chdir to '%s'"
 msgstr ""
 
-#: setup.c:1064 setup.c:1120 setup.c:1130 setup.c:1169 setup.c:1177
-msgid "cannot come back to cwd"
-msgstr ""
-
 #: setup.c:1191
 #, c-format
 msgid "failed to stat '%*s%s%s'"
@@ -26938,7 +26935,7 @@ msgstr ""
 msgid "warning: "
 msgstr ""
 
-#: usage.c:381
+#: usage.c:382
 #, c-format
 msgid ""
 "'%s' is nominated for removal.\n"
@@ -26948,7 +26945,7 @@ msgid ""
 "to <git@vger.kernel.org>.  Thanks.\n"
 msgstr ""
 
-#: usage.c:387
+#: usage.c:388
 msgid "refusing to run without --i-still-use-this"
 msgstr ""
 
