@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2025-08-15 22:57+0000\n"
+"POT-Creation-Date: 2025-08-20 02:22+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -2400,7 +2400,7 @@ msgid "invalid ident line: %.*s"
 msgstr ""
 
 #: builtin/am.c:1387 builtin/checkout.c:846 builtin/clone.c:685
-#: commit-graph.c:1244
+#: commit-graph.c:1231
 #, c-format
 msgid "unable to parse commit %s"
 msgstr ""
@@ -2620,9 +2620,9 @@ msgstr ""
 #: builtin/cat-file.c:1062 builtin/cat-file.c:1066 builtin/cat-file.c:1073
 #: builtin/clone.c:978 builtin/diagnose.c:32 builtin/for-each-ref.c:37
 #: builtin/init-db.c:111 builtin/ls-files.c:642 builtin/ls-tree.c:369
-#: builtin/refs.c:28 builtin/replace.c:574 builtin/submodule--helper.c:1857
-#: builtin/submodule--helper.c:2803 builtin/submodule--helper.c:3450
-#: builtin/tag.c:533 builtin/verify-tag.c:34
+#: builtin/refs.c:28 builtin/replace.c:574 builtin/repo.c:121
+#: builtin/submodule--helper.c:1857 builtin/submodule--helper.c:2803
+#: builtin/submodule--helper.c:3450 builtin/tag.c:533 builtin/verify-tag.c:34
 msgid "format"
 msgstr ""
 
@@ -3124,7 +3124,7 @@ msgid "show work cost statistics"
 msgstr ""
 
 #: builtin/blame.c:906 builtin/checkout.c:1705 builtin/clone.c:919
-#: builtin/commit-graph.c:84 builtin/commit-graph.c:255 builtin/fetch.c:2356
+#: builtin/commit-graph.c:84 builtin/commit-graph.c:256 builtin/fetch.c:2356
 #: builtin/merge.c:323 builtin/multi-pack-index.c:134
 #: builtin/multi-pack-index.c:194 builtin/multi-pack-index.c:222
 #: builtin/multi-pack-index.c:252 builtin/pull.c:126 builtin/push.c:586
@@ -5325,76 +5325,76 @@ msgstr ""
 msgid "Could not open commit-graph '%s'"
 msgstr ""
 
-#: builtin/commit-graph.c:115
+#: builtin/commit-graph.c:116
 #, c-format
 msgid "could not open commit-graph chain '%s'"
 msgstr ""
 
-#: builtin/commit-graph.c:162
+#: builtin/commit-graph.c:163
 #, c-format
 msgid "unrecognized --split argument, %s"
 msgstr ""
 
-#: builtin/commit-graph.c:175
+#: builtin/commit-graph.c:176
 #, c-format
 msgid "unexpected non-hex object ID: %s"
 msgstr ""
 
-#: builtin/commit-graph.c:180
+#: builtin/commit-graph.c:181
 #, c-format
 msgid "invalid object: %s"
 msgstr ""
 
-#: builtin/commit-graph.c:200 parse-options-cb.c:27 parse-options-cb.c:31
+#: builtin/commit-graph.c:201 parse-options-cb.c:27 parse-options-cb.c:31
 #, c-format
 msgid "option `%s' expects a numerical value"
 msgstr ""
 
-#: builtin/commit-graph.c:232
+#: builtin/commit-graph.c:233
 msgid "start walk at all refs"
 msgstr ""
 
-#: builtin/commit-graph.c:234
+#: builtin/commit-graph.c:235
 msgid "scan pack-indexes listed by stdin for commits"
 msgstr ""
 
-#: builtin/commit-graph.c:236
+#: builtin/commit-graph.c:237
 msgid "start walk at commits listed by stdin"
 msgstr ""
 
-#: builtin/commit-graph.c:238
+#: builtin/commit-graph.c:239
 msgid "include all commits already in the commit-graph file"
 msgstr ""
 
-#: builtin/commit-graph.c:240
+#: builtin/commit-graph.c:241
 msgid "enable computation for changed paths"
 msgstr ""
 
-#: builtin/commit-graph.c:242
+#: builtin/commit-graph.c:243
 msgid "allow writing an incremental commit-graph file"
 msgstr ""
 
-#: builtin/commit-graph.c:246
+#: builtin/commit-graph.c:247
 msgid "maximum number of commits in a non-base split commit-graph"
 msgstr ""
 
-#: builtin/commit-graph.c:248
+#: builtin/commit-graph.c:249
 msgid "maximum ratio between two levels of a split commit-graph"
 msgstr ""
 
-#: builtin/commit-graph.c:250
+#: builtin/commit-graph.c:251
 msgid "only expire files older than a given date-time"
 msgstr ""
 
-#: builtin/commit-graph.c:252
+#: builtin/commit-graph.c:253
 msgid "maximum number of changed-path Bloom filters to compute"
 msgstr ""
 
-#: builtin/commit-graph.c:278
+#: builtin/commit-graph.c:279
 msgid "use at most one of --reachable, --stdin-commits, or --stdin-packs"
 msgstr ""
 
-#: builtin/commit-graph.c:310
+#: builtin/commit-graph.c:311
 msgid "Collecting commits from input"
 msgstr ""
 
@@ -11226,7 +11226,7 @@ msgstr ""
 msgid "unable to pack objects reachable from tag %s"
 msgstr ""
 
-#: builtin/pack-objects.c:3336 commit-graph.c:1506
+#: builtin/pack-objects.c:3336 commit-graph.c:1493
 #, c-format
 msgid "unable to get type of object %s"
 msgstr ""
@@ -13986,6 +13986,20 @@ msgstr ""
 msgid "replaying merge commits is not supported yet!"
 msgstr ""
 
+#: builtin/repo.c:88
+#, c-format
+msgid "key '%s' not found"
+msgstr ""
+
+#: builtin/repo.c:122
+msgid "output format"
+msgstr ""
+
+#: builtin/repo.c:133
+#, c-format
+msgid "invalid format '%s'"
+msgstr ""
+
 #: builtin/rerere.c:15
 msgid ""
 "git rerere [clear | forget <pathspec>... | diff | status | remaining | gc]"
@@ -14780,7 +14794,7 @@ msgstr ""
 msgid "toggle the use of a sparse index"
 msgstr ""
 
-#: builtin/sparse-checkout.c:496 commit-graph.c:2071 midx-write.c:1084
+#: builtin/sparse-checkout.c:496 commit-graph.c:2061 midx-write.c:1084
 #: sequencer.c:4410
 #, c-format
 msgid "unable to create leading directories of %s"
@@ -17530,381 +17544,385 @@ msgid "EXPERIMENTAL: Replay commits on a new base, works with bare repos too"
 msgstr ""
 
 #: command-list.h:164
-msgid "Generates a summary of pending changes"
+msgid "Retrieve information about the repository"
 msgstr ""
 
 #: command-list.h:165
-msgid "Reuse recorded resolution of conflicted merges"
+msgid "Generates a summary of pending changes"
 msgstr ""
 
 #: command-list.h:166
-msgid "Reset current HEAD to the specified state"
+msgid "Reuse recorded resolution of conflicted merges"
 msgstr ""
 
 #: command-list.h:167
-msgid "Restore working tree files"
+msgid "Reset current HEAD to the specified state"
 msgstr ""
 
 #: command-list.h:168
-msgid "Lists commit objects in reverse chronological order"
+msgid "Restore working tree files"
 msgstr ""
 
 #: command-list.h:169
-msgid "Pick out and massage parameters"
+msgid "Lists commit objects in reverse chronological order"
 msgstr ""
 
 #: command-list.h:170
-msgid "Revert some existing commits"
+msgid "Pick out and massage parameters"
 msgstr ""
 
 #: command-list.h:171
-msgid "Remove files from the working tree and from the index"
+msgid "Revert some existing commits"
 msgstr ""
 
 #: command-list.h:172
-msgid "Send a collection of patches as emails"
+msgid "Remove files from the working tree and from the index"
 msgstr ""
 
 #: command-list.h:173
-msgid "Push objects over Git protocol to another repository"
+msgid "Send a collection of patches as emails"
 msgstr ""
 
 #: command-list.h:174
-msgid "Git's i18n setup code for shell scripts"
+msgid "Push objects over Git protocol to another repository"
 msgstr ""
 
 #: command-list.h:175
-msgid "Common Git shell script setup code"
+msgid "Git's i18n setup code for shell scripts"
 msgstr ""
 
 #: command-list.h:176
-msgid "Restricted login shell for Git-only SSH access"
+msgid "Common Git shell script setup code"
 msgstr ""
 
 #: command-list.h:177
-msgid "Summarize 'git log' output"
+msgid "Restricted login shell for Git-only SSH access"
 msgstr ""
 
 #: command-list.h:178
-msgid "Show various types of objects"
+msgid "Summarize 'git log' output"
 msgstr ""
 
 #: command-list.h:179
-msgid "Show branches and their commits"
+msgid "Show various types of objects"
 msgstr ""
 
 #: command-list.h:180
-msgid "Show packed archive index"
+msgid "Show branches and their commits"
 msgstr ""
 
 #: command-list.h:181
-msgid "List references in a local repository"
+msgid "Show packed archive index"
 msgstr ""
 
 #: command-list.h:182
-msgid "Reduce your working tree to a subset of tracked files"
+msgid "List references in a local repository"
 msgstr ""
 
 #: command-list.h:183
-msgid "Add file contents to the staging area"
+msgid "Reduce your working tree to a subset of tracked files"
 msgstr ""
 
 #: command-list.h:184
-msgid "Stash the changes in a dirty working directory away"
+msgid "Add file contents to the staging area"
 msgstr ""
 
 #: command-list.h:185
-msgid "Show the working tree status"
+msgid "Stash the changes in a dirty working directory away"
 msgstr ""
 
 #: command-list.h:186
-msgid "Remove unnecessary whitespace"
+msgid "Show the working tree status"
 msgstr ""
 
 #: command-list.h:187
-msgid "Initialize, update or inspect submodules"
+msgid "Remove unnecessary whitespace"
 msgstr ""
 
 #: command-list.h:188
-msgid "Bidirectional operation between a Subversion repository and Git"
+msgid "Initialize, update or inspect submodules"
 msgstr ""
 
 #: command-list.h:189
-msgid "Switch branches"
+msgid "Bidirectional operation between a Subversion repository and Git"
 msgstr ""
 
 #: command-list.h:190
-msgid "Read, modify and delete symbolic refs"
+msgid "Switch branches"
 msgstr ""
 
 #: command-list.h:191
-msgid "Create, list, delete or verify a tag object signed with GPG"
+msgid "Read, modify and delete symbolic refs"
 msgstr ""
 
 #: command-list.h:192
-msgid "Creates a temporary file with a blob's contents"
+msgid "Create, list, delete or verify a tag object signed with GPG"
 msgstr ""
 
 #: command-list.h:193
-msgid "Unpack objects from a packed archive"
+msgid "Creates a temporary file with a blob's contents"
 msgstr ""
 
 #: command-list.h:194
-msgid "Register file contents in the working tree to the index"
+msgid "Unpack objects from a packed archive"
 msgstr ""
 
 #: command-list.h:195
-msgid "Update the object name stored in a ref safely"
+msgid "Register file contents in the working tree to the index"
 msgstr ""
 
 #: command-list.h:196
-msgid "Update auxiliary info file to help dumb servers"
+msgid "Update the object name stored in a ref safely"
 msgstr ""
 
 #: command-list.h:197
-msgid "Send archive back to git-archive"
+msgid "Update auxiliary info file to help dumb servers"
 msgstr ""
 
 #: command-list.h:198
-msgid "Send objects packed back to git-fetch-pack"
+msgid "Send archive back to git-archive"
 msgstr ""
 
 #: command-list.h:199
-msgid "Show a Git logical variable"
+msgid "Send objects packed back to git-fetch-pack"
 msgstr ""
 
 #: command-list.h:200
-msgid "Check the GPG signature of commits"
+msgid "Show a Git logical variable"
 msgstr ""
 
 #: command-list.h:201
-msgid "Validate packed Git archive files"
+msgid "Check the GPG signature of commits"
 msgstr ""
 
 #: command-list.h:202
-msgid "Check the GPG signature of tags"
+msgid "Validate packed Git archive files"
 msgstr ""
 
 #: command-list.h:203
-msgid "Display version information about Git"
+msgid "Check the GPG signature of tags"
 msgstr ""
 
 #: command-list.h:204
-msgid "Show logs with differences each commit introduces"
+msgid "Display version information about Git"
 msgstr ""
 
 #: command-list.h:205
-msgid "Manage multiple working trees"
+msgid "Show logs with differences each commit introduces"
 msgstr ""
 
 #: command-list.h:206
-msgid "Create a tree object from the current index"
+msgid "Manage multiple working trees"
 msgstr ""
 
 #: command-list.h:207
-msgid "Defining attributes per path"
+msgid "Create a tree object from the current index"
 msgstr ""
 
 #: command-list.h:208
-msgid "Git command-line interface and conventions"
+msgid "Defining attributes per path"
 msgstr ""
 
 #: command-list.h:209
-msgid "A Git core tutorial for developers"
+msgid "Git command-line interface and conventions"
 msgstr ""
 
 #: command-list.h:210
-msgid "Providing usernames and passwords to Git"
+msgid "A Git core tutorial for developers"
 msgstr ""
 
 #: command-list.h:211
-msgid "Git for CVS users"
+msgid "Providing usernames and passwords to Git"
 msgstr ""
 
 #: command-list.h:212
-msgid "Tweaking diff output"
+msgid "Git for CVS users"
 msgstr ""
 
 #: command-list.h:213
-msgid "A useful minimum set of commands for Everyday Git"
+msgid "Tweaking diff output"
 msgstr ""
 
 #: command-list.h:214
-msgid "Frequently asked questions about using Git"
+msgid "A useful minimum set of commands for Everyday Git"
 msgstr ""
 
 #: command-list.h:215
-msgid "The bundle file format"
+msgid "Frequently asked questions about using Git"
 msgstr ""
 
 #: command-list.h:216
-msgid "Chunk-based file formats"
+msgid "The bundle file format"
 msgstr ""
 
 #: command-list.h:217
-msgid "Git commit-graph format"
+msgid "Chunk-based file formats"
 msgstr ""
 
 #: command-list.h:218
-msgid "Git index format"
+msgid "Git commit-graph format"
 msgstr ""
 
 #: command-list.h:219
-msgid "Git pack format"
+msgid "Git index format"
 msgstr ""
 
 #: command-list.h:220
-msgid "Git cryptographic signature formats"
+msgid "Git pack format"
 msgstr ""
 
 #: command-list.h:221
-msgid "A Git Glossary"
+msgid "Git cryptographic signature formats"
 msgstr ""
 
 #: command-list.h:222
-msgid "Hooks used by Git"
+msgid "A Git Glossary"
 msgstr ""
 
 #: command-list.h:223
-msgid "Specifies intentionally untracked files to ignore"
+msgid "Hooks used by Git"
 msgstr ""
 
 #: command-list.h:224
-msgid "The Git repository browser"
+msgid "Specifies intentionally untracked files to ignore"
 msgstr ""
 
 #: command-list.h:225
-msgid "Map author/committer names and/or E-Mail addresses"
+msgid "The Git repository browser"
 msgstr ""
 
 #: command-list.h:226
-msgid "Defining submodule properties"
+msgid "Map author/committer names and/or E-Mail addresses"
 msgstr ""
 
 #: command-list.h:227
-msgid "Git namespaces"
+msgid "Defining submodule properties"
 msgstr ""
 
 #: command-list.h:228
-msgid "Protocol v0 and v1 capabilities"
+msgid "Git namespaces"
 msgstr ""
 
 #: command-list.h:229
-msgid "Things common to various protocols"
+msgid "Protocol v0 and v1 capabilities"
 msgstr ""
 
 #: command-list.h:230
-msgid "Git HTTP-based protocols"
+msgid "Things common to various protocols"
 msgstr ""
 
 #: command-list.h:231
-msgid "How packs are transferred over-the-wire"
+msgid "Git HTTP-based protocols"
 msgstr ""
 
 #: command-list.h:232
-msgid "Git Wire Protocol, Version 2"
+msgid "How packs are transferred over-the-wire"
 msgstr ""
 
 #: command-list.h:233
-msgid "Helper programs to interact with remote repositories"
+msgid "Git Wire Protocol, Version 2"
 msgstr ""
 
 #: command-list.h:234
-msgid "Git Repository Layout"
+msgid "Helper programs to interact with remote repositories"
 msgstr ""
 
 #: command-list.h:235
-msgid "Specifying revisions and ranges for Git"
+msgid "Git Repository Layout"
 msgstr ""
 
 #: command-list.h:236
-msgid "Mounting one repository inside another"
+msgid "Specifying revisions and ranges for Git"
 msgstr ""
 
 #: command-list.h:237
-msgid "A tutorial introduction to Git"
+msgid "Mounting one repository inside another"
 msgstr ""
 
 #: command-list.h:238
-msgid "A tutorial introduction to Git: part two"
+msgid "A tutorial introduction to Git"
 msgstr ""
 
 #: command-list.h:239
-msgid "Git web interface (web frontend to Git repositories)"
+msgid "A tutorial introduction to Git: part two"
 msgstr ""
 
 #: command-list.h:240
-msgid "An overview of recommended workflows with Git"
+msgid "Git web interface (web frontend to Git repositories)"
 msgstr ""
 
 #: command-list.h:241
+msgid "An overview of recommended workflows with Git"
+msgstr ""
+
+#: command-list.h:242
 msgid "A tool for managing large Git repositories"
 msgstr ""
 
-#: commit-graph.c:264
+#: commit-graph.c:267
 msgid "commit-graph file is too small"
 msgstr ""
 
-#: commit-graph.c:287
+#: commit-graph.c:289
 msgid "commit-graph oid fanout chunk is wrong size"
 msgstr ""
 
-#: commit-graph.c:296
+#: commit-graph.c:298
 msgid "commit-graph fanout values out of order"
 msgstr ""
 
-#: commit-graph.c:310
+#: commit-graph.c:312
 msgid "commit-graph OID lookup chunk is the wrong size"
 msgstr ""
 
-#: commit-graph.c:319
+#: commit-graph.c:321
 msgid "commit-graph commit data chunk is wrong size"
 msgstr ""
 
-#: commit-graph.c:329
+#: commit-graph.c:331
 msgid "commit-graph generations chunk is wrong size"
 msgstr ""
 
-#: commit-graph.c:339
+#: commit-graph.c:341
 msgid "commit-graph changed-path index chunk is too small"
 msgstr ""
 
-#: commit-graph.c:352
+#: commit-graph.c:354
 #, c-format
 msgid ""
 "ignoring too-small changed-path chunk (%<PRIuMAX> < %<PRIuMAX>) in commit-"
 "graph file"
 msgstr ""
 
-#: commit-graph.c:390
+#: commit-graph.c:392
 #, c-format
 msgid "commit-graph signature %X does not match signature %X"
 msgstr ""
 
-#: commit-graph.c:397
+#: commit-graph.c:399
 #, c-format
 msgid "commit-graph version %X does not match version %X"
 msgstr ""
 
-#: commit-graph.c:404
+#: commit-graph.c:406
 #, c-format
 msgid "commit-graph hash version %X does not match version %X"
 msgstr ""
 
-#: commit-graph.c:419
+#: commit-graph.c:421
 #, c-format
 msgid "commit-graph file is too small to hold %u chunks"
 msgstr ""
 
-#: commit-graph.c:432
+#: commit-graph.c:434
 msgid "commit-graph required OID fanout chunk missing or corrupted"
 msgstr ""
 
-#: commit-graph.c:436
+#: commit-graph.c:438
 msgid "commit-graph required OID lookup chunk missing or corrupted"
 msgstr ""
 
-#: commit-graph.c:440
+#: commit-graph.c:442
 msgid "commit-graph required commit data chunk missing or corrupted"
 msgstr ""
 
@@ -17932,220 +17950,220 @@ msgstr ""
 msgid "commit count in base graph too high: %<PRIuMAX>"
 msgstr ""
 
-#: commit-graph.c:632
+#: commit-graph.c:633
 msgid "commit-graph chain file too small"
 msgstr ""
 
-#: commit-graph.c:662
+#: commit-graph.c:663
 #, c-format
 msgid "invalid commit-graph chain: line '%s' not a hash"
 msgstr ""
 
-#: commit-graph.c:688
+#: commit-graph.c:689
 msgid "unable to find all commit-graph files"
 msgstr ""
 
-#: commit-graph.c:863 commit-graph.c:901
+#: commit-graph.c:854 commit-graph.c:891
 msgid "invalid commit position. commit-graph is likely corrupt"
 msgstr ""
 
-#: commit-graph.c:885
+#: commit-graph.c:875
 #, c-format
 msgid "could not find commit %s"
 msgstr ""
 
-#: commit-graph.c:918
+#: commit-graph.c:908
 msgid "commit-graph requires overflow generation data but has none"
 msgstr ""
 
-#: commit-graph.c:922
+#: commit-graph.c:912
 msgid "commit-graph overflow generation data is too small"
 msgstr ""
 
-#: commit-graph.c:979
+#: commit-graph.c:968
 msgid "commit-graph extra-edges pointer out of bounds"
 msgstr ""
 
-#: commit-graph.c:1538
+#: commit-graph.c:1525
 msgid "Loading known commits in commit graph"
 msgstr ""
 
-#: commit-graph.c:1556
+#: commit-graph.c:1543
 msgid "Expanding reachable commits in commit graph"
 msgstr ""
 
-#: commit-graph.c:1577
+#: commit-graph.c:1564
 msgid "Clearing commit marks in commit graph"
 msgstr ""
 
-#: commit-graph.c:1695
+#: commit-graph.c:1682
 msgid "Computing commit graph topological levels"
 msgstr ""
 
-#: commit-graph.c:1730
+#: commit-graph.c:1717
 msgid "Computing commit graph generation numbers"
 msgstr ""
 
-#: commit-graph.c:1807
+#: commit-graph.c:1794
 msgid "Computing commit changed paths Bloom filters"
 msgstr ""
 
-#: commit-graph.c:1887
+#: commit-graph.c:1877
 msgid "Collecting referenced commits"
 msgstr ""
 
-#: commit-graph.c:1914
+#: commit-graph.c:1904
 #, c-format
 msgid "Finding commits for commit graph in %<PRIuMAX> pack"
 msgid_plural "Finding commits for commit graph in %<PRIuMAX> packs"
 msgstr[0] ""
 msgstr[1] ""
 
-#: commit-graph.c:1928
+#: commit-graph.c:1918
 #, c-format
 msgid "error adding pack %s"
 msgstr ""
 
-#: commit-graph.c:1932
+#: commit-graph.c:1922
 #, c-format
 msgid "error opening index for %s"
 msgstr ""
 
-#: commit-graph.c:1973
+#: commit-graph.c:1963
 msgid "Finding commits for commit graph among packed objects"
 msgstr ""
 
-#: commit-graph.c:1992
+#: commit-graph.c:1982
 msgid "Finding extra edges in commit graph"
 msgstr ""
 
-#: commit-graph.c:2041
+#: commit-graph.c:2031
 msgid "failed to write correct number of base graph ids"
 msgstr ""
 
-#: commit-graph.c:2085
+#: commit-graph.c:2075
 msgid "unable to create temporary graph layer"
 msgstr ""
 
-#: commit-graph.c:2090 midx-write.c:1341
+#: commit-graph.c:2080 midx-write.c:1341
 #, c-format
 msgid "unable to adjust shared permissions for '%s'"
 msgstr ""
 
-#: commit-graph.c:2148
+#: commit-graph.c:2138
 #, c-format
 msgid "Writing out commit graph in %d pass"
 msgid_plural "Writing out commit graph in %d passes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: commit-graph.c:2184
+#: commit-graph.c:2174
 msgid "unable to open commit-graph chain file"
 msgstr ""
 
-#: commit-graph.c:2200
+#: commit-graph.c:2190
 msgid "failed to rename base commit-graph file"
 msgstr ""
 
-#: commit-graph.c:2223
+#: commit-graph.c:2214
 msgid "failed to rename temporary commit-graph file"
 msgstr ""
 
-#: commit-graph.c:2267
+#: commit-graph.c:2258
 #, c-format
 msgid "cannot merge graphs with %<PRIuMAX>, %<PRIuMAX> commits"
 msgstr ""
 
-#: commit-graph.c:2329
+#: commit-graph.c:2320
 #, c-format
 msgid "cannot merge graph %s, too many commits: %<PRIuMAX>"
 msgstr ""
 
-#: commit-graph.c:2367
+#: commit-graph.c:2358
 msgid "Scanning merged commits"
 msgstr ""
 
-#: commit-graph.c:2412
+#: commit-graph.c:2403
 msgid "Merging commit-graph"
 msgstr ""
 
-#: commit-graph.c:2534
+#: commit-graph.c:2525
 msgid "attempting to write a commit-graph, but 'core.commitGraph' is disabled"
 msgstr ""
 
-#: commit-graph.c:2541
+#: commit-graph.c:2532
 #, c-format
 msgid ""
 "attempting to write a commit-graph, but 'commitGraph."
 "changedPathsVersion' (%d) is not supported"
 msgstr ""
 
-#: commit-graph.c:2647
+#: commit-graph.c:2638
 msgid "too many commits to write graph"
 msgstr ""
 
-#: commit-graph.c:2744
+#: commit-graph.c:2735
 msgid "the commit-graph file has incorrect checksum and is likely corrupt"
 msgstr ""
 
-#: commit-graph.c:2755
+#: commit-graph.c:2746
 #, c-format
 msgid "commit-graph has incorrect OID order: %s then %s"
 msgstr ""
 
-#: commit-graph.c:2765 commit-graph.c:2780
+#: commit-graph.c:2756 commit-graph.c:2771
 #, c-format
 msgid "commit-graph has incorrect fanout value: fanout[%d] = %u != %u"
 msgstr ""
 
-#: commit-graph.c:2772
+#: commit-graph.c:2763
 #, c-format
 msgid "failed to parse commit %s from commit-graph"
 msgstr ""
 
-#: commit-graph.c:2802
+#: commit-graph.c:2793
 #, c-format
 msgid "failed to parse commit %s from object database for commit-graph"
 msgstr ""
 
-#: commit-graph.c:2809
+#: commit-graph.c:2800
 #, c-format
 msgid "root tree OID for commit %s in commit-graph is %s != %s"
 msgstr ""
 
-#: commit-graph.c:2819
+#: commit-graph.c:2810
 #, c-format
 msgid "commit-graph parent list for commit %s is too long"
 msgstr ""
 
-#: commit-graph.c:2828
+#: commit-graph.c:2819
 #, c-format
 msgid "commit-graph parent for %s is %s != %s"
 msgstr ""
 
-#: commit-graph.c:2842
+#: commit-graph.c:2833
 #, c-format
 msgid "commit-graph parent list for commit %s terminates early"
 msgstr ""
 
-#: commit-graph.c:2864
+#: commit-graph.c:2855
 #, c-format
 msgid "commit-graph generation for commit %s is %<PRIuMAX> < %<PRIuMAX>"
 msgstr ""
 
-#: commit-graph.c:2870
+#: commit-graph.c:2861
 #, c-format
 msgid "commit date for commit %s in commit-graph is %<PRIuMAX> != %<PRIuMAX>"
 msgstr ""
 
-#: commit-graph.c:2877
+#: commit-graph.c:2868
 #, c-format
 msgid ""
 "commit-graph has both zero and non-zero generations (e.g., commits '%s' and "
 "'%s')"
 msgstr ""
 
-#: commit-graph.c:2902
+#: commit-graph.c:2893
 msgid "Verifying commits in commit graph"
 msgstr ""
 
@@ -20445,29 +20463,29 @@ msgstr ""
 msgid "close failed on standard output"
 msgstr ""
 
-#: git.c:864
+#: git.c:865
 #, c-format
 msgid "alias loop detected: expansion of '%s' does not terminate:%s"
 msgstr ""
 
-#: git.c:917
+#: git.c:918
 #, c-format
 msgid "cannot handle %s as a builtin"
 msgstr ""
 
-#: git.c:928
+#: git.c:929
 #, c-format
 msgid ""
 "usage: %s\n"
 "\n"
 msgstr ""
 
-#: git.c:957
+#: git.c:958
 #, c-format
 msgid "expansion of alias '%s' failed; '%s' is not a git command\n"
 msgstr ""
 
-#: git.c:974
+#: git.c:975
 #, c-format
 msgid "failed to run command '%s': %s\n"
 msgstr ""
