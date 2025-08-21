@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2025-08-20 02:22+0000\n"
+"POT-Creation-Date: 2025-08-21 21:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -844,7 +844,7 @@ msgstr ""
 #: builtin/checkout.c:1830 builtin/checkout.c:1940 builtin/checkout.c:1943
 #: builtin/clean.c:967 builtin/clone.c:1035 builtin/clone.c:1040
 #: builtin/commit.c:372 builtin/commit.c:375 builtin/commit.c:1262
-#: builtin/commit.c:1318 builtin/commit.c:1335 builtin/describe.c:678
+#: builtin/commit.c:1318 builtin/commit.c:1335 builtin/describe.c:687
 #: builtin/diff-tree.c:167 builtin/difftool.c:774 builtin/fast-export.c:1394
 #: builtin/fetch.c:2445 builtin/fetch.c:2472 builtin/fetch.c:2486
 #: builtin/fetch.c:2491 builtin/help.c:622 builtin/index-pack.c:2027
@@ -4820,7 +4820,7 @@ msgid "remove whole directories"
 msgstr ""
 
 #: builtin/clean.c:943 builtin/config.c:885 builtin/config.c:939
-#: builtin/config.c:996 builtin/describe.c:638 builtin/describe.c:640
+#: builtin/config.c:996 builtin/describe.c:647 builtin/describe.c:649
 #: builtin/grep.c:1000 builtin/log.c:289 builtin/log.c:291
 #: builtin/ls-files.c:615 builtin/name-rev.c:579 builtin/name-rev.c:581
 #: builtin/pack-refs.c:35 builtin/pack-refs.c:37 builtin/show-ref.c:323
@@ -4900,7 +4900,7 @@ msgstr ""
 msgid "failed to copy file to '%s'"
 msgstr ""
 
-#: builtin/clone.c:345 refs/files-backend.c:3865
+#: builtin/clone.c:345 refs/files-backend.c:3891
 #, c-format
 msgid "failed to iterate over '%s'"
 msgstr ""
@@ -6532,121 +6532,131 @@ msgstr ""
 msgid "tag '%s' is externally known as '%s'"
 msgstr ""
 
-#: builtin/describe.c:381
+#: builtin/describe.c:379
 #, c-format
 msgid "no tag exactly matches '%s'"
 msgstr ""
 
-#: builtin/describe.c:383
+#: builtin/describe.c:381
 #, c-format
 msgid "No exact match on refs or tags, searching to describe\n"
 msgstr ""
 
-#: builtin/describe.c:452
+#: builtin/describe.c:450
 #, c-format
 msgid "finished search at %s\n"
 msgstr ""
 
-#: builtin/describe.c:480
+#: builtin/describe.c:478
 #, c-format
 msgid ""
 "No annotated tags can describe '%s'.\n"
 "However, there were unannotated tags: try --tags."
 msgstr ""
 
-#: builtin/describe.c:484
+#: builtin/describe.c:482
 #, c-format
 msgid ""
 "No tags can describe '%s'.\n"
 "Try --always, or create some tags."
 msgstr ""
 
-#: builtin/describe.c:514
+#: builtin/describe.c:512
 #, c-format
 msgid "traversed %lu commits\n"
 msgstr ""
 
-#: builtin/describe.c:517
+#: builtin/describe.c:515
 #, c-format
 msgid "found %i tags; gave up search at %s\n"
 msgstr ""
 
-#: builtin/describe.c:586
+#: builtin/describe.c:564
+#, c-format
+msgid "cannot search for blob '%s' on an unborn branch"
+msgstr ""
+
+#: builtin/describe.c:585
+#, c-format
+msgid "blob '%s' not reachable from HEAD"
+msgstr ""
+
+#: builtin/describe.c:595
 #, c-format
 msgid "describe %s\n"
 msgstr ""
 
-#: builtin/describe.c:589
+#: builtin/describe.c:598
 #, c-format
 msgid "Not a valid object name %s"
 msgstr ""
 
-#: builtin/describe.c:598
+#: builtin/describe.c:607
 #, c-format
 msgid "%s is neither a commit nor blob"
 msgstr ""
 
-#: builtin/describe.c:626
+#: builtin/describe.c:635
 msgid "find the tag that comes after the commit"
 msgstr ""
 
-#: builtin/describe.c:627
+#: builtin/describe.c:636
 msgid "debug search strategy on stderr"
 msgstr ""
 
-#: builtin/describe.c:628
+#: builtin/describe.c:637
 msgid "use any ref"
 msgstr ""
 
-#: builtin/describe.c:629
+#: builtin/describe.c:638
 msgid "use any tag, even unannotated"
 msgstr ""
 
-#: builtin/describe.c:630
+#: builtin/describe.c:639
 msgid "always use long format"
 msgstr ""
 
-#: builtin/describe.c:631
+#: builtin/describe.c:640
 msgid "only follow first parent"
 msgstr ""
 
-#: builtin/describe.c:634
+#: builtin/describe.c:643
 msgid "only output exact matches"
 msgstr ""
 
-#: builtin/describe.c:637
+#: builtin/describe.c:646
 msgid "consider <n> most recent tags (default: 10)"
 msgstr ""
 
-#: builtin/describe.c:639
+#: builtin/describe.c:648
 msgid "only consider tags matching <pattern>"
 msgstr ""
 
-#: builtin/describe.c:641
+#: builtin/describe.c:650
 msgid "do not consider tags matching <pattern>"
 msgstr ""
 
-#: builtin/describe.c:643 builtin/name-rev.c:595
+#: builtin/describe.c:652 builtin/name-rev.c:595
 msgid "show abbreviated commit object as fallback"
 msgstr ""
 
-#: builtin/describe.c:648 builtin/describe.c:657
+#: builtin/describe.c:657 builtin/describe.c:666
 msgid "mark"
 msgstr ""
 
-#: builtin/describe.c:649
+#: builtin/describe.c:658
 msgid "append <mark> on dirty working tree (default: \"-dirty\")"
 msgstr ""
 
-#: builtin/describe.c:658
+#: builtin/describe.c:667
 msgid "append <mark> on broken working tree (default: \"-broken\")"
 msgstr ""
 
-#: builtin/describe.c:724
+#: builtin/describe.c:733
 msgid "No names found, cannot describe anything."
 msgstr ""
 
-#: builtin/describe.c:787 builtin/describe.c:789
+#: builtin/describe.c:796 builtin/describe.c:798
 #, c-format
 msgid "option '%s' and commit-ishes cannot be used together"
 msgstr ""
@@ -23639,28 +23649,28 @@ msgstr ""
 msgid "migrated refs can be found at '%s'"
 msgstr ""
 
-#: refs/files-backend.c:2688 refs/reftable-backend.c:1270
+#: refs/files-backend.c:2713 refs/reftable-backend.c:1266
 #, c-format
 msgid ""
 "cannot lock ref '%s': expected symref with target '%s': but is a regular ref"
 msgstr ""
 
-#: refs/files-backend.c:3024 refs/reftable-backend.c:1109
+#: refs/files-backend.c:3050 refs/reftable-backend.c:1105
 #, c-format
 msgid "trying to write reflog for '%s'with incomplete values"
 msgstr ""
 
-#: refs/files-backend.c:3742
+#: refs/files-backend.c:3768
 #, c-format
 msgid "cannot read ref file '%s'"
 msgstr ""
 
-#: refs/files-backend.c:3832
+#: refs/files-backend.c:3858
 #, c-format
 msgid "cannot open directory %s"
 msgstr ""
 
-#: refs/files-backend.c:3885
+#: refs/files-backend.c:3911
 msgid "Checking references consistency"
 msgstr ""
 
@@ -23674,75 +23684,80 @@ msgstr ""
 msgid "refname is dangerous: %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1126
+#: refs/reftable-backend.c:1122
 #, c-format
 msgid "trying to write ref '%s' with nonexistent object %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1132
+#: refs/reftable-backend.c:1128
 #, c-format
 msgid "trying to write non-commit object %s to branch '%s'"
 msgstr ""
 
-#: refs/reftable-backend.c:1155
+#: refs/reftable-backend.c:1151
 #, c-format
 msgid ""
 "multiple updates for 'HEAD' (including one via its referent '%s') are not "
 "allowed"
 msgstr ""
 
-#: refs/reftable-backend.c:1202
+#: refs/reftable-backend.c:1198
 #, c-format
 msgid "cannot lock ref '%s': unable to resolve reference '%s'"
 msgstr ""
 
-#: refs/reftable-backend.c:1219
+#: refs/reftable-backend.c:1215
 #, c-format
 msgid "cannot lock ref '%s': error reading reference"
 msgstr ""
 
-#: refs/reftable-backend.c:1233
+#: refs/reftable-backend.c:1229
 #, c-format
 msgid ""
 "multiple updates for '%s' (including one via symref '%s') are not allowed"
 msgstr ""
 
-#: refs/reftable-backend.c:1284
+#: refs/reftable-backend.c:1298
+#, c-format
+msgid "cannot lock ref '%s': dangling symref already exists"
+msgstr ""
+
+#: refs/reftable-backend.c:1304
 #, c-format
 msgid "cannot lock ref '%s': reference already exists"
 msgstr ""
 
-#: refs/reftable-backend.c:1289
+#: refs/reftable-backend.c:1309
 #, c-format
 msgid "cannot lock ref '%s': reference is missing but expected %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1295
+#: refs/reftable-backend.c:1315
 #, c-format
 msgid "cannot lock ref '%s': is at %s but expected %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1419
+#: refs/reftable-backend.c:1439
 #, c-format
 msgid "reftable: transaction prepare: %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1684
+#: refs/reftable-backend.c:1704
 #, c-format
 msgid "reftable: transaction failure: %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1711
+#: refs/reftable-backend.c:1731
 #, c-format
 msgid "unable to compact stack: %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1761
+#: refs/reftable-backend.c:1781
 #, c-format
 msgid "refname %s not found"
 msgstr ""
 
-#: refs/reftable-backend.c:1765
+#: refs/reftable-backend.c:1785
 #, c-format
 msgid "refname %s is a symbolic ref, copying it is not supported"
 msgstr ""
