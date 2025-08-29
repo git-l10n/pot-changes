@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2025-08-25 22:58+0000\n"
+"POT-Creation-Date: 2025-08-29 17:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -844,7 +844,7 @@ msgstr ""
 #: builtin/checkout.c:1830 builtin/checkout.c:1940 builtin/checkout.c:1943
 #: builtin/clean.c:967 builtin/clone.c:1035 builtin/clone.c:1040
 #: builtin/commit.c:372 builtin/commit.c:375 builtin/commit.c:1262
-#: builtin/commit.c:1318 builtin/commit.c:1335 builtin/describe.c:678
+#: builtin/commit.c:1318 builtin/commit.c:1335 builtin/describe.c:687
 #: builtin/diff-tree.c:167 builtin/difftool.c:774 builtin/fast-export.c:1394
 #: builtin/fetch.c:2445 builtin/fetch.c:2472 builtin/fetch.c:2486
 #: builtin/fetch.c:2491 builtin/help.c:622 builtin/index-pack.c:2027
@@ -1690,7 +1690,7 @@ msgstr ""
 #: builtin/reset.c:474 builtin/rm.c:292 builtin/stash.c:1901
 #: builtin/stash.c:1906 builtin/stash.c:1908 builtin/stash.c:1978
 #: builtin/stash.c:1980 builtin/worktree.c:835 builtin/worktree.c:1079
-#: fetch-pack.c:351 http-fetch.c:158 http-fetch.c:167 revision.c:3163
+#: fetch-pack.c:352 http-fetch.c:158 http-fetch.c:167 revision.c:3163
 #, c-format
 msgid "the option '%s' requires '%s'"
 msgstr ""
@@ -4820,7 +4820,7 @@ msgid "remove whole directories"
 msgstr ""
 
 #: builtin/clean.c:943 builtin/config.c:885 builtin/config.c:939
-#: builtin/config.c:996 builtin/describe.c:638 builtin/describe.c:640
+#: builtin/config.c:996 builtin/describe.c:647 builtin/describe.c:649
 #: builtin/grep.c:1000 builtin/log.c:289 builtin/log.c:291
 #: builtin/ls-files.c:615 builtin/name-rev.c:579 builtin/name-rev.c:581
 #: builtin/pack-refs.c:35 builtin/pack-refs.c:37 builtin/show-ref.c:323
@@ -4900,7 +4900,7 @@ msgstr ""
 msgid "failed to copy file to '%s'"
 msgstr ""
 
-#: builtin/clone.c:345 refs/files-backend.c:3865
+#: builtin/clone.c:345 refs/files-backend.c:3891
 #, c-format
 msgid "failed to iterate over '%s'"
 msgstr ""
@@ -4917,7 +4917,7 @@ msgid ""
 "and retry with 'git restore --source=HEAD :/'\n"
 msgstr ""
 
-#: builtin/clone.c:552 fetch-pack.c:2119
+#: builtin/clone.c:552 fetch-pack.c:2120
 msgid "remote did not send all necessary objects"
 msgstr ""
 
@@ -5208,7 +5208,7 @@ msgstr ""
 msgid "--filter is ignored in local clones; use file:// instead."
 msgstr ""
 
-#: builtin/clone.c:1334 fetch-pack.c:1226 fetch-pack.c:1579
+#: builtin/clone.c:1334 fetch-pack.c:1227 fetch-pack.c:1580
 msgid "source repository is shallow, reject to clone."
 msgstr ""
 
@@ -6532,121 +6532,131 @@ msgstr ""
 msgid "tag '%s' is externally known as '%s'"
 msgstr ""
 
-#: builtin/describe.c:381
+#: builtin/describe.c:379
 #, c-format
 msgid "no tag exactly matches '%s'"
 msgstr ""
 
-#: builtin/describe.c:383
+#: builtin/describe.c:381
 #, c-format
 msgid "No exact match on refs or tags, searching to describe\n"
 msgstr ""
 
-#: builtin/describe.c:452
+#: builtin/describe.c:450
 #, c-format
 msgid "finished search at %s\n"
 msgstr ""
 
-#: builtin/describe.c:480
+#: builtin/describe.c:478
 #, c-format
 msgid ""
 "No annotated tags can describe '%s'.\n"
 "However, there were unannotated tags: try --tags."
 msgstr ""
 
-#: builtin/describe.c:484
+#: builtin/describe.c:482
 #, c-format
 msgid ""
 "No tags can describe '%s'.\n"
 "Try --always, or create some tags."
 msgstr ""
 
-#: builtin/describe.c:514
+#: builtin/describe.c:512
 #, c-format
 msgid "traversed %lu commits\n"
 msgstr ""
 
-#: builtin/describe.c:517
+#: builtin/describe.c:515
 #, c-format
 msgid "found %i tags; gave up search at %s\n"
 msgstr ""
 
-#: builtin/describe.c:586
+#: builtin/describe.c:564
+#, c-format
+msgid "cannot search for blob '%s' on an unborn branch"
+msgstr ""
+
+#: builtin/describe.c:585
+#, c-format
+msgid "blob '%s' not reachable from HEAD"
+msgstr ""
+
+#: builtin/describe.c:595
 #, c-format
 msgid "describe %s\n"
 msgstr ""
 
-#: builtin/describe.c:589
+#: builtin/describe.c:598
 #, c-format
 msgid "Not a valid object name %s"
 msgstr ""
 
-#: builtin/describe.c:598
+#: builtin/describe.c:607
 #, c-format
 msgid "%s is neither a commit nor blob"
 msgstr ""
 
-#: builtin/describe.c:626
+#: builtin/describe.c:635
 msgid "find the tag that comes after the commit"
 msgstr ""
 
-#: builtin/describe.c:627
+#: builtin/describe.c:636
 msgid "debug search strategy on stderr"
 msgstr ""
 
-#: builtin/describe.c:628
+#: builtin/describe.c:637
 msgid "use any ref"
 msgstr ""
 
-#: builtin/describe.c:629
+#: builtin/describe.c:638
 msgid "use any tag, even unannotated"
 msgstr ""
 
-#: builtin/describe.c:630
+#: builtin/describe.c:639
 msgid "always use long format"
 msgstr ""
 
-#: builtin/describe.c:631
+#: builtin/describe.c:640
 msgid "only follow first parent"
 msgstr ""
 
-#: builtin/describe.c:634
+#: builtin/describe.c:643
 msgid "only output exact matches"
 msgstr ""
 
-#: builtin/describe.c:637
+#: builtin/describe.c:646
 msgid "consider <n> most recent tags (default: 10)"
 msgstr ""
 
-#: builtin/describe.c:639
+#: builtin/describe.c:648
 msgid "only consider tags matching <pattern>"
 msgstr ""
 
-#: builtin/describe.c:641
+#: builtin/describe.c:650
 msgid "do not consider tags matching <pattern>"
 msgstr ""
 
-#: builtin/describe.c:643 builtin/name-rev.c:595
+#: builtin/describe.c:652 builtin/name-rev.c:595
 msgid "show abbreviated commit object as fallback"
 msgstr ""
 
-#: builtin/describe.c:648 builtin/describe.c:657
+#: builtin/describe.c:657 builtin/describe.c:666
 msgid "mark"
 msgstr ""
 
-#: builtin/describe.c:649
+#: builtin/describe.c:658
 msgid "append <mark> on dirty working tree (default: \"-dirty\")"
 msgstr ""
 
-#: builtin/describe.c:658
+#: builtin/describe.c:667
 msgid "append <mark> on broken working tree (default: \"-broken\")"
 msgstr ""
 
-#: builtin/describe.c:724
+#: builtin/describe.c:733
 msgid "No names found, cannot describe anything."
 msgstr ""
 
-#: builtin/describe.c:787 builtin/describe.c:789
+#: builtin/describe.c:796 builtin/describe.c:798
 #, c-format
 msgid "option '%s' and commit-ishes cannot be used together"
 msgstr ""
@@ -20077,195 +20087,195 @@ msgid ""
 "missing object, use 'git fetch --refetch' with the missing object."
 msgstr ""
 
-#: fetch-pack.c:220
+#: fetch-pack.c:221
 msgid "git fetch-pack: expected shallow list"
 msgstr ""
 
-#: fetch-pack.c:223
+#: fetch-pack.c:224
 msgid "git fetch-pack: expected a flush packet after shallow list"
 msgstr ""
 
-#: fetch-pack.c:234
+#: fetch-pack.c:235
 msgid "git fetch-pack: expected ACK/NAK, got a flush packet"
 msgstr ""
 
-#: fetch-pack.c:254
+#: fetch-pack.c:255
 #, c-format
 msgid "git fetch-pack: expected ACK/NAK, got '%s'"
 msgstr ""
 
-#: fetch-pack.c:265
+#: fetch-pack.c:266
 msgid "unable to write to remote"
 msgstr ""
 
-#: fetch-pack.c:319
+#: fetch-pack.c:320
 msgid "Server supports filter"
 msgstr ""
 
-#: fetch-pack.c:444 fetch-pack.c:1533
+#: fetch-pack.c:445 fetch-pack.c:1534
 #, c-format
 msgid "invalid shallow line: %s"
 msgstr ""
 
-#: fetch-pack.c:450 fetch-pack.c:1539
+#: fetch-pack.c:451 fetch-pack.c:1540
 #, c-format
 msgid "invalid unshallow line: %s"
 msgstr ""
 
-#: fetch-pack.c:452 fetch-pack.c:1541
+#: fetch-pack.c:453 fetch-pack.c:1542
 #, c-format
 msgid "object not found: %s"
 msgstr ""
 
-#: fetch-pack.c:455 fetch-pack.c:1544
+#: fetch-pack.c:456 fetch-pack.c:1545
 #, c-format
 msgid "error in object: %s"
 msgstr ""
 
-#: fetch-pack.c:457 fetch-pack.c:1546
+#: fetch-pack.c:458 fetch-pack.c:1547
 #, c-format
 msgid "no shallow found: %s"
 msgstr ""
 
-#: fetch-pack.c:460 fetch-pack.c:1550
+#: fetch-pack.c:461 fetch-pack.c:1551
 #, c-format
 msgid "expected shallow/unshallow, got %s"
 msgstr ""
 
-#: fetch-pack.c:510
+#: fetch-pack.c:511
 #, c-format
 msgid "got %s %d %s"
 msgstr ""
 
-#: fetch-pack.c:530
+#: fetch-pack.c:531
 #, c-format
 msgid "invalid commit %s"
 msgstr ""
 
-#: fetch-pack.c:565
+#: fetch-pack.c:566
 msgid "giving up"
 msgstr ""
 
-#: fetch-pack.c:580 progress.h:30
+#: fetch-pack.c:581 progress.h:30
 msgid "done"
 msgstr ""
 
-#: fetch-pack.c:592
+#: fetch-pack.c:593
 #, c-format
 msgid "got %s (%d) %s"
 msgstr ""
 
-#: fetch-pack.c:634
+#: fetch-pack.c:635
 #, c-format
 msgid "Marking %s as complete"
 msgstr ""
 
-#: fetch-pack.c:849
+#: fetch-pack.c:850
 #, c-format
 msgid "already have %s (%s)"
 msgstr ""
 
-#: fetch-pack.c:945
+#: fetch-pack.c:946
 msgid "fetch-pack: unable to fork off sideband demultiplexer"
 msgstr ""
 
-#: fetch-pack.c:953
+#: fetch-pack.c:954
 msgid "protocol error: bad pack header"
 msgstr ""
 
-#: fetch-pack.c:1038
+#: fetch-pack.c:1039
 #, c-format
 msgid "fetch-pack: unable to fork off %s"
 msgstr ""
 
-#: fetch-pack.c:1046
+#: fetch-pack.c:1047
 msgid "fetch-pack: invalid index-pack output"
 msgstr ""
 
-#: fetch-pack.c:1065
+#: fetch-pack.c:1066
 #, c-format
 msgid "%s failed"
 msgstr ""
 
-#: fetch-pack.c:1067
+#: fetch-pack.c:1068
 msgid "error in sideband demultiplexer"
 msgstr ""
 
-#: fetch-pack.c:1123
+#: fetch-pack.c:1124
 #, c-format
 msgid "Server version is %.*s"
 msgstr ""
 
-#: fetch-pack.c:1131 fetch-pack.c:1137 fetch-pack.c:1140 fetch-pack.c:1146
-#: fetch-pack.c:1150 fetch-pack.c:1154 fetch-pack.c:1158 fetch-pack.c:1162
-#: fetch-pack.c:1166 fetch-pack.c:1170 fetch-pack.c:1174 fetch-pack.c:1178
-#: fetch-pack.c:1184 fetch-pack.c:1190 fetch-pack.c:1195 fetch-pack.c:1200
+#: fetch-pack.c:1132 fetch-pack.c:1138 fetch-pack.c:1141 fetch-pack.c:1147
+#: fetch-pack.c:1151 fetch-pack.c:1155 fetch-pack.c:1159 fetch-pack.c:1163
+#: fetch-pack.c:1167 fetch-pack.c:1171 fetch-pack.c:1175 fetch-pack.c:1179
+#: fetch-pack.c:1185 fetch-pack.c:1191 fetch-pack.c:1196 fetch-pack.c:1201
 #, c-format
 msgid "Server supports %s"
 msgstr ""
 
-#: fetch-pack.c:1133
+#: fetch-pack.c:1134
 msgid "Server does not support shallow clients"
 msgstr ""
 
-#: fetch-pack.c:1193
+#: fetch-pack.c:1194
 msgid "Server does not support --shallow-since"
 msgstr ""
 
-#: fetch-pack.c:1198
+#: fetch-pack.c:1199
 msgid "Server does not support --shallow-exclude"
 msgstr ""
 
-#: fetch-pack.c:1202
+#: fetch-pack.c:1203
 msgid "Server does not support --deepen"
 msgstr ""
 
-#: fetch-pack.c:1204
+#: fetch-pack.c:1205
 msgid "Server does not support this repository's object format"
 msgstr ""
 
-#: fetch-pack.c:1217
+#: fetch-pack.c:1218
 msgid "no common commits"
 msgstr ""
 
-#: fetch-pack.c:1232 fetch-pack.c:1792
+#: fetch-pack.c:1233 fetch-pack.c:1793
 msgid "git fetch-pack: fetch failed."
 msgstr ""
 
-#: fetch-pack.c:1346
+#: fetch-pack.c:1347
 #, c-format
 msgid "mismatched algorithms: client %s; server %s"
 msgstr ""
 
-#: fetch-pack.c:1350
+#: fetch-pack.c:1351
 #, c-format
 msgid "the server does not support algorithm '%s'"
 msgstr ""
 
-#: fetch-pack.c:1383
+#: fetch-pack.c:1384
 msgid "Server does not support shallow requests"
 msgstr ""
 
-#: fetch-pack.c:1428 fetch-pack.c:2212
+#: fetch-pack.c:1429 fetch-pack.c:2213
 msgid "unable to write request to remote"
 msgstr ""
 
-#: fetch-pack.c:1452
+#: fetch-pack.c:1453
 #, c-format
 msgid "expected '%s', received '%s'"
 msgstr ""
 
-#: fetch-pack.c:1455
+#: fetch-pack.c:1456
 #, c-format
 msgid "expected '%s'"
 msgstr ""
 
-#: fetch-pack.c:1489
+#: fetch-pack.c:1490
 #, c-format
 msgid "unexpected acknowledgment line: '%s'"
 msgstr ""
 
-#: fetch-pack.c:1494
+#: fetch-pack.c:1495
 #, c-format
 msgid "error processing acks: %d"
 msgstr ""
@@ -20273,7 +20283,7 @@ msgstr ""
 #. TRANSLATORS: The parameter will be 'ready', a protocol
 #. keyword.
 #.
-#: fetch-pack.c:1508
+#: fetch-pack.c:1509
 #, c-format
 msgid "expected packfile to be sent after '%s'"
 msgstr ""
@@ -20281,49 +20291,49 @@ msgstr ""
 #. TRANSLATORS: The parameter will be 'ready', a protocol
 #. keyword.
 #.
-#: fetch-pack.c:1514
+#: fetch-pack.c:1515
 #, c-format
 msgid "expected no other sections to be sent after no '%s'"
 msgstr ""
 
-#: fetch-pack.c:1555
+#: fetch-pack.c:1556
 #, c-format
 msgid "error processing shallow info: %d"
 msgstr ""
 
-#: fetch-pack.c:1604
+#: fetch-pack.c:1605
 #, c-format
 msgid "expected wanted-ref, got '%s'"
 msgstr ""
 
-#: fetch-pack.c:1609
+#: fetch-pack.c:1610
 #, c-format
 msgid "unexpected wanted-ref: '%s'"
 msgstr ""
 
-#: fetch-pack.c:1614
+#: fetch-pack.c:1615
 #, c-format
 msgid "error processing wanted refs: %d"
 msgstr ""
 
-#: fetch-pack.c:1644
+#: fetch-pack.c:1645
 msgid "git fetch-pack: expected response end packet"
 msgstr ""
 
-#: fetch-pack.c:2096
+#: fetch-pack.c:2097
 msgid "no matching remote head"
 msgstr ""
 
-#: fetch-pack.c:2234
+#: fetch-pack.c:2235
 msgid "unexpected 'ready' from remote"
 msgstr ""
 
-#: fetch-pack.c:2266
+#: fetch-pack.c:2267
 #, c-format
 msgid "no such remote ref %s"
 msgstr ""
 
-#: fetch-pack.c:2269
+#: fetch-pack.c:2270
 #, c-format
 msgid "Server does not allow request for unadvertised object %s"
 msgstr ""
@@ -23639,28 +23649,28 @@ msgstr ""
 msgid "migrated refs can be found at '%s'"
 msgstr ""
 
-#: refs/files-backend.c:2688 refs/reftable-backend.c:1270
+#: refs/files-backend.c:2713 refs/reftable-backend.c:1266
 #, c-format
 msgid ""
 "cannot lock ref '%s': expected symref with target '%s': but is a regular ref"
 msgstr ""
 
-#: refs/files-backend.c:3024 refs/reftable-backend.c:1109
+#: refs/files-backend.c:3050 refs/reftable-backend.c:1105
 #, c-format
 msgid "trying to write reflog for '%s'with incomplete values"
 msgstr ""
 
-#: refs/files-backend.c:3742
+#: refs/files-backend.c:3768
 #, c-format
 msgid "cannot read ref file '%s'"
 msgstr ""
 
-#: refs/files-backend.c:3832
+#: refs/files-backend.c:3858
 #, c-format
 msgid "cannot open directory %s"
 msgstr ""
 
-#: refs/files-backend.c:3885
+#: refs/files-backend.c:3911
 msgid "Checking references consistency"
 msgstr ""
 
@@ -23674,75 +23684,80 @@ msgstr ""
 msgid "refname is dangerous: %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1126
+#: refs/reftable-backend.c:1122
 #, c-format
 msgid "trying to write ref '%s' with nonexistent object %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1132
+#: refs/reftable-backend.c:1128
 #, c-format
 msgid "trying to write non-commit object %s to branch '%s'"
 msgstr ""
 
-#: refs/reftable-backend.c:1155
+#: refs/reftable-backend.c:1151
 #, c-format
 msgid ""
 "multiple updates for 'HEAD' (including one via its referent '%s') are not "
 "allowed"
 msgstr ""
 
-#: refs/reftable-backend.c:1202
+#: refs/reftable-backend.c:1198
 #, c-format
 msgid "cannot lock ref '%s': unable to resolve reference '%s'"
 msgstr ""
 
-#: refs/reftable-backend.c:1219
+#: refs/reftable-backend.c:1215
 #, c-format
 msgid "cannot lock ref '%s': error reading reference"
 msgstr ""
 
-#: refs/reftable-backend.c:1233
+#: refs/reftable-backend.c:1229
 #, c-format
 msgid ""
 "multiple updates for '%s' (including one via symref '%s') are not allowed"
 msgstr ""
 
-#: refs/reftable-backend.c:1284
+#: refs/reftable-backend.c:1298
+#, c-format
+msgid "cannot lock ref '%s': dangling symref already exists"
+msgstr ""
+
+#: refs/reftable-backend.c:1304
 #, c-format
 msgid "cannot lock ref '%s': reference already exists"
 msgstr ""
 
-#: refs/reftable-backend.c:1289
+#: refs/reftable-backend.c:1309
 #, c-format
 msgid "cannot lock ref '%s': reference is missing but expected %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1295
+#: refs/reftable-backend.c:1315
 #, c-format
 msgid "cannot lock ref '%s': is at %s but expected %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1419
+#: refs/reftable-backend.c:1439
 #, c-format
 msgid "reftable: transaction prepare: %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1684
+#: refs/reftable-backend.c:1704
 #, c-format
 msgid "reftable: transaction failure: %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1711
+#: refs/reftable-backend.c:1731
 #, c-format
 msgid "unable to compact stack: %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1761
+#: refs/reftable-backend.c:1781
 #, c-format
 msgid "refname %s not found"
 msgstr ""
 
-#: refs/reftable-backend.c:1765
+#: refs/reftable-backend.c:1785
 #, c-format
 msgid "refname %s is a symbolic ref, copying it is not supported"
 msgstr ""
