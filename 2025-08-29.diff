@@ -1,0 +1,372 @@
+
+
+#################### Fri, 29 Aug 2025 04:58:24 +0000 ####################
+
+--- po/git.pot.old	2025-08-29 04:58:24.430501645 +0000
++++ po/git.pot.new	2025-08-29 04:58:24.507502449 +0000
+@@ -171,23 +171,6 @@
+ #, c-format
+ msgid ""
+ "\n"
+-"To set a custom comment string please run\n"
+-"\n"
+-"%s\n"
+-"where '%s' is the string you wish to use.\n"
+-msgstr ""
+-
+-#, c-format
+-msgid ""
+-"\n"
+-"To use the default comment string (#) please run\n"
+-"\n"
+-"%s"
+-msgstr ""
+-
+-#, c-format
+-msgid ""
+-"\n"
+ "Write a message for tag:\n"
+ "  %s\n"
+ "Lines starting with '%s' will be ignored.\n"
+@@ -226,13 +209,6 @@
+ "As a result, git cannot rebase them."
+ msgstr ""
+ 
+-msgid ""
+-"\n"
+-"hint: You can replace 'git whatchanged <opts>' with:\n"
+-"    git log <opts> --raw --no-merges\n"
+-"\n"
+-msgstr ""
+-
+ #, c-format
+ msgid "    %-*s forces to %-*s (%s)"
+ msgstr ""
+@@ -1381,7 +1357,12 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "'%s' is nominated for removal.\n"
++msgid ""
++"'%s' is nominated for removal.\n"
++"If you still use this command, please add an extra\n"
++"option, '--i-still-use-this', on the command line\n"
++"and let us know you still use it by sending an e-mail\n"
++"to <git@vger.kernel.org>.  Thanks.\n"
+ msgstr ""
+ 
+ #, c-format
+@@ -2195,9 +2176,6 @@
+ msgid "<char>"
+ msgstr ""
+ 
+-msgid "<comment string>"
+-msgstr ""
+-
+ msgid "<count>"
+ msgstr ""
+ 
+@@ -4130,18 +4108,6 @@
+ msgid "If you prefer to skip this patch, run \"%s --skip\" instead.\n"
+ msgstr ""
+ 
+-#, c-format
+-msgid ""
+-"If you still use this command, here's what you can do:\n"
+-"\n"
+-"- read https://git-scm.com/docs/BreakingChanges.html\n"
+-"- check if anyone has discussed this on the mailing\n"
+-"  list and if they came up with something that can\n"
+-"  help you: https://lore.kernel.org/git/?q=%s\n"
+-"- send an email to <git@vger.kernel.org>\n"
+-"\n"
+-msgstr ""
+-
+ msgid "If you want to detach HEAD at the commit, try again with the --detach option."
+ msgstr ""
+ 
+@@ -5726,14 +5692,6 @@
+ msgid "Summary email is empty, skipping it\n"
+ msgstr ""
+ 
+-#, c-format
+-msgid "Support for '%s=auto' has been removed in Git 3.0"
+-msgstr ""
+-
+-#, c-format
+-msgid "Support for '%s=auto' is deprecated and will be removed in Git 3.0"
+-msgstr ""
+-
+ msgid ""
+ "Support for <GIT_DIR>/info/grafts is deprecated\n"
+ "and will be removed in a future Git version.\n"
+@@ -5922,9 +5880,6 @@
+ msgid "The current patch is empty."
+ msgstr ""
+ 
+-msgid "The destination IMAP folder is not properly defined."
+-msgstr ""
+-
+ #. TRANSLATORS: "matches '%s'%" is the <dst> part of "git push
+ #. <remote> <src>:<dst>" push, and "being pushed ('%s')" is
+ #. the <src>.
+@@ -7477,9 +7432,6 @@
+ "You can use '!git' in the alias to do this"
+ msgstr ""
+ 
+-msgid "alias for --format=nul"
+-msgstr ""
+-
+ msgid "alias for --log (deprecated)"
+ msgstr ""
+ 
+@@ -9878,6 +9830,9 @@
+ msgid "could not open tempfile %s for writing"
+ msgstr ""
+ 
++msgid "could not open temporary file"
++msgstr ""
++
+ #, c-format
+ msgid "could not parse %s"
+ msgstr ""
+@@ -10107,6 +10062,10 @@
+ msgid "could not remove temporary migration directory '%s'"
+ msgstr ""
+ 
++#, c-format
++msgid "could not rename temporary file to %s"
++msgstr ""
++
+ msgid "could not reset --hard"
+ msgstr ""
+ 
+@@ -11083,9 +11042,6 @@
+ msgid "email"
+ msgstr ""
+ 
+-msgid "empty --trailer argument"
+-msgstr ""
+-
+ #, c-format
+ msgid "empty alias for %s"
+ msgstr ""
+@@ -11545,9 +11501,6 @@
+ msgid "failed to close rev-list's stdin"
+ msgstr ""
+ 
+-msgid "failed to convert index to a sparse index; resolve merge conflicts and try again"
+-msgstr ""
+-
+ msgid "failed to convert to a sparse-index"
+ msgstr ""
+ 
+@@ -11849,13 +11802,6 @@
+ msgid "failed to prefetch remotes"
+ msgstr ""
+ 
+-msgid "failed to process trailers"
+-msgstr ""
+-
+-#, c-format
+-msgid "failed to process trailers for %s"
+-msgstr ""
+-
+ msgid "failed to push all needed submodules"
+ msgstr ""
+ 
+@@ -11871,9 +11817,6 @@
+ msgid "failed to read '%s'"
+ msgstr ""
+ 
+-msgid "failed to read index"
+-msgstr ""
+-
+ #, c-format
+ msgid "failed to read object '%s'."
+ msgstr ""
+@@ -11894,9 +11837,6 @@
+ msgid "failed to read the index"
+ msgstr ""
+ 
+-msgid "failed to reapply sparse-checkout patterns"
+-msgstr ""
+-
+ #, c-format
+ msgid "failed to recurse into submodule '%s'"
+ msgstr ""
+@@ -11909,10 +11849,6 @@
+ msgid "failed to remove %s"
+ msgstr ""
+ 
+-#, c-format
+-msgid "failed to remove '%s'"
+-msgstr ""
+-
+ msgid "failed to remove 'git notes merge' worktree"
+ msgstr ""
+ 
+@@ -12231,6 +12167,14 @@
+ msgstr[1] ""
+ 
+ #, c-format
++msgid "file %s is not a regular file"
++msgstr ""
++
++#, c-format
++msgid "file %s is not writable by user"
++msgstr ""
++
++#, c-format
+ msgid "file at URI '%s' is not a bundle or bundle list"
+ msgstr ""
+ 
+@@ -12310,9 +12254,6 @@
+ msgid "for conflicts, use this marker size"
+ msgstr ""
+ 
+-msgid "for safety, refusing to clean without one of --force or --dry-run"
+-msgstr ""
+-
+ msgid "force"
+ msgstr ""
+ 
+@@ -13351,7 +13292,7 @@
+ "             [--] [<pattern>...]"
+ msgstr ""
+ 
+-msgid "git sparse-checkout (init | list | set | add | reapply | disable | check-rules | clean) [<options>]"
++msgid "git sparse-checkout (init | list | set | add | reapply | disable | check-rules) [<options>]"
+ msgstr ""
+ 
+ msgid "git sparse-checkout add [--skip-checks] (--stdin | <patterns>)"
+@@ -14319,10 +14260,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "invalid element '%s' from remote info"
+-msgstr ""
+-
+-#, c-format
+ msgid "invalid extra cruft tip: '%s'"
+ msgstr ""
+ 
+@@ -14397,10 +14334,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "invalid max-memory value: %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "invalid mode '%s' in --color-moved-ws"
+ msgstr ""
+ 
+@@ -14583,10 +14516,6 @@
+ msgid "invalid timezone offset"
+ msgstr ""
+ 
+-#, c-format
+-msgid "invalid trailer '%s': missing key before separator"
+-msgstr ""
+-
+ msgid "invalid transfer encoding"
+ msgstr ""
+ 
+@@ -15042,9 +14971,6 @@
+ msgid "maximum length of delta chain allowed in the resulting pack"
+ msgstr ""
+ 
+-msgid "maximum memory for cost matrix (default 4G)"
+-msgstr ""
+-
+ msgid "maximum number of changed-path Bloom filters to compute"
+ msgstr ""
+ 
+@@ -15362,12 +15288,6 @@
+ msgid "multiple updates for ref '%s' not allowed"
+ msgstr ""
+ 
+-msgid "must be in a cone-mode sparse-checkout to clean directories"
+-msgstr ""
+-
+-msgid "must be in a sparse-checkout to clean directories"
+-msgstr ""
+-
+ msgid "must be in a sparse-checkout to reapply sparsity patterns"
+ msgstr ""
+ 
+@@ -17184,10 +17104,6 @@
+ msgid "range"
+ msgstr ""
+ 
+-#, c-format
+-msgid "range-diff: unable to compute the range-diff, since it exceeds the maximum memory for the cost matrix: %s (%<PRIuMAX> bytes) needed, %s (%<PRIuMAX> bytes) available"
+-msgstr ""
+-
+ msgid "re-code metadata to i18n.commitEncoding"
+ msgstr ""
+ 
+@@ -17818,9 +17734,6 @@
+ msgid "report archived files on stderr"
+ msgstr ""
+ 
+-msgid "report each affected file, not just directories"
+-msgstr ""
+-
+ msgid "report on-disk index format version"
+ msgstr ""
+ 
+@@ -18247,10 +18160,6 @@
+ msgid "serve up the info/refs for git-http-backend"
+ msgstr ""
+ 
+-#, c-format
+-msgid "server advertised a promisor remote without a name or URL: %s"
+-msgstr ""
+-
+ msgid "server does not support wait-for-done"
+ msgstr ""
+ 
+@@ -18721,9 +18630,6 @@
+ msgid "similar to --all-progress when progress meter is shown"
+ msgstr ""
+ 
+-msgid "size"
+-msgstr ""
+-
+ msgid "size of the window used for delta compression"
+ msgstr ""
+ 
+@@ -19664,9 +19570,6 @@
+ msgid "unable to add recent objects"
+ msgstr ""
+ 
+-msgid "unable to add trailers to commit message"
+-msgstr ""
+-
+ #, c-format
+ msgid "unable to adjust shared permissions for '%s'"
+ msgstr ""
+@@ -20463,6 +20366,10 @@
+ msgid "unknown diff status: %c"
+ msgstr ""
+ 
++#, c-format
++msgid "unknown element '%s' from remote info"
++msgstr ""
++
+ msgid "unknown error occurred while reading the configuration files"
+ msgstr ""
+ 
+@@ -20735,10 +20642,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unsupported field '%s' in '%s' config"
+-msgstr ""
+-
+-#, c-format
+ msgid "unsupported file mode: 0%o (SHA1: %s)"
+ msgstr ""
+ 
