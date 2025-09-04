@@ -827,3 +827,813 @@
  msgid "unsupported file mode: 0%o (SHA1: %s)"
  msgstr ""
  
+
+
+#################### Thu, 04 Sep 2025 23:57:47 +0000 ####################
+
+--- po/git.pot.old	2025-09-04 23:57:47.488790460 +0000
++++ po/git.pot.new	2025-09-04 23:57:47.567790823 +0000
+@@ -171,6 +171,23 @@
+ #, c-format
+ msgid ""
+ "\n"
++"To set a custom comment string please run\n"
++"\n"
++"%s\n"
++"where '%s' is the string you wish to use.\n"
++msgstr ""
++
++#, c-format
++msgid ""
++"\n"
++"To use the default comment string (#) please run\n"
++"\n"
++"%s"
++msgstr ""
++
++#, c-format
++msgid ""
++"\n"
+ "Write a message for tag:\n"
+ "  %s\n"
+ "Lines starting with '%s' will be ignored.\n"
+@@ -209,6 +226,13 @@
+ "As a result, git cannot rebase them."
+ msgstr ""
+ 
++msgid ""
++"\n"
++"hint: You can replace 'git whatchanged <opts>' with:\n"
++"    git log <opts> --raw --no-merges\n"
++"\n"
++msgstr ""
++
+ #, c-format
+ msgid "    %-*s forces to %-*s (%s)"
+ msgstr ""
+@@ -1357,12 +1381,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid ""
+-"'%s' is nominated for removal.\n"
+-"If you still use this command, please add an extra\n"
+-"option, '--i-still-use-this', on the command line\n"
+-"and let us know you still use it by sending an e-mail\n"
+-"to <git@vger.kernel.org>.  Thanks.\n"
++msgid "'%s' is nominated for removal.\n"
+ msgstr ""
+ 
+ #, c-format
+@@ -1616,6 +1635,9 @@
+ msgid "'git multi-pack-index repack' failed"
+ msgstr ""
+ 
++msgid "'git refs exists' requires a reference"
++msgstr ""
++
+ msgid "'git refs verify' takes no arguments"
+ msgstr ""
+ 
+@@ -2176,9 +2198,15 @@
+ msgid "<char>"
+ msgstr ""
+ 
++msgid "<comment string>"
++msgstr ""
++
+ msgid "<count>"
+ msgstr ""
+ 
++msgid "<depth>"
++msgstr ""
++
+ msgid "<file>"
+ msgstr ""
+ 
+@@ -3499,6 +3527,9 @@
+ msgid "EXPERIMENTAL: Replay commits on a new base, works with bare repos too"
+ msgstr ""
+ 
++msgid "EXPERIMENTAL: Show when files were last modified"
++msgstr ""
++
+ msgid "Emit [broken] object attributes"
+ msgstr ""
+ 
+@@ -4102,6 +4133,20 @@
+ msgid "If you prefer to skip this patch, run \"%s --skip\" instead.\n"
+ msgstr ""
+ 
++#, c-format
++msgid ""
++"If you still use this command, here's what you can do:\n"
++"\n"
++"- read https://git-scm.com/docs/BreakingChanges.html\n"
++"- check if anyone has discussed this on the mailing\n"
++"  list and if they came up with something that can\n"
++"  help you: https://lore.kernel.org/git/?q=%s\n"
++"- send an email to <git@vger.kernel.org> to let us\n"
++"  know that you still use this command and were unable\n"
++"  to determine a suitable replacement\n"
++"\n"
++msgstr ""
++
+ msgid "If you want to detach HEAD at the commit, try again with the --detach option."
+ msgstr ""
+ 
+@@ -5287,6 +5332,9 @@
+ msgid "Retrieve and store user credentials"
+ msgstr ""
+ 
++msgid "Retrieve information about the repository"
++msgstr ""
++
+ msgid "Reuse recorded resolution of conflicted merges"
+ msgstr ""
+ 
+@@ -5683,6 +5731,14 @@
+ msgid "Summary email is empty, skipping it\n"
+ msgstr ""
+ 
++#, c-format
++msgid "Support for '%s=auto' has been removed in Git 3.0"
++msgstr ""
++
++#, c-format
++msgid "Support for '%s=auto' is deprecated and will be removed in Git 3.0"
++msgstr ""
++
+ msgid ""
+ "Support for <GIT_DIR>/info/grafts is deprecated\n"
+ "and will be removed in a future Git version.\n"
+@@ -5778,6 +5834,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "The <src> part of the refspec ('%s') is an object ID that doesn't exist.\n"
++msgstr ""
++
++#, c-format
+ msgid ""
+ "The <src> part of the refspec is a blob object.\n"
+ "Did you mean to tag a new blob by pushing to\n"
+@@ -5867,6 +5927,9 @@
+ msgid "The current patch is empty."
+ msgstr ""
+ 
++msgid "The destination IMAP folder is not properly defined."
++msgstr ""
++
+ #. TRANSLATORS: "matches '%s'%" is the <dst> part of "git push
+ #. <remote> <src>:<dst>" push, and "being pushed ('%s')" is
+ #. the <src>.
+@@ -6057,6 +6120,16 @@
+ "\n"
+ msgstr ""
+ 
++msgid ""
++"The remote you are trying to rename has conflicting references in the\n"
++"new target refspec. This is most likely caused by you trying to nest\n"
++"a remote into itself, e.g. by renaming 'parent' into 'parent/child'\n"
++"or by unnesting a remote, e.g. the other way round.\n"
++"\n"
++"If that is the case, you can address this by first renaming the\n"
++"remote to a different name.\n"
++msgstr ""
++
+ msgid "The required SMTP server is not properly defined."
+ msgstr ""
+ 
+@@ -6522,8 +6595,9 @@
+ #, c-format
+ msgid ""
+ "Using '%s' as the name for the initial branch. This default branch name\n"
+-"is subject to change. To configure the initial branch name to use in all\n"
+-"of your new repositories, which will suppress this warning, call:\n"
++"will change to \"main\" in Git 3.0. To configure the initial branch name\n"
++"to use in all of your new repositories, which will suppress this warning,\n"
++"call:\n"
+ "\n"
+ "\tgit config --global init.defaultBranch <name>\n"
+ "\n"
+@@ -6927,22 +7001,6 @@
+ "You might run `git rm` on a file to accept \"deleted by them\" for it."
+ msgstr ""
+ 
+-msgid ""
+-"You're on a case-insensitive filesystem, and the remote you are\n"
+-"trying to fetch from has references that only differ in casing. It\n"
+-"is impossible to store such references with the 'files' backend. You\n"
+-"can either accept this as-is, in which case you won't be able to\n"
+-"store all remote references on disk. Or you can alternatively\n"
+-"migrate your repository to use the 'reftable' backend with the\n"
+-"following command:\n"
+-"\n"
+-"    git refs migrate --ref-format=reftable\n"
+-"\n"
+-"Please keep in mind that not all implementations of Git support this\n"
+-"new format yet. So if you use tools other than Git to access this\n"
+-"repository it may not be an option to migrate to reftables.\n"
+-msgstr ""
+-
+ #, c-format
+ msgid ""
+ "You've added another git repository inside your current repository.\n"
+@@ -8019,6 +8077,10 @@
+ msgid "blob"
+ msgstr ""
+ 
++#, c-format
++msgid "blob '%s' not reachable from HEAD"
++msgstr ""
++
+ msgid "blob-id"
+ msgstr ""
+ 
+@@ -8336,6 +8398,10 @@
+ msgid "cannot come back to cwd"
+ msgstr ""
+ 
++#, c-format
++msgid "cannot commit reflog update: %s"
++msgstr ""
++
+ msgid "cannot compare a named pipe to a directory"
+ msgstr ""
+ 
+@@ -8496,6 +8562,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "cannot lock ref '%s': dangling symref already exists"
++msgstr ""
++
++#, c-format
+ msgid "cannot lock ref '%s': error reading reference"
+ msgstr ""
+ 
+@@ -8628,6 +8698,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "cannot queue reflog update: %s"
++msgstr ""
++
++#, c-format
+ msgid "cannot read '%s'"
+ msgstr ""
+ 
+@@ -8739,6 +8813,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "cannot search for blob '%s' on an unborn branch"
++msgstr ""
++
++#, c-format
+ msgid "cannot select preferred pack %s with no objects"
+ msgstr ""
+ 
+@@ -8760,6 +8838,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "cannot start transaction: %s"
++msgstr ""
++
++#, c-format
+ msgid "cannot stat '%s'"
+ msgstr ""
+ 
+@@ -9784,10 +9866,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "could not open index for %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "could not open or read '%s'"
+ msgstr ""
+ 
+@@ -9799,9 +9877,6 @@
+ msgid "could not open tempfile %s for writing"
+ msgstr ""
+ 
+-msgid "could not open temporary file"
+-msgstr ""
+-
+ #, c-format
+ msgid "could not parse %s"
+ msgstr ""
+@@ -10031,10 +10106,6 @@
+ msgid "could not remove temporary migration directory '%s'"
+ msgstr ""
+ 
+-#, c-format
+-msgid "could not rename temporary file to %s"
+-msgstr ""
+-
+ msgid "could not reset --hard"
+ msgstr ""
+ 
+@@ -10391,10 +10462,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "creating '%s' failed"
+-msgstr ""
+-
+-#, c-format
+ msgid "creating branch '%s'"
+ msgstr ""
+ 
+@@ -10507,10 +10574,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "deleting '%s' failed"
+-msgstr ""
+-
+-#, c-format
+ msgid ""
+ "deleting branch '%s' that has been merged to\n"
+ "         '%s', but not yet merged to HEAD"
+@@ -11019,6 +11082,9 @@
+ msgid "email"
+ msgstr ""
+ 
++msgid "empty --trailer argument"
++msgstr ""
++
+ #, c-format
+ msgid "empty alias for %s"
+ msgstr ""
+@@ -11478,6 +11544,9 @@
+ msgid "failed to close rev-list's stdin"
+ msgstr ""
+ 
++msgid "failed to convert index to a sparse index; resolve merge conflicts and try again"
++msgstr ""
++
+ msgid "failed to convert to a sparse-index"
+ msgstr ""
+ 
+@@ -11739,6 +11808,10 @@
+ msgid "failed to open pack-index '%s'"
+ msgstr ""
+ 
++#, c-format
++msgid "failed to open preferred pack %s"
++msgstr ""
++
+ msgid "failed to open temporary file"
+ msgstr ""
+ 
+@@ -11779,6 +11852,13 @@
+ msgid "failed to prefetch remotes"
+ msgstr ""
+ 
++msgid "failed to process trailers"
++msgstr ""
++
++#, c-format
++msgid "failed to process trailers for %s"
++msgstr ""
++
+ msgid "failed to push all needed submodules"
+ msgstr ""
+ 
+@@ -11794,6 +11874,9 @@
+ msgid "failed to read '%s'"
+ msgstr ""
+ 
++msgid "failed to read index"
++msgstr ""
++
+ #, c-format
+ msgid "failed to read object '%s'."
+ msgstr ""
+@@ -11814,6 +11897,9 @@
+ msgid "failed to read the index"
+ msgstr ""
+ 
++msgid "failed to reapply sparse-checkout patterns"
++msgstr ""
++
+ #, c-format
+ msgid "failed to recurse into submodule '%s'"
+ msgstr ""
+@@ -11826,6 +11912,10 @@
+ msgid "failed to remove %s"
+ msgstr ""
+ 
++#, c-format
++msgid "failed to remove '%s'"
++msgstr ""
++
+ msgid "failed to remove 'git notes merge' worktree"
+ msgstr ""
+ 
+@@ -12144,14 +12234,6 @@
+ msgstr[1] ""
+ 
+ #, c-format
+-msgid "file %s is not a regular file"
+-msgstr ""
+-
+-#, c-format
+-msgid "file %s is not writable by user"
+-msgstr ""
+-
+-#, c-format
+ msgid "file at URI '%s' is not a bundle or bundle list"
+ msgstr ""
+ 
+@@ -12231,6 +12313,9 @@
+ msgid "for conflicts, use this marker size"
+ msgstr ""
+ 
++msgid "for safety, refusing to clean without one of --force or --dry-run"
++msgstr ""
++
+ msgid "force"
+ msgstr ""
+ 
+@@ -12804,19 +12889,7 @@
+ msgid "git fmt-merge-msg [-m <message>] [--log[=<n>] | --no-log] [--file <file>]"
+ msgstr ""
+ 
+-msgid "git for-each-ref [--contains [<commit>]] [--no-contains [<commit>]]"
+-msgstr ""
+-
+-msgid "git for-each-ref [--merged [<commit>]] [--no-merged [<commit>]]"
+-msgstr ""
+-
+-msgid "git for-each-ref [--points-at <object>]"
+-msgstr ""
+-
+-msgid "git for-each-ref [--start-after <marker>]"
+-msgstr ""
+-
+-msgid "git for-each-ref [<options>] [<pattern>]"
++msgid "git for-each-ref "
+ msgstr ""
+ 
+ msgid "git for-each-repo --config=<config> [--] <arguments>"
+@@ -12875,6 +12948,9 @@
+ "                       [--parse] [<file>...]"
+ msgstr ""
+ 
++msgid "git last-modified [--recursive] [--show-trees] [<revision-range>] [[--] <path>...]"
++msgstr ""
++
+ msgid "git log --pretty=short | git shortlog [<options>]"
+ msgstr ""
+ 
+@@ -13099,6 +13175,15 @@
+ msgid "git reflog list"
+ msgstr ""
+ 
++msgid "git reflog write <ref> <old-oid> <new-oid> <message>"
++msgstr ""
++
++msgid "git refs exists <ref>"
++msgstr ""
++
++msgid "git refs list "
++msgstr ""
++
+ msgid "git refs migrate --ref-format=<format> [--no-reflog] [--dry-run]"
+ msgstr ""
+ 
+@@ -13272,7 +13357,7 @@
+ "             [--] [<pattern>...]"
+ msgstr ""
+ 
+-msgid "git sparse-checkout (init | list | set | add | reapply | disable | check-rules) [<options>]"
++msgid "git sparse-checkout (init | list | set | add | reapply | disable | check-rules | clean) [<options>]"
+ msgstr ""
+ 
+ msgid "git sparse-checkout add [--skip-checks] (--stdin | <patterns>)"
+@@ -14240,6 +14325,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "invalid element '%s' from remote info"
++msgstr ""
++
++#, c-format
+ msgid "invalid extra cruft tip: '%s'"
+ msgstr ""
+ 
+@@ -14251,6 +14340,10 @@
+ msgid "invalid filter-spec '%s'"
+ msgstr ""
+ 
++#, c-format
++msgid "invalid format '%s'"
++msgstr ""
++
+ msgid "invalid gitdir file"
+ msgstr ""
+ 
+@@ -14310,6 +14403,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "invalid max-memory value: %s"
++msgstr ""
++
++#, c-format
+ msgid "invalid mode '%s' in --color-moved-ws"
+ msgstr ""
+ 
+@@ -14326,6 +14423,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "invalid new object ID: '%s'"
++msgstr ""
++
++#, c-format
+ msgid "invalid number of threads specified (%d)"
+ msgstr ""
+ 
+@@ -14353,6 +14454,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "invalid old object ID: '%s'"
++msgstr ""
++
++#, c-format
+ msgid "invalid onto: '%s'"
+ msgstr ""
+ 
+@@ -14415,6 +14520,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "invalid reference name: %s"
++msgstr ""
++
++#, c-format
+ msgid "invalid reference: %s"
+ msgstr ""
+ 
+@@ -14480,6 +14589,10 @@
+ msgid "invalid timezone offset"
+ msgstr ""
+ 
++#, c-format
++msgid "invalid trailer '%s': missing key before separator"
++msgstr ""
++
+ msgid "invalid transfer encoding"
+ msgstr ""
+ 
+@@ -14577,6 +14690,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "key '%s' not found"
++msgstr ""
++
++#, c-format
+ msgid "key does not contain a section: %s"
+ msgstr ""
+ 
+@@ -14597,6 +14714,9 @@
+ msgid "label tags with mark ids"
+ msgstr ""
+ 
++msgid "last-modified can only operate on one tree at a time"
++msgstr ""
++
+ msgid "layout to use"
+ msgstr ""
+ 
+@@ -14919,9 +15039,18 @@
+ msgid "max seconds to wait for background daemon startup"
+ msgstr ""
+ 
++msgid "max-depth is not supported for index diffs"
++msgstr ""
++
++msgid "max-depth is not supported for worktree diffs"
++msgstr ""
++
+ msgid "maximum length of delta chain allowed in the resulting pack"
+ msgstr ""
+ 
++msgid "maximum memory for cost matrix (default 4G)"
++msgstr ""
++
+ msgid "maximum number of changed-path Bloom filters to compute"
+ msgstr ""
+ 
+@@ -14940,6 +15069,9 @@
+ msgid "maximum size of each packfile"
+ msgstr ""
+ 
++msgid "maximum tree depth to recurse"
++msgstr ""
++
+ msgid "maximum width"
+ msgstr ""
+ 
+@@ -15236,6 +15368,12 @@
+ msgid "multiple updates for ref '%s' not allowed"
+ msgstr ""
+ 
++msgid "must be in a cone-mode sparse-checkout to clean directories"
++msgstr ""
++
++msgid "must be in a sparse-checkout to clean directories"
++msgstr ""
++
+ msgid "must be in a sparse-checkout to reapply sparsity patterns"
+ msgstr ""
+ 
+@@ -15350,6 +15488,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "new object '%s' does not exist"
++msgstr ""
++
++#, c-format
+ msgid "new object is the same as the old one: '%s'"
+ msgstr ""
+ 
+@@ -15989,6 +16131,10 @@
+ msgid "ok to record an empty change"
+ msgstr ""
+ 
++#, c-format
++msgid "old object '%s' does not exist"
++msgstr ""
++
+ msgid "omit the preimage for deletes"
+ msgstr ""
+ 
+@@ -16223,6 +16369,9 @@
+ msgid "output all-zero hash in From header"
+ msgstr ""
+ 
++msgid "output format"
++msgstr ""
++
+ msgid "output full tree for each commit"
+ msgstr ""
+ 
+@@ -17010,6 +17159,10 @@
+ msgid "query push URLs rather than fetch URLs"
+ msgstr ""
+ 
++#, c-format
++msgid "queueing remote ref renames failed: %s"
++msgstr ""
++
+ msgid "quiet"
+ msgstr ""
+ 
+@@ -17037,6 +17190,10 @@
+ msgid "range"
+ msgstr ""
+ 
++#, c-format
++msgid "range-diff: unable to compute the range-diff, since it exceeds the maximum memory for the cost matrix: %s (%<PRIuMAX> bytes) needed, limited to %s (%<PRIuMAX> bytes)"
++msgstr ""
++
+ msgid "re-code metadata to i18n.commitEncoding"
+ msgstr ""
+ 
+@@ -17579,6 +17736,10 @@
+ msgid "renaming pack to '%s' failed"
+ msgstr ""
+ 
++#, c-format
++msgid "renaming remote refs failed: %s"
++msgstr ""
++
+ msgid "renormalize EOL of tracked files (implies -u)"
+ msgstr ""
+ 
+@@ -17663,6 +17824,9 @@
+ msgid "report archived files on stderr"
+ msgstr ""
+ 
++msgid "report each affected file, not just directories"
++msgstr ""
++
+ msgid "report on-disk index format version"
+ msgstr ""
+ 
+@@ -18089,6 +18253,10 @@
+ msgid "serve up the info/refs for git-http-backend"
+ msgstr ""
+ 
++#, c-format
++msgid "server advertised a promisor remote without a name or URL: %s"
++msgstr ""
++
+ msgid "server does not support wait-for-done"
+ msgstr ""
+ 
+@@ -18511,6 +18679,9 @@
+ msgid "show the surrounding function"
+ msgstr ""
+ 
++msgid "show tree entries when recursing into subtrees"
++msgstr ""
++
+ msgid "show trees when recursing"
+ msgstr ""
+ 
+@@ -18556,6 +18727,9 @@
+ msgid "similar to --all-progress when progress meter is shown"
+ msgstr ""
+ 
++msgid "size"
++msgstr ""
++
+ msgid "size of the window used for delta compression"
+ msgstr ""
+ 
+@@ -18994,6 +19168,9 @@
+ msgid "synonym for --files-with-matches"
+ msgstr ""
+ 
++msgid "synonym for --format=nul"
++msgstr ""
++
+ msgid "synonym of --reset-author-date"
+ msgstr ""
+ 
+@@ -19442,6 +19619,10 @@
+ msgid "trying to write ref '%s' with nonexistent object %s"
+ msgstr ""
+ 
++#, c-format
++msgid "trying to write reflog for '%s'with incomplete values"
++msgstr ""
++
+ msgid "two output directories?"
+ msgstr ""
+ 
+@@ -19492,6 +19673,9 @@
+ msgid "unable to add recent objects"
+ msgstr ""
+ 
++msgid "unable to add trailers to commit message"
++msgstr ""
++
+ #, c-format
+ msgid "unable to adjust shared permissions for '%s'"
+ msgstr ""
+@@ -19992,6 +20176,9 @@
+ msgid "unable to set up work tree using invalid config"
+ msgstr ""
+ 
++msgid "unable to setup last-modified"
++msgstr ""
++
+ msgid "unable to sign the tag"
+ msgstr ""
+ 
+@@ -20285,10 +20472,6 @@
+ msgid "unknown diff status: %c"
+ msgstr ""
+ 
+-#, c-format
+-msgid "unknown element '%s' from remote info"
+-msgstr ""
+-
+ msgid "unknown error occurred while reading the configuration files"
+ msgstr ""
+ 
+@@ -20309,6 +20492,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unknown last-modified argument: %s"
++msgstr ""
++
++#, c-format
+ msgid "unknown mandatory capability %s; this remote helper probably needs newer version of Git"
+ msgstr ""
+ 
+@@ -20557,6 +20744,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unsupported field '%s' in '%s' config"
++msgstr ""
++
++#, c-format
+ msgid "unsupported file mode: 0%o (SHA1: %s)"
+ msgstr ""
+ 
