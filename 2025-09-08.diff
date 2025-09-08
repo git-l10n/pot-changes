@@ -1,0 +1,113 @@
+
+
+#################### Mon, 08 Sep 2025 23:58:17 +0000 ####################
+
+--- po/git.pot.old	2025-09-08 23:58:17.523945469 +0000
++++ po/git.pot.new	2025-09-08 23:58:17.600945628 +0000
+@@ -229,7 +229,9 @@
+ msgid ""
+ "\n"
+ "hint: You can replace 'git whatchanged <opts>' with:\n"
+-"    git log <opts> --raw --no-merges\n"
++"hint:\tgit log <opts> --raw --no-merges\n"
++"hint: Or make an alias:\n"
++"hint:\tgit config set --global alias.whatchanged 'log --raw --no-merges'\n"
+ "\n"
+ msgstr ""
+ 
+@@ -7001,6 +7003,22 @@
+ "You might run `git rm` on a file to accept \"deleted by them\" for it."
+ msgstr ""
+ 
++msgid ""
++"You're on a case-insensitive filesystem, and the remote you are\n"
++"trying to fetch from has references that only differ in casing. It\n"
++"is impossible to store such references with the 'files' backend. You\n"
++"can either accept this as-is, in which case you won't be able to\n"
++"store all remote references on disk. Or you can alternatively\n"
++"migrate your repository to use the 'reftable' backend with the\n"
++"following command:\n"
++"\n"
++"    git refs migrate --ref-format=reftable\n"
++"\n"
++"Please keep in mind that not all implementations of Git support this\n"
++"new format yet. So if you use tools other than Git to access this\n"
++"repository it may not be an option to migrate to reftables.\n"
++msgstr ""
++
+ #, c-format
+ msgid ""
+ "You've added another git repository inside your current repository.\n"
+@@ -11150,10 +11168,6 @@
+ msgid "enable/disable untracked cache"
+ msgstr ""
+ 
+-#, c-format
+-msgid "encoded submodule name '%s' is too long (%zu bytes, limit is %ld)"
+-msgstr ""
+-
+ msgid "encoding"
+ msgstr ""
+ 
+@@ -13117,7 +13131,7 @@
+ "                 [--name-hash-version=<n>] [--path-walk] < <object-list>"
+ msgstr ""
+ 
+-msgid "git pack-refs [--all] [--no-prune] [--auto] [--include <pattern>] [--exclude <pattern>]"
++msgid "git pack-refs "
+ msgstr ""
+ 
+ msgid "git patch-id [--stable | --unstable | --verbatim]"
+@@ -13191,6 +13205,9 @@
+ msgid "git refs migrate --ref-format=<format> [--no-reflog] [--dry-run]"
+ msgstr ""
+ 
++msgid "git refs optimize "
++msgstr ""
++
+ msgid "git refs verify [--strict] [--verbose]"
+ msgstr ""
+ 
+@@ -13466,9 +13483,6 @@
+ msgid "git submodule--helper create-branch [-f|--force] [--create-reflog] [-q|--quiet] [-t|--track] [-n|--dry-run] <name> <start-oid> <start-name>"
+ msgstr ""
+ 
+-msgid "git submodule--helper gitdir <name>"
+-msgstr ""
+-
+ msgid "git switch [<options>] [<branch>]"
+ msgstr ""
+ 
+@@ -17528,6 +17542,10 @@
+ msgid "refusing to create malformed object"
+ msgstr ""
+ 
++#, c-format
++msgid "refusing to create/use '%s' in another submodule's git dir"
++msgstr ""
++
+ msgid "refusing to delete current working directory"
+ msgstr ""
+ 
+@@ -17541,6 +17559,10 @@
+ msgid "refusing to merge unrelated histories"
+ msgstr ""
+ 
++#, c-format
++msgid "refusing to move '%s' into an existing git dir"
++msgstr ""
++
+ msgid "refusing to read cookies from http.cookiefile '-'"
+ msgstr ""
+ 
+@@ -19068,6 +19090,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "submodule git dir '%s' is inside git dir '%.*s'"
++msgstr ""
++
++#, c-format
+ msgid "submodule name '%s' already used for path '%s'"
+ msgstr ""
+ 
