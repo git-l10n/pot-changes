@@ -1,0 +1,51 @@
+
+
+#################### Mon, 29 Sep 2025 20:57:46 +0000 ####################
+
+--- po/git.pot.old	2025-09-29 20:57:46.385202001 +0000
++++ po/git.pot.new	2025-09-29 20:57:46.465201899 +0000
+@@ -6578,9 +6578,19 @@
+ 
+ #, c-format
+ msgid ""
++"Using '%s' as the name for the initial branch since Git 3.0.\n"
++"If you expected Git to create 'master', the just-created\n"
++"branch can be renamed via this command:\n"
++"\n"
++"\tgit branch -m master\n"
++msgstr ""
++
++#, c-format
++msgid ""
+ "Using '%s' as the name for the initial branch. This default branch name\n"
+-"is subject to change. To configure the initial branch name to use in all\n"
+-"of your new repositories, which will suppress this warning, call:\n"
++"will change to \"main\" in Git 3.0. To configure the initial branch name\n"
++"to use in all of your new repositories, which will suppress this warning,\n"
++"call:\n"
+ "\n"
+ "\tgit config --global init.defaultBranch <name>\n"
+ "\n"
+@@ -6984,6 +6994,22 @@
+ "You might run `git rm` on a file to accept \"deleted by them\" for it."
+ msgstr ""
+ 
++msgid ""
++"You're on a case-insensitive filesystem, and the remote you are\n"
++"trying to fetch from has references that only differ in casing. It\n"
++"is impossible to store such references with the 'files' backend. You\n"
++"can either accept this as-is, in which case you won't be able to\n"
++"store all remote references on disk. Or you can alternatively\n"
++"migrate your repository to use the 'reftable' backend with the\n"
++"following command:\n"
++"\n"
++"    git refs migrate --ref-format=reftable\n"
++"\n"
++"Please keep in mind that not all implementations of Git support this\n"
++"new format yet. So if you use tools other than Git to access this\n"
++"repository it may not be an option to migrate to reftables.\n"
++msgstr ""
++
+ #, c-format
+ msgid ""
+ "You've added another git repository inside your current repository.\n"
