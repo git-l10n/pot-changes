@@ -1661,3 +1661,284 @@
  #, c-format
  msgid "unsupported section for hidden refs: %s"
  msgstr ""
+
+
+#################### Tue, 14 Oct 2025 16:58:54 +0000 ####################
+
+--- po/git.pot.old	2025-10-14 16:58:54.274512457 +0000
++++ po/git.pot.new	2025-10-14 16:58:54.354512173 +0000
+@@ -1689,7 +1689,7 @@
+ msgid "(%s) failed to close pipe to '%s'"
+ msgstr ""
+ 
+-msgid "(EXPERIMENTAL!) git replay ([--contained] --onto <newbase> | --advance <branch>) <revision-range>..."
++msgid "(EXPERIMENTAL!) git replay ([--contained] --onto <newbase> | --advance <branch>) [--update-refs[=<mode>]] <revision-range>..."
+ msgstr ""
+ 
+ #, c-format
+@@ -3544,6 +3544,9 @@
+ msgid "EXPERIMENTAL: Replay commits on a new base, works with bare repos too"
+ msgstr ""
+ 
++msgid "EXPERIMENTAL: Rewrite history of the current branch"
++msgstr ""
++
+ msgid "EXPERIMENTAL: Show when files were last modified"
+ msgstr ""
+ 
+@@ -4994,6 +4997,12 @@
+ 
+ #, c-format
+ msgid ""
++"Please enter the commit message for the %s changes. Lines starting\n"
++"with '%s' will be kept; you may remove them yourself if you want to.\n"
++msgstr ""
++
++#, c-format
++msgid ""
+ "Please enter the commit message for your changes. Lines starting\n"
+ "with '%s' will be ignored, and an empty message aborts the commit.\n"
+ msgstr ""
+@@ -5030,6 +5039,10 @@
+ msgid "Please supply the message using either -m or -F option.\n"
+ msgstr ""
+ 
++#, c-format
++msgid "Please supply the message using the -m option.\n"
++msgstr ""
++
+ msgid "Please, commit your changes before merging."
+ msgstr ""
+ 
+@@ -5385,6 +5398,9 @@
+ msgid "Review diff"
+ msgstr ""
+ 
++msgid "Revision does not refer to a commit"
++msgstr ""
++
+ #, c-format
+ msgid "Rewinding the tree to pristine...\n"
+ msgstr ""
+@@ -8822,6 +8838,9 @@
+ msgid "cannot readlink '%s'"
+ msgstr ""
+ 
++msgid "cannot rearrange commit history with merges"
++msgstr ""
++
+ msgid "cannot rebase with locally recorded submodule modifications"
+ msgstr ""
+ 
+@@ -9193,6 +9212,12 @@
+ msgid "command"
+ msgstr ""
+ 
++msgid "command expects a revision"
++msgstr ""
++
++msgid "command expects a single revision"
++msgstr ""
++
+ msgid "command token to send to the server"
+ msgstr ""
+ 
+@@ -9241,9 +9266,23 @@
+ msgid "commit message"
+ msgstr ""
+ 
++msgid "commit must be reachable from current HEAD commit"
++msgstr ""
++
+ msgid "commit only specified files"
+ msgstr ""
+ 
++#, c-format
++msgid "commit to be reworded cannot be found: %s"
++msgstr ""
++
++#, c-format
++msgid "commit to be split cannot be found: %s"
++msgstr ""
++
++msgid "commit to be split must not be a merge commit"
++msgstr ""
++
+ msgid "commit your changes or stash them to proceed."
+ msgstr ""
+ 
+@@ -9419,6 +9458,9 @@
+ msgid "control recursive pushing of submodules"
+ msgstr ""
+ 
++msgid "control ref update behavior (yes|print)"
++msgstr ""
++
+ msgid "control the order in which files appear in the output"
+ msgstr ""
+ 
+@@ -9888,6 +9930,9 @@
+ msgid "could not mark as interactive"
+ msgstr ""
+ 
++msgid "could not merge"
++msgstr ""
++
+ #, c-format
+ msgid "could not migrate git directory from '%s' to '%s'"
+ msgstr ""
+@@ -10200,6 +10245,9 @@
+ msgid "could not resolve HEAD ref inside the submodule '%s'"
+ msgstr ""
+ 
++msgid "could not resolve HEAD to a commit"
++msgstr ""
++
+ #, c-format
+ msgid "could not resolve ref '%s'"
+ msgstr ""
+@@ -11100,6 +11148,10 @@
+ msgid "duplicate replace ref: %s"
+ msgstr ""
+ 
++#, c-format
++msgid "duplicate rewritten commit: %s\n"
++msgstr ""
++
+ msgid "during repack, collect pack-files of smaller size into a batch that is larger than this size"
+ msgstr ""
+ 
+@@ -11590,6 +11642,12 @@
+ msgid "failed reading ssh signing data buffer from '%s'"
+ msgstr ""
+ 
++msgid "failed reading temporary index"
++msgstr ""
++
++msgid "failed split tree"
++msgstr ""
++
+ #, c-format
+ msgid "failed to add packfile '%s'"
+ msgstr ""
+@@ -11601,6 +11659,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "failed to begin ref transaction: %s"
++msgstr ""
++
++#, c-format
+ msgid "failed to bootstrap service %s"
+ msgstr ""
+ 
+@@ -11614,6 +11676,10 @@
+ msgid "failed to close rev-list's stdin"
+ msgstr ""
+ 
++#, c-format
++msgid "failed to commit ref transaction: %s"
++msgstr ""
++
+ msgid "failed to convert index to a sparse index; resolve merge conflicts and try again"
+ msgstr ""
+ 
+@@ -11848,6 +11914,10 @@
+ msgid "failed to locate object %d in packfile"
+ msgstr ""
+ 
++#, c-format
++msgid "failed to look up commit: %s"
++msgstr ""
++
+ msgid "failed to look up reference"
+ msgstr ""
+ 
+@@ -12110,6 +12180,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "failed to update ref '%s': %s"
++msgstr ""
++
++#, c-format
+ msgid "failed to update remote for submodule '%s'"
+ msgstr ""
+ 
+@@ -12165,6 +12239,15 @@
+ msgid "failed writing detached signature to '%s'"
+ msgstr ""
+ 
++msgid "failed writing reworded commit"
++msgstr ""
++
++msgid "failed writing second commit"
++msgstr ""
++
++msgid "failed writing split-out commit"
++msgstr ""
++
+ #, c-format
+ msgid "failed writing ssh signing key buffer to '%s'"
+ msgstr ""
+@@ -12996,6 +13079,18 @@
+ msgid "git help [[-i|--info] [-m|--man] [-w|--web]] [<command>|<doc>]"
+ msgstr ""
+ 
++msgid "git history [<options>]"
++msgstr ""
++
++msgid "git history reword [<options>] <commit>"
++msgstr ""
++
++msgid "git history split [<options>] <commit>"
++msgstr ""
++
++msgid "git history split [<options>] <commit> [--] [<pathspec>...]"
++msgstr ""
++
+ msgid "git hook run [--ignore-missing] [--to-stdin=<path>] <hook-name> [-- <hook-args>]"
+ msgstr ""
+ 
+@@ -14520,6 +14615,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "invalid object ID: %s"
++msgstr ""
++
++#, c-format
+ msgid "invalid object name '%.*s'."
+ msgstr ""
+ 
+@@ -14697,6 +14796,14 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "invalid value for --update-refs: '%s' (expected 'yes' or 'print')"
++msgstr ""
++
++#, c-format
++msgid "invalid value for replay.defaultAction: '%s' (expected 'update-refs' or 'show-commands')"
++msgstr ""
++
++#, c-format
+ msgid "invalid value for variable %s"
+ msgstr ""
+ 
+@@ -18987,6 +19094,15 @@
+ msgid "spend extra cycles to find better match"
+ msgstr ""
+ 
++msgid "split commit is empty"
++msgstr ""
++
++msgid "split commit must be reachable from current HEAD commit"
++msgstr ""
++
++msgid "split commit tree matches original commit"
++msgstr ""
++
+ #, c-format
+ msgid "splitIndex.maxPercentChange value '%d' should be between 0 and 100"
+ msgstr ""
