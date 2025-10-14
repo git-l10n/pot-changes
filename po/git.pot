@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2025-10-14 16:58+0000\n"
+"POT-Creation-Date: 2025-10-14 21:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -4907,7 +4907,7 @@ msgstr ""
 msgid "failed to copy file to '%s'"
 msgstr ""
 
-#: builtin/clone.c:345 refs/files-backend.c:3934
+#: builtin/clone.c:345 refs/files-backend.c:3948
 #, c-format
 msgid "failed to iterate over '%s'"
 msgstr ""
@@ -14110,7 +14110,8 @@ msgstr ""
 #: builtin/replay.c:228
 msgid ""
 "(EXPERIMENTAL!) git replay ([--contained] --onto <newbase> | --advance "
-"<branch>) [--update-refs[=<mode>]] <revision-range>..."
+"<branch>)\n"
+"[--update-refs[=<mode>]] <revision-range>..."
 msgstr ""
 
 #: builtin/replay.c:236
@@ -24028,23 +24029,36 @@ msgstr ""
 msgid "migrated refs can be found at '%s'"
 msgstr ""
 
-#: refs/files-backend.c:2753 refs/reftable-backend.c:1257
+#: refs/files-backend.c:2111
+msgid ""
+"'core.preferSymlinkRefs=true' is nominated for removal.\n"
+"hint: The use of symbolic links for symbolic refs is deprecated\n"
+"hint: and will be removed in Git 3.0. The configuration that\n"
+"hint: tells Git to use them is thus going away. You can unset\n"
+"hint: it with:\n"
+"hint:\n"
+"hint:\tgit config unset core.preferSymlinkRefs\n"
+"hint:\n"
+"hint: Git will then use the symref format instead."
+msgstr ""
+
+#: refs/files-backend.c:2767 refs/reftable-backend.c:1257
 #, c-format
 msgid ""
 "cannot lock ref '%s': expected symref with target '%s': but is a regular ref"
 msgstr ""
 
-#: refs/files-backend.c:3090 refs/reftable-backend.c:1096
+#: refs/files-backend.c:3104 refs/reftable-backend.c:1096
 #, c-format
 msgid "trying to write reflog for '%s'with incomplete values"
 msgstr ""
 
-#: refs/files-backend.c:3811
+#: refs/files-backend.c:3825
 #, c-format
 msgid "cannot read ref file '%s'"
 msgstr ""
 
-#: refs/files-backend.c:3901
+#: refs/files-backend.c:3915
 #, c-format
 msgid "cannot open directory %s"
 msgstr ""
