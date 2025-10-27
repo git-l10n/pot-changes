@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2025-10-27 15:57+0000\n"
+"POT-Creation-Date: 2025-10-27 22:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -2406,7 +2406,7 @@ msgid "invalid ident line: %.*s"
 msgstr ""
 
 #: builtin/am.c:1387 builtin/checkout.c:846 builtin/clone.c:685
-#: builtin/history.c:301 builtin/history.c:524 commit-graph.c:1241
+#: builtin/history.c:267 builtin/history.c:487 commit-graph.c:1241
 #, c-format
 msgid "unable to parse commit %s"
 msgstr ""
@@ -5443,14 +5443,13 @@ msgstr ""
 msgid "id of a parent commit object"
 msgstr ""
 
-#: builtin/commit-tree.c:109 builtin/commit.c:1712 builtin/history.c:270
-#: builtin/history.c:498 builtin/merge.c:299 builtin/notes.c:489
-#: builtin/notes.c:668 builtin/stash.c:1861 builtin/tag.c:499
+#: builtin/commit-tree.c:109 builtin/commit.c:1712 builtin/merge.c:299
+#: builtin/notes.c:489 builtin/notes.c:668 builtin/stash.c:1861
+#: builtin/tag.c:499
 msgid "message"
 msgstr ""
 
-#: builtin/commit-tree.c:110 builtin/commit.c:1712 builtin/history.c:270
-#: builtin/history.c:498
+#: builtin/commit-tree.c:110 builtin/commit.c:1712
 msgid "commit message"
 msgstr ""
 
@@ -5630,7 +5629,7 @@ msgstr ""
 msgid "could not read MERGE_MSG"
 msgstr ""
 
-#: builtin/commit.c:912 builtin/history.c:232 bundle.c:158 rerere.c:484
+#: builtin/commit.c:912 builtin/history.c:203 bundle.c:158 rerere.c:484
 #: rerere.c:698 sequencer.c:2947 sequencer.c:3733
 #, c-format
 msgid "could not open '%s'"
@@ -6007,7 +6006,7 @@ msgstr ""
 msgid "could not read commit message: %s"
 msgstr ""
 
-#: builtin/commit.c:1903 builtin/history.c:252
+#: builtin/commit.c:1903 builtin/history.c:220
 #, c-format
 msgid "Aborting commit due to empty commit message.\n"
 msgstr ""
@@ -8815,109 +8814,96 @@ msgid "'git help config' for more information"
 msgstr ""
 
 #: builtin/history.c:26
-msgid "git history reword [<options>] <commit>"
+msgid "git history reword <commit>"
 msgstr ""
 
 #: builtin/history.c:27
-msgid "git history split [<options>] <commit> [--] [<pathspec>...]"
+msgid "git history split <commit> [--] [<pathspec>...]"
 msgstr ""
 
 #: builtin/history.c:58
 msgid "cannot rearrange commit history with merges"
 msgstr ""
 
-#: builtin/history.c:138
+#: builtin/history.c:128
 #, c-format
 msgid "invalid object ID: %s"
 msgstr ""
 
-#: builtin/history.c:144
+#: builtin/history.c:134
 #, c-format
 msgid "failed to look up commit: %s"
 msgstr ""
 
-#: builtin/history.c:161
-#, c-format
-msgid "duplicate rewritten commit: %s\n"
-msgstr ""
-
-#: builtin/history.c:169
-msgid "could not merge"
-msgstr ""
-
-#: builtin/history.c:179 builtin/rebase.c:861
+#: builtin/history.c:154 builtin/rebase.c:861
 #, c-format
 msgid "could not switch to %s"
 msgstr ""
 
-#: builtin/history.c:210
+#: builtin/history.c:181
 #, c-format
 msgid ""
 "Please enter the commit message for the %s changes. Lines starting\n"
 "with '%s' will be ignored.\n"
 msgstr ""
 
-#: builtin/history.c:241
+#: builtin/history.c:212
 #, c-format
 msgid "Please supply the message using the -m option.\n"
 msgstr ""
 
-#: builtin/history.c:286
+#: builtin/history.c:252
 msgid "command expects a single revision"
 msgstr ""
 
-#: builtin/history.c:293
+#: builtin/history.c:259
 #, c-format
 msgid "commit to be reworded cannot be found: %s"
 msgstr ""
 
-#: builtin/history.c:312 builtin/history.c:531
+#: builtin/history.c:278 builtin/history.c:494
 msgid "could not resolve HEAD to a commit"
 msgstr ""
 
-#: builtin/history.c:318 builtin/history.c:537
+#: builtin/history.c:284 builtin/history.c:500
 msgid "split commit must be reachable from current HEAD commit"
 msgstr ""
 
-#: builtin/history.c:346
+#: builtin/history.c:312
 msgid "failed writing reworded commit"
 msgstr ""
 
-#: builtin/history.c:409
+#: builtin/history.c:374
 msgid "failed reading temporary index"
 msgstr ""
 
-#: builtin/history.c:421
+#: builtin/history.c:386
 msgid "failed split tree"
 msgstr ""
 
-#: builtin/history.c:433
+#: builtin/history.c:398
 msgid "split commit is empty"
 msgstr ""
 
-#: builtin/history.c:436
+#: builtin/history.c:401
 msgid "split commit tree matches original commit"
 msgstr ""
 
-#: builtin/history.c:454
+#: builtin/history.c:419
 msgid "failed writing split-out commit"
 msgstr ""
 
-#: builtin/history.c:470
+#: builtin/history.c:435
 msgid "failed writing second commit"
 msgstr ""
 
-#: builtin/history.c:511
+#: builtin/history.c:474
 msgid "command expects a revision"
 msgstr ""
 
-#: builtin/history.c:518
+#: builtin/history.c:481
 #, c-format
 msgid "commit to be split cannot be found: %s"
-msgstr ""
-
-#: builtin/history.c:586
-msgid "git history [<options>]"
 msgstr ""
 
 #: builtin/hook.c:11
