@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2025-10-24 21:57+0000\n"
+"POT-Creation-Date: 2025-10-28 19:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -846,7 +846,7 @@ msgstr ""
 #: builtin/clean.c:967 builtin/clone.c:1035 builtin/clone.c:1040
 #: builtin/commit.c:372 builtin/commit.c:375 builtin/commit.c:1266
 #: builtin/commit.c:1322 builtin/commit.c:1339 builtin/describe.c:698
-#: builtin/diff-tree.c:167 builtin/difftool.c:774 builtin/fast-export.c:1385
+#: builtin/diff-tree.c:167 builtin/difftool.c:774 builtin/fast-export.c:1384
 #: builtin/fetch.c:2460 builtin/fetch.c:2487 builtin/fetch.c:2501
 #: builtin/fetch.c:2506 builtin/help.c:622 builtin/index-pack.c:2023
 #: builtin/init-db.c:120 builtin/log.c:2146 builtin/log.c:2148
@@ -1615,8 +1615,8 @@ msgstr ""
 
 #: archive.c:657 archive.c:671 builtin/blame.c:919 builtin/blame.c:923
 #: builtin/blame.c:924 builtin/commit-tree.c:112 builtin/config.c:71
-#: builtin/fast-export.c:1321 builtin/fast-export.c:1323
-#: builtin/fast-export.c:1327 builtin/gc.c:1902 builtin/gc.c:1968
+#: builtin/fast-export.c:1320 builtin/fast-export.c:1322
+#: builtin/fast-export.c:1326 builtin/gc.c:1902 builtin/gc.c:1968
 #: builtin/grep.c:998 builtin/hash-object.c:93 builtin/ls-files.c:625
 #: builtin/ls-files.c:628 builtin/notes.c:492 builtin/notes.c:671
 #: builtin/read-tree.c:124 parse-options.h:346
@@ -1686,7 +1686,7 @@ msgstr ""
 #: builtin/add.c:469 builtin/checkout.c:1803 builtin/checkout.c:1805
 #: builtin/checkout.c:1949 builtin/clone.c:1271 builtin/clone.c:1274
 #: builtin/commit.c:384 builtin/commit.c:436 builtin/commit.c:438
-#: builtin/fast-export.c:1370 builtin/index-pack.c:2017 builtin/log.c:2320
+#: builtin/fast-export.c:1369 builtin/index-pack.c:2017 builtin/log.c:2320
 #: builtin/reset.c:400 builtin/reset.c:443 builtin/reset.c:445
 #: builtin/reset.c:474 builtin/rm.c:292 builtin/stash.c:1906
 #: builtin/stash.c:1911 builtin/stash.c:1913 builtin/stash.c:1983
@@ -2125,6 +2125,7 @@ msgstr ""
 #: builtin/add.c:254 builtin/clean.c:938 builtin/fetch.c:2364 builtin/mv.c:217
 #: builtin/prune-packed.c:18 builtin/pull.c:217 builtin/push.c:570
 #: builtin/remote.c:1676 builtin/rm.c:252 builtin/send-pack.c:193
+#: builtin/sparse-checkout.c:965
 msgid "dry run"
 msgstr ""
 
@@ -3715,8 +3716,8 @@ msgid ""
 msgstr ""
 
 #: builtin/bugreport.c:112 builtin/commit.c:1570 builtin/commit.c:1579
-#: builtin/commit.c:1769 builtin/fast-export.c:1309 builtin/fast-export.c:1312
-#: builtin/fast-export.c:1315 builtin/fast-export.c:1318
+#: builtin/commit.c:1769 builtin/fast-export.c:1308 builtin/fast-export.c:1311
+#: builtin/fast-export.c:1314 builtin/fast-export.c:1317
 #: builtin/pack-objects.c:4931 builtin/rebase.c:1218 parse-options.h:622
 msgid "mode"
 msgstr ""
@@ -4698,12 +4699,12 @@ msgid ""
 "[<pathspec>...]"
 msgstr ""
 
-#: builtin/clean.c:40
+#: builtin/clean.c:40 builtin/sparse-checkout.c:951
 #, c-format
 msgid "Removing %s\n"
 msgstr ""
 
-#: builtin/clean.c:41
+#: builtin/clean.c:41 builtin/sparse-checkout.c:952
 #, c-format
 msgid "Would remove %s\n"
 msgstr ""
@@ -4808,7 +4809,7 @@ msgstr ""
 msgid "do not print names of files removed"
 msgstr ""
 
-#: builtin/clean.c:939
+#: builtin/clean.c:939 builtin/sparse-checkout.c:966
 msgid "force"
 msgstr ""
 
@@ -6900,136 +6901,155 @@ msgstr ""
 msgid "git fast-export [<rev-list-opts>]"
 msgstr ""
 
-#: builtin/fast-export.c:973
+#: builtin/fast-export.c:972
 msgid "Error: Cannot export nested tags unless --mark-tags is specified."
 msgstr ""
 
-#: builtin/fast-export.c:1285
+#: builtin/fast-export.c:1284
 msgid "--anonymize-map token cannot be empty"
 msgstr ""
 
-#: builtin/fast-export.c:1308
+#: builtin/fast-export.c:1307
 msgid "show progress after <n> objects"
 msgstr ""
 
-#: builtin/fast-export.c:1310
+#: builtin/fast-export.c:1309
 msgid "select handling of signed tags"
 msgstr ""
 
-#: builtin/fast-export.c:1313
+#: builtin/fast-export.c:1312
 msgid "select handling of signed commits"
 msgstr ""
 
-#: builtin/fast-export.c:1316
+#: builtin/fast-export.c:1315
 msgid "select handling of tags that tag filtered objects"
 msgstr ""
 
-#: builtin/fast-export.c:1319
+#: builtin/fast-export.c:1318
 msgid "select handling of commit messages in an alternate encoding"
 msgstr ""
 
-#: builtin/fast-export.c:1322
+#: builtin/fast-export.c:1321
 msgid "dump marks to this file"
 msgstr ""
 
-#: builtin/fast-export.c:1324
+#: builtin/fast-export.c:1323
 msgid "import marks from this file"
 msgstr ""
 
-#: builtin/fast-export.c:1328
+#: builtin/fast-export.c:1327
 msgid "import marks from this file if it exists"
 msgstr ""
 
-#: builtin/fast-export.c:1330
+#: builtin/fast-export.c:1329
 msgid "fake a tagger when tags lack one"
 msgstr ""
 
-#: builtin/fast-export.c:1332
+#: builtin/fast-export.c:1331
 msgid "output full tree for each commit"
 msgstr ""
 
-#: builtin/fast-export.c:1334
+#: builtin/fast-export.c:1333
 msgid "use the done feature to terminate the stream"
 msgstr ""
 
-#: builtin/fast-export.c:1335
+#: builtin/fast-export.c:1334
 msgid "skip output of blob data"
 msgstr ""
 
-#: builtin/fast-export.c:1336 builtin/log.c:2024
+#: builtin/fast-export.c:1335 builtin/log.c:2024
 msgid "refspec"
 msgstr ""
 
-#: builtin/fast-export.c:1337
+#: builtin/fast-export.c:1336
 msgid "apply refspec to exported refs"
 msgstr ""
 
-#: builtin/fast-export.c:1338
+#: builtin/fast-export.c:1337
 msgid "anonymize output"
 msgstr ""
 
-#: builtin/fast-export.c:1339
+#: builtin/fast-export.c:1338
 msgid "from:to"
 msgstr ""
 
-#: builtin/fast-export.c:1340
+#: builtin/fast-export.c:1339
 msgid "convert <from> to <to> in anonymized output"
 msgstr ""
 
-#: builtin/fast-export.c:1343
+#: builtin/fast-export.c:1342
 msgid "reference parents which are not in fast-export stream by object id"
 msgstr ""
 
-#: builtin/fast-export.c:1345
+#: builtin/fast-export.c:1344
 msgid "show original object ids of blobs/commits"
 msgstr ""
 
-#: builtin/fast-export.c:1347
+#: builtin/fast-export.c:1346
 msgid "label tags with mark ids"
 msgstr ""
 
-#: builtin/fast-import.c:2814
+#: builtin/fast-import.c:2815
 msgid "parse_one_signature() returned unknown hash algo"
 msgstr ""
 
-#: builtin/fast-import.c:2857
+#: builtin/fast-import.c:2858
 msgid "stripping a commit signature"
 msgstr ""
 
-#: builtin/fast-import.c:2865
+#: builtin/fast-import.c:2866
 msgid "importing a commit signature verbatim"
 msgstr ""
 
-#: builtin/fast-import.c:3272
+#: builtin/fast-import.c:2979
+msgid "encountered signed tag; use --signed-tags=<mode> to handle it"
+msgstr ""
+
+#: builtin/fast-import.c:2982
+#, c-format
+msgid "importing a tag signature verbatim for tag '%s'"
+msgstr ""
+
+#: builtin/fast-import.c:2990
+#, c-format
+msgid "stripping a tag signature for tag '%s'"
+msgstr ""
+
+#: builtin/fast-import.c:3312
 #, c-format
 msgid "Missing from marks for submodule '%s'"
 msgstr ""
 
-#: builtin/fast-import.c:3274
+#: builtin/fast-import.c:3314
 #, c-format
 msgid "Missing to marks for submodule '%s'"
 msgstr ""
 
-#: builtin/fast-import.c:3402
+#: builtin/fast-import.c:3442
 #, c-format
 msgid "Expected 'mark' command, got %s"
 msgstr ""
 
-#: builtin/fast-import.c:3407
+#: builtin/fast-import.c:3447
 #, c-format
 msgid "Expected 'to' command, got %s"
 msgstr ""
 
-#: builtin/fast-import.c:3503
+#: builtin/fast-import.c:3543
 msgid "Expected format name:filename for submodule rewrite option"
 msgstr ""
 
-#: builtin/fast-import.c:3548
+#: builtin/fast-import.c:3588
 #, c-format
 msgid "unknown --signed-commits mode '%s'"
 msgstr ""
 
-#: builtin/fast-import.c:3566
+#: builtin/fast-import.c:3591
+#, c-format
+msgid "unknown --signed-tags mode '%s'"
+msgstr ""
+
+#: builtin/fast-import.c:3609
 #, c-format
 msgid "feature '%s' forbidden in input without --allow-unsafe-features"
 msgstr ""
@@ -10333,7 +10353,7 @@ msgstr ""
 msgid "Not handling anything other than two heads merge."
 msgstr ""
 
-#: builtin/merge.c:843 builtin/sparse-checkout.c:361
+#: builtin/merge.c:843 builtin/sparse-checkout.c:363
 #, c-format
 msgid "unable to write %s"
 msgstr ""
@@ -14825,169 +14845,200 @@ msgstr ""
 msgid "show refs from stdin that aren't in local repository"
 msgstr ""
 
-#: builtin/sparse-checkout.c:26
+#: builtin/sparse-checkout.c:27
 msgid ""
 "git sparse-checkout (init | list | set | add | reapply | disable | check-"
-"rules) [<options>]"
+"rules | clean) [<options>]"
 msgstr ""
 
-#: builtin/sparse-checkout.c:66
+#: builtin/sparse-checkout.c:67
 msgid "this worktree is not sparse"
 msgstr ""
 
-#: builtin/sparse-checkout.c:81
+#: builtin/sparse-checkout.c:82
 msgid "this worktree is not sparse (sparse-checkout file may not exist)"
 msgstr ""
 
-#: builtin/sparse-checkout.c:183
+#: builtin/sparse-checkout.c:184
 #, c-format
 msgid ""
 "directory '%s' contains untracked files, but is not in the sparse-checkout "
 "cone"
 msgstr ""
 
-#: builtin/sparse-checkout.c:191
+#: builtin/sparse-checkout.c:192
 #, c-format
 msgid "failed to remove directory '%s'"
 msgstr ""
 
-#: builtin/sparse-checkout.c:340
+#: builtin/sparse-checkout.c:342
 msgid "failed to create directory for sparse-checkout file"
 msgstr ""
 
-#: builtin/sparse-checkout.c:353
+#: builtin/sparse-checkout.c:355
 #, c-format
 msgid "unable to fdopen %s"
 msgstr ""
 
-#: builtin/sparse-checkout.c:379
+#: builtin/sparse-checkout.c:382
 msgid "failed to initialize worktree config"
 msgstr ""
 
-#: builtin/sparse-checkout.c:427
+#: builtin/sparse-checkout.c:430
 msgid "failed to modify sparse-index config"
 msgstr ""
 
-#: builtin/sparse-checkout.c:460 builtin/sparse-checkout.c:835
-#: builtin/sparse-checkout.c:898
+#: builtin/sparse-checkout.c:463 builtin/sparse-checkout.c:840
+#: builtin/sparse-checkout.c:903
 msgid "initialize the sparse-checkout in cone mode"
 msgstr ""
 
-#: builtin/sparse-checkout.c:462 builtin/sparse-checkout.c:837
-#: builtin/sparse-checkout.c:900
+#: builtin/sparse-checkout.c:465 builtin/sparse-checkout.c:842
+#: builtin/sparse-checkout.c:905
 msgid "toggle the use of a sparse index"
 msgstr ""
 
-#: builtin/sparse-checkout.c:496 commit-graph.c:2071 midx-write.c:1056
+#: builtin/sparse-checkout.c:499 commit-graph.c:2071 midx-write.c:1056
 #: sequencer.c:4398
 #, c-format
 msgid "unable to create leading directories of %s"
 msgstr ""
 
-#: builtin/sparse-checkout.c:500
+#: builtin/sparse-checkout.c:503
 #, c-format
 msgid "failed to open '%s'"
 msgstr ""
 
-#: builtin/sparse-checkout.c:559
+#: builtin/sparse-checkout.c:562
 #, c-format
 msgid "could not normalize path %s"
 msgstr ""
 
-#: builtin/sparse-checkout.c:588 builtin/sparse-checkout.c:1003
+#: builtin/sparse-checkout.c:591 builtin/sparse-checkout.c:1106
 #, c-format
 msgid "unable to unquote C-style string '%s'"
 msgstr ""
 
-#: builtin/sparse-checkout.c:644 builtin/sparse-checkout.c:672
-#: builtin/sparse-checkout.c:1054
+#: builtin/sparse-checkout.c:647 builtin/sparse-checkout.c:675
+#: builtin/sparse-checkout.c:1157
 msgid "unable to load existing sparse-checkout patterns"
 msgstr ""
 
-#: builtin/sparse-checkout.c:648
+#: builtin/sparse-checkout.c:651
 msgid "existing sparse-checkout patterns do not use cone mode"
 msgstr ""
 
-#: builtin/sparse-checkout.c:740
+#: builtin/sparse-checkout.c:745
 msgid "please run from the toplevel directory in non-cone mode"
 msgstr ""
 
-#: builtin/sparse-checkout.c:745
+#: builtin/sparse-checkout.c:750
 msgid "specify directories rather than patterns (no leading slash)"
 msgstr ""
 
-#: builtin/sparse-checkout.c:747
+#: builtin/sparse-checkout.c:752
 msgid ""
 "specify directories rather than patterns.  If your directory starts with a "
 "'!', pass --skip-checks"
 msgstr ""
 
-#: builtin/sparse-checkout.c:749
+#: builtin/sparse-checkout.c:754
 msgid ""
 "specify directories rather than patterns.  If your directory really has any "
 "of '*?[]\\' in it, pass --skip-checks"
 msgstr ""
 
-#: builtin/sparse-checkout.c:765
+#: builtin/sparse-checkout.c:770
 #, c-format
 msgid ""
 "'%s' is not a directory; to treat it as a directory anyway, rerun with --"
 "skip-checks"
 msgstr ""
 
-#: builtin/sparse-checkout.c:767
+#: builtin/sparse-checkout.c:772
 #, c-format
 msgid ""
 "pass a leading slash before paths such as '%s' if you want a single file "
 "(see NON-CONE PROBLEMS in the git-sparse-checkout manual)."
 msgstr ""
 
-#: builtin/sparse-checkout.c:772
+#: builtin/sparse-checkout.c:777
 msgid "git sparse-checkout add [--skip-checks] (--stdin | <patterns>)"
 msgstr ""
 
-#: builtin/sparse-checkout.c:786 builtin/sparse-checkout.c:839
+#: builtin/sparse-checkout.c:791 builtin/sparse-checkout.c:844
 msgid ""
 "skip some sanity checks on the given paths that might give false positives"
 msgstr ""
 
-#: builtin/sparse-checkout.c:789 builtin/sparse-checkout.c:842
+#: builtin/sparse-checkout.c:794 builtin/sparse-checkout.c:847
 msgid "read patterns from standard in"
 msgstr ""
 
-#: builtin/sparse-checkout.c:797
+#: builtin/sparse-checkout.c:802
 msgid "no sparse-checkout to add to"
 msgstr ""
 
-#: builtin/sparse-checkout.c:816
+#: builtin/sparse-checkout.c:821
 msgid ""
 "git sparse-checkout set [--[no-]cone] [--[no-]sparse-index] [--skip-checks] "
 "(--stdin | <patterns>)"
 msgstr ""
 
-#: builtin/sparse-checkout.c:906
+#: builtin/sparse-checkout.c:911
 msgid "must be in a sparse-checkout to reapply sparsity patterns"
 msgstr ""
 
-#: builtin/sparse-checkout.c:972
+#: builtin/sparse-checkout.c:967
+msgid "report each affected file, not just directories"
+msgstr ""
+
+#: builtin/sparse-checkout.c:973
+msgid "must be in a sparse-checkout to clean directories"
+msgstr ""
+
+#: builtin/sparse-checkout.c:975
+msgid "must be in a cone-mode sparse-checkout to clean directories"
+msgstr ""
+
+#: builtin/sparse-checkout.c:983
+msgid "for safety, refusing to clean without one of --force or --dry-run"
+msgstr ""
+
+#: builtin/sparse-checkout.c:989
+msgid "failed to read index"
+msgstr ""
+
+#: builtin/sparse-checkout.c:993
+msgid ""
+"failed to convert index to a sparse index; resolve merge conflicts and try "
+"again"
+msgstr ""
+
+#: builtin/sparse-checkout.c:1016
+#, c-format
+msgid "failed to remove '%s'"
+msgstr ""
+
+#: builtin/sparse-checkout.c:1072
 msgid "error while refreshing working directory"
 msgstr ""
 
-#: builtin/sparse-checkout.c:979
+#: builtin/sparse-checkout.c:1079
 msgid ""
 "git sparse-checkout check-rules [-z] [--skip-checks][--[no-]cone] [--rules-"
 "file <file>]"
 msgstr ""
 
-#: builtin/sparse-checkout.c:1023
+#: builtin/sparse-checkout.c:1126
 msgid "terminate input and output files by a NUL character"
 msgstr ""
 
-#: builtin/sparse-checkout.c:1025
+#: builtin/sparse-checkout.c:1128
 msgid "when used with --rules-file interpret patterns as cone mode patterns"
 msgstr ""
 
-#: builtin/sparse-checkout.c:1027
+#: builtin/sparse-checkout.c:1130
 msgid "use patterns in <file> instead of the current ones."
 msgstr ""
 
@@ -17740,7 +17791,7 @@ msgid "Read, modify and delete symbolic refs"
 msgstr ""
 
 #: command-list.h:193
-msgid "Create, list, delete or verify a tag object signed with GPG"
+msgid "Create, list, delete or verify tags"
 msgstr ""
 
 #: command-list.h:194
@@ -19344,7 +19395,7 @@ msgstr ""
 msgid "could not archive missing directory '%s'"
 msgstr ""
 
-#: diagnose.c:144 dir.c:2550
+#: diagnose.c:144 dir.c:2578
 #, c-format
 msgid "could not open directory '%s'"
 msgstr ""
@@ -20033,60 +20084,60 @@ msgstr ""
 msgid "No such path '%s' in the diff"
 msgstr ""
 
-#: dir.c:642
+#: dir.c:670
 #, c-format
 msgid "pathspec '%s' did not match any file(s) known to git"
 msgstr ""
 
-#: dir.c:791 dir.c:798 dir.c:827 dir.c:842
+#: dir.c:819 dir.c:826 dir.c:855 dir.c:870
 #, c-format
 msgid "unrecognized pattern: '%s'"
 msgstr ""
 
-#: dir.c:857 dir.c:875
+#: dir.c:885 dir.c:903
 #, c-format
 msgid "unrecognized negative pattern: '%s'"
 msgstr ""
 
-#: dir.c:891
+#: dir.c:919
 #, c-format
 msgid "your sparse-checkout file may have issues: pattern '%s' is repeated"
 msgstr ""
 
-#: dir.c:899
+#: dir.c:927
 msgid "disabling cone pattern matching"
 msgstr ""
 
-#: dir.c:1291
+#: dir.c:1319
 #, c-format
 msgid "cannot use %s as an exclude file"
 msgstr ""
 
-#: dir.c:2853
+#: dir.c:2881
 msgid "failed to get kernel name and information"
 msgstr ""
 
-#: dir.c:2990
+#: dir.c:3018
 msgid "untracked cache is disabled on this system or location"
 msgstr ""
 
-#: dir.c:3278 dir.c:3316
+#: dir.c:3306 dir.c:3344
 msgid ""
 "No directory name could be guessed.\n"
 "Please specify a directory on the command line"
 msgstr ""
 
-#: dir.c:4035
+#: dir.c:4063
 #, c-format
 msgid "index file corrupt in repo %s"
 msgstr ""
 
-#: dir.c:4082 dir.c:4087
+#: dir.c:4110 dir.c:4115
 #, c-format
 msgid "could not create directories for %s"
 msgstr ""
 
-#: dir.c:4116
+#: dir.c:4144
 #, c-format
 msgid "could not migrate git directory from '%s' to '%s'"
 msgstr ""
@@ -25978,7 +26029,7 @@ msgstr ""
 msgid "Initialized empty Git repository in %s%s\n"
 msgstr ""
 
-#: sparse-index.c:414
+#: sparse-index.c:416
 #, c-format
 msgid "index entry is a directory, but not sparse (%08x)"
 msgstr ""
