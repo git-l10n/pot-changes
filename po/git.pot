@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2025-10-28 19:57+0000\n"
+"POT-Creation-Date: 2025-10-29 21:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -1251,7 +1251,7 @@ msgstr ""
 msgid "unable to add cache entry for %s"
 msgstr ""
 
-#: apply.c:4417 builtin/bisect.c:611 builtin/gc.c:3048 builtin/gc.c:3110
+#: apply.c:4417 builtin/bisect.c:616 builtin/gc.c:3048 builtin/gc.c:3110
 #, c-format
 msgid "failed to write to '%s'"
 msgstr ""
@@ -1619,8 +1619,8 @@ msgstr ""
 msgid "prepend prefix to each pathname in the archive"
 msgstr ""
 
-#: archive.c:657 archive.c:671 builtin/blame.c:967 builtin/blame.c:975
-#: builtin/blame.c:976 builtin/commit-tree.c:112 builtin/config.c:71
+#: archive.c:657 archive.c:671 builtin/blame.c:967 builtin/blame.c:974
+#: builtin/blame.c:975 builtin/commit-tree.c:112 builtin/config.c:71
 #: builtin/fast-export.c:1321 builtin/fast-export.c:1323
 #: builtin/fast-export.c:1327 builtin/gc.c:2100 builtin/gc.c:2166
 #: builtin/grep.c:998 builtin/hash-object.c:93 builtin/ls-files.c:625
@@ -1900,7 +1900,7 @@ msgstr ""
 msgid "--reverse and --first-parent together require specified latest commit"
 msgstr ""
 
-#: blame.c:2837 builtin/bisect.c:585 builtin/bisect.c:1110
+#: blame.c:2837 builtin/bisect.c:590 builtin/bisect.c:1115
 #: builtin/commit.c:1160 builtin/fast-export.c:1398 builtin/history.c:50
 #: builtin/log.c:402 builtin/log.c:1178 builtin/log.c:1811 builtin/log.c:2274
 #: builtin/log.c:2600 builtin/merge.c:462 builtin/pack-objects.c:3945
@@ -2542,7 +2542,7 @@ msgid ""
 "Not rewinding to ORIG_HEAD"
 msgstr ""
 
-#: builtin/am.c:2250 builtin/bisect.c:184 builtin/tag.c:364 worktree.c:295
+#: builtin/am.c:2250 builtin/bisect.c:189 builtin/tag.c:364 worktree.c:295
 #, c-format
 msgid "failed to read '%s'"
 msgstr ""
@@ -2774,108 +2774,113 @@ msgstr ""
 
 #: builtin/bisect.c:30
 msgid ""
-"git bisect start [--term-(new|bad)=<term> --term-(old|good)=<term>]    [--no-"
-"checkout] [--first-parent] [<bad> [<good>...]] [--]    [<pathspec>...]"
+"git bisect start [--term-(bad|new)=<term-new> --term-(good|old)=<term-old>]\n"
+"                 [--no-checkout] [--first-parent] [<bad> [<good>...]] [--] "
+"[<pathspec>...]"
 msgstr ""
 
-#: builtin/bisect.c:34
-msgid "git bisect (good|bad) [<rev>...]"
+#: builtin/bisect.c:33
+msgid "git bisect (bad|new|<term-new>) [<rev>]"
 msgstr ""
 
-#: builtin/bisect.c:38
+#: builtin/bisect.c:35
+msgid "git bisect (good|old|<term-old>) [<rev>...]"
+msgstr ""
+
+#: builtin/bisect.c:39
 msgid "git bisect skip [(<rev>|<range>)...]"
 msgstr ""
 
-#: builtin/bisect.c:42
+#: builtin/bisect.c:43
 msgid "git bisect reset [<commit>]"
 msgstr ""
 
-#: builtin/bisect.c:46
+#: builtin/bisect.c:47
 msgid "git bisect replay <logfile>"
 msgstr ""
 
-#: builtin/bisect.c:50
+#: builtin/bisect.c:51
 msgid "git bisect run <cmd> [<arg>...]"
 msgstr ""
 
-#: builtin/bisect.c:137
+#: builtin/bisect.c:142
 #, c-format
 msgid "cannot open file '%s' in mode '%s'"
 msgstr ""
 
-#: builtin/bisect.c:144
+#: builtin/bisect.c:149
 #, c-format
 msgid "could not write to file '%s'"
 msgstr ""
 
-#: builtin/bisect.c:182
+#: builtin/bisect.c:187
 #, c-format
 msgid "cannot open file '%s' for reading"
 msgstr ""
 
-#: builtin/bisect.c:198
+#: builtin/bisect.c:203
 #, c-format
 msgid "'%s' is not a valid term"
 msgstr ""
 
-#: builtin/bisect.c:202
+#: builtin/bisect.c:207
 #, c-format
 msgid "can't use the builtin command '%s' as a term"
 msgstr ""
 
-#: builtin/bisect.c:212
+#: builtin/bisect.c:217
 #, c-format
 msgid "can't change the meaning of the term '%s'"
 msgstr ""
 
-#: builtin/bisect.c:222
+#: builtin/bisect.c:227
 msgid "please use two different terms"
 msgstr ""
 
-#: builtin/bisect.c:238
+#: builtin/bisect.c:243
 #, c-format
 msgid "We are not bisecting.\n"
 msgstr ""
 
-#: builtin/bisect.c:245
+#: builtin/bisect.c:250
 #, c-format
 msgid "'%s' is not a valid commit"
 msgstr ""
 
-#: builtin/bisect.c:256
+#: builtin/bisect.c:261
 #, c-format
 msgid ""
 "could not check out original HEAD '%s'. Try 'git bisect reset <commit>'."
 msgstr ""
 
-#: builtin/bisect.c:300
+#: builtin/bisect.c:305
 #, c-format
 msgid "Bad bisect_write argument: %s"
 msgstr ""
 
-#: builtin/bisect.c:305
+#: builtin/bisect.c:310
 #, c-format
 msgid "couldn't get the oid of the rev '%s'"
 msgstr ""
 
-#: builtin/bisect.c:317
+#: builtin/bisect.c:322
 #, c-format
 msgid "couldn't open the file '%s'"
 msgstr ""
 
-#: builtin/bisect.c:343
+#: builtin/bisect.c:348
 #, c-format
 msgid "Invalid command: you're currently in a %s/%s bisect"
 msgstr ""
 
-#: builtin/bisect.c:369
+#: builtin/bisect.c:374
 #, c-format
 msgid ""
 "You need to give me at least one %s and %s revision.\n"
 "You can use \"git bisect %s\" and \"git bisect %s\" for that."
 msgstr ""
 
-#: builtin/bisect.c:373
+#: builtin/bisect.c:378
 #, c-format
 msgid ""
 "You need to start by \"git bisect start\".\n"
@@ -2883,7 +2888,7 @@ msgid ""
 "You can use \"git bisect %s\" and \"git bisect %s\" for that."
 msgstr ""
 
-#: builtin/bisect.c:393
+#: builtin/bisect.c:398
 #, c-format
 msgid "bisecting only with a %s commit"
 msgstr ""
@@ -2892,81 +2897,81 @@ msgstr ""
 #. translation. The program will only accept English input
 #. at this point.
 #.
-#: builtin/bisect.c:401
+#: builtin/bisect.c:406
 msgid "Are you sure [Y/n]? "
 msgstr ""
 
-#: builtin/bisect.c:459
+#: builtin/bisect.c:464
 msgid "status: waiting for both good and bad commits\n"
 msgstr ""
 
-#: builtin/bisect.c:461
+#: builtin/bisect.c:466
 #, c-format
 msgid "status: waiting for bad commit, %d good commit known\n"
 msgid_plural "status: waiting for bad commit, %d good commits known\n"
 msgstr[0] ""
 msgstr[1] ""
 
-#: builtin/bisect.c:465
+#: builtin/bisect.c:470
 msgid "status: waiting for good commit(s), bad commit known\n"
 msgstr ""
 
-#: builtin/bisect.c:504
+#: builtin/bisect.c:509
 msgid "no terms defined"
 msgstr ""
 
-#: builtin/bisect.c:507
+#: builtin/bisect.c:512
 #, c-format
 msgid ""
 "Your current terms are %s for the old state\n"
 "and %s for the new state.\n"
 msgstr ""
 
-#: builtin/bisect.c:517
+#: builtin/bisect.c:522
 #, c-format
 msgid ""
 "invalid argument %s for 'git bisect terms'.\n"
 "Supported options are: --term-good|--term-old and --term-bad|--term-new."
 msgstr ""
 
-#: builtin/bisect.c:607
+#: builtin/bisect.c:612
 #, c-format
 msgid "could not open '%s' for appending"
 msgstr ""
 
-#: builtin/bisect.c:731 builtin/bisect.c:744
+#: builtin/bisect.c:736 builtin/bisect.c:749
 msgid "'' is not a valid term"
 msgstr ""
 
-#: builtin/bisect.c:754
+#: builtin/bisect.c:759
 #, c-format
 msgid "unrecognized option: '%s'"
 msgstr ""
 
-#: builtin/bisect.c:758
+#: builtin/bisect.c:763
 #, c-format
 msgid "'%s' does not appear to be a valid revision"
 msgstr ""
 
-#: builtin/bisect.c:790
+#: builtin/bisect.c:795
 msgid "bad HEAD - I need a HEAD"
 msgstr ""
 
-#: builtin/bisect.c:806
+#: builtin/bisect.c:811
 #, c-format
 msgid "checking out '%s' failed. Try 'git bisect start <valid-branch>'."
 msgstr ""
 
-#: builtin/bisect.c:823
+#: builtin/bisect.c:828
 msgid "bad HEAD - strange symbolic ref"
 msgstr ""
 
-#: builtin/bisect.c:843
+#: builtin/bisect.c:848
 #, c-format
 msgid "invalid ref: '%s'"
 msgstr ""
 
-#: builtin/bisect.c:901
+#: builtin/bisect.c:906
 msgid "You need to start by \"git bisect start\"\n"
 msgstr ""
 
@@ -2974,118 +2979,118 @@ msgstr ""
 #. translation. The program will only accept English input
 #. at this point.
 #.
-#: builtin/bisect.c:912
+#: builtin/bisect.c:917
 msgid "Do you want me to do it for you [Y/n]? "
 msgstr ""
 
-#: builtin/bisect.c:929
+#: builtin/bisect.c:934
 msgid "Please call `--bisect-state` with at least one argument"
 msgstr ""
 
-#: builtin/bisect.c:942
+#: builtin/bisect.c:947
 #, c-format
 msgid "'git bisect %s' can take only one argument."
 msgstr ""
 
-#: builtin/bisect.c:955 builtin/bisect.c:968
+#: builtin/bisect.c:960 builtin/bisect.c:973
 #, c-format
 msgid "Bad rev input: %s"
 msgstr ""
 
-#: builtin/bisect.c:975
+#: builtin/bisect.c:980
 #, c-format
 msgid "Bad rev input (not a commit): %s"
 msgstr ""
 
-#: builtin/bisect.c:1007
+#: builtin/bisect.c:1012
 msgid "We are not bisecting."
 msgstr ""
 
-#: builtin/bisect.c:1057
+#: builtin/bisect.c:1062
 #, c-format
 msgid "'%s'?? what are you talking about?"
 msgstr ""
 
-#: builtin/bisect.c:1069
+#: builtin/bisect.c:1074
 #, c-format
 msgid "cannot read file '%s' for replaying"
 msgstr ""
 
-#: builtin/bisect.c:1174
+#: builtin/bisect.c:1179
 #, c-format
 msgid "running %s\n"
 msgstr ""
 
-#: builtin/bisect.c:1223
+#: builtin/bisect.c:1228
 msgid "bisect run failed: no command provided."
 msgstr ""
 
-#: builtin/bisect.c:1243
+#: builtin/bisect.c:1248
 #, c-format
 msgid "unable to verify %s on good revision"
 msgstr ""
 
-#: builtin/bisect.c:1249
+#: builtin/bisect.c:1254
 #, c-format
 msgid "bogus exit code %d for good revision"
 msgstr ""
 
-#: builtin/bisect.c:1257
+#: builtin/bisect.c:1262
 #, c-format
 msgid "bisect run failed: exit code %d from %s is < 0 or >= 128"
 msgstr ""
 
-#: builtin/bisect.c:1272
+#: builtin/bisect.c:1277
 #, c-format
 msgid "cannot open file '%s' for writing"
 msgstr ""
 
-#: builtin/bisect.c:1290
+#: builtin/bisect.c:1295
 msgid "bisect run cannot continue any more"
 msgstr ""
 
-#: builtin/bisect.c:1292
+#: builtin/bisect.c:1297
 msgid "bisect run success"
 msgstr ""
 
-#: builtin/bisect.c:1295
+#: builtin/bisect.c:1300
 msgid "bisect found first bad commit"
 msgstr ""
 
-#: builtin/bisect.c:1298
+#: builtin/bisect.c:1303
 #, c-format
 msgid "bisect run failed: 'git bisect %s' exited with error code %d"
 msgstr ""
 
-#: builtin/bisect.c:1314
+#: builtin/bisect.c:1319
 #, c-format
 msgid "'%s' requires either no argument or a commit"
 msgstr ""
 
-#: builtin/bisect.c:1326
+#: builtin/bisect.c:1331
 #, c-format
 msgid "'%s' requires 0 or 1 argument"
 msgstr ""
 
-#: builtin/bisect.c:1352
+#: builtin/bisect.c:1357
 #, c-format
 msgid "'%s' requires 0 arguments"
 msgstr ""
 
-#: builtin/bisect.c:1374
+#: builtin/bisect.c:1379
 msgid "no logfile given"
 msgstr ""
 
-#: builtin/bisect.c:1413
+#: builtin/bisect.c:1418
 #, c-format
 msgid "'%s' failed: no command provided."
 msgstr ""
 
-#: builtin/bisect.c:1447
+#: builtin/bisect.c:1452
 msgid "need a command"
 msgstr ""
 
-#: builtin/bisect.c:1456 builtin/cat-file.c:773
+#: builtin/bisect.c:1461 builtin/cat-file.c:773
 #, c-format
 msgid "unknown command: '%s'"
 msgstr ""
@@ -3224,39 +3229,39 @@ msgstr ""
 msgid "color lines by age"
 msgstr ""
 
-#: builtin/blame.c:971 builtin/blame.c:974
+#: builtin/blame.c:971
 msgid "spend extra cycles to find better match"
 msgstr ""
 
-#: builtin/blame.c:975
+#: builtin/blame.c:974
 msgid "use revisions from <file> instead of calling git-rev-list"
 msgstr ""
 
-#: builtin/blame.c:976
+#: builtin/blame.c:975
 msgid "use <file>'s contents as the final image"
 msgstr ""
 
-#: builtin/blame.c:977 builtin/blame.c:978
+#: builtin/blame.c:976 builtin/blame.c:977
 msgid "score"
 msgstr ""
 
-#: builtin/blame.c:977
+#: builtin/blame.c:976
 msgid "find line copies within and across files"
 msgstr ""
 
-#: builtin/blame.c:978
+#: builtin/blame.c:977
 msgid "find line movements within and across files"
 msgstr ""
 
-#: builtin/blame.c:979
+#: builtin/blame.c:978
 msgid "range"
 msgstr ""
 
-#: builtin/blame.c:980
+#: builtin/blame.c:979
 msgid "process only line range <start>,<end> or function :<funcname>"
 msgstr ""
 
-#: builtin/blame.c:1042
+#: builtin/blame.c:1041
 msgid "--progress can't be used with --incremental or porcelain formats"
 msgstr ""
 
@@ -3268,18 +3273,18 @@ msgstr ""
 #. your language may need more or fewer display
 #. columns.
 #.
-#: builtin/blame.c:1093
+#: builtin/blame.c:1092
 msgid "4 years, 11 months ago"
 msgstr ""
 
-#: builtin/blame.c:1209
+#: builtin/blame.c:1208
 #, c-format
 msgid "file %s has only %lu line"
 msgid_plural "file %s has only %lu lines"
 msgstr[0] ""
 msgstr[1] ""
 
-#: builtin/blame.c:1258
+#: builtin/blame.c:1257
 msgid "Blaming lines"
 msgstr ""
 
@@ -3744,7 +3749,7 @@ msgstr ""
 #: builtin/bugreport.c:112 builtin/commit.c:1570 builtin/commit.c:1579
 #: builtin/commit.c:1769 builtin/fast-export.c:1309 builtin/fast-export.c:1312
 #: builtin/fast-export.c:1315 builtin/fast-export.c:1318
-#: builtin/pack-objects.c:4920 builtin/rebase.c:1218 builtin/replay.c:251
+#: builtin/pack-objects.c:4920 builtin/rebase.c:1218 builtin/replay.c:276
 #: parse-options.h:622
 msgid "mode"
 msgstr ""
@@ -4658,7 +4663,7 @@ msgstr ""
 
 #: builtin/checkout.c:1995 builtin/checkout.c:1997 builtin/checkout.c:2045
 #: builtin/checkout.c:2047 builtin/clone.c:958 builtin/remote.c:195
-#: builtin/remote.c:197 builtin/replay.c:243 builtin/submodule--helper.c:3081
+#: builtin/remote.c:197 builtin/replay.c:268 builtin/submodule--helper.c:3081
 #: builtin/submodule--helper.c:3449 builtin/worktree.c:790
 #: builtin/worktree.c:792
 msgid "branch"
@@ -6722,7 +6727,7 @@ msgid "git diff-pairs -z [<diff-options>]"
 msgstr ""
 
 #: builtin/diff-pairs.c:69 builtin/log.c:315 builtin/log.c:2153
-#: builtin/replay.c:312 builtin/shortlog.c:456 bundle.c:514
+#: builtin/replay.c:315 builtin/shortlog.c:456 bundle.c:514
 #, c-format
 msgid "unrecognized argument: %s"
 msgstr ""
@@ -8099,7 +8104,7 @@ msgid "specify fetch refmap"
 msgstr ""
 
 #: builtin/fetch.c:2400 builtin/pull.c:252 builtin/rebase.c:1113
-#: builtin/replay.c:246
+#: builtin/replay.c:271
 msgid "revision"
 msgstr ""
 
@@ -14756,73 +14761,68 @@ msgstr ""
 msgid "cannot implicitly determine correct base for --onto"
 msgstr ""
 
-#: builtin/replay.c:236
+#: builtin/replay.c:195
+#, c-format
+msgid "invalid %s value: '%s'"
+msgstr ""
+
+#: builtin/replay.c:261
 msgid ""
 "(EXPERIMENTAL!) git replay ([--contained] --onto <newbase> | --advance "
 "<branch>) [--ref-action[=<mode>]] <revision-range>..."
 msgstr ""
 
-#: builtin/replay.c:244
+#: builtin/replay.c:269
 msgid "make replay advance given branch"
 msgstr ""
 
-#: builtin/replay.c:247
+#: builtin/replay.c:272
 msgid "replay onto given commit"
 msgstr ""
 
-#: builtin/replay.c:249
+#: builtin/replay.c:274
 msgid "advance all branches contained in revision-range"
 msgstr ""
 
-#: builtin/replay.c:252
+#: builtin/replay.c:277
 msgid "control ref update behavior (update|print)"
 msgstr ""
 
-#: builtin/replay.c:260
+#: builtin/replay.c:285
 msgid "option --onto or --advance is mandatory"
 msgstr ""
 
-#: builtin/replay.c:276
-#, c-format
-msgid "invalid value for replay.refAction: '%s'"
-msgstr ""
-
-#: builtin/replay.c:290
-#, c-format
-msgid "unknown --ref-action mode '%s'"
-msgstr ""
-
-#: builtin/replay.c:321 builtin/replay.c:327 builtin/replay.c:333
-#: builtin/replay.c:339
+#: builtin/replay.c:324 builtin/replay.c:330 builtin/replay.c:336
+#: builtin/replay.c:342
 #, c-format
 msgid ""
 "some rev walking options will be overridden as '%s' bit in 'struct rev_info' "
 "will be forced"
 msgstr ""
 
-#: builtin/replay.c:353
+#: builtin/replay.c:356
 #, c-format
 msgid "failed to begin ref transaction: %s"
 msgstr ""
 
-#: builtin/replay.c:363
+#: builtin/replay.c:366
 msgid "error preparing revisions"
 msgstr ""
 
-#: builtin/replay.c:378
+#: builtin/replay.c:381
 msgid "replaying down to root commit is not supported yet!"
 msgstr ""
 
-#: builtin/replay.c:380
+#: builtin/replay.c:383
 msgid "replaying merge commits is not supported yet!"
 msgstr ""
 
-#: builtin/replay.c:409 builtin/replay.c:424
+#: builtin/replay.c:412 builtin/replay.c:427
 #, c-format
-msgid "failed to update ref %s: %s"
+msgid "failed to update ref '%s': %s"
 msgstr ""
 
-#: builtin/replay.c:433
+#: builtin/replay.c:436
 #, c-format
 msgid "failed to commit ref transaction: %s"
 msgstr ""
@@ -22579,28 +22579,28 @@ msgstr ""
 msgid "Bad %s value: '%s'"
 msgstr ""
 
-#: object-file-convert.c:80
+#: object-file-convert.c:88
 msgid "failed to decode tree entry"
 msgstr ""
 
-#: object-file-convert.c:82
+#: object-file-convert.c:90
 #, c-format
 msgid "failed to map tree entry for %s"
 msgstr ""
 
-#: object-file-convert.c:161 object-file-convert.c:168
-#: object-file-convert.c:180 object-file-convert.c:200
-#: object-file-convert.c:236
+#: object-file-convert.c:169 object-file-convert.c:176
+#: object-file-convert.c:188 object-file-convert.c:208
+#: object-file-convert.c:244
 #, c-format
 msgid "bad %s in commit"
 msgstr ""
 
-#: object-file-convert.c:171 object-file-convert.c:183
+#: object-file-convert.c:179 object-file-convert.c:191
 #, c-format
 msgid "unable to map %s %s in commit object"
 msgstr ""
 
-#: object-file-convert.c:281
+#: object-file-convert.c:289
 #, c-format
 msgid "Failed to convert object from %s to %s"
 msgstr ""
@@ -25298,6 +25298,10 @@ msgstr ""
 #: replace-object.c:82
 #, c-format
 msgid "replace depth too high for object %s"
+msgstr ""
+
+#: repository.c:205
+msgid "compatibility hash algorithm support requires Rust"
 msgstr ""
 
 #: rerere.c:216 rerere.c:225 rerere.c:228
