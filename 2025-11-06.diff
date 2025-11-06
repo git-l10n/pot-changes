@@ -27,3 +27,1249 @@
  msgstr ""
  
  msgid "git blame [<options>] [<rev-opts>] [<rev>] [--] <file>"
+
+
+#################### Thu, 06 Nov 2025 23:59:21 +0000 ####################
+
+--- po/git.pot.old	2025-11-06 23:59:21.202103099 +0000
++++ po/git.pot.new	2025-11-06 23:59:21.281102953 +0000
+@@ -863,6 +863,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "%s not found: %s"
++msgstr ""
++
++#, c-format
+ msgid "%s points to something strange (%s)"
+ msgstr ""
+ 
+@@ -1019,6 +1023,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "%s: argument must be a non-negative integer"
++msgstr ""
++
++#, c-format
+ msgid "%s: bad revision"
+ msgstr ""
+ 
+@@ -1143,6 +1151,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "%s: unexpected object of type %s, skipping."
++msgstr ""
++
++#, c-format
+ msgid "%s: unsupported file type"
+ msgstr ""
+ 
+@@ -1685,6 +1697,9 @@
+ "'merge -c' on the commit"
+ msgstr ""
+ 
++msgid "'unknown' signature format in gpgsig"
++msgstr ""
++
+ #, perl-format
+ msgid "(%s) Adding %s: %s from: '%s'\n"
+ msgstr ""
+@@ -1863,6 +1878,10 @@
+ msgid "--branch or --default required"
+ msgstr ""
+ 
++#, c-format
++msgid "--cat-blob-fd cannot exceed %d"
++msgstr ""
++
+ msgid "--check does not make sense"
+ msgstr ""
+ 
+@@ -1900,6 +1919,10 @@
+ msgid "--delete only accepts plain target ref names"
+ msgstr ""
+ 
++#, c-format
++msgid "--depth cannot exceed %u"
++msgstr ""
++
+ msgid "--depth is ignored in local clones; use file:// instead."
+ msgstr ""
+ 
+@@ -3553,6 +3576,18 @@
+ msgid "Dry-Sent %s"
+ msgstr ""
+ 
++#, c-format
++msgid "EOF in data (%<PRIuMAX> bytes remaining)"
++msgstr ""
++
++#, c-format
++msgid "EOF in data (%lu bytes remaining)"
++msgstr ""
++
++#, c-format
++msgid "EOF in data (terminator '%s' not found)"
++msgstr ""
++
+ msgid "EXPERIMENTAL: Replay commits on a new base, works with bare repos too"
+ msgstr ""
+ 
+@@ -3591,9 +3626,6 @@
+ msgid "Error building trees"
+ msgstr ""
+ 
+-msgid "Error: Cannot export nested tags unless --mark-tags is specified."
+-msgstr ""
+-
+ msgid "Error: Your local changes to the following files would be overwritten by merge"
+ msgstr ""
+ 
+@@ -3624,17 +3656,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "Expected 'mark' command, got %s"
+-msgstr ""
+-
+-#, c-format
+-msgid "Expected 'to' command, got %s"
+-msgstr ""
+-
+-msgid "Expected format name:filename for submodule rewrite option"
+-msgstr ""
+-
+-#, c-format
+ msgid "Expected git repo version <= %d, found %d"
+ msgstr ""
+ 
+@@ -3988,6 +4009,10 @@
+ msgid "Git index format"
+ msgstr ""
+ 
++#, c-format
++msgid "Git links cannot be specified 'inline': %s"
++msgstr ""
++
+ msgid "Git namespaces"
+ msgstr ""
+ 
+@@ -4533,14 +4558,6 @@
+ msgid "Missing ')' at the end of pathspec magic in '%s'"
+ msgstr ""
+ 
+-#, c-format
+-msgid "Missing from marks for submodule '%s'"
+-msgstr ""
+-
+-#, c-format
+-msgid "Missing to marks for submodule '%s'"
+-msgstr ""
+-
+ msgid "Mounting one repository inside another"
+ msgstr ""
+ 
+@@ -4553,6 +4570,10 @@
+ msgid "Multiple remote HEAD branches. Please choose one explicitly with:"
+ msgstr ""
+ 
++#, c-format
++msgid "NUL in %s: %s"
++msgstr ""
++
+ msgid "Need a repository to create a bundle."
+ msgstr ""
+ 
+@@ -8159,6 +8180,10 @@
+ msgid "blob '%s' not reachable from HEAD"
+ msgstr ""
+ 
++#, c-format
++msgid "blob not found: %s"
++msgstr ""
++
+ msgid "blob-id"
+ msgstr ""
+ 
+@@ -8215,6 +8240,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "branch %s is missing commits."
++msgstr ""
++
++#, c-format
+ msgid "branch '%s' does not exist"
+ msgstr ""
+ 
+@@ -8257,6 +8286,10 @@
+ msgid "branch is renamed, but update of config-file failed"
+ msgstr ""
+ 
++#, c-format
++msgid "branch name doesn't conform to Git standards: %s"
++msgstr ""
++
+ msgid "branch name required"
+ msgstr ""
+ 
+@@ -8356,6 +8389,9 @@
+ msgid "can not move directory into itself"
+ msgstr ""
+ 
++msgid "can't add a note on empty branch."
++msgstr ""
++
+ #, c-format
+ msgid "can't change the meaning of the term '%s'"
+ msgstr ""
+@@ -8364,12 +8400,24 @@
+ msgid "can't connect to subservice %s"
+ msgstr ""
+ 
++#, c-format
++msgid "can't create a branch from itself: %s"
++msgstr ""
++
+ msgid "can't dup helper output fd"
+ msgstr ""
+ 
+ msgid "can't fetch into checked-out branch"
+ msgstr ""
+ 
++#, c-format
++msgid "can't load object %s"
++msgstr ""
++
++#, c-format
++msgid "can't load tree %s"
++msgstr ""
++
+ #, perl-format
+ msgid "can't open file %s"
+ msgstr ""
+@@ -8378,6 +8426,10 @@
+ msgid "can't open patch '%s': %s"
+ msgstr ""
+ 
++#, c-format
++msgid "can't read object %s"
++msgstr ""
++
+ msgid "can't revert as initial commit"
+ msgstr ""
+ 
+@@ -8388,10 +8440,17 @@
+ msgid "can't start thread for copying data: %s"
+ msgstr ""
+ 
++msgid "can't tag an empty branch."
++msgstr ""
++
+ #, c-format
+ msgid "can't use the builtin command '%s' as a term"
+ msgstr ""
+ 
++#, c-format
++msgid "can't write crash report %s"
++msgstr ""
++
+ msgid "cancel revert or cherry-pick sequence"
+ msgstr ""
+ 
+@@ -8514,6 +8573,9 @@
+ msgid "cannot create configuration file %s"
+ msgstr ""
+ 
++msgid "cannot create keep file"
++msgstr ""
++
+ #, c-format
+ msgid "cannot deduce worktree name from '%s'"
+ msgstr ""
+@@ -8548,6 +8610,9 @@
+ msgid "cannot expire packs from an incremental multi-pack-index"
+ msgstr ""
+ 
++msgid "cannot export nested tags unless --mark-tags is specified."
++msgstr ""
++
+ #, c-format
+ msgid "cannot feed the input to external filter '%s'"
+ msgstr ""
+@@ -8928,6 +8993,12 @@
+ msgid "cannot store %s"
+ msgstr ""
+ 
++msgid "cannot store index file"
++msgstr ""
++
++msgid "cannot store pack file"
++msgstr ""
++
+ msgid "cannot store reverse index file"
+ msgstr ""
+ 
+@@ -8968,6 +9039,9 @@
+ msgid "cannot symlink '%s' '%s'"
+ msgstr ""
+ 
++msgid "cannot truncate pack to skip duplicate"
++msgstr ""
++
+ #, c-format
+ msgid "cannot unlink '%s'"
+ msgstr ""
+@@ -9461,6 +9535,10 @@
+ msgid "copy out the files from named stage"
+ msgstr ""
+ 
++#, c-format
++msgid "core Git rejected index %s"
++msgstr ""
++
+ msgid "core.fsmonitor is set; remove it if you really want to disable fsmonitor"
+ msgstr ""
+ 
+@@ -9522,6 +9600,18 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "corrupt mark line: %s"
++msgstr ""
++
++#, c-format
++msgid "corrupt mode in %s"
++msgstr ""
++
++#, c-format
++msgid "corrupt mode: %s"
++msgstr ""
++
++#, c-format
+ msgid "corrupt packed object for %s"
+ msgstr ""
+ 
+@@ -9765,6 +9855,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "could not find author in commit %s"
++msgstr ""
++
++#, c-format
+ msgid "could not find commit %s"
+ msgstr ""
+ 
+@@ -9772,6 +9866,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "could not find committer in commit %s"
++msgstr ""
++
++#, c-format
+ msgid "could not find created worktree '%s'"
+ msgstr ""
+ 
+@@ -10082,6 +10180,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "could not read blob %s"
++msgstr ""
++
++#, c-format
+ msgid "could not read bundle '%s'"
+ msgstr ""
+ 
+@@ -10146,6 +10248,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "could not read tag %s"
++msgstr ""
++
++#, c-format
+ msgid "could not read tagged object '%s'"
+ msgstr ""
+ 
+@@ -10385,6 +10491,10 @@
+ msgid "could not write '%s'."
+ msgstr ""
+ 
++#, c-format
++msgid "could not write blob '%s'"
++msgstr ""
++
+ msgid "could not write commit"
+ msgstr ""
+ 
+@@ -10573,9 +10683,16 @@
+ msgid "dangling %s %s"
+ msgstr ""
+ 
++msgid "data is too large to use in this context"
++msgstr ""
++
+ msgid "date"
+ msgstr ""
+ 
++#, c-format
++msgid "date in ident must be 'now': %s"
++msgstr ""
++
+ msgid "debug search strategy on stderr"
+ msgstr ""
+ 
+@@ -10778,6 +10895,10 @@
+ msgid "dir"
+ msgstr ""
+ 
++#, c-format
++msgid "directories cannot be specified 'inline': %s"
++msgstr ""
++
+ msgid "directory"
+ msgstr ""
+ 
+@@ -11075,6 +11196,10 @@
+ msgid "dropping %s %s -- patch contents already upstream\n"
+ msgstr ""
+ 
++#, c-format
++msgid "dropping %s since it would point to itself (i.e. to %s)"
++msgstr ""
++
+ msgid "dry run"
+ msgstr ""
+ 
+@@ -11198,6 +11323,9 @@
+ msgid "empty patch. aborted"
+ msgstr ""
+ 
++msgid "empty path component found in input"
++msgstr ""
++
+ #, c-format
+ msgid "empty trailer token in trailer '%.*s'"
+ msgstr ""
+@@ -11236,6 +11364,21 @@
+ msgid "encoding '%s' from %s to %s and back is not the same"
+ msgstr ""
+ 
++#, c-format
++msgid "encountered commit-specific encoding %.*s in commit %s; use --reencode=[yes|no] to handle it"
++msgstr ""
++
++#, c-format
++msgid "encountered signed commit %s; use --signed-commits=<mode> to handle it"
++msgstr ""
++
++msgid "encountered signed commit; use --signed-commits=<mode> to handle it"
++msgstr ""
++
++#, c-format
++msgid "encountered signed tag %s; use --signed-tags=<mode> to handle it"
++msgstr ""
++
+ msgid "encountered signed tag; use --signed-tags=<mode> to handle it"
+ msgstr ""
+ 
+@@ -11458,9 +11601,28 @@
+ msgid "expected '%s', received '%s'"
+ msgstr ""
+ 
++#, c-format
++msgid "expected 'data n' command, found: %s"
++msgstr ""
++
++#, c-format
++msgid "expected 'from' command, got '%s'"
++msgstr ""
++
++#, c-format
++msgid "expected 'mark' command, got %s"
++msgstr ""
++
++#, c-format
++msgid "expected 'to' command, got %s"
++msgstr ""
++
+ msgid "expected 'tree:<depth>'"
+ msgstr ""
+ 
++msgid "expected committer but didn't get one"
++msgstr ""
++
+ #, c-format
+ msgid ""
+ "expected context line #%d in\n"
+@@ -11488,6 +11650,9 @@
+ msgid "expected flush after ref listing"
+ msgstr ""
+ 
++msgid "expected format name:filename for submodule rewrite option"
++msgstr ""
++
+ #, c-format
+ msgid "expected format: %%(ahead-behind:<committish>)"
+ msgstr ""
+@@ -11504,6 +11669,10 @@
+ msgid "expected format: %%(is-base:<committish>)"
+ msgstr ""
+ 
++#, c-format
++msgid "expected gpgsig format: 'gpgsig <hash-algo> <signature-format>', got 'gpgsig %s'"
++msgstr ""
++
+ #. TRANSLATORS: The parameter will be 'ready', a protocol
+ #. keyword.
+ #.
+@@ -11567,6 +11736,14 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "exporting %<PRIuMAX> signature(s) for commit %s"
++msgstr ""
++
++#, c-format
++msgid "exporting signed tag %s"
++msgstr ""
++
++#, c-format
+ msgid "extended pseudo-merge entry is too short (%<PRIuMAX> >= %<PRIuMAX>)"
+ msgstr ""
+ 
+@@ -11603,6 +11780,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "failed seeking to start of '%s'"
++msgstr ""
++
++#, c-format
+ msgid "failed to add packfile '%s'"
+ msgstr ""
+ 
+@@ -12002,6 +12183,10 @@
+ msgid "failed to remove directory '%s'"
+ msgstr ""
+ 
++#, c-format
++msgid "failed to remove path %s"
++msgstr ""
++
+ msgid "failed to rename base commit-graph file"
+ msgstr ""
+ 
+@@ -12151,6 +12336,9 @@
+ msgid "failed to write correct number of base graph ids"
+ msgstr ""
+ 
++msgid "failed to write keep file"
++msgstr ""
++
+ #, c-format
+ msgid "failed to write loose object index %s"
+ msgstr ""
+@@ -12205,6 +12393,10 @@
+ msgid "fast-forwardable"
+ msgstr ""
+ 
++#, c-format
++msgid "fast-import: dumping crash report to %s\n"
++msgstr ""
++
+ msgid "fatal: "
+ msgstr ""
+ 
+@@ -12567,6 +12759,18 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "garbage after %s: %s"
++msgstr ""
++
++#, c-format
++msgid "garbage after SHA1: %s"
++msgstr ""
++
++#, c-format
++msgid "garbage after mark: %s"
++msgstr ""
++
++#, c-format
+ msgid "garbage at end of loose object '%s'"
+ msgstr ""
+ 
+@@ -13726,6 +13930,14 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "got feature command '%s' after data command"
++msgstr ""
++
++#, c-format
++msgid "got option command '%s' after data command"
++msgstr ""
++
++#, c-format
+ msgid ""
+ "gpg failed to sign the data:\n"
+ "%s"
+@@ -14282,6 +14494,9 @@
+ msgid "interactively add files"
+ msgstr ""
+ 
++msgid "internal consistency error creating the index"
++msgstr ""
++
+ msgid "internal error"
+ msgstr ""
+ 
+@@ -14305,6 +14520,10 @@
+ msgid "invalid %s"
+ msgstr ""
+ 
++#, c-format
++msgid "invalid %s: %s"
++msgstr ""
++
+ msgid "invalid '..' path segment"
+ msgstr ""
+ 
+@@ -14334,6 +14553,14 @@
+ msgid "invalid MIDX object position, MIDX is likely corrupt"
+ msgstr ""
+ 
++#, c-format
++msgid "invalid SHA1 in commit: %s"
++msgstr ""
++
++#, c-format
++msgid "invalid SHA1 in tag: %s"
++msgstr ""
++
+ msgid "invalid URL scheme name or missing '://' suffix"
+ msgstr ""
+ 
+@@ -14351,6 +14578,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "invalid attempt to create duplicate branch: %s"
++msgstr ""
++
++#, c-format
+ msgid "invalid attribute name %s"
+ msgstr ""
+ 
+@@ -14423,6 +14654,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "invalid dataref: %s"
++msgstr ""
++
++#, c-format
+ msgid "invalid date format: %s"
+ msgstr ""
+ 
+@@ -14610,6 +14845,10 @@
+ msgid "invalid quoting in push-option value: '%s'"
+ msgstr ""
+ 
++#, c-format
++msgid "invalid raw date \"%s\" in ident: %s"
++msgstr ""
++
+ msgid "invalid raw diff input"
+ msgstr ""
+ 
+@@ -14618,6 +14857,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "invalid ref name or SHA1 expression: %s"
++msgstr ""
++
++#, c-format
+ msgid "invalid ref: '%s'"
+ msgstr ""
+ 
+@@ -14655,6 +14898,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "invalid rfc2822 date \"%s\" in ident: %s"
++msgstr ""
++
++#, c-format
+ msgid "invalid section name '%s'"
+ msgstr ""
+ 
+@@ -14674,6 +14921,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "invalid signature format in gpgsig: '%s'"
++msgstr ""
++
++#, c-format
+ msgid "invalid start of line: '%c'"
+ msgstr ""
+ 
+@@ -15037,6 +15288,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "malformed build-time gpg.ssh.defaultKeyCommand: %s"
++msgstr ""
++
++#, c-format
+ msgid "malformed expiration date '%s'"
+ msgstr ""
+ 
+@@ -15101,6 +15356,14 @@
+ msgid "mark"
+ msgstr ""
+ 
++#, c-format
++msgid "mark :%<PRIuMAX> not a commit"
++msgstr ""
++
++#, c-format
++msgid "mark :%<PRIuMAX> not declared"
++msgstr ""
++
+ msgid "mark files as \"index-only\""
+ msgstr ""
+ 
+@@ -15144,6 +15407,10 @@
+ msgid "max-depth is not supported for worktree diffs"
+ msgstr ""
+ 
++#, c-format
++msgid "max-pack-size is now in bytes, assuming --max-pack-size=%lum"
++msgstr ""
++
+ msgid "maximum length of delta chain allowed in the resulting pack"
+ msgstr ""
+ 
+@@ -15206,6 +15473,9 @@
+ msgid "migrated refs can be found at '%s'"
+ msgstr ""
+ 
++msgid "minimum max-pack-size is 1 MiB"
++msgstr ""
++
+ msgid "minimum pack size limit is 1 MiB"
+ msgstr ""
+ 
+@@ -15242,6 +15512,14 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "missing < in ident string: %s"
++msgstr ""
++
++#, c-format
++msgid "missing > in ident string: %s"
++msgstr ""
++
++#, c-format
+ msgid "missing arguments for %s"
+ msgstr ""
+ 
+@@ -15280,6 +15558,10 @@
+ msgid "missing environment variable name for configuration '%.*s'"
+ msgstr ""
+ 
++#, c-format
++msgid "missing from marks for submodule '%s'"
++msgstr ""
++
+ msgid "missing host and scheme is not 'file:'"
+ msgstr ""
+ 
+@@ -15299,6 +15581,34 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "missing space after %s: %s"
++msgstr ""
++
++#, c-format
++msgid "missing space after > in ident string: %s"
++msgstr ""
++
++#, c-format
++msgid "missing space after SHA1: %s"
++msgstr ""
++
++#, c-format
++msgid "missing space after mark: %s"
++msgstr ""
++
++#, c-format
++msgid "missing space after tree-ish: %s"
++msgstr ""
++
++#, c-format
++msgid "missing space before < in ident string: %s"
++msgstr ""
++
++#, c-format
++msgid "missing to marks for submodule '%s'"
++msgstr ""
++
++#, c-format
+ msgid "missing value for '%s'"
+ msgstr ""
+ 
+@@ -15439,6 +15749,10 @@
+ msgid "multi-pack-index version %d not recognized"
+ msgstr ""
+ 
++#, c-format
++msgid "multiple %s signatures found, ignoring additional signature"
++msgstr ""
++
+ msgid "multiple branches detected, incompatible with --set-upstream"
+ msgstr ""
+ 
+@@ -15853,6 +16167,10 @@
+ msgid "no usage string given before the `--' separator"
+ msgstr ""
+ 
++#, c-format
++msgid "no value after ':' in mark: %s"
++msgstr ""
++
+ msgid "no warning for existing files and files not in index"
+ msgstr ""
+ 
+@@ -15865,12 +16183,30 @@
+ msgstr[0] ""
+ msgstr[1] ""
+ 
++msgid "non-directories cannot have subtrees"
++msgstr ""
++
+ msgid "non-fast-forward"
+ msgstr ""
+ 
+ msgid "non-tree in cache-tree"
+ msgstr ""
+ 
++msgid "none"
++msgstr ""
++
++#, c-format
++msgid "not a %s (actually a %s): %s"
++msgstr ""
++
++#, c-format
++msgid "not a blob (actually a %s): %s"
++msgstr ""
++
++#, c-format
++msgid "not a commit (actually a %s): %s"
++msgstr ""
++
+ #, c-format
+ msgid "not a commit range: '%s'"
+ msgstr ""
+@@ -15879,6 +16215,10 @@
+ msgid "not a commit: %s"
+ msgstr ""
+ 
++#, c-format
++msgid "not a commit? can't happen: %s"
++msgstr ""
++
+ msgid "not a directory"
+ msgstr ""
+ 
+@@ -15911,6 +16251,10 @@
+ msgid "not a gitdir '%s'"
+ msgstr ""
+ 
++#, c-format
++msgid "not a mark: %s"
++msgstr ""
++
+ msgid "not a range"
+ msgstr ""
+ 
+@@ -15935,9 +16279,21 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "not a tree-ish: %s"
++msgstr ""
++
++#, c-format
++msgid "not a tree: %s"
++msgstr ""
++
++#, c-format
+ msgid "not a valid branch point: '%s'"
+ msgstr ""
+ 
++#, c-format
++msgid "not a valid commit: %s"
++msgstr ""
++
+ msgid "not a valid directory"
+ msgstr ""
+ 
+@@ -15977,6 +16333,10 @@
+ msgid "not handling anything other than two heads merge."
+ msgstr ""
+ 
++#, c-format
++msgid "not in a commit: %s"
++msgstr ""
++
+ msgid "not in a git directory"
+ msgstr ""
+ 
+@@ -16014,6 +16374,10 @@
+ msgid "not under version control"
+ msgstr ""
+ 
++#, c-format
++msgid "not updating %s (new tip %s does not contain %s)"
++msgstr ""
++
+ msgid "note contents as a string"
+ msgstr ""
+ 
+@@ -16106,6 +16470,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "object %s already has a mark"
++msgstr ""
++
++#, c-format
+ msgid "object %s cannot be read"
+ msgstr ""
+ 
+@@ -16118,6 +16486,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "object %s is a %s but a blob was expected."
++msgstr ""
++
++#, c-format
+ msgid "object %s is a %s, not a %s"
+ msgstr ""
+ 
+@@ -16228,6 +16600,10 @@
+ msgid "oid lookup out of order: oid[%d] = %s >= %s = oid[%d]"
+ msgstr ""
+ 
++#, c-format
++msgid "oid mismatch in blob %s"
++msgstr ""
++
+ msgid "ok to record a change with an empty message"
+ msgstr ""
+ 
+@@ -16241,6 +16617,12 @@
+ msgid "omit the preimage for deletes"
+ msgstr ""
+ 
++#, c-format
++msgid ""
++"omitting tag %s,\n"
++"since tags of trees (or tags of tags of trees, etc.) are not supported."
++msgstr ""
++
+ msgid "on-demand"
+ msgstr ""
+ 
+@@ -16283,6 +16665,9 @@
+ msgid "only one config file at a time"
+ msgstr ""
+ 
++msgid "only one import-marks command allowed per stream"
++msgstr ""
++
+ msgid "only one pattern can be given with -l"
+ msgstr ""
+ 
+@@ -16731,6 +17116,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "path %s not in branch"
++msgstr ""
++
++#, c-format
+ msgid "path '%s' does not exist"
+ msgstr ""
+ 
+@@ -18161,6 +18550,9 @@
+ msgid "root %s"
+ msgstr ""
+ 
++msgid "root cannot be a non-directory"
++msgstr ""
++
+ #, c-format
+ msgid "root tree OID for commit %s in commit-graph is %s != %s"
+ msgstr ""
+@@ -19139,6 +19531,9 @@
+ msgid "strbuf_readlink('%s') failed"
+ msgstr ""
+ 
++msgid "stream ends early"
++msgstr ""
++
+ msgid "stricter reference checking, requires exact ref path"
+ msgstr ""
+ 
+@@ -19155,6 +19550,14 @@
+ msgid "stripping a tag signature for tag '%s'"
+ msgstr ""
+ 
++#, c-format
++msgid "stripping signature from tag %s"
++msgstr ""
++
++#, c-format
++msgid "stripping signature(s) from commit %s"
++msgstr ""
++
+ msgid "style"
+ msgstr ""
+ 
+@@ -19294,6 +19697,14 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "tag %s points nowhere?"
++msgstr ""
++
++#, c-format
++msgid "tag %s tags unexported object; use --tag-of-filtered-object=<mode> to handle it"
++msgstr ""
++
++#, c-format
+ msgid "tag '%s' already exists"
+ msgstr ""
+ 
+@@ -19314,6 +19725,10 @@
+ msgid "tag on stdin did not refer to a valid object"
+ msgstr ""
+ 
++#, c-format
++msgid "tag points to object of unexpected type %s, skipping."
++msgstr ""
++
+ msgid "tag shorthand without <tag>"
+ msgstr ""
+ 
+@@ -19426,6 +19841,10 @@
+ msgid "the branch '%s' is not fully merged"
+ msgstr ""
+ 
++#, c-format
++msgid "the commit %s is corrupt"
++msgstr ""
++
+ msgid "the commit is authored by me now (used with -C/-c/--amend)"
+ msgstr ""
+ 
+@@ -19553,6 +19972,14 @@
+ msgid "this remote helper should implement refspec capability"
+ msgstr ""
+ 
++#, c-format
++msgid "this version of fast-import does not support feature %s."
++msgstr ""
++
++#, c-format
++msgid "this version of fast-import does not support option: %s"
++msgstr ""
++
+ msgid "this worktree is not sparse"
+ msgstr ""
+ 
+@@ -19612,6 +20039,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "too large fanout (%u)"
++msgstr ""
++
++#, c-format
+ msgid "too large to be a .git file: '%s'"
+ msgstr ""
+ 
+@@ -19698,6 +20129,9 @@
+ msgid "treat all files as text"
+ msgstr ""
+ 
++msgid "tree"
++msgstr ""
++
+ msgid "tree objects not supported"
+ msgstr ""
+ 
+@@ -19736,7 +20170,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "trying to write reflog for '%s'with incomplete values"
++msgid "trying to write reflog for '%s' with incomplete values"
+ msgstr ""
+ 
+ msgid "two output directories?"
+@@ -20106,6 +20540,10 @@
+ msgid "unable to open loose object %s"
+ msgstr ""
+ 
++#, c-format
++msgid "unable to open marks file %s for writing."
++msgstr ""
++
+ msgid "unable to open multi-pack-index chain file"
+ msgstr ""
+ 
+@@ -20406,6 +20844,18 @@
+ msgid "unable to write loose object file"
+ msgstr ""
+ 
++#, c-format
++msgid "unable to write marks file %s"
++msgstr ""
++
++#, c-format
++msgid "unable to write marks file %s."
++msgstr ""
++
++#, c-format
++msgid "unable to write marks file %s: %s"
++msgstr ""
++
+ msgid "unable to write new index file"
+ msgstr ""
+ 
+@@ -20469,6 +20919,14 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unexpected comparison status '%c' for %s, %s"
++msgstr ""
++
++#, c-format
++msgid "unexpected deflate failure: %d"
++msgstr ""
++
++#, c-format
+ msgid "unexpected diff status %c"
+ msgstr ""
+ 
+@@ -20520,10 +20978,18 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unknown %s mode: %s"
++msgstr ""
++
++#, c-format
+ msgid "unknown '%s' value for '%s' config option"
+ msgstr ""
+ 
+ #, c-format
++msgid "unknown --date-format argument %s"
++msgstr ""
++
++#, c-format
+ msgid "unknown --mirror argument: %s"
+ msgstr ""
+ 
+@@ -20601,6 +21067,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unknown git hash algorithm in gpgsig: '%s'"
++msgstr ""
++
++#, c-format
+ msgid "unknown group type: %s"
+ msgstr ""
+ 
+@@ -20625,6 +21095,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unknown mark: %s"
++msgstr ""
++
++#, c-format
+ msgid "unknown mode for --abbrev-ref: %s"
+ msgstr ""
+ 
+@@ -20657,6 +21131,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unknown option --%s"
++msgstr ""
++
++#, c-format
+ msgid "unknown option `%s'"
+ msgstr ""
+ 
+@@ -20677,6 +21155,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unknown reencoding mode: %s"
++msgstr ""
++
++#, c-format
+ msgid "unknown ref storage format '%s'"
+ msgstr ""
+ 
+@@ -20706,6 +21188,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unknown tag-of-filtered mode: %s"
++msgstr ""
++
++#, c-format
+ msgid "unknown type: %d"
+ msgstr ""
+ 
+@@ -20869,6 +21355,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unsupported command: %s"
++msgstr ""
++
++#, c-format
+ msgid "unsupported field '%s' in '%s' config"
+ msgstr ""
+ 
+@@ -21566,6 +22056,9 @@
+ msgid "write the pack index file in the specified idx format version"
+ msgstr ""
+ 
++msgid "write to frontend failed"
++msgstr ""
++
+ msgid "write tree object for a subdirectory <prefix>"
+ msgstr ""
+ 
