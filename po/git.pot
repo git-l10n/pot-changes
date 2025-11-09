@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2025-11-07 18:57+0000\n"
+"POT-Creation-Date: 2025-11-09 04:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -850,7 +850,7 @@ msgstr ""
 #: builtin/clean.c:967 builtin/clone.c:1035 builtin/clone.c:1040
 #: builtin/commit.c:372 builtin/commit.c:375 builtin/commit.c:1266
 #: builtin/commit.c:1322 builtin/commit.c:1339 builtin/describe.c:698
-#: builtin/diff-tree.c:167 builtin/difftool.c:774 builtin/fast-export.c:1405
+#: builtin/diff-tree.c:167 builtin/difftool.c:774 builtin/fast-export.c:1385
 #: builtin/fetch.c:2455 builtin/fetch.c:2482 builtin/fetch.c:2496
 #: builtin/fetch.c:2501 builtin/help.c:622 builtin/index-pack.c:2023
 #: builtin/init-db.c:120 builtin/log.c:2146 builtin/log.c:2148
@@ -1542,7 +1542,7 @@ msgid "git archive --remote <repo> [--exec <cmd>] --list"
 msgstr ""
 
 #: archive.c:224 archive.c:361 builtin/fast-import.c:1814
-#: builtin/fast-import.c:3607 builtin/gc.c:826 builtin/notes.c:299
+#: builtin/fast-import.c:3551 builtin/gc.c:826 builtin/notes.c:299
 #: builtin/tag.c:639
 #, c-format
 msgid "cannot read '%s'"
@@ -1621,8 +1621,8 @@ msgstr ""
 
 #: archive.c:657 archive.c:671 builtin/blame.c:967 builtin/blame.c:973
 #: builtin/blame.c:974 builtin/commit-tree.c:112 builtin/config.c:71
-#: builtin/fast-export.c:1341 builtin/fast-export.c:1343
-#: builtin/fast-export.c:1347 builtin/gc.c:2112 builtin/gc.c:2178
+#: builtin/fast-export.c:1321 builtin/fast-export.c:1323
+#: builtin/fast-export.c:1327 builtin/gc.c:2112 builtin/gc.c:2178
 #: builtin/grep.c:998 builtin/hash-object.c:93 builtin/ls-files.c:625
 #: builtin/ls-files.c:628 builtin/notes.c:492 builtin/notes.c:671
 #: builtin/read-tree.c:124 parse-options.h:346
@@ -1692,7 +1692,7 @@ msgstr ""
 #: builtin/add.c:469 builtin/checkout.c:1802 builtin/checkout.c:1804
 #: builtin/checkout.c:1948 builtin/clone.c:1271 builtin/clone.c:1274
 #: builtin/commit.c:384 builtin/commit.c:436 builtin/commit.c:438
-#: builtin/fast-export.c:1390 builtin/index-pack.c:2017 builtin/log.c:2320
+#: builtin/fast-export.c:1370 builtin/index-pack.c:2017 builtin/log.c:2320
 #: builtin/reset.c:400 builtin/reset.c:443 builtin/reset.c:445
 #: builtin/reset.c:474 builtin/rm.c:292 builtin/stash.c:1908
 #: builtin/stash.c:1913 builtin/stash.c:1915 builtin/stash.c:1985
@@ -1901,7 +1901,7 @@ msgid "--reverse and --first-parent together require specified latest commit"
 msgstr ""
 
 #: blame.c:2837 builtin/bisect.c:590 builtin/bisect.c:1115
-#: builtin/commit.c:1160 builtin/fast-export.c:1418 builtin/history.c:50
+#: builtin/commit.c:1160 builtin/fast-export.c:1398 builtin/history.c:50
 #: builtin/log.c:402 builtin/log.c:1178 builtin/log.c:1811 builtin/log.c:2274
 #: builtin/log.c:2600 builtin/merge.c:462 builtin/pack-objects.c:3945
 #: builtin/pack-objects.c:4110 builtin/pack-objects.c:4710
@@ -3747,8 +3747,8 @@ msgid ""
 msgstr ""
 
 #: builtin/bugreport.c:112 builtin/commit.c:1570 builtin/commit.c:1579
-#: builtin/commit.c:1769 builtin/fast-export.c:1329 builtin/fast-export.c:1332
-#: builtin/fast-export.c:1335 builtin/fast-export.c:1338
+#: builtin/commit.c:1769 builtin/fast-export.c:1309 builtin/fast-export.c:1312
+#: builtin/fast-export.c:1315 builtin/fast-export.c:1318
 #: builtin/pack-objects.c:4920 builtin/rebase.c:1260 builtin/replay.c:278
 #: parse-options.h:622
 msgid "mode"
@@ -6990,199 +6990,187 @@ msgid ""
 "no] to handle it"
 msgstr ""
 
-#: builtin/fast-export.c:802
-#, c-format
-msgid "exporting %<PRIuMAX> signature(s) for commit %s"
-msgstr ""
-
-#: builtin/fast-export.c:814
-#, c-format
-msgid "stripping signature(s) from commit %s"
-msgstr ""
-
-#: builtin/fast-export.c:822
+#: builtin/fast-export.c:801
 #, c-format
 msgid "encountered signed commit %s; use --signed-commits=<mode> to handle it"
 msgstr ""
 
-#: builtin/fast-export.c:826
-msgid ""
-"'strip-if-invalid' is not a valid mode for git fast-export with --signed-"
-"commits=<mode>"
+#: builtin/fast-export.c:805
+#, c-format
+msgid "exporting %<PRIuMAX> signature(s) for commit %s"
 msgstr ""
 
-#: builtin/fast-export.c:903
+#: builtin/fast-export.c:815
+#, c-format
+msgid "stripping signature(s) from commit %s"
+msgstr ""
+
+#: builtin/fast-export.c:893
 #, c-format
 msgid ""
 "omitting tag %s,\n"
 "since tags of trees (or tags of tags of trees, etc.) are not supported."
 msgstr ""
 
-#: builtin/fast-export.c:912
+#: builtin/fast-export.c:902
 #, c-format
 msgid "could not read tag %s"
 msgstr ""
 
-#: builtin/fast-export.c:950
-#, c-format
-msgid "exporting signed tag %s"
-msgstr ""
-
-#: builtin/fast-export.c:958
-#, c-format
-msgid "stripping signature from tag %s"
-msgstr ""
-
-#: builtin/fast-export.c:967
+#: builtin/fast-export.c:939
 #, c-format
 msgid "encountered signed tag %s; use --signed-tags=<mode> to handle it"
 msgstr ""
 
-#: builtin/fast-export.c:971
-msgid ""
-"'strip-if-invalid' is not a valid mode for git fast-export with --signed-"
-"tags=<mode>"
+#: builtin/fast-export.c:943
+#, c-format
+msgid "exporting signed tag %s"
 msgstr ""
 
-#: builtin/fast-export.c:984
+#: builtin/fast-export.c:949
+#, c-format
+msgid "stripping signature from tag %s"
+msgstr ""
+
+#: builtin/fast-export.c:964
 #, c-format
 msgid ""
 "tag %s tags unexported object; use --tag-of-filtered-object=<mode> to handle "
 "it"
 msgstr ""
 
-#: builtin/fast-export.c:993
+#: builtin/fast-export.c:973
 msgid "cannot export nested tags unless --mark-tags is specified."
 msgstr ""
 
-#: builtin/fast-export.c:1049
+#: builtin/fast-export.c:1029
 #, c-format
 msgid "tag %s points nowhere?"
 msgstr ""
 
-#: builtin/fast-export.c:1087
+#: builtin/fast-export.c:1067
 #, c-format
 msgid "%s: unexpected object of type %s, skipping."
 msgstr ""
 
-#: builtin/fast-export.c:1102
+#: builtin/fast-export.c:1082
 #, c-format
 msgid "tag points to object of unexpected type %s, skipping."
 msgstr ""
 
-#: builtin/fast-export.c:1198
+#: builtin/fast-export.c:1178
 #, c-format
 msgid "unable to open marks file %s for writing."
 msgstr ""
 
-#: builtin/fast-export.c:1215
+#: builtin/fast-export.c:1195
 #, c-format
 msgid "unable to write marks file %s."
 msgstr ""
 
-#: builtin/fast-export.c:1238 builtin/fast-export.c:1244
+#: builtin/fast-export.c:1218 builtin/fast-export.c:1224
 #: builtin/fast-import.c:1795 builtin/fast-import.c:1801
 #, c-format
 msgid "corrupt mark line: %s"
 msgstr ""
 
-#: builtin/fast-export.c:1251 builtin/fast-import.c:1768
-#: builtin/fast-import.c:3296 fetch-pack.c:449 fetch-pack.c:1534
+#: builtin/fast-export.c:1231 builtin/fast-import.c:1768
+#: builtin/fast-import.c:3240 fetch-pack.c:449 fetch-pack.c:1534
 #, c-format
 msgid "object not found: %s"
 msgstr ""
 
-#: builtin/fast-export.c:1259
+#: builtin/fast-export.c:1239
 #, c-format
 msgid "not a commit? can't happen: %s"
 msgstr ""
 
-#: builtin/fast-export.c:1264
+#: builtin/fast-export.c:1244
 #, c-format
 msgid "object %s already has a mark"
 msgstr ""
 
-#: builtin/fast-export.c:1305
+#: builtin/fast-export.c:1285
 msgid "--anonymize-map token cannot be empty"
 msgstr ""
 
-#: builtin/fast-export.c:1328
+#: builtin/fast-export.c:1308
 msgid "show progress after <n> objects"
 msgstr ""
 
-#: builtin/fast-export.c:1330
+#: builtin/fast-export.c:1310
 msgid "select handling of signed tags"
 msgstr ""
 
-#: builtin/fast-export.c:1333
+#: builtin/fast-export.c:1313
 msgid "select handling of signed commits"
 msgstr ""
 
-#: builtin/fast-export.c:1336
+#: builtin/fast-export.c:1316
 msgid "select handling of tags that tag filtered objects"
 msgstr ""
 
-#: builtin/fast-export.c:1339
+#: builtin/fast-export.c:1319
 msgid "select handling of commit messages in an alternate encoding"
 msgstr ""
 
-#: builtin/fast-export.c:1342
+#: builtin/fast-export.c:1322
 msgid "dump marks to this file"
 msgstr ""
 
-#: builtin/fast-export.c:1344
+#: builtin/fast-export.c:1324
 msgid "import marks from this file"
 msgstr ""
 
-#: builtin/fast-export.c:1348
+#: builtin/fast-export.c:1328
 msgid "import marks from this file if it exists"
 msgstr ""
 
-#: builtin/fast-export.c:1350
+#: builtin/fast-export.c:1330
 msgid "fake a tagger when tags lack one"
 msgstr ""
 
-#: builtin/fast-export.c:1352
+#: builtin/fast-export.c:1332
 msgid "output full tree for each commit"
 msgstr ""
 
-#: builtin/fast-export.c:1354
+#: builtin/fast-export.c:1334
 msgid "use the done feature to terminate the stream"
 msgstr ""
 
-#: builtin/fast-export.c:1355
+#: builtin/fast-export.c:1335
 msgid "skip output of blob data"
 msgstr ""
 
-#: builtin/fast-export.c:1356 builtin/log.c:2024
+#: builtin/fast-export.c:1336 builtin/log.c:2024
 msgid "refspec"
 msgstr ""
 
-#: builtin/fast-export.c:1357
+#: builtin/fast-export.c:1337
 msgid "apply refspec to exported refs"
 msgstr ""
 
-#: builtin/fast-export.c:1358
+#: builtin/fast-export.c:1338
 msgid "anonymize output"
 msgstr ""
 
-#: builtin/fast-export.c:1359
+#: builtin/fast-export.c:1339
 msgid "from:to"
 msgstr ""
 
-#: builtin/fast-export.c:1360
+#: builtin/fast-export.c:1340
 msgid "convert <from> to <to> in anonymized output"
 msgstr ""
 
-#: builtin/fast-export.c:1363
+#: builtin/fast-export.c:1343
 msgid "reference parents which are not in fast-export stream by object id"
 msgstr ""
 
-#: builtin/fast-export.c:1365
+#: builtin/fast-export.c:1345
 msgid "show original object ids of blobs/commits"
 msgstr ""
 
-#: builtin/fast-export.c:1367
+#: builtin/fast-export.c:1347
 msgid "label tags with mark ids"
 msgstr ""
 
@@ -7423,7 +7411,7 @@ msgid "corrupt mode: %s"
 msgstr ""
 
 #: builtin/fast-import.c:2378 builtin/fast-import.c:2524
-#: builtin/fast-import.c:3276 builtin/fast-import.c:3388
+#: builtin/fast-import.c:3220 builtin/fast-import.c:3332
 #, c-format
 msgid "invalid dataref: %s"
 msgstr ""
@@ -7484,7 +7472,7 @@ msgid "not a valid commit: %s"
 msgstr ""
 
 #: builtin/fast-import.c:2551 builtin/fast-import.c:2655
-#: builtin/fast-import.c:2713 builtin/fast-import.c:3107
+#: builtin/fast-import.c:2713 builtin/fast-import.c:3051
 #, c-format
 msgid "invalid ref name or SHA1 expression: %s"
 msgstr ""
@@ -7539,250 +7527,218 @@ msgstr ""
 msgid "parse_one_signature() returned unknown hash algo"
 msgstr ""
 
-#: builtin/fast-import.c:2846 builtin/fsck.c:79 builtin/fsck.c:141
-#: builtin/fsck.c:142
-msgid "unknown"
-msgstr ""
-
-#: builtin/fast-import.c:2851
-#, c-format
-msgid ""
-"stripping invalid signature for commit '%.100s...'\n"
-"  allegedly by %s"
-msgstr ""
-
-#: builtin/fast-import.c:2854
-#, c-format
-msgid ""
-"stripping invalid signature for commit '%.*s'\n"
-"  allegedly by %s"
-msgstr ""
-
-#: builtin/fast-import.c:2857
-#, c-format
-msgid ""
-"stripping invalid signature for commit\n"
-"  allegedly by %s"
-msgstr ""
-
-#: builtin/fast-import.c:2899
+#: builtin/fast-import.c:2848
 msgid "expected committer but didn't get one"
 msgstr ""
 
-#: builtin/fast-import.c:2906
+#: builtin/fast-import.c:2855
 msgid "encountered signed commit; use --signed-commits=<mode> to handle it"
 msgstr ""
 
-#: builtin/fast-import.c:2909
+#: builtin/fast-import.c:2858
 msgid "stripping a commit signature"
 msgstr ""
 
-#: builtin/fast-import.c:2917
+#: builtin/fast-import.c:2866
 msgid "importing a commit signature verbatim"
 msgstr ""
 
-#: builtin/fast-import.c:3032
+#: builtin/fast-import.c:2979
+msgid "encountered signed tag; use --signed-tags=<mode> to handle it"
+msgstr ""
+
+#: builtin/fast-import.c:2982
 #, c-format
 msgid "importing a tag signature verbatim for tag '%s'"
 msgstr ""
 
-#: builtin/fast-import.c:3040
+#: builtin/fast-import.c:2990
 #, c-format
 msgid "stripping a tag signature for tag '%s'"
 msgstr ""
 
-#: builtin/fast-import.c:3049
-msgid "encountered signed tag; use --signed-tags=<mode> to handle it"
-msgstr ""
-
-#: builtin/fast-import.c:3052
-msgid ""
-"'strip-if-invalid' is not a valid mode for git fast-import with --signed-"
-"tags=<mode>"
-msgstr ""
-
-#: builtin/fast-import.c:3084
+#: builtin/fast-import.c:3028
 #, c-format
 msgid "expected 'from' command, got '%s'"
 msgstr ""
 
-#: builtin/fast-import.c:3088
+#: builtin/fast-import.c:3032
 msgid "can't tag an empty branch."
 msgstr ""
 
-#: builtin/fast-import.c:3103 builtin/merge.c:371
+#: builtin/fast-import.c:3047 builtin/merge.c:371
 #, c-format
 msgid "not a valid object: %s"
 msgstr ""
 
-#: builtin/fast-import.c:3198
+#: builtin/fast-import.c:3142
 msgid "write to frontend failed"
 msgstr ""
 
-#: builtin/fast-import.c:3227
+#: builtin/fast-import.c:3171
 #, c-format
 msgid "can't read object %s"
 msgstr ""
 
-#: builtin/fast-import.c:3229
+#: builtin/fast-import.c:3173
 #, c-format
 msgid "object %s is a %s but a blob was expected."
 msgstr ""
 
-#: builtin/fast-import.c:3253
+#: builtin/fast-import.c:3197
 #, c-format
 msgid "not a mark: %s"
 msgstr ""
 
-#: builtin/fast-import.c:3257 builtin/fast-import.c:3272
-#: builtin/fast-import.c:3384
+#: builtin/fast-import.c:3201 builtin/fast-import.c:3216
+#: builtin/fast-import.c:3328
 #, c-format
 msgid "unknown mark: %s"
 msgstr ""
 
-#: builtin/fast-import.c:3278
+#: builtin/fast-import.c:3222
 #, c-format
 msgid "garbage after SHA1: %s"
 msgstr ""
 
-#: builtin/fast-import.c:3310
+#: builtin/fast-import.c:3254
 #, c-format
 msgid "not a tree-ish: %s"
 msgstr ""
 
-#: builtin/fast-import.c:3321
+#: builtin/fast-import.c:3265
 #, c-format
 msgid "can't load object %s"
 msgstr ""
 
-#: builtin/fast-import.c:3328
+#: builtin/fast-import.c:3272
 #, c-format
 msgid "invalid SHA1 in tag: %s"
 msgstr ""
 
-#: builtin/fast-import.c:3333
+#: builtin/fast-import.c:3277
 #, c-format
 msgid "invalid SHA1 in commit: %s"
 msgstr ""
 
-#: builtin/fast-import.c:3368
+#: builtin/fast-import.c:3312
 #, c-format
 msgid "missing from marks for submodule '%s'"
 msgstr ""
 
-#: builtin/fast-import.c:3370
+#: builtin/fast-import.c:3314
 #, c-format
 msgid "missing to marks for submodule '%s'"
 msgstr ""
 
-#: builtin/fast-import.c:3391
+#: builtin/fast-import.c:3335
 #, c-format
 msgid "missing space after tree-ish: %s"
 msgstr ""
 
-#: builtin/fast-import.c:3435
+#: builtin/fast-import.c:3379
 #, c-format
 msgid "not in a commit: %s"
 msgstr ""
 
-#: builtin/fast-import.c:3498
+#: builtin/fast-import.c:3442
 #, c-format
 msgid "expected 'mark' command, got %s"
 msgstr ""
 
-#: builtin/fast-import.c:3503
+#: builtin/fast-import.c:3447
 #, c-format
 msgid "expected 'to' command, got %s"
 msgstr ""
 
-#: builtin/fast-import.c:3521
+#: builtin/fast-import.c:3465
 msgid "only one import-marks command allowed per stream"
 msgstr ""
 
-#: builtin/fast-import.c:3545
+#: builtin/fast-import.c:3489
 #, c-format
 msgid "unknown --date-format argument %s"
 msgstr ""
 
-#: builtin/fast-import.c:3553
+#: builtin/fast-import.c:3497
 #, c-format
 msgid "%s: argument must be a non-negative integer"
 msgstr ""
 
-#: builtin/fast-import.c:3561
+#: builtin/fast-import.c:3505
 #, c-format
 msgid "--depth cannot exceed %u"
 msgstr ""
 
-#: builtin/fast-import.c:3579
+#: builtin/fast-import.c:3523
 #, c-format
 msgid "--cat-blob-fd cannot exceed %d"
 msgstr ""
 
-#: builtin/fast-import.c:3599
+#: builtin/fast-import.c:3543
 msgid "expected format name:filename for submodule rewrite option"
 msgstr ""
 
-#: builtin/fast-import.c:3624
+#: builtin/fast-import.c:3568
 #, c-format
 msgid "max-pack-size is now in bytes, assuming --max-pack-size=%lum"
 msgstr ""
 
-#: builtin/fast-import.c:3627
+#: builtin/fast-import.c:3571
 msgid "minimum max-pack-size is 1 MiB"
 msgstr ""
 
-#: builtin/fast-import.c:3644
+#: builtin/fast-import.c:3588
 #, c-format
 msgid "unknown --signed-commits mode '%s'"
 msgstr ""
 
-#: builtin/fast-import.c:3647
+#: builtin/fast-import.c:3591
 #, c-format
 msgid "unknown --signed-tags mode '%s'"
 msgstr ""
 
-#: builtin/fast-import.c:3665
+#: builtin/fast-import.c:3609
 #, c-format
 msgid "feature '%s' forbidden in input without --allow-unsafe-features"
 msgstr ""
 
-#: builtin/fast-import.c:3714
+#: builtin/fast-import.c:3658
 #, c-format
 msgid "got feature command '%s' after data command"
 msgstr ""
 
-#: builtin/fast-import.c:3719
+#: builtin/fast-import.c:3663
 #, c-format
 msgid "this version of fast-import does not support feature %s."
 msgstr ""
 
-#: builtin/fast-import.c:3725
+#: builtin/fast-import.c:3669
 #, c-format
 msgid "got option command '%s' after data command"
 msgstr ""
 
-#: builtin/fast-import.c:3730
+#: builtin/fast-import.c:3674
 #, c-format
 msgid "this version of fast-import does not support option: %s"
 msgstr ""
 
-#: builtin/fast-import.c:3774 builtin/merge-recursive.c:58
+#: builtin/fast-import.c:3718 builtin/merge-recursive.c:58
 #, c-format
 msgid "unknown option %s"
 msgstr ""
 
-#: builtin/fast-import.c:3787
+#: builtin/fast-import.c:3731
 #, c-format
 msgid "unknown option --%s"
 msgstr ""
 
-#: builtin/fast-import.c:3876
+#: builtin/fast-import.c:3820
 #, c-format
 msgid "unsupported command: %s"
 msgstr ""
 
-#: builtin/fast-import.c:3887
+#: builtin/fast-import.c:3831
 msgid "stream ends early"
 msgstr ""
 
@@ -8352,6 +8308,10 @@ msgstr ""
 #: builtin/for-each-repo.c:60
 #, c-format
 msgid "got bad config --config=%s"
+msgstr ""
+
+#: builtin/fsck.c:79 builtin/fsck.c:141 builtin/fsck.c:142
+msgid "unknown"
 msgstr ""
 
 #. TRANSLATORS: e.g. error in tree 01bfda: <more explanation>
@@ -19137,27 +19097,27 @@ msgstr ""
 msgid "commit %s exists in commit-graph but not in the object database"
 msgstr ""
 
-#: commit.c:1368
+#: commit.c:1355
 #, c-format
 msgid "Commit %s has an untrusted GPG signature, allegedly by %s."
 msgstr ""
 
-#: commit.c:1372
+#: commit.c:1359
 #, c-format
 msgid "Commit %s has a bad GPG signature allegedly by %s."
 msgstr ""
 
-#: commit.c:1375
+#: commit.c:1362
 #, c-format
 msgid "Commit %s does not have a GPG signature."
 msgstr ""
 
-#: commit.c:1378
+#: commit.c:1365
 #, c-format
 msgid "Commit %s has a good GPG signature by %s\n"
 msgstr ""
 
-#: commit.c:1666
+#: commit.c:1653
 msgid ""
 "Warning: commit message did not conform to UTF-8.\n"
 "You may want to amend it after fixing the message, or set the config\n"
