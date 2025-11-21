@@ -523,3 +523,470 @@
  msgid "compiler info: "
  msgstr ""
  
+
+
+#################### Fri, 21 Nov 2025 22:57:30 +0000 ####################
+
+--- po/git.pot.old	2025-11-21 22:57:30.258816867 +0000
++++ po/git.pot.new	2025-11-21 22:57:30.339816490 +0000
+@@ -1697,6 +1697,15 @@
+ "'merge -c' on the commit"
+ msgstr ""
+ 
++msgid "'strip-if-invalid' is not a valid mode for git fast-export with --signed-commits=<mode>"
++msgstr ""
++
++msgid "'strip-if-invalid' is not a valid mode for git fast-export with --signed-tags=<mode>"
++msgstr ""
++
++msgid "'strip-if-invalid' is not a valid mode for git fast-import with --signed-tags=<mode>"
++msgstr ""
++
+ msgid "'unknown' signature format in gpgsig"
+ msgstr ""
+ 
+@@ -1716,7 +1725,7 @@
+ msgid "(%s) failed to close pipe to '%s'"
+ msgstr ""
+ 
+-msgid "(EXPERIMENTAL!) git replay ([--contained] --onto <newbase> | --advance <branch>) <revision-range>..."
++msgid "(EXPERIMENTAL!) git replay ([--contained] --onto <newbase> | --advance <branch>) [--ref-action[=<mode>]] <revision-range>..."
+ msgstr ""
+ 
+ #, c-format
+@@ -1853,6 +1862,9 @@
+ msgid "--add --delete doesn't make sense"
+ msgstr ""
+ 
++msgid "--all and <key> cannot be used together"
++msgstr ""
++
+ msgid "--all can't be combined with refspecs"
+ msgstr ""
+ 
+@@ -2862,6 +2874,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Cannot construct a valid gitdir path for submodule '%s': please set a unique git config for 'submodule.%s.gitdir'."
++msgstr ""
++
++#, c-format
+ msgid "Cannot copy notes. Found existing notes for object %s. Use '-f' to overwrite existing notes"
+ msgstr ""
+ 
+@@ -3591,6 +3607,9 @@
+ msgid "EXPERIMENTAL: Replay commits on a new base, works with bare repos too"
+ msgstr ""
+ 
++msgid "EXPERIMENTAL: Rewrite history of the current branch"
++msgstr ""
++
+ msgid "EXPERIMENTAL: Show when files were last modified"
+ msgstr ""
+ 
+@@ -4302,6 +4321,10 @@
+ msgid "Invalid %s: '%s'"
+ msgstr ""
+ 
++#, c-format
++msgid "Invalid 'submodule.%s.gitdir' config: '%s' please check if it is unique or conflicts with another module"
++msgstr ""
++
+ msgid "Invalid back reference"
+ msgstr ""
+ 
+@@ -5027,6 +5050,12 @@
+ 
+ #, c-format
+ msgid ""
++"Please enter the commit message for the %s changes. Lines starting\n"
++"with '%s' will be ignored.\n"
++msgstr ""
++
++#, c-format
++msgid ""
+ "Please enter the commit message for your changes. Lines starting\n"
+ "with '%s' will be ignored, and an empty message aborts the commit.\n"
+ msgstr ""
+@@ -5063,6 +5092,10 @@
+ msgid "Please supply the message using either -m or -F option.\n"
+ msgstr ""
+ 
++#, c-format
++msgid "Please supply the message using the -m option.\n"
++msgstr ""
++
+ msgid "Please, commit your changes before merging."
+ msgstr ""
+ 
+@@ -5359,9 +5392,6 @@
+ msgid "Reset branch '%s'\n"
+ msgstr ""
+ 
+-msgid "Reset current HEAD to the specified state"
+-msgstr ""
+-
+ msgid ""
+ "Resolve all conflicts manually, mark them as resolved with\n"
+ "\"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\n"
+@@ -5418,6 +5448,9 @@
+ msgid "Review diff"
+ msgstr ""
+ 
++msgid "Revision does not refer to a commit"
++msgstr ""
++
+ #, c-format
+ msgid "Rewinding the tree to pristine...\n"
+ msgstr ""
+@@ -5561,6 +5594,9 @@
+ msgid "Server version is %.*s"
+ msgstr ""
+ 
++msgid "Set HEAD to point at the specified commit"
++msgstr ""
++
+ msgid "Should not be doing an octopus."
+ msgstr ""
+ 
+@@ -8479,6 +8515,9 @@
+ msgid "cannot acquire lock for scheduled background maintenance"
+ msgstr ""
+ 
++msgid "cannot add a submodule of a different hash algorithm"
++msgstr ""
++
+ msgid "cannot advance target with multiple source branches because ordering would be ill-defined"
+ msgstr ""
+ 
+@@ -8827,6 +8866,9 @@
+ msgid "cannot parse parents of commit: %s"
+ msgstr ""
+ 
++msgid "cannot perform queued object checks outside of a repository"
++msgstr ""
++
+ msgid "cannot pread pack file"
+ msgstr ""
+ 
+@@ -8899,6 +8941,9 @@
+ msgid "cannot readlink '%s'"
+ msgstr ""
+ 
++msgid "cannot rearrange commit history with merges"
++msgstr ""
++
+ msgid "cannot rebase with locally recorded submodule modifications"
+ msgstr ""
+ 
+@@ -9282,6 +9327,12 @@
+ msgid "command"
+ msgstr ""
+ 
++msgid "command expects a revision"
++msgstr ""
++
++msgid "command expects a single revision"
++msgstr ""
++
+ msgid "command token to send to the server"
+ msgstr ""
+ 
+@@ -9333,6 +9384,14 @@
+ msgid "commit only specified files"
+ msgstr ""
+ 
++#, c-format
++msgid "commit to be reworded cannot be found: %s"
++msgstr ""
++
++#, c-format
++msgid "commit to be split cannot be found: %s"
++msgstr ""
++
+ msgid "commit your changes or stash them to proceed."
+ msgstr ""
+ 
+@@ -9511,6 +9570,9 @@
+ msgid "control recursive pushing of submodules"
+ msgstr ""
+ 
++msgid "control ref update behavior (update|print)"
++msgstr ""
++
+ msgid "control the order in which files appear in the output"
+ msgstr ""
+ 
+@@ -10056,9 +10118,6 @@
+ msgid "could not open tempfile %s for writing"
+ msgstr ""
+ 
+-msgid "could not open temporary file"
+-msgstr ""
+-
+ #, c-format
+ msgid "could not parse %s"
+ msgstr ""
+@@ -10296,10 +10355,6 @@
+ msgid "could not remove temporary migration directory '%s'"
+ msgstr ""
+ 
+-#, c-format
+-msgid "could not rename temporary file to %s"
+-msgstr ""
+-
+ msgid "could not reset --hard"
+ msgstr ""
+ 
+@@ -10324,6 +10379,9 @@
+ msgid "could not resolve HEAD ref inside the submodule '%s'"
+ msgstr ""
+ 
++msgid "could not resolve HEAD to a commit"
++msgstr ""
++
+ #, c-format
+ msgid "could not resolve ref '%s'"
+ msgstr ""
+@@ -11295,6 +11353,9 @@
+ msgid "email"
+ msgstr ""
+ 
++msgid "empty --trailer argument"
++msgstr ""
++
+ #, c-format
+ msgid "empty alias for %s"
+ msgstr ""
+@@ -11785,10 +11846,16 @@
+ msgid "failed reading ssh signing data buffer from '%s'"
+ msgstr ""
+ 
++msgid "failed reading temporary index"
++msgstr ""
++
+ #, c-format
+ msgid "failed seeking to start of '%s'"
+ msgstr ""
+ 
++msgid "failed split tree"
++msgstr ""
++
+ #, c-format
+ msgid "failed to add packfile '%s'"
+ msgstr ""
+@@ -11800,6 +11867,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "failed to begin ref transaction: %s"
++msgstr ""
++
++#, c-format
+ msgid "failed to bootstrap service %s"
+ msgstr ""
+ 
+@@ -11813,6 +11884,10 @@
+ msgid "failed to close rev-list's stdin"
+ msgstr ""
+ 
++#, c-format
++msgid "failed to commit ref transaction: %s"
++msgstr ""
++
+ msgid "failed to convert index to a sparse index; resolve merge conflicts and try again"
+ msgstr ""
+ 
+@@ -12051,6 +12126,10 @@
+ msgid "failed to locate object %d in packfile"
+ msgstr ""
+ 
++#, c-format
++msgid "failed to look up commit: %s"
++msgstr ""
++
+ msgid "failed to look up reference"
+ msgstr ""
+ 
+@@ -12320,6 +12399,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "failed to update ref '%s': %s"
++msgstr ""
++
++#, c-format
+ msgid "failed to update remote for submodule '%s'"
+ msgstr ""
+ 
+@@ -12378,6 +12461,15 @@
+ msgid "failed writing detached signature to '%s'"
+ msgstr ""
+ 
++msgid "failed writing reworded commit"
++msgstr ""
++
++msgid "failed writing second commit"
++msgstr ""
++
++msgid "failed writing split-out commit"
++msgstr ""
++
+ #, c-format
+ msgid "failed writing ssh signing key buffer to '%s'"
+ msgstr ""
+@@ -12511,14 +12603,6 @@
+ msgstr[1] ""
+ 
+ #, c-format
+-msgid "file %s is not a regular file"
+-msgstr ""
+-
+-#, c-format
+-msgid "file %s is not writable by user"
+-msgstr ""
+-
+-#, c-format
+ msgid "file at URI '%s' is not a bundle or bundle list"
+ msgstr ""
+ 
+@@ -13160,7 +13244,7 @@
+ msgid "git fetch --all [<options>]"
+ msgstr ""
+ 
+-msgid "git fetch --multiple [<options>] [(<repository> | <group>)...]"
++msgid "git fetch --multiple [<options>] [(<repository>|<group>)...]"
+ msgstr ""
+ 
+ msgid "git fetch [<options>] <group>"
+@@ -13230,6 +13314,12 @@
+ msgid "git help [[-i|--info] [-m|--man] [-w|--web]] [<command>|<doc>]"
+ msgstr ""
+ 
++msgid "git history reword <commit>"
++msgstr ""
++
++msgid "git history split <commit> [--] [<pathspec>...]"
++msgstr ""
++
+ msgid "git hook run [--ignore-missing] [--to-stdin=<path>] <hook-name> [-- <hook-args>]"
+ msgstr ""
+ 
+@@ -13767,6 +13857,9 @@
+ msgid "git submodule--helper create-branch [-f|--force] [--create-reflog] [-q|--quiet] [-t|--track] [-n|--dry-run] <name> <start-oid> <start-name>"
+ msgstr ""
+ 
++msgid "git submodule--helper gitdir <name>"
++msgstr ""
++
+ msgid "git switch [<options>] [<branch>]"
+ msgstr ""
+ 
+@@ -14527,6 +14620,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "invalid %s value: '%s'"
++msgstr ""
++
++#, c-format
+ msgid "invalid %s: %s"
+ msgstr ""
+ 
+@@ -14782,6 +14879,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "invalid object ID: %s"
++msgstr ""
++
++#, c-format
+ msgid "invalid object name '%.*s'."
+ msgstr ""
+ 
+@@ -14948,6 +15049,10 @@
+ msgid "invalid timezone offset"
+ msgstr ""
+ 
++#, c-format
++msgid "invalid trailer '%s': missing key before separator"
++msgstr ""
++
+ msgid "invalid transfer encoding"
+ msgstr ""
+ 
+@@ -17403,6 +17508,9 @@
+ msgid "print all configuration variable names"
+ msgstr ""
+ 
++msgid "print all keys/values"
++msgstr ""
++
+ msgid "print command description"
+ msgstr ""
+ 
+@@ -18039,10 +18147,6 @@
+ msgid "refusing to merge unrelated histories"
+ msgstr ""
+ 
+-#, c-format
+-msgid "refusing to move '%s' into an existing git dir"
+-msgstr ""
+-
+ msgid "refusing to read cookies from http.cookiefile '-'"
+ msgstr ""
+ 
+@@ -19404,7 +19508,16 @@
+ msgid "specifying branches to track makes sense only with fetch mirrors"
+ msgstr ""
+ 
+-msgid "spend extra cycles to find better match"
++msgid "spend extra cycles to find a better match"
++msgstr ""
++
++msgid "split commit is empty"
++msgstr ""
++
++msgid "split commit must be reachable from current HEAD commit"
++msgstr ""
++
++msgid "split commit tree matches original commit"
+ msgstr ""
+ 
+ #, c-format
+@@ -19557,6 +19670,24 @@
+ msgstr ""
+ 
+ #, c-format
++msgid ""
++"stripping invalid signature for commit\n"
++"  allegedly by %s"
++msgstr ""
++
++#, c-format
++msgid ""
++"stripping invalid signature for commit '%.*s'\n"
++"  allegedly by %s"
++msgstr ""
++
++#, c-format
++msgid ""
++"stripping invalid signature for commit '%.100s...'\n"
++"  allegedly by %s"
++msgstr ""
++
++#, c-format
+ msgid "stripping signature from tag %s"
+ msgstr ""
+ 
+@@ -20229,6 +20360,9 @@
+ msgid "unable to add recent objects"
+ msgstr ""
+ 
++msgid "unable to add trailers to commit message"
++msgstr ""
++
+ #, c-format
+ msgid "unable to adjust shared permissions for '%s'"
+ msgstr ""
