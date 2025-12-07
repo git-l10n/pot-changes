@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2025-12-07 03:50+0000\n"
+"POT-Creation-Date: 2025-12-07 22:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -828,7 +828,7 @@ msgstr ""
 #: builtin/notes.c:601 builtin/notes.c:613 builtin/notes.c:699
 #: builtin/notes.c:776 builtin/notes.c:930 builtin/notes.c:1093
 #: builtin/notes.c:1117 builtin/prune-packed.c:29 builtin/receive-pack.c:2563
-#: builtin/refs.c:52 builtin/repo.c:542 builtin/tag.c:652
+#: builtin/refs.c:52 builtin/repo.c:559 builtin/tag.c:652
 #: t/helper/test-pkt-line.c:89
 msgid "too many arguments"
 msgstr ""
@@ -2628,8 +2628,8 @@ msgstr ""
 #: builtin/cat-file.c:1062 builtin/cat-file.c:1066 builtin/cat-file.c:1073
 #: builtin/clone.c:978 builtin/diagnose.c:32 builtin/for-each-ref.c:37
 #: builtin/init-db.c:111 builtin/ls-files.c:649 builtin/ls-tree.c:369
-#: builtin/refs.c:36 builtin/replace.c:571 builtin/repo.c:174
-#: builtin/repo.c:529 builtin/submodule--helper.c:1842
+#: builtin/refs.c:36 builtin/replace.c:571 builtin/repo.c:186
+#: builtin/repo.c:546 builtin/submodule--helper.c:1842
 #: builtin/submodule--helper.c:2795 builtin/submodule--helper.c:3443
 #: builtin/tag.c:532 builtin/verify-tag.c:34
 msgid "format"
@@ -8622,7 +8622,7 @@ msgstr ""
 msgid "write dangling objects in .git/lost-found"
 msgstr ""
 
-#: builtin/fsck.c:955 builtin/prune.c:163 builtin/repo.c:536
+#: builtin/fsck.c:955 builtin/prune.c:163 builtin/repo.c:553
 msgid "show progress"
 msgstr ""
 
@@ -12104,7 +12104,7 @@ msgstr ""
 msgid "delta base offset out of bound for %s"
 msgstr ""
 
-#: builtin/pack-objects.c:2561 builtin/repo.c:511
+#: builtin/pack-objects.c:2561 builtin/repo.c:528
 msgid "Counting objects"
 msgstr ""
 
@@ -14868,85 +14868,89 @@ msgstr ""
 msgid "failed to commit ref transaction: %s"
 msgstr ""
 
-#: builtin/repo.c:119
+#: builtin/repo.c:120
 #, c-format
 msgid "key '%s' not found"
 msgstr ""
 
-#: builtin/repo.c:163
+#: builtin/repo.c:174
 #, c-format
 msgid "invalid format '%s'"
 msgstr ""
 
-#: builtin/repo.c:175 builtin/repo.c:530
+#: builtin/repo.c:187 builtin/repo.c:547
 msgid "output format"
 msgstr ""
 
-#: builtin/repo.c:178 builtin/repo.c:533
+#: builtin/repo.c:190 builtin/repo.c:550
 msgid "synonym for --format=nul"
 msgstr ""
 
-#: builtin/repo.c:181
+#: builtin/repo.c:193
 msgid "print all keys/values"
 msgstr ""
 
-#: builtin/repo.c:187
+#: builtin/repo.c:194
+msgid "show keys"
+msgstr ""
+
+#: builtin/repo.c:204
 msgid "unsupported output format"
 msgstr ""
 
-#: builtin/repo.c:190
+#: builtin/repo.c:207
 msgid "--all and <key> cannot be used together"
 msgstr ""
 
-#: builtin/repo.c:298
+#: builtin/repo.c:315
 msgid "References"
 msgstr ""
 
-#: builtin/repo.c:299 builtin/repo.c:308
+#: builtin/repo.c:316 builtin/repo.c:325
 msgid "Count"
 msgstr ""
 
-#: builtin/repo.c:300
+#: builtin/repo.c:317
 msgid "Branches"
 msgstr ""
 
-#: builtin/repo.c:301 builtin/repo.c:312
+#: builtin/repo.c:318 builtin/repo.c:329
 msgid "Tags"
 msgstr ""
 
-#: builtin/repo.c:302
+#: builtin/repo.c:319
 msgid "Remotes"
 msgstr ""
 
-#: builtin/repo.c:303
+#: builtin/repo.c:320
 msgid "Others"
 msgstr ""
 
-#: builtin/repo.c:307
+#: builtin/repo.c:324
 msgid "Reachable objects"
 msgstr ""
 
-#: builtin/repo.c:309
+#: builtin/repo.c:326
 msgid "Commits"
 msgstr ""
 
-#: builtin/repo.c:310
+#: builtin/repo.c:327
 msgid "Trees"
 msgstr ""
 
-#: builtin/repo.c:311
+#: builtin/repo.c:328
 msgid "Blobs"
 msgstr ""
 
-#: builtin/repo.c:317
+#: builtin/repo.c:334
 msgid "Repository structure"
 msgstr ""
 
-#: builtin/repo.c:318
+#: builtin/repo.c:335
 msgid "Value"
 msgstr ""
 
-#: builtin/repo.c:456
+#: builtin/repo.c:473
 msgid "Counting references"
 msgstr ""
 
@@ -19808,88 +19812,88 @@ msgstr ""
 msgid "expected flush after capabilities"
 msgstr ""
 
-#: connect.c:277
+#: connect.c:279
 #, c-format
 msgid "ignoring capabilities after first line '%s'"
 msgstr ""
 
-#: connect.c:298
+#: connect.c:300
 msgid "protocol error: unexpected capabilities^{}"
 msgstr ""
 
-#: connect.c:320
+#: connect.c:322
 #, c-format
 msgid "protocol error: expected shallow sha-1, got '%s'"
 msgstr ""
 
-#: connect.c:322
+#: connect.c:324
 msgid "repository on the other end cannot be shallow"
 msgstr ""
 
-#: connect.c:361
+#: connect.c:363
 msgid "invalid packet"
 msgstr ""
 
-#: connect.c:381
+#: connect.c:383
 #, c-format
 msgid "protocol error: unexpected '%s'"
 msgstr ""
 
-#: connect.c:499
+#: connect.c:501
 #, c-format
 msgid "unknown object format '%s' specified by server"
 msgstr ""
 
-#: connect.c:539
+#: connect.c:541
 #, c-format
 msgid "error on bundle-uri response line %d: %s"
 msgstr ""
 
-#: connect.c:544
+#: connect.c:546
 msgid "expected flush after bundle-uri listing"
 msgstr ""
 
-#: connect.c:552 connect.c:606
+#: connect.c:554 connect.c:608
 msgid "expected response end packet after ref listing"
 msgstr ""
 
-#: connect.c:599
+#: connect.c:601
 #, c-format
 msgid "invalid ls-refs response: %s"
 msgstr ""
 
-#: connect.c:603
+#: connect.c:605
 msgid "expected flush after ref listing"
 msgstr ""
 
-#: connect.c:742
+#: connect.c:744
 #, c-format
 msgid "protocol '%s' is not supported"
 msgstr ""
 
-#: connect.c:793
+#: connect.c:795
 msgid "unable to set SO_KEEPALIVE on socket"
 msgstr ""
 
-#: connect.c:833 connect.c:896
+#: connect.c:835 connect.c:898
 #, c-format
 msgid "Looking up %s ... "
 msgstr ""
 
-#: connect.c:837
+#: connect.c:839
 #, c-format
 msgid "unable to look up %s (port %s) (%s)"
 msgstr ""
 
 #. TRANSLATORS: this is the end of "Looking up %s ... "
-#: connect.c:841 connect.c:912
+#: connect.c:843 connect.c:914
 #, c-format
 msgid ""
 "done.\n"
 "Connecting to %s (port %s) ... "
 msgstr ""
 
-#: connect.c:863 connect.c:940
+#: connect.c:865 connect.c:942
 #, c-format
 msgid ""
 "unable to connect to %s:\n"
@@ -19897,61 +19901,61 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: this is the end of "Connecting to %s (port %s) ... "
-#: connect.c:869 connect.c:946
+#: connect.c:871 connect.c:948
 msgid "done."
 msgstr ""
 
-#: connect.c:900
+#: connect.c:902
 #, c-format
 msgid "unable to look up %s (%s)"
 msgstr ""
 
-#: connect.c:906
+#: connect.c:908
 #, c-format
 msgid "unknown port %s"
 msgstr ""
 
-#: connect.c:1043 connect.c:1375
+#: connect.c:1045 connect.c:1377
 #, c-format
 msgid "strange hostname '%s' blocked"
 msgstr ""
 
-#: connect.c:1045
+#: connect.c:1047
 #, c-format
 msgid "strange port '%s' blocked"
 msgstr ""
 
-#: connect.c:1055
+#: connect.c:1057
 #, c-format
 msgid "cannot start proxy %s"
 msgstr ""
 
-#: connect.c:1126
+#: connect.c:1128
 msgid "no path specified; see 'git help pull' for valid url syntax"
 msgstr ""
 
-#: connect.c:1266
+#: connect.c:1268
 msgid "newline is forbidden in git:// hosts and repo paths"
 msgstr ""
 
-#: connect.c:1323
+#: connect.c:1325
 msgid "ssh variant 'simple' does not support -4"
 msgstr ""
 
-#: connect.c:1335
+#: connect.c:1337
 msgid "ssh variant 'simple' does not support -6"
 msgstr ""
 
-#: connect.c:1352
+#: connect.c:1354
 msgid "ssh variant 'simple' does not support setting port"
 msgstr ""
 
-#: connect.c:1467
+#: connect.c:1469
 #, c-format
 msgid "strange pathname '%s' blocked"
 msgstr ""
 
-#: connect.c:1516
+#: connect.c:1518
 msgid "unable to fork"
 msgstr ""
 
