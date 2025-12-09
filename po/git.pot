@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2025-12-07 22:57+0000\n"
+"POT-Creation-Date: 2025-12-09 23:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -828,7 +828,7 @@ msgstr ""
 #: builtin/notes.c:601 builtin/notes.c:613 builtin/notes.c:699
 #: builtin/notes.c:776 builtin/notes.c:930 builtin/notes.c:1093
 #: builtin/notes.c:1117 builtin/prune-packed.c:29 builtin/receive-pack.c:2563
-#: builtin/refs.c:52 builtin/repo.c:559 builtin/tag.c:652
+#: builtin/refs.c:52 builtin/repo.c:581 builtin/tag.c:652
 #: t/helper/test-pkt-line.c:89
 msgid "too many arguments"
 msgstr ""
@@ -2628,8 +2628,8 @@ msgstr ""
 #: builtin/cat-file.c:1062 builtin/cat-file.c:1066 builtin/cat-file.c:1073
 #: builtin/clone.c:978 builtin/diagnose.c:32 builtin/for-each-ref.c:37
 #: builtin/init-db.c:111 builtin/ls-files.c:649 builtin/ls-tree.c:369
-#: builtin/refs.c:36 builtin/replace.c:571 builtin/repo.c:186
-#: builtin/repo.c:546 builtin/submodule--helper.c:1842
+#: builtin/refs.c:36 builtin/replace.c:571 builtin/repo.c:202
+#: builtin/repo.c:568 builtin/submodule--helper.c:1842
 #: builtin/submodule--helper.c:2795 builtin/submodule--helper.c:3443
 #: builtin/tag.c:532 builtin/verify-tag.c:34
 msgid "format"
@@ -7938,7 +7938,7 @@ msgstr ""
 msgid "option \"%s\" is ignored for %s"
 msgstr ""
 
-#: builtin/fetch.c:1436 odb.c:994
+#: builtin/fetch.c:1436 odb.c:1003
 #, c-format
 msgid "%s is not a valid object"
 msgstr ""
@@ -8622,7 +8622,7 @@ msgstr ""
 msgid "write dangling objects in .git/lost-found"
 msgstr ""
 
-#: builtin/fsck.c:955 builtin/prune.c:163 builtin/repo.c:553
+#: builtin/fsck.c:955 builtin/prune.c:163 builtin/repo.c:575
 msgid "show progress"
 msgstr ""
 
@@ -12104,7 +12104,7 @@ msgstr ""
 msgid "delta base offset out of bound for %s"
 msgstr ""
 
-#: builtin/pack-objects.c:2561 builtin/repo.c:528
+#: builtin/pack-objects.c:2561 builtin/repo.c:550
 msgid "Counting objects"
 msgstr ""
 
@@ -14868,89 +14868,97 @@ msgstr ""
 msgid "failed to commit ref transaction: %s"
 msgstr ""
 
-#: builtin/repo.c:120
+#: builtin/repo.c:121
 #, c-format
 msgid "key '%s' not found"
 msgstr ""
 
-#: builtin/repo.c:174
+#: builtin/repo.c:163
+msgid "--keys can only be used with --format=default or --format=nul"
+msgstr ""
+
+#: builtin/repo.c:190
 #, c-format
 msgid "invalid format '%s'"
 msgstr ""
 
-#: builtin/repo.c:187 builtin/repo.c:547
+#: builtin/repo.c:203 builtin/repo.c:569
 msgid "output format"
 msgstr ""
 
-#: builtin/repo.c:190 builtin/repo.c:550
+#: builtin/repo.c:206 builtin/repo.c:572
 msgid "synonym for --format=nul"
 msgstr ""
 
-#: builtin/repo.c:193
+#: builtin/repo.c:209
 msgid "print all keys/values"
 msgstr ""
 
-#: builtin/repo.c:194
+#: builtin/repo.c:210
 msgid "show keys"
 msgstr ""
 
-#: builtin/repo.c:204
+#: builtin/repo.c:217
+msgid "--keys cannot be used with a <key> or --all"
+msgstr ""
+
+#: builtin/repo.c:226
 msgid "unsupported output format"
 msgstr ""
 
-#: builtin/repo.c:207
+#: builtin/repo.c:229
 msgid "--all and <key> cannot be used together"
 msgstr ""
 
-#: builtin/repo.c:315
+#: builtin/repo.c:337
 msgid "References"
 msgstr ""
 
-#: builtin/repo.c:316 builtin/repo.c:325
+#: builtin/repo.c:338 builtin/repo.c:347
 msgid "Count"
 msgstr ""
 
-#: builtin/repo.c:317
+#: builtin/repo.c:339
 msgid "Branches"
 msgstr ""
 
-#: builtin/repo.c:318 builtin/repo.c:329
+#: builtin/repo.c:340 builtin/repo.c:351
 msgid "Tags"
 msgstr ""
 
-#: builtin/repo.c:319
+#: builtin/repo.c:341
 msgid "Remotes"
 msgstr ""
 
-#: builtin/repo.c:320
+#: builtin/repo.c:342
 msgid "Others"
 msgstr ""
 
-#: builtin/repo.c:324
+#: builtin/repo.c:346
 msgid "Reachable objects"
 msgstr ""
 
-#: builtin/repo.c:326
+#: builtin/repo.c:348
 msgid "Commits"
 msgstr ""
 
-#: builtin/repo.c:327
+#: builtin/repo.c:349
 msgid "Trees"
 msgstr ""
 
-#: builtin/repo.c:328
+#: builtin/repo.c:350
 msgid "Blobs"
 msgstr ""
 
-#: builtin/repo.c:334
+#: builtin/repo.c:356
 msgid "Repository structure"
 msgstr ""
 
-#: builtin/repo.c:335
+#: builtin/repo.c:357
 msgid "Value"
 msgstr ""
 
-#: builtin/repo.c:473
+#: builtin/repo.c:495
 msgid "Counting references"
 msgstr ""
 
@@ -23014,84 +23022,84 @@ msgstr ""
 msgid "hash mismatch %s"
 msgstr ""
 
-#: odb.c:99
+#: odb.c:102
 #, c-format
 msgid "object directory %s does not exist; check .git/objects/info/alternates"
 msgstr ""
 
-#: odb.c:180
+#: odb.c:183
 #, c-format
 msgid "unable to normalize alternate object path: %s"
 msgstr ""
 
-#: odb.c:257
+#: odb.c:262
 #, c-format
 msgid "%s: ignoring alternate object stores, nesting too deep"
 msgstr ""
 
-#: odb.c:301
+#: odb.c:286
 msgid "unable to fdopen alternates lockfile"
 msgstr ""
 
-#: odb.c:319
+#: odb.c:305
 msgid "unable to read alternates file"
 msgstr ""
 
-#: odb.c:326
+#: odb.c:314
 msgid "unable to move new alternates file into place"
 msgstr ""
 
-#: odb.c:406
+#: odb.c:409
 #, c-format
 msgid "path '%s' does not exist"
 msgstr ""
 
-#: odb.c:427
+#: odb.c:430
 #, c-format
 msgid "reference repository '%s' as a linked checkout is not supported yet."
 msgstr ""
 
-#: odb.c:433
+#: odb.c:436
 #, c-format
 msgid "reference repository '%s' is not a local repository."
 msgstr ""
 
-#: odb.c:439
+#: odb.c:442
 #, c-format
 msgid "reference repository '%s' is shallow"
 msgstr ""
 
-#: odb.c:447
+#: odb.c:450
 #, c-format
 msgid "reference repository '%s' is grafted"
 msgstr ""
 
-#: odb.c:484
+#: odb.c:487
 #, c-format
 msgid "could not find object directory matching %s"
 msgstr ""
 
-#: odb.c:542
+#: odb.c:545
 #, c-format
 msgid "invalid line while parsing alternate refs: %s"
 msgstr ""
 
-#: odb.c:744
+#: odb.c:753
 #, c-format
 msgid "replacement %s not found for %s"
 msgstr ""
 
-#: odb.c:747
+#: odb.c:756
 #, c-format
 msgid "packed object %s (stored in %s) is corrupt"
 msgstr ""
 
-#: odb.c:769 odb.c:823
+#: odb.c:778 odb.c:832
 #, c-format
 msgid "missing mapping of %s to %s"
 msgstr ""
 
-#: odb.c:996
+#: odb.c:1005
 #, c-format
 msgid "%s is not a valid '%s' object"
 msgstr ""
@@ -25284,16 +25292,16 @@ msgstr ""
 msgid "pack %s too large to roll up"
 msgstr ""
 
-#: repack-midx.c:51
+#: repack-midx.c:52
 #, c-format
 msgid "could not open tempfile %s for writing"
 msgstr ""
 
-#: repack-midx.c:72
+#: repack-midx.c:73
 msgid "could not close refs snapshot tempfile"
 msgstr ""
 
-#: repack-midx.c:278
+#: repack-midx.c:279
 #, c-format
 msgid "could not remove stale bitmap: %s"
 msgstr ""
