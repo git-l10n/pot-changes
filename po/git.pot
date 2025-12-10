@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2025-12-09 23:57+0000\n"
+"POT-Creation-Date: 2025-12-10 13:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -828,7 +828,7 @@ msgstr ""
 #: builtin/notes.c:601 builtin/notes.c:613 builtin/notes.c:699
 #: builtin/notes.c:776 builtin/notes.c:930 builtin/notes.c:1093
 #: builtin/notes.c:1117 builtin/prune-packed.c:29 builtin/receive-pack.c:2563
-#: builtin/refs.c:52 builtin/repo.c:581 builtin/tag.c:652
+#: builtin/refs.c:52 builtin/repo.c:745 builtin/tag.c:652
 #: t/helper/test-pkt-line.c:89
 msgid "too many arguments"
 msgstr ""
@@ -2628,8 +2628,8 @@ msgstr ""
 #: builtin/cat-file.c:1062 builtin/cat-file.c:1066 builtin/cat-file.c:1073
 #: builtin/clone.c:978 builtin/diagnose.c:32 builtin/for-each-ref.c:37
 #: builtin/init-db.c:111 builtin/ls-files.c:649 builtin/ls-tree.c:369
-#: builtin/refs.c:36 builtin/replace.c:571 builtin/repo.c:202
-#: builtin/repo.c:568 builtin/submodule--helper.c:1842
+#: builtin/refs.c:36 builtin/replace.c:571 builtin/repo.c:204
+#: builtin/repo.c:732 builtin/submodule--helper.c:1842
 #: builtin/submodule--helper.c:2795 builtin/submodule--helper.c:3443
 #: builtin/tag.c:532 builtin/verify-tag.c:34
 msgid "format"
@@ -8622,7 +8622,7 @@ msgstr ""
 msgid "write dangling objects in .git/lost-found"
 msgstr ""
 
-#: builtin/fsck.c:955 builtin/prune.c:163 builtin/repo.c:575
+#: builtin/fsck.c:955 builtin/prune.c:163 builtin/repo.c:739
 msgid "show progress"
 msgstr ""
 
@@ -12104,7 +12104,7 @@ msgstr ""
 msgid "delta base offset out of bound for %s"
 msgstr ""
 
-#: builtin/pack-objects.c:2561 builtin/repo.c:550
+#: builtin/pack-objects.c:2561 builtin/repo.c:714
 msgid "Counting objects"
 msgstr ""
 
@@ -14868,98 +14868,111 @@ msgstr ""
 msgid "failed to commit ref transaction: %s"
 msgstr ""
 
-#: builtin/repo.c:121
+#: builtin/repo.c:123
 #, c-format
 msgid "key '%s' not found"
 msgstr ""
 
-#: builtin/repo.c:163
+#: builtin/repo.c:165
 msgid "--keys can only be used with --format=default or --format=nul"
 msgstr ""
 
-#: builtin/repo.c:190
+#: builtin/repo.c:192
 #, c-format
 msgid "invalid format '%s'"
 msgstr ""
 
-#: builtin/repo.c:203 builtin/repo.c:569
+#: builtin/repo.c:205 builtin/repo.c:733
 msgid "output format"
 msgstr ""
 
-#: builtin/repo.c:206 builtin/repo.c:572
+#: builtin/repo.c:208 builtin/repo.c:736
 msgid "synonym for --format=nul"
 msgstr ""
 
-#: builtin/repo.c:209
+#: builtin/repo.c:211
 msgid "print all keys/values"
 msgstr ""
 
-#: builtin/repo.c:210
+#: builtin/repo.c:212
 msgid "show keys"
 msgstr ""
 
-#: builtin/repo.c:217
+#: builtin/repo.c:219
 msgid "--keys cannot be used with a <key> or --all"
 msgstr ""
 
-#: builtin/repo.c:226
+#: builtin/repo.c:228
 msgid "unsupported output format"
 msgstr ""
 
-#: builtin/repo.c:229
+#: builtin/repo.c:231
 msgid "--all and <key> cannot be used together"
 msgstr ""
 
-#: builtin/repo.c:337
+#: builtin/repo.c:417
 msgid "References"
 msgstr ""
 
-#: builtin/repo.c:338 builtin/repo.c:347
+#: builtin/repo.c:418 builtin/repo.c:427
 msgid "Count"
 msgstr ""
 
-#: builtin/repo.c:339
+#: builtin/repo.c:419
 msgid "Branches"
 msgstr ""
 
-#: builtin/repo.c:340 builtin/repo.c:351
+#: builtin/repo.c:420 builtin/repo.c:435 builtin/repo.c:447 builtin/repo.c:459
 msgid "Tags"
 msgstr ""
 
-#: builtin/repo.c:341
+#: builtin/repo.c:421
 msgid "Remotes"
 msgstr ""
 
-#: builtin/repo.c:342
+#: builtin/repo.c:422
 msgid "Others"
 msgstr ""
 
-#: builtin/repo.c:346
+#: builtin/repo.c:426
 msgid "Reachable objects"
 msgstr ""
 
-#: builtin/repo.c:348
+#: builtin/repo.c:429 builtin/repo.c:441 builtin/repo.c:453
 msgid "Commits"
 msgstr ""
 
-#: builtin/repo.c:349
+#: builtin/repo.c:431 builtin/repo.c:443 builtin/repo.c:455
 msgid "Trees"
 msgstr ""
 
-#: builtin/repo.c:350
+#: builtin/repo.c:433 builtin/repo.c:445 builtin/repo.c:457
 msgid "Blobs"
 msgstr ""
 
-#: builtin/repo.c:356
+#: builtin/repo.c:439
+msgid "Inflated size"
+msgstr ""
+
+#: builtin/repo.c:451
+msgid "Disk size"
+msgstr ""
+
+#: builtin/repo.c:464
 msgid "Repository structure"
 msgstr ""
 
-#: builtin/repo.c:357
+#: builtin/repo.c:465
 msgid "Value"
 msgstr ""
 
-#: builtin/repo.c:495
+#: builtin/repo.c:630
 msgid "Counting references"
+msgstr ""
+
+#: builtin/repo.c:661 object-file.c:1171
+#, c-format
+msgid "cannot read object for %s"
 msgstr ""
 
 #: builtin/rerere.c:15
@@ -22766,11 +22779,6 @@ msgstr ""
 #: object-file.c:1093
 #, c-format
 msgid "unable to create directory %s"
-msgstr ""
-
-#: object-file.c:1171
-#, c-format
-msgid "cannot read object for %s"
 msgstr ""
 
 #: object-file.c:1174
