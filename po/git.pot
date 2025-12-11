@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2025-12-10 13:28+0000\n"
+"POT-Creation-Date: 2025-12-11 09:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -7311,7 +7311,7 @@ msgid "not updating %s (new tip %s does not contain %s)"
 msgstr ""
 
 #: builtin/fast-import.c:1732 builtin/sparse-checkout.c:499 commit-graph.c:2069
-#: midx-write.c:1200 sequencer.c:4440
+#: midx-write.c:1260 sequencer.c:4440
 #, c-format
 msgid "unable to create leading directories of %s"
 msgstr ""
@@ -19039,7 +19039,7 @@ msgstr ""
 msgid "unable to create temporary graph layer"
 msgstr ""
 
-#: commit-graph.c:2088 midx-write.c:1496
+#: commit-graph.c:2088 midx-write.c:1567
 #, c-format
 msgid "unable to adjust shared permissions for '%s'"
 msgstr ""
@@ -22335,97 +22335,97 @@ msgstr ""
 msgid "failed to clear multi-pack-index at %s"
 msgstr ""
 
-#: midx-write.c:1206
+#: midx-write.c:1266
 msgid "ignoring existing multi-pack-index; checksum mismatch"
 msgstr ""
 
-#: midx-write.c:1240
+#: midx-write.c:1300
 #, c-format
 msgid "could not load reverse index for MIDX %s"
 msgstr ""
 
-#: midx-write.c:1256
+#: midx-write.c:1316
 msgid "Adding packfiles to multi-pack-index"
 msgstr ""
 
-#: midx-write.c:1316
+#: midx-write.c:1387
 #, c-format
 msgid "unknown preferred pack: '%s'"
 msgstr ""
 
-#: midx-write.c:1370
+#: midx-write.c:1441
 #, c-format
 msgid "failed to open preferred pack %s"
 msgstr ""
 
-#: midx-write.c:1374
+#: midx-write.c:1445
 #, c-format
 msgid "cannot select preferred pack %s with no objects"
 msgstr ""
 
-#: midx-write.c:1408
+#: midx-write.c:1479
 #, c-format
 msgid "did not see pack-file %s to drop"
 msgstr ""
 
-#: midx-write.c:1462
+#: midx-write.c:1533
 #, c-format
 msgid "preferred pack '%s' is expired"
 msgstr ""
 
-#: midx-write.c:1472
+#: midx-write.c:1543
 msgid "no pack files to index."
 msgstr ""
 
-#: midx-write.c:1478
+#: midx-write.c:1549
 msgid "refusing to write multi-pack .bitmap without any objects"
 msgstr ""
 
-#: midx-write.c:1491
+#: midx-write.c:1562
 msgid "unable to create temporary MIDX layer"
 msgstr ""
 
-#: midx-write.c:1574
+#: midx-write.c:1645
 msgid "could not write multi-pack bitmap"
 msgstr ""
 
-#: midx-write.c:1589
+#: midx-write.c:1660
 msgid "too many multi-pack-indexes"
 msgstr ""
 
-#: midx-write.c:1616
+#: midx-write.c:1687
 msgid "unable to open multi-pack-index chain file"
 msgstr ""
 
-#: midx-write.c:1627
+#: midx-write.c:1698
 msgid "unable to rename new multi-pack-index layer"
 msgstr ""
 
-#: midx-write.c:1684
+#: midx-write.c:1755
 msgid "could not write multi-pack-index"
 msgstr ""
 
-#: midx-write.c:1771
+#: midx-write.c:1843
 msgid "cannot expire packs from an incremental multi-pack-index"
 msgstr ""
 
-#: midx-write.c:1778
+#: midx-write.c:1850
 msgid "Counting referenced objects"
 msgstr ""
 
-#: midx-write.c:1790
+#: midx-write.c:1862
 msgid "Finding and deleting unreferenced packfiles"
 msgstr ""
 
-#: midx-write.c:1966
+#: midx-write.c:2038
 msgid "cannot repack an incremental multi-pack-index"
 msgstr ""
 
-#: midx-write.c:2003
+#: midx-write.c:2075
 msgid "could not start pack-objects"
 msgstr ""
 
-#: midx-write.c:2023
+#: midx-write.c:2095
 msgid "could not finish pack-objects"
 msgstr ""
 
@@ -22635,28 +22635,28 @@ msgstr ""
 msgid "Bad %s value: '%s'"
 msgstr ""
 
-#: object-file-convert.c:88
+#: object-file-convert.c:80
 msgid "failed to decode tree entry"
 msgstr ""
 
-#: object-file-convert.c:90
+#: object-file-convert.c:82
 #, c-format
 msgid "failed to map tree entry for %s"
 msgstr ""
 
-#: object-file-convert.c:169 object-file-convert.c:176
-#: object-file-convert.c:188 object-file-convert.c:208
-#: object-file-convert.c:244
+#: object-file-convert.c:161 object-file-convert.c:168
+#: object-file-convert.c:180 object-file-convert.c:200
+#: object-file-convert.c:236
 #, c-format
 msgid "bad %s in commit"
 msgstr ""
 
-#: object-file-convert.c:179 object-file-convert.c:191
+#: object-file-convert.c:171 object-file-convert.c:183
 #, c-format
 msgid "unable to map %s %s in commit object"
 msgstr ""
 
-#: object-file-convert.c:289
+#: object-file-convert.c:281
 #, c-format
 msgid "Failed to convert object from %s to %s"
 msgstr ""
@@ -25300,16 +25300,16 @@ msgstr ""
 msgid "pack %s too large to roll up"
 msgstr ""
 
-#: repack-midx.c:52
+#: repack-midx.c:51
 #, c-format
 msgid "could not open tempfile %s for writing"
 msgstr ""
 
-#: repack-midx.c:73
+#: repack-midx.c:72
 msgid "could not close refs snapshot tempfile"
 msgstr ""
 
-#: repack-midx.c:279
+#: repack-midx.c:278
 #, c-format
 msgid "could not remove stale bitmap: %s"
 msgstr ""
@@ -25363,10 +25363,6 @@ msgstr ""
 #: replace-object.c:82
 #, c-format
 msgid "replace depth too high for object %s"
-msgstr ""
-
-#: repository.c:197
-msgid "compatibility hash algorithm support requires Rust"
 msgstr ""
 
 #: rerere.c:216 rerere.c:225 rerere.c:228
