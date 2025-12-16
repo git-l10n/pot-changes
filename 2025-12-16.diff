@@ -1,0 +1,283 @@
+
+
+#################### Tue, 16 Dec 2025 19:57:36 +0000 ####################
+
+--- po/git.pot.old	2025-12-16 19:57:36.900715311 +0000
++++ po/git.pot.new	2025-12-16 19:57:36.982715601 +0000
+@@ -688,6 +688,13 @@
+ "You can run \"git stash pop\" or \"git stash drop\" at any time.\n"
+ msgstr ""
+ 
++#. TRANSLATORS: The first argument is the number string. The second
++#. argument is the unit prefix string (i.e. "12.34 MiB/s").
++#.
++#, c-format
++msgid "%s %s"
++msgstr ""
++
+ #, c-format
+ msgid "%s %s is not a commit!"
+ msgstr ""
+@@ -1182,48 +1189,8 @@
+ msgid "%sinfo/refs not valid: is this a git repository?"
+ msgstr ""
+ 
+-#. TRANSLATORS: IEC 80000-13:2008 byte
+-#, c-format
+-msgid "%u byte"
+-msgid_plural "%u bytes"
+-msgstr[0] ""
+-msgstr[1] ""
+-
+-#. TRANSLATORS: IEC 80000-13:2008 byte/second
+-#, c-format
+-msgid "%u byte/s"
+-msgid_plural "%u bytes/s"
+-msgstr[0] ""
+-msgstr[1] ""
+-
+-#. TRANSLATORS: IEC 80000-13:2008 gibibyte
+-#, c-format
+-msgid "%u.%2.2u GiB"
+-msgstr ""
+-
+-#. TRANSLATORS: IEC 80000-13:2008 gibibyte/second
+-#, c-format
+-msgid "%u.%2.2u GiB/s"
+-msgstr ""
+-
+-#. TRANSLATORS: IEC 80000-13:2008 kibibyte
+-#, c-format
+-msgid "%u.%2.2u KiB"
+-msgstr ""
+-
+-#. TRANSLATORS: IEC 80000-13:2008 kibibyte/second
+-#, c-format
+-msgid "%u.%2.2u KiB/s"
+-msgstr ""
+-
+-#. TRANSLATORS: IEC 80000-13:2008 mebibyte
+ #, c-format
+-msgid "%u.%2.2u MiB"
+-msgstr ""
+-
+-#. TRANSLATORS: IEC 80000-13:2008 mebibyte/second
+-#, c-format
+-msgid "%u.%2.2u MiB/s"
++msgid "%u.%2.2u"
+ msgstr ""
+ 
+ #, c-format
+@@ -2662,6 +2629,13 @@
+ msgid "Available strategies are:"
+ msgstr ""
+ 
++msgid "B"
++msgstr ""
++
++#. TRANSLATORS: IEC 80000-13:2008 byte/second and byte
++msgid "B/s"
++msgstr ""
++
+ #, c-format
+ msgid "BHFI changed '%ls'"
+ msgstr ""
+@@ -2884,10 +2858,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "Cannot construct a valid gitdir path for submodule '%s': please set a unique git config for 'submodule.%s.gitdir'."
+-msgstr ""
+-
+-#, c-format
+ msgid "Cannot copy notes. Found existing notes for object %s. Use '-f' to overwrite existing notes"
+ msgstr ""
+ 
+@@ -3972,6 +3942,10 @@
+ msgid "From %.*s\n"
+ msgstr ""
+ 
++#. TRANSLATORS: SI decimal prefix symbol for 10^9
++msgid "G"
++msgstr ""
++
+ #, c-format
+ msgid ""
+ "GIT_INDEX_VERSION set, but the value is invalid.\n"
+@@ -4014,6 +3988,13 @@
+ msgid "GetOverlappedResult failed on '%s' [GLE %ld]"
+ msgstr ""
+ 
++msgid "GiB"
++msgstr ""
++
++#. TRANSLATORS: IEC 80000-13:2008 gibibyte/second and gibibyte
++msgid "GiB/s"
++msgstr ""
++
+ msgid "Git HTTP-based protocols"
+ msgstr ""
+ 
+@@ -4337,10 +4318,6 @@
+ msgid "Invalid %s: '%s'"
+ msgstr ""
+ 
+-#, c-format
+-msgid "Invalid 'submodule.%s.gitdir' config: '%s' please check if it is unique or conflicts with another module"
+-msgstr ""
+-
+ msgid "Invalid back reference"
+ msgstr ""
+ 
+@@ -4432,6 +4409,13 @@
+ msgid "Join two or more development histories together"
+ msgstr ""
+ 
++msgid "KiB"
++msgstr ""
++
++#. TRANSLATORS: IEC 80000-13:2008 kibibyte/second and kibibyte
++msgid "KiB/s"
++msgstr ""
++
+ #, c-format
+ msgid "LF would be replaced by CRLF in %s"
+ msgstr ""
+@@ -4503,6 +4487,10 @@
+ msgid "Low-level access to refs"
+ msgstr ""
+ 
++#. TRANSLATORS: SI decimal prefix symbol for 10^6
++msgid "M"
++msgstr ""
++
+ msgid "MIDX does not contain the BTMP chunk"
+ msgstr ""
+ 
+@@ -4583,6 +4571,13 @@
+ msgid "Messaging"
+ msgstr ""
+ 
++msgid "MiB"
++msgstr ""
++
++#. TRANSLATORS: IEC 80000-13:2008 mebibyte/second and mebibyte
++msgid "MiB/s"
++msgstr ""
++
+ #, c-format
+ msgid ""
+ "Migrating git directory of '%s%s' from\n"
+@@ -7601,9 +7596,6 @@
+ msgid "additionally, your index contains uncommitted changes."
+ msgstr ""
+ 
+-msgid "advance all branches contained in revision-range"
+-msgstr ""
+-
+ #, c-format
+ msgid "affected file '%s' is beyond a symbolic link"
+ msgstr ""
+@@ -8424,8 +8416,17 @@
+ msgid "bypass pre-push hook"
+ msgstr ""
+ 
++#. TRANSLATORS: IEC 80000-13:2008 byte
+ msgid "byte"
+-msgstr ""
++msgid_plural "bytes"
++msgstr[0] ""
++msgstr[1] ""
++
++#. TRANSLATORS: IEC 80000-13:2008 byte/second
++msgid "byte/s"
++msgid_plural "bytes/s"
++msgstr[0] ""
++msgstr[1] ""
+ 
+ msgid "bytes"
+ msgstr ""
+@@ -9510,9 +9511,6 @@
+ msgid "compare the commit in the index with that in the submodule HEAD"
+ msgstr ""
+ 
+-msgid "compatibility hash algorithm support requires Rust"
+-msgstr ""
+-
+ msgid "compiler info: "
+ msgstr ""
+ 
+@@ -9908,6 +9906,9 @@
+ msgid "could not edit '%s'"
+ msgstr ""
+ 
++msgid "could not enable submodulePathConfig extension. It is required for migration to work. Please enable it in the root repo: git config extensions.submodulePathConfig true"
++msgstr ""
++
+ #, c-format
+ msgid "could not even attempt to merge '%.*s'"
+ msgstr ""
+@@ -10455,6 +10456,9 @@
+ msgid "could not set '%s' to '%s'"
+ msgstr ""
+ 
++msgid "could not set core.repositoryformatversion to 1. Please enable it for migration to work, for example: git config core.repositoryformatversion 1"
++msgstr ""
++
+ msgid "could not set recommended config"
+ msgstr ""
+ 
+@@ -12350,6 +12354,10 @@
+ msgid "failed to run systemctl"
+ msgstr ""
+ 
++#, c-format
++msgid "failed to set a valid default config for 'submodule.%s.gitdir'. Please ensure it is set, for example by running something like: 'git config submodule.%s.gitdir .git/modules/%s'"
++msgstr ""
++
+ msgid "failed to set extensions.worktreeConfig setting"
+ msgstr ""
+ 
+@@ -14672,6 +14680,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "invalid 'submodule.%s.gitdir' config: '%s' please check if it is unique or conflicts with another module"
++msgstr ""
++
++#, c-format
+ msgid "invalid --%s value '%s'"
+ msgstr ""
+ 
+@@ -15162,6 +15174,10 @@
+ msgid "just skip files which cannot be added because of errors"
+ msgstr ""
+ 
++#. TRANSLATORS: SI decimal prefix symbol for 10^3
++msgid "k"
++msgstr ""
++
+ msgid "keep"
+ msgstr ""
+ 
+@@ -20016,6 +20032,10 @@
+ msgid "the '--set-upstream' option is no longer supported. Please use '--track' or '--set-upstream-to' instead"
+ msgstr ""
+ 
++#, c-format
++msgid "the 'submodule.%s.gitdir' config does not exist for module '%s'. Please ensure it is set, for example by running something like: 'git config submodule.%s.gitdir .git/modules/%s'"
++msgstr ""
++
+ msgid ""
+ "the -a, and -r, options to 'git branch' do not take a branch name.\n"
+ "Did you mean to use: -a|-r --list <pattern>?"
+@@ -21609,6 +21629,9 @@
+ msgid "update <refname> not the one it points to"
+ msgstr ""
+ 
++msgid "update all branches that point at commits in <revision-range>"
++msgstr ""
++
+ msgid "update branches that point to commits that are being rebased"
+ msgstr ""
+ 
