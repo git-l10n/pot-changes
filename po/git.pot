@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2026-01-05 14:02+0000\n"
+"POT-Creation-Date: 2026-01-06 09:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -3775,7 +3775,7 @@ msgstr ""
 #: builtin/bugreport.c:112 builtin/commit.c:1570 builtin/commit.c:1579
 #: builtin/commit.c:1769 builtin/fast-export.c:1329 builtin/fast-export.c:1332
 #: builtin/fast-export.c:1335 builtin/fast-export.c:1338
-#: builtin/pack-objects.c:4928 builtin/rebase.c:1260 builtin/replay.c:278
+#: builtin/pack-objects.c:4928 builtin/rebase.c:1260 builtin/replay.c:241
 #: parse-options.h:622
 msgid "mode"
 msgstr ""
@@ -4689,7 +4689,7 @@ msgstr ""
 
 #: builtin/checkout.c:1995 builtin/checkout.c:1997 builtin/checkout.c:2045
 #: builtin/checkout.c:2047 builtin/clone.c:960 builtin/remote.c:195
-#: builtin/remote.c:197 builtin/replay.c:270 builtin/submodule--helper.c:3243
+#: builtin/remote.c:197 builtin/replay.c:233 builtin/submodule--helper.c:3243
 #: builtin/submodule--helper.c:3611 builtin/worktree.c:790
 #: builtin/worktree.c:792
 msgid "branch"
@@ -6770,7 +6770,7 @@ msgid "git diff-pairs -z [<diff-options>]"
 msgstr ""
 
 #: builtin/diff-pairs.c:69 builtin/log.c:315 builtin/log.c:2153
-#: builtin/replay.c:317 builtin/shortlog.c:456 bundle.c:514
+#: builtin/replay.c:280 builtin/shortlog.c:456 bundle.c:514
 #, c-format
 msgid "unrecognized argument: %s"
 msgstr ""
@@ -8182,7 +8182,7 @@ msgid "specify fetch refmap"
 msgstr ""
 
 #: builtin/fetch.c:2424 builtin/pull.c:999 builtin/rebase.c:1153
-#: builtin/replay.c:273
+#: builtin/replay.c:236
 msgid "revision"
 msgstr ""
 
@@ -14798,106 +14798,91 @@ msgstr ""
 msgid "only one pattern can be given with -l"
 msgstr ""
 
-#: builtin/replay.c:35
+#: builtin/replay.c:37
 #, c-format
-msgid "'%s' is not a valid commit-ish"
+msgid "'%s' is not a valid commit-ish for %s"
 msgstr ""
 
-#: builtin/replay.c:116
+#: builtin/replay.c:118
 msgid "need some commits to replay"
 msgstr ""
 
-#: builtin/replay.c:124 builtin/replay.c:159
+#: builtin/replay.c:126
 msgid "all positive revisions given must be references"
 msgstr ""
 
-#: builtin/replay.c:135
+#: builtin/replay.c:142
 msgid "argument to --advance must be a reference"
 msgstr ""
 
-#: builtin/replay.c:138
+#: builtin/replay.c:146
 msgid ""
 "cannot advance target with multiple sources because ordering would be ill-"
 "defined"
 msgstr ""
 
-#: builtin/replay.c:152 builtin/replay.c:161
-msgid ""
-"cannot implicitly determine whether this is an --advance or --onto operation"
-msgstr ""
-
-#: builtin/replay.c:163
-msgid ""
-"cannot advance target with multiple source branches because ordering would "
-"be ill-defined"
-msgstr ""
-
-#: builtin/replay.c:175
-msgid "cannot implicitly determine correct base for --onto"
-msgstr ""
-
-#: builtin/replay.c:195
+#: builtin/replay.c:158
 #, c-format
 msgid "invalid %s value: '%s'"
 msgstr ""
 
-#: builtin/replay.c:263
+#: builtin/replay.c:226
 msgid ""
 "(EXPERIMENTAL!) git replay ([--contained] --onto <newbase> | --advance "
 "<branch>) [--ref-action[=<mode>]] <revision-range>"
 msgstr ""
 
-#: builtin/replay.c:271
+#: builtin/replay.c:234
 msgid "make replay advance given branch"
 msgstr ""
 
-#: builtin/replay.c:274
+#: builtin/replay.c:237
 msgid "replay onto given commit"
 msgstr ""
 
-#: builtin/replay.c:276
+#: builtin/replay.c:239
 msgid "update all branches that point at commits in <revision-range>"
 msgstr ""
 
-#: builtin/replay.c:279
+#: builtin/replay.c:242
 msgid "control ref update behavior (update|print)"
 msgstr ""
 
-#: builtin/replay.c:287
+#: builtin/replay.c:250
 msgid "option --onto or --advance is mandatory"
 msgstr ""
 
-#: builtin/replay.c:326 builtin/replay.c:332 builtin/replay.c:338
-#: builtin/replay.c:344
+#: builtin/replay.c:289 builtin/replay.c:295 builtin/replay.c:301
+#: builtin/replay.c:307
 #, c-format
 msgid ""
 "some rev walking options will be overridden as '%s' bit in 'struct rev_info' "
 "will be forced"
 msgstr ""
 
-#: builtin/replay.c:368
+#: builtin/replay.c:331
 #, c-format
 msgid "failed to begin ref transaction: %s"
 msgstr ""
 
-#: builtin/replay.c:375
+#: builtin/replay.c:338
 msgid "error preparing revisions"
 msgstr ""
 
-#: builtin/replay.c:390
-msgid "replaying down to root commit is not supported yet!"
+#: builtin/replay.c:353
+msgid "replaying down from root commit is not supported yet!"
 msgstr ""
 
-#: builtin/replay.c:392
+#: builtin/replay.c:355
 msgid "replaying merge commits is not supported yet!"
 msgstr ""
 
-#: builtin/replay.c:422 builtin/replay.c:438
+#: builtin/replay.c:385 builtin/replay.c:401
 #, c-format
 msgid "failed to update ref '%s': %s"
 msgstr ""
 
-#: builtin/replay.c:447
+#: builtin/replay.c:410
 #, c-format
 msgid "failed to commit ref transaction: %s"
 msgstr ""
@@ -18617,7 +18602,7 @@ msgid "Reuse recorded resolution of conflicted merges"
 msgstr ""
 
 #: command-list.h:169
-msgid "Set HEAD or the index to a known state"
+msgid "Set `HEAD` or the index to a known state"
 msgstr ""
 
 #: command-list.h:170
