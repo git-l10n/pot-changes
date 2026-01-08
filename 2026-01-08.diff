@@ -1,0 +1,289 @@
+
+
+#################### Thu, 08 Jan 2026 07:13:28 +0000 ####################
+
+--- po/git.pot.old	2026-01-08 07:13:28.134898603 +0000
++++ po/git.pot.new	2026-01-08 07:13:28.215898815 +0000
+@@ -812,6 +812,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "%s expects one of 'branches', 'head' or 'print'"
++msgstr ""
++
++#, c-format
+ msgid "%s failed"
+ msgstr ""
+ 
+@@ -3602,7 +3606,7 @@
+ msgid "EXPERIMENTAL: Replay commits on a new base, works with bare repos too"
+ msgstr ""
+ 
+-msgid "EXPERIMENTAL: Rewrite history of the current branch"
++msgid "EXPERIMENTAL: Rewrite history"
+ msgstr ""
+ 
+ msgid "EXPERIMENTAL: Show when files were last modified"
+@@ -5475,9 +5479,6 @@
+ msgid "Review diff"
+ msgstr ""
+ 
+-msgid "Revision does not refer to a commit"
+-msgstr ""
+-
+ #, c-format
+ msgid "Rewinding the tree to pristine...\n"
+ msgstr ""
+@@ -5736,34 +5737,18 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "Stage addition [y,n,q,a,d%s,?]? "
+-msgstr ""
+-
+-#, c-format
+ msgid "Stage addition%s[y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+ #, c-format
+-msgid "Stage deletion [y,n,q,a,d%s,?]? "
+-msgstr ""
+-
+-#, c-format
+ msgid "Stage deletion%s[y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+ #, c-format
+-msgid "Stage mode change [y,n,q,a,d%s,?]? "
+-msgstr ""
+-
+-#, c-format
+ msgid "Stage mode change%s[y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+ #, c-format
+-msgid "Stage this hunk [y,n,q,a,d%s,?]? "
+-msgstr ""
+-
+-#, c-format
+ msgid "Stage this hunk%s[y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+@@ -8695,6 +8680,9 @@
+ msgid "cannot delete packs in a precious-objects repo"
+ msgstr ""
+ 
++msgid "cannot determine descendance"
++msgstr ""
++
+ msgid "cannot do a partial commit during a cherry-pick."
+ msgstr ""
+ 
+@@ -8823,6 +8811,9 @@
+ msgid "cannot lock ref '%s': unable to resolve reference '%s'"
+ msgstr ""
+ 
++msgid "cannot look up HEAD"
++msgstr ""
++
+ #, c-format
+ msgid "cannot map object %s to %s"
+ msgstr ""
+@@ -9002,9 +8993,6 @@
+ msgid "cannot readlink '%s'"
+ msgstr ""
+ 
+-msgid "cannot rearrange commit history with merges"
+-msgstr ""
+-
+ msgid "cannot rebase with locally recorded submodule modifications"
+ msgstr ""
+ 
+@@ -9391,9 +9379,6 @@
+ msgid "command"
+ msgstr ""
+ 
+-msgid "command expects a revision"
+-msgstr ""
+-
+ msgid "command expects a single revision"
+ msgstr ""
+ 
+@@ -9449,9 +9434,6 @@
+ msgid "commit message"
+ msgstr ""
+ 
+-msgid "commit must be reachable from current HEAD commit"
+-msgstr ""
+-
+ msgid "commit only specified files"
+ msgstr ""
+ 
+@@ -9633,6 +9615,9 @@
+ msgid "control recursive pushing of submodules"
+ msgstr ""
+ 
++msgid "control ref update behavior (branches|head|print)"
++msgstr ""
++
+ msgid "control ref update behavior (update|print)"
+ msgstr ""
+ 
+@@ -10454,9 +10439,6 @@
+ msgid "could not resolve HEAD ref inside the submodule '%s'"
+ msgstr ""
+ 
+-msgid "could not resolve HEAD to a commit"
+-msgstr ""
+-
+ #, c-format
+ msgid "could not resolve ref '%s'"
+ msgstr ""
+@@ -10500,7 +10482,7 @@
+ msgid "could not set '%s' to '%s'"
+ msgstr ""
+ 
+-msgid "could not set core.repositoryformatversion to 1. Please enable it for migration to work, for example: git config core.repositoryformatversion 1"
++msgid "could not set core.repositoryformatversion to 1. Please set it for migration to work, for example: git config core.repositoryformatversion 1"
+ msgstr ""
+ 
+ msgid "could not set recommended config"
+@@ -11510,6 +11492,9 @@
+ msgid "enable/disable untracked cache"
+ msgstr ""
+ 
++msgid "enabling extensions.submodulePathConfig might fix the following error, if it's not already enabled."
++msgstr ""
++
+ msgid "encoding"
+ msgstr ""
+ 
+@@ -11929,16 +11914,13 @@
+ msgid "failed reading ssh signing data buffer from '%s'"
+ msgstr ""
+ 
+-msgid "failed reading temporary index"
++msgid "failed replaying descendants"
+ msgstr ""
+ 
+ #, c-format
+ msgid "failed seeking to start of '%s'"
+ msgstr ""
+ 
+-msgid "failed split tree"
+-msgstr ""
+-
+ #, c-format
+ msgid "failed to add packfile '%s'"
+ msgstr ""
+@@ -12209,10 +12191,6 @@
+ msgid "failed to locate object %d in packfile"
+ msgstr ""
+ 
+-#, c-format
+-msgid "failed to look up commit: %s"
+-msgstr ""
+-
+ msgid "failed to look up reference"
+ msgstr ""
+ 
+@@ -12551,9 +12529,6 @@
+ msgid "failed writing reworded commit"
+ msgstr ""
+ 
+-msgid "failed writing split-out commit"
+-msgstr ""
+-
+ #, c-format
+ msgid "failed writing ssh signing key buffer to '%s'"
+ msgstr ""
+@@ -13398,10 +13373,7 @@
+ msgid "git help [[-i|--info] [-m|--man] [-w|--web]] [<command>|<doc>]"
+ msgstr ""
+ 
+-msgid "git history reword <commit>"
+-msgstr ""
+-
+-msgid "git history split <commit> [--] [<pathspec>...]"
++msgid "git history reword <commit> [--ref-action=(branches|head|print)]"
+ msgstr ""
+ 
+ msgid "git hook run [--ignore-missing] [--to-stdin=<path>] <hook-name> [-- <hook-args>]"
+@@ -14466,10 +14438,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "ignoring unknown core.lockfilePid component '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "ignoring unmerged: %s"
+ msgstr ""
+ 
+@@ -14743,10 +14711,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "invalid 'submodule.%s.gitdir' config: '%s' please check if it is unique or conflicts with another module"
+-msgstr ""
+-
+-#, c-format
+ msgid "invalid --%s value '%s'"
+ msgstr ""
+ 
+@@ -14995,10 +14959,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "invalid object ID: %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "invalid object name '%.*s'."
+ msgstr ""
+ 
+@@ -18278,6 +18238,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "refusing to create/use '%s' in another submodule's  git dir."
++msgstr ""
++
++#, c-format
+ msgid "refusing to create/use '%s' in another submodule's git dir. Enabling extensions.submodulePathConfig should fix this."
+ msgstr ""
+ 
+@@ -18797,6 +18761,9 @@
+ msgid "rewrite the old SHA1 with the new SHA1 of the entry that now precedes it"
+ msgstr ""
+ 
++msgid "rewritten commit must be an ancestor of HEAD when using --ref-action=head"
++msgstr ""
++
+ msgid "rfc"
+ msgstr ""
+ 
+@@ -19661,12 +19628,6 @@
+ msgid "spend extra cycles to find a better match"
+ msgstr ""
+ 
+-msgid "split commit is empty"
+-msgstr ""
+-
+-msgid "split commit tree matches original commit"
+-msgstr ""
+-
+ #, c-format
+ msgid "splitIndex.maxPercentChange value '%d' should be between 0 and 100"
+ msgstr ""
+@@ -20901,6 +20862,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unable to parse parent commit %s"
++msgstr ""
++
++#, c-format
+ msgid "unable to parse remote unpack status: %s"
+ msgstr ""
+ 
