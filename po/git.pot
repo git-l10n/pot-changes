@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2026-01-12 19:10+0000\n"
+"POT-Creation-Date: 2026-01-12 21:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -10056,34 +10056,38 @@ msgstr ""
 msgid "last-modified can only operate on one tree at a time"
 msgstr ""
 
-#: builtin/last-modified.c:500
+#: builtin/last-modified.c:161
+msgid "revision argument is not a commit-ish"
+msgstr ""
+
+#: builtin/last-modified.c:507
 #, c-format
 msgid "unknown last-modified argument: %s"
 msgstr ""
 
-#: builtin/last-modified.c:507
+#: builtin/last-modified.c:514
 msgid "unable to setup last-modified"
 msgstr ""
 
-#: builtin/last-modified.c:526
+#: builtin/last-modified.c:533
 msgid ""
 "git last-modified [--recursive] [--show-trees] [--max-depth=<depth>] [-z]\n"
 "    [<revision-range>] [[--] <path>...]"
 msgstr ""
 
-#: builtin/last-modified.c:533 builtin/ls-tree.c:351
+#: builtin/last-modified.c:540 builtin/ls-tree.c:351
 msgid "recurse into subtrees"
 msgstr ""
 
-#: builtin/last-modified.c:535
+#: builtin/last-modified.c:542
 msgid "show tree entries when recursing into subtrees"
 msgstr ""
 
-#: builtin/last-modified.c:537 diff.c:5991
+#: builtin/last-modified.c:544 diff.c:5991
 msgid "maximum tree depth to recurse"
 msgstr ""
 
-#: builtin/last-modified.c:539
+#: builtin/last-modified.c:546
 msgid "lines are separated with NUL character"
 msgstr ""
 
@@ -16337,15 +16341,16 @@ msgstr ""
 
 #: builtin/submodule--helper.c:1370
 msgid ""
-"could not set core.repositoryformatversion to 1. Please set it for migration "
-"to work, for example: git config core.repositoryformatversion 1"
+"could not set core.repositoryformatversion to 1.\n"
+"Please set it for migration to work, for example:\n"
+"git config core.repositoryformatversion 1"
 msgstr ""
 
 #: builtin/submodule--helper.c:1375
 msgid ""
-"could not enable submodulePathConfig extension. It is required for migration "
-"to work. Please enable it in the root repo: git config extensions."
-"submodulePathConfig true"
+"could not enable submodulePathConfig extension. It is required\n"
+"for migration to work. Please enable it in the root repo:\n"
+"git config extensions.submodulePathConfig true"
 msgstr ""
 
 #: builtin/submodule--helper.c:1429
@@ -22655,28 +22660,28 @@ msgstr ""
 msgid "Bad %s value: '%s'"
 msgstr ""
 
-#: object-file-convert.c:88
+#: object-file-convert.c:80
 msgid "failed to decode tree entry"
 msgstr ""
 
-#: object-file-convert.c:90
+#: object-file-convert.c:82
 #, c-format
 msgid "failed to map tree entry for %s"
 msgstr ""
 
-#: object-file-convert.c:169 object-file-convert.c:176
-#: object-file-convert.c:188 object-file-convert.c:208
-#: object-file-convert.c:244
+#: object-file-convert.c:161 object-file-convert.c:168
+#: object-file-convert.c:180 object-file-convert.c:200
+#: object-file-convert.c:236
 #, c-format
 msgid "bad %s in commit"
 msgstr ""
 
-#: object-file-convert.c:179 object-file-convert.c:191
+#: object-file-convert.c:171 object-file-convert.c:183
 #, c-format
 msgid "unable to map %s %s in commit object"
 msgstr ""
 
-#: object-file-convert.c:289
+#: object-file-convert.c:281
 #, c-format
 msgid "Failed to convert object from %s to %s"
 msgstr ""
@@ -25269,33 +25274,33 @@ msgstr ""
 msgid "* Ignoring funny ref '%s' locally"
 msgstr ""
 
-#: remote.c:2309
+#: remote.c:2308
 #, c-format
 msgid "Your branch is up to date with '%s'.\n"
 msgstr ""
 
-#: remote.c:2313
+#: remote.c:2312
 #, c-format
 msgid "Your branch and '%s' refer to different commits.\n"
 msgstr ""
 
-#: remote.c:2316
+#: remote.c:2315
 #, c-format
 msgid "  (use \"%s\" for details)\n"
 msgstr ""
 
-#: remote.c:2320
+#: remote.c:2319
 #, c-format
 msgid "Your branch is ahead of '%s' by %d commit.\n"
 msgid_plural "Your branch is ahead of '%s' by %d commits.\n"
 msgstr[0] ""
 msgstr[1] ""
 
-#: remote.c:2326
+#: remote.c:2325
 msgid "  (use \"git push\" to publish your local commits)\n"
 msgstr ""
 
-#: remote.c:2329
+#: remote.c:2328
 #, c-format
 msgid "Your branch is behind '%s' by %d commit, and can be fast-forwarded.\n"
 msgid_plural ""
@@ -25303,11 +25308,11 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: remote.c:2337
+#: remote.c:2336
 msgid "  (use \"git pull\" to update your local branch)\n"
 msgstr ""
 
-#: remote.c:2340
+#: remote.c:2339
 #, c-format
 msgid ""
 "Your branch and '%s' have diverged,\n"
@@ -25318,26 +25323,26 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: remote.c:2350
+#: remote.c:2349
 msgid ""
 "  (use \"git pull\" if you want to integrate the remote branch with yours)\n"
 msgstr ""
 
-#: remote.c:2393
+#: remote.c:2392
 #, c-format
 msgid "Your branch is based on '%s', but the upstream is gone.\n"
 msgstr ""
 
-#: remote.c:2397
+#: remote.c:2396
 msgid "  (use \"git branch --unset-upstream\" to fixup)\n"
 msgstr ""
 
-#: remote.c:2605
+#: remote.c:2604
 #, c-format
 msgid "cannot parse expected object name '%s'"
 msgstr ""
 
-#: remote.c:2873
+#: remote.c:2872
 #, c-format
 msgid "cannot strip one component off url '%s'"
 msgstr ""
@@ -25455,10 +25460,6 @@ msgstr ""
 
 #: replay.c:309
 msgid "replaying merge commits is not supported yet!"
-msgstr ""
-
-#: repository.c:197
-msgid "compatibility hash algorithm support requires Rust"
 msgstr ""
 
 #: rerere.c:216 rerere.c:225 rerere.c:228
