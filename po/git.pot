@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2026-01-11 13:21+0000\n"
+"POT-Creation-Date: 2026-01-12 16:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -2133,7 +2133,7 @@ msgid "dry run"
 msgstr ""
 
 #: builtin/add.c:255 builtin/check-ignore.c:24 builtin/commit.c:1548
-#: builtin/count-objects.c:104 builtin/fsck.c:943 builtin/log.c:2550
+#: builtin/count-objects.c:104 builtin/fsck.c:1033 builtin/log.c:2550
 #: builtin/mv.c:216 builtin/read-tree.c:129 builtin/refs.c:90
 msgid "be verbose"
 msgstr ""
@@ -7550,8 +7550,8 @@ msgstr ""
 msgid "parse_one_signature() returned unknown hash algo"
 msgstr ""
 
-#: builtin/fast-import.c:2846 builtin/fsck.c:79 builtin/fsck.c:141
-#: builtin/fsck.c:142
+#: builtin/fast-import.c:2846 builtin/fsck.c:80 builtin/fsck.c:142
+#: builtin/fsck.c:143
 msgid "unknown"
 msgstr ""
 
@@ -8366,213 +8366,218 @@ msgid "got bad config --config=%s"
 msgstr ""
 
 #. TRANSLATORS: e.g. error in tree 01bfda: <more explanation>
-#: builtin/fsck.c:88 builtin/fsck.c:113
+#: builtin/fsck.c:89 builtin/fsck.c:114
 #, c-format
 msgid "error in %s %s: %s"
 msgstr ""
 
 #. TRANSLATORS: e.g. warning in tree 01bfda: <more explanation>
-#: builtin/fsck.c:107
+#: builtin/fsck.c:108
 #, c-format
 msgid "warning in %s %s: %s"
 msgstr ""
 
-#: builtin/fsck.c:137 builtin/fsck.c:140
+#: builtin/fsck.c:138 builtin/fsck.c:141
 #, c-format
 msgid "broken link from %7s %s"
 msgstr ""
 
-#: builtin/fsck.c:149
+#: builtin/fsck.c:150
 msgid "wrong object type in link"
 msgstr ""
 
-#: builtin/fsck.c:165
+#: builtin/fsck.c:166
 #, c-format
 msgid ""
 "broken link from %7s %s\n"
 "              to %7s %s"
 msgstr ""
 
-#: builtin/fsck.c:203 builtin/prune.c:67 connected.c:118
+#: builtin/fsck.c:204 builtin/prune.c:67 connected.c:118
 msgid "Checking connectivity"
 msgstr ""
 
-#: builtin/fsck.c:280
+#: builtin/fsck.c:281
 #, c-format
 msgid "missing %s %s"
 msgstr ""
 
-#: builtin/fsck.c:307
+#: builtin/fsck.c:308
 #, c-format
 msgid "unreachable %s %s"
 msgstr ""
 
-#: builtin/fsck.c:327
+#: builtin/fsck.c:328
 #, c-format
 msgid "dangling %s %s"
 msgstr ""
 
-#: builtin/fsck.c:337
+#: builtin/fsck.c:338
 msgid "could not create lost-found"
 msgstr ""
 
-#: builtin/fsck.c:345 builtin/gc.c:2580 builtin/rebase.c:229
+#: builtin/fsck.c:346 builtin/gc.c:2580 builtin/rebase.c:229
 #: rebase-interactive.c:127 rerere.c:489 rerere.c:700 sequencer.c:4233
 #: sequencer.c:6542
 #, c-format
 msgid "could not write '%s'"
 msgstr ""
 
-#: builtin/fsck.c:349
+#: builtin/fsck.c:350
 #, c-format
 msgid "could not finish '%s'"
 msgstr ""
 
-#: builtin/fsck.c:366
+#: builtin/fsck.c:367
 #, c-format
 msgid "Checking %s"
 msgstr ""
 
-#: builtin/fsck.c:408
+#: builtin/fsck.c:409
 #, c-format
 msgid "Checking connectivity (%d objects)"
 msgstr ""
 
-#: builtin/fsck.c:427
+#: builtin/fsck.c:428
 #, c-format
 msgid "Checking %s %s"
 msgstr ""
 
-#: builtin/fsck.c:432
+#: builtin/fsck.c:433
 msgid "broken links"
 msgstr ""
 
-#: builtin/fsck.c:441
+#: builtin/fsck.c:442
 #, c-format
 msgid "root %s"
 msgstr ""
 
-#: builtin/fsck.c:449
+#: builtin/fsck.c:450
 #, c-format
 msgid "tagged %s %s (%s) in %s"
 msgstr ""
 
-#: builtin/fsck.c:475
+#: builtin/fsck.c:476
 #, c-format
 msgid "%s: object corrupt or missing"
 msgstr ""
 
-#: builtin/fsck.c:500
+#: builtin/fsck.c:501
 #, c-format
 msgid "%s: invalid reflog entry %s"
 msgstr ""
 
-#: builtin/fsck.c:514
+#: builtin/fsck.c:518
 #, c-format
 msgid "Checking reflog %s->%s"
 msgstr ""
 
-#: builtin/fsck.c:548
+#: builtin/fsck.c:566
 #, c-format
 msgid "%s: invalid sha1 pointer %s"
 msgstr ""
 
-#: builtin/fsck.c:555
+#: builtin/fsck.c:573
 #, c-format
 msgid "%s: not a commit"
 msgstr ""
 
-#: builtin/fsck.c:616
+#: builtin/fsck.c:621
+#, c-format
+msgid "invalid parameter: expected sha1, got '%s'"
+msgstr ""
+
+#: builtin/fsck.c:706
 msgid "notice: No default references"
 msgstr ""
 
-#: builtin/fsck.c:643
+#: builtin/fsck.c:733
 #, c-format
 msgid "%s: hash-path mismatch, found at: %s"
 msgstr ""
 
-#: builtin/fsck.c:646
+#: builtin/fsck.c:736
 #, c-format
 msgid "%s: object corrupt or missing: %s"
 msgstr ""
 
-#: builtin/fsck.c:663
+#: builtin/fsck.c:753
 #, c-format
 msgid "%s: object could not be parsed: %s"
 msgstr ""
 
-#: builtin/fsck.c:684
+#: builtin/fsck.c:774
 #, c-format
 msgid "bad sha1 file: %s"
 msgstr ""
 
-#: builtin/fsck.c:704
+#: builtin/fsck.c:794
 msgid "Checking object directory"
 msgstr ""
 
-#: builtin/fsck.c:708
+#: builtin/fsck.c:798
 msgid "Checking object directories"
 msgstr ""
 
-#: builtin/fsck.c:723
+#: builtin/fsck.c:813
 #, c-format
 msgid "Checking %s link"
 msgstr ""
 
-#: builtin/fsck.c:730 builtin/index-pack.c:953
+#: builtin/fsck.c:820 builtin/index-pack.c:953
 #, c-format
 msgid "invalid %s"
 msgstr ""
 
-#: builtin/fsck.c:737
+#: builtin/fsck.c:827
 #, c-format
 msgid "%s points to something strange (%s)"
 msgstr ""
 
-#: builtin/fsck.c:743
+#: builtin/fsck.c:833
 #, c-format
 msgid "%s: detached HEAD points at nothing"
 msgstr ""
 
-#: builtin/fsck.c:747
+#: builtin/fsck.c:837
 #, c-format
 msgid "notice: %s points to an unborn branch (%s)"
 msgstr ""
 
-#: builtin/fsck.c:759
+#: builtin/fsck.c:849
 #, c-format
 msgid "Checking cache tree of %s"
 msgstr ""
 
-#: builtin/fsck.c:764
+#: builtin/fsck.c:854
 #, c-format
 msgid "%s: invalid sha1 pointer in cache-tree of %s"
 msgstr ""
 
-#: builtin/fsck.c:773
+#: builtin/fsck.c:863
 msgid "non-tree in cache-tree"
 msgstr ""
 
-#: builtin/fsck.c:804
+#: builtin/fsck.c:894
 #, c-format
 msgid "%s: invalid sha1 pointer in resolve-undo of %s"
 msgstr ""
 
-#: builtin/fsck.c:893
+#: builtin/fsck.c:983
 #, c-format
 msgid "unable to load rev-index for pack '%s'"
 msgstr ""
 
-#: builtin/fsck.c:898
+#: builtin/fsck.c:988
 #, c-format
 msgid "invalid rev-index for pack '%s'"
 msgstr ""
 
-#: builtin/fsck.c:914 builtin/fsck.c:917
+#: builtin/fsck.c:1004 builtin/fsck.c:1007
 msgid "Checking ref database"
 msgstr ""
 
-#: builtin/fsck.c:935
+#: builtin/fsck.c:1025
 msgid ""
 "git fsck [--tags] [--root] [--unreachable] [--cache] [--no-reflogs]\n"
 "         [--[no-]full] [--strict] [--verbose] [--lost-found]\n"
@@ -8580,70 +8585,60 @@ msgid ""
 "         [--[no-]name-objects] [--[no-]references] [<object>...]"
 msgstr ""
 
-#: builtin/fsck.c:944
+#: builtin/fsck.c:1034
 msgid "show unreachable objects"
 msgstr ""
 
-#: builtin/fsck.c:945
+#: builtin/fsck.c:1035
 msgid "show dangling objects"
 msgstr ""
 
-#: builtin/fsck.c:946
+#: builtin/fsck.c:1036
 msgid "report tags"
 msgstr ""
 
-#: builtin/fsck.c:947
+#: builtin/fsck.c:1037
 msgid "report root nodes"
 msgstr ""
 
-#: builtin/fsck.c:948
+#: builtin/fsck.c:1038
 msgid "make index objects head nodes"
 msgstr ""
 
-#: builtin/fsck.c:949
+#: builtin/fsck.c:1039
 msgid "make reflogs head nodes (default)"
 msgstr ""
 
-#: builtin/fsck.c:950
+#: builtin/fsck.c:1040
 msgid "also consider packs and alternate objects"
 msgstr ""
 
-#: builtin/fsck.c:951
+#: builtin/fsck.c:1041
 msgid "check only connectivity"
 msgstr ""
 
-#: builtin/fsck.c:952 builtin/mktag.c:82
+#: builtin/fsck.c:1042 builtin/mktag.c:82
 msgid "enable more strict checking"
 msgstr ""
 
-#: builtin/fsck.c:954
+#: builtin/fsck.c:1044
 msgid "write dangling objects in .git/lost-found"
 msgstr ""
 
-#: builtin/fsck.c:955 builtin/prune.c:163 builtin/repo.c:653
+#: builtin/fsck.c:1045 builtin/prune.c:163 builtin/repo.c:653
 msgid "show progress"
 msgstr ""
 
-#: builtin/fsck.c:956
+#: builtin/fsck.c:1046
 msgid "show verbose names for reachable objects"
 msgstr ""
 
-#: builtin/fsck.c:957
+#: builtin/fsck.c:1047
 msgid "check reference database consistency"
 msgstr ""
 
-#: builtin/fsck.c:1026 builtin/index-pack.c:287
+#: builtin/fsck.c:1131 builtin/index-pack.c:287
 msgid "Checking objects"
-msgstr ""
-
-#: builtin/fsck.c:1054
-#, c-format
-msgid "%s: object missing"
-msgstr ""
-
-#: builtin/fsck.c:1065
-#, c-format
-msgid "invalid parameter: expected sha1, got '%s'"
 msgstr ""
 
 #: builtin/fsmonitor--daemon.c:25
@@ -18448,7 +18443,7 @@ msgid "Reuse recorded resolution of conflicted merges"
 msgstr ""
 
 #: command-list.h:168
-msgid "Reset current HEAD to the specified state"
+msgid "Set `HEAD` or the index to a known state"
 msgstr ""
 
 #: command-list.h:169
