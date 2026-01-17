@@ -1708,3 +1708,1555 @@
  msgstr ""
  
  msgid "use thin pack"
+
+
+#################### Sat, 17 Jan 2026 19:57:35 +0000 ####################
+
+--- po/git.pot.old	2026-01-17 19:57:35.077637776 +0000
++++ po/git.pot.new	2026-01-17 19:57:35.164637606 +0000
+@@ -480,6 +480,12 @@
+ msgid " (use -u option to show untracked files)"
+ msgstr ""
+ 
++msgid " (was: n)"
++msgstr ""
++
++msgid " (was: y)"
++msgstr ""
++
+ #, c-format
+ msgid " * [pruned] %s"
+ msgstr ""
+@@ -688,6 +694,13 @@
+ "You can run \"git stash pop\" or \"git stash drop\" at any time.\n"
+ msgstr ""
+ 
++#. TRANSLATORS: The first argument is the number string. The second
++#. argument is the unit string (i.e. "12.34 MiB/s").
++#.
++#, c-format
++msgid "%s %s"
++msgstr ""
++
+ #, c-format
+ msgid "%s %s is not a commit!"
+ msgstr ""
+@@ -799,6 +812,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "%s expects one of 'branches', 'head' or 'print'"
++msgstr ""
++
++#, c-format
+ msgid "%s failed"
+ msgstr ""
+ 
+@@ -867,10 +884,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "%s points to something strange (%s)"
+-msgstr ""
+-
+-#, c-format
+ msgid "%s process failed"
+ msgstr ""
+ 
+@@ -1057,10 +1070,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "%s: detached HEAD points at nothing"
+-msgstr ""
+-
+-#, c-format
+ msgid "%s: does not exist in index"
+ msgstr ""
+ 
+@@ -1131,10 +1140,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "%s: object missing"
+-msgstr ""
+-
+-#, c-format
+ msgid "%s: patch does not apply"
+ msgstr ""
+ 
+@@ -1182,48 +1187,8 @@
+ msgid "%sinfo/refs not valid: is this a git repository?"
+ msgstr ""
+ 
+-#. TRANSLATORS: IEC 80000-13:2008 byte
+-#, c-format
+-msgid "%u byte"
+-msgid_plural "%u bytes"
+-msgstr[0] ""
+-msgstr[1] ""
+-
+-#. TRANSLATORS: IEC 80000-13:2008 byte/second
+-#, c-format
+-msgid "%u byte/s"
+-msgid_plural "%u bytes/s"
+-msgstr[0] ""
+-msgstr[1] ""
+-
+-#. TRANSLATORS: IEC 80000-13:2008 gibibyte
+-#, c-format
+-msgid "%u.%2.2u GiB"
+-msgstr ""
+-
+-#. TRANSLATORS: IEC 80000-13:2008 gibibyte/second
+-#, c-format
+-msgid "%u.%2.2u GiB/s"
+-msgstr ""
+-
+-#. TRANSLATORS: IEC 80000-13:2008 kibibyte
+-#, c-format
+-msgid "%u.%2.2u KiB"
+-msgstr ""
+-
+-#. TRANSLATORS: IEC 80000-13:2008 kibibyte/second
+-#, c-format
+-msgid "%u.%2.2u KiB/s"
+-msgstr ""
+-
+-#. TRANSLATORS: IEC 80000-13:2008 mebibyte
+-#, c-format
+-msgid "%u.%2.2u MiB"
+-msgstr ""
+-
+-#. TRANSLATORS: IEC 80000-13:2008 mebibyte/second
+ #, c-format
+-msgid "%u.%2.2u MiB/s"
++msgid "%u.%2.2u"
+ msgstr ""
+ 
+ #, c-format
+@@ -1427,6 +1392,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "'%s' is not a valid commit-ish for %s"
++msgstr ""
++
++#, c-format
+ msgid "'%s' is not a valid label"
+ msgstr ""
+ 
+@@ -1610,6 +1579,9 @@
+ msgid "'GIT_AUTHOR_NAME' already given"
+ msgstr ""
+ 
++msgid "'auto' filter not supported by this command"
++msgstr ""
++
+ msgid ""
+ "'core.preferSymlinkRefs=true' is nominated for removal.\n"
+ "hint: The use of symbolic links for symbolic refs is deprecated\n"
+@@ -1697,6 +1669,15 @@
+ "'merge -c' on the commit"
+ msgstr ""
+ 
++msgid "'strip-if-invalid' is not a valid mode for git fast-export with --signed-commits=<mode>"
++msgstr ""
++
++msgid "'strip-if-invalid' is not a valid mode for git fast-export with --signed-tags=<mode>"
++msgstr ""
++
++msgid "'strip-if-invalid' is not a valid mode for git fast-import with --signed-tags=<mode>"
++msgstr ""
++
+ msgid "'unknown' signature format in gpgsig"
+ msgstr ""
+ 
+@@ -1716,7 +1697,7 @@
+ msgid "(%s) failed to close pipe to '%s'"
+ msgstr ""
+ 
+-msgid "(EXPERIMENTAL!) git replay ([--contained] --onto <newbase> | --advance <branch>) <revision-range>..."
++msgid "(EXPERIMENTAL!) git replay ([--contained] --onto <newbase> | --advance <branch>) [--ref-action[=<mode>]] <revision-range>"
+ msgstr ""
+ 
+ #, c-format
+@@ -1853,6 +1834,9 @@
+ msgid "--add --delete doesn't make sense"
+ msgstr ""
+ 
++msgid "--all and <key> cannot be used together"
++msgstr ""
++
+ msgid "--all can't be combined with refspecs"
+ msgstr ""
+ 
+@@ -1975,6 +1959,12 @@
+ msgid "--interdiff requires --cover-letter or single patch"
+ msgstr ""
+ 
++msgid "--keys can only be used with --format=default or --format=nul"
++msgstr ""
++
++msgid "--keys cannot be used with a <key> or --all"
++msgstr ""
++
+ msgid "--local can only be used inside a git repository"
+ msgstr ""
+ 
+@@ -2373,6 +2363,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Aborting commit as launching the editor failed.\n"
++msgstr ""
++
++#, c-format
+ msgid "Aborting commit due to empty commit message body.\n"
+ msgstr ""
+ 
+@@ -2479,6 +2473,9 @@
+ msgid "Annotate file lines with commit information"
+ msgstr ""
+ 
++msgid "Another git process seems to be running in this repository. Wait for it to finish, or remove the lock file to continue"
++msgstr ""
++
+ #, c-format
+ msgid "Applied autostash.\n"
+ msgstr ""
+@@ -2505,39 +2502,39 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "Apply addition to index [y,n,q,a,d%s,?]? "
++msgid "Apply addition to index and worktree%s [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+ #, c-format
+-msgid "Apply addition to index and worktree [y,n,q,a,d%s,?]? "
++msgid "Apply addition to index%s [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+ #, c-format
+-msgid "Apply addition to worktree [y,n,q,a,d%s,?]? "
++msgid "Apply addition to worktree%s [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+ #, c-format
+-msgid "Apply deletion to index [y,n,q,a,d%s,?]? "
++msgid "Apply deletion to index and worktree%s [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+ #, c-format
+-msgid "Apply deletion to index and worktree [y,n,q,a,d%s,?]? "
++msgid "Apply deletion to index%s [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+ #, c-format
+-msgid "Apply deletion to worktree [y,n,q,a,d%s,?]? "
++msgid "Apply deletion to worktree%s [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+ #, c-format
+-msgid "Apply mode change to index [y,n,q,a,d%s,?]? "
++msgid "Apply mode change to index and worktree%s [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+ #, c-format
+-msgid "Apply mode change to index and worktree [y,n,q,a,d%s,?]? "
++msgid "Apply mode change to index%s [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+ #, c-format
+-msgid "Apply mode change to worktree [y,n,q,a,d%s,?]? "
++msgid "Apply mode change to worktree%s [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+ msgid "Apply the changes introduced by some existing commits"
+@@ -2547,15 +2544,15 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "Apply this hunk to index [y,n,q,a,d%s,?]? "
++msgid "Apply this hunk to index and worktree%s [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+ #, c-format
+-msgid "Apply this hunk to index and worktree [y,n,q,a,d%s,?]? "
++msgid "Apply this hunk to index%s [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+ #, c-format
+-msgid "Apply this hunk to worktree [y,n,q,a,d%s,?]? "
++msgid "Apply this hunk to worktree%s [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+ #. TRANSLATORS: Make sure to include [y], [n], [e], [v] and [a]
+@@ -2640,6 +2637,13 @@
+ msgid "Available strategies are:"
+ msgstr ""
+ 
++msgid "B"
++msgstr ""
++
++#. TRANSLATORS: IEC 80000-13:2008 byte/second and byte
++msgid "B/s"
++msgstr ""
++
+ #, c-format
+ msgid "BHFI changed '%ls'"
+ msgstr ""
+@@ -3003,10 +3007,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "Checking %s link"
+-msgstr ""
+-
+-#, c-format
+ msgid "Checking cache tree of %s"
+ msgstr ""
+ 
+@@ -3479,35 +3479,38 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "Discard addition from index and worktree [y,n,q,a,d%s,?]? "
++msgid "Discard addition from index and worktree%s [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+ #, c-format
+-msgid "Discard addition from worktree [y,n,q,a,d%s,?]? "
++msgid "Discard addition from worktree%s [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+ #, c-format
+-msgid "Discard deletion from index and worktree [y,n,q,a,d%s,?]? "
++msgid "Discard deletion from index and worktree%s [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+ #, c-format
+-msgid "Discard deletion from worktree [y,n,q,a,d%s,?]? "
++msgid "Discard deletion from worktree%s [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+ #, c-format
+-msgid "Discard mode change from index and worktree [y,n,q,a,d%s,?]? "
++msgid "Discard mode change from index and worktree%s [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+ #, c-format
+-msgid "Discard mode change from worktree [y,n,q,a,d%s,?]? "
++msgid "Discard mode change from worktree%s [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+ #, c-format
+-msgid "Discard this hunk from index and worktree [y,n,q,a,d%s,?]? "
++msgid "Discard this hunk from index and worktree%s [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+ #, c-format
+-msgid "Discard this hunk from worktree [y,n,q,a,d%s,?]? "
++msgid "Discard this hunk from worktree%s [y,n,q,a,d%s,?]? "
++msgstr ""
++
++msgid "Disk size"
+ msgstr ""
+ 
+ msgid "Display data in columns"
+@@ -3591,6 +3594,9 @@
+ msgid "EXPERIMENTAL: Replay commits on a new base, works with bare repos too"
+ msgstr ""
+ 
++msgid "EXPERIMENTAL: Rewrite history"
++msgstr ""
++
+ msgid "EXPERIMENTAL: Show when files were last modified"
+ msgstr ""
+ 
+@@ -3940,6 +3946,10 @@
+ msgid "From %.*s\n"
+ msgstr ""
+ 
++#. TRANSLATORS: SI decimal prefix symbol for 10^9
++msgid "G"
++msgstr ""
++
+ #, c-format
+ msgid ""
+ "GIT_INDEX_VERSION set, but the value is invalid.\n"
+@@ -3982,6 +3992,13 @@
+ msgid "GetOverlappedResult failed on '%s' [GLE %ld]"
+ msgstr ""
+ 
++msgid "GiB"
++msgstr ""
++
++#. TRANSLATORS: IEC 80000-13:2008 gibibyte/second and gibibyte
++msgid "GiB/s"
++msgstr ""
++
+ msgid "Git HTTP-based protocols"
+ msgstr ""
+ 
+@@ -4259,6 +4276,9 @@
+ msgid "Indexing objects"
+ msgstr ""
+ 
++msgid "Inflated size"
++msgstr ""
++
+ msgid "Initial commit"
+ msgstr ""
+ 
+@@ -4393,6 +4413,13 @@
+ msgid "Join two or more development histories together"
+ msgstr ""
+ 
++msgid "KiB"
++msgstr ""
++
++#. TRANSLATORS: IEC 80000-13:2008 kibibyte/second and kibibyte
++msgid "KiB/s"
++msgstr ""
++
+ #, c-format
+ msgid "LF would be replaced by CRLF in %s"
+ msgstr ""
+@@ -4439,6 +4466,14 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Lock is held by process %<PRIuMAX>. Wait for it to finish, or remove the lock file to continue"
++msgstr ""
++
++#, c-format
++msgid "Lock was held by process %<PRIuMAX>, which is no longer running. Remove the stale lock file to continue"
++msgstr ""
++
++#, c-format
+ msgid "Lockfile created but not reported: %s"
+ msgstr ""
+ 
+@@ -4464,6 +4499,17 @@
+ msgid "Low-level access to refs"
+ msgstr ""
+ 
++#. TRANSLATORS: SI decimal prefix symbol for 10^6
++msgid "M"
++msgstr ""
++
++#, c-format
++msgid "MIDX %s must be an ancestor of %s"
++msgstr ""
++
++msgid "MIDX compaction endpoints must be unique"
++msgstr ""
++
+ msgid "MIDX does not contain the BTMP chunk"
+ msgstr ""
+ 
+@@ -4544,6 +4590,13 @@
+ msgid "Messaging"
+ msgstr ""
+ 
++msgid "MiB"
++msgstr ""
++
++#. TRANSLATORS: IEC 80000-13:2008 mebibyte/second and mebibyte
++msgid "MiB/s"
++msgstr ""
++
+ #, c-format
+ msgid ""
+ "Migrating git directory of '%s%s' from\n"
+@@ -5027,6 +5080,12 @@
+ 
+ #, c-format
+ msgid ""
++"Please enter the commit message for the %s changes. Lines starting\n"
++"with '%s' will be ignored, and an empty message aborts the commit.\n"
++msgstr ""
++
++#, c-format
++msgid ""
+ "Please enter the commit message for your changes. Lines starting\n"
+ "with '%s' will be ignored, and an empty message aborts the commit.\n"
+ msgstr ""
+@@ -5359,9 +5418,6 @@
+ msgid "Reset branch '%s'\n"
+ msgstr ""
+ 
+-msgid "Reset current HEAD to the specified state"
+-msgstr ""
+-
+ msgid ""
+ "Resolve all conflicts manually, mark them as resolved with\n"
+ "\"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\n"
+@@ -5484,10 +5540,10 @@
+ msgid "See 'git help <command>' to read about a specific subcommand"
+ msgstr ""
+ 
+-msgid "See 'git help status' for information on how to improve this."
++msgid "See 'git help check-ref-format'"
+ msgstr ""
+ 
+-msgid "See `man git check-ref-format`"
++msgid "See 'git help status' for information on how to improve this."
+ msgstr ""
+ 
+ msgid "See git-pull(1) for details."
+@@ -5561,6 +5617,9 @@
+ msgid "Server version is %.*s"
+ msgstr ""
+ 
++msgid "Set `HEAD` or the index to a known state"
++msgstr ""
++
+ msgid "Should not be doing an octopus."
+ msgstr ""
+ 
+@@ -5623,6 +5682,12 @@
+ msgstr ""
+ 
+ #, c-format
++msgid ""
++"Skipping submodule due to ignore=all: %s\n"
++"Use --force if you really want to add the submodule."
++msgstr ""
++
++#, c-format
+ msgid "Skipping unmerged submodule %s"
+ msgstr ""
+ 
+@@ -5673,19 +5738,19 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "Stage addition [y,n,q,a,d%s,?]? "
++msgid "Stage addition%s [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+ #, c-format
+-msgid "Stage deletion [y,n,q,a,d%s,?]? "
++msgid "Stage deletion%s [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+ #, c-format
+-msgid "Stage mode change [y,n,q,a,d%s,?]? "
++msgid "Stage mode change%s [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+ #, c-format
+-msgid "Stage this hunk [y,n,q,a,d%s,?]? "
++msgid "Stage this hunk%s [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+ #, c-format
+@@ -5693,22 +5758,22 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "Stash addition [y,n,q,a,d%s,?]? "
++msgid "Stash addition%s [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+ #, c-format
+-msgid "Stash deletion [y,n,q,a,d%s,?]? "
++msgid "Stash deletion%s [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+ #, c-format
+-msgid "Stash mode change [y,n,q,a,d%s,?]? "
++msgid "Stash mode change%s [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+ msgid "Stash the changes in a dirty working directory away"
+ msgstr ""
+ 
+ #, c-format
+-msgid "Stash this hunk [y,n,q,a,d%s,?]? "
++msgid "Stash this hunk%s [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+ #, c-format
+@@ -5725,6 +5790,12 @@
+ 
+ #, c-format
+ msgid ""
++"Storing new %s from server for remote '%s'.\n"
++"    '%s' -> '%s'\n"
++msgstr ""
++
++#, c-format
++msgid ""
+ "Stray %s directory found.\n"
+ "Use \"git am --abort\" to remove it."
+ msgstr ""
+@@ -6365,18 +6436,13 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "Unable to create '%s.lock': %s"
++msgid ""
++"Unable to create '%s': %s.\n"
++"\n"
+ msgstr ""
+ 
+ #, c-format
+-msgid ""
+-"Unable to create '%s.lock': %s.\n"
+-"\n"
+-"Another git process seems to be running in this repository, e.g.\n"
+-"an editor opened by 'git commit'. Please make sure all processes\n"
+-"are terminated then try again. If it still fails, a git process\n"
+-"may have crashed in this repository earlier:\n"
+-"remove the file manually to continue."
++msgid "Unable to create '%s.lock': %s"
+ msgstr ""
+ 
+ msgid "Unable to create FSEventStream."
+@@ -6510,19 +6576,19 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "Unstage addition [y,n,q,a,d%s,?]? "
++msgid "Unstage addition%s [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+ #, c-format
+-msgid "Unstage deletion [y,n,q,a,d%s,?]? "
++msgid "Unstage deletion%s [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+ #, c-format
+-msgid "Unstage mode change [y,n,q,a,d%s,?]? "
++msgid "Unstage mode change%s [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+ #, c-format
+-msgid "Unstage this hunk [y,n,q,a,d%s,?]? "
++msgid "Unstage this hunk%s [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+ msgid "Unstaged changes after refreshing the index:"
+@@ -7441,7 +7507,7 @@
+ msgid "action when quoted CR is found"
+ msgstr ""
+ 
+-msgid "add 'prunable' annotation to worktrees older than <time>"
++msgid "add 'prunable' annotation to missing worktrees older than <time>"
+ msgstr ""
+ 
+ msgid "add (at most <n>) entries from shortlog to merge commit message"
+@@ -7553,9 +7619,6 @@
+ msgid "additionally, your index contains uncommitted changes."
+ msgstr ""
+ 
+-msgid "advance all branches contained in revision-range"
+-msgstr ""
+-
+ #, c-format
+ msgid "affected file '%s' is beyond a symbolic link"
+ msgstr ""
+@@ -7712,6 +7775,12 @@
+ msgid "amend previous commit"
+ msgstr ""
+ 
++msgid "an 'auto' filter cannot be combined"
++msgstr ""
++
++msgid "an 'auto' filter is incompatible with any other filter"
++msgstr ""
++
+ msgid "and made changes to the index and/or the working tree.\n"
+ msgstr ""
+ 
+@@ -8339,9 +8408,17 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "bundle '%s' has no uri"
++msgstr ""
++
++#, c-format
+ msgid "bundle list at '%s' has no mode"
+ msgstr ""
+ 
++#, c-format
++msgid "bundle list at '%s': bundle '%s' has no uri"
++msgstr ""
++
+ msgid "bundle-uri operation not supported by protocol"
+ msgstr ""
+ 
+@@ -8376,8 +8453,17 @@
+ msgid "bypass pre-push hook"
+ msgstr ""
+ 
++#. TRANSLATORS: IEC 80000-13:2008 byte
+ msgid "byte"
+-msgstr ""
++msgid_plural "bytes"
++msgstr[0] ""
++msgstr[1] ""
++
++#. TRANSLATORS: IEC 80000-13:2008 byte/second
++msgid "byte/s"
++msgid_plural "bytes/s"
++msgstr[0] ""
++msgstr[1] ""
+ 
+ msgid "bytes"
+ msgstr ""
+@@ -8479,7 +8565,7 @@
+ msgid "cannot acquire lock for scheduled background maintenance"
+ msgstr ""
+ 
+-msgid "cannot advance target with multiple source branches because ordering would be ill-defined"
++msgid "cannot add a submodule of a different hash algorithm"
+ msgstr ""
+ 
+ msgid "cannot advance target with multiple sources because ordering would be ill-defined"
+@@ -8595,6 +8681,9 @@
+ msgid "cannot delete packs in a precious-objects repo"
+ msgstr ""
+ 
++msgid "cannot determine descendance"
++msgstr ""
++
+ msgid "cannot do a partial commit during a cherry-pick."
+ msgstr ""
+ 
+@@ -8692,12 +8781,6 @@
+ msgid "cannot have both --quiet and --verbose"
+ msgstr ""
+ 
+-msgid "cannot implicitly determine correct base for --onto"
+-msgstr ""
+-
+-msgid "cannot implicitly determine whether this is an --advance or --onto operation"
+-msgstr ""
+-
+ msgid "cannot inherit upstream tracking configuration of multiple refs when rebasing is requested"
+ msgstr ""
+ 
+@@ -8729,6 +8812,9 @@
+ msgid "cannot lock ref '%s': unable to resolve reference '%s'"
+ msgstr ""
+ 
++msgid "cannot look up HEAD"
++msgstr ""
++
+ #, c-format
+ msgid "cannot map object %s to %s"
+ msgstr ""
+@@ -8808,6 +8894,12 @@
+ #, c-format
+ msgid ""
+ "cannot overwrite multiple values with a single value\n"
++"       Use --value=<pattern>, --append or --all to change %s."
++msgstr ""
++
++#, c-format
++msgid ""
++"cannot overwrite multiple values with a single value\n"
+ "       Use a regexp, --add or --replace-all to change %s."
+ msgstr ""
+ 
+@@ -8827,6 +8919,12 @@
+ msgid "cannot parse parents of commit: %s"
+ msgstr ""
+ 
++msgid "cannot perform MIDX compaction with v1 format"
++msgstr ""
++
++msgid "cannot perform queued object checks outside of a repository"
++msgstr ""
++
+ msgid "cannot pread pack file"
+ msgstr ""
+ 
+@@ -9119,6 +9217,9 @@
+ msgid "change the upstream info"
+ msgstr ""
+ 
++msgid "check a specific task"
++msgstr ""
++
+ msgid "check for forced-updates on all updated branches"
+ msgstr ""
+ 
+@@ -9240,6 +9341,9 @@
+ msgid "closing file '%s'"
+ msgstr ""
+ 
++msgid "closing inotify file descriptor failed"
++msgstr ""
++
+ msgid "cmdline ends with \\"
+ msgstr ""
+ 
+@@ -9279,6 +9383,9 @@
+ msgid "command"
+ msgstr ""
+ 
++msgid "command expects a single revision"
++msgstr ""
++
+ msgid "command token to send to the server"
+ msgstr ""
+ 
+@@ -9317,6 +9424,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "commit cannot be found: %s"
++msgstr ""
++
++#, c-format
+ msgid "commit count in base graph too high: %<PRIuMAX>"
+ msgstr ""
+ 
+@@ -9431,6 +9542,9 @@
+ msgid "compare the commit in the index with that in the submodule HEAD"
+ msgstr ""
+ 
++msgid "compatibility hash algorithm support requires Rust"
++msgstr ""
++
+ msgid "compiler info: "
+ msgstr ""
+ 
+@@ -9505,6 +9619,12 @@
+ msgid "control recursive pushing of submodules"
+ msgstr ""
+ 
++msgid "control ref update behavior (branches|head|print)"
++msgstr ""
++
++msgid "control ref update behavior (update|print)"
++msgstr ""
++
+ msgid "control the order in which files appear in the output"
+ msgstr ""
+ 
+@@ -9756,6 +9876,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "could not create iterator for worktree '%s'"
++msgstr ""
++
++#, c-format
+ msgid "could not create leading directories for '%s'"
+ msgstr ""
+ 
+@@ -9823,6 +9947,12 @@
+ msgid "could not edit '%s'"
+ msgstr ""
+ 
++msgid ""
++"could not enable submodulePathConfig extension. It is required\n"
++"for migration to work. Please enable it in the root repo:\n"
++"git config extensions.submodulePathConfig true"
++msgstr ""
++
+ #, c-format
+ msgid "could not even attempt to merge '%.*s'"
+ msgstr ""
+@@ -9855,6 +9985,14 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "could not find MIDX with checksum %s"
++msgstr ""
++
++#, c-format
++msgid "could not find MIDX: %s"
++msgstr ""
++
++#, c-format
+ msgid "could not find author in commit %s"
+ msgstr ""
+ 
+@@ -9964,7 +10102,8 @@
+ msgid "could not load cruft pack .mtimes"
+ msgstr ""
+ 
+-msgid "could not load pack"
++#, c-format
++msgid "could not load pack %d"
+ msgstr ""
+ 
+ #, c-format
+@@ -10050,9 +10189,6 @@
+ msgid "could not open tempfile %s for writing"
+ msgstr ""
+ 
+-msgid "could not open temporary file"
+-msgstr ""
+-
+ #, c-format
+ msgid "could not parse %s"
+ msgstr ""
+@@ -10236,6 +10372,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "could not read record for worktree '%s'"
++msgstr ""
++
++#, c-format
+ msgid "could not read ref %s"
+ msgstr ""
+ 
+@@ -10290,10 +10430,6 @@
+ msgid "could not remove temporary migration directory '%s'"
+ msgstr ""
+ 
+-#, c-format
+-msgid "could not rename temporary file to %s"
+-msgstr ""
+-
+ msgid "could not reset --hard"
+ msgstr ""
+ 
+@@ -10301,10 +10437,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "could not resolve %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "could not resolve '%s'"
+ msgstr ""
+ 
+@@ -10361,6 +10493,12 @@
+ msgid "could not set '%s' to '%s'"
+ msgstr ""
+ 
++msgid ""
++"could not set core.repositoryformatversion to 1.\n"
++"Please set it for migration to work, for example:\n"
++"git config core.repositoryformatversion 1"
++msgstr ""
++
+ msgid "could not set recommended config"
+ msgstr ""
+ 
+@@ -10419,6 +10557,9 @@
+ msgid "could not start pack-objects to repack promisor objects"
+ msgstr ""
+ 
++msgid "could not start pack-objects to repack promisor packs"
++msgstr ""
++
+ msgid "could not start the FSMonitor daemon"
+ msgstr ""
+ 
+@@ -10520,6 +10661,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "could not write lock pid file '%s'"
++msgstr ""
++
++#, c-format
+ msgid "could not write loose object index %s"
+ msgstr ""
+ 
+@@ -10571,6 +10716,10 @@
+ msgid "couldn't open the file '%s'"
+ msgstr ""
+ 
++#, c-format
++msgid "couldn't resolve 'auto' filter: %s"
++msgstr ""
++
+ msgid "couldn't run fast-export"
+ msgstr ""
+ 
+@@ -11289,6 +11438,9 @@
+ msgid "email"
+ msgstr ""
+ 
++msgid "empty --trailer argument"
++msgstr ""
++
+ #, c-format
+ msgid "empty alias for %s"
+ msgstr ""
+@@ -11357,6 +11509,9 @@
+ msgid "enable/disable untracked cache"
+ msgstr ""
+ 
++msgid "enabling extensions.submodulePathConfig might fix the following error, if it's not already enabled."
++msgstr ""
++
+ msgid "encoding"
+ msgstr ""
+ 
+@@ -11729,9 +11884,6 @@
+ msgid "expire objects older than <time>"
+ msgstr ""
+ 
+-msgid "expire working trees older than <time>"
+-msgstr ""
+-
+ msgid "expiry-date"
+ msgstr ""
+ 
+@@ -11779,6 +11931,9 @@
+ msgid "failed reading ssh signing data buffer from '%s'"
+ msgstr ""
+ 
++msgid "failed replaying descendants"
++msgstr ""
++
+ #, c-format
+ msgid "failed seeking to start of '%s'"
+ msgstr ""
+@@ -11794,6 +11949,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "failed to begin ref transaction: %s"
++msgstr ""
++
++#, c-format
+ msgid "failed to bootstrap service %s"
+ msgstr ""
+ 
+@@ -11807,6 +11966,10 @@
+ msgid "failed to close rev-list's stdin"
+ msgstr ""
+ 
++#, c-format
++msgid "failed to commit ref transaction: %s"
++msgstr ""
++
+ msgid "failed to convert index to a sparse index; resolve merge conflicts and try again"
+ msgstr ""
+ 
+@@ -12235,6 +12398,10 @@
+ msgid "failed to run systemctl"
+ msgstr ""
+ 
++#, c-format
++msgid "failed to set a valid default config for 'submodule.%s.gitdir'. Please ensure it is set, for example by running something like: 'git config submodule.%s.gitdir .git/modules/%s'"
++msgstr ""
++
+ msgid "failed to set extensions.worktreeConfig setting"
+ msgstr ""
+ 
+@@ -12314,6 +12481,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "failed to update ref '%s': %s"
++msgstr ""
++
++#, c-format
+ msgid "failed to update remote for submodule '%s'"
+ msgstr ""
+ 
+@@ -12372,6 +12543,9 @@
+ msgid "failed writing detached signature to '%s'"
+ msgstr ""
+ 
++msgid "failed writing reworded commit"
++msgstr ""
++
+ #, c-format
+ msgid "failed writing ssh signing key buffer to '%s'"
+ msgstr ""
+@@ -12505,14 +12679,6 @@
+ msgstr[1] ""
+ 
+ #, c-format
+-msgid "file %s is not a regular file"
+-msgstr ""
+-
+-#, c-format
+-msgid "file %s is not writable by user"
+-msgstr ""
+-
+-#, c-format
+ msgid "file at URI '%s' is not a bundle or bundle list"
+ msgstr ""
+ 
+@@ -13154,7 +13320,7 @@
+ msgid "git fetch --all [<options>]"
+ msgstr ""
+ 
+-msgid "git fetch --multiple [<options>] [(<repository> | <group>)...]"
++msgid "git fetch --multiple [<options>] [(<repository>|<group>)...]"
+ msgstr ""
+ 
+ msgid "git fetch [<options>] <group>"
+@@ -13224,6 +13390,9 @@
+ msgid "git help [[-i|--info] [-m|--man] [-w|--web]] [<command>|<doc>]"
+ msgstr ""
+ 
++msgid "git history reword <commit> [--ref-action=(branches|head|print)]"
++msgstr ""
++
+ msgid "git hook run [--ignore-missing] [--to-stdin=<path>] <hook-name> [-- <hook-args>]"
+ msgstr ""
+ 
+@@ -13244,7 +13413,9 @@
+ "                       [--parse] [<file>...]"
+ msgstr ""
+ 
+-msgid "git last-modified [--recursive] [--show-trees] [<revision-range>] [[--] <path>...]"
++msgid ""
++"git last-modified [--recursive] [--show-trees] [--max-depth=<depth>] [-z]\n"
++"                  [<revision-range>] [[--] <path>...]"
+ msgstr ""
+ 
+ msgid "git log --pretty=short | git shortlog [<options>]"
+@@ -13305,6 +13476,11 @@
+ msgid "git merge-tree [--write-tree] [<options>] <branch1> <branch2>"
+ msgstr ""
+ 
++msgid ""
++"git multi-pack-index [<options>] compact [--[no-]incremental]\n"
++"  [--[no-]bitmap] <from> <to>"
++msgstr ""
++
+ msgid "git multi-pack-index [<options>] expire"
+ msgstr ""
+ 
+@@ -13314,7 +13490,10 @@
+ msgid "git multi-pack-index [<options>] verify"
+ msgstr ""
+ 
+-msgid "git multi-pack-index [<options>] write [--preferred-pack=<pack>][--refs-snapshot=<path>]"
++msgid ""
++"git multi-pack-index [<options>] write [--preferred-pack=<pack>]\n"
++"  [--[no-]bitmap] [--[no-]incremental] [--[no-]stdin-packs]\n"
++"  [--refs-snapshot=<path>]"
+ msgstr ""
+ 
+ msgid "git mv [-v] [-f] [-n] [-k] <source> <destination>"
+@@ -13761,6 +13940,9 @@
+ msgid "git submodule--helper create-branch [-f|--force] [--create-reflog] [-q|--quiet] [-t|--track] [-n|--dry-run] <name> <start-oid> <start-name>"
+ msgstr ""
+ 
++msgid "git submodule--helper gitdir <name>"
++msgstr ""
++
+ msgid "git switch [<options>] [<branch>]"
+ msgstr ""
+ 
+@@ -14447,6 +14629,16 @@
+ msgid "inline the patch"
+ msgstr ""
+ 
++#, c-format
++msgid "inotify_add_watch('%s') failed"
++msgstr ""
++
++msgid "inotify_init1() failed"
++msgstr ""
++
++msgid "inotify_rm_watch() failed"
++msgstr ""
++
+ msgid "input is NUL terminated"
+ msgstr ""
+ 
+@@ -14521,6 +14713,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "invalid %s value: '%s'"
++msgstr ""
++
++#, c-format
+ msgid "invalid %s: %s"
+ msgstr ""
+ 
+@@ -14674,6 +14870,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "invalid filter '%s' for remote '%s' will not be stored: %s"
++msgstr ""
++
++#, c-format
+ msgid "invalid filter-spec '%s'"
+ msgstr ""
+ 
+@@ -14831,6 +15031,10 @@
+ msgid "invalid path '%s'"
+ msgstr ""
+ 
++#, c-format
++msgid "invalid path in uri '%s'"
++msgstr ""
++
+ msgid "invalid path specification"
+ msgstr ""
+ 
+@@ -14865,6 +15069,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "invalid reference backend uri format '%s'"
++msgstr ""
++
++#, c-format
+ msgid "invalid reference name: %s"
+ msgstr ""
+ 
+@@ -14942,6 +15150,14 @@
+ msgid "invalid timezone offset"
+ msgstr ""
+ 
++#, c-format
++msgid "invalid token '%s' for remote '%s' will not be stored"
++msgstr ""
++
++#, c-format
++msgid "invalid trailer '%s': missing key before separator"
++msgstr ""
++
+ msgid "invalid transfer encoding"
+ msgstr ""
+ 
+@@ -15006,6 +15222,10 @@
+ msgid "just skip files which cannot be added because of errors"
+ msgstr ""
+ 
++#. TRANSLATORS: SI decimal prefix symbol for 10^3
++msgid "k"
++msgstr ""
++
+ msgid "keep"
+ msgstr ""
+ 
+@@ -15064,7 +15284,7 @@
+ msgid "label tags with mark ids"
+ msgstr ""
+ 
+-msgid "last-modified can only operate on one tree at a time"
++msgid "last-modified can only operate on one revision at a time"
+ msgstr ""
+ 
+ msgid "layout to use"
+@@ -15131,6 +15351,9 @@
+ msgid "line is badly quoted: %s"
+ msgstr ""
+ 
++msgid "lines are separated with NUL character"
++msgstr ""
++
+ msgid "linewrap output"
+ msgstr ""
+ 
+@@ -15312,6 +15535,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "malformed lock pid file '%s'"
++msgstr ""
++
++#, c-format
+ msgid "malformed mergetag in commit '%s'"
+ msgstr ""
+ 
+@@ -16431,10 +16658,6 @@
+ msgid "notice files missing from worktree"
+ msgstr ""
+ 
+-#, c-format
+-msgid "notice: %s points to an unborn branch (%s)"
+-msgstr ""
+-
+ msgid "notice: No default references"
+ msgstr ""
+ 
+@@ -17010,6 +17233,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "packfile %s is a promisor but --exclude-promisor-objects was given"
++msgstr ""
++
++#, c-format
+ msgid "packfile name '%s' does not end with '.%s'"
+ msgstr ""
+ 
+@@ -17307,6 +17534,9 @@
+ msgid "please use two different terms"
+ msgstr ""
+ 
++msgid "polling inotify message stream failed"
++msgstr ""
++
+ msgid "populate log with at most <n> entries from shortlog"
+ msgstr ""
+ 
+@@ -17397,6 +17627,9 @@
+ msgid "print all configuration variable names"
+ msgstr ""
+ 
++msgid "print all keys/values"
++msgstr ""
++
+ msgid "print command description"
+ msgstr ""
+ 
+@@ -17594,6 +17827,9 @@
+ msgid "prune loose refs (default)"
+ msgstr ""
+ 
++msgid "prune missing working trees older than <time>"
++msgstr ""
++
+ msgid "prune remote-tracking branches no longer on remote"
+ msgstr ""
+ 
+@@ -17805,6 +18041,9 @@
+ msgid "reading from '%s' beyond a symbolic link"
+ msgstr ""
+ 
++msgid "reading inotify message stream failed"
++msgstr ""
++
+ msgid "reading patches from stdin/tty..."
+ msgstr ""
+ 
+@@ -17923,6 +18162,9 @@
+ msgid "reference '%s' does not point to a blob"
+ msgstr ""
+ 
++msgid "reference backend uri is not provided"
++msgstr ""
++
+ msgid "reference does not exist"
+ msgstr ""
+ 
+@@ -17999,6 +18241,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "reftable stack for worktree '%s' is broken"
++msgstr ""
++
++#, c-format
+ msgid "reftable: transaction failure: %s"
+ msgstr ""
+ 
+@@ -18017,7 +18263,11 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "refusing to create/use '%s' in another submodule's git dir"
++msgid "refusing to create/use '%s' in another submodule's  git dir."
++msgstr ""
++
++#, c-format
++msgid "refusing to create/use '%s' in another submodule's git dir. Enabling extensions.submodulePathConfig should fix this."
+ msgstr ""
+ 
+ msgid "refusing to delete current working directory"
+@@ -18033,10 +18283,6 @@
+ msgid "refusing to merge unrelated histories"
+ msgstr ""
+ 
+-#, c-format
+-msgid "refusing to move '%s' into an existing git dir"
+-msgstr ""
+-
+ msgid "refusing to read cookies from http.cookiefile '-'"
+ msgstr ""
+ 
+@@ -18289,7 +18535,7 @@
+ msgid "replay onto given commit"
+ msgstr ""
+ 
+-msgid "replaying down to root commit is not supported yet!"
++msgid "replaying down from root commit is not supported yet!"
+ msgstr ""
+ 
+ msgid "replaying merge commits is not supported yet!"
+@@ -18523,6 +18769,9 @@
+ msgid "revision"
+ msgstr ""
+ 
++msgid "revision argument is not a commit-ish"
++msgstr ""
++
+ msgid "revision arguments not allowed"
+ msgstr ""
+ 
+@@ -18540,6 +18789,9 @@
+ msgid "rewrite the old SHA1 with the new SHA1 of the entry that now precedes it"
+ msgstr ""
+ 
++msgid "rewritten commit must be an ancestor of HEAD when using --ref-action=head"
++msgstr ""
++
+ msgid "rfc"
+ msgstr ""
+ 
+@@ -18997,6 +19249,9 @@
+ msgid "show info page"
+ msgstr ""
+ 
++msgid "show keys"
++msgstr ""
++
+ msgid "show line endings of files"
+ msgstr ""
+ 
+@@ -19398,7 +19653,7 @@
+ msgid "specifying branches to track makes sense only with fetch mirrors"
+ msgstr ""
+ 
+-msgid "spend extra cycles to find better match"
++msgid "spend extra cycles to find a better match"
+ msgstr ""
+ 
+ #, c-format
+@@ -19551,6 +19806,24 @@
+ msgstr ""
+ 
+ #, c-format
++msgid ""
++"stripping invalid signature for commit\n"
++"  allegedly by %s"
++msgstr ""
++
++#, c-format
++msgid ""
++"stripping invalid signature for commit '%.*s'\n"
++"  allegedly by %s"
++msgstr ""
++
++#, c-format
++msgid ""
++"stripping invalid signature for commit '%.100s...'\n"
++"  allegedly by %s"
++msgstr ""
++
++#, c-format
+ msgid "stripping signature from tag %s"
+ msgstr ""
+ 
+@@ -19832,6 +20105,10 @@
+ msgid "the '--set-upstream' option is no longer supported. Please use '--track' or '--set-upstream-to' instead"
+ msgstr ""
+ 
++#, c-format
++msgid "the 'submodule.%s.gitdir' config does not exist for module '%s'. Please ensure it is set, for example by running something like: 'git config submodule.%s.gitdir .git/modules/%s'. For details see the extensions.submodulePathConfig documentation."
++msgstr ""
++
+ msgid ""
+ "the -a, and -r, options to 'git branch' do not take a branch name.\n"
+ "Did you mean to use: -a|-r --list <pattern>?"
+@@ -20223,6 +20500,9 @@
+ msgid "unable to add recent objects"
+ msgstr ""
+ 
++msgid "unable to add trailers to commit message"
++msgstr ""
++
+ #, c-format
+ msgid "unable to adjust shared permissions for '%s'"
+ msgstr ""
+@@ -20610,6 +20890,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unable to parse parent commit %s"
++msgstr ""
++
++#, c-format
+ msgid "unable to parse remote unpack status: %s"
+ msgstr ""
+ 
+@@ -20727,9 +21011,6 @@
+ msgid "unable to set up work tree using invalid config"
+ msgstr ""
+ 
+-msgid "unable to setup last-modified"
+-msgstr ""
+-
+ msgid "unable to sign the tag"
+ msgstr ""
+ 
+@@ -21006,6 +21287,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unknown MIDX version: %d"
++msgstr ""
++
++#, c-format
+ msgid "unknown action: %d"
+ msgstr ""
+ 
+@@ -21162,6 +21447,10 @@
+ msgid "unknown ref storage format '%s'"
+ msgstr ""
+ 
++#, c-format
++msgid "unknown reference backend '%s'"
++msgstr ""
++
+ msgid "unknown repository extension found:"
+ msgid_plural "unknown repository extensions found:"
+ msgstr[0] ""
+@@ -21319,6 +21608,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unrecognized value for '%s': '%s'"
++msgstr ""
++
++#, c-format
+ msgid "unrecognized value transfer.credentialsInUrl: '%s'"
+ msgstr ""
+ 
+@@ -21340,6 +21633,12 @@
+ msgid "unselect specified items"
+ msgstr ""
+ 
++msgid "unset all multi-valued config options"
++msgstr ""
++
++msgid "unset multi-valued config options with matching values"
++msgstr ""
++
+ msgid "unset the upstream info"
+ msgstr ""
+ 
+@@ -21412,6 +21711,9 @@
+ msgid "update <refname> not the one it points to"
+ msgstr ""
+ 
++msgid "update all branches that point at commits in <revision-range>"
++msgstr ""
++
+ msgid "update branches that point to commits that are being rebased"
+ msgstr ""
+ 
+@@ -21748,10 +22050,10 @@
+ msgid "use the specified name-hash function to group similar objects"
+ msgstr ""
+ 
+-msgid "use the stable patch-id algorithm"
++msgid "use the stable patch ID algorithm"
+ msgstr ""
+ 
+-msgid "use the unstable patch-id algorithm"
++msgid "use the unstable patch ID algorithm"
+ msgstr ""
+ 
+ msgid "use thin pack"
