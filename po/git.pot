@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2026-01-22 23:57+0000\n"
+"POT-Creation-Date: 2026-01-23 23:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -833,7 +833,7 @@ msgstr ""
 #: builtin/notes.c:601 builtin/notes.c:613 builtin/notes.c:699
 #: builtin/notes.c:776 builtin/notes.c:930 builtin/notes.c:1093
 #: builtin/notes.c:1117 builtin/prune-packed.c:29 builtin/receive-pack.c:2620
-#: builtin/refs.c:52 builtin/repo.c:704 builtin/tag.c:653
+#: builtin/refs.c:52 builtin/repo.c:692 builtin/tag.c:653
 #: t/helper/test-pkt-line.c:89
 msgid "too many arguments"
 msgstr ""
@@ -2633,8 +2633,8 @@ msgstr ""
 #: builtin/cat-file.c:1079 builtin/cat-file.c:1083 builtin/cat-file.c:1090
 #: builtin/clone.c:980 builtin/diagnose.c:32 builtin/for-each-ref.c:37
 #: builtin/init-db.c:111 builtin/ls-files.c:649 builtin/ls-tree.c:369
-#: builtin/refs.c:36 builtin/replace.c:571 builtin/repo.c:210
-#: builtin/repo.c:691 builtin/submodule--helper.c:2058
+#: builtin/refs.c:36 builtin/replace.c:571 builtin/repo.c:201
+#: builtin/repo.c:679 builtin/submodule--helper.c:2058
 #: builtin/submodule--helper.c:3011 builtin/submodule--helper.c:3659
 #: builtin/tag.c:533 builtin/verify-tag.c:34
 msgid "format"
@@ -8606,7 +8606,7 @@ msgstr ""
 msgid "write dangling objects in .git/lost-found"
 msgstr ""
 
-#: builtin/fsck.c:976 builtin/prune.c:163 builtin/repo.c:698
+#: builtin/fsck.c:976 builtin/prune.c:163 builtin/repo.c:686
 msgid "show progress"
 msgstr ""
 
@@ -10079,7 +10079,8 @@ msgid "last-modified can only operate on one revision at a time"
 msgstr ""
 
 #: builtin/last-modified.c:155
-msgid "revision argument is not a commit-ish"
+#, c-format
+msgid "revision argument '%s' is a %s, not a commit-ish"
 msgstr ""
 
 #: builtin/last-modified.c:499
@@ -12101,7 +12102,7 @@ msgstr ""
 msgid "delta base offset out of bound for %s"
 msgstr ""
 
-#: builtin/pack-objects.c:2567 builtin/repo.c:673
+#: builtin/pack-objects.c:2567 builtin/repo.c:661
 msgid "Counting objects"
 msgstr ""
 
@@ -14811,105 +14812,105 @@ msgid ""
 "will be forced"
 msgstr ""
 
-#: builtin/repo.c:124
+#: builtin/repo.c:122
 #, c-format
 msgid "key '%s' not found"
 msgstr ""
 
-#: builtin/repo.c:169
-msgid "--keys can only be used with --format=default or --format=nul"
+#: builtin/repo.c:164
+msgid "--keys can only be used with --format=lines or --format=nul"
 msgstr ""
 
-#: builtin/repo.c:198
+#: builtin/repo.c:189
 #, c-format
 msgid "invalid format '%s'"
 msgstr ""
 
-#: builtin/repo.c:211 builtin/repo.c:692
+#: builtin/repo.c:202 builtin/repo.c:680
 msgid "output format"
 msgstr ""
 
-#: builtin/repo.c:214 builtin/repo.c:695
+#: builtin/repo.c:205 builtin/repo.c:683
 msgid "synonym for --format=nul"
 msgstr ""
 
-#: builtin/repo.c:217
+#: builtin/repo.c:208
 msgid "print all keys/values"
 msgstr ""
 
-#: builtin/repo.c:218
+#: builtin/repo.c:209
 msgid "show keys"
 msgstr ""
 
-#: builtin/repo.c:225
+#: builtin/repo.c:216
 msgid "--keys cannot be used with a <key> or --all"
 msgstr ""
 
-#: builtin/repo.c:234
+#: builtin/repo.c:222
 msgid "unsupported output format"
 msgstr ""
 
-#: builtin/repo.c:237
+#: builtin/repo.c:225
 msgid "--all and <key> cannot be used together"
 msgstr ""
 
-#: builtin/repo.c:376
+#: builtin/repo.c:364
 msgid "References"
 msgstr ""
 
-#: builtin/repo.c:377 builtin/repo.c:386
+#: builtin/repo.c:365 builtin/repo.c:374
 msgid "Count"
 msgstr ""
 
-#: builtin/repo.c:378
+#: builtin/repo.c:366
 msgid "Branches"
 msgstr ""
 
-#: builtin/repo.c:379 builtin/repo.c:394 builtin/repo.c:406 builtin/repo.c:418
+#: builtin/repo.c:367 builtin/repo.c:382 builtin/repo.c:394 builtin/repo.c:406
 msgid "Tags"
 msgstr ""
 
-#: builtin/repo.c:380
+#: builtin/repo.c:368
 msgid "Remotes"
 msgstr ""
 
-#: builtin/repo.c:381
+#: builtin/repo.c:369
 msgid "Others"
 msgstr ""
 
-#: builtin/repo.c:385
+#: builtin/repo.c:373
 msgid "Reachable objects"
 msgstr ""
 
-#: builtin/repo.c:388 builtin/repo.c:400 builtin/repo.c:412
+#: builtin/repo.c:376 builtin/repo.c:388 builtin/repo.c:400
 msgid "Commits"
 msgstr ""
 
-#: builtin/repo.c:390 builtin/repo.c:402 builtin/repo.c:414
+#: builtin/repo.c:378 builtin/repo.c:390 builtin/repo.c:402
 msgid "Trees"
 msgstr ""
 
-#: builtin/repo.c:392 builtin/repo.c:404 builtin/repo.c:416
+#: builtin/repo.c:380 builtin/repo.c:392 builtin/repo.c:404
 msgid "Blobs"
 msgstr ""
 
-#: builtin/repo.c:398
+#: builtin/repo.c:386
 msgid "Inflated size"
 msgstr ""
 
-#: builtin/repo.c:410
+#: builtin/repo.c:398
 msgid "Disk size"
 msgstr ""
 
-#: builtin/repo.c:423
+#: builtin/repo.c:411
 msgid "Repository structure"
 msgstr ""
 
-#: builtin/repo.c:424
+#: builtin/repo.c:412
 msgid "Value"
 msgstr ""
 
-#: builtin/repo.c:589
+#: builtin/repo.c:577
 msgid "Counting references"
 msgstr ""
 
@@ -22700,28 +22701,28 @@ msgstr ""
 msgid "Bad %s value: '%s'"
 msgstr ""
 
-#: object-file-convert.c:88
+#: object-file-convert.c:80
 msgid "failed to decode tree entry"
 msgstr ""
 
-#: object-file-convert.c:90
+#: object-file-convert.c:82
 #, c-format
 msgid "failed to map tree entry for %s"
 msgstr ""
 
-#: object-file-convert.c:169 object-file-convert.c:176
-#: object-file-convert.c:188 object-file-convert.c:208
-#: object-file-convert.c:244
+#: object-file-convert.c:161 object-file-convert.c:168
+#: object-file-convert.c:180 object-file-convert.c:200
+#: object-file-convert.c:236
 #, c-format
 msgid "bad %s in commit"
 msgstr ""
 
-#: object-file-convert.c:179 object-file-convert.c:191
+#: object-file-convert.c:171 object-file-convert.c:183
 #, c-format
 msgid "unable to map %s %s in commit object"
 msgstr ""
 
-#: object-file-convert.c:289
+#: object-file-convert.c:281
 #, c-format
 msgid "Failed to convert object from %s to %s"
 msgstr ""
@@ -25496,10 +25497,6 @@ msgstr ""
 
 #: replay.c:309
 msgid "replaying merge commits is not supported yet!"
-msgstr ""
-
-#: repository.c:198
-msgid "compatibility hash algorithm support requires Rust"
 msgstr ""
 
 #: rerere.c:216 rerere.c:225 rerere.c:228
