@@ -1,0 +1,119 @@
+
+
+#################### Sat, 24 Jan 2026 02:46:53 +0000 ####################
+
+--- po/git.pot.old	2026-01-24 02:46:53.247299351 +0000
++++ po/git.pot.new	2026-01-24 02:46:53.327298889 +0000
+@@ -9865,6 +9865,12 @@
+ msgid "could not edit '%s'"
+ msgstr ""
+ 
++msgid ""
++"could not enable submodulePathConfig extension. It is required\n"
++"for migration to work. Please enable it in the root repo:\n"
++"git config extensions.submodulePathConfig true"
++msgstr ""
++
+ #, c-format
+ msgid "could not even attempt to merge '%.*s'"
+ msgstr ""
+@@ -10403,6 +10409,12 @@
+ msgid "could not set '%s' to '%s'"
+ msgstr ""
+ 
++msgid ""
++"could not set core.repositoryformatversion to 1.\n"
++"Please set it for migration to work, for example:\n"
++"git config core.repositoryformatversion 1"
++msgstr ""
++
+ msgid "could not set recommended config"
+ msgstr ""
+ 
+@@ -11402,6 +11414,9 @@
+ msgid "enable/disable untracked cache"
+ msgstr ""
+ 
++msgid "enabling extensions.submodulePathConfig might fix the following error, if it's not already enabled."
++msgstr ""
++
+ msgid "encoding"
+ msgstr ""
+ 
+@@ -12288,6 +12303,10 @@
+ msgid "failed to run systemctl"
+ msgstr ""
+ 
++#, c-format
++msgid "failed to set a valid default config for 'submodule.%s.gitdir'. Please ensure it is set, for example by running something like: 'git config submodule.%s.gitdir .git/modules/%s'"
++msgstr ""
++
+ msgid "failed to set extensions.worktreeConfig setting"
+ msgstr ""
+ 
+@@ -13301,7 +13320,9 @@
+ "                       [--parse] [<file>...]"
+ msgstr ""
+ 
+-msgid "git last-modified [--recursive] [--show-trees] [<revision-range>] [[--] <path>...]"
++msgid ""
++"git last-modified [--recursive] [--show-trees] [--max-depth=<depth>] [-z]\n"
++"                  [<revision-range>] [[--] <pathspec>...]"
+ msgstr ""
+ 
+ msgid "git log --pretty=short | git shortlog [<options>]"
+@@ -13818,6 +13839,9 @@
+ msgid "git submodule--helper create-branch [-f|--force] [--create-reflog] [-q|--quiet] [-t|--track] [-n|--dry-run] <name> <start-oid> <start-name>"
+ msgstr ""
+ 
++msgid "git submodule--helper gitdir <name>"
++msgstr ""
++
+ msgid "git switch [<options>] [<branch>]"
+ msgstr ""
+ 
+@@ -15196,6 +15220,9 @@
+ msgid "line is badly quoted: %s"
+ msgstr ""
+ 
++msgid "lines are separated with NUL character"
++msgstr ""
++
+ msgid "linewrap output"
+ msgstr ""
+ 
+@@ -18089,7 +18116,11 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "refusing to create/use '%s' in another submodule's git dir"
++msgid "refusing to create/use '%s' in another submodule's  git dir."
++msgstr ""
++
++#, c-format
++msgid "refusing to create/use '%s' in another submodule's git dir. Enabling extensions.submodulePathConfig should fix this."
+ msgstr ""
+ 
+ msgid "refusing to delete current working directory"
+@@ -18105,10 +18136,6 @@
+ msgid "refusing to merge unrelated histories"
+ msgstr ""
+ 
+-#, c-format
+-msgid "refusing to move '%s' into an existing git dir"
+-msgstr ""
+-
+ msgid "refusing to read cookies from http.cookiefile '-'"
+ msgstr ""
+ 
+@@ -19922,6 +19949,10 @@
+ msgid "the '--set-upstream' option is no longer supported. Please use '--track' or '--set-upstream-to' instead"
+ msgstr ""
+ 
++#, c-format
++msgid "the 'submodule.%s.gitdir' config does not exist for module '%s'. Please ensure it is set, for example by running something like: 'git config submodule.%s.gitdir .git/modules/%s'. For details see the extensions.submodulePathConfig documentation."
++msgstr ""
++
+ msgid ""
+ "the -a, and -r, options to 'git branch' do not take a branch name.\n"
+ "Did you mean to use: -a|-r --list <pattern>?"
