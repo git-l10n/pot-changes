@@ -994,3 +994,491 @@
  msgid "compiler info: "
  msgstr ""
  
+
+
+#################### Tue, 03 Feb 2026 21:20:22 +0000 ####################
+
+--- po/git.pot.old	2026-02-03 21:20:22.337965039 +0000
++++ po/git.pot.new	2026-02-03 21:20:22.415965000 +0000
+@@ -1579,9 +1579,6 @@
+ msgid "'GIT_AUTHOR_NAME' already given"
+ msgstr ""
+ 
+-msgid "'auto' filter not supported by this command"
+-msgstr ""
+-
+ msgid ""
+ "'core.preferSymlinkRefs=true' is nominated for removal.\n"
+ "hint: The use of symbolic links for symbolic refs is deprecated\n"
+@@ -1959,12 +1956,6 @@
+ msgid "--interdiff requires --cover-letter or single patch"
+ msgstr ""
+ 
+-msgid "--keys can only be used with --format=lines or --format=nul"
+-msgstr ""
+-
+-msgid "--keys cannot be used with a <key> or --all"
+-msgstr ""
+-
+ msgid "--local can only be used inside a git repository"
+ msgstr ""
+ 
+@@ -2473,9 +2464,6 @@
+ msgid "Annotate file lines with commit information"
+ msgstr ""
+ 
+-msgid "Another git process seems to be running in this repository, or the lock file may be stale"
+-msgstr ""
+-
+ #, c-format
+ msgid "Applied autostash.\n"
+ msgstr ""
+@@ -4171,12 +4159,11 @@
+ "* Disable or modify the sparsity rules."
+ msgstr ""
+ 
+-#, c-format
+ msgid ""
+ "If you meant to check out a remote tracking branch on, e.g. 'origin',\n"
+ "you can do so by fully qualifying the name with the --track option:\n"
+ "\n"
+-"    git %s --track origin/<name>\n"
++"    git checkout --track origin/<name>\n"
+ "\n"
+ "If you'd like to always have checkouts of an ambiguous <name> prefer\n"
+ "one remote, e.g. the 'origin' remote, consider setting\n"
+@@ -4467,14 +4454,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "Lock may be held by process %<PRIuMAX>; if no git process is running, the lock file may be stale (PIDs can be reused)"
+-msgstr ""
+-
+-#, c-format
+-msgid "Lock was held by process %<PRIuMAX>, which is no longer running; the lock file appears to be stale"
+-msgstr ""
+-
+-#, c-format
+ msgid "Lockfile created but not reported: %s"
+ msgstr ""
+ 
+@@ -4504,13 +4483,6 @@
+ msgid "M"
+ msgstr ""
+ 
+-#, c-format
+-msgid "MIDX %s must be an ancestor of %s"
+-msgstr ""
+-
+-msgid "MIDX compaction endpoints must be unique"
+-msgstr ""
+-
+ msgid "MIDX does not contain the BTMP chunk"
+ msgstr ""
+ 
+@@ -5683,12 +5655,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid ""
+-"Skipping submodule due to ignore=all: %s\n"
+-"Use --force if you really want to add the submodule."
+-msgstr ""
+-
+-#, c-format
+ msgid "Skipping unmerged submodule %s"
+ msgstr ""
+ 
+@@ -5791,12 +5757,6 @@
+ 
+ #, c-format
+ msgid ""
+-"Storing new %s from server for remote '%s'.\n"
+-"    '%s' -> '%s'\n"
+-msgstr ""
+-
+-#, c-format
+-msgid ""
+ "Stray %s directory found.\n"
+ "Use \"git am --abort\" to remove it."
+ msgstr ""
+@@ -6437,13 +6397,18 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid ""
+-"Unable to create '%s': %s.\n"
+-"\n"
++msgid "Unable to create '%s.lock': %s"
+ msgstr ""
+ 
+ #, c-format
+-msgid "Unable to create '%s.lock': %s"
++msgid ""
++"Unable to create '%s.lock': %s.\n"
++"\n"
++"Another git process seems to be running in this repository, e.g.\n"
++"an editor opened by 'git commit'. Please make sure all processes\n"
++"are terminated then try again. If it still fails, a git process\n"
++"may have crashed in this repository earlier:\n"
++"remove the file manually to continue."
+ msgstr ""
+ 
+ msgid "Unable to create FSEventStream."
+@@ -7776,12 +7741,6 @@
+ msgid "amend previous commit"
+ msgstr ""
+ 
+-msgid "an 'auto' filter cannot be combined"
+-msgstr ""
+-
+-msgid "an 'auto' filter is incompatible with any other filter"
+-msgstr ""
+-
+ msgid "and made changes to the index and/or the working tree.\n"
+ msgstr ""
+ 
+@@ -7896,9 +7855,6 @@
+ msgid "asked to inherit tracking from '%s', but no remote is set"
+ msgstr ""
+ 
+-msgid "assuming SHA-1; use --object-format to override"
+-msgstr ""
+-
+ msgid "attach the patch"
+ msgstr ""
+ 
+@@ -8923,9 +8879,6 @@
+ msgid "cannot parse parents of commit: %s"
+ msgstr ""
+ 
+-msgid "cannot perform MIDX compaction with v1 format"
+-msgstr ""
+-
+ msgid "cannot perform queued object checks outside of a repository"
+ msgstr ""
+ 
+@@ -9345,9 +9298,6 @@
+ msgid "closing file '%s'"
+ msgstr ""
+ 
+-msgid "closing inotify file descriptor failed"
+-msgstr ""
+-
+ msgid "cmdline ends with \\"
+ msgstr ""
+ 
+@@ -9716,9 +9666,6 @@
+ msgid "corrupt ewah bitmap: truncated header for entry %d"
+ msgstr ""
+ 
+-msgid "corrupt index file"
+-msgstr ""
+-
+ #, c-format
+ msgid "corrupt loose object '%s'"
+ msgstr ""
+@@ -9989,14 +9936,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "could not find MIDX with checksum %s"
+-msgstr ""
+-
+-#, c-format
+-msgid "could not find MIDX: %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "could not find author in commit %s"
+ msgstr ""
+ 
+@@ -10100,15 +10039,13 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "could not load .mtimes for cruft pack '%s'"
++msgid "could not load bitmapped pack %<PRIu32>"
+ msgstr ""
+ 
+-#, c-format
+-msgid "could not load bitmapped pack %<PRIu32>"
++msgid "could not load cruft pack .mtimes"
+ msgstr ""
+ 
+-#, c-format
+-msgid "could not load pack %d"
++msgid "could not load pack"
+ msgstr ""
+ 
+ #, c-format
+@@ -10673,10 +10610,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "could not write lock pid file '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "could not write loose object index %s"
+ msgstr ""
+ 
+@@ -10728,10 +10661,6 @@
+ msgid "couldn't open the file '%s'"
+ msgstr ""
+ 
+-#, c-format
+-msgid "couldn't resolve 'auto' filter: %s"
+-msgstr ""
+-
+ msgid "couldn't run fast-export"
+ msgstr ""
+ 
+@@ -13493,11 +13422,6 @@
+ msgid "git merge-tree [--write-tree] [<options>] <branch1> <branch2>"
+ msgstr ""
+ 
+-msgid ""
+-"git multi-pack-index [<options>] compact [--[no-]incremental]\n"
+-"  [--[no-]bitmap] <from> <to>"
+-msgstr ""
+-
+ msgid "git multi-pack-index [<options>] expire"
+ msgstr ""
+ 
+@@ -13507,10 +13431,7 @@
+ msgid "git multi-pack-index [<options>] verify"
+ msgstr ""
+ 
+-msgid ""
+-"git multi-pack-index [<options>] write [--preferred-pack=<pack>]\n"
+-"  [--[no-]bitmap] [--[no-]incremental] [--[no-]stdin-packs]\n"
+-"  [--refs-snapshot=<path>]"
++msgid "git multi-pack-index [<options>] write [--preferred-pack=<pack>][--refs-snapshot=<path>]"
+ msgstr ""
+ 
+ msgid "git mv [-v] [-f] [-n] [-k] <source> <destination>"
+@@ -13957,9 +13878,6 @@
+ msgid "git submodule--helper create-branch [-f|--force] [--create-reflog] [-q|--quiet] [-t|--track] [-n|--dry-run] <name> <start-oid> <start-name>"
+ msgstr ""
+ 
+-msgid "git submodule--helper get-default-remote <path>"
+-msgstr ""
+-
+ msgid "git submodule--helper gitdir <name>"
+ msgstr ""
+ 
+@@ -14571,9 +14489,6 @@
+ msgid "inconsistency with delta count"
+ msgstr ""
+ 
+-msgid "inconsistent 64b offset index"
+-msgstr ""
+-
+ #, c-format
+ msgid "inconsistent header lines %d and %d"
+ msgstr ""
+@@ -14652,16 +14567,6 @@
+ msgid "inline the patch"
+ msgstr ""
+ 
+-#, c-format
+-msgid "inotify_add_watch('%s') failed"
+-msgstr ""
+-
+-msgid "inotify_init1() failed"
+-msgstr ""
+-
+-msgid "inotify_rm_watch() failed"
+-msgstr ""
+-
+ msgid "input is NUL terminated"
+ msgstr ""
+ 
+@@ -14893,10 +14798,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "invalid filter '%s' for remote '%s' will not be stored: %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "invalid filter-spec '%s'"
+ msgstr ""
+ 
+@@ -15165,10 +15066,6 @@
+ msgid "invalid timezone offset"
+ msgstr ""
+ 
+-#, c-format
+-msgid "invalid token '%s' for remote '%s' will not be stored"
+-msgstr ""
+-
+ msgid "invalid transfer encoding"
+ msgstr ""
+ 
+@@ -15295,7 +15192,7 @@
+ msgid "label tags with mark ids"
+ msgstr ""
+ 
+-msgid "last-modified can only operate on one commit at a time"
++msgid "last-modified can only operate on one tree at a time"
+ msgstr ""
+ 
+ msgid "layout to use"
+@@ -15546,10 +15443,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "malformed lock pid file '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "malformed mergetag in commit '%s'"
+ msgstr ""
+ 
+@@ -17545,9 +17438,6 @@
+ msgid "please use two different terms"
+ msgstr ""
+ 
+-msgid "polling inotify message stream failed"
+-msgstr ""
+-
+ msgid "populate log with at most <n> entries from shortlog"
+ msgstr ""
+ 
+@@ -18052,9 +17942,6 @@
+ msgid "reading from '%s' beyond a symbolic link"
+ msgstr ""
+ 
+-msgid "reading inotify message stream failed"
+-msgstr ""
+-
+ msgid "reading patches from stdin/tty..."
+ msgstr ""
+ 
+@@ -18777,10 +18664,6 @@
+ msgid "revision"
+ msgstr ""
+ 
+-#, c-format
+-msgid "revision argument '%s' is a %s, not a commit-ish"
+-msgstr ""
+-
+ msgid "revision arguments not allowed"
+ msgstr ""
+ 
+@@ -19258,9 +19141,6 @@
+ msgid "show info page"
+ msgstr ""
+ 
+-msgid "show keys"
+-msgstr ""
+-
+ msgid "show line endings of files"
+ msgstr ""
+ 
+@@ -20922,14 +20802,6 @@
+ msgid "unable to read %s"
+ msgstr ""
+ 
+-#, c-format
+-msgid "unable to read 32b offset %u/%u"
+-msgstr ""
+-
+-#, c-format
+-msgid "unable to read 64b offset %u"
+-msgstr ""
+-
+ msgid "unable to read alternates file"
+ msgstr ""
+ 
+@@ -20945,14 +20817,6 @@
+ msgid "unable to read config file '%s'"
+ msgstr ""
+ 
+-#, c-format
+-msgid "unable to read crc %u/%u"
+-msgstr ""
+-
+-#, c-format
+-msgid "unable to read entry %u/%u"
+-msgstr ""
+-
+ msgid "unable to read from mktree"
+ msgstr ""
+ 
+@@ -20960,20 +20824,10 @@
+ msgid "unable to read gitdir file (%s)"
+ msgstr ""
+ 
+-msgid "unable to read header"
+-msgstr ""
+-
+-msgid "unable to read index"
+-msgstr ""
+-
+ msgid "unable to read index file"
+ msgstr ""
+ 
+ #, c-format
+-msgid "unable to read sha1 %u/%u"
+-msgstr ""
+-
+-#, c-format
+ msgid "unable to read signature file '%s'"
+ msgstr ""
+ 
+@@ -21043,6 +20897,9 @@
+ msgid "unable to set up work tree using invalid config"
+ msgstr ""
+ 
++msgid "unable to setup last-modified"
++msgstr ""
++
+ msgid "unable to sign the tag"
+ msgstr ""
+ 
+@@ -21319,10 +21176,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unknown MIDX version: %d"
+-msgstr ""
+-
+-#, c-format
+ msgid "unknown action: %d"
+ msgstr ""
+ 
+@@ -21399,9 +21252,6 @@
+ msgid "unknown index entry format 0x%08x"
+ msgstr ""
+ 
+-msgid "unknown index version"
+-msgstr ""
+-
+ #, c-format
+ msgid "unknown last-modified argument: %s"
+ msgstr ""
+@@ -21482,10 +21332,6 @@
+ msgid "unknown ref storage format '%s'"
+ msgstr ""
+ 
+-#, c-format
+-msgid "unknown ref storage format: '%s'"
+-msgstr ""
+-
+ msgid "unknown repository extension found:"
+ msgid_plural "unknown repository extensions found:"
+ msgstr[0] ""
+@@ -21643,10 +21489,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unrecognized value for '%s': '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "unrecognized value transfer.credentialsInUrl: '%s'"
+ msgstr ""
+ 
