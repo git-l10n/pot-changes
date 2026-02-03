@@ -1482,3 +1482,228 @@
  msgid "unrecognized value transfer.credentialsInUrl: '%s'"
  msgstr ""
  
+
+
+#################### Tue, 03 Feb 2026 22:16:18 +0000 ####################
+
+--- po/git.pot.old	2026-02-03 22:16:17.945760211 +0000
++++ po/git.pot.new	2026-02-03 22:16:18.027760000 +0000
+@@ -2464,6 +2464,9 @@
+ msgid "Annotate file lines with commit information"
+ msgstr ""
+ 
++msgid "Another git process seems to be running in this repository, or the lock file may be stale"
++msgstr ""
++
+ #, c-format
+ msgid "Applied autostash.\n"
+ msgstr ""
+@@ -4159,11 +4162,12 @@
+ "* Disable or modify the sparsity rules."
+ msgstr ""
+ 
++#, c-format
+ msgid ""
+ "If you meant to check out a remote tracking branch on, e.g. 'origin',\n"
+ "you can do so by fully qualifying the name with the --track option:\n"
+ "\n"
+-"    git checkout --track origin/<name>\n"
++"    git %s --track origin/<name>\n"
+ "\n"
+ "If you'd like to always have checkouts of an ambiguous <name> prefer\n"
+ "one remote, e.g. the 'origin' remote, consider setting\n"
+@@ -4454,6 +4458,14 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Lock may be held by process %<PRIuMAX>; if no git process is running, the lock file may be stale (PIDs can be reused)"
++msgstr ""
++
++#, c-format
++msgid "Lock was held by process %<PRIuMAX>, which is no longer running; the lock file appears to be stale"
++msgstr ""
++
++#, c-format
+ msgid "Lockfile created but not reported: %s"
+ msgstr ""
+ 
+@@ -6397,18 +6409,13 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "Unable to create '%s.lock': %s"
++msgid ""
++"Unable to create '%s': %s.\n"
++"\n"
+ msgstr ""
+ 
+ #, c-format
+-msgid ""
+-"Unable to create '%s.lock': %s.\n"
+-"\n"
+-"Another git process seems to be running in this repository, e.g.\n"
+-"an editor opened by 'git commit'. Please make sure all processes\n"
+-"are terminated then try again. If it still fails, a git process\n"
+-"may have crashed in this repository earlier:\n"
+-"remove the file manually to continue."
++msgid "Unable to create '%s.lock': %s"
+ msgstr ""
+ 
+ msgid "Unable to create FSEventStream."
+@@ -7855,6 +7862,9 @@
+ msgid "asked to inherit tracking from '%s', but no remote is set"
+ msgstr ""
+ 
++msgid "assuming SHA-1; use --object-format to override"
++msgstr ""
++
+ msgid "attach the patch"
+ msgstr ""
+ 
+@@ -9666,6 +9676,9 @@
+ msgid "corrupt ewah bitmap: truncated header for entry %d"
+ msgstr ""
+ 
++msgid "corrupt index file"
++msgstr ""
++
+ #, c-format
+ msgid "corrupt loose object '%s'"
+ msgstr ""
+@@ -10039,10 +10052,11 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "could not load bitmapped pack %<PRIu32>"
++msgid "could not load .mtimes for cruft pack '%s'"
+ msgstr ""
+ 
+-msgid "could not load cruft pack .mtimes"
++#, c-format
++msgid "could not load bitmapped pack %<PRIu32>"
+ msgstr ""
+ 
+ msgid "could not load pack"
+@@ -10610,6 +10624,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "could not write lock pid file '%s'"
++msgstr ""
++
++#, c-format
+ msgid "could not write loose object index %s"
+ msgstr ""
+ 
+@@ -14489,6 +14507,9 @@
+ msgid "inconsistency with delta count"
+ msgstr ""
+ 
++msgid "inconsistent 64b offset index"
++msgstr ""
++
+ #, c-format
+ msgid "inconsistent header lines %d and %d"
+ msgstr ""
+@@ -15192,7 +15213,7 @@
+ msgid "label tags with mark ids"
+ msgstr ""
+ 
+-msgid "last-modified can only operate on one tree at a time"
++msgid "last-modified can only operate on one commit at a time"
+ msgstr ""
+ 
+ msgid "layout to use"
+@@ -15443,6 +15464,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "malformed lock pid file '%s'"
++msgstr ""
++
++#, c-format
+ msgid "malformed mergetag in commit '%s'"
+ msgstr ""
+ 
+@@ -18664,6 +18689,10 @@
+ msgid "revision"
+ msgstr ""
+ 
++#, c-format
++msgid "revision argument '%s' is a %s, not a commit-ish"
++msgstr ""
++
+ msgid "revision arguments not allowed"
+ msgstr ""
+ 
+@@ -20802,6 +20831,14 @@
+ msgid "unable to read %s"
+ msgstr ""
+ 
++#, c-format
++msgid "unable to read 32b offset %u/%u"
++msgstr ""
++
++#, c-format
++msgid "unable to read 64b offset %u"
++msgstr ""
++
+ msgid "unable to read alternates file"
+ msgstr ""
+ 
+@@ -20817,6 +20854,14 @@
+ msgid "unable to read config file '%s'"
+ msgstr ""
+ 
++#, c-format
++msgid "unable to read crc %u/%u"
++msgstr ""
++
++#, c-format
++msgid "unable to read entry %u/%u"
++msgstr ""
++
+ msgid "unable to read from mktree"
+ msgstr ""
+ 
+@@ -20824,10 +20869,20 @@
+ msgid "unable to read gitdir file (%s)"
+ msgstr ""
+ 
++msgid "unable to read header"
++msgstr ""
++
++msgid "unable to read index"
++msgstr ""
++
+ msgid "unable to read index file"
+ msgstr ""
+ 
+ #, c-format
++msgid "unable to read sha1 %u/%u"
++msgstr ""
++
++#, c-format
+ msgid "unable to read signature file '%s'"
+ msgstr ""
+ 
+@@ -20897,9 +20952,6 @@
+ msgid "unable to set up work tree using invalid config"
+ msgstr ""
+ 
+-msgid "unable to setup last-modified"
+-msgstr ""
+-
+ msgid "unable to sign the tag"
+ msgstr ""
+ 
+@@ -21252,6 +21304,9 @@
+ msgid "unknown index entry format 0x%08x"
+ msgstr ""
+ 
++msgid "unknown index version"
++msgstr ""
++
+ #, c-format
+ msgid "unknown last-modified argument: %s"
+ msgstr ""
