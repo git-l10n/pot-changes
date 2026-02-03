@@ -1707,3 +1707,287 @@
  #, c-format
  msgid "unknown last-modified argument: %s"
  msgstr ""
+
+
+#################### Tue, 03 Feb 2026 23:15:21 +0000 ####################
+
+--- po/git.pot.old	2026-02-03 23:15:21.525074071 +0000
++++ po/git.pot.new	2026-02-03 23:15:21.605073456 +0000
+@@ -1579,6 +1579,9 @@
+ msgid "'GIT_AUTHOR_NAME' already given"
+ msgstr ""
+ 
++msgid "'auto' filter not supported by this command"
++msgstr ""
++
+ msgid ""
+ "'core.preferSymlinkRefs=true' is nominated for removal.\n"
+ "hint: The use of symbolic links for symbolic refs is deprecated\n"
+@@ -1956,6 +1959,12 @@
+ msgid "--interdiff requires --cover-letter or single patch"
+ msgstr ""
+ 
++msgid "--keys can only be used with --format=lines or --format=nul"
++msgstr ""
++
++msgid "--keys cannot be used with a <key> or --all"
++msgstr ""
++
+ msgid "--local can only be used inside a git repository"
+ msgstr ""
+ 
+@@ -4495,6 +4504,13 @@
+ msgid "M"
+ msgstr ""
+ 
++#, c-format
++msgid "MIDX %s must be an ancestor of %s"
++msgstr ""
++
++msgid "MIDX compaction endpoints must be unique"
++msgstr ""
++
+ msgid "MIDX does not contain the BTMP chunk"
+ msgstr ""
+ 
+@@ -5667,6 +5683,12 @@
+ msgstr ""
+ 
+ #, c-format
++msgid ""
++"Skipping submodule due to ignore=all: %s\n"
++"Use --force if you really want to add the submodule."
++msgstr ""
++
++#, c-format
+ msgid "Skipping unmerged submodule %s"
+ msgstr ""
+ 
+@@ -5769,6 +5791,12 @@
+ 
+ #, c-format
+ msgid ""
++"Storing new %s from server for remote '%s'.\n"
++"    '%s' -> '%s'\n"
++msgstr ""
++
++#, c-format
++msgid ""
+ "Stray %s directory found.\n"
+ "Use \"git am --abort\" to remove it."
+ msgstr ""
+@@ -7748,6 +7776,12 @@
+ msgid "amend previous commit"
+ msgstr ""
+ 
++msgid "an 'auto' filter cannot be combined"
++msgstr ""
++
++msgid "an 'auto' filter is incompatible with any other filter"
++msgstr ""
++
+ msgid "and made changes to the index and/or the working tree.\n"
+ msgstr ""
+ 
+@@ -8889,6 +8923,9 @@
+ msgid "cannot parse parents of commit: %s"
+ msgstr ""
+ 
++msgid "cannot perform MIDX compaction with v1 format"
++msgstr ""
++
+ msgid "cannot perform queued object checks outside of a repository"
+ msgstr ""
+ 
+@@ -9308,6 +9345,9 @@
+ msgid "closing file '%s'"
+ msgstr ""
+ 
++msgid "closing inotify file descriptor failed"
++msgstr ""
++
+ msgid "cmdline ends with \\"
+ msgstr ""
+ 
+@@ -9506,6 +9546,9 @@
+ msgid "compare the commit in the index with that in the submodule HEAD"
+ msgstr ""
+ 
++msgid "compatibility hash algorithm support requires Rust"
++msgstr ""
++
+ msgid "compiler info: "
+ msgstr ""
+ 
+@@ -9949,6 +9992,14 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "could not find MIDX with checksum %s"
++msgstr ""
++
++#, c-format
++msgid "could not find MIDX: %s"
++msgstr ""
++
++#, c-format
+ msgid "could not find author in commit %s"
+ msgstr ""
+ 
+@@ -10059,7 +10110,8 @@
+ msgid "could not load bitmapped pack %<PRIu32>"
+ msgstr ""
+ 
+-msgid "could not load pack"
++#, c-format
++msgid "could not load pack %d"
+ msgstr ""
+ 
+ #, c-format
+@@ -10679,6 +10731,10 @@
+ msgid "couldn't open the file '%s'"
+ msgstr ""
+ 
++#, c-format
++msgid "couldn't resolve 'auto' filter: %s"
++msgstr ""
++
+ msgid "couldn't run fast-export"
+ msgstr ""
+ 
+@@ -13440,6 +13496,11 @@
+ msgid "git merge-tree [--write-tree] [<options>] <branch1> <branch2>"
+ msgstr ""
+ 
++msgid ""
++"git multi-pack-index [<options>] compact [--[no-]incremental]\n"
++"  [--[no-]bitmap] <from> <to>"
++msgstr ""
++
+ msgid "git multi-pack-index [<options>] expire"
+ msgstr ""
+ 
+@@ -13449,7 +13510,10 @@
+ msgid "git multi-pack-index [<options>] verify"
+ msgstr ""
+ 
+-msgid "git multi-pack-index [<options>] write [--preferred-pack=<pack>][--refs-snapshot=<path>]"
++msgid ""
++"git multi-pack-index [<options>] write [--preferred-pack=<pack>]\n"
++"  [--[no-]bitmap] [--[no-]incremental] [--[no-]stdin-packs]\n"
++"  [--refs-snapshot=<path>]"
+ msgstr ""
+ 
+ msgid "git mv [-v] [-f] [-n] [-k] <source> <destination>"
+@@ -13896,6 +13960,9 @@
+ msgid "git submodule--helper create-branch [-f|--force] [--create-reflog] [-q|--quiet] [-t|--track] [-n|--dry-run] <name> <start-oid> <start-name>"
+ msgstr ""
+ 
++msgid "git submodule--helper get-default-remote <path>"
++msgstr ""
++
+ msgid "git submodule--helper gitdir <name>"
+ msgstr ""
+ 
+@@ -14588,6 +14655,16 @@
+ msgid "inline the patch"
+ msgstr ""
+ 
++#, c-format
++msgid "inotify_add_watch('%s') failed"
++msgstr ""
++
++msgid "inotify_init1() failed"
++msgstr ""
++
++msgid "inotify_rm_watch() failed"
++msgstr ""
++
+ msgid "input is NUL terminated"
+ msgstr ""
+ 
+@@ -14819,6 +14896,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "invalid filter '%s' for remote '%s' will not be stored: %s"
++msgstr ""
++
++#, c-format
+ msgid "invalid filter-spec '%s'"
+ msgstr ""
+ 
+@@ -15087,6 +15168,10 @@
+ msgid "invalid timezone offset"
+ msgstr ""
+ 
++#, c-format
++msgid "invalid token '%s' for remote '%s' will not be stored"
++msgstr ""
++
+ msgid "invalid transfer encoding"
+ msgstr ""
+ 
+@@ -17463,6 +17548,9 @@
+ msgid "please use two different terms"
+ msgstr ""
+ 
++msgid "polling inotify message stream failed"
++msgstr ""
++
+ msgid "populate log with at most <n> entries from shortlog"
+ msgstr ""
+ 
+@@ -17967,6 +18055,9 @@
+ msgid "reading from '%s' beyond a symbolic link"
+ msgstr ""
+ 
++msgid "reading inotify message stream failed"
++msgstr ""
++
+ msgid "reading patches from stdin/tty..."
+ msgstr ""
+ 
+@@ -19170,6 +19261,9 @@
+ msgid "show info page"
+ msgstr ""
+ 
++msgid "show keys"
++msgstr ""
++
+ msgid "show line endings of files"
+ msgstr ""
+ 
+@@ -21228,6 +21322,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unknown MIDX version: %d"
++msgstr ""
++
++#, c-format
+ msgid "unknown action: %d"
+ msgstr ""
+ 
+@@ -21387,6 +21485,10 @@
+ msgid "unknown ref storage format '%s'"
+ msgstr ""
+ 
++#, c-format
++msgid "unknown ref storage format: '%s'"
++msgstr ""
++
+ msgid "unknown repository extension found:"
+ msgid_plural "unknown repository extensions found:"
+ msgstr[0] ""
+@@ -21544,6 +21646,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unrecognized value for '%s': '%s'"
++msgstr ""
++
++#, c-format
+ msgid "unrecognized value transfer.credentialsInUrl: '%s'"
+ msgstr ""
+ 
