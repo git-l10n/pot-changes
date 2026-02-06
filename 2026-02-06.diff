@@ -491,3 +491,539 @@
  msgid "unrecognized value transfer.credentialsInUrl: '%s'"
  msgstr ""
  
+
+
+#################### Fri, 06 Feb 2026 23:02:25 +0000 ####################
+
+--- po/git.pot.old	2026-02-06 23:02:25.524801449 +0000
++++ po/git.pot.new	2026-02-06 23:02:25.606801903 +0000
+@@ -1,3 +1,9 @@
++#, c-format
++msgid ""
++"\n"
++"%s All hunks decided. What now? "
++msgstr ""
++
+ msgid ""
+ "\n"
+ "(use --cached to keep the file, or -f to force removal)"
+@@ -1579,6 +1585,9 @@
+ msgid "'GIT_AUTHOR_NAME' already given"
+ msgstr ""
+ 
++msgid "'auto' filter not supported by this command"
++msgstr ""
++
+ msgid ""
+ "'core.preferSymlinkRefs=true' is nominated for removal.\n"
+ "hint: The use of symbolic links for symbolic refs is deprecated\n"
+@@ -1643,6 +1652,10 @@
+ msgid "'git status --porcelain=2' failed in submodule %s"
+ msgstr ""
+ 
++#, c-format
++msgid "'hook.%s.command' must be configured or'hook.%s.event' must be removed; aborting.\n"
++msgstr ""
++
+ msgid "'option' without a matching 'ok/error' directive"
+ msgstr ""
+ 
+@@ -1956,6 +1969,12 @@
+ msgid "--interdiff requires --cover-letter or single patch"
+ msgstr ""
+ 
++msgid "--keys can only be used with --format=lines or --format=nul"
++msgstr ""
++
++msgid "--keys cannot be used with a <key> or --all"
++msgstr ""
++
+ msgid "--local can only be used inside a git repository"
+ msgstr ""
+ 
+@@ -2464,6 +2483,9 @@
+ msgid "Annotate file lines with commit information"
+ msgstr ""
+ 
++msgid "Another git process seems to be running in this repository, or the lock file may be stale"
++msgstr ""
++
+ #, c-format
+ msgid "Applied autostash.\n"
+ msgstr ""
+@@ -3344,6 +3366,13 @@
+ msgid "Could not write object file"
+ msgstr ""
+ 
++#, c-format
++msgid "Couldn't start hook '%s'\n"
++msgstr ""
++
++msgid "Couldn't start hook from hooks directory\n"
++msgstr ""
++
+ msgid "Count"
+ msgstr ""
+ 
+@@ -4159,11 +4188,12 @@
+ "* Disable or modify the sparsity rules."
+ msgstr ""
+ 
++#, c-format
+ msgid ""
+ "If you meant to check out a remote tracking branch on, e.g. 'origin',\n"
+ "you can do so by fully qualifying the name with the --track option:\n"
+ "\n"
+-"    git checkout --track origin/<name>\n"
++"    git %s --track origin/<name>\n"
+ "\n"
+ "If you'd like to always have checkouts of an ambiguous <name> prefer\n"
+ "one remote, e.g. the 'origin' remote, consider setting\n"
+@@ -4454,6 +4484,14 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Lock may be held by process %<PRIuMAX>; if no git process is running, the lock file may be stale (PIDs can be reused)"
++msgstr ""
++
++#, c-format
++msgid "Lock was held by process %<PRIuMAX>, which is no longer running; the lock file appears to be stale"
++msgstr ""
++
++#, c-format
+ msgid "Lockfile created but not reported: %s"
+ msgstr ""
+ 
+@@ -4483,6 +4521,13 @@
+ msgid "M"
+ msgstr ""
+ 
++#, c-format
++msgid "MIDX %s must be an ancestor of %s"
++msgstr ""
++
++msgid "MIDX compaction endpoints must be unique"
++msgstr ""
++
+ msgid "MIDX does not contain the BTMP chunk"
+ msgstr ""
+ 
+@@ -4726,6 +4771,9 @@
+ msgid "No names found, cannot describe anything."
+ msgstr ""
+ 
++msgid "No next file"
++msgstr ""
++
+ msgid "No other hunk"
+ msgstr ""
+ 
+@@ -4747,6 +4795,9 @@
+ msgid "No possible source branch, inferring '--orphan'"
+ msgstr ""
+ 
++msgid "No previous file"
++msgstr ""
++
+ msgid "No previous regular expression"
+ msgstr ""
+ 
+@@ -5655,6 +5706,12 @@
+ msgstr ""
+ 
+ #, c-format
++msgid ""
++"Skipping submodule due to ignore=all: %s\n"
++"Use --force if you really want to add the submodule."
++msgstr ""
++
++#, c-format
+ msgid "Skipping unmerged submodule %s"
+ msgstr ""
+ 
+@@ -5757,6 +5814,12 @@
+ 
+ #, c-format
+ msgid ""
++"Storing new %s from server for remote '%s'.\n"
++"    '%s' -> '%s'\n"
++msgstr ""
++
++#, c-format
++msgid ""
+ "Stray %s directory found.\n"
+ "Use \"git am --abort\" to remove it."
+ msgstr ""
+@@ -6397,18 +6460,13 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "Unable to create '%s.lock': %s"
++msgid ""
++"Unable to create '%s': %s.\n"
++"\n"
+ msgstr ""
+ 
+ #, c-format
+-msgid ""
+-"Unable to create '%s.lock': %s.\n"
+-"\n"
+-"Another git process seems to be running in this repository, e.g.\n"
+-"an editor opened by 'git commit'. Please make sure all processes\n"
+-"are terminated then try again. If it still fails, a git process\n"
+-"may have crashed in this repository earlier:\n"
+-"remove the file manually to continue."
++msgid "Unable to create '%s.lock': %s"
+ msgstr ""
+ 
+ msgid "Unable to create FSEventStream."
+@@ -7077,6 +7135,9 @@
+ "mark them as resolved using git add"
+ msgstr ""
+ 
++msgid "You must specify a hook event name to list."
++msgstr ""
++
+ msgid "You must specify a repository to clone."
+ msgstr ""
+ 
+@@ -7741,6 +7802,12 @@
+ msgid "amend previous commit"
+ msgstr ""
+ 
++msgid "an 'auto' filter cannot be combined"
++msgstr ""
++
++msgid "an 'auto' filter is incompatible with any other filter"
++msgstr ""
++
+ msgid "and made changes to the index and/or the working tree.\n"
+ msgstr ""
+ 
+@@ -8882,6 +8949,9 @@
+ msgid "cannot parse parents of commit: %s"
+ msgstr ""
+ 
++msgid "cannot perform MIDX compaction with v1 format"
++msgstr ""
++
+ msgid "cannot perform queued object checks outside of a repository"
+ msgstr ""
+ 
+@@ -9301,6 +9371,9 @@
+ msgid "closing file '%s'"
+ msgstr ""
+ 
++msgid "closing inotify file descriptor failed"
++msgstr ""
++
+ msgid "cmdline ends with \\"
+ msgstr ""
+ 
+@@ -9499,6 +9572,9 @@
+ msgid "compare the commit in the index with that in the submodule HEAD"
+ msgstr ""
+ 
++msgid "compatibility hash algorithm support requires Rust"
++msgstr ""
++
+ msgid "compiler info: "
+ msgstr ""
+ 
+@@ -9942,6 +10018,14 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "could not find MIDX with checksum %s"
++msgstr ""
++
++#, c-format
++msgid "could not find MIDX: %s"
++msgstr ""
++
++#, c-format
+ msgid "could not find author in commit %s"
+ msgstr ""
+ 
+@@ -10045,13 +10129,15 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "could not load bitmapped pack %<PRIu32>"
++msgid "could not load .mtimes for cruft pack '%s'"
+ msgstr ""
+ 
+-msgid "could not load cruft pack .mtimes"
++#, c-format
++msgid "could not load bitmapped pack %<PRIu32>"
+ msgstr ""
+ 
+-msgid "could not load pack"
++#, c-format
++msgid "could not load pack %d"
+ msgstr ""
+ 
+ #, c-format
+@@ -10616,6 +10702,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "could not write lock pid file '%s'"
++msgstr ""
++
++#, c-format
+ msgid "could not write loose object index %s"
+ msgstr ""
+ 
+@@ -10667,6 +10757,10 @@
+ msgid "couldn't open the file '%s'"
+ msgstr ""
+ 
++#, c-format
++msgid "couldn't resolve 'auto' filter '%s': %s"
++msgstr ""
++
+ msgid "couldn't run fast-export"
+ msgstr ""
+ 
+@@ -13345,7 +13439,12 @@
+ msgid "git history reword <commit> [--ref-action=(branches|head|print)]"
+ msgstr ""
+ 
+-msgid "git hook run [--ignore-missing] [--to-stdin=<path>] <hook-name> [-- <hook-args>]"
++msgid "git hook list <hook-name>"
++msgstr ""
++
++msgid ""
++"git hook run [--ignore-missing] [--to-stdin=<path>] [(-j|--jobs) <n>]\n"
++"<hook-name> [-- <hook-args>]"
+ msgstr ""
+ 
+ msgid "git imap-send [-v] [-q] [--[no-]curl] [(--folder|-f) <folder>] < <mbox>"
+@@ -13428,6 +13527,11 @@
+ msgid "git merge-tree [--write-tree] [<options>] <branch1> <branch2>"
+ msgstr ""
+ 
++msgid ""
++"git multi-pack-index [<options>] compact [--[no-]incremental]\n"
++"  [--[no-]bitmap] <from> <to>"
++msgstr ""
++
+ msgid "git multi-pack-index [<options>] expire"
+ msgstr ""
+ 
+@@ -13437,7 +13541,10 @@
+ msgid "git multi-pack-index [<options>] verify"
+ msgstr ""
+ 
+-msgid "git multi-pack-index [<options>] write [--preferred-pack=<pack>][--refs-snapshot=<path>]"
++msgid ""
++"git multi-pack-index [<options>] write [--preferred-pack=<pack>]\n"
++"  [--[no-]bitmap] [--[no-]incremental] [--[no-]stdin-packs]\n"
++"  [--refs-snapshot=<path>]"
+ msgstr ""
+ 
+ msgid "git mv [-v] [-f] [-n] [-k] <source> <destination>"
+@@ -13884,6 +13991,9 @@
+ msgid "git submodule--helper create-branch [-f|--force] [--create-reflog] [-q|--quiet] [-t|--track] [-n|--dry-run] <name> <start-oid> <start-name>"
+ msgstr ""
+ 
++msgid "git submodule--helper get-default-remote <path>"
++msgstr ""
++
+ msgid "git submodule--helper gitdir <name>"
+ msgstr ""
+ 
+@@ -14202,6 +14312,9 @@
+ msgid "historical; same as --progress"
+ msgstr ""
+ 
++msgid "hook from hookdir"
++msgstr ""
++
+ msgid "how to handle commits that become empty"
+ msgstr ""
+ 
+@@ -14576,6 +14689,16 @@
+ msgid "inline the patch"
+ msgstr ""
+ 
++#, c-format
++msgid "inotify_add_watch('%s') failed"
++msgstr ""
++
++msgid "inotify_init1() failed"
++msgstr ""
++
++msgid "inotify_rm_watch() failed"
++msgstr ""
++
+ msgid "input is NUL terminated"
+ msgstr ""
+ 
+@@ -14807,6 +14930,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "invalid filter '%s' for remote '%s' will not be stored: %s"
++msgstr ""
++
++#, c-format
+ msgid "invalid filter-spec '%s'"
+ msgstr ""
+ 
+@@ -15075,6 +15202,10 @@
+ msgid "invalid timezone offset"
+ msgstr ""
+ 
++#, c-format
++msgid "invalid token '%s' for remote '%s' will not be stored"
++msgstr ""
++
+ msgid "invalid transfer encoding"
+ msgstr ""
+ 
+@@ -15130,6 +15261,8 @@
+ "e - manually edit the current hunk\n"
+ "p - print the current hunk\n"
+ "P - print the current hunk using the pager\n"
++"> - go to the next file\n"
++"< - go to the previous file\n"
+ "? - print help\n"
+ msgstr ""
+ 
+@@ -15201,7 +15334,7 @@
+ msgid "label tags with mark ids"
+ msgstr ""
+ 
+-msgid "last-modified can only operate on one tree at a time"
++msgid "last-modified can only operate on one commit at a time"
+ msgstr ""
+ 
+ msgid "layout to use"
+@@ -15452,6 +15585,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "malformed lock pid file '%s'"
++msgstr ""
++
++#, c-format
+ msgid "malformed mergetag in commit '%s'"
+ msgstr ""
+ 
+@@ -17447,6 +17584,9 @@
+ msgid "please use two different terms"
+ msgstr ""
+ 
++msgid "polling inotify message stream failed"
++msgstr ""
++
+ msgid "populate log with at most <n> entries from shortlog"
+ msgstr ""
+ 
+@@ -17665,6 +17805,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "promisor remote '%s' advertised invalid filter '%s': %s"
++msgstr ""
++
++#, c-format
+ msgid "promisor remote name cannot begin with '/': %s"
+ msgstr ""
+ 
+@@ -17951,6 +18095,9 @@
+ msgid "reading from '%s' beyond a symbolic link"
+ msgstr ""
+ 
++msgid "reading inotify message stream failed"
++msgstr ""
++
+ msgid "reading patches from stdin/tty..."
+ msgstr ""
+ 
+@@ -18673,6 +18820,10 @@
+ msgid "revision"
+ msgstr ""
+ 
++#, c-format
++msgid "revision argument '%s' is a %s, not a commit-ish"
++msgstr ""
++
+ msgid "revision arguments not allowed"
+ msgstr ""
+ 
+@@ -18687,6 +18838,9 @@
+ msgid "reword option of '%s' and path '%s' cannot be used together"
+ msgstr ""
+ 
++msgid "rework with files when selecting hunks interactively"
++msgstr ""
++
+ msgid "rewrite the old SHA1 with the new SHA1 of the entry that now precedes it"
+ msgstr ""
+ 
+@@ -18737,6 +18891,9 @@
+ msgid "run textconv on object's content"
+ msgstr ""
+ 
++msgid "run up to <n> hooks simultaneously"
++msgstr ""
++
+ #, c-format
+ msgid ""
+ "run_command returned non-zero status for %s\n"
+@@ -19150,6 +19307,9 @@
+ msgid "show info page"
+ msgstr ""
+ 
++msgid "show keys"
++msgstr ""
++
+ msgid "show line endings of files"
+ msgstr ""
+ 
+@@ -20932,9 +21092,6 @@
+ msgid "unable to set up work tree using invalid config"
+ msgstr ""
+ 
+-msgid "unable to setup last-modified"
+-msgstr ""
+-
+ msgid "unable to sign the tag"
+ msgstr ""
+ 
+@@ -21211,6 +21368,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unknown MIDX version: %d"
++msgstr ""
++
++#, c-format
+ msgid "unknown action: %d"
+ msgstr ""
+ 
+@@ -21370,6 +21531,10 @@
+ msgid "unknown ref storage format '%s'"
+ msgstr ""
+ 
++#, c-format
++msgid "unknown ref storage format: '%s'"
++msgstr ""
++
+ msgid "unknown repository extension found:"
+ msgid_plural "unknown repository extensions found:"
+ msgstr[0] ""
+@@ -21527,6 +21692,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unrecognized value for '%s': '%s'"
++msgstr ""
++
++#, c-format
+ msgid "unrecognized value transfer.credentialsInUrl: '%s'"
+ msgstr ""
+ 
