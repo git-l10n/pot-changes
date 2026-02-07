@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2026-02-05 00:02+0000\n"
+"POT-Creation-Date: 2026-02-07 21:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -10077,37 +10077,38 @@ msgid "no input file given for in-place editing"
 msgstr ""
 
 #: builtin/last-modified.c:150
-msgid "last-modified can only operate on one tree at a time"
+msgid "last-modified can only operate on one commit at a time"
 msgstr ""
 
-#: builtin/last-modified.c:490
+#: builtin/last-modified.c:155
+#, c-format
+msgid "revision argument '%s' is a %s, not a commit-ish"
+msgstr ""
+
+#: builtin/last-modified.c:499
 #, c-format
 msgid "unknown last-modified argument: %s"
 msgstr ""
 
-#: builtin/last-modified.c:497
-msgid "unable to setup last-modified"
-msgstr ""
-
-#: builtin/last-modified.c:516
+#: builtin/last-modified.c:525
 msgid ""
 "git last-modified [--recursive] [--show-trees] [--max-depth=<depth>] [-z]\n"
 "                  [<revision-range>] [[--] <pathspec>...]"
 msgstr ""
 
-#: builtin/last-modified.c:523 builtin/ls-tree.c:351
+#: builtin/last-modified.c:532 builtin/ls-tree.c:351
 msgid "recurse into subtrees"
 msgstr ""
 
-#: builtin/last-modified.c:525
+#: builtin/last-modified.c:534
 msgid "show tree entries when recursing into subtrees"
 msgstr ""
 
-#: builtin/last-modified.c:527 diff.c:5986
+#: builtin/last-modified.c:536 diff.c:5986
 msgid "maximum tree depth to recurse"
 msgstr ""
 
-#: builtin/last-modified.c:529
+#: builtin/last-modified.c:538
 msgid "lines are separated with NUL character"
 msgstr ""
 
@@ -12054,7 +12055,7 @@ msgstr ""
 msgid "failed to stat %s"
 msgstr ""
 
-#: builtin/pack-objects.c:1414 object-file.c:1014
+#: builtin/pack-objects.c:1414 object-file.c:1018
 #, c-format
 msgid "failed utime() on %s"
 msgstr ""
@@ -16866,7 +16867,7 @@ msgstr ""
 msgid "'%s' already exists in the index and is not a submodule"
 msgstr ""
 
-#: builtin/submodule--helper.c:3598 object-file.c:1674
+#: builtin/submodule--helper.c:3598 object-file.c:1679
 #, c-format
 msgid "'%s' does not have a commit checked out"
 msgstr ""
@@ -20094,16 +20095,16 @@ msgid ""
 "been filtered"
 msgstr ""
 
-#: convert.c:1257
+#: convert.c:1258
 msgid "true/false are no valid working-tree-encodings"
 msgstr ""
 
-#: convert.c:1440 convert.c:1473
+#: convert.c:1441 convert.c:1474
 #, c-format
 msgid "%s: clean filter '%s' failed"
 msgstr ""
 
-#: convert.c:1516
+#: convert.c:1517
 #, c-format
 msgid "%s: smudge filter %s failed"
 msgstr ""
@@ -22665,12 +22666,12 @@ msgstr ""
 msgid "object file %s is empty"
 msgstr ""
 
-#: object-file.c:336 object-file.c:1902
+#: object-file.c:336 object-file.c:1907
 #, c-format
 msgid "corrupt loose object '%s'"
 msgstr ""
 
-#: object-file.c:339 object-file.c:1906
+#: object-file.c:339 object-file.c:1911
 #, c-format
 msgid "garbage at end of loose object '%s'"
 msgstr ""
@@ -22704,7 +22705,7 @@ msgstr ""
 msgid "loose object %s (stored in %s) is corrupt"
 msgstr ""
 
-#: object-file.c:571 object-file.c:578 object-file.c:1723
+#: object-file.c:571 object-file.c:578 object-file.c:1728
 #, c-format
 msgid "unable to open %s"
 msgstr ""
@@ -22724,131 +22725,131 @@ msgstr ""
 msgid "unable to set permission to '%s'"
 msgstr ""
 
-#: object-file.c:749
+#: object-file.c:753
 msgid "core.fsyncMethod = batch is unsupported on this platform"
 msgstr ""
 
-#: object-file.c:806
+#: object-file.c:810
 msgid "error when closing loose object file"
 msgstr ""
 
-#: object-file.c:883
+#: object-file.c:887
 #, c-format
 msgid "insufficient permission for adding an object to repository database %s"
 msgstr ""
 
-#: object-file.c:888
+#: object-file.c:892
 msgid "unable to create temporary file"
 msgstr ""
 
-#: object-file.c:930
+#: object-file.c:934
 msgid "unable to write loose object file"
-msgstr ""
-
-#: object-file.c:996
-#, c-format
-msgid "unable to deflate new object %s (%d)"
 msgstr ""
 
 #: object-file.c:1000
 #, c-format
+msgid "unable to deflate new object %s (%d)"
+msgstr ""
+
+#: object-file.c:1004
+#, c-format
 msgid "deflateEnd on object %s failed (%d)"
 msgstr ""
 
-#: object-file.c:1003
+#: object-file.c:1007
 #, c-format
 msgid "confused by unstable object source data for %s"
 msgstr ""
 
-#: object-file.c:1089
+#: object-file.c:1093
 #, c-format
 msgid "write stream object %ld != %<PRIuMAX>"
 msgstr ""
 
-#: object-file.c:1100
+#: object-file.c:1104
 #, c-format
 msgid "unable to stream deflate new object (%d)"
 msgstr ""
 
-#: object-file.c:1103
+#: object-file.c:1107
 #, c-format
 msgid "deflateEnd on stream object failed (%d)"
 msgstr ""
 
-#: object-file.c:1120
+#: object-file.c:1124
 #, c-format
 msgid "unable to create directory %s"
 msgstr ""
 
-#: object-file.c:1198
+#: object-file.c:1202
 #, c-format
 msgid "cannot read object for %s"
 msgstr ""
 
-#: object-file.c:1201
+#: object-file.c:1205
 #, c-format
 msgid "cannot map object %s to %s"
 msgstr ""
 
-#: object-file.c:1225
+#: object-file.c:1229
 #, c-format
 msgid "object fails fsck: %s"
 msgstr ""
 
-#: object-file.c:1258
+#: object-file.c:1262
 msgid "refusing to create malformed object"
 msgstr ""
 
-#: object-file.c:1327
+#: object-file.c:1331
 #, c-format
 msgid "read error while indexing %s"
 msgstr ""
 
-#: object-file.c:1330
+#: object-file.c:1334
 #, c-format
 msgid "short read while indexing %s"
 msgstr ""
 
-#: object-file.c:1659 object-file.c:1669
+#: object-file.c:1664 object-file.c:1674
 #, c-format
 msgid "%s: failed to insert into database"
 msgstr ""
 
-#: object-file.c:1676
+#: object-file.c:1681
 msgid "cannot add a submodule of a different hash algorithm"
 msgstr ""
 
-#: object-file.c:1679
+#: object-file.c:1684
 #, c-format
 msgid "%s: unsupported file type"
 msgstr ""
 
-#: object-file.c:1913
+#: object-file.c:1918
 #, c-format
 msgid "hash mismatch for %s (expected %s)"
 msgstr ""
 
-#: object-file.c:1940
+#: object-file.c:1945
 #, c-format
 msgid "unable to mmap %s"
 msgstr ""
 
-#: object-file.c:1945
+#: object-file.c:1950
 #, c-format
 msgid "unable to unpack header of %s"
 msgstr ""
 
-#: object-file.c:1950
+#: object-file.c:1955
 #, c-format
 msgid "unable to parse header of %s"
 msgstr ""
 
-#: object-file.c:1955
+#: object-file.c:1960
 #, c-format
 msgid "unable to parse type from header '%s' of %s"
 msgstr ""
 
-#: object-file.c:1968
+#: object-file.c:1973
 #, c-format
 msgid "unable to unpack contents of %s"
 msgstr ""
