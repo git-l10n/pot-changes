@@ -1,0 +1,76 @@
+
+
+#################### Mon, 09 Feb 2026 22:21:21 +0000 ####################
+
+--- po/git.pot.old	2026-02-09 22:21:20.931756519 +0000
++++ po/git.pot.new	2026-02-09 22:21:21.010756148 +0000
+@@ -2464,6 +2464,9 @@
+ msgid "Annotate file lines with commit information"
+ msgstr ""
+ 
++msgid "Another git process seems to be running in this repository, or the lock file may be stale"
++msgstr ""
++
+ #, c-format
+ msgid "Applied autostash.\n"
+ msgstr ""
+@@ -4454,6 +4457,14 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Lock may be held by process %<PRIuMAX>; if no git process is running, the lock file may be stale (PIDs can be reused)"
++msgstr ""
++
++#, c-format
++msgid "Lock was held by process %<PRIuMAX>, which is no longer running; the lock file appears to be stale"
++msgstr ""
++
++#, c-format
+ msgid "Lockfile created but not reported: %s"
+ msgstr ""
+ 
+@@ -6397,18 +6408,13 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "Unable to create '%s.lock': %s"
++msgid ""
++"Unable to create '%s': %s.\n"
++"\n"
+ msgstr ""
+ 
+ #, c-format
+-msgid ""
+-"Unable to create '%s.lock': %s.\n"
+-"\n"
+-"Another git process seems to be running in this repository, e.g.\n"
+-"an editor opened by 'git commit'. Please make sure all processes\n"
+-"are terminated then try again. If it still fails, a git process\n"
+-"may have crashed in this repository earlier:\n"
+-"remove the file manually to continue."
++msgid "Unable to create '%s.lock': %s"
+ msgstr ""
+ 
+ msgid "Unable to create FSEventStream."
+@@ -10616,6 +10622,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "could not write lock pid file '%s'"
++msgstr ""
++
++#, c-format
+ msgid "could not write loose object index %s"
+ msgstr ""
+ 
+@@ -15452,6 +15462,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "malformed lock pid file '%s'"
++msgstr ""
++
++#, c-format
+ msgid "malformed mergetag in commit '%s'"
+ msgstr ""
+ 

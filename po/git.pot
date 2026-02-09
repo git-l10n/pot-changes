@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2026-02-07 21:12+0000\n"
+"POT-Creation-Date: 2026-02-09 22:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -2290,7 +2290,7 @@ msgstr ""
 #: builtin/blame.c:782 builtin/fetch.c:172 builtin/pack-objects.c:4309
 #: builtin/pack-objects.c:4860 builtin/pull.c:49 builtin/pull.c:51
 #: builtin/pull.c:188 builtin/revert.c:68 diff-merges.c:94 diff.c:5704
-#: environment.c:323 gpg-interface.c:758 gpg-interface.c:773 ls-refs.c:38
+#: environment.c:324 gpg-interface.c:758 gpg-interface.c:773 ls-refs.c:38
 #: parallel-checkout.c:50 sequencer.c:3135 setup.c:652 setup.c:664 setup.c:682
 #, c-format
 msgid "invalid value for '%s': '%s'"
@@ -12455,7 +12455,7 @@ msgstr ""
 msgid "cannot use %s with %s"
 msgstr ""
 
-#: builtin/pack-objects.c:5124 environment.c:718
+#: builtin/pack-objects.c:5124 environment.c:724
 #, c-format
 msgid "bad pack compression level %d"
 msgstr ""
@@ -19338,12 +19338,12 @@ msgstr ""
 msgid "[GLE %ld] unable to get protocol information for '%ls'"
 msgstr ""
 
-#: compat/mingw.c:3149
+#: compat/mingw.c:3159
 #, c-format
 msgid "failed to copy SID (%ld)"
 msgstr ""
 
-#: compat/mingw.c:3244
+#: compat/mingw.c:3254
 #, c-format
 msgid "failed to get owner for '%s' (%ld)"
 msgstr ""
@@ -21017,66 +21017,66 @@ msgstr ""
 msgid "could not stat file '%s'"
 msgstr ""
 
-#: environment.c:183
+#: environment.c:184
 #, c-format
 msgid "bad git namespace path \"%s\""
 msgstr ""
 
-#: environment.c:271
+#: environment.c:272
 #, c-format
 msgid "invalid value for variable %s"
 msgstr ""
 
-#: environment.c:292
+#: environment.c:293
 #, c-format
 msgid "ignoring unknown core.fsync component '%s'"
 msgstr ""
 
-#: environment.c:367
+#: environment.c:368
 #, c-format
 msgid "abbrev length out of range: %d"
 msgstr ""
 
-#: environment.c:381 environment.c:392
+#: environment.c:382 environment.c:393
 #, c-format
 msgid "bad zlib compression level %d"
 msgstr ""
 
-#: environment.c:455
+#: environment.c:456
 #, c-format
 msgid "%s cannot contain newline"
 msgstr ""
 
-#: environment.c:462
+#: environment.c:463
 #, c-format
 msgid "%s must have at least one character"
 msgstr ""
 
-#: environment.c:500
+#: environment.c:501
 #, c-format
 msgid "ignoring unknown core.fsyncMethod value '%s'"
 msgstr ""
 
-#: environment.c:506
+#: environment.c:507
 msgid "core.fsyncObjectFiles is deprecated; use core.fsync instead"
 msgstr ""
 
-#: environment.c:519
+#: environment.c:525
 #, c-format
 msgid "invalid mode for object creation: %s"
 msgstr ""
 
-#: environment.c:607
+#: environment.c:613
 #, c-format
 msgid "malformed value for %s"
 msgstr ""
 
-#: environment.c:633
+#: environment.c:639
 #, c-format
 msgid "malformed value for %s: %s"
 msgstr ""
 
-#: environment.c:634
+#: environment.c:640
 msgid "must be one of nothing, matching, simple, upstream or current"
 msgstr ""
 
@@ -21994,19 +21994,44 @@ msgstr ""
 msgid "unable to load root tree for commit %s"
 msgstr ""
 
-#: lockfile.c:154
+#: lockfile.c:124
 #, c-format
-msgid ""
-"Unable to create '%s.lock': %s.\n"
-"\n"
-"Another git process seems to be running in this repository, e.g.\n"
-"an editor opened by 'git commit'. Please make sure all processes\n"
-"are terminated then try again. If it still fails, a git process\n"
-"may have crashed in this repository earlier:\n"
-"remove the file manually to continue."
+msgid "could not write lock pid file '%s'"
 msgstr ""
 
-#: lockfile.c:162
+#: lockfile.c:157
+#, c-format
+msgid "malformed lock pid file '%s'"
+msgstr ""
+
+#: lockfile.c:262
+#, c-format
+msgid ""
+"Unable to create '%s': %s.\n"
+"\n"
+msgstr ""
+
+#: lockfile.c:277
+#, c-format
+msgid ""
+"Lock may be held by process %<PRIuMAX>; if no git process is running, the "
+"lock file may be stale (PIDs can be reused)"
+msgstr ""
+
+#: lockfile.c:282
+#, c-format
+msgid ""
+"Lock was held by process %<PRIuMAX>, which is no longer running; the lock "
+"file appears to be stale"
+msgstr ""
+
+#: lockfile.c:287
+msgid ""
+"Another git process seems to be running in this repository, or the lock file "
+"may be stale"
+msgstr ""
+
+#: lockfile.c:293
 #, c-format
 msgid "Unable to create '%s.lock': %s"
 msgstr ""
