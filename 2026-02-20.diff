@@ -70,3 +70,111 @@
  msgid "use OFS_DELTA objects"
  msgstr ""
  
+
+
+#################### Fri, 20 Feb 2026 23:15:17 +0000 ####################
+
+--- po/git.pot.old	2026-02-20 23:15:17.811153321 +0000
++++ po/git.pot.new	2026-02-20 23:15:17.889153210 +0000
+@@ -1701,7 +1701,7 @@
+ msgid "(%s) failed to close pipe to '%s'"
+ msgstr ""
+ 
+-msgid "(EXPERIMENTAL!) git replay ([--contained] --onto <newbase> | --advance <branch>) [--ref-action[=<mode>]] <revision-range>"
++msgid "(EXPERIMENTAL!) git replay ([--contained] --onto <newbase> | --advance <branch> | --revert <branch>) [--ref-action[=<mode>]] <revision-range>..."
+ msgstr ""
+ 
+ #, c-format
+@@ -1883,6 +1883,9 @@
+ msgid "--comment is only applicable to add/set/replace operations"
+ msgstr ""
+ 
++msgid "--contained requires --onto"
++msgstr ""
++
+ msgid "--contents and --reverse do not blend well."
+ msgstr ""
+ 
+@@ -4979,6 +4982,10 @@
+ msgid "Only binary files changed.\n"
+ msgstr ""
+ 
++#, perl-format
++msgid "Only client key \"%s\" specified"
++msgstr ""
++
+ msgid "Only one 'attr:' specification is allowed."
+ msgstr ""
+ 
+@@ -7898,7 +7905,8 @@
+ msgid "argument expected for %s"
+ msgstr ""
+ 
+-msgid "argument to --advance must be a reference"
++#, c-format
++msgid "argument to %s must be a reference"
+ msgstr ""
+ 
+ #, c-format
+@@ -8570,6 +8578,10 @@
+ msgid "cancelling a revert in progress"
+ msgstr ""
+ 
++#, c-format
++msgid "cannot %s target with multiple sources because ordering would be ill-defined"
++msgstr ""
++
+ #. TRANSLATORS: the action is e.g. "pull with rebase"
+ #, c-format
+ msgid "cannot %s: You have unstaged changes."
+@@ -8592,9 +8604,6 @@
+ msgid "cannot add a submodule of a different hash algorithm"
+ msgstr ""
+ 
+-msgid "cannot advance target with multiple sources because ordering would be ill-defined"
+-msgstr ""
+-
+ msgid "cannot amend non-existing commit"
+ msgstr ""
+ 
+@@ -11698,6 +11707,9 @@
+ msgid "error: unable to format message: %s\n"
+ msgstr ""
+ 
++msgid "exactly one of --onto, --advance, or --revert is required"
++msgstr ""
++
+ msgid "exactly one of --print and --to-ref is required"
+ msgstr ""
+ 
+@@ -17042,9 +17054,6 @@
+ msgid "option '%s' must come before non-option arguments"
+ msgstr ""
+ 
+-msgid "option --onto or --advance is mandatory"
+-msgstr ""
+-
+ #, c-format
+ msgid "option `%s' expects \"%s\" or \"%s\""
+ msgstr ""
+@@ -18823,6 +18832,9 @@
+ msgid "revert"
+ msgstr ""
+ 
++msgid "revert commits onto given branch"
++msgstr ""
++
+ msgid "revert failed"
+ msgstr ""
+ 
+@@ -20866,6 +20878,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unable to normalize directory: '%s'"
++msgstr ""
++
++#, c-format
+ msgid "unable to open %s"
+ msgstr ""
+ 
