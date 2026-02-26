@@ -563,3 +563,537 @@
  msgid "warning: `/file` or `|pipe` redirection not supported: %s\n"
  msgstr ""
  
+
+
+#################### Thu, 26 Feb 2026 23:16:43 +0000 ####################
+
+--- po/git.pot.old	2026-02-26 23:16:43.506409849 +0000
++++ po/git.pot.new	2026-02-26 23:16:43.588409098 +0000
+@@ -1707,7 +1707,7 @@
+ msgid "(%s) failed to close pipe to '%s'"
+ msgstr ""
+ 
+-msgid "(EXPERIMENTAL!) git replay ([--contained] --onto <newbase> | --advance <branch>) [--ref-action[=<mode>]] <revision-range>"
++msgid "(EXPERIMENTAL!) git replay ([--contained] --onto <newbase> | --advance <branch> | --revert <branch>) [--ref-action[=<mode>]] <revision-range>..."
+ msgstr ""
+ 
+ #, c-format
+@@ -1889,6 +1889,9 @@
+ msgid "--comment is only applicable to add/set/replace operations"
+ msgstr ""
+ 
++msgid "--contained requires --onto"
++msgstr ""
++
+ msgid "--contents and --reverse do not blend well."
+ msgstr ""
+ 
+@@ -1898,6 +1901,10 @@
+ msgid "--convert-graft-file takes no argument"
+ msgstr ""
+ 
++#, c-format
++msgid "--cover-letter: invalid format spec '%s'"
++msgstr ""
++
+ msgid "--default is only applicable to --get"
+ msgstr ""
+ 
+@@ -3431,6 +3438,9 @@
+ msgid "Debug gitignore / exclude files"
+ msgstr ""
+ 
++msgid "Declare which 8bit encoding to use [default: UTF-8]? "
++msgstr ""
++
+ msgid "Defining attributes per path"
+ msgstr ""
+ 
+@@ -4435,6 +4445,9 @@
+ msgid "LF would be replaced by CRLF in %s"
+ msgstr ""
+ 
++msgid "Largest objects"
++msgstr ""
++
+ #, c-format
+ msgid "Last command done (%<PRIuMAX> command done):"
+ msgid_plural "Last commands done (%<PRIuMAX> commands done):"
+@@ -4514,6 +4527,13 @@
+ msgid "M"
+ msgstr ""
+ 
++#, c-format
++msgid "MIDX %s must be an ancestor of %s"
++msgstr ""
++
++msgid "MIDX compaction endpoints must be unique"
++msgstr ""
++
+ msgid "MIDX does not contain the BTMP chunk"
+ msgstr ""
+ 
+@@ -4555,6 +4575,15 @@
+ msgid "Marking reachable objects..."
+ msgstr ""
+ 
++msgid "Maximum entries"
++msgstr ""
++
++msgid "Maximum parents"
++msgstr ""
++
++msgid "Maximum size"
++msgstr ""
++
+ msgid "Maybe you want to use 'update --init'?"
+ msgstr ""
+ 
+@@ -4978,6 +5007,10 @@
+ msgid "Only binary files changed.\n"
+ msgstr ""
+ 
++#, perl-format
++msgid "Only client key \"%s\" specified"
++msgstr ""
++
+ msgid "Only one 'attr:' specification is allowed."
+ msgstr ""
+ 
+@@ -5696,6 +5729,12 @@
+ msgstr ""
+ 
+ #, c-format
++msgid ""
++"Skipping submodule due to ignore=all: %s\n"
++"Use --force if you really want to add the submodule."
++msgstr ""
++
++#, c-format
+ msgid "Skipping unmerged submodule %s"
+ msgstr ""
+ 
+@@ -6870,9 +6909,6 @@
+ msgid "When you have resolved this problem, run \"%s --continue\".\n"
+ msgstr ""
+ 
+-msgid "Which 8bit encoding should I declare [UTF-8]? "
+-msgstr ""
+-
+ msgid "Will not delete all non-push URLs"
+ msgstr ""
+ 
+@@ -7891,7 +7927,8 @@
+ msgid "argument expected for %s"
+ msgstr ""
+ 
+-msgid "argument to --advance must be a reference"
++#, c-format
++msgid "argument to %s must be a reference"
+ msgstr ""
+ 
+ #, c-format
+@@ -8563,6 +8600,10 @@
+ msgid "cancelling a revert in progress"
+ msgstr ""
+ 
++#, c-format
++msgid "cannot %s target with multiple sources because ordering would be ill-defined"
++msgstr ""
++
+ #. TRANSLATORS: the action is e.g. "pull with rebase"
+ #, c-format
+ msgid "cannot %s: You have unstaged changes."
+@@ -8585,9 +8626,6 @@
+ msgid "cannot add a submodule of a different hash algorithm"
+ msgstr ""
+ 
+-msgid "cannot advance target with multiple sources because ordering would be ill-defined"
+-msgstr ""
+-
+ msgid "cannot amend non-existing commit"
+ msgstr ""
+ 
+@@ -8936,6 +8974,9 @@
+ msgid "cannot parse parents of commit: %s"
+ msgstr ""
+ 
++msgid "cannot perform MIDX compaction with v1 format"
++msgstr ""
++
+ msgid "cannot perform queued object checks outside of a repository"
+ msgstr ""
+ 
+@@ -9355,6 +9396,9 @@
+ msgid "closing file '%s'"
+ msgstr ""
+ 
++msgid "closing inotify file descriptor failed"
++msgstr ""
++
+ msgid "cmdline ends with \\"
+ msgstr ""
+ 
+@@ -9581,6 +9625,10 @@
+ msgid "config remote shorthand cannot begin with '/': %s"
+ msgstr ""
+ 
++#, c-format
++msgid "configured http.retryAfter exceeds http.maxRetryTime (%ld > %ld seconds)"
++msgstr ""
++
+ msgid "conflict style (merge, diff3, or zdiff3)"
+ msgstr ""
+ 
+@@ -9999,6 +10047,14 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "could not find MIDX with checksum %s"
++msgstr ""
++
++#, c-format
++msgid "could not find MIDX: %s"
++msgstr ""
++
++#, c-format
+ msgid "could not find author in commit %s"
+ msgstr ""
+ 
+@@ -10109,7 +10165,8 @@
+ msgid "could not load bitmapped pack %<PRIu32>"
+ msgstr ""
+ 
+-msgid "could not load pack"
++#, c-format
++msgid "could not load pack %d"
+ msgstr ""
+ 
+ #, c-format
+@@ -10703,6 +10760,9 @@
+ msgid "could not write to file '%s'"
+ msgstr ""
+ 
++msgid "could not write to temporary file"
++msgstr ""
++
+ #, c-format
+ msgid "couldn't find remote ref %s"
+ msgstr ""
+@@ -10832,6 +10892,10 @@
+ msgid "currently, --write-bitmap-index requires --name-hash-version=1"
+ msgstr ""
+ 
++#, c-format
++msgid "daemon did not stop within %d seconds"
++msgstr ""
++
+ msgid "daemon failed to start"
+ msgstr ""
+ 
+@@ -11451,6 +11515,9 @@
+ msgid "email"
+ msgstr ""
+ 
++msgid "empty --trailer argument"
++msgstr ""
++
+ #, c-format
+ msgid "empty alias for %s"
+ msgstr ""
+@@ -11614,10 +11681,6 @@
+ msgid "error reading %s"
+ msgstr ""
+ 
+-#, c-format
+-msgid "error reading '%s'"
+-msgstr ""
+-
+ msgid "error when closing loose object file"
+ msgstr ""
+ 
+@@ -11676,6 +11739,9 @@
+ msgid "error: unable to format message: %s\n"
+ msgstr ""
+ 
++msgid "exactly one of --onto, --advance, or --revert is required"
++msgstr ""
++
+ msgid "exactly one of --print and --to-ref is required"
+ msgstr ""
+ 
+@@ -12843,12 +12909,18 @@
+ msgid "format"
+ msgstr ""
+ 
++msgid "format spec used for the commit list in the cover letter"
++msgstr ""
++
+ msgid "format the patch(es) are in"
+ msgstr ""
+ 
+ msgid "format to use for the output"
+ msgstr ""
+ 
++msgid "format-spec"
++msgstr ""
++
+ msgid "format.headers without value"
+ msgstr ""
+ 
+@@ -13418,7 +13490,9 @@
+ msgid "git hook list [-z] <hook-name>"
+ msgstr ""
+ 
+-msgid "git hook run [--ignore-missing] [--to-stdin=<path>] <hook-name> [-- <hook-args>]"
++msgid ""
++"git hook run [--ignore-missing] [--to-stdin=<path>] [(-j|--jobs) <n>]\n"
++"<hook-name> [-- <hook-args>]"
+ msgstr ""
+ 
+ msgid "git imap-send [-v] [-q] [--[no-]curl] [(--folder|-f) <folder>] < <mbox>"
+@@ -13501,6 +13575,11 @@
+ msgid "git merge-tree [--write-tree] [<options>] <branch1> <branch2>"
+ msgstr ""
+ 
++msgid ""
++"git multi-pack-index [<options>] compact [--[no-]incremental]\n"
++"  [--[no-]bitmap] <from> <to>"
++msgstr ""
++
+ msgid "git multi-pack-index [<options>] expire"
+ msgstr ""
+ 
+@@ -13510,7 +13589,10 @@
+ msgid "git multi-pack-index [<options>] verify"
+ msgstr ""
+ 
+-msgid "git multi-pack-index [<options>] write [--preferred-pack=<pack>][--refs-snapshot=<path>]"
++msgid ""
++"git multi-pack-index [<options>] write [--preferred-pack=<pack>]\n"
++"  [--[no-]bitmap] [--[no-]incremental] [--[no-]stdin-packs]\n"
++"  [--refs-snapshot=<path>]"
+ msgstr ""
+ 
+ msgid "git mv [-v] [-f] [-n] [-k] <source> <destination>"
+@@ -13957,6 +14039,9 @@
+ msgid "git submodule--helper create-branch [-f|--force] [--create-reflog] [-q|--quiet] [-t|--track] [-n|--dry-run] <name> <start-oid> <start-name>"
+ msgstr ""
+ 
++msgid "git submodule--helper get-default-remote <path>"
++msgstr ""
++
+ msgid "git submodule--helper gitdir <name>"
+ msgstr ""
+ 
+@@ -14278,6 +14363,21 @@
+ msgid "hook from hookdir"
+ msgstr ""
+ 
++#, c-format
++msgid "hook.%s.jobs must be a positive integer, ignoring: '%s'"
++msgstr ""
++
++#, c-format
++msgid "hook.%s.jobs must be positive, ignoring: 0"
++msgstr ""
++
++#, c-format
++msgid "hook.jobs must be a positive integer, ignoring: '%s'"
++msgstr ""
++
++msgid "hook.jobs must be positive, ignoring: 0"
++msgstr ""
++
+ msgid "how to handle commits that become empty"
+ msgstr ""
+ 
+@@ -14656,6 +14756,19 @@
+ msgid "inline the patch"
+ msgstr ""
+ 
++msgid "inotify watch limit reached; increase fs.inotify.max_user_watches"
++msgstr ""
++
++#, c-format
++msgid "inotify_add_watch('%s') failed"
++msgstr ""
++
++msgid "inotify_init1() failed"
++msgstr ""
++
++msgid "inotify_rm_watch() failed"
++msgstr ""
++
+ msgid "input is NUL terminated"
+ msgstr ""
+ 
+@@ -15163,6 +15276,10 @@
+ msgid "invalid token '%s' for remote '%s' will not be stored"
+ msgstr ""
+ 
++#, c-format
++msgid "invalid trailer '%s': missing key before separator"
++msgstr ""
++
+ msgid "invalid transfer encoding"
+ msgstr ""
+ 
+@@ -16499,10 +16616,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "not a regular file: '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "not a rev '%s'"
+ msgstr ""
+ 
+@@ -16999,9 +17112,6 @@
+ msgid "option '%s' must come before non-option arguments"
+ msgstr ""
+ 
+-msgid "option --onto or --advance is mandatory"
+-msgstr ""
+-
+ #, c-format
+ msgid "option `%s' expects \"%s\" or \"%s\""
+ msgstr ""
+@@ -17550,6 +17660,9 @@
+ msgid "please use two different terms"
+ msgstr ""
+ 
++msgid "polling inotify message stream failed"
++msgstr ""
++
+ msgid "populate log with at most <n> entries from shortlog"
+ msgstr ""
+ 
+@@ -17942,6 +18055,14 @@
+ msgid "range-diff: unable to compute the range-diff, since it exceeds the maximum memory for the cost matrix: %s (%<PRIuMAX> bytes) needed, limited to %s (%<PRIuMAX> bytes)"
+ msgstr ""
+ 
++#, c-format
++msgid "rate limited by '%s', please try again later"
++msgstr ""
++
++#, c-format
++msgid "rate limited, waiting %ld seconds before retry"
++msgstr ""
++
+ msgid "re-code metadata to i18n.commitEncoding"
+ msgstr ""
+ 
+@@ -18058,6 +18179,9 @@
+ msgid "reading from '%s' beyond a symbolic link"
+ msgstr ""
+ 
++msgid "reading inotify message stream failed"
++msgstr ""
++
+ msgid "reading patches from stdin/tty..."
+ msgstr ""
+ 
+@@ -18691,6 +18815,10 @@
+ msgid "respect islands during delta compression"
+ msgstr ""
+ 
++#, c-format
++msgid "response requested a delay greater than http.maxRetryTime (%ld > %ld seconds)"
++msgstr ""
++
+ msgid "restore the index"
+ msgstr ""
+ 
+@@ -18762,6 +18890,9 @@
+ msgid "revert"
+ msgstr ""
+ 
++msgid "revert commits onto given branch"
++msgstr ""
++
+ msgid "revert failed"
+ msgstr ""
+ 
+@@ -18848,6 +18979,9 @@
+ msgid "run textconv on object's content"
+ msgstr ""
+ 
++msgid "run up to <n> hooks simultaneously"
++msgstr ""
++
+ #, c-format
+ msgid ""
+ "run_command returned non-zero status for %s\n"
+@@ -20370,9 +20504,15 @@
+ msgid "too many multi-pack-indexes"
+ msgstr ""
+ 
++msgid "too many packs, unable to compact"
++msgstr ""
++
+ msgid "too many pseudo-merges"
+ msgstr ""
+ 
++msgid "too many rate limit retries, giving up"
++msgstr ""
++
+ msgid "too-short tree file"
+ msgstr ""
+ 
+@@ -20841,6 +20981,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unable to open object stream for %s"
++msgstr ""
++
++#, c-format
+ msgid "unable to open or read %s"
+ msgstr ""
+ 
+@@ -20866,6 +21010,10 @@
+ msgid "unable to parse --pretty format"
+ msgstr ""
+ 
++#, c-format
++msgid "unable to parse Retry-After header value: '%s'"
++msgstr ""
++
+ msgid "unable to parse command-line config"
+ msgstr ""
+ 
+@@ -21326,6 +21474,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unknown MIDX version: %d"
++msgstr ""
++
++#, c-format
+ msgid "unknown action: %d"
+ msgstr ""
+ 
+@@ -21646,6 +21798,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unrecognized value for '%s': '%s'"
++msgstr ""
++
++#, c-format
+ msgid "unrecognized value transfer.credentialsInUrl: '%s'"
+ msgstr ""
+ 
+@@ -22216,6 +22372,10 @@
+ msgstr ""
+ 
+ #, perl-format
++msgid "warning: '%s' does not appear to be a valid charset name.\n"
++msgstr ""
++
++#, perl-format
+ msgid "warning: `/file` or `|pipe` redirection not supported: %s\n"
+ msgstr ""
+ 
