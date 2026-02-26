@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2026-02-24 23:17+0000\n"
+"POT-Creation-Date: 2026-02-26 00:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -8666,102 +8666,111 @@ msgstr ""
 msgid "value of '%s' not bool or int: %d"
 msgstr ""
 
-#: builtin/fsmonitor--daemon.c:112
+#: builtin/fsmonitor--daemon.c:105
+#, c-format
+msgid "daemon did not stop within %d seconds"
+msgstr ""
+
+#: builtin/fsmonitor--daemon.c:122
 #, c-format
 msgid "fsmonitor-daemon is watching '%s'\n"
 msgstr ""
 
-#: builtin/fsmonitor--daemon.c:117
+#: builtin/fsmonitor--daemon.c:127
 #, c-format
 msgid "fsmonitor-daemon is not watching '%s'\n"
 msgstr ""
 
-#: builtin/fsmonitor--daemon.c:184
+#: builtin/fsmonitor--daemon.c:194
 #, c-format
 msgid "could not create fsmonitor cookie '%s'"
 msgstr ""
 
-#: builtin/fsmonitor--daemon.c:769
+#: builtin/fsmonitor--daemon.c:790
 #, c-format
 msgid "fsmonitor: cookie_result '%d' != SEEN"
 msgstr ""
 
-#: builtin/fsmonitor--daemon.c:1217
+#: builtin/fsmonitor--daemon.c:1238
 #, c-format
 msgid "could not start IPC thread pool on '%s'"
 msgstr ""
 
-#: builtin/fsmonitor--daemon.c:1227
+#: builtin/fsmonitor--daemon.c:1248
 msgid "could not start fsmonitor listener thread"
 msgstr ""
 
-#: builtin/fsmonitor--daemon.c:1238
+#: builtin/fsmonitor--daemon.c:1259
 msgid "could not start fsmonitor health thread"
 msgstr ""
 
-#: builtin/fsmonitor--daemon.c:1376
+#: builtin/fsmonitor--daemon.c:1397
 msgid "could not initialize listener thread"
 msgstr ""
 
-#: builtin/fsmonitor--daemon.c:1381
+#: builtin/fsmonitor--daemon.c:1402
 msgid "could not initialize health thread"
 msgstr ""
 
-#: builtin/fsmonitor--daemon.c:1400
+#: builtin/fsmonitor--daemon.c:1421
 #, c-format
 msgid "could not cd home '%s'"
 msgstr ""
 
-#: builtin/fsmonitor--daemon.c:1434 builtin/fsmonitor--daemon.c:1490
+#: builtin/fsmonitor--daemon.c:1455 builtin/fsmonitor--daemon.c:1522
 #, c-format
 msgid "fsmonitor--daemon is already running '%s'"
 msgstr ""
 
-#: builtin/fsmonitor--daemon.c:1438
+#: builtin/fsmonitor--daemon.c:1459
 #, c-format
 msgid "running fsmonitor-daemon in '%s'\n"
 msgstr ""
 
-#: builtin/fsmonitor--daemon.c:1494
+#: builtin/fsmonitor--daemon.c:1476 setup.c:2177
+msgid "setsid failed"
+msgstr ""
+
+#: builtin/fsmonitor--daemon.c:1526
 #, c-format
 msgid "starting fsmonitor-daemon in '%s'\n"
 msgstr ""
 
-#: builtin/fsmonitor--daemon.c:1520
+#: builtin/fsmonitor--daemon.c:1553
 msgid "daemon failed to start"
 msgstr ""
 
-#: builtin/fsmonitor--daemon.c:1523
+#: builtin/fsmonitor--daemon.c:1556
 msgid "daemon not online yet"
 msgstr ""
 
-#: builtin/fsmonitor--daemon.c:1526
+#: builtin/fsmonitor--daemon.c:1559
 msgid "daemon terminated"
 msgstr ""
 
-#: builtin/fsmonitor--daemon.c:1540
+#: builtin/fsmonitor--daemon.c:1573
 msgid "detach from console"
 msgstr ""
 
-#: builtin/fsmonitor--daemon.c:1543
+#: builtin/fsmonitor--daemon.c:1576
 msgid "use <n> ipc worker threads"
 msgstr ""
 
-#: builtin/fsmonitor--daemon.c:1546
+#: builtin/fsmonitor--daemon.c:1579
 msgid "max seconds to wait for background daemon startup"
 msgstr ""
 
-#: builtin/fsmonitor--daemon.c:1560
+#: builtin/fsmonitor--daemon.c:1593
 #, c-format
 msgid "invalid 'ipc-threads' value (%d)"
 msgstr ""
 
-#: builtin/fsmonitor--daemon.c:1592 t/helper/test-cache-tree.c:68
+#: builtin/fsmonitor--daemon.c:1625 t/helper/test-cache-tree.c:68
 #, c-format
 msgid "Unhandled subcommand '%s'"
 msgstr ""
 
-#: builtin/fsmonitor--daemon.c:1605
+#: builtin/fsmonitor--daemon.c:1638
 msgid "fsmonitor--daemon not supported on this platform"
 msgstr ""
 
@@ -19414,7 +19423,7 @@ msgstr ""
 msgid "health thread wait failed [GLE %ld]"
 msgstr ""
 
-#: compat/fsmonitor/fsm-ipc-darwin.c:55 compat/fsmonitor/fsm-ipc-linux.c:57
+#: compat/fsmonitor/fsm-ipc-unix.c:57
 #, c-format
 msgid "Invalid path: %s"
 msgstr ""
@@ -19427,28 +19436,32 @@ msgstr ""
 msgid "Failed to start the FSEventStream"
 msgstr ""
 
-#: compat/fsmonitor/fsm-listen-linux.c:109
+#: compat/fsmonitor/fsm-listen-linux.c:106
+msgid "inotify watch limit reached; increase fs.inotify.max_user_watches"
+msgstr ""
+
+#: compat/fsmonitor/fsm-listen-linux.c:108
 #, c-format
 msgid "inotify_add_watch('%s') failed"
 msgstr ""
 
-#: compat/fsmonitor/fsm-listen-linux.c:139
+#: compat/fsmonitor/fsm-listen-linux.c:138
 msgid "inotify_rm_watch() failed"
 msgstr ""
 
-#: compat/fsmonitor/fsm-listen-linux.c:284
+#: compat/fsmonitor/fsm-listen-linux.c:283
 #: compat/fsmonitor/fsm-path-utils-darwin.c:79
 #, c-format
 msgid "opendir('%s') failed"
 msgstr ""
 
-#: compat/fsmonitor/fsm-listen-linux.c:293
+#: compat/fsmonitor/fsm-listen-linux.c:292
 #: compat/fsmonitor/fsm-path-utils-darwin.c:88
 #, c-format
 msgid "lstat('%s') failed"
 msgstr ""
 
-#: compat/fsmonitor/fsm-listen-linux.c:314
+#: compat/fsmonitor/fsm-listen-linux.c:313
 #: compat/fsmonitor/fsm-path-utils-darwin.c:117
 #, c-format
 msgid "closedir('%s') failed"
@@ -19466,7 +19479,7 @@ msgstr ""
 msgid "reading inotify message stream failed"
 msgstr ""
 
-#: compat/fsmonitor/fsm-listen-linux.c:705
+#: compat/fsmonitor/fsm-listen-linux.c:711
 msgid "polling inotify message stream failed"
 msgstr ""
 
@@ -21518,21 +21531,21 @@ msgstr ""
 msgid "Server does not allow request for unadvertised object %s"
 msgstr ""
 
-#: fsmonitor-ipc.c:124
+#: fsmonitor-ipc.c:127
 #, c-format
 msgid "fsmonitor_ipc__send_query: invalid path '%s'"
 msgstr ""
 
-#: fsmonitor-ipc.c:130
+#: fsmonitor-ipc.c:133
 #, c-format
 msgid "fsmonitor_ipc__send_query: unspecified error on '%s'"
 msgstr ""
 
-#: fsmonitor-ipc.c:160
+#: fsmonitor-ipc.c:163
 msgid "fsmonitor--daemon is not running"
 msgstr ""
 
-#: fsmonitor-ipc.c:169
+#: fsmonitor-ipc.c:172
 #, c-format
 msgid "could not send '%s' command to fsmonitor--daemon"
 msgstr ""
@@ -25536,33 +25549,40 @@ msgstr ""
 msgid "* Ignoring funny ref '%s' locally"
 msgstr ""
 
-#: remote.c:2292
+#: remote.c:2255
+#, c-format
+msgid ""
+"ignoring value '%s' for status.compareBranches; only @{upstream} and @{push} "
+"are supported"
+msgstr ""
+
+#: remote.c:2281
 #, c-format
 msgid "Your branch is up to date with '%s'.\n"
 msgstr ""
 
-#: remote.c:2296
+#: remote.c:2285
 #, c-format
 msgid "Your branch and '%s' refer to different commits.\n"
 msgstr ""
 
-#: remote.c:2299
+#: remote.c:2288
 #, c-format
 msgid "  (use \"%s\" for details)\n"
 msgstr ""
 
-#: remote.c:2303
+#: remote.c:2292
 #, c-format
 msgid "Your branch is ahead of '%s' by %d commit.\n"
 msgid_plural "Your branch is ahead of '%s' by %d commits.\n"
 msgstr[0] ""
 msgstr[1] ""
 
-#: remote.c:2309
+#: remote.c:2298
 msgid "  (use \"git push\" to publish your local commits)\n"
 msgstr ""
 
-#: remote.c:2312
+#: remote.c:2301
 #, c-format
 msgid "Your branch is behind '%s' by %d commit, and can be fast-forwarded.\n"
 msgid_plural ""
@@ -25570,11 +25590,11 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: remote.c:2320
+#: remote.c:2309
 msgid "  (use \"git pull\" to update your local branch)\n"
 msgstr ""
 
-#: remote.c:2323
+#: remote.c:2312
 #, c-format
 msgid ""
 "Your branch and '%s' have diverged,\n"
@@ -25585,26 +25605,26 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: remote.c:2333
+#: remote.c:2322
 msgid ""
 "  (use \"git pull\" if you want to integrate the remote branch with yours)\n"
 msgstr ""
 
-#: remote.c:2397
+#: remote.c:2386
 #, c-format
 msgid "Your branch is based on '%s', but the upstream is gone.\n"
 msgstr ""
 
-#: remote.c:2401
+#: remote.c:2390
 msgid "  (use \"git branch --unset-upstream\" to fixup)\n"
 msgstr ""
 
-#: remote.c:2622
+#: remote.c:2611
 #, c-format
 msgid "cannot parse expected object name '%s'"
 msgstr ""
 
-#: remote.c:2890
+#: remote.c:2879
 #, c-format
 msgid "cannot strip one component off url '%s'"
 msgstr ""
@@ -25871,7 +25891,7 @@ msgstr ""
 msgid "-L does not yet support diff formats besides -p and -s"
 msgstr ""
 
-#: run-command.c:1247
+#: run-command.c:1258
 #, c-format
 msgid "cannot create async thread: %s"
 msgstr ""
@@ -27241,10 +27261,6 @@ msgstr ""
 
 #: setup.c:2172
 msgid "fork failed"
-msgstr ""
-
-#: setup.c:2177
-msgid "setsid failed"
 msgstr ""
 
 #: setup.c:2279
