@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2026-03-10 03:15+0000\n"
+"POT-Creation-Date: 2026-03-10 23:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -5193,7 +5193,7 @@ msgstr ""
 
 #: builtin/clone.c:1031 builtin/init-db.c:178 builtin/refs.c:58
 #: builtin/submodule--helper.c:2051 builtin/submodule--helper.c:3022
-#: builtin/submodule--helper.c:3654 setup.c:2638 setup.c:2709
+#: builtin/submodule--helper.c:3654 setup.c:2663 setup.c:2734
 #, c-format
 msgid "unknown ref storage format '%s'"
 msgstr ""
@@ -6838,8 +6838,8 @@ msgstr ""
 msgid "%s...%s: no merge base"
 msgstr ""
 
-#: builtin/diff.c:501 setup.c:1165 setup.c:1221 setup.c:1231 setup.c:1270
-#: setup.c:1278
+#: builtin/diff.c:501 setup.c:1173 setup.c:1229 setup.c:1239 setup.c:1278
+#: setup.c:1286
 msgid "cannot come back to cwd"
 msgstr ""
 
@@ -8426,7 +8426,7 @@ msgid ""
 "              to %7s %s"
 msgstr ""
 
-#: builtin/fsck.c:205 builtin/prune.c:67 connected.c:118
+#: builtin/fsck.c:205 builtin/prune.c:67 connected.c:103
 msgid "Checking connectivity"
 msgstr ""
 
@@ -8780,7 +8780,7 @@ msgstr ""
 msgid "failed to parse '%s' value '%s'"
 msgstr ""
 
-#: builtin/gc.c:817 setup.c:2245
+#: builtin/gc.c:817 setup.c:2270
 #, c-format
 msgid "cannot stat '%s'"
 msgstr ""
@@ -9958,7 +9958,7 @@ msgstr ""
 msgid "bad %s"
 msgstr ""
 
-#: builtin/index-pack.c:1997 builtin/init-db.c:172 setup.c:2628 setup.c:2690
+#: builtin/index-pack.c:1997 builtin/init-db.c:172 setup.c:2653 setup.c:2715
 #, c-format
 msgid "unknown hash algorithm '%s'"
 msgstr ""
@@ -20088,15 +20088,15 @@ msgstr ""
 msgid "unable to fork"
 msgstr ""
 
-#: connected.c:132
+#: connected.c:116
 msgid "Could not run 'git rev-list'"
 msgstr ""
 
-#: connected.c:157
+#: connected.c:154
 msgid "failed write to rev-list"
 msgstr ""
 
-#: connected.c:162
+#: connected.c:159
 msgid "failed to close rev-list's stdin"
 msgstr ""
 
@@ -23525,20 +23525,20 @@ msgstr ""
 msgid "reverse-index file %s has unsupported hash id %<PRIu32>"
 msgstr ""
 
-#: pack-revindex.c:331
+#: pack-revindex.c:335
 msgid "invalid checksum"
 msgstr ""
 
-#: pack-revindex.c:344
+#: pack-revindex.c:348
 #, c-format
 msgid "invalid rev-index position at %<PRIu64>: %<PRIu32> != %<PRIu32>"
 msgstr ""
 
-#: pack-revindex.c:358
+#: pack-revindex.c:362
 msgid "multi-pack-index reverse-index chunk is the wrong size"
 msgstr ""
 
-#: pack-revindex.c:562
+#: pack-revindex.c:566
 msgid "could not determine preferred pack"
 msgstr ""
 
@@ -27013,62 +27013,62 @@ msgid_plural "repo version is 0, but v1-only extensions found:"
 msgstr[0] ""
 msgstr[1] ""
 
-#: setup.c:928
+#: setup.c:930
 #, c-format
 msgid "error opening '%s'"
 msgstr ""
 
-#: setup.c:930
+#: setup.c:932
 #, c-format
 msgid "too large to be a .git file: '%s'"
 msgstr ""
 
-#: setup.c:932
+#: setup.c:934
 #, c-format
 msgid "error reading %s"
 msgstr ""
 
-#: setup.c:934
+#: setup.c:936
 #, c-format
 msgid "invalid gitfile format: %s"
 msgstr ""
 
-#: setup.c:936
+#: setup.c:938
 #, c-format
 msgid "no path in gitfile: %s"
 msgstr ""
 
-#: setup.c:938
+#: setup.c:940
 #, c-format
 msgid "not a git repository: %s"
 msgstr ""
 
-#: setup.c:1117
+#: setup.c:1125
 #, c-format
 msgid "'$%s' too big"
 msgstr ""
 
-#: setup.c:1131
+#: setup.c:1139
 #, c-format
 msgid "not a git repository: '%s'"
 msgstr ""
 
-#: setup.c:1160 setup.c:1162 setup.c:1193
+#: setup.c:1168 setup.c:1170 setup.c:1201
 #, c-format
 msgid "cannot chdir to '%s'"
 msgstr ""
 
-#: setup.c:1292
+#: setup.c:1300
 #, c-format
 msgid "failed to stat '%*s%s%s'"
 msgstr ""
 
-#: setup.c:1364
+#: setup.c:1372
 #, c-format
 msgid "safe.directory '%s' not absolute"
 msgstr ""
 
-#: setup.c:1450 setup.c:1901
+#: setup.c:1458 setup.c:1926
 #, c-format
 msgid ""
 "detected dubious ownership in repository at '%s'\n"
@@ -27077,142 +27077,152 @@ msgid ""
 "\tgit config --global --add safe.directory %s"
 msgstr ""
 
-#: setup.c:1864
+#: setup.c:1626
+#, c-format
+msgid "error reading '%s'"
+msgstr ""
+
+#: setup.c:1631
+#, c-format
+msgid "not a regular file: '%s'"
+msgstr ""
+
+#: setup.c:1889
 msgid "Unable to read current working directory"
 msgstr ""
 
-#: setup.c:1873 setup.c:1879
+#: setup.c:1898 setup.c:1904
 #, c-format
 msgid "cannot change to '%s'"
 msgstr ""
 
-#: setup.c:1884
+#: setup.c:1909
 #, c-format
 msgid "not a git repository (or any of the parent directories): %s"
 msgstr ""
 
-#: setup.c:1890
+#: setup.c:1915
 #, c-format
 msgid ""
 "not a git repository (or any parent up to mount point %s)\n"
 "Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set)."
 msgstr ""
 
-#: setup.c:1912
+#: setup.c:1937
 #, c-format
 msgid "cannot use bare repository '%s' (safe.bareRepository is '%s')"
 msgstr ""
 
-#: setup.c:2015 setup.c:2728
+#: setup.c:2040 setup.c:2753
 #, c-format
 msgid "unknown ref storage format: '%s'"
 msgstr ""
 
-#: setup.c:2072
+#: setup.c:2097
 #, c-format
 msgid ""
 "problem with core.sharedRepository filemode value (0%.3o).\n"
 "The owner of files must always have read and write permissions."
 msgstr ""
 
-#: setup.c:2144
+#: setup.c:2169
 msgid "fork failed"
 msgstr ""
 
-#: setup.c:2149
+#: setup.c:2174
 msgid "setsid failed"
-msgstr ""
-
-#: setup.c:2251
-#, c-format
-msgid "cannot stat template '%s'"
-msgstr ""
-
-#: setup.c:2256
-#, c-format
-msgid "cannot opendir '%s'"
-msgstr ""
-
-#: setup.c:2268
-#, c-format
-msgid "cannot readlink '%s'"
-msgstr ""
-
-#: setup.c:2270
-#, c-format
-msgid "cannot symlink '%s' '%s'"
 msgstr ""
 
 #: setup.c:2276
 #, c-format
+msgid "cannot stat template '%s'"
+msgstr ""
+
+#: setup.c:2281
+#, c-format
+msgid "cannot opendir '%s'"
+msgstr ""
+
+#: setup.c:2293
+#, c-format
+msgid "cannot readlink '%s'"
+msgstr ""
+
+#: setup.c:2295
+#, c-format
+msgid "cannot symlink '%s' '%s'"
+msgstr ""
+
+#: setup.c:2301
+#, c-format
 msgid "cannot copy '%s' to '%s'"
 msgstr ""
 
-#: setup.c:2280
+#: setup.c:2305
 #, c-format
 msgid "ignoring template %s"
 msgstr ""
 
-#: setup.c:2304
+#: setup.c:2329
 #, c-format
 msgid "templates not found in %s"
 msgstr ""
 
-#: setup.c:2319
+#: setup.c:2344
 #, c-format
 msgid "not copying templates from '%s': %s"
 msgstr ""
 
-#: setup.c:2455
+#: setup.c:2480
 #, c-format
 msgid "invalid initial branch name: '%s'"
 msgstr ""
 
-#: setup.c:2464
+#: setup.c:2489
 #, c-format
 msgid "re-init: ignored --initial-branch=%s"
 msgstr ""
 
-#: setup.c:2599
+#: setup.c:2624
 #, c-format
 msgid "unable to handle file type %d"
 msgstr ""
 
-#: setup.c:2602
+#: setup.c:2627
 #, c-format
 msgid "unable to move %s to %s"
 msgstr ""
 
-#: setup.c:2684
+#: setup.c:2709
 msgid "attempt to reinitialize repository with different hash"
 msgstr ""
 
-#: setup.c:2703
+#: setup.c:2728
 msgid ""
 "attempt to reinitialize repository with different reference storage format"
 msgstr ""
 
-#: setup.c:2755 setup.c:2758
+#: setup.c:2780 setup.c:2783
 #, c-format
 msgid "%s already exists"
 msgstr ""
 
-#: setup.c:2822
+#: setup.c:2847
 #, c-format
 msgid "Reinitialized existing shared Git repository in %s%s\n"
 msgstr ""
 
-#: setup.c:2823
+#: setup.c:2848
 #, c-format
 msgid "Reinitialized existing Git repository in %s%s\n"
 msgstr ""
 
-#: setup.c:2827
+#: setup.c:2852
 #, c-format
 msgid "Initialized empty shared Git repository in %s%s\n"
 msgstr ""
 
-#: setup.c:2828
+#: setup.c:2853
 #, c-format
 msgid "Initialized empty Git repository in %s%s\n"
 msgstr ""
@@ -28345,95 +28355,95 @@ msgstr ""
 msgid "not a directory"
 msgstr ""
 
-#: worktree.c:677
+#: worktree.c:678
 msgid ".git is not a file"
 msgstr ""
 
-#: worktree.c:679
+#: worktree.c:680
 msgid ".git file broken"
 msgstr ""
 
-#: worktree.c:681
+#: worktree.c:682
 msgid ".git file incorrect"
 msgstr ""
 
-#: worktree.c:683
+#: worktree.c:684
 msgid ".git file absolute/relative path mismatch"
 msgstr ""
 
-#: worktree.c:840
+#: worktree.c:841
 msgid "not a valid path"
 msgstr ""
 
-#: worktree.c:857
+#: worktree.c:859
 msgid "unable to locate repository; .git is not a file"
 msgstr ""
 
-#: worktree.c:870
+#: worktree.c:872
 msgid "unable to locate repository; .git file does not reference a repository"
 msgstr ""
 
-#: worktree.c:874
+#: worktree.c:876
 msgid "unable to locate repository; .git file broken"
 msgstr ""
 
-#: worktree.c:901
+#: worktree.c:903
 msgid "gitdir unreadable"
 msgstr ""
 
-#: worktree.c:903
+#: worktree.c:905
 msgid "gitdir absolute/relative path mismatch"
 msgstr ""
 
-#: worktree.c:911
+#: worktree.c:913
 msgid "gitdir incorrect"
 msgstr ""
 
-#: worktree.c:948
+#: worktree.c:950
 msgid "not a valid directory"
 msgstr ""
 
-#: worktree.c:957
+#: worktree.c:959
 msgid "gitdir file does not exist"
 msgstr ""
 
-#: worktree.c:963 worktree.c:974
+#: worktree.c:965 worktree.c:976
 #, c-format
 msgid "unable to read gitdir file (%s)"
 msgstr ""
 
-#: worktree.c:980
+#: worktree.c:982
 #, c-format
 msgid "short read (expected %<PRIuMAX> bytes, read %<PRIuMAX>)"
 msgstr ""
 
-#: worktree.c:988
+#: worktree.c:990
 msgid "invalid gitdir file"
 msgstr ""
 
-#: worktree.c:1003
+#: worktree.c:1005
 msgid "gitdir file points to non-existent location"
-msgstr ""
-
-#: worktree.c:1022
-#, c-format
-msgid "unable to set %s in '%s'"
 msgstr ""
 
 #: worktree.c:1024
 #, c-format
+msgid "unable to set %s in '%s'"
+msgstr ""
+
+#: worktree.c:1026
+#, c-format
 msgid "unable to unset %s in '%s'"
 msgstr ""
 
-#: worktree.c:1044
+#: worktree.c:1046
 msgid "failed to set extensions.worktreeConfig setting"
 msgstr ""
 
-#: worktree.c:1106
+#: worktree.c:1108
 msgid "unable to upgrade repository format to support relative worktrees"
 msgstr ""
 
-#: worktree.c:1108
+#: worktree.c:1110
 msgid "unable to set extensions.relativeWorktrees setting"
 msgstr ""
 
