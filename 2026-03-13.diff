@@ -1,0 +1,116 @@
+
+
+#################### Fri, 13 Mar 2026 22:15:01 +0000 ####################
+
+--- po/git.pot.old	2026-03-13 22:15:01.440951535 +0000
++++ po/git.pot.new	2026-03-13 22:15:01.527953825 +0000
+@@ -1246,6 +1246,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "'%s' cannot be used with multiple revision ranges because the ordering would be ill-defined"
++msgstr ""
++
++#, c-format
+ msgid "'%s' cannot be used with switching branches"
+ msgstr ""
+ 
+@@ -4139,11 +4143,7 @@
+ msgid "HEAD of working tree %s is not updated"
+ msgstr ""
+ 
+-#, c-format
+-msgid ""
+-"HEAD points to an invalid (or orphaned) reference.\n"
+-"HEAD path: '%s'\n"
+-"HEAD contents: '%s'"
++msgid "HEAD points to an invalid (or orphaned) reference.\n"
+ msgstr ""
+ 
+ msgid "Helper programs to interact with remote repositories"
+@@ -8635,10 +8635,6 @@
+ msgid "cancelling a revert in progress"
+ msgstr ""
+ 
+-#, c-format
+-msgid "cannot %s target with multiple sources because ordering would be ill-defined"
+-msgstr ""
+-
+ #. TRANSLATORS: the action is e.g. "pull with rebase"
+ #, c-format
+ msgid "cannot %s: You have unstaged changes."
+@@ -8722,12 +8718,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid ""
+-"cannot continue with staged changes in the following files:\n"
+-"%s"
+-msgstr ""
+-
+-#, c-format
+ msgid "cannot copy '%s' to '%s'"
+ msgstr ""
+ 
+@@ -18372,7 +18362,8 @@
+ msgid "ref '%s' is excluded by the rev-list options"
+ msgstr ""
+ 
+-msgid "ref updates aborted by hook"
++#, c-format
++msgid "ref updates aborted by %s hook"
+ msgstr ""
+ 
+ msgid "ref updates forbidden inside quarantine environment"
+@@ -18749,6 +18740,24 @@
+ msgid "replacement '%s' has no '*'"
+ msgstr ""
+ 
++#, c-format
++msgid ""
++"replacing invalid signature for commit\n"
++"  allegedly by %s"
++msgstr ""
++
++#, c-format
++msgid ""
++"replacing invalid signature for commit '%.*s'\n"
++"  allegedly by %s"
++msgstr ""
++
++#, c-format
++msgid ""
++"replacing invalid signature for commit '%.100s...'\n"
++"  allegedly by %s"
++msgstr ""
++
+ msgid "replay onto given commit"
+ msgstr ""
+ 
+@@ -19705,25 +19714,7 @@
+ msgid "signature"
+ msgstr ""
+ 
+-#, c-format
+-msgid ""
+-"signing commit with invalid signature\n"
+-"  allegedly by %s"
+-msgstr ""
+-
+-#, c-format
+-msgid ""
+-"signing commit with invalid signature for '%.*s'\n"
+-"  allegedly by %s"
+-msgstr ""
+-
+-#, c-format
+-msgid ""
+-"signing commit with invalid signature for '%.100s...'\n"
+-"  allegedly by %s"
+-msgstr ""
+-
+-msgid "signing signatures in interoperability mode is unsupported"
++msgid "signing commits in interoperability mode is unsupported"
+ msgstr ""
+ 
+ msgid "silently ignore missing requested <hook-name>"
