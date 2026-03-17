@@ -1,0 +1,231 @@
+
+
+#################### Tue, 17 Mar 2026 21:23:38 +0000 ####################
+
+--- po/git.pot.old	2026-03-17 21:23:38.565738734 +0000
++++ po/git.pot.new	2026-03-17 21:23:38.647739469 +0000
+@@ -1687,6 +1687,15 @@
+ "'merge -c' on the commit"
+ msgstr ""
+ 
++msgid "'sign-if-invalid' is not a valid mode for git fast-export with --signed-commits=<mode>"
++msgstr ""
++
++msgid "'sign-if-invalid' is not a valid mode for git fast-export with --signed-tags=<mode>"
++msgstr ""
++
++msgid "'sign-if-invalid' is not a valid mode for git fast-import with --signed-tags=<mode>"
++msgstr ""
++
+ msgid "'strip-if-invalid' is not a valid mode for git fast-export with --signed-commits=<mode>"
+ msgstr ""
+ 
+@@ -2308,6 +2317,9 @@
+ msgid "<refname>:<expect>"
+ msgstr ""
+ 
++msgid "<refs>"
++msgstr ""
++
+ msgid "<regex>"
+ msgstr ""
+ 
+@@ -5518,6 +5530,9 @@
+ msgid "Review diff"
+ msgstr ""
+ 
++msgid "Revision does not refer to a commit"
++msgstr ""
++
+ #, c-format
+ msgid "Rewinding the tree to pristine...\n"
+ msgstr ""
+@@ -5782,18 +5797,34 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Stage addition [y,n,q,a,d%s,?]? "
++msgstr ""
++
++#, c-format
+ msgid "Stage addition%s [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+ #, c-format
++msgid "Stage deletion [y,n,q,a,d%s,?]? "
++msgstr ""
++
++#, c-format
+ msgid "Stage deletion%s [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+ #, c-format
++msgid "Stage mode change [y,n,q,a,d%s,?]? "
++msgstr ""
++
++#, c-format
+ msgid "Stage mode change%s [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+ #, c-format
++msgid "Stage this hunk [y,n,q,a,d%s,?]? "
++msgstr ""
++
++#, c-format
+ msgid "Stage this hunk%s [y,n,q,a,d%s,?]? "
+ msgstr ""
+ 
+@@ -9118,6 +9149,9 @@
+ msgid "cannot specify pathnames with --stdin"
+ msgstr ""
+ 
++msgid "cannot split up merge commit"
++msgstr ""
++
+ msgid "cannot squash merge commit into another commit"
+ msgstr ""
+ 
+@@ -9430,6 +9464,9 @@
+ msgid "command"
+ msgstr ""
+ 
++msgid "command expects a committish"
++msgstr ""
++
+ msgid "command expects a single revision"
+ msgstr ""
+ 
+@@ -9666,6 +9703,9 @@
+ msgid "control recursive pushing of submodules"
+ msgstr ""
+ 
++msgid "control ref update behavior (branches|head|print)"
++msgstr ""
++
+ msgid "control ref update behavior (update|print)"
+ msgstr ""
+ 
+@@ -11988,6 +12028,9 @@
+ msgid "failed reading ssh signing data buffer from '%s'"
+ msgstr ""
+ 
++msgid "failed reading temporary index"
++msgstr ""
++
+ msgid "failed replaying descendants"
+ msgstr ""
+ 
+@@ -11995,6 +12038,9 @@
+ msgid "failed seeking to start of '%s'"
+ msgstr ""
+ 
++msgid "failed split tree"
++msgstr ""
++
+ #, c-format
+ msgid "failed to add packfile '%s'"
+ msgstr ""
+@@ -12468,6 +12514,9 @@
+ msgid "failed to setup revision walk"
+ msgstr ""
+ 
++msgid "failed to sign commit object"
++msgstr ""
++
+ msgid "failed to sign the push certificate"
+ msgstr ""
+ 
+@@ -12600,9 +12649,15 @@
+ msgid "failed writing detached signature to '%s'"
+ msgstr ""
+ 
++msgid "failed writing first commit"
++msgstr ""
++
+ msgid "failed writing reworded commit"
+ msgstr ""
+ 
++msgid "failed writing second commit"
++msgstr ""
++
+ #, c-format
+ msgid "failed writing ssh signing key buffer to '%s'"
+ msgstr ""
+@@ -13464,6 +13519,9 @@
+ msgid "git history reword <commit> [--dry-run] [--update-refs=(branches|head)]"
+ msgstr ""
+ 
++msgid "git history split <commit> [--dry-run] [--update-refs=(branches|head)] [--] [<pathspec>...]"
++msgstr ""
++
+ msgid "git hook list [-z] <hook-name>"
+ msgstr ""
+ 
+@@ -18599,6 +18657,24 @@
+ msgid "replacement '%s' has no '*'"
+ msgstr ""
+ 
++#, c-format
++msgid ""
++"replacing invalid signature for commit\n"
++"  allegedly by %s"
++msgstr ""
++
++#, c-format
++msgid ""
++"replacing invalid signature for commit '%.*s'\n"
++"  allegedly by %s"
++msgstr ""
++
++#, c-format
++msgid ""
++"replacing invalid signature for commit '%.100s...'\n"
++"  allegedly by %s"
++msgstr ""
++
+ msgid "replay onto given commit"
+ msgstr ""
+ 
+@@ -19542,6 +19618,9 @@
+ msgid "signature"
+ msgstr ""
+ 
++msgid "signing commits in interoperability mode is unsupported"
++msgstr ""
++
+ msgid "silently ignore missing requested <hook-name>"
+ msgstr ""
+ 
+@@ -19724,6 +19803,12 @@
+ msgid "spend extra cycles to find a better match"
+ msgstr ""
+ 
++msgid "split commit is empty"
++msgstr ""
++
++msgid "split commit tree matches original commit"
++msgstr ""
++
+ #, c-format
+ msgid "splitIndex.maxPercentChange value '%d' should be between 0 and 100"
+ msgstr ""
+@@ -20556,6 +20641,9 @@
+ msgid "unable to access sparse blob in '%s'"
+ msgstr ""
+ 
++msgid "unable to acquire index lock"
++msgstr ""
++
+ #, c-format
+ msgid "unable to add '%s' to index"
+ msgstr ""
+@@ -20994,6 +21082,9 @@
+ msgid "unable to pass trailers to --trailers"
+ msgstr ""
+ 
++msgid "unable to populate index with tree"
++msgstr ""
++
+ #, c-format
+ msgid "unable to read %s"
+ msgstr ""
