@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2026-03-21 00:01+0000\n"
+"POT-Creation-Date: 2026-03-22 03:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -1332,7 +1332,7 @@ msgstr ""
 msgid "unable to add cache entry for %s"
 msgstr ""
 
-#: apply.c:4531 builtin/bisect.c:629 builtin/gc.c:3052 builtin/gc.c:3114
+#: apply.c:4531 builtin/bisect.c:632 builtin/gc.c:3052 builtin/gc.c:3114
 #, c-format
 msgid "failed to write to '%s'"
 msgstr ""
@@ -2008,7 +2008,7 @@ msgstr ""
 msgid "--reverse and --first-parent together require specified latest commit"
 msgstr ""
 
-#: blame.c:2837 builtin/bisect.c:603 builtin/bisect.c:1128
+#: blame.c:2837 builtin/bisect.c:606 builtin/bisect.c:1131
 #: builtin/commit.c:1161 builtin/fast-export.c:1423 builtin/log.c:403
 #: builtin/log.c:1196 builtin/log.c:1874 builtin/log.c:2340 builtin/log.c:2676
 #: builtin/merge.c:462 builtin/pack-objects.c:4076 builtin/pack-objects.c:4245
@@ -3016,76 +3016,78 @@ msgid "Are you sure [Y/n]? "
 msgstr ""
 
 #: builtin/bisect.c:468
-msgid "status: waiting for both good and bad commits\n"
+#, c-format
+msgid "status: waiting for both %s and %s commits\n"
 msgstr ""
 
-#: builtin/bisect.c:470
+#: builtin/bisect.c:471
 #, c-format
-msgid "status: waiting for bad commit, %d good commit known\n"
-msgid_plural "status: waiting for bad commit, %d good commits known\n"
+msgid "status: waiting for %s commit, %d %s commit known\n"
+msgid_plural "status: waiting for %s commit, %d %s commits known\n"
 msgstr[0] ""
 msgstr[1] ""
 
-#: builtin/bisect.c:474
-msgid "status: waiting for good commit(s), bad commit known\n"
-msgstr ""
-
-#: builtin/bisect.c:513
-msgid "no terms defined"
+#: builtin/bisect.c:476
+#, c-format
+msgid "status: waiting for %s commit(s), %s commit known\n"
 msgstr ""
 
 #: builtin/bisect.c:516
+msgid "no terms defined"
+msgstr ""
+
+#: builtin/bisect.c:519
 #, c-format
 msgid ""
 "Your current terms are %s for the old state\n"
 "and %s for the new state.\n"
 msgstr ""
 
-#: builtin/bisect.c:526
+#: builtin/bisect.c:529
 #, c-format
 msgid ""
 "invalid argument %s for 'git bisect terms'.\n"
 "Supported options are: --term-good|--term-old and --term-bad|--term-new."
 msgstr ""
 
-#: builtin/bisect.c:625
+#: builtin/bisect.c:628
 #, c-format
 msgid "could not open '%s' for appending"
 msgstr ""
 
-#: builtin/bisect.c:749 builtin/bisect.c:762
+#: builtin/bisect.c:752 builtin/bisect.c:765
 msgid "'' is not a valid term"
 msgstr ""
 
-#: builtin/bisect.c:772
+#: builtin/bisect.c:775
 #, c-format
 msgid "unrecognized option: '%s'"
 msgstr ""
 
-#: builtin/bisect.c:776
+#: builtin/bisect.c:779
 #, c-format
 msgid "'%s' does not appear to be a valid revision"
 msgstr ""
 
-#: builtin/bisect.c:808
+#: builtin/bisect.c:811
 msgid "bad HEAD - I need a HEAD"
 msgstr ""
 
-#: builtin/bisect.c:824
+#: builtin/bisect.c:827
 #, c-format
 msgid "checking out '%s' failed. Try 'git bisect start <valid-branch>'."
 msgstr ""
 
-#: builtin/bisect.c:841
+#: builtin/bisect.c:844
 msgid "bad HEAD - strange symbolic ref"
 msgstr ""
 
-#: builtin/bisect.c:861
+#: builtin/bisect.c:864
 #, c-format
 msgid "invalid ref: '%s'"
 msgstr ""
 
-#: builtin/bisect.c:919
+#: builtin/bisect.c:922
 msgid "You need to start by \"git bisect start\"\n"
 msgstr ""
 
@@ -3093,118 +3095,119 @@ msgstr ""
 #. translation. The program will only accept English input
 #. at this point.
 #.
-#: builtin/bisect.c:930
+#: builtin/bisect.c:933
 msgid "Do you want me to do it for you [Y/n]? "
 msgstr ""
 
-#: builtin/bisect.c:947
+#: builtin/bisect.c:950
 msgid "Please call `--bisect-state` with at least one argument"
 msgstr ""
 
-#: builtin/bisect.c:960
+#: builtin/bisect.c:963
 #, c-format
 msgid "'git bisect %s' can take only one argument."
 msgstr ""
 
-#: builtin/bisect.c:973 builtin/bisect.c:986
+#: builtin/bisect.c:976 builtin/bisect.c:989
 #, c-format
 msgid "Bad rev input: %s"
 msgstr ""
 
-#: builtin/bisect.c:993
+#: builtin/bisect.c:996
 #, c-format
 msgid "Bad rev input (not a commit): %s"
 msgstr ""
 
-#: builtin/bisect.c:1025
+#: builtin/bisect.c:1028
 msgid "We are not bisecting."
 msgstr ""
 
-#: builtin/bisect.c:1075
+#: builtin/bisect.c:1078
 #, c-format
 msgid "'%s'?? what are you talking about?"
 msgstr ""
 
-#: builtin/bisect.c:1087
+#: builtin/bisect.c:1090
 #, c-format
 msgid "cannot read file '%s' for replaying"
 msgstr ""
 
-#: builtin/bisect.c:1192
+#: builtin/bisect.c:1195
 #, c-format
 msgid "running %s\n"
 msgstr ""
 
-#: builtin/bisect.c:1245
+#: builtin/bisect.c:1248
 msgid "bisect run failed: no command provided."
 msgstr ""
 
-#: builtin/bisect.c:1265
+#: builtin/bisect.c:1268
 #, c-format
-msgid "unable to verify %s on good revision"
+msgid "unable to verify %s on %s revision"
 msgstr ""
 
-#: builtin/bisect.c:1271
+#: builtin/bisect.c:1274
 #, c-format
-msgid "bogus exit code %d for good revision"
+msgid "bogus exit code %d for %s revision"
 msgstr ""
 
-#: builtin/bisect.c:1279
+#: builtin/bisect.c:1282
 #, c-format
 msgid "bisect run failed: exit code %d from %s is < 0 or >= 128"
 msgstr ""
 
-#: builtin/bisect.c:1294
+#: builtin/bisect.c:1297
 #, c-format
 msgid "cannot open file '%s' for writing"
 msgstr ""
 
-#: builtin/bisect.c:1312
+#: builtin/bisect.c:1315
 msgid "bisect run cannot continue any more"
 msgstr ""
 
-#: builtin/bisect.c:1314
-msgid "bisect run success"
-msgstr ""
-
 #: builtin/bisect.c:1317
-msgid "bisect found first bad commit"
+msgid "bisect run success"
 msgstr ""
 
 #: builtin/bisect.c:1320
 #, c-format
+msgid "bisect found first %s commit\n"
+msgstr ""
+
+#: builtin/bisect.c:1323
+#, c-format
 msgid "bisect run failed: 'git bisect %s' exited with error code %d"
 msgstr ""
 
-#: builtin/bisect.c:1336
+#: builtin/bisect.c:1339
 #, c-format
 msgid "'%s' requires either no argument or a commit"
 msgstr ""
 
-#: builtin/bisect.c:1348
+#: builtin/bisect.c:1351
 #, c-format
 msgid "'%s' requires 0 or 1 argument"
 msgstr ""
 
-#: builtin/bisect.c:1374
+#: builtin/bisect.c:1377
 #, c-format
 msgid "'%s' requires 0 arguments"
 msgstr ""
 
-#: builtin/bisect.c:1396
+#: builtin/bisect.c:1399
 msgid "no logfile given"
 msgstr ""
 
-#: builtin/bisect.c:1435
+#: builtin/bisect.c:1438
 #, c-format
 msgid "'%s' failed: no command provided."
 msgstr ""
 
-#: builtin/bisect.c:1469
+#: builtin/bisect.c:1472
 msgid "need a command"
 msgstr ""
 
-#: builtin/bisect.c:1478 builtin/cat-file.c:772
+#: builtin/bisect.c:1481 builtin/cat-file.c:772
 #, c-format
 msgid "unknown command: '%s'"
 msgstr ""
