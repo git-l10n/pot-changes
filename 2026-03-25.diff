@@ -64,3 +64,106 @@ ERROR: unknown command "check-pot" for "git-po-helper"
 
 Did you mean this?
 	check-po
+
+
+#################### Wed, 25 Mar 2026 23:20:48 +0000 ####################
+
+--- po/git.pot.old	2026-03-25 23:20:48.490100800 +0000
++++ po/git.pot.new	2026-03-25 23:20:48.575100802 +0000
+@@ -1585,6 +1585,9 @@
+ msgid "'-%c' is incompatible with batch mode"
+ msgstr ""
+ 
++msgid "'--ref' cannot be used with multiple revision ranges"
++msgstr ""
++
+ msgid "'GIT_AUTHOR_DATE' already given"
+ msgstr ""
+ 
+@@ -1725,7 +1728,9 @@
+ msgid "(%s) failed to close pipe to '%s'"
+ msgstr ""
+ 
+-msgid "(EXPERIMENTAL!) git replay ([--contained] --onto <newbase> | --advance <branch> | --revert <branch>) [--ref-action[=<mode>]] <revision-range>..."
++msgid ""
++"(EXPERIMENTAL!) git replay ([--contained] --onto=<newbase> | --advance=<branch> | --revert=<branch>)\n"
++"[--ref=<branch>] [--ref-action=<mode>] <revision-range>"
+ msgstr ""
+ 
+ #, c-format
+@@ -1907,9 +1912,6 @@
+ msgid "--comment is only applicable to add/set/replace operations"
+ msgstr ""
+ 
+-msgid "--contained requires --onto"
+-msgstr ""
+-
+ msgid "--contents and --reverse do not blend well."
+ msgstr ""
+ 
+@@ -7818,6 +7820,9 @@
+ msgid "allow recursive removal"
+ msgstr ""
+ 
++msgid "allow running a hook with a non-native hook name"
++msgstr ""
++
+ msgid "allow storing empty note"
+ msgstr ""
+ 
+@@ -13622,11 +13627,11 @@
+ msgid "git history split <commit> [--dry-run] [--update-refs=(branches|head)] [--] [<pathspec>...]"
+ msgstr ""
+ 
+-msgid "git hook list [-z] [--show-scope] <hook-name>"
++msgid "git hook list [--allow-unknown-hook-name] [-z] [--show-scope] <hook-name>"
+ msgstr ""
+ 
+ msgid ""
+-"git hook run [--ignore-missing] [--to-stdin=<path>] [(-j|--jobs) <n>]\n"
++"git hook run [--allow-unknown-hook-name] [--ignore-missing] [--to-stdin=<path>] [(-j|--jobs) <n>]\n"
+ "<hook-name> [-- <hook-args>]"
+ msgstr ""
+ 
+@@ -17292,10 +17297,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "option '%s' requires '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "option -p expects a non-negative integer, got '%s'"
+ msgstr ""
+ 
+@@ -18520,6 +18521,9 @@
+ msgid "reference repository '%s' is shallow"
+ msgstr ""
+ 
++msgid "reference to update with result"
++msgstr ""
++
+ msgid "references specified along with --all"
+ msgstr ""
+ 
+@@ -21780,6 +21784,12 @@
+ msgstr ""
+ 
+ #, c-format
++msgid ""
++"unknown hook event '%s';\n"
++"use --allow-unknown-hook-name to allow non-native hook names"
++msgstr ""
++
++#, c-format
+ msgid "unknown index entry format 0x%08x"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-pot --------------------
+
+ERROR: unknown command "check-pot" for "git-po-helper"
+
+Did you mean this?
+	check-po
