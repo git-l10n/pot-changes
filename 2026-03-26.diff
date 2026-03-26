@@ -1,0 +1,151 @@
+
+
+#################### Thu, 26 Mar 2026 22:02:18 +0000 ####################
+
+--- po/git.pot.old	2026-03-26 22:02:18.680617470 +0000
++++ po/git.pot.new	2026-03-26 22:02:18.766618318 +0000
+@@ -853,6 +853,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "%s must be a positive integer or -1, ignoring: %d"
++msgstr ""
++
++#, c-format
+ msgid "%s must be between 0 and 1, using default"
+ msgstr ""
+ 
+@@ -1585,9 +1589,6 @@
+ msgid "'-%c' is incompatible with batch mode"
+ msgstr ""
+ 
+-msgid "'--ref' cannot be used with multiple revision ranges"
+-msgstr ""
+-
+ msgid "'GIT_AUTHOR_DATE' already given"
+ msgstr ""
+ 
+@@ -1597,12 +1598,6 @@
+ msgid "'GIT_AUTHOR_NAME' already given"
+ msgstr ""
+ 
+-msgid "'abort-if-invalid' is not a valid mode for git fast-export with --signed-commits=<mode>"
+-msgstr ""
+-
+-msgid "'abort-if-invalid' is not a valid mode for git fast-export with --signed-tags=<mode>"
+-msgstr ""
+-
+ msgid "'auto' filter not supported by this command"
+ msgstr ""
+ 
+@@ -1697,18 +1692,6 @@
+ "'merge -c' on the commit"
+ msgstr ""
+ 
+-msgid "'sign-if-invalid' is not a valid mode for git fast-export with --signed-commits=<mode>"
+-msgstr ""
+-
+-msgid "'sign-if-invalid' is not a valid mode for git fast-export with --signed-tags=<mode>"
+-msgstr ""
+-
+-msgid "'strip-if-invalid' is not a valid mode for git fast-export with --signed-commits=<mode>"
+-msgstr ""
+-
+-msgid "'strip-if-invalid' is not a valid mode for git fast-export with --signed-tags=<mode>"
+-msgstr ""
+-
+ msgid "'unknown' signature format in gpgsig"
+ msgstr ""
+ 
+@@ -1728,9 +1711,7 @@
+ msgid "(%s) failed to close pipe to '%s'"
+ msgstr ""
+ 
+-msgid ""
+-"(EXPERIMENTAL!) git replay ([--contained] --onto=<newbase> | --advance=<branch> | --revert=<branch>)\n"
+-"[--ref=<branch>] [--ref-action=<mode>] <revision-range>"
++msgid "(EXPERIMENTAL!) git replay ([--contained] --onto <newbase> | --advance <branch> | --revert <branch>) [--ref-action[=<mode>]] <revision-range>"
+ msgstr ""
+ 
+ #, c-format
+@@ -14504,6 +14485,14 @@
+ msgid "hook '%s' is not marked as parallel=true, running in parallel anyway due to -j%u"
+ msgstr ""
+ 
++#, c-format
++msgid "hook friendly-name '%s' collides with a known event name; please choose a different friendly-name"
++msgstr ""
++
++#, c-format
++msgid "hook friendly-name '%s' is the same as its event; this may cause ambiguity with hook.%s.enabled"
++msgstr ""
++
+ msgid "hook from hookdir"
+ msgstr ""
+ 
+@@ -14512,18 +14501,23 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "hook.%s.jobs must be a positive integer, ignoring: '%s'"
++msgid "hook.%s.jobs must be a positive integer or -1, ignoring: '%s'"
++msgstr ""
++
++#, c-format
++msgid "hook.%s.jobs must be an integer, ignoring: '%s'"
+ msgstr ""
+ 
+ #, c-format
+-msgid "hook.%s.jobs must be positive, ignoring: 0"
++msgid "hook.%s.parallel must be a boolean, ignoring: '%s'"
+ msgstr ""
+ 
+ #, c-format
+-msgid "hook.jobs must be a positive integer, ignoring: '%s'"
++msgid "hook.jobs must be a positive integer or -1, ignoring: '%s'"
+ msgstr ""
+ 
+-msgid "hook.jobs must be positive, ignoring: 0"
++#, c-format
++msgid "hook.jobs must be an integer, ignoring: '%s'"
+ msgstr ""
+ 
+ msgid "how to handle commits that become empty"
+@@ -15471,6 +15465,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "invalid value for -j: %d (use -1 for CPU count or a positive integer)"
++msgstr ""
++
++#, c-format
+ msgid "invalid value for variable %s"
+ msgstr ""
+ 
+@@ -18521,9 +18519,6 @@
+ msgid "reference repository '%s' is shallow"
+ msgstr ""
+ 
+-msgid "reference to update with result"
+-msgstr ""
+-
+ msgid "references specified along with --all"
+ msgstr ""
+ 
+@@ -19189,7 +19184,7 @@
+ msgid "run textconv on object's content"
+ msgstr ""
+ 
+-msgid "run up to <n> hooks simultaneously"
++msgid "run up to <n> hooks simultaneously (-1 for CPU count)"
+ msgstr ""
+ 
+ #, c-format
+
+
+-------------------- git-po-helper check-pot --------------------
+
+ERROR: unknown command "check-pot" for "git-po-helper"
+
+Did you mean this?
+	check-po
