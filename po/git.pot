@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2026-03-27 21:21+0000\n"
+"POT-Creation-Date: 2026-03-31 01:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -68,7 +68,7 @@ msgstr[1] ""
 msgid "note: %s is untracked now.\n"
 msgstr ""
 
-#: add-interactive.c:695 apply.c:4226 builtin/checkout.c:321
+#: add-interactive.c:695 apply.c:4273 builtin/checkout.c:321
 #: builtin/reset.c:186
 #, c-format
 msgid "make_cache_entry failed for path '%s'"
@@ -208,7 +208,7 @@ msgstr ""
 msgid "unstaged"
 msgstr ""
 
-#: add-interactive.c:1123 apply.c:5145 apply.c:5148 builtin/am.c:2370
+#: add-interactive.c:1123 apply.c:5193 apply.c:5196 builtin/am.c:2370
 #: builtin/am.c:2373 builtin/bugreport.c:115 builtin/clone.c:966
 #: builtin/diagnose.c:30 builtin/fetch.c:2506 builtin/hook.c:98
 #: builtin/merge.c:307 builtin/pull.c:950 builtin/submodule--helper.c:2045
@@ -873,17 +873,17 @@ msgstr ""
 msgid "too many arguments"
 msgstr ""
 
-#: apply.c:88
+#: apply.c:89
 #, c-format
 msgid "unrecognized whitespace option '%s'"
 msgstr ""
 
-#: apply.c:104
+#: apply.c:105
 #, c-format
 msgid "unrecognized whitespace ignore option '%s'"
 msgstr ""
 
-#: apply.c:157 archive.c:706 builtin/add.c:414 builtin/add.c:416
+#: apply.c:158 archive.c:706 builtin/add.c:414 builtin/add.c:416
 #: builtin/add.c:429 builtin/add.c:441 builtin/branch.c:845
 #: builtin/checkout-index.c:280 builtin/checkout.c:483 builtin/checkout.c:486
 #: builtin/checkout.c:1879 builtin/checkout.c:1989 builtin/checkout.c:1992
@@ -913,65 +913,101 @@ msgstr ""
 msgid "options '%s' and '%s' cannot be used together"
 msgstr ""
 
-#: apply.c:160 apply.c:171 apply.c:174
+#: apply.c:161 apply.c:172 apply.c:175
 #, c-format
 msgid "'%s' outside a repository"
 msgstr ""
 
-#: apply.c:404
+#: apply.c:405
 msgid "failed to read patch"
 msgstr ""
 
-#: apply.c:406
+#: apply.c:407
 msgid "patch too large"
 msgstr ""
 
-#: apply.c:820
+#: apply.c:821
 #, c-format
 msgid "Cannot prepare timestamp regexp %s"
 msgstr ""
 
-#: apply.c:829
+#: apply.c:830
 #, c-format
 msgid "regexec returned %d for input: %s"
 msgstr ""
 
-#: apply.c:903
+#: apply.c:904
 #, c-format
-msgid "unable to find filename in patch at line %d"
+msgid "unable to find filename in patch at %s:%d"
 msgstr ""
 
-#: apply.c:941
+#: apply.c:944
+#, c-format
+msgid "git apply: bad git-diff - expected /dev/null, got %s at %s:%d"
+msgstr ""
+
+#: apply.c:946
 #, c-format
 msgid "git apply: bad git-diff - expected /dev/null, got %s on line %d"
 msgstr ""
 
-#: apply.c:947
+#: apply.c:954
+#, c-format
+msgid "git apply: bad git-diff - inconsistent new filename at %s:%d"
+msgstr ""
+
+#: apply.c:955
+#, c-format
+msgid "git apply: bad git-diff - inconsistent old filename at %s:%d"
+msgstr ""
+
+#: apply.c:958
 #, c-format
 msgid "git apply: bad git-diff - inconsistent new filename on line %d"
 msgstr ""
 
-#: apply.c:948
+#: apply.c:959
 #, c-format
 msgid "git apply: bad git-diff - inconsistent old filename on line %d"
 msgstr ""
 
-#: apply.c:953
+#: apply.c:966
+#, c-format
+msgid "git apply: bad git-diff - expected /dev/null at %s:%d"
+msgstr ""
+
+#: apply.c:968
 #, c-format
 msgid "git apply: bad git-diff - expected /dev/null on line %d"
 msgstr ""
 
-#: apply.c:982
+#: apply.c:1003
+#, c-format
+msgid "invalid mode at %s:%d: %s"
+msgstr ""
+
+#: apply.c:1005
 #, c-format
 msgid "invalid mode on line %d: %s"
 msgstr ""
 
-#: apply.c:1309
+#: apply.c:1335
 #, c-format
 msgid "inconsistent header lines %d and %d"
 msgstr ""
 
-#: apply.c:1399
+#: apply.c:1429
+#, c-format
+msgid ""
+"git diff header lacks filename information when removing %d leading pathname "
+"component at %s:%d"
+msgid_plural ""
+"git diff header lacks filename information when removing %d leading pathname "
+"components at %s:%d"
+msgstr[0] ""
+msgstr[1] ""
+
+#: apply.c:1436
 #, c-format
 msgid ""
 "git diff header lacks filename information when removing %d leading pathname "
@@ -982,554 +1018,559 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: apply.c:1412
+#: apply.c:1450
+#, c-format
+msgid "git diff header lacks filename information at %s:%d"
+msgstr ""
+
+#: apply.c:1453
 #, c-format
 msgid "git diff header lacks filename information (line %d)"
 msgstr ""
 
-#: apply.c:1511
+#: apply.c:1552
 #, c-format
 msgid "recount: unexpected line: %.*s"
 msgstr ""
 
-#: apply.c:1580
+#: apply.c:1621
 #, c-format
-msgid "patch fragment without header at line %d: %.*s"
+msgid "patch fragment without header at %s:%d: %.*s"
 msgstr ""
 
-#: apply.c:1842
+#: apply.c:1886
 msgid "new file depends on old contents"
 msgstr ""
 
-#: apply.c:1844
+#: apply.c:1888
 msgid "deleted file still has contents"
 msgstr ""
 
-#: apply.c:1878
+#: apply.c:1922
 #, c-format
-msgid "corrupt patch at line %d"
+msgid "corrupt patch at %s:%d"
 msgstr ""
 
-#: apply.c:1915
+#: apply.c:1960
 #, c-format
 msgid "new file %s depends on old contents"
 msgstr ""
 
-#: apply.c:1917
+#: apply.c:1962
 #, c-format
 msgid "deleted file %s still has contents"
 msgstr ""
 
-#: apply.c:1920
+#: apply.c:1965
 #, c-format
 msgid "** warning: file %s becomes empty but is not deleted"
 msgstr ""
 
-#: apply.c:2068
+#: apply.c:2113
 #, c-format
-msgid "corrupt binary patch at line %d: %.*s"
+msgid "corrupt binary patch at %s:%d: %.*s"
 msgstr ""
 
-#: apply.c:2105
+#: apply.c:2150
 #, c-format
-msgid "unrecognized binary patch at line %d"
+msgid "unrecognized binary patch at %s:%d"
 msgstr ""
 
-#: apply.c:2267
+#: apply.c:2313
 #, c-format
-msgid "patch with only garbage at line %d"
+msgid "patch with only garbage at %s:%d"
 msgstr ""
 
-#: apply.c:2354
+#: apply.c:2401
 #, c-format
 msgid "unable to read symlink %s"
 msgstr ""
 
-#: apply.c:2358
+#: apply.c:2405
 #, c-format
 msgid "unable to open or read %s"
 msgstr ""
 
-#: apply.c:3027
+#: apply.c:3074
 #, c-format
 msgid "invalid start of line: '%c'"
 msgstr ""
 
-#: apply.c:3144
+#: apply.c:3191
 #, c-format
 msgid "Hunk #%d succeeded at %d (offset %d line)."
 msgid_plural "Hunk #%d succeeded at %d (offset %d lines)."
 msgstr[0] ""
 msgstr[1] ""
 
-#: apply.c:3156
+#: apply.c:3203
 #, c-format
 msgid "Context reduced to (%ld/%ld) to apply fragment at %d"
 msgstr ""
 
-#: apply.c:3162
+#: apply.c:3209
 #, c-format
 msgid ""
 "while searching for:\n"
 "%.*s"
 msgstr ""
 
-#: apply.c:3184
+#: apply.c:3231
 #, c-format
 msgid "missing binary patch data for '%s'"
 msgstr ""
 
-#: apply.c:3192
+#: apply.c:3239
 #, c-format
 msgid "cannot reverse-apply a binary patch without the reverse hunk to '%s'"
 msgstr ""
 
-#: apply.c:3237
+#: apply.c:3284
 #, c-format
 msgid "cannot apply binary patch to '%s' without full index line"
 msgstr ""
 
-#: apply.c:3248
+#: apply.c:3295
 #, c-format
 msgid ""
 "the patch applies to '%s' (%s), which does not match the current contents."
 msgstr ""
 
-#: apply.c:3256
+#: apply.c:3303
 #, c-format
 msgid "the patch applies to an empty '%s' but it is not empty"
 msgstr ""
 
-#: apply.c:3275
+#: apply.c:3322
 #, c-format
 msgid "the necessary postimage %s for '%s' cannot be read"
 msgstr ""
 
-#: apply.c:3287
+#: apply.c:3334
 #, c-format
 msgid "binary patch does not apply to '%s'"
 msgstr ""
 
-#: apply.c:3294
+#: apply.c:3341
 #, c-format
 msgid "binary patch to '%s' creates incorrect result (expecting %s, got %s)"
 msgstr ""
 
-#: apply.c:3315
+#: apply.c:3362
 #, c-format
 msgid "patch failed: %s:%ld"
 msgstr ""
 
-#: apply.c:3439 builtin/mv.c:594
+#: apply.c:3486 builtin/mv.c:594
 #, c-format
 msgid "cannot checkout %s"
 msgstr ""
 
-#: apply.c:3491 apply.c:3502 apply.c:3548 midx.c:128 pack-mtimes.c:41
+#: apply.c:3538 apply.c:3549 apply.c:3595 midx.c:128 pack-mtimes.c:41
 #: pack-revindex.c:228 setup.c:333
 #, c-format
 msgid "failed to read %s"
 msgstr ""
 
-#: apply.c:3499
+#: apply.c:3546
 #, c-format
 msgid "reading from '%s' beyond a symbolic link"
 msgstr ""
 
-#: apply.c:3528 apply.c:3805
+#: apply.c:3575 apply.c:3852
 #, c-format
 msgid "path %s has been renamed/deleted"
 msgstr ""
 
-#: apply.c:3640 apply.c:3820
+#: apply.c:3687 apply.c:3867
 #, c-format
 msgid "%s: does not exist in index"
 msgstr ""
 
-#: apply.c:3649 apply.c:3828 apply.c:4053
+#: apply.c:3696 apply.c:3875 apply.c:4100
 #, c-format
 msgid "%s: does not match index"
 msgstr ""
 
-#: apply.c:3686
+#: apply.c:3733
 msgid "repository lacks the necessary blob to perform 3-way merge."
 msgstr ""
 
-#: apply.c:3689
+#: apply.c:3736
 #, c-format
 msgid "Performing three-way merge...\n"
 msgstr ""
 
-#: apply.c:3706 apply.c:3710
+#: apply.c:3753 apply.c:3757
 #, c-format
 msgid "cannot read the current contents of '%s'"
 msgstr ""
 
-#: apply.c:3723
+#: apply.c:3770
 #, c-format
 msgid "Failed to perform three-way merge...\n"
 msgstr ""
 
-#: apply.c:3737
+#: apply.c:3784
 #, c-format
 msgid "Applied patch to '%s' with conflicts.\n"
 msgstr ""
 
-#: apply.c:3742
+#: apply.c:3789
 #, c-format
 msgid "Applied patch to '%s' cleanly.\n"
 msgstr ""
 
-#: apply.c:3759
+#: apply.c:3806
 #, c-format
 msgid "Falling back to direct application...\n"
 msgstr ""
 
-#: apply.c:3772
+#: apply.c:3819
 msgid "removal patch leaves file contents"
 msgstr ""
 
-#: apply.c:3854
+#: apply.c:3901
 #, c-format
 msgid "%s: wrong type"
 msgstr ""
 
-#: apply.c:3856
+#: apply.c:3903
 #, c-format
 msgid "%s has type %o, expected %o"
 msgstr ""
 
-#: apply.c:3993 apply.c:3995 builtin/fast-import.c:2457
+#: apply.c:4040 apply.c:4042 builtin/fast-import.c:2457
 #: builtin/fast-import.c:2496 read-cache.c:854 read-cache.c:883
 #: read-cache.c:1287
 #, c-format
 msgid "invalid path '%s'"
 msgstr ""
 
-#: apply.c:4051
+#: apply.c:4098
 #, c-format
 msgid "%s: already exists in index"
 msgstr ""
 
-#: apply.c:4055
+#: apply.c:4102
 #, c-format
 msgid "%s: already exists in working directory"
 msgstr ""
 
-#: apply.c:4075
+#: apply.c:4122
 #, c-format
 msgid "new mode (%o) of %s does not match old mode (%o)"
 msgstr ""
 
-#: apply.c:4080
+#: apply.c:4127
 #, c-format
 msgid "new mode (%o) of %s does not match old mode (%o) of %s"
 msgstr ""
 
-#: apply.c:4100 apply.c:4531
+#: apply.c:4147 apply.c:4578
 #, c-format
 msgid "affected file '%s' is beyond a symbolic link"
 msgstr ""
 
-#: apply.c:4104
+#: apply.c:4151
 #, c-format
 msgid "%s: patch does not apply"
 msgstr ""
 
-#: apply.c:4119
+#: apply.c:4166
 #, c-format
 msgid "Checking patch %s..."
 msgstr ""
 
-#: apply.c:4211
+#: apply.c:4258
 #, c-format
 msgid "sha1 information is lacking or useless for submodule %s"
 msgstr ""
 
-#: apply.c:4218
+#: apply.c:4265
 #, c-format
 msgid "mode change for %s, which is not in current HEAD"
 msgstr ""
 
-#: apply.c:4221
+#: apply.c:4268
 #, c-format
 msgid "sha1 information is lacking or useless (%s)."
 msgstr ""
 
-#: apply.c:4230
+#: apply.c:4277
 #, c-format
 msgid "could not add %s to temporary index"
 msgstr ""
 
-#: apply.c:4240
+#: apply.c:4287
 #, c-format
 msgid "could not write temporary index to %s"
 msgstr ""
 
-#: apply.c:4378
+#: apply.c:4425
 #, c-format
 msgid "unable to remove %s from index"
 msgstr ""
 
-#: apply.c:4412
+#: apply.c:4459
 #, c-format
 msgid "corrupt patch for submodule %s"
 msgstr ""
 
-#: apply.c:4418
+#: apply.c:4465
 #, c-format
 msgid "unable to stat newly created file '%s'"
 msgstr ""
 
-#: apply.c:4427
+#: apply.c:4474
 #, c-format
 msgid "unable to create backing store for newly created file %s"
 msgstr ""
 
-#: apply.c:4433 apply.c:4608
+#: apply.c:4480 apply.c:4655
 #, c-format
 msgid "unable to add cache entry for %s"
 msgstr ""
 
-#: apply.c:4476 builtin/bisect.c:629 builtin/gc.c:3052 builtin/gc.c:3114
+#: apply.c:4523 builtin/bisect.c:629 builtin/gc.c:3052 builtin/gc.c:3114
 #, c-format
 msgid "failed to write to '%s'"
 msgstr ""
 
-#: apply.c:4480
+#: apply.c:4527
 #, c-format
 msgid "closing file '%s'"
 msgstr ""
 
-#: apply.c:4578
+#: apply.c:4625
 #, c-format
 msgid "unable to write file '%s' mode %o"
 msgstr ""
 
-#: apply.c:4678
+#: apply.c:4725
 #, c-format
 msgid "Applied patch %s cleanly."
 msgstr ""
 
-#: apply.c:4686
+#: apply.c:4733
 msgid "internal error"
 msgstr ""
 
-#: apply.c:4689
+#: apply.c:4736
 #, c-format
 msgid "Applying patch %%s with %d reject..."
 msgid_plural "Applying patch %%s with %d rejects..."
 msgstr[0] ""
 msgstr[1] ""
 
-#: apply.c:4702 apply.c:4711 apply.c:4717
+#: apply.c:4749 apply.c:4758 apply.c:4764
 #, c-format
 msgid "cannot open %s"
 msgstr ""
 
-#: apply.c:4706 rerere.c:1098
+#: apply.c:4753 rerere.c:1098
 #, c-format
 msgid "cannot unlink '%s'"
 msgstr ""
 
-#: apply.c:4734
+#: apply.c:4781
 #, c-format
 msgid "Hunk #%d applied cleanly."
 msgstr ""
 
-#: apply.c:4738
+#: apply.c:4785
 #, c-format
 msgid "Rejected hunk #%d."
 msgstr ""
 
-#: apply.c:4869
+#: apply.c:4917
 #, c-format
 msgid "Skipped patch '%s'."
 msgstr ""
 
-#: apply.c:4878
+#: apply.c:4926
 msgid "No valid patches in input (allow with \"--allow-empty\")"
 msgstr ""
 
-#: apply.c:4899 t/helper/test-cache-tree.c:41
+#: apply.c:4947 t/helper/test-cache-tree.c:41
 msgid "unable to read index file"
 msgstr ""
 
-#: apply.c:4985
+#: apply.c:5033
 #, c-format
 msgid "option -p expects a non-negative integer, got '%s'"
 msgstr ""
 
-#: apply.c:5028
+#: apply.c:5076
 #, c-format
 msgid "unable to normalize directory: '%s'"
 msgstr ""
 
-#: apply.c:5061
+#: apply.c:5109
 #, c-format
 msgid "can't open patch '%s': %s"
 msgstr ""
 
-#: apply.c:5088
+#: apply.c:5136
 #, c-format
 msgid "squelched %d whitespace error"
 msgid_plural "squelched %d whitespace errors"
 msgstr[0] ""
 msgstr[1] ""
 
-#: apply.c:5094 apply.c:5109
+#: apply.c:5142 apply.c:5157
 #, c-format
 msgid "%d line adds whitespace errors."
 msgid_plural "%d lines add whitespace errors."
 msgstr[0] ""
 msgstr[1] ""
 
-#: apply.c:5102
+#: apply.c:5150
 #, c-format
 msgid "%d line applied after fixing whitespace errors."
 msgid_plural "%d lines applied after fixing whitespace errors."
 msgstr[0] ""
 msgstr[1] ""
 
-#: apply.c:5118 builtin/mv.c:635 builtin/rm.c:444
+#: apply.c:5166 builtin/mv.c:635 builtin/rm.c:444
 msgid "Unable to write new index file"
 msgstr ""
 
-#: apply.c:5146
+#: apply.c:5194
 msgid "don't apply changes matching the given path"
 msgstr ""
 
-#: apply.c:5149
+#: apply.c:5197
 msgid "apply changes matching the given path"
 msgstr ""
 
-#: apply.c:5151 builtin/am.c:2379
+#: apply.c:5199 builtin/am.c:2379
 msgid "num"
 msgstr ""
 
-#: apply.c:5152
+#: apply.c:5200
 msgid "remove <num> leading slashes from traditional diff paths"
 msgstr ""
 
-#: apply.c:5155
+#: apply.c:5203
 msgid "ignore additions made by the patch"
 msgstr ""
 
-#: apply.c:5157
+#: apply.c:5205
 msgid "instead of applying the patch, output diffstat for the input"
 msgstr ""
 
-#: apply.c:5161
+#: apply.c:5209
 msgid "show number of added and deleted lines in decimal notation"
 msgstr ""
 
-#: apply.c:5163
+#: apply.c:5211
 msgid "instead of applying the patch, output a summary for the input"
 msgstr ""
 
-#: apply.c:5165
+#: apply.c:5213
 msgid "instead of applying the patch, see if the patch is applicable"
 msgstr ""
 
-#: apply.c:5167
+#: apply.c:5215
 msgid "make sure the patch is applicable to the current index"
 msgstr ""
 
-#: apply.c:5169
+#: apply.c:5217
 msgid "mark new files with `git add --intent-to-add`"
 msgstr ""
 
-#: apply.c:5171
+#: apply.c:5219
 msgid "apply a patch without touching the working tree"
 msgstr ""
 
-#: apply.c:5173
+#: apply.c:5221
 msgid "accept a patch that touches outside the working area"
 msgstr ""
 
-#: apply.c:5176
+#: apply.c:5224
 msgid "also apply the patch (use with --stat/--summary/--check)"
 msgstr ""
 
-#: apply.c:5178
+#: apply.c:5226
 msgid "attempt three-way merge, fall back on normal patch if that fails"
 msgstr ""
 
-#: apply.c:5180 builtin/merge-file.c:77
+#: apply.c:5228 builtin/merge-file.c:77
 msgid "for conflicts, use our version"
 msgstr ""
 
-#: apply.c:5183 builtin/merge-file.c:79
+#: apply.c:5231 builtin/merge-file.c:79
 msgid "for conflicts, use their version"
 msgstr ""
 
-#: apply.c:5186 builtin/merge-file.c:81
+#: apply.c:5234 builtin/merge-file.c:81
 msgid "for conflicts, use a union version"
 msgstr ""
 
-#: apply.c:5189
+#: apply.c:5237
 msgid "build a temporary index based on embedded index information"
 msgstr ""
 
-#: apply.c:5192 builtin/checkout-index.c:240
+#: apply.c:5240 builtin/checkout-index.c:240
 msgid "paths are separated with NUL character"
 msgstr ""
 
-#: apply.c:5194
+#: apply.c:5242
 msgid "ensure at least <n> lines of context match"
 msgstr ""
 
-#: apply.c:5195 builtin/am.c:2355 builtin/am.c:2358
+#: apply.c:5243 builtin/am.c:2355 builtin/am.c:2358
 #: builtin/interpret-trailers.c:153 builtin/interpret-trailers.c:155
 #: builtin/pack-objects.c:4986 builtin/rebase.c:1161
 msgid "action"
 msgstr ""
 
-#: apply.c:5196
+#: apply.c:5244
 msgid "detect new or modified lines that have whitespace errors"
 msgstr ""
 
-#: apply.c:5199 apply.c:5202
+#: apply.c:5247 apply.c:5250
 msgid "ignore changes in whitespace when finding context"
 msgstr ""
 
-#: apply.c:5205
+#: apply.c:5253
 msgid "apply the patch in reverse"
 msgstr ""
 
-#: apply.c:5207
+#: apply.c:5255
 msgid "don't expect at least one line of context"
 msgstr ""
 
-#: apply.c:5209
+#: apply.c:5257
 msgid "leave the rejected hunks in corresponding *.rej files"
 msgstr ""
 
-#: apply.c:5211
+#: apply.c:5259
 msgid "allow overlapping hunks"
 msgstr ""
 
-#: apply.c:5214
+#: apply.c:5262
 msgid "tolerate incorrectly detected missing new-line at the end of file"
 msgstr ""
 
-#: apply.c:5217
+#: apply.c:5265
 msgid "do not trust the line counts in the hunk headers"
 msgstr ""
 
-#: apply.c:5219 builtin/am.c:2367
+#: apply.c:5267 builtin/am.c:2367
 msgid "root"
 msgstr ""
 
-#: apply.c:5220
+#: apply.c:5268
 msgid "prepend <root> to all filenames"
 msgstr ""
 
-#: apply.c:5223
+#: apply.c:5271
 msgid "don't return error for empty patches"
 msgstr ""
 
-#: apply.c:5230
+#: apply.c:5278
 msgid "--ours, --theirs, and --union require --3way"
 msgstr ""
 
@@ -23260,57 +23301,57 @@ msgstr ""
 msgid "log for '%.*s' only has %d entries"
 msgstr ""
 
-#: object-name.c:1910
+#: object-name.c:1912
 #, c-format
 msgid "path '%s' exists on disk, but not in '%.*s'"
 msgstr ""
 
-#: object-name.c:1916
+#: object-name.c:1918
 #, c-format
 msgid ""
 "path '%s' exists, but not '%s'\n"
 "hint: Did you mean '%.*s:%s' aka '%.*s:./%s'?"
 msgstr ""
 
-#: object-name.c:1925
+#: object-name.c:1927
 #, c-format
 msgid "path '%s' does not exist in '%.*s'"
 msgstr ""
 
-#: object-name.c:1954
+#: object-name.c:1956
 #, c-format
 msgid ""
 "path '%s' is in the index, but not at stage %d\n"
 "hint: Did you mean ':%d:%s'?"
 msgstr ""
 
-#: object-name.c:1971
+#: object-name.c:1973
 #, c-format
 msgid ""
 "path '%s' is in the index, but not '%s'\n"
 "hint: Did you mean ':%d:%s' aka ':%d:./%s'?"
 msgstr ""
 
-#: object-name.c:1979
+#: object-name.c:1981
 #, c-format
 msgid "path '%s' exists on disk, but not in the index"
 msgstr ""
 
-#: object-name.c:1981
+#: object-name.c:1983
 #, c-format
 msgid "path '%s' does not exist (neither on disk nor in the index)"
 msgstr ""
 
-#: object-name.c:1994
+#: object-name.c:1996
 msgid "relative path syntax can't be used outside working tree"
 msgstr ""
 
-#: object-name.c:2033
+#: object-name.c:2035
 #, c-format
 msgid "<object>:<path> required, only <object> '%s' given"
 msgstr ""
 
-#: object-name.c:2153
+#: object-name.c:2155
 #, c-format
 msgid "invalid object name '%.*s'."
 msgstr ""
@@ -24869,7 +24910,7 @@ msgstr ""
 msgid "ignoring ref with broken name %s"
 msgstr ""
 
-#: ref-filter.c:2955 refs.c:831
+#: ref-filter.c:2955 refs.c:832
 #, c-format
 msgid "ignoring broken ref %s"
 msgstr ""
@@ -24971,95 +25012,95 @@ msgstr ""
 msgid "invalid branch name: %s = %s"
 msgstr ""
 
-#: refs.c:829
+#: refs.c:830
 #, c-format
 msgid "ignoring dangling symref %s"
 msgstr ""
 
-#: refs.c:1125
+#: refs.c:1126
 #, c-format
 msgid "log for ref %s has gap after %s"
 msgstr ""
 
-#: refs.c:1131
+#: refs.c:1132
 #, c-format
 msgid "log for ref %s unexpectedly ended on %s"
 msgstr ""
 
-#: refs.c:1200
+#: refs.c:1201
 #, c-format
 msgid "log for %s is empty"
 msgstr ""
 
-#: refs.c:1365
+#: refs.c:1366
 #, c-format
 msgid "refusing to update reflog for pseudoref '%s'"
 msgstr ""
 
-#: refs.c:1367
+#: refs.c:1368
 #, c-format
 msgid "refusing to update pseudoref '%s'"
 msgstr ""
 
-#: refs.c:1375
+#: refs.c:1376
 #, c-format
 msgid "refusing to update reflog with bad name '%s'"
 msgstr ""
 
-#: refs.c:1377
+#: refs.c:1378
 #, c-format
 msgid "refusing to update ref with bad name '%s'"
 msgstr ""
 
-#: refs.c:1398
+#: refs.c:1399
 msgid "refusing to force and skip creation of reflog"
 msgstr ""
 
-#: refs.c:1535
+#: refs.c:1536
 #, c-format
 msgid "update_ref failed for ref '%s': %s"
 msgstr ""
 
-#: refs.c:2537
+#: refs.c:2538
 #, c-format
 msgid "multiple updates for ref '%s' not allowed"
 msgstr ""
 
-#: refs.c:2653
+#: refs.c:2654
 msgid "ref updates forbidden inside quarantine environment"
 msgstr ""
 
-#: refs.c:2807 refs.c:2861
+#: refs.c:2808 refs.c:2862
 #, c-format
 msgid "'%s' exists; cannot create '%s'"
 msgstr ""
 
-#: refs.c:2822 refs.c:2878
+#: refs.c:2823 refs.c:2879
 #, c-format
 msgid "cannot process '%s' and '%s' at the same time"
 msgstr ""
 
-#: refs.c:3050 refs.c:3060
+#: refs.c:3051 refs.c:3061
 #, c-format
 msgid "could not delete reference %s: %s"
 msgstr ""
 
-#: refs.c:3063
+#: refs.c:3064
 #, c-format
 msgid "could not delete references: %s"
 msgstr ""
 
-#: refs.c:3410
+#: refs.c:3411
 #, c-format
 msgid "Finished dry-run migration of refs, the result can be found at '%s'\n"
 msgstr ""
 
-#: refs.c:3445
+#: refs.c:3446
 #, c-format
 msgid "could not remove temporary migration directory '%s'"
 msgstr ""
 
-#: refs.c:3469
+#: refs.c:3470
 #, c-format
 msgid "migrated refs can be found at '%s'"
 msgstr ""
