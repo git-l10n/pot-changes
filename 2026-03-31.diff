@@ -1,0 +1,232 @@
+
+
+#################### Tue, 31 Mar 2026 01:03:13 +0000 ####################
+
+--- po/git.pot.old	2026-03-31 01:03:12.937778209 +0000
++++ po/git.pot.new	2026-03-31 01:03:13.018778143 +0000
+@@ -8258,6 +8258,9 @@
+ msgid "bare repository '%s' is incompatible with fsmonitor"
+ msgstr ""
+ 
++msgid "base MIDX for incremental writes"
++msgstr ""
++
+ msgid "base commit should be the ancestor of revision list"
+ msgstr ""
+ 
+@@ -9258,9 +9261,16 @@
+ msgid "cannot use %s with %s"
+ msgstr ""
+ 
++#, c-format
++msgid "cannot use %s without %s"
++msgstr ""
++
+ msgid "cannot use --attr-source or GIT_ATTR_SOURCE without repo"
+ msgstr ""
+ 
++msgid "cannot use --base without --checksum-only"
++msgstr ""
++
+ msgid "cannot use --start-after with custom sort options"
+ msgstr ""
+ 
+@@ -9356,6 +9366,9 @@
+ msgid "checkout their version for unmerged files"
+ msgstr ""
+ 
++msgid "checksum"
++msgstr ""
++
+ msgid "checksum doesn't match in MIDX and bitmap"
+ msgstr ""
+ 
+@@ -10109,6 +10122,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "could not find base MIDX '%s'"
++msgstr ""
++
++#, c-format
+ msgid "could not find commit %s"
+ msgstr ""
+ 
+@@ -10135,6 +10152,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "could not find preferred pack for MIDX %s"
++msgstr ""
++
++#, c-format
+ msgid "could not find pseudo-merge for commit %s at offset %<PRIuMAX>"
+ msgstr ""
+ 
+@@ -10216,6 +10237,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "could not load pack %<PRIu32> from MIDX"
++msgstr ""
++
++#, c-format
+ msgid "could not load pack %d"
+ msgstr ""
+ 
+@@ -11940,6 +11965,10 @@
+ " %s"
+ msgstr ""
+ 
++#, c-format
++msgid "expected exactly one line during MIDX write, got: %<PRIuMAX>"
++msgstr ""
++
+ msgid "expected flush after bundle-uri listing"
+ msgstr ""
+ 
+@@ -12119,6 +12148,10 @@
+ msgid "failed to clear multi-pack-index at %s"
+ msgstr ""
+ 
++#, c-format
++msgid "failed to clear multi-pack-index chain at %s"
++msgstr ""
++
+ msgid "failed to close rev-list's stdin"
+ msgstr ""
+ 
+@@ -13698,7 +13731,8 @@
+ 
+ msgid ""
+ "git multi-pack-index [<options>] compact [--[no-]incremental]\n"
+-"  [--[no-]bitmap] <from> <to>"
++"  [--[no-]bitmap] [--base=<checksum>] [--[no-]checksum-only]\n"
++"  <from> <to>"
+ msgstr ""
+ 
+ msgid "git multi-pack-index [<options>] expire"
+@@ -13713,7 +13747,8 @@
+ msgid ""
+ "git multi-pack-index [<options>] write [--preferred-pack=<pack>]\n"
+ "  [--[no-]bitmap] [--[no-]incremental] [--[no-]stdin-packs]\n"
+-"  [--refs-snapshot=<path>]"
++"  [--refs-snapshot=<path>] [--[no-]checksum-only]\n"
++"  [--base=<checksum>]"
+ msgstr ""
+ 
+ msgid "git mv [-v] [-f] [-n] [-k] <source> <destination>"
+@@ -13945,7 +13980,7 @@
+ msgid ""
+ "git repack [-a] [-A] [-d] [-f] [-F] [-l] [-n] [-q] [-b] [-m]\n"
+ "[--window=<n>] [--depth=<n>] [--threads=<n>] [--keep-pack=<pack-name>]\n"
+-"[--write-midx] [--name-hash-version=<n>] [--path-walk]"
++"[--write-midx[=<mode>]] [--name-hash-version=<n>] [--path-walk]"
+ msgstr ""
+ 
+ msgid "git replace -d <object>..."
+@@ -14068,10 +14103,10 @@
+ msgstr ""
+ 
+ msgid ""
+-"git stash [push [-p | --patch] [-S | --staged] [-k | --[no-]keep-index] [-q | --quiet]\n"
++"git stash [push] [-p | --patch] [-S | --staged] [-k | --[no-]keep-index] [-q | --quiet]\n"
+ "          [-u | --include-untracked] [-a | --all] [(-m | --message) <message>]\n"
+ "          [--pathspec-from-file=<file> [--pathspec-file-nul]]\n"
+-"          [--] [<pathspec>...]]"
++"          [--] [<pathspec>...]"
+ msgstr ""
+ 
+ msgid "git stash apply [--index] [-q | --quiet] [--ours-label=<label>] [--theirs-label=<label>] [--base-label=<label>] [<stash>]"
+@@ -15773,6 +15808,10 @@
+ msgid "machine-readable output"
+ msgstr ""
+ 
++#, c-format
++msgid "mailmap: unknown argument '%s', expected 'yes' or 'no'"
++msgstr ""
++
+ msgid "make 'git-difftool' exit when an invoked diff tool returns a non-zero exit code"
+ msgstr ""
+ 
+@@ -16572,6 +16611,9 @@
+ msgid "no pack files to index."
+ msgstr ""
+ 
++msgid "no packs to write MIDX during compaction"
++msgstr ""
++
+ #, c-format
+ msgid "no path in gitfile: %s"
+ msgstr ""
+@@ -20723,6 +20765,9 @@
+ msgid "too many multi-pack-indexes"
+ msgstr ""
+ 
++msgid "too many objects in MIDX compaction step"
++msgstr ""
++
+ msgid "too many packs, unable to compact"
+ msgstr ""
+ 
+@@ -21005,6 +21050,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unable to execute compaction step %<PRIuMAX>"
++msgstr ""
++
++#, c-format
+ msgid "unable to fdopen %s"
+ msgstr ""
+ 
+@@ -21043,6 +21092,9 @@
+ msgid "unable to fstat %s"
+ msgstr ""
+ 
++msgid "unable to generate compaction plan"
++msgstr ""
++
+ #, c-format
+ msgid "unable to generate diff for '%s'"
+ msgstr ""
+@@ -21611,6 +21663,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unexpected MIDX output: '%s'"
++msgstr ""
++
++#, c-format
+ msgid "unexpected acknowledgment line: '%s'"
+ msgstr ""
+ 
+@@ -21917,6 +21973,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unknown value for %s: %s"
++msgstr ""
++
++#, c-format
+ msgid "unknown value for config '%s': %s"
+ msgstr ""
+ 
+@@ -22727,6 +22787,9 @@
+ msgid "would clobber existing tag"
+ msgstr ""
+ 
++msgid "write a MIDX layer without updating the MIDX chain"
++msgstr ""
++
+ msgid "write a bitmap index if possible"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-pot --------------------
+
+ERROR: unknown command "check-pot" for "git-po-helper"
+
+Did you mean this?
+	check-po
