@@ -1,0 +1,196 @@
+
+
+#################### Tue, 31 Mar 2026 01:03:17 +0000 ####################
+
+--- po/git.pot.old	2026-03-31 01:03:16.974546985 +0000
++++ po/git.pot.new	2026-03-31 01:03:17.055547377 +0000
+@@ -1250,6 +1250,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "'%s' cannot be used with multiple revision ranges because the ordering would be ill-defined"
++msgstr ""
++
++#, c-format
+ msgid "'%s' cannot be used with switching branches"
+ msgstr ""
+ 
+@@ -1728,7 +1732,7 @@
+ msgid "(%s) failed to close pipe to '%s'"
+ msgstr ""
+ 
+-msgid "(EXPERIMENTAL!) git replay ([--contained] --onto <newbase> | --advance <branch>) [--ref-action[=<mode>]] <revision-range>"
++msgid "(EXPERIMENTAL!) git replay ([--contained] --onto <newbase> | --advance <branch> | --revert <branch>) [--ref-action[=<mode>]] <revision-range>"
+ msgstr ""
+ 
+ #, c-format
+@@ -4140,11 +4144,7 @@
+ msgid "HEAD of working tree %s is not updated"
+ msgstr ""
+ 
+-#, c-format
+-msgid ""
+-"HEAD points to an invalid (or orphaned) reference.\n"
+-"HEAD path: '%s'\n"
+-"HEAD contents: '%s'"
++msgid "HEAD points to an invalid (or orphaned) reference.\n"
+ msgstr ""
+ 
+ msgid "Helper programs to interact with remote repositories"
+@@ -4778,10 +4778,6 @@
+ msgid "No exact match on refs or tags, searching to describe\n"
+ msgstr ""
+ 
+-#, c-format
+-msgid "No hooks found for event '%s'"
+-msgstr ""
+-
+ msgid "No hunk matches the given pattern"
+ msgstr ""
+ 
+@@ -7194,9 +7190,6 @@
+ "mark them as resolved using git add"
+ msgstr ""
+ 
+-msgid "You must specify a hook event name to list."
+-msgstr ""
+-
+ msgid "You must specify a repository to clone."
+ msgstr ""
+ 
+@@ -7796,6 +7789,9 @@
+ msgid "allow recursive removal"
+ msgstr ""
+ 
++msgid "allow running a hook with a non-native hook name"
++msgstr ""
++
+ msgid "allow storing empty note"
+ msgstr ""
+ 
+@@ -7966,7 +7962,8 @@
+ msgid "argument expected for %s"
+ msgstr ""
+ 
+-msgid "argument to --advance must be a reference"
++#, c-format
++msgid "argument to %s must be a reference"
+ msgstr ""
+ 
+ #, c-format
+@@ -8660,9 +8657,6 @@
+ msgid "cannot add a submodule of a different hash algorithm"
+ msgstr ""
+ 
+-msgid "cannot advance target with multiple sources because ordering would be ill-defined"
+-msgstr ""
+-
+ msgid "cannot amend non-existing commit"
+ msgstr ""
+ 
+@@ -11218,6 +11212,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "disabled hook '%s' has no command configured"
++msgstr ""
++
++#, c-format
+ msgid "disabling Bloom filters for commit-graph layer '%s' due to incompatible settings"
+ msgstr ""
+ 
+@@ -11786,6 +11784,9 @@
+ msgid "error: unable to format message: %s\n"
+ msgstr ""
+ 
++msgid "exactly one of --onto, --advance, or --revert is required"
++msgstr ""
++
+ msgid "exactly one of --print and --to-ref is required"
+ msgstr ""
+ 
+@@ -13575,10 +13576,10 @@
+ msgid "git history split <commit> [--dry-run] [--update-refs=(branches|head)] [--] [<pathspec>...]"
+ msgstr ""
+ 
+-msgid "git hook list [-z] <hook-name>"
++msgid "git hook list [--allow-unknown-hook-name] [-z] [--show-scope] <hook-name>"
+ msgstr ""
+ 
+-msgid "git hook run [--ignore-missing] [--to-stdin=<path>] <hook-name> [-- <hook-args>]"
++msgid "git hook run [--allow-unknown-hook-name] [--ignore-missing] [--to-stdin=<path>] <hook-name> [-- <hook-args>]"
+ msgstr ""
+ 
+ msgid "git imap-send [-v] [-q] [--[no-]curl] [(--folder|-f) <folder>] < <mbox>"
+@@ -16403,6 +16404,10 @@
+ msgid "no email was given and auto-detection is disabled"
+ msgstr ""
+ 
++#, c-format
++msgid "no hooks found for event '%s'"
++msgstr ""
++
+ msgid "no info viewer handled the request"
+ msgstr ""
+ 
+@@ -17182,9 +17187,6 @@
+ msgid "option '%s' must come before non-option arguments"
+ msgstr ""
+ 
+-msgid "option --onto or --advance is mandatory"
+-msgstr ""
+-
+ #, c-format
+ msgid "option -p expects a non-negative integer, got '%s'"
+ msgstr ""
+@@ -18980,6 +18982,9 @@
+ msgid "revert"
+ msgstr ""
+ 
++msgid "revert commits onto given branch"
++msgstr ""
++
+ msgid "revert failed"
+ msgstr ""
+ 
+@@ -19641,6 +19646,9 @@
+ msgid "show the change in the specified path first"
+ msgstr ""
+ 
++msgid "show the config scope that defined each hook"
++msgstr ""
++
+ msgid "show the email address of each author"
+ msgstr ""
+ 
+@@ -21649,6 +21657,12 @@
+ msgstr ""
+ 
+ #, c-format
++msgid ""
++"unknown hook event '%s';\n"
++"use --allow-unknown-hook-name to allow non-native hook names"
++msgstr ""
++
++#, c-format
+ msgid "unknown index entry format 0x%08x"
+ msgstr ""
+ 
+@@ -22787,6 +22801,9 @@
+ msgid "you must specify a directory"
+ msgstr ""
+ 
++msgid "you must specify a hook event name to list"
++msgstr ""
++
+ msgid "you must specify exactly one commit to test"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-pot --------------------
+
+ERROR: unknown command "check-pot" for "git-po-helper"
+
+Did you mean this?
+	check-po
