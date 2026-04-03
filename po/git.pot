@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2026-04-02 16:40+0000\n"
+"POT-Creation-Date: 2026-04-03 22:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -867,7 +867,7 @@ msgstr ""
 #: alias.c:111 builtin/cat-file.c:1223 builtin/notes.c:453 builtin/notes.c:519
 #: builtin/notes.c:601 builtin/notes.c:613 builtin/notes.c:699
 #: builtin/notes.c:776 builtin/notes.c:930 builtin/notes.c:1093
-#: builtin/notes.c:1117 builtin/prune-packed.c:29 builtin/receive-pack.c:2636
+#: builtin/notes.c:1117 builtin/prune-packed.c:29 builtin/receive-pack.c:2637
 #: builtin/refs.c:52 builtin/repo.c:900 builtin/tag.c:656
 #: t/helper/test-pkt-line.c:89
 msgid "too many arguments"
@@ -2871,7 +2871,7 @@ msgid "Restrict the missing objects to the current sparse-checkout"
 msgstr ""
 
 #: builtin/backfill.c:146 builtin/diff-pairs.c:69 builtin/log.c:316
-#: builtin/log.c:2214 builtin/replay.c:155 builtin/shortlog.c:456 bundle.c:514
+#: builtin/log.c:2214 builtin/replay.c:165 builtin/shortlog.c:456 bundle.c:514
 #, c-format
 msgid "unrecognized argument: %s"
 msgstr ""
@@ -3851,7 +3851,7 @@ msgstr ""
 #: builtin/bugreport.c:112 builtin/commit.c:1571 builtin/commit.c:1580
 #: builtin/commit.c:1771 builtin/fast-export.c:1323 builtin/fast-export.c:1326
 #: builtin/fast-export.c:1329 builtin/fast-export.c:1332
-#: builtin/pack-objects.c:5057 builtin/rebase.c:1229 builtin/replay.c:104
+#: builtin/pack-objects.c:5057 builtin/rebase.c:1229 builtin/replay.c:111
 #: parse-options.h:622
 msgid "mode"
 msgstr ""
@@ -4766,9 +4766,10 @@ msgstr ""
 
 #: builtin/checkout.c:2045 builtin/checkout.c:2047 builtin/checkout.c:2097
 #: builtin/checkout.c:2099 builtin/clone.c:962 builtin/remote.c:195
-#: builtin/remote.c:197 builtin/replay.c:93 builtin/replay.c:101
-#: builtin/submodule--helper.c:3284 builtin/submodule--helper.c:3653
-#: builtin/worktree.c:808 builtin/worktree.c:810
+#: builtin/remote.c:197 builtin/replay.c:99 builtin/replay.c:103
+#: builtin/replay.c:107 builtin/submodule--helper.c:3284
+#: builtin/submodule--helper.c:3653 builtin/worktree.c:808
+#: builtin/worktree.c:810
 msgid "branch"
 msgstr ""
 
@@ -8271,7 +8272,7 @@ msgid "specify fetch refmap"
 msgstr ""
 
 #: builtin/fetch.c:2568 builtin/pull.c:999 builtin/rebase.c:1122
-#: builtin/replay.c:96
+#: builtin/replay.c:95
 msgid "revision"
 msgstr ""
 
@@ -9672,11 +9673,11 @@ msgstr ""
 msgid "%s expects one of 'branches' or 'head'"
 msgstr ""
 
-#: builtin/history.c:215 replay.c:379
+#: builtin/history.c:215 replay.c:402
 msgid "error preparing revisions"
 msgstr ""
 
-#: builtin/history.c:220 replay.c:393
+#: builtin/history.c:220 replay.c:416
 msgid "replaying merge commits is not supported yet!"
 msgstr ""
 
@@ -9693,17 +9694,17 @@ msgid ""
 "rewritten commit must be an ancestor of HEAD when using --update-refs=head"
 msgstr ""
 
-#: builtin/history.c:357 builtin/replay.c:209
+#: builtin/history.c:357 builtin/replay.c:219
 #, c-format
 msgid "failed to begin ref transaction: %s"
 msgstr ""
 
-#: builtin/history.c:369 builtin/history.c:408 builtin/replay.c:220
+#: builtin/history.c:369 builtin/history.c:408 builtin/replay.c:230
 #, c-format
 msgid "failed to update ref '%s': %s"
 msgstr ""
 
-#: builtin/history.c:415 builtin/replay.c:229
+#: builtin/history.c:415 builtin/replay.c:239
 #, c-format
 msgid "failed to commit ref transaction: %s"
 msgstr ""
@@ -13822,7 +13823,7 @@ msgstr ""
 msgid "git receive-pack <git-dir>"
 msgstr ""
 
-#: builtin/receive-pack.c:1314
+#: builtin/receive-pack.c:1315
 msgid ""
 "By default, updating the current branch in a non-bare repository\n"
 "is denied, because it will make the index and work tree inconsistent\n"
@@ -13839,7 +13840,7 @@ msgid ""
 "'receive.denyCurrentBranch' configuration variable to 'refuse'."
 msgstr ""
 
-#: builtin/receive-pack.c:1334
+#: builtin/receive-pack.c:1335
 msgid ""
 "By default, deleting the current branch is denied, because the next\n"
 "'git clone' won't result in any file checked out, causing confusion.\n"
@@ -13851,11 +13852,11 @@ msgid ""
 "To squelch this message, you can set it to 'refuse'."
 msgstr ""
 
-#: builtin/receive-pack.c:2622
+#: builtin/receive-pack.c:2623
 msgid "quiet"
 msgstr ""
 
-#: builtin/receive-pack.c:2638
+#: builtin/receive-pack.c:2639
 msgid "you must specify a directory"
 msgstr ""
 
@@ -15007,36 +15008,41 @@ msgstr ""
 
 #: builtin/replay.c:86
 msgid ""
-"(EXPERIMENTAL!) git replay ([--contained] --onto <newbase> | --advance "
-"<branch> | --revert <branch>) [--ref-action[=<mode>]] <revision-range>"
+"(EXPERIMENTAL!) git replay ([--contained] --onto=<newbase> | --"
+"advance=<branch> | --revert=<branch>)\n"
+"[--ref=<ref>] [--ref-action=<mode>] <revision-range>"
 msgstr ""
 
-#: builtin/replay.c:94
-msgid "make replay advance given branch"
-msgstr ""
-
-#: builtin/replay.c:97
-msgid "replay onto given commit"
-msgstr ""
-
-#: builtin/replay.c:99
+#: builtin/replay.c:93
 msgid "update all branches that point at commits in <revision-range>"
 msgstr ""
 
-#: builtin/replay.c:102
+#: builtin/replay.c:96
+msgid "replay onto given commit"
+msgstr ""
+
+#: builtin/replay.c:100
+msgid "make replay advance given branch"
+msgstr ""
+
+#: builtin/replay.c:104
 msgid "revert commits onto given branch"
 msgstr ""
 
-#: builtin/replay.c:105
+#: builtin/replay.c:108
+msgid "reference to update with result"
+msgstr ""
+
+#: builtin/replay.c:112
 msgid "control ref update behavior (update|print)"
 msgstr ""
 
-#: builtin/replay.c:114
+#: builtin/replay.c:122
 msgid "exactly one of --onto, --advance, or --revert is required"
 msgstr ""
 
-#: builtin/replay.c:164 builtin/replay.c:170 builtin/replay.c:176
-#: builtin/replay.c:182
+#: builtin/replay.c:174 builtin/replay.c:180 builtin/replay.c:186
+#: builtin/replay.c:192
 #, c-format
 msgid ""
 "some rev walking options will be overridden as '%s' bit in 'struct rev_info' "
@@ -17146,7 +17152,7 @@ msgstr ""
 msgid "'%s' already exists in the index and is not a submodule"
 msgstr ""
 
-#: builtin/submodule--helper.c:3637 object-file.c:1711
+#: builtin/submodule--helper.c:3637 object-file.c:1712
 #, c-format
 msgid "'%s' does not have a commit checked out"
 msgstr ""
@@ -19618,12 +19624,12 @@ msgstr ""
 msgid "[GLE %ld] unable to get protocol information for '%ls'"
 msgstr ""
 
-#: compat/mingw.c:3159
+#: compat/mingw.c:3163
 #, c-format
 msgid "failed to copy SID (%ld)"
 msgstr ""
 
-#: compat/mingw.c:3254
+#: compat/mingw.c:3258
 #, c-format
 msgid "failed to get owner for '%s' (%ld)"
 msgstr ""
@@ -20370,16 +20376,16 @@ msgid ""
 "been filtered"
 msgstr ""
 
-#: convert.c:1258
+#: convert.c:1259
 msgid "true/false are no valid working-tree-encodings"
 msgstr ""
 
-#: convert.c:1441 convert.c:1474
+#: convert.c:1442 convert.c:1475
 #, c-format
 msgid "%s: clean filter '%s' failed"
 msgstr ""
 
-#: convert.c:1517
+#: convert.c:1518
 #, c-format
 msgid "%s: smudge filter %s failed"
 msgstr ""
@@ -23034,12 +23040,12 @@ msgstr ""
 msgid "object file %s is empty"
 msgstr ""
 
-#: object-file.c:319 object-file.c:2088
+#: object-file.c:319 object-file.c:2089
 #, c-format
 msgid "corrupt loose object '%s'"
 msgstr ""
 
-#: object-file.c:322 object-file.c:2092
+#: object-file.c:322 object-file.c:2093
 #, c-format
 msgid "garbage at end of loose object '%s'"
 msgstr ""
@@ -23073,7 +23079,7 @@ msgstr ""
 msgid "loose object %s (stored in %s) is corrupt"
 msgstr ""
 
-#: object-file.c:597 object-file.c:604 object-file.c:1760
+#: object-file.c:597 object-file.c:604 object-file.c:1761
 #, c-format
 msgid "unable to open %s"
 msgstr ""
@@ -23149,75 +23155,75 @@ msgstr ""
 msgid "unable to create directory %s"
 msgstr ""
 
-#: object-file.c:1230
+#: object-file.c:1231
 #, c-format
 msgid "cannot read object for %s"
 msgstr ""
 
-#: object-file.c:1233
+#: object-file.c:1234
 #, c-format
 msgid "cannot map object %s to %s"
 msgstr ""
 
-#: object-file.c:1257
+#: object-file.c:1258
 #, c-format
 msgid "object fails fsck: %s"
 msgstr ""
 
-#: object-file.c:1291
+#: object-file.c:1292
 msgid "refusing to create malformed object"
 msgstr ""
 
-#: object-file.c:1360
+#: object-file.c:1361
 #, c-format
 msgid "read error while indexing %s"
 msgstr ""
 
-#: object-file.c:1363
+#: object-file.c:1364
 #, c-format
 msgid "short read while indexing %s"
 msgstr ""
 
-#: object-file.c:1696 object-file.c:1706
+#: object-file.c:1697 object-file.c:1707
 #, c-format
 msgid "%s: failed to insert into database"
 msgstr ""
 
-#: object-file.c:1713
+#: object-file.c:1714
 msgid "cannot add a submodule of a different hash algorithm"
 msgstr ""
 
-#: object-file.c:1716
+#: object-file.c:1717
 #, c-format
 msgid "%s: unsupported file type"
 msgstr ""
 
-#: object-file.c:2099
+#: object-file.c:2100
 #, c-format
 msgid "hash mismatch for %s (expected %s)"
 msgstr ""
 
-#: object-file.c:2126
+#: object-file.c:2127
 #, c-format
 msgid "unable to mmap %s"
 msgstr ""
 
-#: object-file.c:2131
+#: object-file.c:2132
 #, c-format
 msgid "unable to unpack header of %s"
 msgstr ""
 
-#: object-file.c:2136
+#: object-file.c:2137
 #, c-format
 msgid "unable to parse header of %s"
 msgstr ""
 
-#: object-file.c:2141
+#: object-file.c:2142
 #, c-format
 msgid "unable to parse type from header '%s' of %s"
 msgstr ""
 
-#: object-file.c:2154
+#: object-file.c:2155
 #, c-format
 msgid "unable to unpack contents of %s"
 msgstr ""
@@ -24354,7 +24360,7 @@ msgstr ""
 msgid "out-of-bounds read: (%<PRIuMAX> >= %<PRIuMAX>)"
 msgstr ""
 
-#: pseudo-merge.c:669
+#: pseudo-merge.c:675
 #, c-format
 msgid "could not read extended pseudo-merge table for commit %s"
 msgstr ""
@@ -25145,13 +25151,13 @@ msgid ""
 "hint: Git will then use the textual symref format instead."
 msgstr ""
 
-#: refs/files-backend.c:2771 refs/reftable-backend.c:1241
+#: refs/files-backend.c:2771 refs/reftable-backend.c:1235
 #, c-format
 msgid ""
 "cannot lock ref '%s': expected symref with target '%s': but is a regular ref"
 msgstr ""
 
-#: refs/files-backend.c:3107 refs/reftable-backend.c:1080
+#: refs/files-backend.c:3107 refs/reftable-backend.c:1074
 #, c-format
 msgid "trying to write reflog for '%s' with incomplete values"
 msgstr ""
@@ -25171,100 +25177,100 @@ msgstr ""
 msgid "unable to open '%s'"
 msgstr ""
 
-#: refs/reftable-backend.c:679
+#: refs/reftable-backend.c:673
 #, c-format
 msgid "refname is dangerous: %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1097
+#: refs/reftable-backend.c:1091
 #, c-format
 msgid "trying to write ref '%s' with nonexistent object %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1103
+#: refs/reftable-backend.c:1097
 #, c-format
 msgid "trying to write non-commit object %s to branch '%s'"
 msgstr ""
 
-#: refs/reftable-backend.c:1126
+#: refs/reftable-backend.c:1120
 #, c-format
 msgid ""
 "multiple updates for 'HEAD' (including one via its referent '%s') are not "
 "allowed"
 msgstr ""
 
-#: refs/reftable-backend.c:1173
+#: refs/reftable-backend.c:1167
 #, c-format
 msgid "cannot lock ref '%s': unable to resolve reference '%s'"
 msgstr ""
 
-#: refs/reftable-backend.c:1190
+#: refs/reftable-backend.c:1184
 #, c-format
 msgid "cannot lock ref '%s': error reading reference"
 msgstr ""
 
-#: refs/reftable-backend.c:1204
+#: refs/reftable-backend.c:1198
 #, c-format
 msgid ""
 "multiple updates for '%s' (including one via symref '%s') are not allowed"
 msgstr ""
 
-#: refs/reftable-backend.c:1273
+#: refs/reftable-backend.c:1267
 #, c-format
 msgid "cannot lock ref '%s': dangling symref already exists"
 msgstr ""
 
-#: refs/reftable-backend.c:1279
+#: refs/reftable-backend.c:1273
 #, c-format
 msgid "cannot lock ref '%s': reference already exists"
 msgstr ""
 
-#: refs/reftable-backend.c:1284
+#: refs/reftable-backend.c:1278
 #, c-format
 msgid "cannot lock ref '%s': reference is missing but expected %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1290
+#: refs/reftable-backend.c:1284
 #, c-format
 msgid "cannot lock ref '%s': is at %s but expected %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1413
+#: refs/reftable-backend.c:1407
 #, c-format
 msgid "reftable: transaction prepare: %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1679
+#: refs/reftable-backend.c:1673
 #, c-format
 msgid "reftable: transaction failure: %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1706
+#: refs/reftable-backend.c:1700
 #, c-format
 msgid "unable to compact stack: %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1779
+#: refs/reftable-backend.c:1773
 #, c-format
 msgid "refname %s not found"
 msgstr ""
 
-#: refs/reftable-backend.c:1783
+#: refs/reftable-backend.c:1777
 #, c-format
 msgid "refname %s is a symbolic ref, copying it is not supported"
 msgstr ""
 
-#: refs/reftable-backend.c:2748
+#: refs/reftable-backend.c:2742
 #, c-format
 msgid "reftable stack for worktree '%s' is broken"
 msgstr ""
 
-#: refs/reftable-backend.c:2759
+#: refs/reftable-backend.c:2753
 #, c-format
 msgid "could not create iterator for worktree '%s'"
 msgstr ""
 
-#: refs/reftable-backend.c:2768
+#: refs/reftable-backend.c:2762
 #, c-format
 msgid "could not read record for worktree '%s'"
 msgstr ""
@@ -25820,6 +25826,15 @@ msgstr ""
 msgid "all positive revisions given must be references"
 msgstr ""
 
+#: replay.c:384
+msgid "'--ref' cannot be used with multiple revision ranges"
+msgstr ""
+
+#: replay.c:388 sequencer.c:2645
+#, c-format
+msgid "'%s' is not a valid refname"
+msgstr ""
+
 #: repository.c:213
 msgid "compatibility hash algorithm support requires Rust"
 msgstr ""
@@ -26259,37 +26274,37 @@ msgstr ""
 msgid "remote unpack failed: %s"
 msgstr ""
 
-#: send-pack.c:395
+#: send-pack.c:396
 msgid "failed to sign the push certificate"
 msgstr ""
 
-#: send-pack.c:463
+#: send-pack.c:464
 msgid "send-pack: unable to fork off fetch subprocess"
 msgstr ""
 
-#: send-pack.c:485
+#: send-pack.c:486
 msgid "push negotiation failed; proceeding anyway with push"
 msgstr ""
 
-#: send-pack.c:565
+#: send-pack.c:566
 msgid "the receiving end does not support this repository's hash algorithm"
 msgstr ""
 
-#: send-pack.c:575
+#: send-pack.c:576
 msgid "the receiving end does not support --signed push"
 msgstr ""
 
-#: send-pack.c:577
+#: send-pack.c:578
 msgid ""
 "not sending a push certificate since the receiving end does not support --"
 "signed push"
 msgstr ""
 
-#: send-pack.c:584
+#: send-pack.c:585
 msgid "the receiving end does not support --atomic push"
 msgstr ""
 
-#: send-pack.c:589
+#: send-pack.c:590
 msgid "the receiving end does not support push options"
 msgstr ""
 
@@ -26649,11 +26664,6 @@ msgstr ""
 #: sequencer.c:2640
 #, c-format
 msgid "'%s' is not a valid label"
-msgstr ""
-
-#: sequencer.c:2645
-#, c-format
-msgid "'%s' is not a valid refname"
 msgstr ""
 
 #: sequencer.c:2647
@@ -28051,7 +28061,7 @@ msgstr ""
 msgid "error while running fast-import"
 msgstr ""
 
-#: transport-helper.c:572 transport-helper.c:1285
+#: transport-helper.c:572 transport-helper.c:1286
 #, c-format
 msgid "could not read ref %s"
 msgstr ""
@@ -28078,120 +28088,120 @@ msgstr ""
 msgid "--negotiate-only requires protocol v2"
 msgstr ""
 
-#: transport-helper.c:790
+#: transport-helper.c:791
 msgid "'option' without a matching 'ok/error' directive"
 msgstr ""
 
-#: transport-helper.c:833
+#: transport-helper.c:834
 #, c-format
 msgid "expected ok/error, helper said '%s'"
 msgstr ""
 
-#: transport-helper.c:894
+#: transport-helper.c:895
 #, c-format
 msgid "helper reported unexpected status of %s"
 msgstr ""
 
-#: transport-helper.c:980
+#: transport-helper.c:981
 #, c-format
 msgid "helper %s does not support dry-run"
 msgstr ""
 
-#: transport-helper.c:983
+#: transport-helper.c:984
 #, c-format
 msgid "helper %s does not support --signed"
 msgstr ""
 
-#: transport-helper.c:986
+#: transport-helper.c:987
 #, c-format
 msgid "helper %s does not support --signed=if-asked"
 msgstr ""
 
-#: transport-helper.c:991
+#: transport-helper.c:992
 #, c-format
 msgid "helper %s does not support --atomic"
 msgstr ""
 
-#: transport-helper.c:995
+#: transport-helper.c:996
 #, c-format
 msgid "helper %s does not support --%s"
 msgstr ""
 
-#: transport-helper.c:1002
+#: transport-helper.c:1003
 #, c-format
 msgid "helper %s does not support 'push-option'"
 msgstr ""
 
-#: transport-helper.c:1103
+#: transport-helper.c:1104
 msgid "remote-helper doesn't support push; refspec needed"
 msgstr ""
 
-#: transport-helper.c:1108
+#: transport-helper.c:1109
 #, c-format
 msgid "helper %s does not support '--force'"
 msgstr ""
 
-#: transport-helper.c:1157
+#: transport-helper.c:1158
 msgid "couldn't run fast-export"
 msgstr ""
 
-#: transport-helper.c:1162
+#: transport-helper.c:1163
 msgid "error while running fast-export"
 msgstr ""
 
-#: transport-helper.c:1185
+#: transport-helper.c:1186
 #, c-format
 msgid ""
 "No refs in common and none specified; doing nothing.\n"
 "Perhaps you should specify a branch.\n"
 msgstr ""
 
-#: transport-helper.c:1262
+#: transport-helper.c:1263
 #, c-format
 msgid "unsupported object format '%s'"
 msgstr ""
 
-#: transport-helper.c:1271
+#: transport-helper.c:1272
 #, c-format
 msgid "malformed response in ref list: %s"
 msgstr ""
 
-#: transport-helper.c:1436
+#: transport-helper.c:1437
 #, c-format
 msgid "read(%s) failed"
 msgstr ""
 
-#: transport-helper.c:1463
+#: transport-helper.c:1464
 #, c-format
 msgid "write(%s) failed"
 msgstr ""
 
-#: transport-helper.c:1512
+#: transport-helper.c:1513
 #, c-format
 msgid "%s thread failed"
 msgstr ""
 
-#: transport-helper.c:1516
+#: transport-helper.c:1517
 #, c-format
 msgid "%s thread failed to join: %s"
 msgstr ""
 
-#: transport-helper.c:1535 transport-helper.c:1539
+#: transport-helper.c:1536 transport-helper.c:1540
 #, c-format
 msgid "can't start thread for copying data: %s"
 msgstr ""
 
-#: transport-helper.c:1576
+#: transport-helper.c:1577
 #, c-format
 msgid "%s process failed to wait"
 msgstr ""
 
-#: transport-helper.c:1580
+#: transport-helper.c:1581
 #, c-format
 msgid "%s process failed"
 msgstr ""
 
-#: transport-helper.c:1598 transport-helper.c:1607
+#: transport-helper.c:1599 transport-helper.c:1608
 msgid "can't start thread for copying data"
 msgstr ""
 
