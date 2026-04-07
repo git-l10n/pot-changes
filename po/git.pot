@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2026-04-02 22:18+0000\n"
+"POT-Creation-Date: 2026-04-07 01:03+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -1669,7 +1669,7 @@ msgstr ""
 msgid "failed to unpack tree object %s"
 msgstr ""
 
-#: archive.c:586
+#: archive.c:586 repack-promisor.c:92
 #, c-format
 msgid "File not found: %s"
 msgstr ""
@@ -2436,7 +2436,7 @@ msgstr ""
 msgid "Failed to copy notes from '%s' to '%s'"
 msgstr ""
 
-#: builtin/am.c:596
+#: builtin/am.c:596 repack-promisor.c:139
 msgid "fseek failed"
 msgstr ""
 
@@ -5054,7 +5054,7 @@ msgstr ""
 msgid "failed to copy file to '%s'"
 msgstr ""
 
-#: builtin/clone.c:345 refs/files-backend.c:3971
+#: builtin/clone.c:345 refs/files-backend.c:3978
 #, c-format
 msgid "failed to iterate over '%s'"
 msgstr ""
@@ -6344,7 +6344,7 @@ msgstr ""
 msgid "invalid key pattern: %s"
 msgstr ""
 
-#: builtin/config.c:576 config.c:3071
+#: builtin/config.c:576 config.c:3080
 #, c-format
 msgid "invalid pattern: %s"
 msgstr ""
@@ -9735,12 +9735,8 @@ msgstr ""
 msgid "failed to commit ref transaction: %s"
 msgstr ""
 
-#: builtin/history.c:440 builtin/mailinfo.c:78
-msgid "<action>"
-msgstr ""
-
 #: builtin/history.c:441
-msgid "control which refs should be updated (branches|head)"
+msgid "control which refs should be updated"
 msgstr ""
 
 #: builtin/history.c:444 builtin/history.c:673
@@ -9796,12 +9792,8 @@ msgstr ""
 msgid "failed writing second commit"
 msgstr ""
 
-#: builtin/history.c:669
-msgid "<refs>"
-msgstr ""
-
 #: builtin/history.c:670
-msgid "control ref update behavior (branches|head|print)"
+msgid "control ref update behavior"
 msgstr ""
 
 #: builtin/history.c:684
@@ -11055,6 +11047,10 @@ msgstr ""
 
 #: builtin/mailinfo.c:77
 msgid "use scissors"
+msgstr ""
+
+#: builtin/mailinfo.c:78
+msgid "<action>"
 msgstr ""
 
 #: builtin/mailinfo.c:79
@@ -14325,7 +14321,7 @@ msgid "could not set '%s'"
 msgstr ""
 
 #: builtin/remote.c:833 builtin/remote.c:1051 builtin/remote.c:1059
-#: config.c:3253
+#: config.c:3262
 #, c-format
 msgid "could not unset '%s'"
 msgstr ""
@@ -15395,25 +15391,25 @@ msgstr ""
 msgid "Could not write new index file."
 msgstr ""
 
-#: builtin/rev-list.c:133
+#: builtin/rev-list.c:134
 #, c-format
 msgid "unable to get disk usage of %s"
 msgstr ""
 
-#: builtin/rev-list.c:796
+#: builtin/rev-list.c:852
 #, c-format
 msgid "invalid value for '%s': '%s', the only allowed format is '%s'"
 msgstr ""
 
-#: builtin/rev-list.c:825
+#: builtin/rev-list.c:881
 msgid "-z option used with unsupported option"
 msgstr ""
 
-#: builtin/rev-list.c:850
+#: builtin/rev-list.c:906
 msgid "rev-list does not support display of notes"
 msgstr ""
 
-#: builtin/rev-list.c:855
+#: builtin/rev-list.c:911
 #, c-format
 msgid "marked counting and '%s' cannot be used together"
 msgstr ""
@@ -18968,7 +18964,7 @@ msgid "Restricted login shell for Git-only SSH access"
 msgstr ""
 
 #: command-list.h:180
-msgid "Summarize 'git log' output"
+msgid "Summarize `git log` output"
 msgstr ""
 
 #: command-list.h:181
@@ -19749,12 +19745,12 @@ msgstr ""
 msgid "[GLE %ld] unable to get protocol information for '%ls'"
 msgstr ""
 
-#: compat/mingw.c:3159
+#: compat/mingw.c:3163
 #, c-format
 msgid "failed to copy SID (%ld)"
 msgstr ""
 
-#: compat/mingw.c:3254
+#: compat/mingw.c:3258
 #, c-format
 msgid "failed to get owner for '%s' (%ld)"
 msgstr ""
@@ -20158,57 +20154,57 @@ msgstr ""
 msgid "no multi-line comment allowed: '%s'"
 msgstr ""
 
-#: config.c:3022 config.c:3367
+#: config.c:3031 config.c:3377
 #, c-format
 msgid "could not lock config file %s"
 msgstr ""
 
-#: config.c:3033
+#: config.c:3042
 #, c-format
 msgid "opening %s"
 msgstr ""
 
-#: config.c:3097
+#: config.c:3106
 #, c-format
 msgid "invalid config file %s"
 msgstr ""
 
-#: config.c:3110 config.c:3380
+#: config.c:3119 config.c:3390
 #, c-format
 msgid "fstat on %s failed"
 msgstr ""
 
-#: config.c:3121
+#: config.c:3130
 #, c-format
 msgid "unable to mmap '%s'%s"
 msgstr ""
 
-#: config.c:3131 config.c:3385
+#: config.c:3140 config.c:3395
 #, c-format
 msgid "chmod on %s failed"
 msgstr ""
 
-#: config.c:3216 config.c:3492
+#: config.c:3225 config.c:3502
 #, c-format
 msgid "could not write config file %s"
 msgstr ""
 
-#: config.c:3251
+#: config.c:3260
 #, c-format
 msgid "could not set '%s' to '%s'"
 msgstr ""
 
-#: config.c:3358
+#: config.c:3367
 #, c-format
 msgid "invalid section name: %s"
 msgstr ""
 
-#: config.c:3398
+#: config.c:3408
 #, c-format
 msgid "refusing to work with overly long line in '%s' on line %<PRIuMAX>"
 msgstr ""
 
-#: config.c:3537
+#: config.c:3547
 #, c-format
 msgid "missing value for '%s'"
 msgstr ""
@@ -22012,7 +22008,7 @@ msgstr ""
 msgid "failed reading ssh signing data buffer from '%s'"
 msgstr ""
 
-#: graph.c:98
+#: graph.c:104
 #, c-format
 msgid "ignored invalid color '%.*s' in log.graphColors"
 msgstr ""
@@ -23944,7 +23940,7 @@ msgstr ""
 msgid "failed to make %s readable"
 msgstr ""
 
-#: pack-write.c:613
+#: pack-write.c:622
 #, c-format
 msgid "could not write '%s' promisor file"
 msgstr ""
@@ -25311,22 +25307,22 @@ msgstr ""
 msgid "could not delete references: %s"
 msgstr ""
 
-#: refs.c:3412
+#: refs.c:3413
 #, c-format
 msgid "Finished dry-run migration of refs, the result can be found at '%s'\n"
 msgstr ""
 
-#: refs.c:3447
+#: refs.c:3448
 #, c-format
 msgid "could not remove temporary migration directory '%s'"
 msgstr ""
 
-#: refs.c:3471
+#: refs.c:3472
 #, c-format
 msgid "migrated refs can be found at '%s'"
 msgstr ""
 
-#: refs/files-backend.c:2122
+#: refs/files-backend.c:2129
 msgid ""
 "'core.preferSymlinkRefs=true' is nominated for removal.\n"
 "hint: The use of symbolic links for symbolic refs is deprecated\n"
@@ -25339,23 +25335,23 @@ msgid ""
 "hint: Git will then use the textual symref format instead."
 msgstr ""
 
-#: refs/files-backend.c:2771 refs/reftable-backend.c:1235
+#: refs/files-backend.c:2778 refs/reftable-backend.c:1235
 #, c-format
 msgid ""
 "cannot lock ref '%s': expected symref with target '%s': but is a regular ref"
 msgstr ""
 
-#: refs/files-backend.c:3107 refs/reftable-backend.c:1074
+#: refs/files-backend.c:3114 refs/reftable-backend.c:1074
 #, c-format
 msgid "trying to write reflog for '%s' with incomplete values"
 msgstr ""
 
-#: refs/files-backend.c:3822
+#: refs/files-backend.c:3829
 #, c-format
 msgid "cannot read ref file '%s'"
 msgstr ""
 
-#: refs/files-backend.c:3952
+#: refs/files-backend.c:3959
 #, c-format
 msgid "cannot open directory %s"
 msgstr ""
@@ -25979,15 +25975,25 @@ msgstr ""
 msgid "failed to feed promisor objects to pack-objects"
 msgstr ""
 
-#: repack-promisor.c:53 repack.c:105
+#: repack-promisor.c:133
+#, c-format
+msgid "Could not read '%s' promisor file"
+msgstr ""
+
+#: repack-promisor.c:146
+#, c-format
+msgid "Could not write '%s' promisor file"
+msgstr ""
+
+#: repack-promisor.c:174 repack.c:105
 msgid "repack: Expecting full hex object ID lines only from pack-objects."
 msgstr ""
 
-#: repack-promisor.c:78
+#: repack-promisor.c:195
 msgid "could not finish pack-objects to repack promisor objects"
 msgstr ""
 
-#: repack-promisor.c:129
+#: repack-promisor.c:247
 msgid "could not start pack-objects to repack promisor packs"
 msgstr ""
 
