@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2026-04-08 04:23+0000\n"
+"POT-Creation-Date: 2026-04-08 23:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -2871,7 +2871,7 @@ msgid "Restrict the missing objects to the current sparse-checkout"
 msgstr ""
 
 #: builtin/backfill.c:146 builtin/diff-pairs.c:69 builtin/log.c:316
-#: builtin/log.c:2214 builtin/replay.c:155 builtin/shortlog.c:456 bundle.c:514
+#: builtin/log.c:2214 builtin/replay.c:165 builtin/shortlog.c:456 bundle.c:514
 #, c-format
 msgid "unrecognized argument: %s"
 msgstr ""
@@ -3851,7 +3851,7 @@ msgstr ""
 #: builtin/bugreport.c:112 builtin/commit.c:1571 builtin/commit.c:1580
 #: builtin/commit.c:1771 builtin/fast-export.c:1323 builtin/fast-export.c:1326
 #: builtin/fast-export.c:1329 builtin/fast-export.c:1332
-#: builtin/pack-objects.c:5057 builtin/rebase.c:1229 builtin/replay.c:104
+#: builtin/pack-objects.c:5057 builtin/rebase.c:1229 builtin/replay.c:111
 #: parse-options.h:622
 msgid "mode"
 msgstr ""
@@ -4766,9 +4766,10 @@ msgstr ""
 
 #: builtin/checkout.c:2045 builtin/checkout.c:2047 builtin/checkout.c:2097
 #: builtin/checkout.c:2099 builtin/clone.c:962 builtin/remote.c:195
-#: builtin/remote.c:197 builtin/replay.c:93 builtin/replay.c:101
-#: builtin/submodule--helper.c:3284 builtin/submodule--helper.c:3653
-#: builtin/worktree.c:808 builtin/worktree.c:810
+#: builtin/remote.c:197 builtin/replay.c:99 builtin/replay.c:103
+#: builtin/replay.c:107 builtin/submodule--helper.c:3284
+#: builtin/submodule--helper.c:3653 builtin/worktree.c:808
+#: builtin/worktree.c:810
 msgid "branch"
 msgstr ""
 
@@ -8271,7 +8272,7 @@ msgid "specify fetch refmap"
 msgstr ""
 
 #: builtin/fetch.c:2568 builtin/pull.c:999 builtin/rebase.c:1122
-#: builtin/replay.c:96
+#: builtin/replay.c:95
 msgid "revision"
 msgstr ""
 
@@ -9672,11 +9673,11 @@ msgstr ""
 msgid "%s expects one of 'branches' or 'head'"
 msgstr ""
 
-#: builtin/history.c:215 replay.c:379
+#: builtin/history.c:215 replay.c:402
 msgid "error preparing revisions"
 msgstr ""
 
-#: builtin/history.c:220 replay.c:393
+#: builtin/history.c:220 replay.c:416
 msgid "replaying merge commits is not supported yet!"
 msgstr ""
 
@@ -9693,17 +9694,17 @@ msgid ""
 "rewritten commit must be an ancestor of HEAD when using --update-refs=head"
 msgstr ""
 
-#: builtin/history.c:357 builtin/replay.c:209
+#: builtin/history.c:357 builtin/replay.c:219
 #, c-format
 msgid "failed to begin ref transaction: %s"
 msgstr ""
 
-#: builtin/history.c:369 builtin/history.c:408 builtin/replay.c:220
+#: builtin/history.c:369 builtin/history.c:408 builtin/replay.c:230
 #, c-format
 msgid "failed to update ref '%s': %s"
 msgstr ""
 
-#: builtin/history.c:415 builtin/replay.c:229
+#: builtin/history.c:415 builtin/replay.c:239
 #, c-format
 msgid "failed to commit ref transaction: %s"
 msgstr ""
@@ -15003,36 +15004,41 @@ msgstr ""
 
 #: builtin/replay.c:86
 msgid ""
-"(EXPERIMENTAL!) git replay ([--contained] --onto <newbase> | --advance "
-"<branch> | --revert <branch>) [--ref-action[=<mode>]] <revision-range>"
+"(EXPERIMENTAL!) git replay ([--contained] --onto=<newbase> | --"
+"advance=<branch> | --revert=<branch>)\n"
+"[--ref=<ref>] [--ref-action=<mode>] <revision-range>"
 msgstr ""
 
-#: builtin/replay.c:94
-msgid "make replay advance given branch"
-msgstr ""
-
-#: builtin/replay.c:97
-msgid "replay onto given commit"
-msgstr ""
-
-#: builtin/replay.c:99
+#: builtin/replay.c:93
 msgid "update all branches that point at commits in <revision-range>"
 msgstr ""
 
-#: builtin/replay.c:102
+#: builtin/replay.c:96
+msgid "replay onto given commit"
+msgstr ""
+
+#: builtin/replay.c:100
+msgid "make replay advance given branch"
+msgstr ""
+
+#: builtin/replay.c:104
 msgid "revert commits onto given branch"
 msgstr ""
 
-#: builtin/replay.c:105
+#: builtin/replay.c:108
+msgid "reference to update with result"
+msgstr ""
+
+#: builtin/replay.c:112
 msgid "control ref update behavior (update|print)"
 msgstr ""
 
-#: builtin/replay.c:114
+#: builtin/replay.c:122
 msgid "exactly one of --onto, --advance, or --revert is required"
 msgstr ""
 
-#: builtin/replay.c:164 builtin/replay.c:170 builtin/replay.c:176
-#: builtin/replay.c:182
+#: builtin/replay.c:174 builtin/replay.c:180 builtin/replay.c:186
+#: builtin/replay.c:192
 #, c-format
 msgid ""
 "some rev walking options will be overridden as '%s' bit in 'struct rev_info' "
@@ -17142,7 +17148,7 @@ msgstr ""
 msgid "'%s' already exists in the index and is not a submodule"
 msgstr ""
 
-#: builtin/submodule--helper.c:3637 object-file.c:1711
+#: builtin/submodule--helper.c:3637 object-file.c:1745
 #, c-format
 msgid "'%s' does not have a commit checked out"
 msgstr ""
@@ -23030,12 +23036,12 @@ msgstr ""
 msgid "object file %s is empty"
 msgstr ""
 
-#: object-file.c:319 object-file.c:2088
+#: object-file.c:319 object-file.c:2122
 #, c-format
 msgid "corrupt loose object '%s'"
 msgstr ""
 
-#: object-file.c:322 object-file.c:2092
+#: object-file.c:322 object-file.c:2126
 #, c-format
 msgid "garbage at end of loose object '%s'"
 msgstr ""
@@ -23069,7 +23075,7 @@ msgstr ""
 msgid "loose object %s (stored in %s) is corrupt"
 msgstr ""
 
-#: object-file.c:597 object-file.c:604 object-file.c:1760
+#: object-file.c:597 object-file.c:604 object-file.c:1794
 #, c-format
 msgid "unable to open %s"
 msgstr ""
@@ -23145,75 +23151,75 @@ msgstr ""
 msgid "unable to create directory %s"
 msgstr ""
 
-#: object-file.c:1230
+#: object-file.c:1231
 #, c-format
 msgid "cannot read object for %s"
 msgstr ""
 
-#: object-file.c:1233
+#: object-file.c:1234
 #, c-format
 msgid "cannot map object %s to %s"
 msgstr ""
 
-#: object-file.c:1257
+#: object-file.c:1258
 #, c-format
 msgid "object fails fsck: %s"
 msgstr ""
 
-#: object-file.c:1291
+#: object-file.c:1292
 msgid "refusing to create malformed object"
 msgstr ""
 
-#: object-file.c:1360
+#: object-file.c:1361
 #, c-format
 msgid "read error while indexing %s"
 msgstr ""
 
-#: object-file.c:1363
+#: object-file.c:1364
 #, c-format
 msgid "short read while indexing %s"
 msgstr ""
 
-#: object-file.c:1696 object-file.c:1706
+#: object-file.c:1730 object-file.c:1740
 #, c-format
 msgid "%s: failed to insert into database"
 msgstr ""
 
-#: object-file.c:1713
+#: object-file.c:1747
 msgid "cannot add a submodule of a different hash algorithm"
 msgstr ""
 
-#: object-file.c:1716
+#: object-file.c:1750
 #, c-format
 msgid "%s: unsupported file type"
 msgstr ""
 
-#: object-file.c:2099
+#: object-file.c:2133
 #, c-format
 msgid "hash mismatch for %s (expected %s)"
 msgstr ""
 
-#: object-file.c:2126
+#: object-file.c:2160
 #, c-format
 msgid "unable to mmap %s"
 msgstr ""
 
-#: object-file.c:2131
+#: object-file.c:2165
 #, c-format
 msgid "unable to unpack header of %s"
 msgstr ""
 
-#: object-file.c:2136
+#: object-file.c:2170
 #, c-format
 msgid "unable to parse header of %s"
 msgstr ""
 
-#: object-file.c:2141
+#: object-file.c:2175
 #, c-format
 msgid "unable to parse type from header '%s' of %s"
 msgstr ""
 
-#: object-file.c:2154
+#: object-file.c:2188
 #, c-format
 msgid "unable to unpack contents of %s"
 msgstr ""
@@ -25141,13 +25147,13 @@ msgid ""
 "hint: Git will then use the textual symref format instead."
 msgstr ""
 
-#: refs/files-backend.c:2771 refs/reftable-backend.c:1241
+#: refs/files-backend.c:2771 refs/reftable-backend.c:1235
 #, c-format
 msgid ""
 "cannot lock ref '%s': expected symref with target '%s': but is a regular ref"
 msgstr ""
 
-#: refs/files-backend.c:3107 refs/reftable-backend.c:1080
+#: refs/files-backend.c:3107 refs/reftable-backend.c:1074
 #, c-format
 msgid "trying to write reflog for '%s' with incomplete values"
 msgstr ""
@@ -25167,100 +25173,100 @@ msgstr ""
 msgid "unable to open '%s'"
 msgstr ""
 
-#: refs/reftable-backend.c:679
+#: refs/reftable-backend.c:673
 #, c-format
 msgid "refname is dangerous: %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1097
+#: refs/reftable-backend.c:1091
 #, c-format
 msgid "trying to write ref '%s' with nonexistent object %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1103
+#: refs/reftable-backend.c:1097
 #, c-format
 msgid "trying to write non-commit object %s to branch '%s'"
 msgstr ""
 
-#: refs/reftable-backend.c:1126
+#: refs/reftable-backend.c:1120
 #, c-format
 msgid ""
 "multiple updates for 'HEAD' (including one via its referent '%s') are not "
 "allowed"
 msgstr ""
 
-#: refs/reftable-backend.c:1173
+#: refs/reftable-backend.c:1167
 #, c-format
 msgid "cannot lock ref '%s': unable to resolve reference '%s'"
 msgstr ""
 
-#: refs/reftable-backend.c:1190
+#: refs/reftable-backend.c:1184
 #, c-format
 msgid "cannot lock ref '%s': error reading reference"
 msgstr ""
 
-#: refs/reftable-backend.c:1204
+#: refs/reftable-backend.c:1198
 #, c-format
 msgid ""
 "multiple updates for '%s' (including one via symref '%s') are not allowed"
 msgstr ""
 
-#: refs/reftable-backend.c:1273
+#: refs/reftable-backend.c:1267
 #, c-format
 msgid "cannot lock ref '%s': dangling symref already exists"
 msgstr ""
 
-#: refs/reftable-backend.c:1279
+#: refs/reftable-backend.c:1273
 #, c-format
 msgid "cannot lock ref '%s': reference already exists"
 msgstr ""
 
-#: refs/reftable-backend.c:1284
+#: refs/reftable-backend.c:1278
 #, c-format
 msgid "cannot lock ref '%s': reference is missing but expected %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1290
+#: refs/reftable-backend.c:1284
 #, c-format
 msgid "cannot lock ref '%s': is at %s but expected %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1413
+#: refs/reftable-backend.c:1407
 #, c-format
 msgid "reftable: transaction prepare: %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1679
+#: refs/reftable-backend.c:1673
 #, c-format
 msgid "reftable: transaction failure: %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1706
+#: refs/reftable-backend.c:1700
 #, c-format
 msgid "unable to compact stack: %s"
 msgstr ""
 
-#: refs/reftable-backend.c:1779
+#: refs/reftable-backend.c:1773
 #, c-format
 msgid "refname %s not found"
 msgstr ""
 
-#: refs/reftable-backend.c:1783
+#: refs/reftable-backend.c:1777
 #, c-format
 msgid "refname %s is a symbolic ref, copying it is not supported"
 msgstr ""
 
-#: refs/reftable-backend.c:2748
+#: refs/reftable-backend.c:2742
 #, c-format
 msgid "reftable stack for worktree '%s' is broken"
 msgstr ""
 
-#: refs/reftable-backend.c:2759
+#: refs/reftable-backend.c:2753
 #, c-format
 msgid "could not create iterator for worktree '%s'"
 msgstr ""
 
-#: refs/reftable-backend.c:2768
+#: refs/reftable-backend.c:2762
 #, c-format
 msgid "could not read record for worktree '%s'"
 msgstr ""
@@ -25814,6 +25820,15 @@ msgstr ""
 
 #: replay.c:238
 msgid "all positive revisions given must be references"
+msgstr ""
+
+#: replay.c:384
+msgid "'--ref' cannot be used with multiple revision ranges"
+msgstr ""
+
+#: replay.c:388 sequencer.c:2645
+#, c-format
+msgid "'%s' is not a valid refname"
 msgstr ""
 
 #: repository.c:213
@@ -26645,11 +26660,6 @@ msgstr ""
 #: sequencer.c:2640
 #, c-format
 msgid "'%s' is not a valid label"
-msgstr ""
-
-#: sequencer.c:2645
-#, c-format
-msgid "'%s' is not a valid refname"
 msgstr ""
 
 #: sequencer.c:2647
