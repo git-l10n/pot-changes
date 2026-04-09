@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2026-04-07 20:30+0000\n"
+"POT-Creation-Date: 2026-04-09 22:26+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -1669,7 +1669,7 @@ msgstr ""
 msgid "failed to unpack tree object %s"
 msgstr ""
 
-#: archive.c:586
+#: archive.c:586 repack-promisor.c:92
 #, c-format
 msgid "File not found: %s"
 msgstr ""
@@ -2436,7 +2436,7 @@ msgstr ""
 msgid "Failed to copy notes from '%s' to '%s'"
 msgstr ""
 
-#: builtin/am.c:596
+#: builtin/am.c:596 repack-promisor.c:135
 msgid "fseek failed"
 msgstr ""
 
@@ -8074,7 +8074,7 @@ msgstr ""
 msgid "option \"%s\" is ignored for %s"
 msgstr ""
 
-#: builtin/fetch.c:1551 odb.c:1045
+#: builtin/fetch.c:1551 odb.c:982
 #, c-format
 msgid "%s is not a valid object"
 msgstr ""
@@ -23215,12 +23215,12 @@ msgstr ""
 msgid "object file %s is empty"
 msgstr ""
 
-#: object-file.c:320 object-file.c:2095
+#: object-file.c:320 object-file.c:2096
 #, c-format
 msgid "corrupt loose object '%s'"
 msgstr ""
 
-#: object-file.c:323 object-file.c:2099
+#: object-file.c:323 object-file.c:2100
 #, c-format
 msgid "garbage at end of loose object '%s'"
 msgstr ""
@@ -23373,32 +23373,32 @@ msgstr ""
 msgid "%s: unsupported file type"
 msgstr ""
 
-#: object-file.c:2106
+#: object-file.c:2107
 #, c-format
 msgid "hash mismatch for %s (expected %s)"
 msgstr ""
 
-#: object-file.c:2133
+#: object-file.c:2134
 #, c-format
 msgid "unable to mmap %s"
 msgstr ""
 
-#: object-file.c:2138
+#: object-file.c:2139
 #, c-format
 msgid "unable to unpack header of %s"
 msgstr ""
 
-#: object-file.c:2143
+#: object-file.c:2144
 #, c-format
 msgid "unable to parse header of %s"
 msgstr ""
 
-#: object-file.c:2148
+#: object-file.c:2149
 #, c-format
 msgid "unable to parse type from header '%s' of %s"
 msgstr ""
 
-#: object-file.c:2161
+#: object-file.c:2162
 #, c-format
 msgid "unable to unpack contents of %s"
 msgstr ""
@@ -23584,72 +23584,72 @@ msgstr ""
 msgid "hash mismatch %s"
 msgstr ""
 
-#: odb.c:102
+#: odb.c:69
 #, c-format
 msgid "object directory %s does not exist; check .git/objects/info/alternates"
 msgstr ""
 
-#: odb.c:183
+#: odb.c:150
 #, c-format
 msgid "unable to normalize alternate object path: %s"
 msgstr ""
 
-#: odb.c:228
+#: odb.c:195
 #, c-format
 msgid "%s: ignoring alternate object stores, nesting too deep"
 msgstr ""
 
-#: odb.c:316
+#: odb.c:283
 #, c-format
 msgid "path '%s' does not exist"
 msgstr ""
 
-#: odb.c:337
+#: odb.c:304
 #, c-format
 msgid "reference repository '%s' as a linked checkout is not supported yet."
 msgstr ""
 
-#: odb.c:343
+#: odb.c:310
 #, c-format
 msgid "reference repository '%s' is not a local repository."
 msgstr ""
 
-#: odb.c:349
+#: odb.c:316
 #, c-format
 msgid "reference repository '%s' is shallow"
 msgstr ""
 
-#: odb.c:357
+#: odb.c:324
 #, c-format
 msgid "reference repository '%s' is grafted"
 msgstr ""
 
-#: odb.c:394
+#: odb.c:361
 #, c-format
 msgid "could not find object directory matching %s"
 msgstr ""
 
-#: odb.c:452
+#: odb.c:419
 #, c-format
 msgid "invalid line while parsing alternate refs: %s"
 msgstr ""
 
-#: odb.c:660
+#: odb.c:609
 #, c-format
 msgid "replacement %s not found for %s"
 msgstr ""
 
-#: odb.c:663
+#: odb.c:612
 #, c-format
 msgid "packed object %s (stored in %s) is corrupt"
 msgstr ""
 
-#: odb.c:685 odb.c:739
+#: odb.c:634 odb.c:688
 #, c-format
 msgid "missing mapping of %s to %s"
 msgstr ""
 
-#: odb.c:1047
+#: odb.c:984
 #, c-format
 msgid "%s is not a valid '%s' object"
 msgstr ""
@@ -23940,7 +23940,7 @@ msgstr ""
 msgid "failed to make %s readable"
 msgstr ""
 
-#: pack-write.c:613
+#: pack-write.c:622
 #, c-format
 msgid "could not write '%s' promisor file"
 msgstr ""
@@ -25975,15 +25975,25 @@ msgstr ""
 msgid "failed to feed promisor objects to pack-objects"
 msgstr ""
 
-#: repack-promisor.c:53 repack.c:105
+#: repack-promisor.c:129
+#, c-format
+msgid "Could not read '%s' promisor file"
+msgstr ""
+
+#: repack-promisor.c:142
+#, c-format
+msgid "Could not write '%s' promisor file"
+msgstr ""
+
+#: repack-promisor.c:170 repack.c:105
 msgid "repack: Expecting full hex object ID lines only from pack-objects."
 msgstr ""
 
-#: repack-promisor.c:78
+#: repack-promisor.c:191
 msgid "could not finish pack-objects to repack promisor objects"
 msgstr ""
 
-#: repack-promisor.c:129
+#: repack-promisor.c:243
 msgid "could not start pack-objects to repack promisor packs"
 msgstr ""
 
