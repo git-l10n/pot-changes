@@ -509,3 +509,514 @@ ERROR: unknown command "check-pot" for "git-po-helper"
 
 Did you mean this?
 	check-po
+
+
+#################### Mon, 13 Apr 2026 17:45:44 +0000 ####################
+
+--- po/git.pot.old	2026-04-13 17:45:44.358630247 +0000
++++ po/git.pot.new	2026-04-13 17:45:44.442629871 +0000
+@@ -853,6 +853,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "%s must be a positive integer or -1, ignoring: %d"
++msgstr ""
++
++#, c-format
+ msgid "%s must be between 0 and 1, using default"
+ msgstr ""
+ 
+@@ -3295,6 +3299,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Could not read '%s' promisor file"
++msgstr ""
++
++#, c-format
+ msgid "Could not read from '%s'"
+ msgstr ""
+ 
+@@ -3369,6 +3377,10 @@
+ msgid "Could not update .gitmodules entry %s"
+ msgstr ""
+ 
++#, c-format
++msgid "Could not write '%s' promisor file"
++msgstr ""
++
+ msgid "Could not write new index file."
+ msgstr ""
+ 
+@@ -4739,6 +4751,14 @@
+ "and then push using the remote name\n"
+ "\n"
+ "    git push <name>\n"
++"\n"
++"To push to multiple remotes at once, configure a remote group using\n"
++"\n"
++"    git config remotes.<groupname> \"<remote1> <remote2>\"\n"
++"\n"
++"and then push using the group name\n"
++"\n"
++"    git push <groupname>\n"
+ msgstr ""
+ 
+ msgid "No current branch."
+@@ -6865,6 +6885,10 @@
+ msgid "WARNING: You called a Git command named '%s', which does not exist."
+ msgstr ""
+ 
++#, c-format
++msgid "WARNING: You called a subcommand named '%s', which does not exist."
++msgstr ""
++
+ msgid "Warning: Could not retrieve Message-ID from server response.\n"
+ msgstr ""
+ 
+@@ -8240,6 +8264,9 @@
+ msgid "bare repository '%s' is incompatible with fsmonitor"
+ msgstr ""
+ 
++msgid "base MIDX for incremental writes"
++msgstr ""
++
+ msgid "base commit should be the ancestor of revision list"
+ msgstr ""
+ 
+@@ -8297,7 +8324,8 @@
+ msgid "binary patch to '%s' creates incorrect result (expecting %s, got %s)"
+ msgstr ""
+ 
+-msgid "bisect found first bad commit"
++#, c-format
++msgid "bisect found first %s commit\n"
+ msgstr ""
+ 
+ msgid "bisect run cannot continue any more"
+@@ -8351,7 +8379,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "bogus exit code %d for good revision"
++msgid "bogus exit code %d for %s revision"
+ msgstr ""
+ 
+ #, c-format
+@@ -9239,9 +9267,16 @@
+ msgid "cannot use %s with %s"
+ msgstr ""
+ 
++#, c-format
++msgid "cannot use %s without %s"
++msgstr ""
++
+ msgid "cannot use --attr-source or GIT_ATTR_SOURCE without repo"
+ msgstr ""
+ 
++msgid "cannot use --base without --checksum-only"
++msgstr ""
++
+ msgid "cannot use --start-after with custom sort options"
+ msgstr ""
+ 
+@@ -9337,6 +9372,9 @@
+ msgid "checkout their version for unmerged files"
+ msgstr ""
+ 
++msgid "checksum"
++msgstr ""
++
+ msgid "checksum doesn't match in MIDX and bitmap"
+ msgstr ""
+ 
+@@ -9421,6 +9459,9 @@
+ msgid "closing file '%s'"
+ msgstr ""
+ 
++msgid "closing inotify file descriptor failed"
++msgstr ""
++
+ msgid "cmdline ends with \\"
+ msgstr ""
+ 
+@@ -10087,6 +10128,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "could not find base MIDX '%s'"
++msgstr ""
++
++#, c-format
+ msgid "could not find commit %s"
+ msgstr ""
+ 
+@@ -10113,6 +10158,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "could not find preferred pack for MIDX %s"
++msgstr ""
++
++#, c-format
+ msgid "could not find pseudo-merge for commit %s at offset %<PRIuMAX>"
+ msgstr ""
+ 
+@@ -10194,6 +10243,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "could not load pack %<PRIu32> from MIDX"
++msgstr ""
++
++#, c-format
+ msgid "could not load pack %d"
+ msgstr ""
+ 
+@@ -10921,6 +10974,10 @@
+ msgid "currently, --write-bitmap-index requires --name-hash-version=1"
+ msgstr ""
+ 
++#, c-format
++msgid "daemon did not stop within %d seconds"
++msgstr ""
++
+ msgid "daemon failed to start"
+ msgstr ""
+ 
+@@ -11225,6 +11282,9 @@
+ msgid "display a diffstat of what changed upstream"
+ msgstr ""
+ 
++msgid "display notes for --format"
++msgstr ""
++
+ msgid "do a real merge instead of a trivial merge"
+ msgstr ""
+ 
+@@ -11903,6 +11963,10 @@
+ " %s"
+ msgstr ""
+ 
++#, c-format
++msgid "expected exactly one line during MIDX write, got: %<PRIuMAX>"
++msgstr ""
++
+ msgid "expected flush after bundle-uri listing"
+ msgstr ""
+ 
+@@ -12082,6 +12146,10 @@
+ msgid "failed to clear multi-pack-index at %s"
+ msgstr ""
+ 
++#, c-format
++msgid "failed to clear multi-pack-index chain at %s"
++msgstr ""
++
+ msgid "failed to close rev-list's stdin"
+ msgstr ""
+ 
+@@ -13570,7 +13638,9 @@
+ msgid "git hook list [--allow-unknown-hook-name] [-z] [--show-scope] <hook-name>"
+ msgstr ""
+ 
+-msgid "git hook run [--allow-unknown-hook-name] [--ignore-missing] [--to-stdin=<path>] <hook-name> [-- <hook-args>]"
++msgid ""
++"git hook run [--allow-unknown-hook-name] [--ignore-missing] [--to-stdin=<path>] [(-j|--jobs) <n>]\n"
++"<hook-name> [-- <hook-args>]"
+ msgstr ""
+ 
+ msgid "git imap-send [-v] [-q] [--[no-]curl] [(--folder|-f) <folder>] < <mbox>"
+@@ -13655,7 +13725,8 @@
+ 
+ msgid ""
+ "git multi-pack-index [<options>] compact [--[no-]incremental]\n"
+-"  [--[no-]bitmap] <from> <to>"
++"  [--[no-]bitmap] [--base=<checksum>] [--[no-]checksum-only]\n"
++"  <from> <to>"
+ msgstr ""
+ 
+ msgid "git multi-pack-index [<options>] expire"
+@@ -13670,7 +13741,8 @@
+ msgid ""
+ "git multi-pack-index [<options>] write [--preferred-pack=<pack>]\n"
+ "  [--[no-]bitmap] [--[no-]incremental] [--[no-]stdin-packs]\n"
+-"  [--refs-snapshot=<path>]"
++"  [--refs-snapshot=<path>] [--[no-]checksum-only]\n"
++"  [--base=<checksum>]"
+ msgstr ""
+ 
+ msgid "git mv [-v] [-f] [-n] [-k] <source> <destination>"
+@@ -13902,7 +13974,7 @@
+ msgid ""
+ "git repack [-a] [-A] [-d] [-f] [-F] [-l] [-n] [-q] [-b] [-m]\n"
+ "[--window=<n>] [--depth=<n>] [--threads=<n>] [--keep-pack=<pack-name>]\n"
+-"[--write-midx] [--name-hash-version=<n>] [--path-walk]"
++"[--write-midx[=<mode>]] [--name-hash-version=<n>] [--path-walk]"
+ msgstr ""
+ 
+ msgid "git replace -d <object>..."
+@@ -14438,9 +14510,45 @@
+ msgid "historical; same as --progress"
+ msgstr ""
+ 
++#, c-format
++msgid "hook '%s' is not marked as parallel=true, running in parallel anyway due to -j%u"
++msgstr ""
++
++#, c-format
++msgid "hook friendly-name '%s' collides with a known event name; please choose a different friendly-name"
++msgstr ""
++
++#, c-format
++msgid "hook friendly-name '%s' is the same as its event; this may cause ambiguity with hook.%s.enabled"
++msgstr ""
++
+ msgid "hook from hookdir"
+ msgstr ""
+ 
++#, c-format
++msgid "hook.%s.jobs is set but '%s' looks like a hook friendly-name, not an event name; hook.<event>.jobs uses the event name (e.g. hook.post-receive.jobs), so this setting will be ignored"
++msgstr ""
++
++#, c-format
++msgid "hook.%s.jobs must be a positive integer or -1, ignoring: '%s'"
++msgstr ""
++
++#, c-format
++msgid "hook.%s.jobs must be an integer, ignoring: '%s'"
++msgstr ""
++
++#, c-format
++msgid "hook.%s.parallel must be a boolean, ignoring: '%s'"
++msgstr ""
++
++#, c-format
++msgid "hook.jobs must be a positive integer or -1, ignoring: '%s'"
++msgstr ""
++
++#, c-format
++msgid "hook.jobs must be an integer, ignoring: '%s'"
++msgstr ""
++
+ msgid "how to handle commits that become empty"
+ msgstr ""
+ 
+@@ -14823,6 +14931,19 @@
+ msgid "inline the patch"
+ msgstr ""
+ 
++msgid "inotify watch limit reached; increase fs.inotify.max_user_watches"
++msgstr ""
++
++#, c-format
++msgid "inotify_add_watch('%s') failed"
++msgstr ""
++
++msgid "inotify_init1() failed"
++msgstr ""
++
++msgid "inotify_rm_watch() failed"
++msgstr ""
++
+ msgid "input is NUL terminated"
+ msgstr ""
+ 
+@@ -15365,6 +15486,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "invalid value for -j: %d (use -1 for CPU count or a positive integer)"
++msgstr ""
++
++#, c-format
+ msgid "invalid value for variable %s"
+ msgstr ""
+ 
+@@ -15462,7 +15587,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "known remote named '%s' but with URL '%s' instead of '%s'"
++msgid "known remote named '%s' but with URL '%s' instead of '%s', ignoring this remote"
+ msgstr ""
+ 
+ msgid "label"
+@@ -15669,6 +15794,10 @@
+ msgid "machine-readable output"
+ msgstr ""
+ 
++#, c-format
++msgid "mailmap: invalid boolean '%s'"
++msgstr ""
++
+ msgid "make 'git-difftool' exit when an invoked diff tool returns a non-zero exit code"
+ msgstr ""
+ 
+@@ -16461,11 +16590,10 @@
+ msgid "no object format specified"
+ msgstr ""
+ 
+-#, c-format
+-msgid "no or empty URL advertised for remote '%s'"
++msgid "no pack files to index."
+ msgstr ""
+ 
+-msgid "no pack files to index."
++msgid "no packs to write MIDX during compaction"
+ msgstr ""
+ 
+ #, c-format
+@@ -17742,6 +17870,9 @@
+ msgid "please use two different terms"
+ msgstr ""
+ 
++msgid "polling inotify message stream failed"
++msgstr ""
++
+ msgid "populate log with at most <n> entries from shortlog"
+ msgstr ""
+ 
+@@ -17810,6 +17941,9 @@
+ msgid "pretty-print <object> content"
+ msgstr ""
+ 
++msgid "pretty-print output instead"
++msgstr ""
++
+ msgid "prevent rename/copy detection if the number of rename/copy targets exceeds given limit"
+ msgstr ""
+ 
+@@ -18262,6 +18396,9 @@
+ msgid "reading from '%s' beyond a symbolic link"
+ msgstr ""
+ 
++msgid "reading inotify message stream failed"
++msgstr ""
++
+ msgid "reading patches from stdin/tty..."
+ msgstr ""
+ 
+@@ -19074,6 +19211,9 @@
+ msgid "run textconv on object's content"
+ msgstr ""
+ 
++msgid "run up to <n> hooks simultaneously (-1 for CPU count)"
++msgstr ""
++
+ #, c-format
+ msgid ""
+ "run_command returned non-zero status for %s\n"
+@@ -19242,7 +19382,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "server advertised a promisor remote without a name or URL: %s"
++msgid "server advertised a promisor remote without a name or URL: '%s', ignoring this remote"
+ msgstr ""
+ 
+ msgid "server does not support wait-for-done"
+@@ -19984,15 +20124,17 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "status: waiting for bad commit, %d good commit known\n"
+-msgid_plural "status: waiting for bad commit, %d good commits known\n"
++msgid "status: waiting for %s commit(s), %s commit known\n"
++msgstr ""
++
++#, c-format
++msgid "status: waiting for %s commit, %d %s commit known\n"
++msgid_plural "status: waiting for %s commit, %d %s commits known\n"
+ msgstr[0] ""
+ msgstr[1] ""
+ 
+-msgid "status: waiting for both good and bad commits\n"
+-msgstr ""
+-
+-msgid "status: waiting for good commit(s), bad commit known\n"
++#, c-format
++msgid "status: waiting for both %s and %s commits\n"
+ msgstr ""
+ 
+ msgid "stdin and stdout is NUL-terminated"
+@@ -20608,6 +20750,9 @@
+ msgid "too many multi-pack-indexes"
+ msgstr ""
+ 
++msgid "too many objects in MIDX compaction step"
++msgstr ""
++
+ msgid "too many packs, unable to compact"
+ msgstr ""
+ 
+@@ -20886,6 +21031,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unable to execute compaction step %<PRIuMAX>"
++msgstr ""
++
++#, c-format
+ msgid "unable to fdopen %s"
+ msgstr ""
+ 
+@@ -20924,6 +21073,9 @@
+ msgid "unable to fstat %s"
+ msgstr ""
+ 
++msgid "unable to generate compaction plan"
++msgstr ""
++
+ #, c-format
+ msgid "unable to generate diff for '%s'"
+ msgstr ""
+@@ -21391,7 +21543,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unable to verify %s on good revision"
++msgid "unable to verify %s on %s revision"
+ msgstr ""
+ 
+ #, c-format
+@@ -21492,6 +21644,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unexpected MIDX output: '%s'"
++msgstr ""
++
++#, c-format
+ msgid "unexpected acknowledgment line: '%s'"
+ msgstr ""
+ 
+@@ -21798,6 +21954,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unknown value for %s: %s"
++msgstr ""
++
++#, c-format
+ msgid "unknown value for config '%s': %s"
+ msgstr ""
+ 
+@@ -22608,6 +22768,9 @@
+ msgid "would clobber existing tag"
+ msgstr ""
+ 
++msgid "write a MIDX layer without updating the MIDX chain"
++msgstr ""
++
+ msgid "write a bitmap index if possible"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-pot --------------------
+
+ERROR: unknown command "check-pot" for "git-po-helper"
+
+Did you mean this?
+	check-po
