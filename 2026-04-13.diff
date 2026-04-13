@@ -1,0 +1,121 @@
+
+
+#################### Mon, 13 Apr 2026 17:45:59 +0000 ####################
+
+--- po/git.pot.old	2026-04-13 17:45:59.272981092 +0000
++++ po/git.pot.new	2026-04-13 17:45:59.350980490 +0000
+@@ -687,13 +687,6 @@
+ "\n"
+ msgstr ""
+ 
+-#, c-format
+-msgid ""
+-"%s\n"
+-"Your changes are safe in the stash.\n"
+-"You can run \"git stash pop\" or \"git stash drop\" at any time.\n"
+-msgstr ""
+-
+ #. TRANSLATORS: The first argument is the number string. The second
+ #. argument is the unit string (i.e. "12.34 MiB/s").
+ #.
+@@ -2588,9 +2581,6 @@
+ msgid "Apply? [y]es/[n]o/[e]dit/[v]iew patch/[a]ccept all: "
+ msgstr ""
+ 
+-msgid "Applying autostash resulted in conflicts."
+-msgstr ""
+-
+ #, c-format
+ msgid "Applying patch %%s with %d reject..."
+ msgid_plural "Applying patch %%s with %d rejects..."
+@@ -2651,7 +2641,11 @@
+ msgid "Automatic notes merge failed. Fix conflicts in %s and commit the result with 'git notes merge --commit', or abort the merge with 'git notes merge --abort'.\n"
+ msgstr ""
+ 
+-msgid "Autostash exists; creating a new stash entry."
++#, c-format
++msgid ""
++"Autostash exists; creating a new stash entry.\n"
++"Your changes are safe in the stash.\n"
++"You can run \"git stash pop\" or \"git stash drop\" at any time.\n"
+ msgstr ""
+ 
+ #, c-format
+@@ -5927,7 +5921,7 @@
+ msgid "Successfully rebased and updated %s.\n"
+ msgstr ""
+ 
+-msgid "Summarize 'git log' output"
++msgid "Summarize `git log` output"
+ msgstr ""
+ 
+ msgid "Summary email is empty, skipping it\n"
+@@ -7308,6 +7302,19 @@
+ 
+ #, c-format
+ msgid ""
++"Your local changes are stashed, however, applying it to carry\n"
++"forward your local changes resulted in conflicts:\n"
++"\n"
++" - You can try resolving them now.  If you resolved them\n"
++"   successfully, discard the stash entry with \"git stash drop\".\n"
++"\n"
++" - Alternatively you can \"git reset --hard\" if you do not want\n"
++"   to deal with them right now, and later \"git stash pop\" to\n"
++"   recover your local changes.\n"
++msgstr ""
++
++#, c-format
++msgid ""
+ "Your local changes to the following files would be overwritten by %s:\n"
+ "%%s"
+ msgstr ""
+@@ -8705,12 +8712,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid ""
+-"cannot continue with staged changes in the following files:\n"
+-"%s"
+-msgstr ""
+-
+-#, c-format
+ msgid "cannot copy '%s' to '%s'"
+ msgstr ""
+ 
+@@ -14030,7 +14031,7 @@
+ "          [--] [<pathspec>...]"
+ msgstr ""
+ 
+-msgid "git stash apply [--index] [-q | --quiet] [<stash>]"
++msgid "git stash apply [--index] [-q | --quiet] [--label-ours=<label>] [--label-theirs=<label>] [--label-base=<label>] [<stash>]"
+ msgstr ""
+ 
+ msgid "git stash branch <branchname> [<stash>]"
+@@ -15464,6 +15465,18 @@
+ msgid "known remote named '%s' but with URL '%s' instead of '%s'"
+ msgstr ""
+ 
++msgid "label"
++msgstr ""
++
++msgid "label for the base in diff3 conflict markers"
++msgstr ""
++
++msgid "label for the stashed side in conflict markers"
++msgstr ""
++
++msgid "label for the upstream side in conflict markers"
++msgstr ""
++
+ msgid "label tags with mark ids"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-pot --------------------
+
+ERROR: unknown command "check-pot" for "git-po-helper"
+
+Did you mean this?
+	check-po
