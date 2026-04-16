@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2026-04-15 19:55+0000\n"
+"POT-Creation-Date: 2026-04-16 04:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -2871,22 +2871,34 @@ msgid "git archive: expected a flush"
 msgstr ""
 
 #: builtin/backfill.c:29
-msgid "git backfill [--min-batch-size=<n>] [--[no-]sparse]"
+msgid ""
+"git backfill [--min-batch-size=<n>] [--[no-]sparse] [--[no-]include-edges] "
+"[<revision-range>]"
 msgstr ""
 
-#: builtin/backfill.c:90
+#: builtin/backfill.c:85 builtin/backfill.c:88 builtin/backfill.c:91
+#: builtin/backfill.c:94 builtin/backfill.c:97 builtin/backfill.c:100
+#, c-format
+msgid "'%s' cannot be used with 'git backfill'"
+msgstr ""
+
+#: builtin/backfill.c:113
 msgid "problem loading sparse-checkout"
 msgstr ""
 
-#: builtin/backfill.c:127
+#: builtin/backfill.c:153
 msgid "Minimum number of objects to request at a time"
 msgstr ""
 
-#: builtin/backfill.c:129
+#: builtin/backfill.c:155
 msgid "Restrict the missing objects to the current sparse-checkout"
 msgstr ""
 
-#: builtin/backfill.c:146 builtin/diff-pairs.c:69 builtin/log.c:316
+#: builtin/backfill.c:157
+msgid "Include blobs from boundary commits in the backfill"
+msgstr ""
+
+#: builtin/backfill.c:174 builtin/diff-pairs.c:69 builtin/log.c:316
 #: builtin/log.c:2214 builtin/replay.c:165 builtin/shortlog.c:456 bundle.c:514
 #, c-format
 msgid "unrecognized argument: %s"
