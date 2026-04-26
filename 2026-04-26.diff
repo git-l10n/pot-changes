@@ -1,0 +1,188 @@
+
+
+#################### Sun, 26 Apr 2026 01:15:17 +0000 ####################
+
+--- po/git.pot.old	2026-04-26 01:15:17.513368536 +0000
++++ po/git.pot.new	2026-04-26 01:15:17.598368133 +0000
+@@ -6240,6 +6240,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "The following paths have local changes:\n"
++msgstr ""
++
++#, c-format
+ msgid ""
+ "The following paths were already present and thus not updated despite sparse patterns:\n"
+ "%s"
+@@ -7359,15 +7363,11 @@
+ 
+ #, c-format
+ msgid ""
+-"Your local changes are stashed, however, applying it to carry\n"
+-"forward your local changes resulted in conflicts:\n"
+-"\n"
+-" - You can try resolving them now.  If you resolved them\n"
+-"   successfully, discard the stash entry with \"git stash drop\".\n"
+-"\n"
+-" - Alternatively you can \"git reset --hard\" if you do not want\n"
+-"   to deal with them right now, and later \"git stash pop\" to\n"
+-"   recover your local changes.\n"
++"Your local changes are stashed, however applying them\n"
++"resulted in conflicts.  You can either resolve the conflicts\n"
++"and then discard the stash with \"git stash drop\", or, if you\n"
++"do not want to resolve them now, run \"git reset --hard\" and\n"
++"apply the local changes later by running \"git stash pop\".\n"
+ msgstr ""
+ 
+ #, c-format
+@@ -8828,6 +8828,10 @@
+ msgid "cannot do a partial commit during a rebase."
+ msgstr ""
+ 
++#, c-format
++msgid "cannot drop root commit %s: it has no parent to replay onto"
++msgstr ""
++
+ msgid "cannot edit description of more than one branch"
+ msgstr ""
+ 
+@@ -8894,6 +8898,13 @@
+ msgid "cannot get patch id"
+ msgstr ""
+ 
++msgid "cannot get tree for HEAD"
++msgstr ""
++
++#, c-format
++msgid "cannot get tree for commit %s"
++msgstr ""
++
+ msgid "cannot give description to detached HEAD"
+ msgstr ""
+ 
+@@ -9184,6 +9195,9 @@
+ msgid "cannot revert during a cherry-pick."
+ msgstr ""
+ 
++msgid "cannot run fixup in a bare repository"
++msgstr ""
++
+ #, c-format
+ msgid "cannot save the stash for %s"
+ msgstr ""
+@@ -9547,6 +9561,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "commit %s became empty after replay"
++msgstr ""
++
++#, c-format
+ msgid "commit %s does not have parent %d"
+ msgstr ""
+ 
+@@ -12775,6 +12793,9 @@
+ msgid "failed writing first commit"
+ msgstr ""
+ 
++msgid "failed writing fixed-up commit"
++msgstr ""
++
+ msgid "failed writing reworded commit"
+ msgstr ""
+ 
+@@ -12977,6 +12998,13 @@
+ msgid "finished search at %s\n"
+ msgstr ""
+ 
++#, c-format
++msgid "fixup makes commit %s empty"
++msgstr ""
++
++msgid "fixup would produce conflicts; aborting"
++msgstr ""
++
+ msgid "flush is only for --buffer mode"
+ msgstr ""
+ 
+@@ -13665,6 +13693,9 @@
+ msgid "git help [[-i|--info] [-m|--man] [-w|--web]] [<command>|<doc>]"
+ msgstr ""
+ 
++msgid "git history fixup <commit> [--dry-run] [--update-refs=(branches|head)] [--reedit-message] [--empty=(drop|keep|abort)]"
++msgstr ""
++
+ msgid "git history reword <commit> [--dry-run] [--update-refs=(branches|head)]"
+ msgstr ""
+ 
+@@ -16046,6 +16077,9 @@
+ msgid "merge commit message (for a non-fast-forward merge)"
+ msgstr ""
+ 
++msgid "merge failed while applying fixup"
++msgstr ""
++
+ msgid "merge strategy"
+ msgstr ""
+ 
+@@ -17027,6 +17061,9 @@
+ msgid "nothing to do"
+ msgstr ""
+ 
++msgid "nothing to fixup: no staged changes"
++msgstr ""
++
+ #, c-format
+ msgid "nothing to merge: '%.*s'"
+ msgstr ""
+@@ -17320,6 +17357,9 @@
+ msgid "open an editor"
+ msgstr ""
+ 
++msgid "open an editor to modify the commit message"
++msgstr ""
++
+ #, c-format
+ msgid "opendir('%s') failed"
+ msgstr ""
+@@ -21361,6 +21401,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unable to parse parent of %s"
++msgstr ""
++
++#, c-format
+ msgid "unable to parse remote unpack status: %s"
+ msgstr ""
+ 
+@@ -21615,6 +21659,9 @@
+ msgid "unable to write flush packet"
+ msgstr ""
+ 
++msgid "unable to write index as a tree"
++msgstr ""
++
+ msgid "unable to write index file"
+ msgstr ""
+ 
+@@ -22049,6 +22096,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unrecognized '--empty=' action '%s'; valid values are \"drop\", \"keep\", and \"abort\"."
++msgstr ""
++
++#, c-format
+ msgid "unrecognized --schedule argument '%s'"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-pot --------------------
+
+ERROR: unknown command "check-pot" for "git-po-helper"
+
+Did you mean this?
+	check-po
