@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2026-05-21 16:30+0000\n"
+"POT-Creation-Date: 2026-05-23 09:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -884,7 +884,7 @@ msgid "unrecognized whitespace ignore option '%s'"
 msgstr ""
 
 #: apply.c:158 archive.c:706 builtin/add.c:415 builtin/add.c:417
-#: builtin/add.c:430 builtin/add.c:442 builtin/branch.c:1098
+#: builtin/add.c:430 builtin/add.c:442 builtin/branch.c:1065
 #: builtin/checkout-index.c:280 builtin/checkout.c:638 builtin/checkout.c:641
 #: builtin/checkout.c:2024 builtin/checkout.c:2139 builtin/checkout.c:2142
 #: builtin/clean.c:967 builtin/clone.c:1043 builtin/clone.c:1048
@@ -2123,7 +2123,7 @@ msgstr ""
 msgid "'%s' is not a valid branch name"
 msgstr ""
 
-#: branch.c:378 builtin/branch.c:608
+#: branch.c:378 builtin/branch.c:615
 msgid "See 'git help check-ref-format'"
 msgstr ""
 
@@ -2738,7 +2738,7 @@ msgstr ""
 msgid "n"
 msgstr ""
 
-#: builtin/am.c:2384 builtin/branch.c:1027 builtin/bugreport.c:117
+#: builtin/am.c:2384 builtin/branch.c:995 builtin/bugreport.c:117
 #: builtin/cat-file.c:1119 builtin/cat-file.c:1123 builtin/cat-file.c:1130
 #: builtin/clone.c:984 builtin/diagnose.c:32 builtin/for-each-ref.c:37
 #: builtin/init-db.c:111 builtin/ls-files.c:652 builtin/ls-tree.c:372
@@ -3429,206 +3429,215 @@ msgstr[1] ""
 msgid "Blaming lines"
 msgstr ""
 
-#: builtin/branch.c:34
+#: builtin/branch.c:35
 msgid "git branch [<options>] [-r | -a] [--merged] [--no-merged]"
 msgstr ""
 
-#: builtin/branch.c:35
+#: builtin/branch.c:36
 msgid ""
 "git branch [<options>] [-f] [--recurse-submodules] <branch-name> [<start-"
 "point>]"
 msgstr ""
 
-#: builtin/branch.c:36
+#: builtin/branch.c:37
 msgid "git branch [<options>] [-l] [<pattern>...]"
 msgstr ""
 
-#: builtin/branch.c:37
+#: builtin/branch.c:38
 msgid "git branch [<options>] [-r] (-d | -D) <branch-name>..."
 msgstr ""
 
-#: builtin/branch.c:38
+#: builtin/branch.c:39
 msgid "git branch [<options>] (-m | -M) [<old-branch>] <new-branch>"
 msgstr ""
 
-#: builtin/branch.c:39
+#: builtin/branch.c:40
 msgid "git branch [<options>] (-c | -C) [<old-branch>] <new-branch>"
 msgstr ""
 
-#: builtin/branch.c:40
+#: builtin/branch.c:41
 msgid "git branch [<options>] [-r | -a] [--points-at]"
 msgstr ""
 
-#: builtin/branch.c:41
+#: builtin/branch.c:42
 msgid "git branch [<options>] [-r | -a] [--format]"
 msgstr ""
 
-#: builtin/branch.c:42
-msgid "git branch [<options>] --forked <remote>..."
+#: builtin/branch.c:43
+msgid "git branch [<options>] --forked <branch>..."
 msgstr ""
 
-#: builtin/branch.c:182
+#: builtin/branch.c:44
+msgid "git branch [<options>] --prune-merged [--dry-run] <branch>..."
+msgstr ""
+
+#: builtin/branch.c:184
 #, c-format
 msgid ""
 "deleting branch '%s' that has been merged to\n"
 "         '%s', but not yet merged to HEAD"
 msgstr ""
 
-#: builtin/branch.c:186
+#: builtin/branch.c:188
 #, c-format
 msgid ""
 "not deleting branch '%s' that is not yet merged to\n"
 "         '%s', even though it is merged to HEAD"
 msgstr ""
 
-#: builtin/branch.c:201
+#: builtin/branch.c:203
 #, c-format
 msgid "couldn't look up commit object for '%s'"
 msgstr ""
 
-#: builtin/branch.c:206 builtin/branch.c:209
+#: builtin/branch.c:208 builtin/branch.c:211
 #, c-format
 msgid "the branch '%s' is not fully merged"
 msgstr ""
 
-#: builtin/branch.c:212
+#: builtin/branch.c:214
 #, c-format
 msgid "If you are sure you want to delete it, run 'git branch -D %s'"
 msgstr ""
 
-#: builtin/branch.c:227
+#: builtin/branch.c:229
 msgid "update of config-file failed"
 msgstr ""
 
-#: builtin/branch.c:264
+#: builtin/branch.c:265
 msgid "cannot use -a with -d"
 msgstr ""
 
-#: builtin/branch.c:282
+#: builtin/branch.c:283
 #, c-format
 msgid "cannot delete branch '%s' used by worktree at '%s'"
 msgstr ""
 
-#: builtin/branch.c:298
+#: builtin/branch.c:299
 #, c-format
 msgid "remote-tracking branch '%s' not found"
 msgstr ""
 
-#: builtin/branch.c:311
+#: builtin/branch.c:312
 #, c-format
 msgid ""
 "branch '%s' not found.\n"
 "Did you forget --remote?"
 msgstr ""
 
-#: builtin/branch.c:315
+#: builtin/branch.c:316
 #, c-format
 msgid "branch '%s' not found"
 msgstr ""
 
-#: builtin/branch.c:349
+#: builtin/branch.c:332
+#, c-format
+msgid "Would delete branch '%s'\n"
+msgstr ""
+
+#: builtin/branch.c:356
 #, c-format
 msgid "Deleted remote-tracking branch %s (was %s).\n"
 msgstr ""
 
-#: builtin/branch.c:350
+#: builtin/branch.c:357
 #, c-format
 msgid "Deleted branch %s (was %s).\n"
 msgstr ""
 
-#: builtin/branch.c:488 builtin/tag.c:73
+#: builtin/branch.c:495 builtin/tag.c:73
 msgid "unable to parse format string"
 msgstr ""
 
-#: builtin/branch.c:525
+#: builtin/branch.c:532
 msgid "could not resolve HEAD"
 msgstr ""
 
-#: builtin/branch.c:531
+#: builtin/branch.c:538
 #, c-format
 msgid "HEAD (%s) points outside of refs/heads/"
 msgstr ""
 
-#: builtin/branch.c:546
+#: builtin/branch.c:553
 #, c-format
 msgid "branch %s is being rebased at %s"
 msgstr ""
 
-#: builtin/branch.c:550
+#: builtin/branch.c:557
 #, c-format
 msgid "branch %s is being bisected at %s"
 msgstr ""
 
-#: builtin/branch.c:579
+#: builtin/branch.c:586
 #, c-format
 msgid "HEAD of working tree %s is not updated"
 msgstr ""
 
-#: builtin/branch.c:606
+#: builtin/branch.c:613
 #, c-format
 msgid "invalid branch name: '%s'"
 msgstr ""
 
-#: builtin/branch.c:626 builtin/branch.c:1170 builtin/branch.c:1219
+#: builtin/branch.c:633 builtin/branch.c:1137 builtin/branch.c:1186
 #, c-format
 msgid "no commit on branch '%s' yet"
 msgstr ""
 
-#: builtin/branch.c:628 builtin/branch.c:1171
+#: builtin/branch.c:635 builtin/branch.c:1138
 #, c-format
 msgid "no branch named '%s'"
 msgstr ""
 
-#: builtin/branch.c:656
+#: builtin/branch.c:663
 msgid "branch rename failed"
 msgstr ""
 
-#: builtin/branch.c:658
+#: builtin/branch.c:665
 msgid "branch copy failed"
 msgstr ""
 
-#: builtin/branch.c:662
+#: builtin/branch.c:669
 #, c-format
 msgid "created a copy of a misnamed branch '%s'"
 msgstr ""
 
-#: builtin/branch.c:665
+#: builtin/branch.c:672
 #, c-format
 msgid "renamed a misnamed branch '%s' away"
 msgstr ""
 
-#: builtin/branch.c:672
+#: builtin/branch.c:679
 #, c-format
 msgid "branch renamed to %s, but HEAD is not updated"
 msgstr ""
 
-#: builtin/branch.c:679
+#: builtin/branch.c:686
 msgid "branch is renamed, but update of config-file failed"
 msgstr ""
 
-#: builtin/branch.c:682
+#: builtin/branch.c:689
 msgid "branch is copied, but update of config-file failed"
 msgstr ""
 
-#: builtin/branch.c:724
+#: builtin/branch.c:723
 #, c-format
-msgid "'%s' is neither a configured remote nor a remote-tracking branch"
+msgid "'%s' is not a valid branch or pattern"
 msgstr ""
 
-#: builtin/branch.c:820
-msgid "--forked requires at least one <remote> or --all-remotes"
+#: builtin/branch.c:802
+msgid "--forked requires at least one <branch>"
 msgstr ""
 
-#: builtin/branch.c:841
-msgid "--prune-merged requires at least one <remote> or --all-remotes"
+#: builtin/branch.c:825
+msgid "--prune-merged requires at least one <branch>"
 msgstr ""
 
-#: builtin/branch.c:882
+#: builtin/branch.c:853
 #, c-format
 msgid "Skipping '%s' (branch.%s.pruneMerged is false)\n"
 msgstr ""
 
-#: builtin/branch.c:901
+#: builtin/branch.c:870
 #, c-format
 msgid ""
 "Skipped %d branch that is not fully merged; delete it with 'git branch -D' "
@@ -3639,7 +3648,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: builtin/branch.c:926
+#: builtin/branch.c:895
 #, c-format
 msgid ""
 "Please edit the description for the branch\n"
@@ -3647,250 +3656,250 @@ msgid ""
 "Lines starting with '%s' will be stripped.\n"
 msgstr ""
 
-#: builtin/branch.c:972
+#: builtin/branch.c:941
 msgid "Generic options"
 msgstr ""
 
-#: builtin/branch.c:974
+#: builtin/branch.c:943
 msgid "show hash and subject, give twice for upstream branch"
 msgstr ""
 
-#: builtin/branch.c:975
+#: builtin/branch.c:944
 msgid "suppress informational messages"
 msgstr ""
 
-#: builtin/branch.c:977 builtin/checkout.c:1883
+#: builtin/branch.c:946 builtin/checkout.c:1883
 #: builtin/submodule--helper.c:3330
 msgid "set branch tracking configuration"
 msgstr ""
 
-#: builtin/branch.c:980
+#: builtin/branch.c:949
 msgid "do not use"
 msgstr ""
 
-#: builtin/branch.c:982
+#: builtin/branch.c:951
 msgid "upstream"
 msgstr ""
 
-#: builtin/branch.c:982
+#: builtin/branch.c:951
 msgid "change the upstream info"
 msgstr ""
 
-#: builtin/branch.c:983
+#: builtin/branch.c:952
 msgid "unset the upstream info"
 msgstr ""
 
-#: builtin/branch.c:984
+#: builtin/branch.c:953
 msgid "use colored output"
 msgstr ""
 
-#: builtin/branch.c:985
+#: builtin/branch.c:954
 msgid "act on remote-tracking branches"
 msgstr ""
 
-#: builtin/branch.c:988 builtin/branch.c:990
+#: builtin/branch.c:957 builtin/branch.c:959
 msgid "print only branches that contain the commit"
 msgstr ""
 
-#: builtin/branch.c:989 builtin/branch.c:991
+#: builtin/branch.c:958 builtin/branch.c:960
 msgid "print only branches that don't contain the commit"
 msgstr ""
 
-#: builtin/branch.c:994
+#: builtin/branch.c:963
 msgid "Specific git-branch actions:"
 msgstr ""
 
-#: builtin/branch.c:995
+#: builtin/branch.c:964
 msgid "list both remote-tracking and local branches"
 msgstr ""
 
-#: builtin/branch.c:998
+#: builtin/branch.c:967
 msgid "delete fully merged branch"
 msgstr ""
 
-#: builtin/branch.c:999
+#: builtin/branch.c:968
 msgid "delete branch (even if not merged)"
 msgstr ""
 
-#: builtin/branch.c:1000
+#: builtin/branch.c:969
 msgid "move/rename a branch and its reflog"
 msgstr ""
 
-#: builtin/branch.c:1001
+#: builtin/branch.c:970
 msgid "move/rename a branch, even if target exists"
 msgstr ""
 
-#: builtin/branch.c:1003 builtin/for-each-ref.c:33 builtin/tag.c:521
+#: builtin/branch.c:972 builtin/for-each-ref.c:33 builtin/tag.c:521
 msgid "do not output a newline after empty formatted refs"
 msgstr ""
 
-#: builtin/branch.c:1004
+#: builtin/branch.c:973
 msgid "copy a branch and its reflog"
 msgstr ""
 
-#: builtin/branch.c:1005
+#: builtin/branch.c:974
 msgid "copy a branch, even if target exists"
 msgstr ""
 
-#: builtin/branch.c:1006
+#: builtin/branch.c:975
 msgid "list branch names"
 msgstr ""
 
-#: builtin/branch.c:1007
+#: builtin/branch.c:976
 msgid "show current branch name"
 msgstr ""
 
-#: builtin/branch.c:1008 builtin/submodule--helper.c:3328
+#: builtin/branch.c:977 builtin/submodule--helper.c:3328
 msgid "create the branch's reflog"
 msgstr ""
 
-#: builtin/branch.c:1010
+#: builtin/branch.c:979
 msgid "edit the description for the branch"
 msgstr ""
 
-#: builtin/branch.c:1012
-msgid "list local branches forked from the given <remote>s"
+#: builtin/branch.c:981
+msgid "list local branches whose upstream matches the given <branch>..."
 msgstr ""
 
-#: builtin/branch.c:1014
+#: builtin/branch.c:983
 msgid ""
-"delete local branches forked from the given <remote>s that are merged into "
-"their upstream"
+"delete local branches whose upstream matches the given <branch>... and that "
+"are merged into it"
 msgstr ""
 
-#: builtin/branch.c:1016
-msgid "with --forked or --prune-merged, act on every configured remote"
+#: builtin/branch.c:985
+msgid "with --prune-merged, only print what would be deleted"
 msgstr ""
 
-#: builtin/branch.c:1018
+#: builtin/branch.c:986
 msgid "force creation, move/rename, deletion"
 msgstr ""
 
-#: builtin/branch.c:1019
+#: builtin/branch.c:987
 msgid "print only branches that are merged"
 msgstr ""
 
-#: builtin/branch.c:1020
+#: builtin/branch.c:988
 msgid "print only branches that are not merged"
 msgstr ""
 
-#: builtin/branch.c:1021
+#: builtin/branch.c:989
 msgid "list branches in columns"
 msgstr ""
 
-#: builtin/branch.c:1023 builtin/for-each-ref.c:43 builtin/notes.c:495
+#: builtin/branch.c:991 builtin/for-each-ref.c:43 builtin/notes.c:495
 #: builtin/notes.c:500 builtin/notes.c:674 builtin/notes.c:677
 #: builtin/tag.c:527
 msgid "object"
 msgstr ""
 
-#: builtin/branch.c:1024
+#: builtin/branch.c:992
 msgid "print only branches of the object"
 msgstr ""
 
-#: builtin/branch.c:1025 builtin/for-each-ref.c:49 builtin/tag.c:536
+#: builtin/branch.c:993 builtin/for-each-ref.c:49 builtin/tag.c:536
 msgid "sorting and filtering are case insensitive"
 msgstr ""
 
-#: builtin/branch.c:1026 builtin/ls-files.c:641
+#: builtin/branch.c:994 builtin/ls-files.c:641
 msgid "recurse through submodules"
 msgstr ""
 
-#: builtin/branch.c:1027 builtin/for-each-ref.c:37 builtin/ls-files.c:653
+#: builtin/branch.c:995 builtin/for-each-ref.c:37 builtin/ls-files.c:653
 #: builtin/ls-tree.c:373 builtin/tag.c:534 builtin/verify-tag.c:34
 msgid "format to use for the output"
 msgstr ""
 
-#: builtin/branch.c:1052
+#: builtin/branch.c:1020
 msgid "failed to resolve HEAD as a valid ref"
 msgstr ""
 
-#: builtin/branch.c:1056 builtin/clone.c:668
+#: builtin/branch.c:1024 builtin/clone.c:668
 msgid "HEAD not found below refs/heads!"
 msgstr ""
 
-#: builtin/branch.c:1062
-msgid "--all-remotes requires --forked or --prune-merged"
+#: builtin/branch.c:1030
+msgid "--dry-run requires --prune-merged"
 msgstr ""
 
-#: builtin/branch.c:1082
+#: builtin/branch.c:1049
 msgid ""
 "branch with --recurse-submodules can only be used if submodule."
 "propagateBranches is enabled"
 msgstr ""
 
-#: builtin/branch.c:1084
+#: builtin/branch.c:1051
 msgid "--recurse-submodules can only be used to create branches"
 msgstr ""
 
-#: builtin/branch.c:1113 builtin/branch.c:1186
+#: builtin/branch.c:1080 builtin/branch.c:1153
 msgid "branch name required"
 msgstr ""
 
-#: builtin/branch.c:1158
+#: builtin/branch.c:1125
 msgid "cannot give description to detached HEAD"
 msgstr ""
 
-#: builtin/branch.c:1164
+#: builtin/branch.c:1131
 msgid "cannot edit description of more than one branch"
 msgstr ""
 
-#: builtin/branch.c:1188
+#: builtin/branch.c:1155
 msgid "cannot copy the current branch while not on any"
 msgstr ""
 
-#: builtin/branch.c:1189
+#: builtin/branch.c:1156
 msgid "cannot rename the current branch while not on any"
 msgstr ""
 
-#: builtin/branch.c:1195
+#: builtin/branch.c:1162
 msgid "too many branches for a copy operation"
 msgstr ""
 
-#: builtin/branch.c:1196
+#: builtin/branch.c:1163
 msgid "too many arguments for a rename operation"
 msgstr ""
 
-#: builtin/branch.c:1207
+#: builtin/branch.c:1174
 msgid "too many arguments to set new upstream"
 msgstr ""
 
-#: builtin/branch.c:1211
+#: builtin/branch.c:1178
 #, c-format
 msgid ""
 "could not set upstream of HEAD to %s when it does not point to any branch"
 msgstr ""
 
-#: builtin/branch.c:1214 builtin/branch.c:1243
+#: builtin/branch.c:1181 builtin/branch.c:1210
 #, c-format
 msgid "no such branch '%s'"
 msgstr ""
 
-#: builtin/branch.c:1220
+#: builtin/branch.c:1187
 #, c-format
 msgid "branch '%s' does not exist"
 msgstr ""
 
-#: builtin/branch.c:1237
+#: builtin/branch.c:1204
 msgid "too many arguments to unset upstream"
 msgstr ""
 
-#: builtin/branch.c:1241
+#: builtin/branch.c:1208
 msgid "could not unset upstream of HEAD when it does not point to any branch"
 msgstr ""
 
-#: builtin/branch.c:1247
+#: builtin/branch.c:1214
 #, c-format
 msgid "branch '%s' has no upstream information"
 msgstr ""
 
-#: builtin/branch.c:1261
+#: builtin/branch.c:1228
 msgid ""
 "the -a, and -r, options to 'git branch' do not take a branch name.\n"
 "Did you mean to use: -a|-r --list <pattern>?"
 msgstr ""
 
-#: builtin/branch.c:1265
+#: builtin/branch.c:1232
 msgid ""
 "the '--set-upstream' option is no longer supported. Please use '--track' or "
 "'--set-upstream-to' instead"
@@ -19001,7 +19010,7 @@ msgid "EXPERIMENTAL: Rewrite history"
 msgstr ""
 
 #: command-list.h:117
-msgid "Run git hooks"
+msgid "Run Git hooks"
 msgstr ""
 
 #: command-list.h:118
@@ -26295,12 +26304,12 @@ msgstr ""
 msgid "  (use \"git branch --unset-upstream\" to fixup)\n"
 msgstr ""
 
-#: remote.c:2685
+#: remote.c:2689
 #, c-format
 msgid "cannot parse expected object name '%s'"
 msgstr ""
 
-#: remote.c:2953
+#: remote.c:2957
 #, c-format
 msgid "cannot strip one component off url '%s'"
 msgstr ""
