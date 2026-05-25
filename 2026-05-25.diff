@@ -1,0 +1,89 @@
+
+
+#################### Mon, 25 May 2026 01:55:21 +0000 ####################
+
+--- po/git.pot.old	2026-05-25 01:55:21.037210460 +0000
++++ po/git.pot.new	2026-05-25 01:55:21.118210822 +0000
+@@ -224,11 +224,6 @@
+ "first and then run 'git rebase --continue' again."
+ msgstr ""
+ 
+-msgid ""
+-"\n"
+-"adjust 'remote.<name>.fetch' so only one remote maps there, or omit '=fetch'"
+-msgstr ""
+-
+ #, c-format
+ msgid ""
+ "\n"
+@@ -5824,12 +5819,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "Skipped %d branch that is not fully merged; delete it with 'git branch -D' if you are sure.\n"
+-msgid_plural "Skipped %d branches that are not fully merged; delete them with 'git branch -D' if you are sure.\n"
+-msgstr[0] ""
+-msgstr[1] ""
+-
+-#, c-format
+ msgid "Skipped patch '%s'."
+ msgstr ""
+ 
+@@ -7071,7 +7060,11 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "Would delete branch '%s'\n"
++msgid "Would delete branch %s (was %s).\n"
++msgstr ""
++
++#, c-format
++msgid "Would delete remote-tracking branch %s (was %s).\n"
+ msgstr ""
+ 
+ msgid "Would refuse to remove current working directory\n"
+@@ -8943,7 +8936,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "cannot fetch start-point '%s': fetch refspecs of multiple remotes map to the same destination:"
++msgid "cannot fetch start-point '%s': fetch refspecs of multiple remotes map to '%s'"
+ msgstr ""
+ 
+ #, c-format
+@@ -11218,7 +11211,7 @@
+ msgid "delete fully merged branch"
+ msgstr ""
+ 
+-msgid "delete local branches whose upstream matches the given <branch>... and that are merged into it"
++msgid "delete local branches whose upstream matches the given <branch>... and is merged"
+ msgstr ""
+ 
+ msgid "delete refs"
+@@ -13539,9 +13532,6 @@
+ msgid "git branch [<options>] --forked <branch>..."
+ msgstr ""
+ 
+-msgid "git branch [<options>] --prune-merged [--dry-run] <branch>..."
+-msgstr ""
+-
+ msgid "git branch [<options>] [-f] [--recurse-submodules] <branch-name> [<start-point>]"
+ msgstr ""
+ 
+@@ -23048,7 +23038,7 @@
+ msgid "with --pathspec-from-file, pathspec elements are separated with NUL character"
+ msgstr ""
+ 
+-msgid "with --prune-merged, only print what would be deleted"
++msgid "with --prune-merged, only print which branches would be deleted"
+ msgstr ""
+ 
+ msgid "with --stdin: input lines are terminated by null bytes"
+
+
+-------------------- git-po-helper check-pot --------------------
+
+ERROR: unknown command "check-pot" for "git-po-helper"
+
+Did you mean this?
+	check-po
