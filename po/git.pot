@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2026-06-02 05:16+0000\n"
+"POT-Creation-Date: 2026-06-03 12:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -884,7 +884,7 @@ msgid "unrecognized whitespace ignore option '%s'"
 msgstr ""
 
 #: apply.c:158 archive.c:706 builtin/add.c:415 builtin/add.c:417
-#: builtin/add.c:430 builtin/add.c:442 builtin/branch.c:1107
+#: builtin/add.c:430 builtin/add.c:442 builtin/branch.c:1110
 #: builtin/checkout-index.c:280 builtin/checkout.c:670 builtin/checkout.c:673
 #: builtin/checkout.c:2057 builtin/checkout.c:2172 builtin/checkout.c:2175
 #: builtin/clean.c:967 builtin/clone.c:1043 builtin/clone.c:1048
@@ -892,7 +892,7 @@ msgstr ""
 #: builtin/commit.c:1329 builtin/commit.c:1346 builtin/describe.c:701
 #: builtin/diff-tree.c:167 builtin/difftool.c:774 builtin/fast-export.c:1399
 #: builtin/fetch.c:2634 builtin/fetch.c:2661 builtin/fetch.c:2672
-#: builtin/fetch.c:2677 builtin/help.c:646 builtin/index-pack.c:2025
+#: builtin/fetch.c:2677 builtin/help.c:646 builtin/index-pack.c:2035
 #: builtin/init-db.c:120 builtin/log.c:2211 builtin/log.c:2213
 #: builtin/ls-files.c:762 builtin/merge-base.c:180 builtin/merge-base.c:186
 #: builtin/merge-tree.c:621 builtin/merge.c:1505 builtin/merge.c:1507
@@ -1784,7 +1784,7 @@ msgstr ""
 #: builtin/checkout.c:2030 builtin/checkout.c:2032 builtin/checkout.c:2181
 #: builtin/clone.c:1273 builtin/clone.c:1276 builtin/commit.c:385
 #: builtin/commit.c:437 builtin/commit.c:439 builtin/fast-export.c:1384
-#: builtin/index-pack.c:2019 builtin/log.c:2399 builtin/reset.c:402
+#: builtin/index-pack.c:2029 builtin/log.c:2399 builtin/reset.c:402
 #: builtin/reset.c:445 builtin/reset.c:447 builtin/reset.c:449
 #: builtin/reset.c:478 builtin/rm.c:292 builtin/stash.c:1980
 #: builtin/stash.c:1985 builtin/stash.c:1987 builtin/stash.c:1989
@@ -1883,7 +1883,7 @@ msgid "Continuing in %0.1f seconds, assuming that you meant '%s'."
 msgstr ""
 
 #: bisect.c:165 builtin/cat-file.c:241 builtin/cat-file.c:555
-#: builtin/index-pack.c:788 builtin/notes.c:730 builtin/pack-objects.c:363
+#: builtin/index-pack.c:794 builtin/notes.c:730 builtin/pack-objects.c:363
 #: builtin/pack-objects.c:426 builtin/pack-objects.c:537 combine-diff.c:330
 #: object-file.c:371 object-file.c:377 rerere.c:1003
 #, c-format
@@ -2123,7 +2123,7 @@ msgstr ""
 msgid "'%s' is not a valid branch name"
 msgstr ""
 
-#: branch.c:386 builtin/branch.c:614
+#: branch.c:386 builtin/branch.c:621
 msgid "See 'git help check-ref-format'"
 msgstr ""
 
@@ -2738,7 +2738,7 @@ msgstr ""
 msgid "n"
 msgstr ""
 
-#: builtin/am.c:2384 builtin/branch.c:1037 builtin/bugreport.c:117
+#: builtin/am.c:2384 builtin/branch.c:1039 builtin/bugreport.c:117
 #: builtin/cat-file.c:1119 builtin/cat-file.c:1123 builtin/cat-file.c:1130
 #: builtin/clone.c:984 builtin/diagnose.c:32 builtin/for-each-ref.c:37
 #: builtin/init-db.c:111 builtin/ls-files.c:652 builtin/ls-tree.c:372
@@ -3430,7 +3430,9 @@ msgid "Blaming lines"
 msgstr ""
 
 #: builtin/branch.c:34
-msgid "git branch [<options>] [-r | -a] [--merged] [--no-merged]"
+msgid ""
+"git branch [<options>] [-r | -a] [--merged] [--no-merged] [(--forked "
+"<branch>)...]"
 msgstr ""
 
 #: builtin/branch.c:35
@@ -3464,7 +3466,7 @@ msgid "git branch [<options>] [-r | -a] [--format]"
 msgstr ""
 
 #: builtin/branch.c:42
-msgid "git branch [<options>] --forked <branch>..."
+msgid "git branch [<options>] (--prune-merged <branch>)..."
 msgstr ""
 
 #: builtin/branch.c:185
@@ -3546,99 +3548,95 @@ msgstr ""
 msgid "Deleted branch %s (was %s).\n"
 msgstr ""
 
-#: builtin/branch.c:494 builtin/tag.c:73
+#: builtin/branch.c:501 builtin/tag.c:73
 msgid "unable to parse format string"
 msgstr ""
 
-#: builtin/branch.c:531
+#: builtin/branch.c:538
 msgid "could not resolve HEAD"
 msgstr ""
 
-#: builtin/branch.c:537
+#: builtin/branch.c:544
 #, c-format
 msgid "HEAD (%s) points outside of refs/heads/"
 msgstr ""
 
-#: builtin/branch.c:552
+#: builtin/branch.c:559
 #, c-format
 msgid "branch %s is being rebased at %s"
 msgstr ""
 
-#: builtin/branch.c:556
+#: builtin/branch.c:563
 #, c-format
 msgid "branch %s is being bisected at %s"
 msgstr ""
 
-#: builtin/branch.c:585
+#: builtin/branch.c:592
 #, c-format
 msgid "HEAD of working tree %s is not updated"
 msgstr ""
 
-#: builtin/branch.c:612
+#: builtin/branch.c:619
 #, c-format
 msgid "invalid branch name: '%s'"
 msgstr ""
 
-#: builtin/branch.c:632 builtin/branch.c:1179 builtin/branch.c:1228
+#: builtin/branch.c:639 builtin/branch.c:1183 builtin/branch.c:1232
 #, c-format
 msgid "no commit on branch '%s' yet"
 msgstr ""
 
-#: builtin/branch.c:634 builtin/branch.c:1180
+#: builtin/branch.c:641 builtin/branch.c:1184
 #, c-format
 msgid "no branch named '%s'"
 msgstr ""
 
-#: builtin/branch.c:662
+#: builtin/branch.c:669
 msgid "branch rename failed"
 msgstr ""
 
-#: builtin/branch.c:664
+#: builtin/branch.c:671
 msgid "branch copy failed"
 msgstr ""
 
-#: builtin/branch.c:668
+#: builtin/branch.c:675
 #, c-format
 msgid "created a copy of a misnamed branch '%s'"
 msgstr ""
 
-#: builtin/branch.c:671
+#: builtin/branch.c:678
 #, c-format
 msgid "renamed a misnamed branch '%s' away"
 msgstr ""
 
-#: builtin/branch.c:678
+#: builtin/branch.c:685
 #, c-format
 msgid "branch renamed to %s, but HEAD is not updated"
 msgstr ""
 
-#: builtin/branch.c:685
+#: builtin/branch.c:692
 msgid "branch is renamed, but update of config-file failed"
 msgstr ""
 
-#: builtin/branch.c:688
+#: builtin/branch.c:695
 msgid "branch is copied, but update of config-file failed"
 msgstr ""
 
-#: builtin/branch.c:772
+#: builtin/branch.c:761
 #, c-format
 msgid "'%s' is not a valid branch or pattern"
 msgstr ""
 
-#: builtin/branch.c:850
-msgid "--forked requires at least one <branch>"
-msgstr ""
-
-#: builtin/branch.c:870
+#: builtin/branch.c:872
 msgid "--prune-merged requires at least one <branch>"
 msgstr ""
 
-#: builtin/branch.c:901
+#: builtin/branch.c:903
 #, c-format
 msgid "Skipping '%s' (branch.%s.pruneMerged is false)\n"
 msgstr ""
 
-#: builtin/branch.c:937
+#: builtin/branch.c:939
 #, c-format
 msgid ""
 "Please edit the description for the branch\n"
@@ -3646,250 +3644,265 @@ msgid ""
 "Lines starting with '%s' will be stripped.\n"
 msgstr ""
 
-#: builtin/branch.c:983
+#: builtin/branch.c:985
 msgid "Generic options"
 msgstr ""
 
-#: builtin/branch.c:985
+#: builtin/branch.c:987
 msgid "show hash and subject, give twice for upstream branch"
 msgstr ""
 
-#: builtin/branch.c:986
+#: builtin/branch.c:988
 msgid "suppress informational messages"
 msgstr ""
 
-#: builtin/branch.c:988 builtin/checkout.c:1916
+#: builtin/branch.c:990 builtin/checkout.c:1916
 #: builtin/submodule--helper.c:3330
 msgid "set branch tracking configuration"
 msgstr ""
 
-#: builtin/branch.c:991
+#: builtin/branch.c:993
 msgid "do not use"
 msgstr ""
 
-#: builtin/branch.c:993
+#: builtin/branch.c:995
 msgid "upstream"
 msgstr ""
 
-#: builtin/branch.c:993
+#: builtin/branch.c:995
 msgid "change the upstream info"
 msgstr ""
 
-#: builtin/branch.c:994
+#: builtin/branch.c:996
 msgid "unset the upstream info"
 msgstr ""
 
-#: builtin/branch.c:995
+#: builtin/branch.c:997
 msgid "use colored output"
 msgstr ""
 
-#: builtin/branch.c:996
+#: builtin/branch.c:998
 msgid "act on remote-tracking branches"
 msgstr ""
 
-#: builtin/branch.c:999 builtin/branch.c:1001
+#: builtin/branch.c:1001 builtin/branch.c:1003
 msgid "print only branches that contain the commit"
 msgstr ""
 
-#: builtin/branch.c:1000 builtin/branch.c:1002
+#: builtin/branch.c:1002 builtin/branch.c:1004
 msgid "print only branches that don't contain the commit"
 msgstr ""
 
-#: builtin/branch.c:1005
+#: builtin/branch.c:1007
 msgid "Specific git-branch actions:"
 msgstr ""
 
-#: builtin/branch.c:1006
+#: builtin/branch.c:1008
 msgid "list both remote-tracking and local branches"
 msgstr ""
 
-#: builtin/branch.c:1009
+#: builtin/branch.c:1011
 msgid "delete fully merged branch"
 msgstr ""
 
-#: builtin/branch.c:1010
+#: builtin/branch.c:1012
 msgid "delete branch (even if not merged)"
 msgstr ""
 
-#: builtin/branch.c:1011
+#: builtin/branch.c:1013
 msgid "move/rename a branch and its reflog"
 msgstr ""
 
-#: builtin/branch.c:1012
+#: builtin/branch.c:1014
 msgid "move/rename a branch, even if target exists"
 msgstr ""
 
-#: builtin/branch.c:1014 builtin/for-each-ref.c:33 builtin/tag.c:521
+#: builtin/branch.c:1016 builtin/for-each-ref.c:33 builtin/tag.c:521
 msgid "do not output a newline after empty formatted refs"
 msgstr ""
 
-#: builtin/branch.c:1015
+#: builtin/branch.c:1017
 msgid "copy a branch and its reflog"
 msgstr ""
 
-#: builtin/branch.c:1016
+#: builtin/branch.c:1018
 msgid "copy a branch, even if target exists"
 msgstr ""
 
-#: builtin/branch.c:1017
+#: builtin/branch.c:1019
 msgid "list branch names"
 msgstr ""
 
-#: builtin/branch.c:1018
+#: builtin/branch.c:1020
 msgid "show current branch name"
 msgstr ""
 
-#: builtin/branch.c:1019 builtin/submodule--helper.c:3328
+#: builtin/branch.c:1021 builtin/submodule--helper.c:3328
 msgid "create the branch's reflog"
 msgstr ""
 
-#: builtin/branch.c:1021
+#: builtin/branch.c:1023
 msgid "edit the description for the branch"
 msgstr ""
 
-#: builtin/branch.c:1023
-msgid "list local branches whose upstream matches the given <branch>..."
+#: builtin/branch.c:1024 builtin/branch.c:1026 builtin/checkout.c:2228
+#: builtin/checkout.c:2230 builtin/checkout.c:2280 builtin/checkout.c:2282
+#: builtin/clone.c:964 builtin/remote.c:195 builtin/remote.c:197
+#: builtin/replay.c:99 builtin/replay.c:103 builtin/replay.c:107
+#: builtin/submodule--helper.c:3284 builtin/submodule--helper.c:3653
+#: builtin/worktree.c:808 builtin/worktree.c:810
+msgid "branch"
 msgstr ""
 
 #: builtin/branch.c:1025
-msgid ""
-"delete local branches whose upstream matches the given <branch>... and is "
-"merged"
+msgid "list local branches whose upstream matches <branch> (repeatable)"
 msgstr ""
 
 #: builtin/branch.c:1027
-msgid "with --prune-merged, only print which branches would be deleted"
-msgstr ""
-
-#: builtin/branch.c:1028
-msgid "force creation, move/rename, deletion"
+msgid ""
+"delete local branches whose upstream matches <branch> and is merged "
+"(repeatable)"
 msgstr ""
 
 #: builtin/branch.c:1029
-msgid "print only branches that are merged"
+msgid "with --prune-merged, only print which branches would be deleted"
 msgstr ""
 
 #: builtin/branch.c:1030
-msgid "print only branches that are not merged"
+msgid "force creation, move/rename, deletion"
 msgstr ""
 
 #: builtin/branch.c:1031
+msgid "print only branches that are merged"
+msgstr ""
+
+#: builtin/branch.c:1032
+msgid "print only branches that are not merged"
+msgstr ""
+
+#: builtin/branch.c:1033
 msgid "list branches in columns"
 msgstr ""
 
-#: builtin/branch.c:1033 builtin/for-each-ref.c:43 builtin/notes.c:495
+#: builtin/branch.c:1035 builtin/for-each-ref.c:43 builtin/notes.c:495
 #: builtin/notes.c:500 builtin/notes.c:674 builtin/notes.c:677
 #: builtin/tag.c:527
 msgid "object"
 msgstr ""
 
-#: builtin/branch.c:1034
+#: builtin/branch.c:1036
 msgid "print only branches of the object"
 msgstr ""
 
-#: builtin/branch.c:1035 builtin/for-each-ref.c:49 builtin/tag.c:536
+#: builtin/branch.c:1037 builtin/for-each-ref.c:49 builtin/tag.c:536
 msgid "sorting and filtering are case insensitive"
 msgstr ""
 
-#: builtin/branch.c:1036 builtin/ls-files.c:641
+#: builtin/branch.c:1038 builtin/ls-files.c:641
 msgid "recurse through submodules"
 msgstr ""
 
-#: builtin/branch.c:1037 builtin/for-each-ref.c:37 builtin/ls-files.c:653
+#: builtin/branch.c:1039 builtin/for-each-ref.c:37 builtin/ls-files.c:653
 #: builtin/ls-tree.c:373 builtin/tag.c:534 builtin/verify-tag.c:34
 msgid "format to use for the output"
 msgstr ""
 
-#: builtin/branch.c:1062
+#: builtin/branch.c:1064
 msgid "failed to resolve HEAD as a valid ref"
 msgstr ""
 
-#: builtin/branch.c:1066 builtin/clone.c:668
+#: builtin/branch.c:1068 builtin/clone.c:668
 msgid "HEAD not found below refs/heads!"
 msgstr ""
 
-#: builtin/branch.c:1087
+#: builtin/branch.c:1090
 msgid "--dry-run requires --prune-merged"
 msgstr ""
 
-#: builtin/branch.c:1091
+#: builtin/branch.c:1094
 msgid ""
 "branch with --recurse-submodules can only be used if submodule."
 "propagateBranches is enabled"
 msgstr ""
 
-#: builtin/branch.c:1093
+#: builtin/branch.c:1096
 msgid "--recurse-submodules can only be used to create branches"
 msgstr ""
 
-#: builtin/branch.c:1122 builtin/branch.c:1195
+#: builtin/branch.c:1125 builtin/branch.c:1199
 msgid "branch name required"
 msgstr ""
 
-#: builtin/branch.c:1167
+#: builtin/branch.c:1131
+msgid ""
+"--prune-merged does not take positional arguments; repeat --prune-merged for "
+"each <branch>"
+msgstr ""
+
+#: builtin/branch.c:1171
 msgid "cannot give description to detached HEAD"
 msgstr ""
 
-#: builtin/branch.c:1173
+#: builtin/branch.c:1177
 msgid "cannot edit description of more than one branch"
 msgstr ""
 
-#: builtin/branch.c:1197
+#: builtin/branch.c:1201
 msgid "cannot copy the current branch while not on any"
 msgstr ""
 
-#: builtin/branch.c:1198
+#: builtin/branch.c:1202
 msgid "cannot rename the current branch while not on any"
 msgstr ""
 
-#: builtin/branch.c:1204
+#: builtin/branch.c:1208
 msgid "too many branches for a copy operation"
 msgstr ""
 
-#: builtin/branch.c:1205
+#: builtin/branch.c:1209
 msgid "too many arguments for a rename operation"
 msgstr ""
 
-#: builtin/branch.c:1216
+#: builtin/branch.c:1220
 msgid "too many arguments to set new upstream"
 msgstr ""
 
-#: builtin/branch.c:1220
+#: builtin/branch.c:1224
 #, c-format
 msgid ""
 "could not set upstream of HEAD to %s when it does not point to any branch"
 msgstr ""
 
-#: builtin/branch.c:1223 builtin/branch.c:1252
+#: builtin/branch.c:1227 builtin/branch.c:1256
 #, c-format
 msgid "no such branch '%s'"
 msgstr ""
 
-#: builtin/branch.c:1229
+#: builtin/branch.c:1233
 #, c-format
 msgid "branch '%s' does not exist"
 msgstr ""
 
-#: builtin/branch.c:1246
+#: builtin/branch.c:1250
 msgid "too many arguments to unset upstream"
 msgstr ""
 
-#: builtin/branch.c:1250
+#: builtin/branch.c:1254
 msgid "could not unset upstream of HEAD when it does not point to any branch"
 msgstr ""
 
-#: builtin/branch.c:1256
+#: builtin/branch.c:1260
 #, c-format
 msgid "branch '%s' has no upstream information"
 msgstr ""
 
-#: builtin/branch.c:1270
+#: builtin/branch.c:1274
 msgid ""
 "the -a, and -r, options to 'git branch' do not take a branch name.\n"
 "Did you mean to use: -a|-r --list <pattern>?"
 msgstr ""
 
-#: builtin/branch.c:1274
+#: builtin/branch.c:1278
 msgid ""
 "the '--set-upstream' option is no longer supported. Please use '--track' or "
 "'--set-upstream-to' instead"
@@ -4901,15 +4914,6 @@ msgstr ""
 msgid "you must specify path(s) to restore"
 msgstr ""
 
-#: builtin/checkout.c:2228 builtin/checkout.c:2230 builtin/checkout.c:2280
-#: builtin/checkout.c:2282 builtin/clone.c:964 builtin/remote.c:195
-#: builtin/remote.c:197 builtin/replay.c:99 builtin/replay.c:103
-#: builtin/replay.c:107 builtin/submodule--helper.c:3284
-#: builtin/submodule--helper.c:3653 builtin/worktree.c:808
-#: builtin/worktree.c:810
-msgid "branch"
-msgstr ""
-
 #: builtin/checkout.c:2229
 msgid "create and checkout a new branch"
 msgstr ""
@@ -5094,8 +5098,8 @@ msgstr ""
 msgid "remove whole directories"
 msgstr ""
 
-#: builtin/clean.c:943 builtin/config.c:1094 builtin/config.c:1151
-#: builtin/config.c:1210 builtin/describe.c:661 builtin/describe.c:663
+#: builtin/clean.c:943 builtin/config.c:1087 builtin/config.c:1144
+#: builtin/config.c:1203 builtin/describe.c:661 builtin/describe.c:663
 #: builtin/grep.c:1143 builtin/log.c:294 builtin/log.c:296
 #: builtin/ls-files.c:625 builtin/name-rev.c:653 builtin/name-rev.c:655
 #: builtin/show-ref.c:330 pack-refs.c:31 pack-refs.c:33 ref-filter.h:137
@@ -5404,7 +5408,7 @@ msgstr ""
 
 #: builtin/clone.c:1033 builtin/init-db.c:178 builtin/refs.c:58
 #: builtin/submodule--helper.c:2089 builtin/submodule--helper.c:3060
-#: builtin/submodule--helper.c:3692 setup.c:2709 setup.c:2781
+#: builtin/submodule--helper.c:3692 setup.c:2720 setup.c:2792
 #, c-format
 msgid "unknown ref storage format '%s'"
 msgstr ""
@@ -6455,58 +6459,58 @@ msgstr ""
 msgid "wrong number of arguments, should be from %d to %d"
 msgstr ""
 
-#: builtin/config.c:228 builtin/config.c:232
+#: builtin/config.c:221 builtin/config.c:225
 #, c-format
 msgid "missing value to set to the variable '%s'"
 msgstr ""
 
-#: builtin/config.c:229
+#: builtin/config.c:222
 #, c-format
 msgid "did you mean \"git config set %s %s\"?"
 msgstr ""
 
-#: builtin/config.c:234
+#: builtin/config.c:227
 #, c-format
 msgid "missing value to set to a variable with an invalid name '%s'"
 msgstr ""
 
-#: builtin/config.c:580
+#: builtin/config.c:573
 #, c-format
 msgid "invalid key pattern: %s"
 msgstr ""
 
-#: builtin/config.c:604 config.c:3090
+#: builtin/config.c:597 config.c:3110
 #, c-format
 msgid "invalid pattern: %s"
 msgstr ""
 
-#: builtin/config.c:628
+#: builtin/config.c:621
 #, c-format
 msgid "failed to format default config value: %s"
 msgstr ""
 
-#: builtin/config.c:698
+#: builtin/config.c:691
 #, c-format
 msgid "cannot parse color '%s'"
 msgstr ""
 
-#: builtin/config.c:750
+#: builtin/config.c:743
 msgid "unable to parse default color value"
 msgstr ""
 
-#: builtin/config.c:822 builtin/config.c:1303
+#: builtin/config.c:815 builtin/config.c:1296
 msgid "not in a git directory"
 msgstr ""
 
-#: builtin/config.c:825
+#: builtin/config.c:818
 msgid "writing to stdin is not supported"
 msgstr ""
 
-#: builtin/config.c:828
+#: builtin/config.c:821
 msgid "writing config blobs is not supported"
 msgstr ""
 
-#: builtin/config.c:926
+#: builtin/config.c:919
 #, c-format
 msgid ""
 "# This is Git's per-user configuration file.\n"
@@ -6516,250 +6520,250 @@ msgid ""
 "#\temail = %s\n"
 msgstr ""
 
-#: builtin/config.c:946
+#: builtin/config.c:939
 msgid "only one config file at a time"
 msgstr ""
 
-#: builtin/config.c:952
+#: builtin/config.c:945
 msgid "--local can only be used inside a git repository"
 msgstr ""
 
-#: builtin/config.c:954
+#: builtin/config.c:947
 msgid "--blob can only be used inside a git repository"
 msgstr ""
 
-#: builtin/config.c:956
+#: builtin/config.c:949
 msgid "--worktree can only be used inside a git repository"
 msgstr ""
 
-#: builtin/config.c:975 builtin/gc.c:2145 builtin/gc.c:2214
+#: builtin/config.c:968 builtin/gc.c:2145 builtin/gc.c:2214
 msgid "$HOME not set"
 msgstr ""
 
-#: builtin/config.c:989
+#: builtin/config.c:982
 msgid ""
 "--worktree cannot be used with multiple working trees unless the config\n"
 "extension worktreeConfig is enabled. Please read \"CONFIGURATION FILE\"\n"
 "section in \"git help worktree\" for details"
 msgstr ""
 
-#: builtin/config.c:1053 builtin/config.c:1098 builtin/config.c:1153
-#: builtin/config.c:1393
+#: builtin/config.c:1046 builtin/config.c:1091 builtin/config.c:1146
+#: builtin/config.c:1386
 msgid "Other"
 msgstr ""
 
-#: builtin/config.c:1055 builtin/config.c:1100 builtin/config.c:1399
+#: builtin/config.c:1048 builtin/config.c:1093 builtin/config.c:1392
 msgid "respect include directives on lookup"
 msgstr ""
 
-#: builtin/config.c:1071 builtin/config.c:1508
+#: builtin/config.c:1064 builtin/config.c:1501
 #, c-format
 msgid "unable to read config file '%s'"
 msgstr ""
 
-#: builtin/config.c:1074 builtin/config.c:1511
+#: builtin/config.c:1067 builtin/config.c:1504
 msgid "error processing config file(s)"
 msgstr ""
 
-#: builtin/config.c:1091
+#: builtin/config.c:1084
 msgid "Filter options"
 msgstr ""
 
-#: builtin/config.c:1092
+#: builtin/config.c:1085
 msgid "return all values for multi-valued config options"
 msgstr ""
 
-#: builtin/config.c:1093
+#: builtin/config.c:1086
 msgid "interpret the name as a regular expression"
 msgstr ""
 
-#: builtin/config.c:1094 builtin/config.c:1151
+#: builtin/config.c:1087 builtin/config.c:1144
 msgid "show config with values matching the pattern"
 msgstr ""
 
-#: builtin/config.c:1095 builtin/config.c:1152 builtin/config.c:1211
-#: builtin/config.c:1397
+#: builtin/config.c:1088 builtin/config.c:1145 builtin/config.c:1204
+#: builtin/config.c:1390
 msgid "use string equality when comparing values to value pattern"
 msgstr ""
 
-#: builtin/config.c:1096
+#: builtin/config.c:1089
 msgid "URL"
 msgstr ""
 
-#: builtin/config.c:1096
+#: builtin/config.c:1089
 msgid "show config matching the given URL"
 msgstr ""
 
-#: builtin/config.c:1102 builtin/config.c:1154 builtin/config.c:1395
-#: builtin/config.c:1396
+#: builtin/config.c:1095 builtin/config.c:1147 builtin/config.c:1388
+#: builtin/config.c:1389
 msgid "value"
 msgstr ""
 
-#: builtin/config.c:1102
+#: builtin/config.c:1095
 msgid "use default value when missing entry"
 msgstr ""
 
-#: builtin/config.c:1112 builtin/config.c:1221 builtin/config.c:1487
+#: builtin/config.c:1105 builtin/config.c:1214 builtin/config.c:1480
 msgid "--fixed-value only applies with 'value-pattern'"
 msgstr ""
 
-#: builtin/config.c:1115
+#: builtin/config.c:1108
 msgid "--default= cannot be used with --all or --url="
 msgstr ""
 
-#: builtin/config.c:1119
+#: builtin/config.c:1112
 msgid "--url= cannot be used with --all, --regexp or --value"
 msgstr ""
 
-#: builtin/config.c:1149 builtin/config.c:1208
+#: builtin/config.c:1142 builtin/config.c:1201
 msgid "Filter"
 msgstr ""
 
-#: builtin/config.c:1150
+#: builtin/config.c:1143
 msgid "replace multi-valued config option with new value"
 msgstr ""
 
-#: builtin/config.c:1154 builtin/config.c:1396
+#: builtin/config.c:1147 builtin/config.c:1389
 msgid "human-readable comment string (# will be prepended as needed)"
 msgstr ""
 
-#: builtin/config.c:1155
+#: builtin/config.c:1148
 msgid "add a new line without altering any existing values"
 msgstr ""
 
-#: builtin/config.c:1169
+#: builtin/config.c:1162
 msgid "--fixed-value only applies with --value=<pattern>"
 msgstr ""
 
-#: builtin/config.c:1171
+#: builtin/config.c:1164
 msgid "--append cannot be used with --value=<pattern>"
 msgstr ""
 
-#: builtin/config.c:1190
+#: builtin/config.c:1183
 #, c-format
 msgid ""
 "cannot overwrite multiple values with a single value\n"
 "       Use --value=<pattern>, --append or --all to change %s."
 msgstr ""
 
-#: builtin/config.c:1209
+#: builtin/config.c:1202
 msgid "unset all multi-valued config options"
 msgstr ""
 
-#: builtin/config.c:1210
+#: builtin/config.c:1203
 msgid "unset multi-valued config options with matching values"
 msgstr ""
 
-#: builtin/config.c:1260 builtin/config.c:1290 builtin/config.c:1597
-#: builtin/config.c:1609
+#: builtin/config.c:1253 builtin/config.c:1283 builtin/config.c:1590
+#: builtin/config.c:1602
 #, c-format
 msgid "no such section: %s"
 msgstr ""
 
-#: builtin/config.c:1305
+#: builtin/config.c:1298
 msgid "editing stdin is not supported"
 msgstr ""
 
-#: builtin/config.c:1307
+#: builtin/config.c:1300
 msgid "editing blobs is not supported"
 msgstr ""
 
-#: builtin/config.c:1321
+#: builtin/config.c:1314
 #, c-format
 msgid "cannot create configuration file %s"
 msgstr ""
 
-#: builtin/config.c:1377
+#: builtin/config.c:1370
 msgid "Action"
 msgstr ""
 
-#: builtin/config.c:1378
+#: builtin/config.c:1371
 msgid "get value: name [<value-pattern>]"
 msgstr ""
 
-#: builtin/config.c:1379
+#: builtin/config.c:1372
 msgid "get all values: key [<value-pattern>]"
 msgstr ""
 
-#: builtin/config.c:1380
+#: builtin/config.c:1373
 msgid "get values for regexp: name-regex [<value-pattern>]"
 msgstr ""
 
-#: builtin/config.c:1381
+#: builtin/config.c:1374
 msgid "get value specific for the URL: section[.var] URL"
 msgstr ""
 
-#: builtin/config.c:1382
+#: builtin/config.c:1375
 msgid "replace all matching variables: name value [<value-pattern>]"
 msgstr ""
 
-#: builtin/config.c:1383
+#: builtin/config.c:1376
 msgid "add a new variable: name value"
 msgstr ""
 
-#: builtin/config.c:1384
+#: builtin/config.c:1377
 msgid "remove a variable: name [<value-pattern>]"
 msgstr ""
 
-#: builtin/config.c:1385
+#: builtin/config.c:1378
 msgid "remove all matches: name [<value-pattern>]"
 msgstr ""
 
-#: builtin/config.c:1386
+#: builtin/config.c:1379
 msgid "rename section: old-name new-name"
 msgstr ""
 
-#: builtin/config.c:1387
+#: builtin/config.c:1380
 msgid "remove a section: name"
 msgstr ""
 
-#: builtin/config.c:1388
+#: builtin/config.c:1381
 msgid "list all"
 msgstr ""
 
-#: builtin/config.c:1389
+#: builtin/config.c:1382
 msgid "open an editor"
 msgstr ""
 
-#: builtin/config.c:1390
+#: builtin/config.c:1383
 msgid "find the color configured: slot [<default>]"
 msgstr ""
 
-#: builtin/config.c:1391
+#: builtin/config.c:1384
 msgid "find the color setting: slot [<stdout-is-tty>]"
 msgstr ""
 
-#: builtin/config.c:1395
+#: builtin/config.c:1388
 msgid "with --get, use default value when missing entry"
 msgstr ""
 
-#: builtin/config.c:1415
+#: builtin/config.c:1408
 msgid "--get-color and variable type are incoherent"
 msgstr ""
 
-#: builtin/config.c:1426
+#: builtin/config.c:1419
 msgid "no action specified"
 msgstr ""
 
-#: builtin/config.c:1436
+#: builtin/config.c:1429
 msgid "--name-only is only applicable to --list or --get-regexp"
 msgstr ""
 
-#: builtin/config.c:1442
+#: builtin/config.c:1435
 msgid ""
 "--show-origin is only applicable to --get, --get-all, --get-regexp, and --"
 "list"
 msgstr ""
 
-#: builtin/config.c:1448
+#: builtin/config.c:1441
 msgid "--default is only applicable to --get"
 msgstr ""
 
-#: builtin/config.c:1454
+#: builtin/config.c:1447
 msgid "--comment is only applicable to add/set/replace operations"
 msgstr ""
 
-#: builtin/config.c:1523
+#: builtin/config.c:1516
 #, c-format
 msgid ""
 "cannot overwrite multiple values with a single value\n"
@@ -7055,8 +7059,8 @@ msgstr ""
 msgid "%s...%s: no merge base"
 msgstr ""
 
-#: builtin/diff.c:501 setup.c:1167 setup.c:1224 setup.c:1234 setup.c:1272
-#: setup.c:1278
+#: builtin/diff.c:501 setup.c:1175 setup.c:1232 setup.c:1242 setup.c:1280
+#: setup.c:1286
 msgid "cannot come back to cwd"
 msgstr ""
 
@@ -8698,7 +8702,7 @@ msgstr ""
 
 #: builtin/fsck.c:335 builtin/gc.c:2571 builtin/rebase.c:236
 #: rebase-interactive.c:127 rerere.c:485 rerere.c:696 sequencer.c:4273
-#: sequencer.c:6693
+#: sequencer.c:6671
 #, c-format
 msgid "could not write '%s'"
 msgstr ""
@@ -8975,7 +8979,7 @@ msgstr ""
 msgid "running fsmonitor-daemon in '%s'\n"
 msgstr ""
 
-#: builtin/fsmonitor--daemon.c:1479 setup.c:2215
+#: builtin/fsmonitor--daemon.c:1479 setup.c:2226
 msgid "setsid failed"
 msgstr ""
 
@@ -9036,7 +9040,7 @@ msgstr ""
 msgid "failed to parse '%s' value '%s'"
 msgstr ""
 
-#: builtin/gc.c:803 setup.c:2313
+#: builtin/gc.c:803 setup.c:2324
 #, c-format
 msgid "cannot stat '%s'"
 msgstr ""
@@ -9392,7 +9396,7 @@ msgstr ""
 #. variable for tweaking threads, currently
 #. grep.threads
 #.
-#: builtin/grep.c:318 builtin/index-pack.c:1682 builtin/index-pack.c:1964
+#: builtin/grep.c:318 builtin/index-pack.c:1692 builtin/index-pack.c:1974
 #: builtin/pack-objects.c:3737
 #, c-format
 msgid "no threads support, ignoring %s"
@@ -9626,7 +9630,7 @@ msgstr ""
 msgid "no threads support, ignoring --threads"
 msgstr ""
 
-#: builtin/grep.c:1340 builtin/index-pack.c:1679 builtin/pack-objects.c:3734
+#: builtin/grep.c:1340 builtin/index-pack.c:1689 builtin/pack-objects.c:3734
 #, c-format
 msgid "invalid number of threads specified (%d)"
 msgstr ""
@@ -10175,254 +10179,254 @@ msgstr ""
 msgid "pack has bad object at offset %<PRIuMAX>: %s"
 msgstr ""
 
-#: builtin/index-pack.c:513
+#: builtin/index-pack.c:519
 #, c-format
 msgid "inflate returned %d"
 msgstr ""
 
-#: builtin/index-pack.c:542 builtin/unpack-objects.c:545
+#: builtin/index-pack.c:548 builtin/unpack-objects.c:545
 msgid "object size too large for this platform"
 msgstr ""
 
-#: builtin/index-pack.c:565
+#: builtin/index-pack.c:571
 msgid "offset value overflow for delta base object"
 msgstr ""
 
-#: builtin/index-pack.c:573
+#: builtin/index-pack.c:579
 msgid "delta base offset is out of bound"
 msgstr ""
 
-#: builtin/index-pack.c:581
+#: builtin/index-pack.c:587
 #, c-format
 msgid "unknown object type %d"
 msgstr ""
 
-#: builtin/index-pack.c:612
+#: builtin/index-pack.c:618
 msgid "cannot pread pack file"
 msgstr ""
 
-#: builtin/index-pack.c:614
+#: builtin/index-pack.c:620
 #, c-format
 msgid "premature end of pack file, %<PRIuMAX> byte missing"
 msgid_plural "premature end of pack file, %<PRIuMAX> bytes missing"
 msgstr[0] ""
 msgstr[1] ""
 
-#: builtin/index-pack.c:640
+#: builtin/index-pack.c:646
 msgid "serious inflate inconsistency"
 msgstr ""
 
-#: builtin/index-pack.c:785 builtin/index-pack.c:791 builtin/index-pack.c:813
-#: builtin/index-pack.c:914 builtin/index-pack.c:924
+#: builtin/index-pack.c:791 builtin/index-pack.c:797 builtin/index-pack.c:819
+#: builtin/index-pack.c:920 builtin/index-pack.c:930
 #, c-format
 msgid "SHA1 COLLISION FOUND WITH %s !"
 msgstr ""
 
-#: builtin/index-pack.c:912
+#: builtin/index-pack.c:918
 #, c-format
 msgid "cannot read existing object info %s"
 msgstr ""
 
-#: builtin/index-pack.c:921
+#: builtin/index-pack.c:927
 #, c-format
 msgid "cannot read existing object %s"
 msgstr ""
 
-#: builtin/index-pack.c:935
+#: builtin/index-pack.c:941
 #, c-format
 msgid "invalid blob object %s"
 msgstr ""
 
-#: builtin/index-pack.c:938 builtin/index-pack.c:957
+#: builtin/index-pack.c:944 builtin/index-pack.c:963
 msgid "fsck error in packed object"
 msgstr ""
 
-#: builtin/index-pack.c:954
+#: builtin/index-pack.c:960
 #, c-format
 msgid "invalid %s"
 msgstr ""
 
-#: builtin/index-pack.c:959
+#: builtin/index-pack.c:965
 #, c-format
 msgid "Not all child objects of %s are reachable"
 msgstr ""
 
-#: builtin/index-pack.c:1022 builtin/index-pack.c:1069
+#: builtin/index-pack.c:1028 builtin/index-pack.c:1075
 msgid "failed to apply delta"
 msgstr ""
 
-#: builtin/index-pack.c:1262
+#: builtin/index-pack.c:1272
 msgid "Receiving objects"
 msgstr ""
 
-#: builtin/index-pack.c:1262
+#: builtin/index-pack.c:1272
 msgid "Indexing objects"
 msgstr ""
 
-#: builtin/index-pack.c:1298
+#: builtin/index-pack.c:1308
 msgid "pack is corrupted (SHA1 mismatch)"
 msgstr ""
 
-#: builtin/index-pack.c:1303
+#: builtin/index-pack.c:1313
 msgid "cannot fstat packfile"
 msgstr ""
 
-#: builtin/index-pack.c:1306
+#: builtin/index-pack.c:1316
 msgid "pack has junk at the end"
 msgstr ""
 
-#: builtin/index-pack.c:1318
+#: builtin/index-pack.c:1328
 msgid "confusion beyond insanity in parse_pack_objects()"
 msgstr ""
 
-#: builtin/index-pack.c:1342
+#: builtin/index-pack.c:1352
 msgid "Resolving deltas"
 msgstr ""
 
-#: builtin/index-pack.c:1353 builtin/pack-objects.c:3259
+#: builtin/index-pack.c:1363 builtin/pack-objects.c:3259
 #: builtin/pack-objects.c:3554
 #, c-format
 msgid "unable to create thread: %s"
 msgstr ""
 
-#: builtin/index-pack.c:1386
+#: builtin/index-pack.c:1396
 msgid "confusion beyond insanity"
 msgstr ""
 
-#: builtin/index-pack.c:1392
+#: builtin/index-pack.c:1402
 #, c-format
 msgid "completed with %d local object"
 msgid_plural "completed with %d local objects"
 msgstr[0] ""
 msgstr[1] ""
 
-#: builtin/index-pack.c:1404
+#: builtin/index-pack.c:1414
 #, c-format
 msgid "Unexpected tail checksum for %s (disk corruption?)"
 msgstr ""
 
-#: builtin/index-pack.c:1408
+#: builtin/index-pack.c:1418
 #, c-format
 msgid "pack has %d unresolved delta"
 msgid_plural "pack has %d unresolved deltas"
 msgstr[0] ""
 msgstr[1] ""
 
-#: builtin/index-pack.c:1433
+#: builtin/index-pack.c:1443
 #, c-format
 msgid "unable to deflate appended object (%d)"
 msgstr ""
 
-#: builtin/index-pack.c:1529
+#: builtin/index-pack.c:1539
 #, c-format
 msgid "local object %s is corrupt"
 msgstr ""
 
-#: builtin/index-pack.c:1551
+#: builtin/index-pack.c:1561
 #, c-format
 msgid "packfile name '%s' does not end with '.%s'"
 msgstr ""
 
-#: builtin/index-pack.c:1575
+#: builtin/index-pack.c:1585
 #, c-format
 msgid "cannot write %s file '%s'"
 msgstr ""
 
-#: builtin/index-pack.c:1583
+#: builtin/index-pack.c:1593
 #, c-format
 msgid "cannot close written %s file '%s'"
 msgstr ""
 
-#: builtin/index-pack.c:1600
+#: builtin/index-pack.c:1610
 #, c-format
 msgid "unable to rename temporary '*.%s' file to '%s'"
 msgstr ""
 
-#: builtin/index-pack.c:1623
+#: builtin/index-pack.c:1633
 msgid "error while closing pack file"
 msgstr ""
 
-#: builtin/index-pack.c:1673 builtin/pack-objects.c:3745
+#: builtin/index-pack.c:1683 builtin/pack-objects.c:3745
 #, c-format
 msgid "bad pack.indexVersion=%<PRIu32>"
 msgstr ""
 
-#: builtin/index-pack.c:1748
+#: builtin/index-pack.c:1758
 #, c-format
 msgid "Cannot open existing pack file '%s'"
 msgstr ""
 
-#: builtin/index-pack.c:1750
+#: builtin/index-pack.c:1760
 #, c-format
 msgid "Cannot open existing pack idx file for '%s'"
 msgstr ""
 
-#: builtin/index-pack.c:1798
+#: builtin/index-pack.c:1808
 #, c-format
 msgid "non delta: %d object"
 msgid_plural "non delta: %d objects"
 msgstr[0] ""
 msgstr[1] ""
 
-#: builtin/index-pack.c:1805
+#: builtin/index-pack.c:1815
 #, c-format
 msgid "chain length = %d: %lu object"
 msgid_plural "chain length = %d: %lu objects"
 msgstr[0] ""
 msgstr[1] ""
 
-#: builtin/index-pack.c:1847
+#: builtin/index-pack.c:1857
 msgid "could not start pack-objects to repack local links"
 msgstr ""
 
-#: builtin/index-pack.c:1852
+#: builtin/index-pack.c:1862
 msgid "failed to feed local object to pack-objects"
 msgstr ""
 
-#: builtin/index-pack.c:1865
+#: builtin/index-pack.c:1875
 msgid "index-pack: Expecting full hex object ID lines only from pack-objects."
 msgstr ""
 
-#: builtin/index-pack.c:1876
+#: builtin/index-pack.c:1886
 msgid "could not finish pack-objects to repack local links"
 msgstr ""
 
-#: builtin/index-pack.c:1920
+#: builtin/index-pack.c:1930
 msgid "Cannot come back to cwd"
 msgstr ""
 
-#: builtin/index-pack.c:1971 builtin/unpack-objects.c:658
+#: builtin/index-pack.c:1981 builtin/unpack-objects.c:658
 #, c-format
 msgid "bad --pack_header: %s"
 msgstr ""
 
-#: builtin/index-pack.c:1990 builtin/index-pack.c:1994
+#: builtin/index-pack.c:2000 builtin/index-pack.c:2004
 #, c-format
 msgid "bad %s"
 msgstr ""
 
-#: builtin/index-pack.c:2000 builtin/init-db.c:172 setup.c:2699 setup.c:2762
+#: builtin/index-pack.c:2010 builtin/init-db.c:172 setup.c:2710 setup.c:2773
 #, c-format
 msgid "unknown hash algorithm '%s'"
 msgstr ""
 
-#: builtin/index-pack.c:2021
+#: builtin/index-pack.c:2031
 msgid "--promisor cannot be used with a pack name"
 msgstr ""
 
-#: builtin/index-pack.c:2023
+#: builtin/index-pack.c:2033
 msgid "--stdin requires a git repository"
 msgstr ""
 
-#: builtin/index-pack.c:2049
+#: builtin/index-pack.c:2059
 msgid "--verify with no packfile name given"
 msgstr ""
 
-#: builtin/index-pack.c:2126
+#: builtin/index-pack.c:2136
 msgid "cannot perform queued object checks outside of a repository"
 msgstr ""
 
-#: builtin/index-pack.c:2130 builtin/unpack-objects.c:680
+#: builtin/index-pack.c:2140 builtin/unpack-objects.c:680
 msgid "fsck error in pack objects"
 msgstr ""
 
@@ -10680,7 +10684,7 @@ msgstr ""
 msgid "format.headers without value"
 msgstr ""
 
-#: builtin/log.c:1113 config.c:1279
+#: builtin/log.c:1113 config.c:1299
 #, c-format
 msgid "bad boolean config value '%s' for '%s'"
 msgstr ""
@@ -14634,7 +14638,7 @@ msgid "could not set '%s'"
 msgstr ""
 
 #: builtin/remote.c:833 builtin/remote.c:1051 builtin/remote.c:1059
-#: config.c:3272
+#: config.c:3292
 #, c-format
 msgid "could not unset '%s'"
 msgstr ""
@@ -20258,163 +20262,163 @@ msgstr ""
 msgid "missing environment variable '%s' for configuration '%.*s'"
 msgstr ""
 
-#: config.c:558
+#: config.c:562
 #, c-format
 msgid "key does not contain a section: %s"
 msgstr ""
 
-#: config.c:563
+#: config.c:568
 #, c-format
 msgid "key does not contain variable name: %s"
 msgstr ""
 
-#: config.c:585 sequencer.c:3140
+#: config.c:592 sequencer.c:3140
 #, c-format
 msgid "invalid key: %s"
 msgstr ""
 
-#: config.c:590
+#: config.c:598
 #, c-format
 msgid "invalid key (newline): %s"
 msgstr ""
 
-#: config.c:614
+#: config.c:634
 msgid "empty config key"
 msgstr ""
 
-#: config.c:645 config.c:654
+#: config.c:665 config.c:674
 #, c-format
 msgid "bogus config parameter: %s"
 msgstr ""
 
-#: config.c:669 config.c:686 config.c:693 config.c:702
+#: config.c:689 config.c:706 config.c:713 config.c:722
 #, c-format
 msgid "bogus format in %s"
 msgstr ""
 
-#: config.c:731
+#: config.c:751
 #, c-format
 msgid "bogus count in %s"
 msgstr ""
 
-#: config.c:735
+#: config.c:755
 #, c-format
 msgid "too many entries in %s"
 msgstr ""
 
-#: config.c:745
+#: config.c:765
 #, c-format
 msgid "missing config key %s"
 msgstr ""
 
-#: config.c:753
+#: config.c:773
 #, c-format
 msgid "missing config value %s"
 msgstr ""
 
-#: config.c:1126
+#: config.c:1146
 #, c-format
 msgid "bad config line %d in blob %s"
 msgstr ""
 
-#: config.c:1130
+#: config.c:1150
 #, c-format
 msgid "bad config line %d in file %s"
 msgstr ""
 
-#: config.c:1134
+#: config.c:1154
 #, c-format
 msgid "bad config line %d in standard input"
 msgstr ""
 
-#: config.c:1138
+#: config.c:1158
 #, c-format
 msgid "bad config line %d in submodule-blob %s"
 msgstr ""
 
-#: config.c:1142
+#: config.c:1162
 #, c-format
 msgid "bad config line %d in command line %s"
 msgstr ""
 
-#: config.c:1146
+#: config.c:1166
 #, c-format
 msgid "bad config line %d in %s"
 msgstr ""
 
-#: config.c:1175
+#: config.c:1195
 msgid "out of range"
 msgstr ""
 
-#: config.c:1175
+#: config.c:1195
 msgid "invalid unit"
 msgstr ""
 
-#: config.c:1176
+#: config.c:1196
 #, c-format
 msgid "bad numeric config value '%s' for '%s': %s"
 msgstr ""
 
-#: config.c:1189
+#: config.c:1209
 #, c-format
 msgid "bad numeric config value '%s' for '%s' in blob %s: %s"
 msgstr ""
 
-#: config.c:1192
+#: config.c:1212
 #, c-format
 msgid "bad numeric config value '%s' for '%s' in file %s: %s"
 msgstr ""
 
-#: config.c:1195
+#: config.c:1215
 #, c-format
 msgid "bad numeric config value '%s' for '%s' in standard input: %s"
 msgstr ""
 
-#: config.c:1198
+#: config.c:1218
 #, c-format
 msgid "bad numeric config value '%s' for '%s' in submodule-blob %s: %s"
 msgstr ""
 
-#: config.c:1201
+#: config.c:1221
 #, c-format
 msgid "bad numeric config value '%s' for '%s' in command line %s: %s"
 msgstr ""
 
-#: config.c:1204
+#: config.c:1224
 #, c-format
 msgid "bad numeric config value '%s' for '%s' in %s: %s"
 msgstr ""
 
-#: config.c:1302
+#: config.c:1322
 #, c-format
 msgid "failed to expand user dir in: '%s'"
 msgstr ""
 
-#: config.c:1319
+#: config.c:1339
 #, c-format
 msgid "'%s' for '%s' is not a valid timestamp"
 msgstr ""
 
-#: config.c:1453
+#: config.c:1473
 #, c-format
 msgid "unable to load config blob object '%s'"
 msgstr ""
 
-#: config.c:1456
+#: config.c:1476
 #, c-format
 msgid "reference '%s' does not point to a blob"
 msgstr ""
 
-#: config.c:1475
+#: config.c:1495
 #, c-format
 msgid "unable to resolve config blob '%s'"
 msgstr ""
 
-#: config.c:1585
+#: config.c:1605
 msgid "unable to parse command-line config"
 msgstr ""
 
-#: config.c:2160
+#: config.c:2180
 #, c-format
 msgid ""
 "\n"
@@ -20423,11 +20427,11 @@ msgid ""
 "%s"
 msgstr ""
 
-#: config.c:2171
+#: config.c:2191
 msgid "<comment string>"
 msgstr ""
 
-#: config.c:2187
+#: config.c:2207
 #, c-format
 msgid ""
 "\n"
@@ -20437,111 +20441,111 @@ msgid ""
 "where '%s' is the string you wish to use.\n"
 msgstr ""
 
-#: config.c:2220
+#: config.c:2240
 #, c-format
 msgid "Support for '%s=auto' has been removed in Git 3.0"
 msgstr ""
 
-#: config.c:2245
+#: config.c:2265
 #, c-format
 msgid "Support for '%s=auto' is deprecated and will be removed in Git 3.0"
 msgstr ""
 
-#: config.c:2298
+#: config.c:2318
 msgid "unknown error occurred while reading the configuration files"
 msgstr ""
 
-#: config.c:2460
+#: config.c:2480
 #, c-format
 msgid "Invalid %s: '%s'"
 msgstr ""
 
-#: config.c:2506
+#: config.c:2526
 #, c-format
 msgid "splitIndex.maxPercentChange value '%d' should be between 0 and 100"
 msgstr ""
 
-#: config.c:2538
+#: config.c:2558
 #, c-format
 msgid "unable to parse '%s' from command-line config"
 msgstr ""
 
-#: config.c:2540
+#: config.c:2560
 #, c-format
 msgid "bad config variable '%s' in file '%s' at line %d"
 msgstr ""
 
-#: config.c:2626
+#: config.c:2646
 #, c-format
 msgid "invalid section name '%s'"
 msgstr ""
 
-#: config.c:2659
+#: config.c:2679
 #, c-format
 msgid "%s has multiple values"
 msgstr ""
 
-#: config.c:2688
+#: config.c:2708
 #, c-format
 msgid "failed to write new configuration file %s"
 msgstr ""
 
-#: config.c:2913
+#: config.c:2933
 #, c-format
 msgid "no multi-line comment allowed: '%s'"
 msgstr ""
 
-#: config.c:3041 config.c:3387
+#: config.c:3061 config.c:3407
 #, c-format
 msgid "could not lock config file %s"
 msgstr ""
 
-#: config.c:3052
+#: config.c:3072
 #, c-format
 msgid "opening %s"
 msgstr ""
 
-#: config.c:3116
+#: config.c:3136
 #, c-format
 msgid "invalid config file %s"
 msgstr ""
 
-#: config.c:3129 config.c:3400
+#: config.c:3149 config.c:3420
 #, c-format
 msgid "fstat on %s failed"
 msgstr ""
 
-#: config.c:3140
+#: config.c:3160
 #, c-format
 msgid "unable to mmap '%s'%s"
 msgstr ""
 
-#: config.c:3150 config.c:3405
+#: config.c:3170 config.c:3425
 #, c-format
 msgid "chmod on %s failed"
 msgstr ""
 
-#: config.c:3235 config.c:3512
+#: config.c:3255 config.c:3532
 #, c-format
 msgid "could not write config file %s"
 msgstr ""
 
-#: config.c:3270
+#: config.c:3290
 #, c-format
 msgid "could not set '%s' to '%s'"
 msgstr ""
 
-#: config.c:3377
+#: config.c:3397
 #, c-format
 msgid "invalid section name: %s"
 msgstr ""
 
-#: config.c:3418
+#: config.c:3438
 #, c-format
 msgid "refusing to work with overly long line in '%s' on line %<PRIuMAX>"
 msgstr ""
 
-#: config.c:3557
+#: config.c:3577
 #, c-format
 msgid "missing value for '%s'"
 msgstr ""
@@ -22671,7 +22675,7 @@ msgid ""
 "configured http.retryAfter exceeds http.maxRetryTime (%ld > %ld seconds)"
 msgstr ""
 
-#: http.c:2466
+#: http.c:2480
 #, c-format
 msgid "rate limited, waiting %ld seconds before retry"
 msgstr ""
@@ -27874,19 +27878,19 @@ msgstr ""
 msgid "make_script: error preparing revisions"
 msgstr ""
 
-#: sequencer.c:6650 sequencer.c:6667
+#: sequencer.c:6628 sequencer.c:6645
 msgid "nothing to do"
 msgstr ""
 
-#: sequencer.c:6687
+#: sequencer.c:6665
 msgid "could not skip unnecessary pick commands"
 msgstr ""
 
-#: sequencer.c:6787
+#: sequencer.c:6765
 msgid "the script was already rearranged."
 msgstr ""
 
-#: sequencer.c:6946 sequencer.c:6954
+#: sequencer.c:6924 sequencer.c:6932
 #, c-format
 msgid "update-refs file at '%s' is invalid"
 msgstr ""
@@ -27980,32 +27984,32 @@ msgstr ""
 msgid "not a git repository: %s"
 msgstr ""
 
-#: setup.c:1119
+#: setup.c:1127
 #, c-format
 msgid "'$%s' too big"
 msgstr ""
 
-#: setup.c:1133
+#: setup.c:1141
 #, c-format
 msgid "not a git repository: '%s'"
 msgstr ""
 
-#: setup.c:1162 setup.c:1164 setup.c:1195
+#: setup.c:1170 setup.c:1172 setup.c:1203
 #, c-format
 msgid "cannot chdir to '%s'"
 msgstr ""
 
-#: setup.c:1292
+#: setup.c:1300
 #, c-format
 msgid "failed to stat '%*s%s%s'"
 msgstr ""
 
-#: setup.c:1364
+#: setup.c:1372
 #, c-format
 msgid "safe.directory '%s' not absolute"
 msgstr ""
 
-#: setup.c:1450 setup.c:1985
+#: setup.c:1458 setup.c:1996
 #, c-format
 msgid ""
 "detected dubious ownership in repository at '%s'\n"
@@ -28014,148 +28018,148 @@ msgid ""
 "\tgit config --global --add safe.directory %s"
 msgstr ""
 
-#: setup.c:1622
+#: setup.c:1631
 #, c-format
 msgid "error reading '%s'"
 msgstr ""
 
-#: setup.c:1627
+#: setup.c:1636
 #, c-format
 msgid "not a regular file: '%s'"
 msgstr ""
 
-#: setup.c:1948
+#: setup.c:1959
 msgid "Unable to read current working directory"
 msgstr ""
 
-#: setup.c:1957 setup.c:1963
+#: setup.c:1968 setup.c:1974
 #, c-format
 msgid "cannot change to '%s'"
 msgstr ""
 
-#: setup.c:1968
+#: setup.c:1979
 #, c-format
 msgid "not a git repository (or any of the parent directories): %s"
 msgstr ""
 
-#: setup.c:1974
+#: setup.c:1985
 #, c-format
 msgid ""
 "not a git repository (or any parent up to mount point %s)\n"
 "Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set)."
 msgstr ""
 
-#: setup.c:1996
+#: setup.c:2007
 #, c-format
 msgid "cannot use bare repository '%s' (safe.bareRepository is '%s')"
 msgstr ""
 
-#: setup.c:2090 setup.c:2800
+#: setup.c:2101 setup.c:2811
 #, c-format
 msgid "unknown ref storage format: '%s'"
 msgstr ""
 
-#: setup.c:2147
+#: setup.c:2158
 #, c-format
 msgid ""
 "problem with core.sharedRepository filemode value (0%.3o).\n"
 "The owner of files must always have read and write permissions."
 msgstr ""
 
-#: setup.c:2204
+#: setup.c:2215
 msgid "fork failed"
 msgstr ""
 
-#: setup.c:2319
+#: setup.c:2330
 #, c-format
 msgid "cannot stat template '%s'"
 msgstr ""
 
-#: setup.c:2324
+#: setup.c:2335
 #, c-format
 msgid "cannot opendir '%s'"
 msgstr ""
 
-#: setup.c:2336
+#: setup.c:2347
 #, c-format
 msgid "cannot readlink '%s'"
 msgstr ""
 
-#: setup.c:2338
+#: setup.c:2349
 #, c-format
 msgid "cannot symlink '%s' '%s'"
 msgstr ""
 
-#: setup.c:2344
+#: setup.c:2355
 #, c-format
 msgid "cannot copy '%s' to '%s'"
 msgstr ""
 
-#: setup.c:2348
+#: setup.c:2359
 #, c-format
 msgid "ignoring template %s"
 msgstr ""
 
-#: setup.c:2372
+#: setup.c:2383
 #, c-format
 msgid "templates not found in %s"
 msgstr ""
 
-#: setup.c:2387
+#: setup.c:2398
 #, c-format
 msgid "not copying templates from '%s': %s"
 msgstr ""
 
-#: setup.c:2525
+#: setup.c:2536
 #, c-format
 msgid "invalid initial branch name: '%s'"
 msgstr ""
 
-#: setup.c:2534
+#: setup.c:2545
 #, c-format
 msgid "re-init: ignored --initial-branch=%s"
 msgstr ""
 
-#: setup.c:2670
+#: setup.c:2681
 #, c-format
 msgid "unable to handle file type %d"
 msgstr ""
 
-#: setup.c:2673
+#: setup.c:2684
 #, c-format
 msgid "unable to move %s to %s"
 msgstr ""
 
-#: setup.c:2756
+#: setup.c:2767
 msgid "attempt to reinitialize repository with different hash"
 msgstr ""
 
-#: setup.c:2775
+#: setup.c:2786
 msgid ""
 "attempt to reinitialize repository with different reference storage format"
 msgstr ""
 
-#: setup.c:2828 setup.c:2831
+#: setup.c:2839 setup.c:2842
 #, c-format
 msgid "%s already exists"
 msgstr ""
 
-#: setup.c:2896
+#: setup.c:2907
 #, c-format
 msgid "Reinitialized existing shared Git repository in %s%s\n"
 msgstr ""
 
-#: setup.c:2897
+#: setup.c:2908
 #, c-format
 msgid "Reinitialized existing Git repository in %s%s\n"
 msgstr ""
 
-#: setup.c:2901
+#: setup.c:2912
 #, c-format
 msgid "Initialized empty shared Git repository in %s%s\n"
 msgstr ""
 
-#: setup.c:2902
+#: setup.c:2913
 #, c-format
 msgid "Initialized empty Git repository in %s%s\n"
 msgstr ""
