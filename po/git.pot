@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2026-06-03 12:25+0000\n"
+"POT-Creation-Date: 2026-06-04 07:10+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -24,8 +24,8 @@ msgid "Huh (%s)?"
 msgstr ""
 
 #: add-interactive.c:488 add-interactive.c:798 builtin/merge.c:426
-#: builtin/rebase.c:1366 builtin/rebase.c:1776 reset.c:146 sequencer.c:3893
-#: sequencer.c:4338 sequencer.c:4729
+#: builtin/rebase.c:1366 builtin/rebase.c:1776 reset.c:146 reset.c:153
+#: sequencer.c:3893 sequencer.c:4338 sequencer.c:4729
 msgid "could not read index"
 msgstr ""
 
@@ -50,9 +50,9 @@ msgstr ""
 msgid "could not stage '%s'"
 msgstr ""
 
-#: add-interactive.c:669 add-interactive.c:861 builtin/history.c:1051
-#: builtin/stash.c:640 builtin/stash.c:659 builtin/stash.c:729
-#: builtin/stash.c:1523 builtin/stash.c:1722 reset.c:175 sequencer.c:4101
+#: add-interactive.c:669 add-interactive.c:861 builtin/stash.c:640
+#: builtin/stash.c:659 builtin/stash.c:729 builtin/stash.c:1523
+#: builtin/stash.c:1722 reset.c:204 sequencer.c:4101
 msgid "could not write index"
 msgstr ""
 
@@ -2385,7 +2385,7 @@ msgstr ""
 
 #: builtin/add.c:608 builtin/am.c:2028 builtin/am.c:2062 builtin/checkout.c:828
 #: builtin/checkout.c:1054 builtin/clone.c:699 builtin/commit.c:466
-#: builtin/commit.c:491 builtin/commit.c:539 builtin/history.c:802
+#: builtin/commit.c:491 builtin/commit.c:539 builtin/history.c:803
 #: builtin/stash.c:370 builtin/stash.c:414 merge.c:111 rerere.c:725
 msgid "unable to write new index file"
 msgstr ""
@@ -4562,7 +4562,7 @@ msgstr ""
 #: builtin/checkout.c:993 builtin/checkout.c:1451 builtin/checkout.c:1457
 #: builtin/grep.c:531 builtin/grep.c:674 builtin/grep.c:738 builtin/grep.c:851
 #: builtin/merge-tree.c:453 builtin/merge-tree.c:459 builtin/merge-tree.c:465
-#: builtin/reset.c:123 merge-ort.c:5300 reset.c:168 sequencer.c:774
+#: builtin/reset.c:123 merge-ort.c:5300 reset.c:196 sequencer.c:774
 #: sequencer.c:4097 tree-walk.c:96
 #, c-format
 msgid "unable to read tree (%s)"
@@ -5795,7 +5795,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: builtin/commit.c:305 read-cache.c:4020
+#: builtin/commit.c:305 read-cache.c:4022
 msgid "updating files failed"
 msgstr ""
 
@@ -5896,7 +5896,7 @@ msgstr ""
 msgid "could not read MERGE_MSG"
 msgstr ""
 
-#: builtin/commit.c:919 builtin/history.c:76 builtin/submodule--helper.c:1374
+#: builtin/commit.c:919 builtin/history.c:77 builtin/submodule--helper.c:1374
 #: bundle.c:158 rerere.c:480 rerere.c:694 sequencer.c:2947 sequencer.c:3773
 #, c-format
 msgid "could not open '%s'"
@@ -6274,7 +6274,7 @@ msgstr ""
 msgid "could not read commit message: %s"
 msgstr ""
 
-#: builtin/commit.c:1913 builtin/history.c:93
+#: builtin/commit.c:1913 builtin/history.c:94
 #, c-format
 msgid "Aborting commit due to empty commit message.\n"
 msgstr ""
@@ -9813,252 +9813,253 @@ msgstr ""
 msgid "'git help config' for more information"
 msgstr ""
 
-#: builtin/history.c:29
+#: builtin/history.c:30
 msgid ""
 "git history drop <commit> [--dry-run] [--update-refs=(branches|head)] [--"
 "empty=(drop|keep|abort)]"
 msgstr ""
 
-#: builtin/history.c:31
+#: builtin/history.c:32
 msgid ""
 "git history fixup <commit> [--dry-run] [--update-refs=(branches|head)] [--"
 "reedit-message] [--empty=(drop|keep|abort)]"
 msgstr ""
 
-#: builtin/history.c:33
+#: builtin/history.c:34
 msgid "git history reword <commit> [--dry-run] [--update-refs=(branches|head)]"
 msgstr ""
 
-#: builtin/history.c:35
+#: builtin/history.c:36
 msgid ""
 "git history split <commit> [--dry-run] [--update-refs=(branches|head)] [--] "
 "[<pathspec>...]"
 msgstr ""
 
-#: builtin/history.c:53
+#: builtin/history.c:54
 #, c-format
 msgid ""
 "Please enter the commit message for the %s changes. Lines starting\n"
 "with '%s' will be ignored, and an empty message aborts the commit.\n"
 msgstr ""
 
-#: builtin/history.c:85
+#: builtin/history.c:86
 #, c-format
 msgid "Aborting commit as launching the editor failed.\n"
 msgstr ""
 
-#: builtin/history.c:177 builtin/history.c:833
+#: builtin/history.c:178 builtin/history.c:834
 #, c-format
 msgid "unable to parse parent commit %s"
 msgstr ""
 
-#: builtin/history.c:206
+#: builtin/history.c:207
 #, c-format
 msgid "%s expects one of 'branches' or 'head'"
 msgstr ""
 
-#: builtin/history.c:230 replay.c:416
+#: builtin/history.c:231 replay.c:416
 msgid "error preparing revisions"
 msgstr ""
 
-#: builtin/history.c:235 replay.c:430
+#: builtin/history.c:236 replay.c:430
 msgid "replaying merge commits is not supported yet!"
 msgstr ""
 
-#: builtin/history.c:284 builtin/history.c:575 builtin/history.c:1085
+#: builtin/history.c:285 builtin/history.c:576 builtin/history.c:1041
 msgid "cannot look up HEAD"
 msgstr ""
 
-#: builtin/history.c:293
+#: builtin/history.c:294
 msgid "cannot determine descendance"
 msgstr ""
 
-#: builtin/history.c:296
+#: builtin/history.c:297
 msgid ""
 "rewritten commit must be an ancestor of HEAD when using --update-refs=head"
 msgstr ""
 
-#: builtin/history.c:418 builtin/replay.c:219
+#: builtin/history.c:419 builtin/replay.c:219
 #, c-format
 msgid "failed to begin ref transaction: %s"
 msgstr ""
 
-#: builtin/history.c:430 builtin/replay.c:230
+#: builtin/history.c:431 builtin/replay.c:230
 #, c-format
 msgid "failed to update ref '%s': %s"
 msgstr ""
 
-#: builtin/history.c:437 builtin/replay.c:239
+#: builtin/history.c:438 builtin/replay.c:239
 #, c-format
 msgid "failed to commit ref transaction: %s"
 msgstr ""
 
-#: builtin/history.c:481
+#: builtin/history.c:482
 #, c-format
 msgid "unable to parse parent of %s"
 msgstr ""
 
-#: builtin/history.c:505
+#: builtin/history.c:506
 #, c-format
 msgid ""
 "unrecognized '--empty=' action '%s'; valid values are \"drop\", \"keep\", "
 "and \"abort\"."
 msgstr ""
 
-#: builtin/history.c:526 builtin/history.c:715 builtin/history.c:1133
+#: builtin/history.c:527 builtin/history.c:716 builtin/history.c:1089
 msgid "control which refs should be updated"
 msgstr ""
 
-#: builtin/history.c:529 builtin/history.c:718 builtin/history.c:945
-#: builtin/history.c:1136
+#: builtin/history.c:530 builtin/history.c:719 builtin/history.c:946
+#: builtin/history.c:1092
 msgid "perform a dry-run without updating any refs"
 msgstr ""
 
-#: builtin/history.c:531
+#: builtin/history.c:532
 msgid "open an editor to modify the commit message"
 msgstr ""
 
-#: builtin/history.c:534 builtin/rebase.c:1199 builtin/revert.c:158
+#: builtin/history.c:535 builtin/rebase.c:1199 builtin/revert.c:158
 msgid "how to handle commits that become empty"
 msgstr ""
 
-#: builtin/history.c:549 builtin/history.c:728 builtin/history.c:1152
+#: builtin/history.c:550 builtin/history.c:729 builtin/history.c:1108
 msgid "command expects a single revision"
 msgstr ""
 
-#: builtin/history.c:558
+#: builtin/history.c:559
 msgid "cannot run fixup in a bare repository"
 msgstr ""
 
-#: builtin/history.c:565 builtin/history.c:738 builtin/history.c:972
-#: builtin/history.c:1162
+#: builtin/history.c:566 builtin/history.c:739 builtin/history.c:973
+#: builtin/history.c:1118
 #, c-format
 msgid "commit cannot be found: %s"
 msgstr ""
 
-#: builtin/history.c:581
+#: builtin/history.c:582
 msgid "cannot get tree for HEAD"
 msgstr ""
 
-#: builtin/history.c:586 builtin/history.c:1024 builtin/show-index.c:64
-#: builtin/show-index.c:68
+#: builtin/history.c:587 builtin/show-index.c:64 builtin/show-index.c:68
 msgid "unable to read index"
 msgstr ""
 
-#: builtin/history.c:591
+#: builtin/history.c:592
 msgid "nothing to fixup: no staged changes"
 msgstr ""
 
-#: builtin/history.c:601
+#: builtin/history.c:602
 msgid "unable to write index as a tree"
 msgstr ""
 
-#: builtin/history.c:607
+#: builtin/history.c:608
 #, c-format
 msgid "cannot get tree for commit %s"
 msgstr ""
 
-#: builtin/history.c:625
+#: builtin/history.c:626
 msgid "merge failed while applying fixup"
 msgstr ""
 
-#: builtin/history.c:630
+#: builtin/history.c:631
 msgid "fixup would produce conflicts; aborting"
 msgstr ""
 
-#: builtin/history.c:653 builtin/history.c:1167
+#: builtin/history.c:654 builtin/history.c:1123
 #, c-format
 msgid "cannot drop root commit %s: it has no parent to replay onto"
 msgstr ""
 
-#: builtin/history.c:665
+#: builtin/history.c:666
 #, c-format
 msgid "fixup makes commit %s empty"
 msgstr ""
 
-#: builtin/history.c:679
+#: builtin/history.c:680
 msgid "failed writing fixed-up commit"
 msgstr ""
 
-#: builtin/history.c:689 builtin/history.c:757 builtin/history.c:994
-#: builtin/history.c:1185
+#: builtin/history.c:690 builtin/history.c:758 builtin/history.c:995
+#: builtin/history.c:1141
 msgid "failed replaying descendants"
 msgstr ""
 
-#: builtin/history.c:748
+#: builtin/history.c:749
 msgid "failed writing reworded commit"
 msgstr ""
 
-#: builtin/history.c:790
+#: builtin/history.c:791
 msgid "unable to populate index with tree"
 msgstr ""
 
-#: builtin/history.c:797
+#: builtin/history.c:798
 msgid "unable to acquire index lock"
 msgstr ""
 
-#: builtin/history.c:857
+#: builtin/history.c:858
 msgid "failed reading temporary index"
 msgstr ""
 
-#: builtin/history.c:869
+#: builtin/history.c:870
 msgid "failed split tree"
 msgstr ""
 
-#: builtin/history.c:882
+#: builtin/history.c:883
 msgid "split commit is empty"
 msgstr ""
 
-#: builtin/history.c:885
+#: builtin/history.c:886
 msgid "split commit tree matches original commit"
 msgstr ""
 
-#: builtin/history.c:896
+#: builtin/history.c:897
 msgid "failed writing first commit"
 msgstr ""
 
-#: builtin/history.c:913
+#: builtin/history.c:914
 msgid "failed writing second commit"
 msgstr ""
 
-#: builtin/history.c:942
+#: builtin/history.c:943
 msgid "control ref update behavior"
 msgstr ""
 
-#: builtin/history.c:956
+#: builtin/history.c:957
 msgid "command expects a committish"
 msgstr ""
 
-#: builtin/history.c:981
+#: builtin/history.c:982
 msgid "cannot split up merge commit"
 msgstr ""
 
-#: builtin/history.c:1102
+#: builtin/history.c:1058
 msgid "cannot resolve HEAD commit"
 msgstr ""
 
-#: builtin/history.c:1107
+#: builtin/history.c:1063
 msgid "cannot resolve tree for HEAD"
 msgstr ""
 
-#: builtin/history.c:1138
+#: builtin/history.c:1094
 msgid "how to handle descendants that become empty"
 msgstr ""
 
-#: builtin/history.c:1172
-msgid "cannot drop merge commit"
+#: builtin/history.c:1128
+#, c-format
+msgid "cannot drop merge commit: %s"
 msgstr ""
 
-#: builtin/history.c:1205
+#: builtin/history.c:1161
 msgid "dropping this commit would overwrite local changes; aborting"
 msgstr ""
 
-#: builtin/history.c:1214
+#: builtin/history.c:1170
 msgid "failed to update references"
 msgstr ""
 
-#: builtin/history.c:1219
-msgid "failed to update working tree; run `git checkout HEAD` to sync"
+#: builtin/history.c:1175
+#, c-format
+msgid "could not update working tree to new commit %s"
 msgstr ""
 
 #: builtin/hook.c:11
@@ -25209,24 +25210,24 @@ msgstr ""
 msgid "cannot fix permission bits on '%s'"
 msgstr ""
 
-#: read-cache.c:3452
+#: read-cache.c:3454
 #, c-format
 msgid "%s: cannot drop to stage #0"
 msgstr ""
 
-#: read-cache.c:3983
+#: read-cache.c:3985
 #, c-format
 msgid ""
 "Skipping submodule due to ignore=all: %s\n"
 "Use --force if you really want to add the submodule."
 msgstr ""
 
-#: read-cache.c:4010
+#: read-cache.c:4012
 #, c-format
 msgid "unexpected diff status %c"
 msgstr ""
 
-#: read-cache.c:4030
+#: read-cache.c:4032
 #, c-format
 msgid "remove '%s'\n"
 msgstr ""
@@ -26624,11 +26625,11 @@ msgstr ""
 msgid "update the index with reused conflict resolution if possible"
 msgstr ""
 
-#: reset.c:121
+#: reset.c:130
 msgid "could not determine HEAD revision"
 msgstr ""
 
-#: reset.c:151 reset.c:157 sequencer.c:4086
+#: reset.c:176 reset.c:182 sequencer.c:4086
 #, c-format
 msgid "failed to find tree of %s"
 msgstr ""
