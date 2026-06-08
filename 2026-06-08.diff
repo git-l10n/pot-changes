@@ -1,0 +1,203 @@
+
+
+#################### Mon, 08 Jun 2026 23:54:15 +0000 ####################
+
+--- po/git.pot.old	2026-06-08 23:54:15.784761069 +0000
++++ po/git.pot.new	2026-06-08 23:54:15.870761292 +0000
+@@ -1434,10 +1434,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "'%s' is not a valid branch or pattern"
+-msgstr ""
+-
+-#, c-format
+ msgid "'%s' is not a valid commit"
+ msgstr ""
+ 
+@@ -1984,9 +1980,6 @@
+ msgid "--depth is ignored in local clones; use file:// instead."
+ msgstr ""
+ 
+-msgid "--dry-run requires --prune-merged"
+-msgstr ""
+-
+ msgid "--dump-aliases and --translate-aliases are mutually exclusive\n"
+ msgstr ""
+ 
+@@ -2119,12 +2112,6 @@
+ msgid "--promisor cannot be used with a pack name"
+ msgstr ""
+ 
+-msgid "--prune-merged does not take positional arguments; repeat --prune-merged for each <branch>"
+-msgstr ""
+-
+-msgid "--prune-merged requires at least one <branch>"
+-msgstr ""
+-
+ msgid "--quiet is only valid with a single pathname"
+ msgstr ""
+ 
+@@ -5824,10 +5811,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "Skipping '%s' (branch.%s.pruneMerged is false)\n"
+-msgstr ""
+-
+-#, c-format
+ msgid "Skipping repository %s\n"
+ msgstr ""
+ 
+@@ -7056,14 +7039,6 @@
+ msgid "Wonderful.\n"
+ msgstr ""
+ 
+-#, c-format
+-msgid "Would delete branch %s (was %s).\n"
+-msgstr ""
+-
+-#, c-format
+-msgid "Would delete remote-tracking branch %s (was %s).\n"
+-msgstr ""
+-
+ msgid "Would refuse to remove current working directory\n"
+ msgstr ""
+ 
+@@ -11222,9 +11197,6 @@
+ msgid "delete fully merged branch"
+ msgstr ""
+ 
+-msgid "delete local branches whose upstream matches <branch> and is merged (repeatable)"
+-msgstr ""
+-
+ msgid "delete refs"
+ msgstr ""
+ 
+@@ -11377,10 +11349,6 @@
+ msgid "did you mean `--%s` (with two dashes)?"
+ msgstr ""
+ 
+-#, c-format
+-msgid "diff process '%s' failed for '%s', falling back to builtin diff"
+-msgstr ""
+-
+ msgid "different"
+ msgstr ""
+ 
+@@ -13441,7 +13409,7 @@
+ "git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n"
+ "           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n"
+ "           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n"
+-"           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n"
++"           [--no-optional-locks] [--no-advice] [--no-includes] [--bare] [--git-dir=<path>]\n"
+ "           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n"
+ "           <command> [<args>]"
+ msgstr ""
+@@ -13544,9 +13512,6 @@
+ msgid "git blame [<options>] [<rev-opts>] [<rev>] [--] <file>"
+ msgstr ""
+ 
+-msgid "git branch [<options>] (--prune-merged <branch>)..."
+-msgstr ""
+-
+ msgid "git branch [<options>] (-c | -C) [<old-branch>] <new-branch>"
+ msgstr ""
+ 
+@@ -13562,7 +13527,7 @@
+ msgid "git branch [<options>] [-r | -a] [--format]"
+ msgstr ""
+ 
+-msgid "git branch [<options>] [-r | -a] [--merged] [--no-merged] [(--forked <branch>)...]"
++msgid "git branch [<options>] [-r | -a] [--merged] [--no-merged]"
+ msgstr ""
+ 
+ msgid "git branch [<options>] [-r | -a] [--points-at]"
+@@ -15959,9 +15924,6 @@
+ msgid "list filenames without modes/oids/stages"
+ msgstr ""
+ 
+-msgid "list local branches whose upstream matches <branch> (repeatable)"
+-msgstr ""
+-
+ msgid "list only filenames"
+ msgstr ""
+ 
+@@ -16635,6 +16597,9 @@
+ msgid "must supply remote when using --negotiate-only"
+ msgstr ""
+ 
++msgid "must supply valid remote when using remote-object-info"
++msgstr ""
++
+ msgid "n"
+ msgstr ""
+ 
+@@ -17404,6 +17369,9 @@
+ msgid "object type mismatch at %s"
+ msgstr ""
+ 
++msgid "object-info capability is not enabled on the server"
++msgstr ""
++
+ msgid "object-info: expected flush after arguments"
+ msgstr ""
+ 
+@@ -19054,6 +19022,19 @@
+ msgid "remote-helper doesn't support push; refspec needed"
+ msgstr ""
+ 
++msgid "remote-object-info command too long"
++msgstr ""
++
++msgid "remote-object-info requires objects"
++msgstr ""
++
++msgid "remote-object-info requires protocol v2"
++msgstr ""
++
++#, c-format
++msgid "remote-object-info supports at most %d objects"
++msgstr ""
++
+ #, c-format
+ msgid "remote-tracking branch '%s' not found"
+ msgstr ""
+@@ -20343,6 +20324,9 @@
+ msgid "split commit tree matches original commit"
+ msgstr ""
+ 
++msgid "split remote-object-info command"
++msgstr ""
++
+ #, c-format
+ msgid "splitIndex.maxPercentChange value '%d' should be between 0 and 100"
+ msgstr ""
+@@ -22481,6 +22465,9 @@
+ msgid "unsupported output format"
+ msgstr ""
+ 
++msgid "unsupported protocol version. expected v2"
++msgstr ""
++
+ #, c-format
+ msgid "unsupported section for hidden refs: %s"
+ msgstr ""
+@@ -23075,9 +23062,6 @@
+ msgid "with --pathspec-from-file, pathspec elements are separated with NUL character"
+ msgstr ""
+ 
+-msgid "with --prune-merged, only print which branches would be deleted"
+-msgstr ""
+-
+ msgid "with --stdin: input lines are terminated by null bytes"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-pot --------------------
+
+ERROR: unknown command "check-pot" for "git-po-helper"
+
+Did you mean this?
+	check-po
