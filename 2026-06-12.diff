@@ -579,3 +579,597 @@ ERROR: unknown command "check-pot" for "git-po-helper"
 
 Did you mean this?
 	check-po
+
+
+#################### Fri, 12 Jun 2026 14:23:48 +0000 ####################
+
+--- po/git.pot.old	2026-06-12 14:23:48.650053446 +0000
++++ po/git.pot.new	2026-06-12 14:23:48.734053567 +0000
+@@ -152,6 +152,15 @@
+ 
+ msgid ""
+ "\n"
++"The most similar subcommand is"
++msgid_plural ""
++"\n"
++"The most similar subcommands are"
++msgstr[0] ""
++msgstr[1] ""
++
++msgid ""
++"\n"
+ "To avoid automatically configuring an upstream branch when its name\n"
+ "won't match the local branch, see option 'simple' of branch.autoSetupMerge\n"
+ "in 'git help config'.\n"
+@@ -380,6 +389,14 @@
+ msgid "  (use \"git merge --abort\" to abort the merge)"
+ msgstr ""
+ 
++#, c-format
++msgid "  (use \"git pull %s %s\" if you want to integrate the remote branch with yours)\n"
++msgstr ""
++
++#, c-format
++msgid "  (use \"git pull %s %s\" to update your local branch)\n"
++msgstr ""
++
+ msgid "  (use \"git pull\" if you want to integrate the remote branch with yours)\n"
+ msgstr ""
+ 
+@@ -1405,6 +1422,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "'%s' is not a subcommand."
++msgstr ""
++
++#, c-format
+ msgid "'%s' is not a valid blob size"
+ msgstr ""
+ 
+@@ -1413,6 +1434,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "'%s' is not a valid branch or pattern"
++msgstr ""
++
++#, c-format
+ msgid "'%s' is not a valid commit"
+ msgstr ""
+ 
+@@ -1959,6 +1984,9 @@
+ msgid "--depth is ignored in local clones; use file:// instead."
+ msgstr ""
+ 
++msgid "--dry-run requires --prune-merged"
++msgstr ""
++
+ msgid "--dump-aliases and --translate-aliases are mutually exclusive\n"
+ msgstr ""
+ 
+@@ -2091,6 +2119,9 @@
+ msgid "--promisor cannot be used with a pack name"
+ msgstr ""
+ 
++msgid "--prune-merged requires at least one <branch>"
++msgstr ""
++
+ msgid "--quiet is only valid with a single pathname"
+ msgstr ""
+ 
+@@ -2445,7 +2476,7 @@
+ msgid "Add or inspect object notes"
+ msgstr ""
+ 
+-msgid "Add or parse structured information in commit messages"
++msgid "Add or parse metadata in commit messages"
+ msgstr ""
+ 
+ msgid "Add untracked"
+@@ -2654,6 +2685,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Auto-creating promisor remote '%s' for URL '%s'\n"
++msgstr ""
++
++#, c-format
+ msgid "Auto-merging %s"
+ msgstr ""
+ 
+@@ -3257,6 +3292,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Could not close '%s' promisor file"
++msgstr ""
++
++#, c-format
+ msgid "Could not create directory for '%s'"
+ msgstr ""
+ 
+@@ -3326,6 +3365,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Could not read '%s' promisor file"
++msgstr ""
++
++#, c-format
+ msgid "Could not read from '%s'"
+ msgstr ""
+ 
+@@ -3400,6 +3443,10 @@
+ msgid "Could not update .gitmodules entry %s"
+ msgstr ""
+ 
++#, c-format
++msgid "Could not write '%s' promisor file"
++msgstr ""
++
+ msgid "Could not write new index file."
+ msgstr ""
+ 
+@@ -5245,6 +5292,14 @@
+ msgid "Produce a merge commit message"
+ msgstr ""
+ 
++#, c-format
++msgid "Promisor file left empty: '%s' not a hash"
++msgstr ""
++
++#, c-format
++msgid "Promisor file left empty: couldn't open packfile '%s'"
++msgstr ""
++
+ msgid "Prompt help:"
+ msgstr ""
+ 
+@@ -5766,6 +5821,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Skipping '%s' (branch.%s.pruneMerged is false)\n"
++msgstr ""
++
++#, c-format
+ msgid "Skipping repository %s\n"
+ msgstr ""
+ 
+@@ -6926,6 +6985,10 @@
+ msgid "WARNING: You called a Git command named '%s', which does not exist."
+ msgstr ""
+ 
++#, c-format
++msgid "WARNING: You called a subcommand named '%s', which does not exist."
++msgstr ""
++
+ msgid "Warning: Could not retrieve Message-ID from server response.\n"
+ msgstr ""
+ 
+@@ -6990,6 +7053,14 @@
+ msgid "Wonderful.\n"
+ msgstr ""
+ 
++#, c-format
++msgid "Would delete branch %s (was %s).\n"
++msgstr ""
++
++#, c-format
++msgid "Would delete remote-tracking branch %s (was %s).\n"
++msgstr ""
++
+ msgid "Would refuse to remove current working directory\n"
+ msgstr ""
+ 
+@@ -8835,6 +8906,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "cannot drop merge commit: %s"
++msgstr ""
++
++#, c-format
+ msgid "cannot drop root commit %s: it has no parent to replay onto"
+ msgstr ""
+ 
+@@ -8855,6 +8930,22 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "cannot fetch start-point '%s': 'refs/remotes/%s/HEAD' is not set; run 'git remote set-head %s --auto' to set it"
++msgstr ""
++
++#, c-format
++msgid "cannot fetch start-point '%s': fetch refspecs of multiple remotes map to '%s'"
++msgstr ""
++
++#, c-format
++msgid "cannot fetch start-point '%s': no configured remote's fetch refspec matches it"
++msgstr ""
++
++#, c-format
++msgid "cannot fetch start-point '%s': not a valid remote-tracking name"
++msgstr ""
++
++#, c-format
+ msgid "cannot fill %d byte"
+ msgid_plural "cannot fill %d bytes"
+ msgstr[0] ""
+@@ -9184,6 +9275,12 @@
+ msgid "cannot resolve HEAD"
+ msgstr ""
+ 
++msgid "cannot resolve HEAD commit"
++msgstr ""
++
++msgid "cannot resolve tree for HEAD"
++msgstr ""
++
+ msgid "cannot restore terminal settings"
+ msgstr ""
+ 
+@@ -9583,10 +9680,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "commit %s is not marked reachable"
+-msgstr ""
+-
+-#, c-format
+ msgid "commit '%s' doesn't have an indexed bitmap"
+ msgstr ""
+ 
+@@ -10833,6 +10926,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "could not update working tree to new commit %s"
++msgstr ""
++
++#, c-format
+ msgid "could not write '%s'"
+ msgstr ""
+ 
+@@ -10917,6 +11014,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "couldn't generate a valid remote name from advertised url '%s', ignoring this remote"
++msgstr ""
++
++#, c-format
+ msgid "couldn't get the oid of the rev '%s'"
+ msgstr ""
+ 
+@@ -10932,6 +11033,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "couldn't normalize advertised url '%s', ignoring this remote"
++msgstr ""
++
++#, c-format
+ msgid "couldn't open the file '%s'"
+ msgstr ""
+ 
+@@ -11110,6 +11215,9 @@
+ msgid "delete fully merged branch"
+ msgstr ""
+ 
++msgid "delete local branches whose upstream matches <branch> and is merged"
++msgstr ""
++
+ msgid "delete refs"
+ msgstr ""
+ 
+@@ -11583,6 +11691,9 @@
+ msgid "dropping %s since it would point to itself (i.e. to %s)"
+ msgstr ""
+ 
++msgid "dropping this commit would overwrite local changes; aborting"
++msgstr ""
++
+ msgid "dry run"
+ msgstr ""
+ 
+@@ -12210,6 +12321,12 @@
+ msgid "failed to bootstrap service %s"
+ msgstr ""
+ 
++msgid "failed to check reachability"
++msgstr ""
++
++msgid "failed to check reachability after detecting a cycle"
++msgstr ""
++
+ msgid "failed to clean index"
+ msgstr ""
+ 
+@@ -12354,6 +12471,14 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "failed to fetch start-point '%s'"
++msgstr ""
++
++#, c-format
++msgid "failed to fetch start-point '%s'; using existing '%s'"
++msgstr ""
++
++#, c-format
+ msgid "failed to finalize '%s'"
+ msgstr ""
+ 
+@@ -12748,6 +12873,9 @@
+ msgid "failed to update ref '%s': %s"
+ msgstr ""
+ 
++msgid "failed to update references"
++msgstr ""
++
+ #, c-format
+ msgid "failed to update remote for submodule '%s'"
+ msgstr ""
+@@ -13280,6 +13408,10 @@
+ msgid "generate the diff in raw format"
+ msgstr ""
+ 
++#, c-format
++msgid "generated remote name '%s' from advertised url '%s' is invalid, ignoring this remote"
++msgstr ""
++
+ msgid "get all values: key [<value-pattern>]"
+ msgstr ""
+ 
+@@ -13304,7 +13436,7 @@
+ "git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n"
+ "           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n"
+ "           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n"
+-"           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n"
++"           [--no-optional-locks] [--no-advice] [--no-includes] [--bare] [--git-dir=<path>]\n"
+ "           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n"
+ "           <command> [<args>]"
+ msgstr ""
+@@ -13413,6 +13545,9 @@
+ msgid "git branch [<options>] (-m | -M) [<old-branch>] <new-branch>"
+ msgstr ""
+ 
++msgid "git branch [<options>] --prune-merged <branch>..."
++msgstr ""
++
+ msgid "git branch [<options>] [-f] [--recurse-submodules] <branch-name> [<start-point>]"
+ msgstr ""
+ 
+@@ -13422,7 +13557,7 @@
+ msgid "git branch [<options>] [-r | -a] [--format]"
+ msgstr ""
+ 
+-msgid "git branch [<options>] [-r | -a] [--merged] [--no-merged]"
++msgid "git branch [<options>] [-r | -a] [--merged] [--no-merged] [(--forked <branch>)...]"
+ msgstr ""
+ 
+ msgid "git branch [<options>] [-r | -a] [--points-at]"
+@@ -13710,6 +13845,9 @@
+ msgid "git help [[-i|--info] [-m|--man] [-w|--web]] [<command>|<doc>]"
+ msgstr ""
+ 
++msgid "git history drop <commit> [--dry-run] [--update-refs=(branches|head)] [--empty=(drop|keep|abort)]"
++msgstr ""
++
+ msgid "git history fixup <commit> [--dry-run] [--update-refs=(branches|head)] [--reedit-message] [--empty=(drop|keep|abort)]"
+ msgstr ""
+ 
+@@ -14642,6 +14780,9 @@
+ msgid "how to handle commits that become empty"
+ msgstr ""
+ 
++msgid "how to handle descendants that become empty"
++msgstr ""
++
+ msgid "how to handle empty patches"
+ msgstr ""
+ 
+@@ -14729,6 +14870,9 @@
+ msgid "ignore index when checking"
+ msgstr ""
+ 
++msgid "ignore merge commits instead of replaying them"
++msgstr ""
++
+ msgid "ignore packed objects"
+ msgstr ""
+ 
+@@ -15491,6 +15635,10 @@
+ msgid "invalid regex given to -I: '%s'"
+ msgstr ""
+ 
++#, c-format
++msgid "invalid remote name '%s' before '=' sign in '%s' from promisor.acceptFromServerUrl config"
++msgstr ""
++
+ msgid "invalid remote service path"
+ msgstr ""
+ 
+@@ -15576,6 +15724,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "invalid url pattern '%s' in '%s' from promisor.acceptFromServerUrl config"
++msgstr ""
++
++#, c-format
+ msgid "invalid value for %s: %d"
+ msgstr ""
+ 
+@@ -16478,6 +16630,9 @@
+ msgid "must supply remote when using --negotiate-only"
+ msgstr ""
+ 
++msgid "must supply valid remote when using remote-object-info"
++msgstr ""
++
+ msgid "n"
+ msgstr ""
+ 
+@@ -17247,6 +17402,9 @@
+ msgid "object type mismatch at %s"
+ msgstr ""
+ 
++msgid "object-info capability is not enabled on the server"
++msgstr ""
++
+ msgid "object-info: expected flush after arguments"
+ msgstr ""
+ 
+@@ -17453,10 +17611,18 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "option `%s' cannot combine \"%s\" and \"%s\""
++msgstr ""
++
++#, c-format
+ msgid "option `%s' expects \"%s\" or \"%s\""
+ msgstr ""
+ 
+ #, c-format
++msgid "option `%s' expects \"%s\", \"%s\", or \"%s\""
++msgstr ""
++
++#, c-format
+ msgid "option `%s' expects \"always\", \"auto\", or \"never\""
+ msgstr ""
+ 
+@@ -17504,10 +17670,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "options '%s' and '%s:%s' cannot be used together"
+-msgstr ""
+-
+-#, c-format
+ msgid "options '%s', '%s', '%s', and '%s' cannot be used together"
+ msgstr ""
+ 
+@@ -18138,6 +18300,9 @@
+ msgid "print only branches that don't contain the commit"
+ msgstr ""
+ 
++msgid "print only branches whose upstream matches <branch> (repeatable)"
++msgstr ""
++
+ msgid "print only error messages"
+ msgstr ""
+ 
+@@ -18893,6 +19058,19 @@
+ msgid "remote-helper doesn't support push; refspec needed"
+ msgstr ""
+ 
++msgid "remote-object-info command too long"
++msgstr ""
++
++msgid "remote-object-info requires objects"
++msgstr ""
++
++msgid "remote-object-info requires protocol v2"
++msgstr ""
++
++#, c-format
++msgid "remote-object-info supports at most %d objects"
++msgstr ""
++
+ #, c-format
+ msgid "remote-tracking branch '%s' not found"
+ msgstr ""
+@@ -20182,6 +20360,9 @@
+ msgid "split commit tree matches original commit"
+ msgstr ""
+ 
++msgid "split remote-object-info command"
++msgstr ""
++
+ #, c-format
+ msgid "splitIndex.maxPercentChange value '%d' should be between 0 and 100"
+ msgstr ""
+@@ -20879,9 +21060,6 @@
+ msgid "too many branches for a copy operation"
+ msgstr ""
+ 
+-msgid "too many commits marked reachable"
+-msgstr ""
+-
+ msgid "too many commits to write graph"
+ msgstr ""
+ 
+@@ -20901,6 +21079,10 @@
+ msgid "too many pseudo-merges"
+ msgstr ""
+ 
++#, c-format
++msgid "too many remotes accepted with name like '%s-X', ignoring this remote"
++msgstr ""
++
+ msgid "too-short tree file"
+ msgstr ""
+ 
+@@ -20955,6 +21137,10 @@
+ msgid "tree"
+ msgstr ""
+ 
++#, c-format
++msgid "tree has duplicate entries for '%s'"
++msgstr ""
++
+ msgid "tree objects not supported"
+ msgstr ""
+ 
+@@ -21229,6 +21415,9 @@
+ msgid "unable to get HEAD"
+ msgstr ""
+ 
++msgid "unable to get common directory"
++msgstr ""
++
+ #, c-format
+ msgid "unable to get credential storage lock in %d ms"
+ msgstr ""
+@@ -21244,6 +21433,9 @@
+ msgid "unable to get disk usage of '%s'"
+ msgstr ""
+ 
++msgid "unable to get git directory"
++msgstr ""
++
+ #, c-format
+ msgid "unable to get object type for %s"
+ msgstr ""
+@@ -22306,6 +22498,9 @@
+ msgid "unsupported output format"
+ msgstr ""
+ 
++msgid "unsupported protocol version. expected v2"
++msgstr ""
++
+ #, c-format
+ msgid "unsupported section for hidden refs: %s"
+ msgstr ""
+@@ -22900,6 +23095,9 @@
+ msgid "with --pathspec-from-file, pathspec elements are separated with NUL character"
+ msgstr ""
+ 
++msgid "with --prune-merged, only print which branches would be deleted"
++msgstr ""
++
+ msgid "with --stdin: input lines are terminated by null bytes"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-pot --------------------
+
+ERROR: unknown command "check-pot" for "git-po-helper"
+
+Did you mean this?
+	check-po
