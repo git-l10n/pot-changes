@@ -1,0 +1,98 @@
+
+
+#################### Mon, 15 Jun 2026 18:57:23 +0000 ####################
+
+--- po/git.pot.old	2026-06-15 18:57:23.782912781 +0000
++++ po/git.pot.new	2026-06-15 18:57:23.870912247 +0000
+@@ -1977,6 +1977,9 @@
+ msgid "--delete only accepts plain target ref names"
+ msgstr ""
+ 
++msgid "--delete-merged requires at least one <branch>"
++msgstr ""
++
+ #, c-format
+ msgid "--depth cannot exceed %u"
+ msgstr ""
+@@ -1984,7 +1987,7 @@
+ msgid "--depth is ignored in local clones; use file:// instead."
+ msgstr ""
+ 
+-msgid "--dry-run requires --prune-merged"
++msgid "--dry-run requires --delete-merged"
+ msgstr ""
+ 
+ msgid "--dump-aliases and --translate-aliases are mutually exclusive\n"
+@@ -2119,9 +2122,6 @@
+ msgid "--promisor cannot be used with a pack name"
+ msgstr ""
+ 
+-msgid "--prune-merged requires at least one <branch>"
+-msgstr ""
+-
+ msgid "--quiet is only valid with a single pathname"
+ msgstr ""
+ 
+@@ -5821,7 +5821,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "Skipping '%s' (branch.%s.pruneMerged is false)\n"
++msgid "Skipping '%s' (branch.%s.deleteMerged is false)\n"
+ msgstr ""
+ 
+ #, c-format
+@@ -11218,7 +11218,7 @@
+ msgid "delete fully merged branch"
+ msgstr ""
+ 
+-msgid "delete local branches whose upstream matches <branch> and is merged"
++msgid "delete local branches whose upstream matches <branch> and are merged"
+ msgstr ""
+ 
+ msgid "delete refs"
+@@ -11373,6 +11373,10 @@
+ msgid "did you mean `--%s` (with two dashes)?"
+ msgstr ""
+ 
++#, c-format
++msgid "diff process '%s' failed for '%s', falling back to builtin diff"
++msgstr ""
++
+ msgid "different"
+ msgstr ""
+ 
+@@ -13545,7 +13549,7 @@
+ msgid "git branch [<options>] (-m | -M) [<old-branch>] <new-branch>"
+ msgstr ""
+ 
+-msgid "git branch [<options>] --prune-merged <branch>..."
++msgid "git branch [<options>] --delete-merged <branch>..."
+ msgstr ""
+ 
+ msgid "git branch [<options>] [-f] [--recurse-submodules] <branch-name> [<start-point>]"
+@@ -23089,13 +23093,13 @@
+ msgid "with --cruft, only repack cruft packs smaller than this"
+ msgstr ""
+ 
+-msgid "with --get, use default value when missing entry"
++msgid "with --delete-merged, only print which branches would be deleted"
+ msgstr ""
+ 
+-msgid "with --pathspec-from-file, pathspec elements are separated with NUL character"
++msgid "with --get, use default value when missing entry"
+ msgstr ""
+ 
+-msgid "with --prune-merged, only print which branches would be deleted"
++msgid "with --pathspec-from-file, pathspec elements are separated with NUL character"
+ msgstr ""
+ 
+ msgid "with --stdin: input lines are terminated by null bytes"
+
+
+-------------------- git-po-helper check-pot --------------------
+
+ERROR: unknown command "check-pot" for "git-po-helper"
+
+Did you mean this?
+	check-po
