@@ -1,0 +1,69 @@
+
+
+#################### Tue, 16 Jun 2026 17:50:50 +0000 ####################
+
+--- po/git.pot.old	2026-06-16 17:50:50.045510367 +0000
++++ po/git.pot.new	2026-06-16 17:50:50.129510903 +0000
+@@ -1768,7 +1768,7 @@
+ 
+ msgid ""
+ "(EXPERIMENTAL!) git replay ([--contained] --onto=<newbase> | --advance=<branch> | --revert=<branch>)\n"
+-"[--ref=<ref>] [--ref-action=<mode>] <revision-range>"
++"[--ref=<ref>] [--ref-action=<mode>] [--linearize] <revision-range>"
+ msgstr ""
+ 
+ #, c-format
+@@ -11681,6 +11681,9 @@
+ "Connecting to %s (port %s) ... "
+ msgstr ""
+ 
++msgid "drop merge commits, replaying only non-merge commits"
++msgstr ""
++
+ msgid "drop reflogs entirely during the migration"
+ msgstr ""
+ 
+@@ -14550,6 +14553,10 @@
+ msgid "gitdir unreadable"
+ msgstr ""
+ 
++#, c-format
++msgid "gitfile does not point to a valid repository: %s"
++msgstr ""
++
+ msgid "gitignore"
+ msgstr ""
+ 
+@@ -14874,9 +14881,6 @@
+ msgid "ignore index when checking"
+ msgstr ""
+ 
+-msgid "ignore merge commits instead of replaying them"
+-msgstr ""
+-
+ msgid "ignore packed objects"
+ msgstr ""
+ 
+@@ -17071,10 +17075,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "not a git repository: %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "not a git repository: '%s'"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-po po/git.pot --------------------
+
+❌ CamelCase config variables
+    ERROR   [git.pot]   entry at L17106 (msgid): should use "core.repositoryFormatVersion" in msgid: "core.repositoryformatversion to 1.\\nPlease set it for migration"
+    ERROR   [git.pot]   entry at L17106 (msgid): should use "core.repositoryFormatVersion" in msgid: "for example:\\ngit config core.repositoryformatversion 1"
+    ERROR   [git.pot]   entry at L22662 (msgid): should use "http.proactiveAuth" in msgid: "http.proactiveauth"
+    ERROR   [git.pot]   entry at L22686 (msgid): should use "http.cookieFile" in msgid: "ing to read cookies from http.cookiefile '-'"
+    ERROR   [git.pot]   entry at L22690 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
+ERROR: 6377 entries checked, 574 config variables, 5 mismatched
+ERROR: check-po command failed
