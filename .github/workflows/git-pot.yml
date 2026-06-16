@@ -132,10 +132,10 @@ jobs:
           then
             printf "\n\n#################### $(date -R) ####################\n\n" >>"$diff"
             ( diff -u po/git.pot.old po/git.pot.new >>"$diff" || true ) &&
-            ( cd ../git && git-po-helper check-pot 2>&1 || true ) >check-pot.txt &&
+            ( cd ../git && git-po-helper check-po po/git.pot 2>&1 || true ) >check-pot.txt &&
             if test -s check-pot.txt
             then
-               printf -- "\n\n-------------------- git-po-helper check-pot --------------------\n\n" >>"$diff" &&
+               printf -- "\n\n-------------------- git-po-helper check-po po/git.pot --------------------\n\n" >>"$diff" &&
                cat check-pot.txt >>"$diff"
             fi &&
             git add po/git.pot "$diff" .latest-footprint &&
