@@ -1,0 +1,176 @@
+
+
+#################### Wed, 17 Jun 2026 17:40:01 +0000 ####################
+
+--- po/git.pot.old	2026-06-17 17:40:01.061316796 +0000
++++ po/git.pot.new	2026-06-17 17:40:01.146316253 +0000
+@@ -5634,11 +5634,15 @@
+ 
+ #, c-format
+ msgid ""
+-"Run 'git remote set-head %s %s' to follow the change, or set\n"
+-"'remote.%s.followRemoteHEAD' configuration option to a different value\n"
+-"if you do not want to see this message. Specifically running\n"
+-"'git config set remote.%s.followRemoteHEAD warn-if-not-branch-%s'\n"
+-"will disable the warning until the remote changes HEAD to something else."
++"Run 'git remote set-head %s %s' to follow the change, or modify\n"
++"either of the 'remote.%s.followRemoteHEAD' or 'fetch.followRemoteHEAD'\n"
++"configuration variables to handle the situation differently.\n"
++"\n"
++"Using this specific setting\n"
++"\n"
++"    git config set remote.%s.followRemoteHEAD warn-if-not-%s\n"
++"\n"
++"will suppress the warning until the remote changes HEAD to something else."
+ msgstr ""
+ 
+ msgid "Run Git hooks"
+@@ -8874,6 +8878,9 @@
+ msgid "cannot create keep file"
+ msgstr ""
+ 
++msgid "cannot create reference with null old object ID"
++msgstr ""
++
+ #, c-format
+ msgid "cannot deduce worktree name from '%s'"
+ msgstr ""
+@@ -8893,6 +8900,9 @@
+ msgid "cannot delete packs in a precious-objects repo"
+ msgstr ""
+ 
++msgid "cannot delete reference with null old object ID"
++msgstr ""
++
+ msgid "cannot determine descendance"
+ msgstr ""
+ 
+@@ -11110,6 +11120,9 @@
+ msgid "create repository within 'src' directory"
+ msgstr ""
+ 
++msgid "create requires reference name and an object ID"
++msgstr ""
++
+ msgid "create the branch's reflog"
+ msgstr ""
+ 
+@@ -11230,6 +11243,9 @@
+ msgid "delete replace refs"
+ msgstr ""
+ 
++msgid "delete requires reference name and an optional old object ID"
++msgstr ""
++
+ msgid "delete symbolic ref"
+ msgstr ""
+ 
+@@ -14131,6 +14147,12 @@
+ msgid "git reflog write <ref> <old-oid> <new-oid> <message>"
+ msgstr ""
+ 
++msgid "git refs create [--message=<reason>] [--no-deref] [--create-reflog] <ref> <new-value>"
++msgstr ""
++
++msgid "git refs delete [--message=<reason>] [--no-deref] <ref> [<old-value>]"
++msgstr ""
++
+ msgid "git refs exists <ref>"
+ msgstr ""
+ 
+@@ -14143,6 +14165,12 @@
+ msgid "git refs optimize "
+ msgstr ""
+ 
++msgid "git refs rename [--message=<reason>] <old-ref> <new-ref>"
++msgstr ""
++
++msgid "git refs update [--message=<reason>] [--no-deref] [--create-reflog] <ref> <new-value> [<old-value>]"
++msgstr ""
++
+ msgid "git refs verify [--strict] [--verbose]"
+ msgstr ""
+ 
+@@ -15539,6 +15567,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "invalid object ID: '%s'"
++msgstr ""
++
++#, c-format
+ msgid "invalid object name '%.*s'."
+ msgstr ""
+ 
+@@ -15620,6 +15652,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "invalid ref format: '%s'"
++msgstr ""
++
++#, c-format
+ msgid "invalid ref name or SHA1 expression: %s"
+ msgstr ""
+ 
+@@ -18813,10 +18849,18 @@
+ msgid "reference '%s' does not point to a blob"
+ msgstr ""
+ 
++#, c-format
++msgid "reference already exists: '%s'"
++msgstr ""
++
+ msgid "reference does not exist"
+ msgstr ""
+ 
+ #, c-format
++msgid "reference does not exist: '%s'"
++msgstr ""
++
++#, c-format
+ msgid "reference is not a tree: %s"
+ msgstr ""
+ 
+@@ -18934,6 +18978,9 @@
+ msgid "refusing to merge unrelated histories"
+ msgstr ""
+ 
++msgid "refusing to perform update with empty message"
++msgstr ""
++
+ msgid "refusing to read cookies from http.cookiefile '-'"
+ msgstr ""
+ 
+@@ -19123,6 +19170,9 @@
+ msgid "removed stale scalar.repo '%s'"
+ msgstr ""
+ 
++msgid "rename requires old and new reference name"
++msgstr ""
++
+ msgid "rename section: old-name new-name"
+ msgstr ""
+ 
+@@ -22548,6 +22598,9 @@
+ msgid "update of config-file failed"
+ msgstr ""
+ 
++msgid "update requires reference name, new value and an optional old value"
++msgstr ""
++
+ msgid "update stat information in the index file"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-po po/git.pot --------------------
+
+❌ CamelCase config variables
+    ERROR   [git.pot]   entry at L17198 (msgid): should use "core.repositoryFormatVersion" in msgid: "core.repositoryformatversion to 1.\\nPlease set it for migration"
+    ERROR   [git.pot]   entry at L17198 (msgid): should use "core.repositoryFormatVersion" in msgid: "for example:\\ngit config core.repositoryformatversion 1"
+    ERROR   [git.pot]   entry at L22738 (msgid): should use "http.proactiveAuth" in msgid: "http.proactiveauth"
+    ERROR   [git.pot]   entry at L22762 (msgid): should use "http.cookieFile" in msgid: "ing to read cookies from http.cookiefile '-'"
+    ERROR   [git.pot]   entry at L22766 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
+ERROR: 6392 entries checked, 574 config variables, 5 mismatched
+ERROR: check-po command failed
