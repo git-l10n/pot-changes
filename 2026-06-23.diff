@@ -1,0 +1,50 @@
+
+
+#################### Tue, 23 Jun 2026 05:55:21 +0000 ####################
+
+--- po/git.pot.old	2026-06-23 05:55:21.891959897 +0000
++++ po/git.pot.new	2026-06-23 05:55:21.976959614 +0000
+@@ -5591,11 +5591,15 @@
+ 
+ #, c-format
+ msgid ""
+-"Run 'git remote set-head %s %s' to follow the change, or set\n"
+-"'remote.%s.followRemoteHEAD' configuration option to a different value\n"
+-"if you do not want to see this message. Specifically running\n"
+-"'git config set remote.%s.followRemoteHEAD warn-if-not-branch-%s'\n"
+-"will disable the warning until the remote changes HEAD to something else."
++"Run 'git remote set-head %s %s' to follow the change, or modify\n"
++"either of the 'remote.%s.followRemoteHEAD' or 'fetch.followRemoteHEAD'\n"
++"configuration variables to handle the situation differently.\n"
++"\n"
++"Using this specific setting\n"
++"\n"
++"    git config set remote.%s.followRemoteHEAD warn-if-not-%s\n"
++"\n"
++"will suppress the warning until the remote changes HEAD to something else."
+ msgstr ""
+ 
+ msgid "Run Git hooks"
+@@ -22242,6 +22246,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unrecognized fetch.followRemoteHEAD value '%s' ignored"
++msgstr ""
++
++#, c-format
+ msgid "unrecognized followRemoteHEAD value '%s' ignored"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-po po/git.pot --------------------
+
+❌ CamelCase config variables
+    ERROR   [git.pot]   entry at L16941 (msgid): should use "core.repositoryFormatVersion" in msgid: "core.repositoryformatversion to 1.\\nPlease set it for migration"
+    ERROR   [git.pot]   entry at L16941 (msgid): should use "core.repositoryFormatVersion" in msgid: "for example:\\ngit config core.repositoryformatversion 1"
+    ERROR   [git.pot]   entry at L22495 (msgid): should use "http.proactiveAuth" in msgid: "http.proactiveauth"
+    ERROR   [git.pot]   entry at L22519 (msgid): should use "http.cookieFile" in msgid: "ing to read cookies from http.cookiefile '-'"
+    ERROR   [git.pot]   entry at L22523 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
+ERROR: 6333 entries checked, 573 config variables, 5 mismatched
+ERROR: check-po command failed
