@@ -1,0 +1,121 @@
+
+
+#################### Sun, 28 Jun 2026 21:47:34 +0000 ####################
+
+--- po/git.pot.old	2026-06-28 21:47:34.511771822 +0000
++++ po/git.pot.new	2026-06-28 21:47:34.598772003 +0000
+@@ -1330,10 +1330,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "'%s' does not name a revision range"
+-msgstr ""
+-
+-#, c-format
+ msgid "'%s' does not point back to '%s'"
+ msgstr ""
+ 
+@@ -1406,10 +1402,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "'%s' is not a '<base>..<tip>' range"
+-msgstr ""
+-
+-#, c-format
+ msgid "'%s' is not a .git file, error code %d"
+ msgstr ""
+ 
+@@ -2159,6 +2151,9 @@
+ msgid "--reflog option needs one branch name"
+ msgstr ""
+ 
++msgid "--refs-snapshot can only be used with --stdin-packs=follow-reachable"
++msgstr ""
++
+ msgid "--remerge-diff does not make sense"
+ msgstr ""
+ 
+@@ -9681,10 +9676,10 @@
+ msgid "command expects a committish"
+ msgstr ""
+ 
+-msgid "command expects a single revision"
++msgid "command expects a revision range"
+ msgstr ""
+ 
+-msgid "command expects a single revision range"
++msgid "command expects a single revision"
+ msgstr ""
+ 
+ msgid "command token to send to the server"
+@@ -17103,6 +17098,9 @@
+ msgid "not a %s (actually a %s): %s"
+ msgstr ""
+ 
++msgid "not a '<base>..<tip>' revision range"
++msgstr ""
++
+ #, c-format
+ msgid "not a blob (actually a %s): %s"
+ msgstr ""
+@@ -18637,10 +18635,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "range '%s' has more than one base; cannot squash"
+-msgstr ""
+-
+-#, c-format
+ msgid "range-diff: unable to compute the range-diff, since it exceeds the maximum memory for the cost matrix: %s (%<PRIuMAX> bytes) needed, limited to %s (%<PRIuMAX> bytes)"
+ msgstr ""
+ 
+@@ -18970,6 +18964,9 @@
+ msgid "refresh: ignore submodules"
+ msgstr ""
+ 
++msgid "refs snapshot for follow-reachable traversal"
++msgstr ""
++
+ msgid "refs snapshot for selecting bitmap commits"
+ msgstr ""
+ 
+@@ -21011,10 +21008,6 @@
+ msgid "the patch applies to an empty '%s' but it is not empty"
+ msgstr ""
+ 
+-#, c-format
+-msgid "the range '%s' is empty"
+-msgstr ""
+-
+ msgid "the receiving end does not support --atomic push"
+ msgstr ""
+ 
+@@ -21037,6 +21030,15 @@
+ msgid "the requested upstream branch '%s' does not exist"
+ msgstr ""
+ 
++msgid "the revision range has more than one base; cannot squash"
++msgstr ""
++
++msgid "the revision range holds a single commit; nothing to squash"
++msgstr ""
++
++msgid "the revision range is empty"
++msgstr ""
++
+ msgid "the script was already rearranged."
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-po po/git.pot --------------------
+
+❌ CamelCase config variables
+    ERROR   [git.pot]   entry at L15377 (msgid): should use "core.repositoryFormatVersion" in msgid: "core.repositoryformatversion to 1.\\nPlease set it for migration"
+    ERROR   [git.pot]   entry at L15377 (msgid): should use "core.repositoryFormatVersion" in msgid: "for example:\\ngit config core.repositoryformatversion 1"
+    ERROR   [git.pot]   entry at L22879 (msgid): should use "http.proactiveAuth" in msgid: "http.proactiveauth"
+    ERROR   [git.pot]   entry at L22903 (msgid): should use "http.cookieFile" in msgid: "ing to read cookies from http.cookiefile '-'"
+    ERROR   [git.pot]   entry at L22907 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
+ERROR: 6408 entries checked, 574 config variables, 5 mismatched
+ERROR: check-po command failed
