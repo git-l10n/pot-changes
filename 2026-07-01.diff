@@ -1,0 +1,63 @@
+
+
+#################### Wed, 01 Jul 2026 22:56:37 +0000 ####################
+
+--- po/git.pot.old	2026-07-01 22:56:37.499739006 +0000
++++ po/git.pot.new	2026-07-01 22:56:37.586739176 +0000
+@@ -17480,6 +17480,9 @@
+ msgid "object-info capability is not enabled on the server"
+ msgstr ""
+ 
++msgid "object-info requires protocol v2"
++msgstr ""
++
+ msgid "object-info: expected flush after arguments"
+ msgstr ""
+ 
+@@ -19095,6 +19098,9 @@
+ msgid "remote did not send all necessary objects"
+ msgstr ""
+ 
++msgid "remote does not support object-info"
++msgstr ""
++
+ #, c-format
+ msgid "remote error: %s"
+ msgstr ""
+@@ -19157,11 +19163,12 @@
+ msgid "remote-object-info requires objects"
+ msgstr ""
+ 
+-msgid "remote-object-info requires protocol v2"
++#, c-format
++msgid "remote-object-info supports at most %d objects"
+ msgstr ""
+ 
+ #, c-format
+-msgid "remote-object-info supports at most %d objects"
++msgid "remote-object-info: %s"
+ msgstr ""
+ 
+ #, c-format
+@@ -20456,9 +20463,6 @@
+ msgid "split commit tree matches original commit"
+ msgstr ""
+ 
+-msgid "split remote-object-info command"
+-msgstr ""
+-
+ #, c-format
+ msgid "splitIndex.maxPercentChange value '%d' should be between 0 and 100"
+ msgstr ""
+
+
+-------------------- git-po-helper check-po po/git.pot --------------------
+
+❌ CamelCase config variables
+    ERROR   [git.pot]   entry at L15385 (msgid): should use "core.repositoryFormatVersion" in msgid: "core.repositoryformatversion to 1.\\nPlease set it for migration"
+    ERROR   [git.pot]   entry at L15385 (msgid): should use "core.repositoryFormatVersion" in msgid: "for example:\\ngit config core.repositoryformatversion 1"
+    ERROR   [git.pot]   entry at L22880 (msgid): should use "http.proactiveAuth" in msgid: "http.proactiveauth"
+    ERROR   [git.pot]   entry at L22904 (msgid): should use "http.cookieFile" in msgid: "ing to read cookies from http.cookiefile '-'"
+    ERROR   [git.pot]   entry at L22908 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
+ERROR: 6409 entries checked, 574 config variables, 5 mismatched
+ERROR: check-po command failed
