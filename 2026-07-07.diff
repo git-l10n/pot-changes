@@ -1,0 +1,195 @@
+
+
+#################### Tue, 07 Jul 2026 04:39:32 +0000 ####################
+
+--- po/git.pot.old	2026-07-07 04:39:32.568380817 +0000
++++ po/git.pot.new	2026-07-07 04:39:32.657382250 +0000
+@@ -380,6 +380,14 @@
+ msgid "  (use \"git merge --abort\" to abort the merge)"
+ msgstr ""
+ 
++#, c-format
++msgid "  (use \"git pull %s %s\" if you want to integrate the remote branch with yours)\n"
++msgstr ""
++
++#, c-format
++msgid "  (use \"git pull %s %s\" to update your local branch)\n"
++msgstr ""
++
+ msgid "  (use \"git pull\" if you want to integrate the remote branch with yours)\n"
+ msgstr ""
+ 
+@@ -2654,6 +2662,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Auto-creating promisor remote '%s' for URL '%s'\n"
++msgstr ""
++
++#, c-format
+ msgid "Auto-merging %s"
+ msgstr ""
+ 
+@@ -5579,11 +5591,15 @@
+ 
+ #, c-format
+ msgid ""
+-"Run 'git remote set-head %s %s' to follow the change, or set\n"
+-"'remote.%s.followRemoteHEAD' configuration option to a different value\n"
+-"if you do not want to see this message. Specifically running\n"
+-"'git config set remote.%s.followRemoteHEAD warn-if-not-branch-%s'\n"
+-"will disable the warning until the remote changes HEAD to something else."
++"Run 'git remote set-head %s %s' to follow the change, or modify\n"
++"either of the 'remote.%s.followRemoteHEAD' or 'fetch.followRemoteHEAD'\n"
++"configuration variables to handle the situation differently.\n"
++"\n"
++"Using this specific setting\n"
++"\n"
++"    git config set remote.%s.followRemoteHEAD warn-if-not-%s\n"
++"\n"
++"will suppress the warning until the remote changes HEAD to something else."
+ msgstr ""
+ 
+ msgid "Run Git hooks"
+@@ -10917,6 +10933,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "couldn't generate a valid remote name from advertised url '%s', ignoring this remote"
++msgstr ""
++
++#, c-format
+ msgid "couldn't get the oid of the rev '%s'"
+ msgstr ""
+ 
+@@ -10932,6 +10952,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "couldn't normalize advertised url '%s', ignoring this remote"
++msgstr ""
++
++#, c-format
+ msgid "couldn't open the file '%s'"
+ msgstr ""
+ 
+@@ -13280,6 +13304,10 @@
+ msgid "generate the diff in raw format"
+ msgstr ""
+ 
++#, c-format
++msgid "generated remote name '%s' from advertised url '%s' is invalid, ignoring this remote"
++msgstr ""
++
+ msgid "get all values: key [<value-pattern>]"
+ msgstr ""
+ 
+@@ -14408,6 +14436,10 @@
+ msgid "gitdir unreadable"
+ msgstr ""
+ 
++#, c-format
++msgid "gitfile does not point to a valid repository: %s"
++msgstr ""
++
+ msgid "gitignore"
+ msgstr ""
+ 
+@@ -15491,6 +15523,10 @@
+ msgid "invalid regex given to -I: '%s'"
+ msgstr ""
+ 
++#, c-format
++msgid "invalid remote name '%s' before '=' sign in '%s' from promisor.acceptFromServerUrl config"
++msgstr ""
++
+ msgid "invalid remote service path"
+ msgstr ""
+ 
+@@ -15576,6 +15612,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "invalid url pattern '%s' in '%s' from promisor.acceptFromServerUrl config"
++msgstr ""
++
++#, c-format
+ msgid "invalid value for %s: %d"
+ msgstr ""
+ 
+@@ -16912,10 +16952,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "not a git repository: %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "not a git repository: '%s'"
+ msgstr ""
+ 
+@@ -20901,6 +20937,10 @@
+ msgid "too many pseudo-merges"
+ msgstr ""
+ 
++#, c-format
++msgid "too many remotes accepted with name like '%s-X', ignoring this remote"
++msgstr ""
++
+ msgid "too-short tree file"
+ msgstr ""
+ 
+@@ -20955,6 +20995,10 @@
+ msgid "tree"
+ msgstr ""
+ 
++#, c-format
++msgid "tree has duplicate entries for '%s'"
++msgstr ""
++
+ msgid "tree objects not supported"
+ msgstr ""
+ 
+@@ -21229,6 +21273,9 @@
+ msgid "unable to get HEAD"
+ msgstr ""
+ 
++msgid "unable to get common directory"
++msgstr ""
++
+ #, c-format
+ msgid "unable to get credential storage lock in %d ms"
+ msgstr ""
+@@ -21244,6 +21291,9 @@
+ msgid "unable to get disk usage of '%s'"
+ msgstr ""
+ 
++msgid "unable to get git directory"
++msgstr ""
++
+ #, c-format
+ msgid "unable to get object type for %s"
+ msgstr ""
+@@ -22202,6 +22252,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unrecognized fetch.followRemoteHEAD value '%s' ignored"
++msgstr ""
++
++#, c-format
+ msgid "unrecognized followRemoteHEAD value '%s' ignored"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-po po/git.pot --------------------
+
+❌ CamelCase config variables
+    ERROR   [git.pot]   entry at L16954 (msgid): should use "core.repositoryFormatVersion" in msgid: "core.repositoryformatversion to 1.\\nPlease set it for migration"
+    ERROR   [git.pot]   entry at L16954 (msgid): should use "core.repositoryFormatVersion" in msgid: "for example:\\ngit config core.repositoryformatversion 1"
+    ERROR   [git.pot]   entry at L22503 (msgid): should use "http.proactiveAuth" in msgid: "http.proactiveauth"
+    ERROR   [git.pot]   entry at L22527 (msgid): should use "http.cookieFile" in msgid: "ing to read cookies from http.cookiefile '-'"
+    ERROR   [git.pot]   entry at L22531 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
+ERROR: 6335 entries checked, 573 config variables, 5 mismatched
+ERROR: check-po command failed
