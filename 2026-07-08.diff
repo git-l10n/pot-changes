@@ -1,0 +1,230 @@
+
+
+#################### Wed, 08 Jul 2026 23:53:41 +0000 ####################
+
+--- po/git.pot.old	2026-07-08 23:53:41.367473468 +0000
++++ po/git.pot.new	2026-07-08 23:53:41.457474280 +0000
+@@ -8834,6 +8834,9 @@
+ msgid "cannot create keep file"
+ msgstr ""
+ 
++msgid "cannot create reference with null new object ID"
++msgstr ""
++
+ #, c-format
+ msgid "cannot deduce worktree name from '%s'"
+ msgstr ""
+@@ -8853,6 +8856,9 @@
+ msgid "cannot delete packs in a precious-objects repo"
+ msgstr ""
+ 
++msgid "cannot delete reference with null old object ID"
++msgstr ""
++
+ msgid "cannot determine descendance"
+ msgstr ""
+ 
+@@ -8866,6 +8872,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "cannot drop merge commit: %s"
++msgstr ""
++
++#, c-format
+ msgid "cannot drop root commit %s: it has no parent to replay onto"
+ msgstr ""
+ 
+@@ -9215,6 +9225,12 @@
+ msgid "cannot resolve HEAD"
+ msgstr ""
+ 
++msgid "cannot resolve HEAD commit"
++msgstr ""
++
++msgid "cannot resolve tree for HEAD"
++msgstr ""
++
+ msgid "cannot restore terminal settings"
+ msgstr ""
+ 
+@@ -10864,6 +10880,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "could not update working tree to new commit %s"
++msgstr ""
++
++#, c-format
+ msgid "could not write '%s'"
+ msgstr ""
+ 
+@@ -11041,6 +11061,9 @@
+ msgid "create repository within 'src' directory"
+ msgstr ""
+ 
++msgid "create requires reference name and an object ID"
++msgstr ""
++
+ msgid "create the branch's reflog"
+ msgstr ""
+ 
+@@ -11158,6 +11181,9 @@
+ msgid "delete replace refs"
+ msgstr ""
+ 
++msgid "delete requires reference name and an optional old object ID"
++msgstr ""
++
+ msgid "delete symbolic ref"
+ msgstr ""
+ 
+@@ -11622,6 +11648,9 @@
+ msgid "dropping %s since it would point to itself (i.e. to %s)"
+ msgstr ""
+ 
++msgid "dropping this commit would overwrite local changes; aborting"
++msgstr ""
++
+ msgid "dry run"
+ msgstr ""
+ 
+@@ -12787,6 +12816,9 @@
+ msgid "failed to update ref '%s': %s"
+ msgstr ""
+ 
++msgid "failed to update references"
++msgstr ""
++
+ #, c-format
+ msgid "failed to update remote for submodule '%s'"
+ msgstr ""
+@@ -13753,6 +13785,9 @@
+ msgid "git help [[-i|--info] [-m|--man] [-w|--web]] [<command>|<doc>]"
+ msgstr ""
+ 
++msgid "git history drop <commit> [--dry-run] [--update-refs=(branches|head)] [--empty=(drop|keep|abort)]"
++msgstr ""
++
+ msgid "git history fixup <commit> [--dry-run] [--update-refs=(branches|head)] [--reedit-message] [--empty=(drop|keep|abort)]"
+ msgstr ""
+ 
+@@ -14029,6 +14064,12 @@
+ msgid "git reflog write <ref> <old-oid> <new-oid> <message>"
+ msgstr ""
+ 
++msgid "git refs create [--message=<reason>] [--no-deref] [--create-reflog] <ref> <new-value>"
++msgstr ""
++
++msgid "git refs delete [--message=<reason>] [--no-deref] <ref> [<old-value>]"
++msgstr ""
++
+ msgid "git refs exists <ref>"
+ msgstr ""
+ 
+@@ -14041,6 +14082,12 @@
+ msgid "git refs optimize "
+ msgstr ""
+ 
++msgid "git refs rename [--message=<reason>] <old-ref> <new-ref>"
++msgstr ""
++
++msgid "git refs update [--message=<reason>] [--no-deref] [--create-reflog] <ref> <new-value> [<old-value>]"
++msgstr ""
++
+ msgid "git refs verify [--strict] [--verbose]"
+ msgstr ""
+ 
+@@ -14689,6 +14736,9 @@
+ msgid "how to handle commits that become empty"
+ msgstr ""
+ 
++msgid "how to handle descendants that become empty"
++msgstr ""
++
+ msgid "how to handle empty patches"
+ msgstr ""
+ 
+@@ -15434,6 +15484,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "invalid object ID: '%s'"
++msgstr ""
++
++#, c-format
+ msgid "invalid object name '%.*s'."
+ msgstr ""
+ 
+@@ -15515,6 +15569,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "invalid ref format: '%s'"
++msgstr ""
++
++#, c-format
+ msgid "invalid ref name or SHA1 expression: %s"
+ msgstr ""
+ 
+@@ -18695,10 +18753,18 @@
+ msgid "reference '%s' does not point to a blob"
+ msgstr ""
+ 
++#, c-format
++msgid "reference already exists: '%s'"
++msgstr ""
++
+ msgid "reference does not exist"
+ msgstr ""
+ 
+ #, c-format
++msgid "reference does not exist: '%s'"
++msgstr ""
++
++#, c-format
+ msgid "reference is not a tree: %s"
+ msgstr ""
+ 
+@@ -18816,6 +18882,9 @@
+ msgid "refusing to merge unrelated histories"
+ msgstr ""
+ 
++msgid "refusing to perform update with empty message"
++msgstr ""
++
+ msgid "refusing to read cookies from http.cookiefile '-'"
+ msgstr ""
+ 
+@@ -18992,6 +19061,9 @@
+ msgid "removed stale scalar.repo '%s'"
+ msgstr ""
+ 
++msgid "rename requires old and new reference name"
++msgstr ""
++
+ msgid "rename section: old-name new-name"
+ msgstr ""
+ 
+@@ -22418,6 +22490,9 @@
+ msgid "update of config-file failed"
+ msgstr ""
+ 
++msgid "update requires reference name, new value and an optional old value"
++msgstr ""
++
+ msgid "update stat information in the index file"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-po po/git.pot --------------------
+
+❌ CamelCase config variables
+    ERROR   [git.pot]   entry at L17107 (msgid): should use "core.repositoryFormatVersion" in msgid: "core.repositoryformatversion to 1.\\nPlease set it for migration"
+    ERROR   [git.pot]   entry at L17107 (msgid): should use "core.repositoryFormatVersion" in msgid: "for example:\\ngit config core.repositoryformatversion 1"
+    ERROR   [git.pot]   entry at L22634 (msgid): should use "http.proactiveAuth" in msgid: "http.proactiveauth"
+    ERROR   [git.pot]   entry at L22658 (msgid): should use "http.cookieFile" in msgid: "ing to read cookies from http.cookiefile '-'"
+    ERROR   [git.pot]   entry at L22662 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
+ERROR: 6362 entries checked, 573 config variables, 5 mismatched
+ERROR: check-po command failed
