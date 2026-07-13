@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2026-07-13 01:15+0000\n"
+"POT-Creation-Date: 2026-07-13 23:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -864,7 +864,7 @@ msgstr ""
 msgid "unclosed quote"
 msgstr ""
 
-#: alias.c:123 builtin/cat-file.c:1255 builtin/name-rev.c:848
+#: alias.c:123 builtin/cat-file.c:1448 builtin/name-rev.c:848
 #: builtin/notes.c:453 builtin/notes.c:519 builtin/notes.c:601
 #: builtin/notes.c:613 builtin/notes.c:699 builtin/notes.c:776
 #: builtin/notes.c:930 builtin/notes.c:1093 builtin/notes.c:1117
@@ -1789,7 +1789,7 @@ msgstr ""
 #: builtin/reset.c:478 builtin/rm.c:292 builtin/stash.c:1980
 #: builtin/stash.c:1985 builtin/stash.c:1987 builtin/stash.c:1989
 #: builtin/stash.c:2061 builtin/stash.c:2063 builtin/stash.c:2065
-#: builtin/worktree.c:849 builtin/worktree.c:1107 fetch-pack.c:368
+#: builtin/worktree.c:849 builtin/worktree.c:1107 fetch-pack.c:370
 #: http-fetch.c:158 http-fetch.c:167 revision.c:3207 revision.c:3210
 #, c-format
 msgid "the option '%s' requires '%s'"
@@ -1867,10 +1867,10 @@ msgstr ""
 msgid "unable to stat '%s'"
 msgstr ""
 
-#: bisect.c:165 builtin/cat-file.c:241 builtin/cat-file.c:554
+#: bisect.c:165 builtin/cat-file.c:257 builtin/cat-file.c:589
 #: builtin/index-pack.c:788 builtin/notes.c:730 builtin/pack-objects.c:365
 #: builtin/pack-objects.c:429 builtin/pack-objects.c:542 combine-diff.c:332
-#: object-file.c:371 object-file.c:377 rerere.c:1003
+#: object-file.c:368 object-file.c:374 rerere.c:1003
 #, c-format
 msgid "unable to read %s"
 msgstr ""
@@ -2662,7 +2662,7 @@ msgstr ""
 msgid "bypass pre-applypatch and applypatch-msg hooks"
 msgstr ""
 
-#: builtin/am.c:2337 builtin/cat-file.c:1116
+#: builtin/am.c:2337 builtin/cat-file.c:1309
 msgid "historical option -- no-op"
 msgstr ""
 
@@ -2724,7 +2724,7 @@ msgid "n"
 msgstr ""
 
 #: builtin/am.c:2384 builtin/branch.c:802 builtin/bugreport.c:117
-#: builtin/cat-file.c:1121 builtin/cat-file.c:1125 builtin/cat-file.c:1132
+#: builtin/cat-file.c:1314 builtin/cat-file.c:1318 builtin/cat-file.c:1325
 #: builtin/clone.c:984 builtin/diagnose.c:32 builtin/for-each-ref.c:37
 #: builtin/init-db.c:112 builtin/ls-files.c:663 builtin/ls-tree.c:372
 #: builtin/name-rev.c:829 builtin/refs.c:47 builtin/replace.c:571
@@ -3223,7 +3223,7 @@ msgstr ""
 msgid "need a command"
 msgstr ""
 
-#: builtin/bisect.c:1488 builtin/cat-file.c:798
+#: builtin/bisect.c:1488 builtin/cat-file.c:990
 #, c-format
 msgid "unknown command: '%s'"
 msgstr ""
@@ -3249,7 +3249,7 @@ msgstr ""
 msgid "must end with a color"
 msgstr ""
 
-#: builtin/blame.c:818 diff.c:467 diff.c:507 merge-ort.c:5486 transport.c:1082
+#: builtin/blame.c:818 diff.c:467 diff.c:507 merge-ort.c:5486 transport.c:1127
 #, c-format
 msgid "unknown value for config '%s': %s"
 msgstr ""
@@ -4007,58 +4007,90 @@ msgstr ""
 msgid "Unbundling objects"
 msgstr ""
 
-#: builtin/cat-file.c:93
+#: builtin/cat-file.c:109
 #, c-format
 msgid "cannot read object %s '%s'"
 msgstr ""
 
-#: builtin/cat-file.c:714
+#: builtin/cat-file.c:696
+msgid "must supply valid remote when using remote-object-info"
+msgstr ""
+
+#: builtin/cat-file.c:709
+#, c-format
+msgid "remote-object-info does not support short oids, %d characters required"
+msgstr ""
+
+#: builtin/cat-file.c:713
+#, c-format
+msgid "not a valid object name '%s'"
+msgstr ""
+
+#: builtin/cat-file.c:719
+msgid "remote-object-info requires objects"
+msgstr ""
+
+#: builtin/cat-file.c:816
 #, c-format
 msgid "mailmap: invalid boolean '%s'"
 msgstr ""
 
-#: builtin/cat-file.c:729
+#: builtin/cat-file.c:849
+msgid "remote-object-info command too long"
+msgstr ""
+
+#: builtin/cat-file.c:854
+#, c-format
+msgid "remote-object-info: %s"
+msgstr ""
+
+#: builtin/cat-file.c:856
+#, c-format
+msgid "remote-object-info supports at most %d objects"
+msgstr ""
+
+#: builtin/cat-file.c:923
 msgid "flush is only for --buffer mode"
 msgstr ""
 
-#: builtin/cat-file.c:774
+#: builtin/cat-file.c:966
 msgid "empty command in input"
 msgstr ""
 
-#: builtin/cat-file.c:776
+#: builtin/cat-file.c:968
 #, c-format
 msgid "whitespace before command: '%s'"
 msgstr ""
 
-#: builtin/cat-file.c:785
+#: builtin/cat-file.c:977
 #, c-format
 msgid "%s requires arguments"
 msgstr ""
 
-#: builtin/cat-file.c:790
+#: builtin/cat-file.c:982
 #, c-format
 msgid "%s takes no arguments"
 msgstr ""
 
-#: builtin/cat-file.c:1059
+#: builtin/cat-file.c:1252
 msgid "only one batch option may be specified"
 msgstr ""
 
-#: builtin/cat-file.c:1096
+#: builtin/cat-file.c:1289
 msgid "git cat-file <type> <object>"
 msgstr ""
 
-#: builtin/cat-file.c:1097
+#: builtin/cat-file.c:1290
 msgid "git cat-file (-e | -p | -t | -s) <object>"
 msgstr ""
 
-#: builtin/cat-file.c:1098
+#: builtin/cat-file.c:1291
 msgid ""
 "git cat-file (--textconv | --filters)\n"
 "             [<rev>:<path|tree-ish> | --path=<path|tree-ish> <rev>]"
 msgstr ""
 
-#: builtin/cat-file.c:1100
+#: builtin/cat-file.c:1293
 msgid ""
 "git cat-file (--batch | --batch-check | --batch-command) [--batch-all-"
 "objects]\n"
@@ -4066,144 +4098,144 @@ msgid ""
 "             [--textconv | --filters] [-Z]"
 msgstr ""
 
-#: builtin/cat-file.c:1107
+#: builtin/cat-file.c:1300
 msgid "Check object existence or emit object contents"
 msgstr ""
 
-#: builtin/cat-file.c:1109
+#: builtin/cat-file.c:1302
 msgid "check if <object> exists"
 msgstr ""
 
-#: builtin/cat-file.c:1110
+#: builtin/cat-file.c:1303
 msgid "pretty-print <object> content"
 msgstr ""
 
-#: builtin/cat-file.c:1112
+#: builtin/cat-file.c:1305
 msgid "Emit [broken] object attributes"
 msgstr ""
 
-#: builtin/cat-file.c:1113
+#: builtin/cat-file.c:1306
 msgid "show object type (one of 'blob', 'tree', 'commit', 'tag', ...)"
 msgstr ""
 
-#: builtin/cat-file.c:1114
+#: builtin/cat-file.c:1307
 msgid "show object size"
 msgstr ""
 
-#: builtin/cat-file.c:1117 builtin/log.c:283
+#: builtin/cat-file.c:1310 builtin/log.c:283
 msgid "use mail map file"
 msgstr ""
 
-#: builtin/cat-file.c:1120
+#: builtin/cat-file.c:1313
 msgid "Batch objects requested on stdin (or --batch-all-objects)"
 msgstr ""
 
-#: builtin/cat-file.c:1122
+#: builtin/cat-file.c:1315
 msgid "show full <object> or <rev> contents"
 msgstr ""
 
-#: builtin/cat-file.c:1126
+#: builtin/cat-file.c:1319
 msgid "like --batch, but don't emit <contents>"
 msgstr ""
 
-#: builtin/cat-file.c:1129
+#: builtin/cat-file.c:1322
 msgid "stdin is NUL-terminated"
 msgstr ""
 
-#: builtin/cat-file.c:1131
+#: builtin/cat-file.c:1324
 msgid "stdin and stdout is NUL-terminated"
 msgstr ""
 
-#: builtin/cat-file.c:1133
+#: builtin/cat-file.c:1326
 msgid "read commands from stdin"
 msgstr ""
 
-#: builtin/cat-file.c:1137
+#: builtin/cat-file.c:1330
 msgid "with --batch[-check]: ignores stdin, batches all known objects"
 msgstr ""
 
-#: builtin/cat-file.c:1139
+#: builtin/cat-file.c:1332
 msgid "Change or optimize batch output"
 msgstr ""
 
-#: builtin/cat-file.c:1140
+#: builtin/cat-file.c:1333
 msgid "buffer --batch output"
 msgstr ""
 
-#: builtin/cat-file.c:1142
+#: builtin/cat-file.c:1335
 msgid "follow in-tree symlinks"
 msgstr ""
 
-#: builtin/cat-file.c:1144
+#: builtin/cat-file.c:1337
 msgid "do not order objects before emitting them"
 msgstr ""
 
-#: builtin/cat-file.c:1146
+#: builtin/cat-file.c:1339
 msgid ""
 "Emit object (blob or tree) with conversion or filter (stand-alone, or with "
 "batch)"
 msgstr ""
 
-#: builtin/cat-file.c:1148
+#: builtin/cat-file.c:1341
 msgid "run textconv on object's content"
 msgstr ""
 
-#: builtin/cat-file.c:1150
+#: builtin/cat-file.c:1343
 msgid "run filters on object's content"
 msgstr ""
 
-#: builtin/cat-file.c:1151
+#: builtin/cat-file.c:1344
 msgid "blob|tree"
 msgstr ""
 
-#: builtin/cat-file.c:1152
+#: builtin/cat-file.c:1345
 msgid "use a <path> for (--textconv | --filters); Not with 'batch'"
 msgstr ""
 
-#: builtin/cat-file.c:1175
+#: builtin/cat-file.c:1368
 msgid "objects filter only supported in batch mode"
 msgstr ""
 
-#: builtin/cat-file.c:1178
+#: builtin/cat-file.c:1371
 #, c-format
 msgid "objects filter not supported: '%s'"
 msgstr ""
 
-#: builtin/cat-file.c:1188
+#: builtin/cat-file.c:1381
 #, c-format
 msgid "'%s=<%s>' needs '%s' or '%s'"
 msgstr ""
 
-#: builtin/cat-file.c:1190
+#: builtin/cat-file.c:1383
 msgid "path|tree-ish"
 msgstr ""
 
-#: builtin/cat-file.c:1197 builtin/cat-file.c:1200 builtin/cat-file.c:1203
-#: builtin/cat-file.c:1206 builtin/cat-file.c:1209
+#: builtin/cat-file.c:1390 builtin/cat-file.c:1393 builtin/cat-file.c:1396
+#: builtin/cat-file.c:1399 builtin/cat-file.c:1402
 #, c-format
 msgid "'%s' requires a batch mode"
 msgstr ""
 
-#: builtin/cat-file.c:1230
+#: builtin/cat-file.c:1423
 #, c-format
 msgid "'-%c' is incompatible with batch mode"
 msgstr ""
 
-#: builtin/cat-file.c:1233
+#: builtin/cat-file.c:1426
 msgid "batch modes take no arguments"
 msgstr ""
 
-#: builtin/cat-file.c:1242 builtin/cat-file.c:1246
+#: builtin/cat-file.c:1435 builtin/cat-file.c:1439
 #, c-format
 msgid "<rev> required with '%s'"
 msgstr ""
 
-#: builtin/cat-file.c:1250
+#: builtin/cat-file.c:1443
 #, c-format
 msgid "<object> required with '-%c'"
 msgstr ""
 
-#: builtin/cat-file.c:1260
+#: builtin/cat-file.c:1453
 #, c-format
 msgid "only two arguments allowed in <type> <object> mode, not %d"
 msgstr ""
@@ -5095,7 +5127,7 @@ msgid ""
 "and retry with 'git restore --source=HEAD :/'\n"
 msgstr ""
 
-#: builtin/clone.c:551 fetch-pack.c:2209
+#: builtin/clone.c:551 fetch-pack.c:2175
 msgid "remote did not send all necessary objects"
 msgstr ""
 
@@ -5386,7 +5418,7 @@ msgstr ""
 msgid "--filter is ignored in local clones; use file:// instead."
 msgstr ""
 
-#: builtin/clone.c:1336 fetch-pack.c:1262 fetch-pack.c:1636
+#: builtin/clone.c:1336 fetch-pack.c:1261 fetch-pack.c:1603
 msgid "source repository is shallow, reject to clone."
 msgstr ""
 
@@ -7249,7 +7281,7 @@ msgid "corrupt mark line: %s"
 msgstr ""
 
 #: builtin/fast-export.c:1248 builtin/fast-import.c:1794
-#: builtin/fast-import.c:3431 fetch-pack.c:469 fetch-pack.c:1598
+#: builtin/fast-import.c:3431 fetch-pack.c:471 fetch-pack.c:1565
 #, c-format
 msgid "object not found: %s"
 msgstr ""
@@ -7475,7 +7507,7 @@ msgstr ""
 msgid "unable to write marks file %s: %s"
 msgstr ""
 
-#: builtin/fast-import.c:1780 object-file.c:452
+#: builtin/fast-import.c:1780 object-file.c:449
 #, c-format
 msgid "unable to write file %s"
 msgstr ""
@@ -8123,7 +8155,7 @@ msgstr ""
 msgid "option \"%s\" is ignored for %s"
 msgstr ""
 
-#: builtin/fetch.c:1577 fetch-pack.c:344
+#: builtin/fetch.c:1577 fetch-pack.c:343
 #, c-format
 msgid "the object %s does not exist"
 msgstr ""
@@ -12603,7 +12635,7 @@ msgstr ""
 msgid "failed to stat %s"
 msgstr ""
 
-#: builtin/pack-objects.c:1444 object-file.c:803
+#: builtin/pack-objects.c:1444 object-file.c:800
 #, c-format
 msgid "failed utime() on %s"
 msgstr ""
@@ -17600,7 +17632,7 @@ msgstr ""
 msgid "'%s' already exists in the index and is not a submodule"
 msgstr ""
 
-#: builtin/submodule--helper.c:3637 object-file.c:1434
+#: builtin/submodule--helper.c:3637 object-file.c:1431
 #, c-format
 msgid "'%s' does not have a commit checked out"
 msgstr ""
@@ -20652,29 +20684,39 @@ msgstr ""
 msgid "expected flush after ref listing"
 msgstr ""
 
-#: connect.c:775
+#: connect.c:736
+#, c-format
+msgid "mismatched algorithms: client %s; server %s"
+msgstr ""
+
+#: connect.c:740
+#, c-format
+msgid "the server does not support algorithm '%s'"
+msgstr ""
+
+#: connect.c:809
 msgid "unable to set SO_KEEPALIVE on socket"
 msgstr ""
 
-#: connect.c:815 connect.c:878
+#: connect.c:849 connect.c:912
 #, c-format
 msgid "Looking up %s ... "
 msgstr ""
 
-#: connect.c:819
+#: connect.c:853
 #, c-format
 msgid "unable to look up %s (port %s) (%s)"
 msgstr ""
 
 #. TRANSLATORS: this is the end of "Looking up %s ... "
-#: connect.c:823 connect.c:894
+#: connect.c:857 connect.c:928
 #, c-format
 msgid ""
 "done.\n"
 "Connecting to %s (port %s) ... "
 msgstr ""
 
-#: connect.c:845 connect.c:922
+#: connect.c:879 connect.c:956
 #, c-format
 msgid ""
 "unable to connect to %s:\n"
@@ -20682,66 +20724,66 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: this is the end of "Connecting to %s (port %s) ... "
-#: connect.c:851 connect.c:928
+#: connect.c:885 connect.c:962
 msgid "done."
 msgstr ""
 
-#: connect.c:882
+#: connect.c:916
 #, c-format
 msgid "unable to look up %s (%s)"
 msgstr ""
 
-#: connect.c:888
+#: connect.c:922
 #, c-format
 msgid "unknown port %s"
 msgstr ""
 
-#: connect.c:1025 connect.c:1359
+#: connect.c:1059 connect.c:1393
 #, c-format
 msgid "strange hostname '%s' blocked"
 msgstr ""
 
-#: connect.c:1027
+#: connect.c:1061
 #, c-format
 msgid "strange port '%s' blocked"
 msgstr ""
 
-#: connect.c:1037
+#: connect.c:1071
 #, c-format
 msgid "cannot start proxy %s"
 msgstr ""
 
-#: connect.c:1082
+#: connect.c:1116
 #, c-format
 msgid "protocol '%s' is not supported"
 msgstr ""
 
-#: connect.c:1110
+#: connect.c:1144
 msgid "no path specified; see 'git help pull' for valid url syntax"
 msgstr ""
 
-#: connect.c:1250
+#: connect.c:1284
 msgid "newline is forbidden in git:// hosts and repo paths"
 msgstr ""
 
-#: connect.c:1307
+#: connect.c:1341
 msgid "ssh variant 'simple' does not support -4"
 msgstr ""
 
-#: connect.c:1319
+#: connect.c:1353
 msgid "ssh variant 'simple' does not support -6"
 msgstr ""
 
-#: connect.c:1336
+#: connect.c:1370
 msgid "ssh variant 'simple' does not support setting port"
 msgstr ""
 
-#: connect.c:1451
+#: connect.c:1485
 #, c-format
 msgid "strange pathname '%s' blocked"
 msgstr ""
 
-#: connect.c:1500
+#: connect.c:1534
 msgid "unable to fork"
 msgstr ""
 
@@ -21853,7 +21895,19 @@ msgstr ""
 msgid "too many args to run %s"
 msgstr ""
 
-#: fetch-pack.c:131
+#: fetch-object-info.c:29 fetch-pack.c:1452 fetch-pack.c:2274
+msgid "unable to write request to remote"
+msgstr ""
+
+#: fetch-object-info.c:57
+msgid "object-info capability is not enabled on the server"
+msgstr ""
+
+#: fetch-object-info.c:82
+msgid "unsupported protocol version. expected v2"
+msgstr ""
+
+#: fetch-pack.c:130
 #, c-format
 msgid ""
 "You are attempting to fetch %s, which is in the commit graph file but not in "
@@ -21863,190 +21917,176 @@ msgid ""
 "missing object, use 'git fetch --refetch' with the missing object."
 msgstr ""
 
-#: fetch-pack.c:218
+#: fetch-pack.c:217
 msgid "git fetch-pack: expected shallow list"
 msgstr ""
 
-#: fetch-pack.c:221
+#: fetch-pack.c:220
 msgid "git fetch-pack: expected a flush packet after shallow list"
 msgstr ""
 
-#: fetch-pack.c:232
+#: fetch-pack.c:231
 msgid "git fetch-pack: expected ACK/NAK, got a flush packet"
 msgstr ""
 
-#: fetch-pack.c:252
+#: fetch-pack.c:251
 #, c-format
 msgid "git fetch-pack: expected ACK/NAK, got '%s'"
 msgstr ""
 
-#: fetch-pack.c:263
+#: fetch-pack.c:262
 msgid "unable to write to remote"
 msgstr ""
 
-#: fetch-pack.c:320
+#: fetch-pack.c:319
 msgid "Server supports filter"
 msgstr ""
 
-#: fetch-pack.c:461 fetch-pack.c:1590
+#: fetch-pack.c:463 fetch-pack.c:1557
 #, c-format
 msgid "invalid shallow line: %s"
 msgstr ""
 
-#: fetch-pack.c:467 fetch-pack.c:1596
+#: fetch-pack.c:469 fetch-pack.c:1563
 #, c-format
 msgid "invalid unshallow line: %s"
 msgstr ""
 
-#: fetch-pack.c:472 fetch-pack.c:1601
+#: fetch-pack.c:474 fetch-pack.c:1568
 #, c-format
 msgid "error in object: %s"
 msgstr ""
 
-#: fetch-pack.c:474 fetch-pack.c:1603
+#: fetch-pack.c:476 fetch-pack.c:1570
 #, c-format
 msgid "no shallow found: %s"
 msgstr ""
 
-#: fetch-pack.c:477 fetch-pack.c:1607
+#: fetch-pack.c:479 fetch-pack.c:1574
 #, c-format
 msgid "expected shallow/unshallow, got %s"
 msgstr ""
 
-#: fetch-pack.c:548
+#: fetch-pack.c:550
 #, c-format
 msgid "got %s %d %s"
 msgstr ""
 
-#: fetch-pack.c:568
+#: fetch-pack.c:570
 #, c-format
 msgid "invalid commit %s"
 msgstr ""
 
-#: fetch-pack.c:603
+#: fetch-pack.c:605
 msgid "giving up"
 msgstr ""
 
-#: fetch-pack.c:618 progress.h:30
+#: fetch-pack.c:620 progress.h:30
 msgid "done"
 msgstr ""
 
-#: fetch-pack.c:631
+#: fetch-pack.c:633
 #, c-format
 msgid "got %s (%d) %s"
 msgstr ""
 
-#: fetch-pack.c:669
+#: fetch-pack.c:671
 #, c-format
 msgid "Marking %s as complete"
 msgstr ""
 
-#: fetch-pack.c:888
+#: fetch-pack.c:890
 #, c-format
 msgid "already have %s (%s)"
 msgstr ""
 
-#: fetch-pack.c:984
+#: fetch-pack.c:986
 msgid "fetch-pack: unable to fork off sideband demultiplexer"
 msgstr ""
 
-#: fetch-pack.c:992
+#: fetch-pack.c:994
 msgid "protocol error: bad pack header"
 msgstr ""
 
-#: fetch-pack.c:1073
+#: fetch-pack.c:1075
 #, c-format
 msgid "fetch-pack: unable to fork off %s"
 msgstr ""
 
-#: fetch-pack.c:1081
+#: fetch-pack.c:1083
 msgid "fetch-pack: invalid index-pack output"
 msgstr ""
 
-#: fetch-pack.c:1100
+#: fetch-pack.c:1102
 #, c-format
 msgid "%s failed"
 msgstr ""
 
-#: fetch-pack.c:1102
+#: fetch-pack.c:1104
 msgid "error in sideband demultiplexer"
 msgstr ""
 
-#: fetch-pack.c:1159
+#: fetch-pack.c:1161
 #, c-format
 msgid "Server version is %.*s"
 msgstr ""
 
-#: fetch-pack.c:1167 fetch-pack.c:1173 fetch-pack.c:1176 fetch-pack.c:1182
-#: fetch-pack.c:1186 fetch-pack.c:1190 fetch-pack.c:1194 fetch-pack.c:1198
-#: fetch-pack.c:1202 fetch-pack.c:1206 fetch-pack.c:1210 fetch-pack.c:1214
-#: fetch-pack.c:1220 fetch-pack.c:1226 fetch-pack.c:1231 fetch-pack.c:1236
+#: fetch-pack.c:1166 fetch-pack.c:1172 fetch-pack.c:1175 fetch-pack.c:1181
+#: fetch-pack.c:1185 fetch-pack.c:1189 fetch-pack.c:1193 fetch-pack.c:1197
+#: fetch-pack.c:1201 fetch-pack.c:1205 fetch-pack.c:1209 fetch-pack.c:1213
+#: fetch-pack.c:1219 fetch-pack.c:1225 fetch-pack.c:1230 fetch-pack.c:1235
 #, c-format
 msgid "Server supports %s"
 msgstr ""
 
-#: fetch-pack.c:1169
+#: fetch-pack.c:1168
 msgid "Server does not support shallow clients"
 msgstr ""
 
-#: fetch-pack.c:1229
+#: fetch-pack.c:1228
 msgid "Server does not support --shallow-since"
 msgstr ""
 
-#: fetch-pack.c:1234
+#: fetch-pack.c:1233
 msgid "Server does not support --shallow-exclude"
 msgstr ""
 
-#: fetch-pack.c:1238
+#: fetch-pack.c:1237
 msgid "Server does not support --deepen"
 msgstr ""
 
-#: fetch-pack.c:1240
+#: fetch-pack.c:1239
 msgid "Server does not support this repository's object format"
 msgstr ""
 
-#: fetch-pack.c:1253
+#: fetch-pack.c:1252
 msgid "no common commits"
 msgstr ""
 
-#: fetch-pack.c:1270 fetch-pack.c:1879
+#: fetch-pack.c:1269 fetch-pack.c:1846
 msgid "git fetch-pack: fetch failed."
 msgstr ""
 
-#: fetch-pack.c:1401
-#, c-format
-msgid "mismatched algorithms: client %s; server %s"
-msgstr ""
-
-#: fetch-pack.c:1405
-#, c-format
-msgid "the server does not support algorithm '%s'"
-msgstr ""
-
-#: fetch-pack.c:1439
+#: fetch-pack.c:1406
 msgid "Server does not support shallow requests"
 msgstr ""
 
-#: fetch-pack.c:1485 fetch-pack.c:2308
-msgid "unable to write request to remote"
-msgstr ""
-
-#: fetch-pack.c:1509
+#: fetch-pack.c:1476
 #, c-format
 msgid "expected '%s', received '%s'"
 msgstr ""
 
-#: fetch-pack.c:1512
+#: fetch-pack.c:1479
 #, c-format
 msgid "expected '%s'"
 msgstr ""
 
-#: fetch-pack.c:1546
+#: fetch-pack.c:1513
 #, c-format
 msgid "unexpected acknowledgment line: '%s'"
 msgstr ""
 
-#: fetch-pack.c:1551
+#: fetch-pack.c:1518
 #, c-format
 msgid "error processing acks: %d"
 msgstr ""
@@ -22054,7 +22094,7 @@ msgstr ""
 #. TRANSLATORS: The parameter will be 'ready', a protocol
 #. keyword.
 #.
-#: fetch-pack.c:1565
+#: fetch-pack.c:1532
 #, c-format
 msgid "expected packfile to be sent after '%s'"
 msgstr ""
@@ -22062,54 +22102,54 @@ msgstr ""
 #. TRANSLATORS: The parameter will be 'ready', a protocol
 #. keyword.
 #.
-#: fetch-pack.c:1571
+#: fetch-pack.c:1538
 #, c-format
 msgid "expected no other sections to be sent after no '%s'"
 msgstr ""
 
-#: fetch-pack.c:1612
+#: fetch-pack.c:1579
 #, c-format
 msgid "error processing shallow info: %d"
 msgstr ""
 
-#: fetch-pack.c:1661
+#: fetch-pack.c:1628
 #, c-format
 msgid "expected wanted-ref, got '%s'"
 msgstr ""
 
-#: fetch-pack.c:1666
+#: fetch-pack.c:1633
 #, c-format
 msgid "unexpected wanted-ref: '%s'"
 msgstr ""
 
-#: fetch-pack.c:1671
+#: fetch-pack.c:1638
 #, c-format
 msgid "error processing wanted refs: %d"
 msgstr ""
 
-#: fetch-pack.c:1701
+#: fetch-pack.c:1668
 msgid "git fetch-pack: expected response end packet"
 msgstr ""
 
-#: fetch-pack.c:1749
+#: fetch-pack.c:1716
 #, c-format
 msgid "couldn't resolve 'auto' filter '%s': %s"
 msgstr ""
 
-#: fetch-pack.c:2186
+#: fetch-pack.c:2152
 msgid "no matching remote head"
 msgstr ""
 
-#: fetch-pack.c:2330
+#: fetch-pack.c:2296
 msgid "unexpected 'ready' from remote"
 msgstr ""
 
-#: fetch-pack.c:2363
+#: fetch-pack.c:2329
 #, c-format
 msgid "no such remote ref %s"
 msgstr ""
 
-#: fetch-pack.c:2366
+#: fetch-pack.c:2332
 #, c-format
 msgid "Server does not allow request for unadvertised object %s"
 msgstr ""
@@ -23592,166 +23632,166 @@ msgstr ""
 msgid "Failed to convert object from %s to %s"
 msgstr ""
 
-#: object-file.c:158 odb/source-loose.c:128 odb/source-loose.c:265
+#: object-file.c:155 odb/source-loose.c:128 odb/source-loose.c:265
 #, c-format
 msgid "object file %s is empty"
 msgstr ""
 
-#: object-file.c:239 object-file.c:1589
+#: object-file.c:236 object-file.c:1586
 #, c-format
 msgid "corrupt loose object '%s'"
 msgstr ""
 
-#: object-file.c:242 object-file.c:1594
+#: object-file.c:239 object-file.c:1591
 #, c-format
 msgid "garbage at end of loose object '%s'"
 msgstr ""
 
-#: object-file.c:353 object-file.c:360 object-file.c:1483
+#: object-file.c:350 object-file.c:357 object-file.c:1480
 #, c-format
 msgid "unable to open %s"
 msgstr ""
 
-#: object-file.c:382
+#: object-file.c:379
 #, c-format
 msgid "files '%s' and '%s' differ in contents"
 msgstr ""
 
-#: object-file.c:458
+#: object-file.c:455
 #, c-format
 msgid "unable to write repeatedly vanishing file %s"
 msgstr ""
 
-#: object-file.c:470
+#: object-file.c:467
 #, c-format
 msgid "unable to set permission to '%s'"
 msgstr ""
 
-#: object-file.c:537
+#: object-file.c:534
 msgid "core.fsyncMethod = batch is unsupported on this platform"
 msgstr ""
 
-#: object-file.c:594
+#: object-file.c:591
 msgid "error when closing loose object file"
 msgstr ""
 
-#: object-file.c:672
+#: object-file.c:669
 #, c-format
 msgid "insufficient permission for adding an object to repository database %s"
 msgstr ""
 
-#: object-file.c:677
+#: object-file.c:674
 msgid "unable to create temporary file"
 msgstr ""
 
-#: object-file.c:719
+#: object-file.c:716
 msgid "unable to write loose object file"
 msgstr ""
 
-#: object-file.c:785
+#: object-file.c:782
 #, c-format
 msgid "unable to deflate new object %s (%d)"
 msgstr ""
 
-#: object-file.c:789
+#: object-file.c:786
 #, c-format
 msgid "deflateEnd on object %s failed (%d)"
 msgstr ""
 
-#: object-file.c:792
+#: object-file.c:789
 #, c-format
 msgid "confused by unstable object source data for %s"
 msgstr ""
 
-#: object-file.c:881
+#: object-file.c:878
 #, c-format
 msgid "write stream object %<PRIuMAX> != %<PRIuMAX>"
 msgstr ""
 
-#: object-file.c:892
+#: object-file.c:889
 #, c-format
 msgid "unable to stream deflate new object (%d)"
 msgstr ""
 
-#: object-file.c:895
+#: object-file.c:892
 #, c-format
 msgid "deflateEnd on stream object failed (%d)"
 msgstr ""
 
-#: object-file.c:912
+#: object-file.c:909
 #, c-format
 msgid "unable to create directory %s"
 msgstr ""
 
-#: object-file.c:953
+#: object-file.c:950
 #, c-format
 msgid "cannot read object for %s"
 msgstr ""
 
-#: object-file.c:956
+#: object-file.c:953
 #, c-format
 msgid "cannot map object %s to %s"
 msgstr ""
 
-#: object-file.c:980
+#: object-file.c:977
 #, c-format
 msgid "object fails fsck: %s"
 msgstr ""
 
-#: object-file.c:1014
+#: object-file.c:1011
 msgid "refusing to create malformed object"
 msgstr ""
 
-#: object-file.c:1083
+#: object-file.c:1080
 #, c-format
 msgid "read error while indexing %s"
 msgstr ""
 
-#: object-file.c:1086
+#: object-file.c:1083
 #, c-format
 msgid "short read while indexing %s"
 msgstr ""
 
-#: object-file.c:1419 object-file.c:1429
+#: object-file.c:1416 object-file.c:1426
 #, c-format
 msgid "%s: failed to insert into database"
 msgstr ""
 
-#: object-file.c:1436
+#: object-file.c:1433
 msgid "cannot add a submodule of a different hash algorithm"
 msgstr ""
 
-#: object-file.c:1439
+#: object-file.c:1436
 #, c-format
 msgid "%s: unsupported file type"
 msgstr ""
 
-#: object-file.c:1602
+#: object-file.c:1599
 #, c-format
 msgid "hash mismatch for %s (expected %s)"
 msgstr ""
 
-#: object-file.c:1629
+#: object-file.c:1626
 #, c-format
 msgid "unable to mmap %s"
 msgstr ""
 
-#: object-file.c:1634
+#: object-file.c:1631
 #, c-format
 msgid "unable to unpack header of %s"
 msgstr ""
 
-#: object-file.c:1639
+#: object-file.c:1636
 #, c-format
 msgid "unable to parse header of %s"
 msgstr ""
 
-#: object-file.c:1644
+#: object-file.c:1641
 #, c-format
 msgid "unable to parse type from header '%s' of %s"
 msgstr ""
 
-#: object-file.c:1657
+#: object-file.c:1654
 #, c-format
 msgid "unable to unpack contents of %s"
 msgstr ""
@@ -28761,7 +28801,7 @@ msgstr ""
 msgid "error while running fast-import"
 msgstr ""
 
-#: transport-helper.c:570 transport-helper.c:1302
+#: transport-helper.c:570 transport-helper.c:1310
 #, c-format
 msgid "could not read ref %s"
 msgstr ""
@@ -28784,184 +28824,192 @@ msgstr ""
 msgid "can't connect to subservice %s"
 msgstr ""
 
-#: transport-helper.c:734 transport.c:490
+#: transport-helper.c:733 transport.c:534
 msgid "--negotiate-only requires protocol v2"
 msgstr ""
 
-#: transport-helper.c:775
+#: transport-helper.c:774
 #, c-format
 msgid "ignoring %s because the protocol does not support it."
 msgstr ""
 
-#: transport-helper.c:807
+#: transport-helper.c:792
+msgid "object-info requires protocol v2"
+msgstr ""
+
+#: transport-helper.c:815
 msgid "'option' without a matching 'ok/error' directive"
 msgstr ""
 
-#: transport-helper.c:850
+#: transport-helper.c:858
 #, c-format
 msgid "expected ok/error, helper said '%s'"
 msgstr ""
 
-#: transport-helper.c:911
+#: transport-helper.c:919
 #, c-format
 msgid "helper reported unexpected status of %s"
 msgstr ""
 
-#: transport-helper.c:997
+#: transport-helper.c:1005
 #, c-format
 msgid "helper %s does not support dry-run"
 msgstr ""
 
-#: transport-helper.c:1000
+#: transport-helper.c:1008
 #, c-format
 msgid "helper %s does not support --signed"
 msgstr ""
 
-#: transport-helper.c:1003
+#: transport-helper.c:1011
 #, c-format
 msgid "helper %s does not support --signed=if-asked"
 msgstr ""
 
-#: transport-helper.c:1008
+#: transport-helper.c:1016
 #, c-format
 msgid "helper %s does not support --atomic"
 msgstr ""
 
-#: transport-helper.c:1012
+#: transport-helper.c:1020
 #, c-format
 msgid "helper %s does not support --%s"
 msgstr ""
 
-#: transport-helper.c:1019
+#: transport-helper.c:1027
 #, c-format
 msgid "helper %s does not support 'push-option'"
 msgstr ""
 
-#: transport-helper.c:1120
+#: transport-helper.c:1128
 msgid "remote-helper doesn't support push; refspec needed"
 msgstr ""
 
-#: transport-helper.c:1125
+#: transport-helper.c:1133
 #, c-format
 msgid "helper %s does not support '--force'"
 msgstr ""
 
-#: transport-helper.c:1174
+#: transport-helper.c:1182
 msgid "couldn't run fast-export"
 msgstr ""
 
-#: transport-helper.c:1179
+#: transport-helper.c:1187
 msgid "error while running fast-export"
 msgstr ""
 
-#: transport-helper.c:1202
+#: transport-helper.c:1210
 #, c-format
 msgid ""
 "No refs in common and none specified; doing nothing.\n"
 "Perhaps you should specify a branch.\n"
 msgstr ""
 
-#: transport-helper.c:1279
+#: transport-helper.c:1287
 #, c-format
 msgid "unsupported object format '%s'"
 msgstr ""
 
-#: transport-helper.c:1288
+#: transport-helper.c:1296
 #, c-format
 msgid "malformed response in ref list: %s"
 msgstr ""
 
-#: transport-helper.c:1447
+#: transport-helper.c:1456
 #, c-format
 msgid "read(%s) failed"
 msgstr ""
 
-#: transport-helper.c:1474
+#: transport-helper.c:1483
 #, c-format
 msgid "write(%s) failed"
 msgstr ""
 
-#: transport-helper.c:1523
+#: transport-helper.c:1532
 #, c-format
 msgid "%s thread failed"
 msgstr ""
 
-#: transport-helper.c:1527
+#: transport-helper.c:1536
 #, c-format
 msgid "%s thread failed to join: %s"
 msgstr ""
 
-#: transport-helper.c:1546 transport-helper.c:1550
+#: transport-helper.c:1555 transport-helper.c:1559
 #, c-format
 msgid "can't start thread for copying data: %s"
 msgstr ""
 
-#: transport-helper.c:1587
+#: transport-helper.c:1596
 #, c-format
 msgid "%s process failed to wait"
 msgstr ""
 
-#: transport-helper.c:1591
+#: transport-helper.c:1600
 #, c-format
 msgid "%s process failed"
 msgstr ""
 
-#: transport-helper.c:1609 transport-helper.c:1618
+#: transport-helper.c:1618 transport-helper.c:1627
 msgid "can't start thread for copying data"
 msgstr ""
 
-#: transport.c:124
+#: transport.c:126
 #, c-format
 msgid "Would set upstream of '%s' to '%s' of '%s'\n"
 msgstr ""
 
-#: transport.c:146
+#: transport.c:148
 #, c-format
 msgid "could not read bundle '%s'"
 msgstr ""
 
-#: transport.c:267
+#: transport.c:269
 #, c-format
 msgid "transport: invalid depth option '%s'"
 msgstr ""
 
-#: transport.c:326
+#: transport.c:328
 msgid "see protocol.version in 'git help config' for more details"
 msgstr ""
 
-#: transport.c:327
+#: transport.c:329
 msgid "server options require protocol version 2 or later"
 msgstr ""
 
-#: transport.c:493
+#: transport.c:475
+msgid "remote does not support object-info"
+msgstr ""
+
+#: transport.c:537
 msgid "server does not support wait-for-done"
 msgstr ""
 
-#: transport.c:859
+#: transport.c:903
 msgid "could not parse transport.color.* config"
 msgstr ""
 
-#: transport.c:937
+#: transport.c:981
 msgid "support for protocol v2 not implemented yet"
 msgstr ""
 
-#: transport.c:1159
+#: transport.c:1204
 #, c-format
 msgid "transport '%s' not allowed"
 msgstr ""
 
-#: transport.c:1211
+#: transport.c:1257
 msgid "git-over-rsync is no longer supported"
 msgstr ""
 
-#: transport.c:1317
+#: transport.c:1363
 #, c-format
 msgid ""
 "The following submodule paths contain changes that can\n"
 "not be found on any remote:\n"
 msgstr ""
 
-#: transport.c:1321
+#: transport.c:1367
 #, c-format
 msgid ""
 "\n"
@@ -28977,23 +29025,23 @@ msgid ""
 "\n"
 msgstr ""
 
-#: transport.c:1329
+#: transport.c:1375
 msgid "Aborting."
 msgstr ""
 
-#: transport.c:1503
+#: transport.c:1549
 msgid "failed to push all needed submodules"
 msgstr ""
 
-#: transport.c:1648
+#: transport.c:1694
 msgid "bundle-uri operation not supported by protocol"
 msgstr ""
 
-#: transport.c:1651
+#: transport.c:1697
 msgid "could not retrieve server-advertised bundle-uri list"
 msgstr ""
 
-#: transport.c:1675
+#: transport.c:1721
 msgid "operation not supported by protocol"
 msgstr ""
 
