@@ -1,0 +1,54 @@
+
+
+#################### Tue, 14 Jul 2026 21:41:28 +0000 ####################
+
+--- po/git.pot.old	2026-07-14 21:41:28.036665101 +0000
++++ po/git.pot.new	2026-07-14 21:41:28.121665022 +0000
+@@ -1979,9 +1979,6 @@
+ msgid "--delete only accepts plain target ref names"
+ msgstr ""
+ 
+-msgid "--delete-merged requires at least one <branch>"
+-msgstr ""
+-
+ #, c-format
+ msgid "--depth cannot exceed %u"
+ msgstr ""
+@@ -11270,7 +11267,7 @@
+ msgid "delete fully merged branch"
+ msgstr ""
+ 
+-msgid "delete local branches whose upstream matches <branch> and are merged"
++msgid "delete merged branches whose upstream matches <branch> (repeatable)"
+ msgstr ""
+ 
+ msgid "delete refs"
+@@ -13604,13 +13601,13 @@
+ msgid "git blame [<options>] [<rev-opts>] [<rev>] [--] <file>"
+ msgstr ""
+ 
+-msgid "git branch [<options>] (-c | -C) [<old-branch>] <new-branch>"
++msgid "git branch [<options>] (--delete-merged <branch>)... [<pattern>...]"
+ msgstr ""
+ 
+-msgid "git branch [<options>] (-m | -M) [<old-branch>] <new-branch>"
++msgid "git branch [<options>] (-c | -C) [<old-branch>] <new-branch>"
+ msgstr ""
+ 
+-msgid "git branch [<options>] --delete-merged <branch>..."
++msgid "git branch [<options>] (-m | -M) [<old-branch>] <new-branch>"
+ msgstr ""
+ 
+ msgid "git branch [<options>] [-f] [--recurse-submodules] <branch-name> [<start-point>]"
+
+
+-------------------- git-po-helper check-po po/git.pot --------------------
+
+❌ CamelCase config variables
+    ERROR   [git.pot]   entry at L15426 (msgid): should use "core.repositoryFormatVersion" in msgid: "core.repositoryformatversion to 1.\\nPlease set it for migration"
+    ERROR   [git.pot]   entry at L15426 (msgid): should use "core.repositoryFormatVersion" in msgid: "for example:\\ngit config core.repositoryformatversion 1"
+    ERROR   [git.pot]   entry at L22926 (msgid): should use "http.proactiveAuth" in msgid: "http.proactiveauth"
+    ERROR   [git.pot]   entry at L22950 (msgid): should use "http.cookieFile" in msgid: "ing to read cookies from http.cookiefile '-'"
+    ERROR   [git.pot]   entry at L22954 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
+ERROR: 6421 entries checked, 574 config variables, 5 mismatched
+ERROR: check-po command failed
