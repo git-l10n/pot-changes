@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2026-07-16 22:42+0000\n"
+"POT-Creation-Date: 2026-07-17 18:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -864,12 +864,12 @@ msgstr ""
 msgid "unclosed quote"
 msgstr ""
 
-#: alias.c:123 builtin/cat-file.c:1386 builtin/name-rev.c:848
+#: alias.c:123 builtin/cat-file.c:1379 builtin/name-rev.c:848
 #: builtin/notes.c:453 builtin/notes.c:519 builtin/notes.c:601
 #: builtin/notes.c:613 builtin/notes.c:699 builtin/notes.c:776
 #: builtin/notes.c:930 builtin/notes.c:1093 builtin/notes.c:1117
 #: builtin/prune-packed.c:29 builtin/receive-pack.c:2645 builtin/refs.c:63
-#: builtin/repo.c:952 builtin/tag.c:656 t/helper/test-pkt-line.c:89
+#: builtin/repo.c:1118 builtin/tag.c:656 t/helper/test-pkt-line.c:89
 msgid "too many arguments"
 msgstr ""
 
@@ -1241,8 +1241,8 @@ msgid "%s has type %o, expected %o"
 msgstr ""
 
 #: apply.c:4075 apply.c:4077 builtin/fast-import.c:2487
-#: builtin/fast-import.c:2526 read-cache.c:874 read-cache.c:903
-#: read-cache.c:1308
+#: builtin/fast-import.c:2526 read-cache.c:854 read-cache.c:883
+#: read-cache.c:1288
 #, c-format
 msgid "invalid path '%s'"
 msgstr ""
@@ -1865,7 +1865,7 @@ msgstr ""
 msgid "bad --attr-source or GIT_ATTR_SOURCE"
 msgstr ""
 
-#: attr.c:1278 read-cache.c:833 refs/packed-backend.c:2121
+#: attr.c:1278 read-cache.c:813 refs/packed-backend.c:2121
 #, c-format
 msgid "unable to stat '%s'"
 msgstr ""
@@ -2216,7 +2216,7 @@ msgstr ""
 msgid "editing patch failed"
 msgstr ""
 
-#: builtin/add.c:216 read-cache.c:3225
+#: builtin/add.c:216 read-cache.c:3205
 #, c-format
 msgid "could not stat '%s'"
 msgstr ""
@@ -2384,7 +2384,7 @@ msgstr ""
 #: builtin/commit.c:393 builtin/diff-tree.c:134 builtin/grep.c:561
 #: builtin/mv.c:252 builtin/reset.c:481 builtin/rm.c:306
 #: builtin/submodule--helper.c:238 builtin/submodule--helper.c:3600
-#: read-cache.c:2037 read-cache.c:2353 rerere.c:565 rerere.c:599 rerere.c:1134
+#: read-cache.c:2017 read-cache.c:2333 rerere.c:565 rerere.c:599 rerere.c:1134
 #: submodule.c:1883
 msgid "index file corrupt"
 msgstr ""
@@ -2684,7 +2684,7 @@ msgstr ""
 msgid "bypass pre-applypatch and applypatch-msg hooks"
 msgstr ""
 
-#: builtin/am.c:2337 builtin/cat-file.c:1247
+#: builtin/am.c:2337 builtin/cat-file.c:1240
 msgid "historical option -- no-op"
 msgstr ""
 
@@ -2746,11 +2746,11 @@ msgid "n"
 msgstr ""
 
 #: builtin/am.c:2384 builtin/branch.c:1014 builtin/bugreport.c:117
-#: builtin/cat-file.c:1252 builtin/cat-file.c:1256 builtin/cat-file.c:1263
+#: builtin/cat-file.c:1245 builtin/cat-file.c:1249 builtin/cat-file.c:1256
 #: builtin/clone.c:984 builtin/diagnose.c:32 builtin/for-each-ref.c:37
 #: builtin/init-db.c:112 builtin/ls-files.c:663 builtin/ls-tree.c:372
 #: builtin/name-rev.c:829 builtin/refs.c:47 builtin/replace.c:571
-#: builtin/repo.c:271 builtin/repo.c:939 builtin/submodule--helper.c:2060
+#: builtin/repo.c:437 builtin/repo.c:1105 builtin/submodule--helper.c:2060
 #: builtin/submodule--helper.c:3013 builtin/submodule--helper.c:3662
 #: builtin/tag.c:533 builtin/verify-tag.c:34
 msgid "format"
@@ -3252,7 +3252,7 @@ msgstr ""
 msgid "need a command"
 msgstr ""
 
-#: builtin/bisect.c:1511 builtin/cat-file.c:989
+#: builtin/bisect.c:1511 builtin/cat-file.c:982
 #, c-format
 msgid "unknown command: '%s'"
 msgstr ""
@@ -3278,7 +3278,7 @@ msgstr ""
 msgid "must end with a color"
 msgstr ""
 
-#: builtin/blame.c:818 diff.c:467 diff.c:507 merge-ort.c:5486 transport.c:1126
+#: builtin/blame.c:818 diff.c:467 diff.c:507 merge-ort.c:5486 transport.c:1125
 #, c-format
 msgid "unknown value for config '%s': %s"
 msgstr ""
@@ -4093,85 +4093,90 @@ msgstr ""
 msgid "cannot read object %s '%s'"
 msgstr ""
 
-#: builtin/cat-file.c:695
+#: builtin/cat-file.c:686
 msgid "must supply valid remote when using remote-object-info"
 msgstr ""
 
-#: builtin/cat-file.c:708
+#: builtin/cat-file.c:699
 #, c-format
 msgid "remote-object-info does not support short oids, %d characters required"
 msgstr ""
 
-#: builtin/cat-file.c:712
+#: builtin/cat-file.c:703
 #, c-format
 msgid "not a valid object name '%s'"
 msgstr ""
 
-#: builtin/cat-file.c:718
+#: builtin/cat-file.c:709
 msgid "remote-object-info requires objects"
 msgstr ""
 
-#: builtin/cat-file.c:815
+#: builtin/cat-file.c:804
 #, c-format
 msgid "mailmap: invalid boolean '%s'"
 msgstr ""
 
-#: builtin/cat-file.c:848
+#: builtin/cat-file.c:838
 msgid "remote-object-info command too long"
 msgstr ""
 
-#: builtin/cat-file.c:853
+#: builtin/cat-file.c:848
 #, c-format
 msgid "remote-object-info: %s"
 msgstr ""
 
-#: builtin/cat-file.c:855
+#: builtin/cat-file.c:850
 #, c-format
 msgid "remote-object-info supports at most %d objects"
 msgstr ""
 
-#: builtin/cat-file.c:922
+#: builtin/cat-file.c:860
+#, c-format
+msgid "failed to get object info from the remote: %s"
+msgstr ""
+
+#: builtin/cat-file.c:915
 msgid "flush is only for --buffer mode"
 msgstr ""
 
-#: builtin/cat-file.c:965
+#: builtin/cat-file.c:958
 msgid "empty command in input"
 msgstr ""
 
-#: builtin/cat-file.c:967
+#: builtin/cat-file.c:960
 #, c-format
 msgid "whitespace before command: '%s'"
 msgstr ""
 
-#: builtin/cat-file.c:976
+#: builtin/cat-file.c:969
 #, c-format
 msgid "%s requires arguments"
 msgstr ""
 
-#: builtin/cat-file.c:981
+#: builtin/cat-file.c:974
 #, c-format
 msgid "%s takes no arguments"
 msgstr ""
 
-#: builtin/cat-file.c:1190
+#: builtin/cat-file.c:1183
 msgid "only one batch option may be specified"
 msgstr ""
 
-#: builtin/cat-file.c:1227
+#: builtin/cat-file.c:1220
 msgid "git cat-file <type> <object>"
 msgstr ""
 
-#: builtin/cat-file.c:1228
+#: builtin/cat-file.c:1221
 msgid "git cat-file (-e | -p | -t | -s) <object>"
 msgstr ""
 
-#: builtin/cat-file.c:1229
+#: builtin/cat-file.c:1222
 msgid ""
 "git cat-file (--textconv | --filters)\n"
 "             [<rev>:<path|tree-ish> | --path=<path|tree-ish> <rev>]"
 msgstr ""
 
-#: builtin/cat-file.c:1231
+#: builtin/cat-file.c:1224
 msgid ""
 "git cat-file (--batch | --batch-check | --batch-command) [--batch-all-"
 "objects]\n"
@@ -4179,144 +4184,144 @@ msgid ""
 "             [--textconv | --filters] [-Z]"
 msgstr ""
 
-#: builtin/cat-file.c:1238
+#: builtin/cat-file.c:1231
 msgid "Check object existence or emit object contents"
 msgstr ""
 
-#: builtin/cat-file.c:1240
+#: builtin/cat-file.c:1233
 msgid "check if <object> exists"
 msgstr ""
 
-#: builtin/cat-file.c:1241
+#: builtin/cat-file.c:1234
 msgid "pretty-print <object> content"
 msgstr ""
 
-#: builtin/cat-file.c:1243
+#: builtin/cat-file.c:1236
 msgid "Emit [broken] object attributes"
 msgstr ""
 
-#: builtin/cat-file.c:1244
+#: builtin/cat-file.c:1237
 msgid "show object type (one of 'blob', 'tree', 'commit', 'tag', ...)"
 msgstr ""
 
-#: builtin/cat-file.c:1245
+#: builtin/cat-file.c:1238
 msgid "show object size"
 msgstr ""
 
-#: builtin/cat-file.c:1248 builtin/log.c:283
+#: builtin/cat-file.c:1241 builtin/log.c:283
 msgid "use mail map file"
 msgstr ""
 
-#: builtin/cat-file.c:1251
+#: builtin/cat-file.c:1244
 msgid "Batch objects requested on stdin (or --batch-all-objects)"
 msgstr ""
 
-#: builtin/cat-file.c:1253
+#: builtin/cat-file.c:1246
 msgid "show full <object> or <rev> contents"
 msgstr ""
 
-#: builtin/cat-file.c:1257
+#: builtin/cat-file.c:1250
 msgid "like --batch, but don't emit <contents>"
 msgstr ""
 
-#: builtin/cat-file.c:1260
+#: builtin/cat-file.c:1253
 msgid "stdin is NUL-terminated"
 msgstr ""
 
-#: builtin/cat-file.c:1262
+#: builtin/cat-file.c:1255
 msgid "stdin and stdout is NUL-terminated"
 msgstr ""
 
-#: builtin/cat-file.c:1264
+#: builtin/cat-file.c:1257
 msgid "read commands from stdin"
 msgstr ""
 
-#: builtin/cat-file.c:1268
+#: builtin/cat-file.c:1261
 msgid "with --batch[-check]: ignores stdin, batches all known objects"
 msgstr ""
 
-#: builtin/cat-file.c:1270
+#: builtin/cat-file.c:1263
 msgid "Change or optimize batch output"
 msgstr ""
 
-#: builtin/cat-file.c:1271
+#: builtin/cat-file.c:1264
 msgid "buffer --batch output"
 msgstr ""
 
-#: builtin/cat-file.c:1273
+#: builtin/cat-file.c:1266
 msgid "follow in-tree symlinks"
 msgstr ""
 
-#: builtin/cat-file.c:1275
+#: builtin/cat-file.c:1268
 msgid "do not order objects before emitting them"
 msgstr ""
 
-#: builtin/cat-file.c:1277
+#: builtin/cat-file.c:1270
 msgid ""
 "Emit object (blob or tree) with conversion or filter (stand-alone, or with "
 "batch)"
 msgstr ""
 
-#: builtin/cat-file.c:1279
+#: builtin/cat-file.c:1272
 msgid "run textconv on object's content"
 msgstr ""
 
-#: builtin/cat-file.c:1281
+#: builtin/cat-file.c:1274
 msgid "run filters on object's content"
 msgstr ""
 
-#: builtin/cat-file.c:1282
+#: builtin/cat-file.c:1275
 msgid "blob|tree"
 msgstr ""
 
-#: builtin/cat-file.c:1283
+#: builtin/cat-file.c:1276
 msgid "use a <path> for (--textconv | --filters); Not with 'batch'"
 msgstr ""
 
-#: builtin/cat-file.c:1306
+#: builtin/cat-file.c:1299
 msgid "objects filter only supported in batch mode"
 msgstr ""
 
-#: builtin/cat-file.c:1309
+#: builtin/cat-file.c:1302
 #, c-format
 msgid "objects filter not supported: '%s'"
 msgstr ""
 
-#: builtin/cat-file.c:1319
+#: builtin/cat-file.c:1312
 #, c-format
 msgid "'%s=<%s>' needs '%s' or '%s'"
 msgstr ""
 
-#: builtin/cat-file.c:1321
+#: builtin/cat-file.c:1314
 msgid "path|tree-ish"
 msgstr ""
 
-#: builtin/cat-file.c:1328 builtin/cat-file.c:1331 builtin/cat-file.c:1334
-#: builtin/cat-file.c:1337 builtin/cat-file.c:1340
+#: builtin/cat-file.c:1321 builtin/cat-file.c:1324 builtin/cat-file.c:1327
+#: builtin/cat-file.c:1330 builtin/cat-file.c:1333
 #, c-format
 msgid "'%s' requires a batch mode"
 msgstr ""
 
-#: builtin/cat-file.c:1361
+#: builtin/cat-file.c:1354
 #, c-format
 msgid "'-%c' is incompatible with batch mode"
 msgstr ""
 
-#: builtin/cat-file.c:1364
+#: builtin/cat-file.c:1357
 msgid "batch modes take no arguments"
 msgstr ""
 
-#: builtin/cat-file.c:1373 builtin/cat-file.c:1377
+#: builtin/cat-file.c:1366 builtin/cat-file.c:1370
 #, c-format
 msgid "<rev> required with '%s'"
 msgstr ""
 
-#: builtin/cat-file.c:1381
+#: builtin/cat-file.c:1374
 #, c-format
 msgid "<object> required with '-%c'"
 msgstr ""
 
-#: builtin/cat-file.c:1391
+#: builtin/cat-file.c:1384
 #, c-format
 msgid "only two arguments allowed in <type> <object> mode, not %d"
 msgstr ""
@@ -5851,7 +5856,7 @@ msgid ""
 "\n"
 msgstr ""
 
-#: builtin/commit.c:305 read-cache.c:4017
+#: builtin/commit.c:305 read-cache.c:3997
 msgid "updating files failed"
 msgstr ""
 
@@ -9070,7 +9075,7 @@ msgstr ""
 msgid "write dangling objects in .git/lost-found"
 msgstr ""
 
-#: builtin/fsck.c:1002 builtin/prune.c:163 builtin/repo.c:946
+#: builtin/fsck.c:1002 builtin/prune.c:163 builtin/repo.c:1112
 msgid "show progress"
 msgstr ""
 
@@ -11981,7 +11986,7 @@ msgstr ""
 msgid "Bad value '%s' in environment '%s'"
 msgstr ""
 
-#: builtin/merge.c:1246 editor.c:155 read-cache.c:3101
+#: builtin/merge.c:1246 editor.c:155 read-cache.c:3081
 #: t/helper/test-synthesize.c:394 t/helper/test-synthesize.c:477 wrapper.c:766
 #, c-format
 msgid "could not close '%s'"
@@ -12946,7 +12951,7 @@ msgstr ""
 msgid "delta base offset out of bound for %s"
 msgstr ""
 
-#: builtin/pack-objects.c:2625 builtin/repo.c:920
+#: builtin/pack-objects.c:2625 builtin/repo.c:1086
 msgid "Counting objects"
 msgstr ""
 
@@ -15808,130 +15813,142 @@ msgid ""
 "will be forced"
 msgstr ""
 
-#: builtin/repo.c:85 builtin/repo.c:96
+#: builtin/repo.c:86 builtin/repo.c:97
 msgid "unable to get common directory"
 msgstr ""
 
-#: builtin/repo.c:107 builtin/repo.c:118
+#: builtin/repo.c:118 builtin/repo.c:129
 msgid "unable to get git directory"
 msgstr ""
 
-#: builtin/repo.c:192
+#: builtin/repo.c:140 builtin/repo.c:151
+msgid "unable to get graft file"
+msgstr ""
+
+#: builtin/repo.c:182 builtin/repo.c:193
+msgid "unable to get index file"
+msgstr ""
+
+#: builtin/repo.c:204 builtin/repo.c:215
+msgid "unable to get object directory"
+msgstr ""
+
+#: builtin/repo.c:358
 #, c-format
 msgid "key '%s' not found"
 msgstr ""
 
-#: builtin/repo.c:234
+#: builtin/repo.c:400
 msgid "--keys can only be used with --format=lines or --format=nul"
 msgstr ""
 
-#: builtin/repo.c:259
+#: builtin/repo.c:425
 #, c-format
 msgid "invalid format '%s'"
 msgstr ""
 
-#: builtin/repo.c:272 builtin/repo.c:940
+#: builtin/repo.c:438 builtin/repo.c:1106
 msgid "output format"
 msgstr ""
 
-#: builtin/repo.c:275 builtin/repo.c:943
+#: builtin/repo.c:441 builtin/repo.c:1109
 msgid "synonym for --format=nul"
 msgstr ""
 
-#: builtin/repo.c:278
+#: builtin/repo.c:444
 msgid "print all keys/values"
 msgstr ""
 
-#: builtin/repo.c:279
+#: builtin/repo.c:445
 msgid "show keys"
 msgstr ""
 
-#: builtin/repo.c:286
+#: builtin/repo.c:452
 msgid "--keys cannot be used with a <key> or --all"
 msgstr ""
 
-#: builtin/repo.c:292
+#: builtin/repo.c:458
 msgid "unsupported output format"
 msgstr ""
 
-#: builtin/repo.c:295
+#: builtin/repo.c:461
 msgid "--all and <key> cannot be used together"
 msgstr ""
 
-#: builtin/repo.c:503
+#: builtin/repo.c:669
 msgid "References"
 msgstr ""
 
-#: builtin/repo.c:504 builtin/repo.c:513
+#: builtin/repo.c:670 builtin/repo.c:679
 msgid "Count"
 msgstr ""
 
-#: builtin/repo.c:505
+#: builtin/repo.c:671
 msgid "Branches"
 msgstr ""
 
-#: builtin/repo.c:506 builtin/repo.c:521 builtin/repo.c:533 builtin/repo.c:545
-#: builtin/repo.c:572
+#: builtin/repo.c:672 builtin/repo.c:687 builtin/repo.c:699 builtin/repo.c:711
+#: builtin/repo.c:738
 msgid "Tags"
 msgstr ""
 
-#: builtin/repo.c:507
+#: builtin/repo.c:673
 msgid "Remotes"
 msgstr ""
 
-#: builtin/repo.c:508
+#: builtin/repo.c:674
 msgid "Others"
 msgstr ""
 
-#: builtin/repo.c:512
+#: builtin/repo.c:678
 msgid "Reachable objects"
 msgstr ""
 
-#: builtin/repo.c:515 builtin/repo.c:527 builtin/repo.c:539 builtin/repo.c:549
+#: builtin/repo.c:681 builtin/repo.c:693 builtin/repo.c:705 builtin/repo.c:715
 msgid "Commits"
 msgstr ""
 
-#: builtin/repo.c:517 builtin/repo.c:529 builtin/repo.c:541 builtin/repo.c:558
+#: builtin/repo.c:683 builtin/repo.c:695 builtin/repo.c:707 builtin/repo.c:724
 msgid "Trees"
 msgstr ""
 
-#: builtin/repo.c:519 builtin/repo.c:531 builtin/repo.c:543 builtin/repo.c:567
+#: builtin/repo.c:685 builtin/repo.c:697 builtin/repo.c:709 builtin/repo.c:733
 msgid "Blobs"
 msgstr ""
 
-#: builtin/repo.c:525
+#: builtin/repo.c:691
 msgid "Inflated size"
 msgstr ""
 
-#: builtin/repo.c:537
+#: builtin/repo.c:703
 msgid "Disk size"
 msgstr ""
 
-#: builtin/repo.c:548
+#: builtin/repo.c:714
 msgid "Largest objects"
 msgstr ""
 
-#: builtin/repo.c:553 builtin/repo.c:562 builtin/repo.c:571 builtin/repo.c:576
+#: builtin/repo.c:719 builtin/repo.c:728 builtin/repo.c:737 builtin/repo.c:742
 msgid "Maximum size"
 msgstr ""
 
-#: builtin/repo.c:557
+#: builtin/repo.c:723
 msgid "Maximum parents"
 msgstr ""
 
-#: builtin/repo.c:566
+#: builtin/repo.c:732
 msgid "Maximum entries"
 msgstr ""
 
-#: builtin/repo.c:583
+#: builtin/repo.c:749
 msgid "Repository structure"
 msgstr ""
 
-#: builtin/repo.c:584
+#: builtin/repo.c:750
 msgid "Value"
 msgstr ""
 
-#: builtin/repo.c:792
+#: builtin/repo.c:958
 msgid "Counting references"
 msgstr ""
 
@@ -22208,8 +22225,13 @@ msgstr ""
 msgid "object-info capability is not enabled on the server"
 msgstr ""
 
-#: fetch-object-info.c:82
-msgid "unsupported protocol version. expected v2"
+#: fetch-object-info.c:80 transport-helper.c:795
+msgid "object-info requires protocol v2"
+msgstr ""
+
+#: fetch-object-info.c:119
+#, c-format
+msgid "object-info: expected OID: %s, got %s"
 msgstr ""
 
 #: fetch-pack.c:130
@@ -25273,7 +25295,7 @@ msgstr ""
 msgid "promisor remote '%s' advertised invalid filter '%s': %s"
 msgstr ""
 
-#: protocol-caps.c:105
+#: protocol-caps.c:138
 msgid "object-info: expected flush after arguments"
 msgstr ""
 
@@ -25398,192 +25420,192 @@ msgstr ""
 msgid "unable to enumerate additional recent objects"
 msgstr ""
 
-#: read-cache.c:710
+#: read-cache.c:690
 #, c-format
 msgid "will not add file alias '%s' ('%s' already exists in index)"
 msgstr ""
 
-#: read-cache.c:726
+#: read-cache.c:706
 msgid "cannot create an empty blob in the object database"
 msgstr ""
 
-#: read-cache.c:747
+#: read-cache.c:727
 #, c-format
 msgid "%s: can only add regular files, symbolic links or git-directories"
 msgstr ""
 
-#: read-cache.c:803
+#: read-cache.c:783
 #, c-format
 msgid "unable to index file '%s'"
 msgstr ""
 
-#: read-cache.c:822
+#: read-cache.c:802
 #, c-format
 msgid "unable to add '%s' to index"
 msgstr ""
 
-#: read-cache.c:1313
+#: read-cache.c:1293
 #, c-format
 msgid "'%s' appears as both a file and as a directory"
 msgstr ""
 
-#: read-cache.c:1530
+#: read-cache.c:1510
 msgid "Refresh index"
 msgstr ""
 
-#: read-cache.c:1662
+#: read-cache.c:1642
 #, c-format
 msgid ""
 "index.version set, but the value is invalid.\n"
 "Using version %i"
 msgstr ""
 
-#: read-cache.c:1672
+#: read-cache.c:1652
 #, c-format
 msgid ""
 "GIT_INDEX_VERSION set, but the value is invalid.\n"
 "Using version %i"
 msgstr ""
 
-#: read-cache.c:1730
+#: read-cache.c:1710
 #, c-format
 msgid "bad signature 0x%08x"
 msgstr ""
 
-#: read-cache.c:1733
+#: read-cache.c:1713
 #, c-format
 msgid "bad index version %d"
 msgstr ""
 
-#: read-cache.c:1748
+#: read-cache.c:1728
 msgid "bad index file sha1 signature"
 msgstr ""
 
-#: read-cache.c:1782
+#: read-cache.c:1762
 #, c-format
 msgid "index uses %.4s extension, which we do not understand"
 msgstr ""
 
-#: read-cache.c:1784
+#: read-cache.c:1764
 #, c-format
 msgid "ignoring %.4s extension"
 msgstr ""
 
-#: read-cache.c:1832
+#: read-cache.c:1812
 #, c-format
 msgid "unknown index entry format 0x%08x"
 msgstr ""
 
-#: read-cache.c:1848
+#: read-cache.c:1828
 #, c-format
 msgid "malformed name field in the index, near path '%s'"
 msgstr ""
 
-#: read-cache.c:1916
+#: read-cache.c:1896
 msgid "unordered stage entries in index"
 msgstr ""
 
-#: read-cache.c:1919
+#: read-cache.c:1899
 #, c-format
 msgid "multiple stage entries for merged file '%s'"
 msgstr ""
 
-#: read-cache.c:1922
+#: read-cache.c:1902
 #, c-format
 msgid "unordered stage entries for '%s'"
 msgstr ""
 
-#: read-cache.c:2181
+#: read-cache.c:2161
 #, c-format
 msgid "unable to create load_cache_entries thread: %s"
 msgstr ""
 
-#: read-cache.c:2194
+#: read-cache.c:2174
 #, c-format
 msgid "unable to join load_cache_entries thread: %s"
 msgstr ""
 
-#: read-cache.c:2243
+#: read-cache.c:2223
 #, c-format
 msgid "%s: index file open failed"
 msgstr ""
 
-#: read-cache.c:2247
+#: read-cache.c:2227
 #, c-format
 msgid "%s: cannot stat the open index"
 msgstr ""
 
-#: read-cache.c:2251
+#: read-cache.c:2231
 #, c-format
 msgid "%s: index file smaller than expected"
 msgstr ""
 
-#: read-cache.c:2255
+#: read-cache.c:2235
 #, c-format
 msgid "%s: unable to map index file%s"
 msgstr ""
 
-#: read-cache.c:2299
+#: read-cache.c:2279
 #, c-format
 msgid "unable to create load_index_extensions thread: %s"
 msgstr ""
 
-#: read-cache.c:2326
+#: read-cache.c:2306
 #, c-format
 msgid "unable to join load_index_extensions thread: %s"
 msgstr ""
 
-#: read-cache.c:2365
+#: read-cache.c:2345
 #, c-format
 msgid "could not freshen shared index '%s'"
 msgstr ""
 
-#: read-cache.c:2423
+#: read-cache.c:2403
 #, c-format
 msgid "broken index, expect %s in %s, got %s"
 msgstr ""
 
-#: read-cache.c:3006
+#: read-cache.c:2986
 msgid "cannot write split index for a sparse index"
 msgstr ""
 
-#: read-cache.c:3152
+#: read-cache.c:3132
 msgid "failed to convert to a sparse-index"
 msgstr ""
 
-#: read-cache.c:3238
+#: read-cache.c:3218
 #, c-format
 msgid "unable to open git dir: %s"
 msgstr ""
 
-#: read-cache.c:3252
+#: read-cache.c:3232
 #, c-format
 msgid "unable to unlink: %s"
 msgstr ""
 
-#: read-cache.c:3284
+#: read-cache.c:3264
 #, c-format
 msgid "cannot fix permission bits on '%s'"
 msgstr ""
 
-#: read-cache.c:3449
+#: read-cache.c:3429
 #, c-format
 msgid "%s: cannot drop to stage #0"
 msgstr ""
 
-#: read-cache.c:3980
+#: read-cache.c:3960
 #, c-format
 msgid ""
 "Skipping submodule due to ignore=all: %s\n"
 "Use --force if you really want to add the submodule."
 msgstr ""
 
-#: read-cache.c:4007
+#: read-cache.c:3987
 #, c-format
 msgid "unexpected diff status %c"
 msgstr ""
 
-#: read-cache.c:4027
+#: read-cache.c:4007
 #, c-format
 msgid "remove '%s'\n"
 msgstr ""
@@ -25692,7 +25714,7 @@ msgstr ""
 msgid "%s: 'preserve' superseded by 'merges'"
 msgstr ""
 
-#: ref-filter.c:52 wt-status.c:2252
+#: ref-filter.c:52 wt-status.c:2250
 msgid "gone"
 msgstr ""
 
@@ -29144,17 +29166,13 @@ msgstr ""
 msgid "can't connect to subservice %s"
 msgstr ""
 
-#: transport-helper.c:736 transport.c:533
+#: transport-helper.c:736 transport.c:532
 msgid "--negotiate-only requires protocol v2"
 msgstr ""
 
 #: transport-helper.c:777
 #, c-format
 msgid "ignoring %s because the protocol does not support it."
-msgstr ""
-
-#: transport-helper.c:795
-msgid "object-info requires protocol v2"
 msgstr ""
 
 #: transport-helper.c:818
@@ -29302,39 +29320,39 @@ msgstr ""
 msgid "server options require protocol version 2 or later"
 msgstr ""
 
-#: transport.c:474
+#: transport.c:473
 msgid "remote does not support object-info"
 msgstr ""
 
-#: transport.c:536
+#: transport.c:535
 msgid "server does not support wait-for-done"
 msgstr ""
 
-#: transport.c:902
+#: transport.c:901
 msgid "could not parse transport.color.* config"
 msgstr ""
 
-#: transport.c:980
+#: transport.c:979
 msgid "support for protocol v2 not implemented yet"
 msgstr ""
 
-#: transport.c:1203
+#: transport.c:1202
 #, c-format
 msgid "transport '%s' not allowed"
 msgstr ""
 
-#: transport.c:1256
+#: transport.c:1255
 msgid "git-over-rsync is no longer supported"
 msgstr ""
 
-#: transport.c:1362
+#: transport.c:1361
 #, c-format
 msgid ""
 "The following submodule paths contain changes that can\n"
 "not be found on any remote:\n"
 msgstr ""
 
-#: transport.c:1366
+#: transport.c:1365
 #, c-format
 msgid ""
 "\n"
@@ -29350,23 +29368,23 @@ msgid ""
 "\n"
 msgstr ""
 
-#: transport.c:1374
+#: transport.c:1373
 msgid "Aborting."
 msgstr ""
 
-#: transport.c:1548
+#: transport.c:1547
 msgid "failed to push all needed submodules"
 msgstr ""
 
-#: transport.c:1693
+#: transport.c:1692
 msgid "bundle-uri operation not supported by protocol"
 msgstr ""
 
-#: transport.c:1696
+#: transport.c:1695
 msgid "could not retrieve server-advertised bundle-uri list"
 msgstr ""
 
-#: transport.c:1720
+#: transport.c:1719
 msgid "operation not supported by protocol"
 msgstr ""
 
@@ -29865,11 +29883,11 @@ msgstr ""
 msgid "  (use \"git rm <file>...\" to mark resolution)"
 msgstr ""
 
-#: wt-status.c:231 wt-status.c:1203
+#: wt-status.c:231 wt-status.c:1201
 msgid "Changes to be committed:"
 msgstr ""
 
-#: wt-status.c:254 wt-status.c:1212
+#: wt-status.c:254 wt-status.c:1210
 msgid "Changes not staged for commit:"
 msgstr ""
 
@@ -29967,28 +29985,28 @@ msgstr ""
 msgid "untracked content, "
 msgstr ""
 
-#: wt-status.c:1029
+#: wt-status.c:1027
 #, c-format
 msgid "Your stash currently has %d entry"
 msgid_plural "Your stash currently has %d entries"
 msgstr[0] ""
 msgstr[1] ""
 
-#: wt-status.c:1060
+#: wt-status.c:1058
 msgid "Submodules changed but not updated:"
 msgstr ""
 
-#: wt-status.c:1062
+#: wt-status.c:1060
 msgid "Submodule changes to be committed:"
 msgstr ""
 
-#: wt-status.c:1147
+#: wt-status.c:1145
 msgid ""
 "Do not modify or remove the line above.\n"
 "Everything below it will be ignored."
 msgstr ""
 
-#: wt-status.c:1243
+#: wt-status.c:1241
 #, c-format
 msgid ""
 "\n"
@@ -29996,365 +30014,365 @@ msgid ""
 "You can use '--no-ahead-behind' to avoid this.\n"
 msgstr ""
 
-#: wt-status.c:1275
+#: wt-status.c:1273
 msgid "You have unmerged paths."
 msgstr ""
 
-#: wt-status.c:1278
+#: wt-status.c:1276
 msgid "  (fix conflicts and run \"git commit\")"
 msgstr ""
 
-#: wt-status.c:1280
+#: wt-status.c:1278
 msgid "  (use \"git merge --abort\" to abort the merge)"
 msgstr ""
 
-#: wt-status.c:1284
+#: wt-status.c:1282
 msgid "All conflicts fixed but you are still merging."
 msgstr ""
 
-#: wt-status.c:1287
+#: wt-status.c:1285
 msgid "  (use \"git commit\" to conclude merge)"
 msgstr ""
 
-#: wt-status.c:1298
+#: wt-status.c:1296
 msgid "You are in the middle of an am session."
 msgstr ""
 
-#: wt-status.c:1301
+#: wt-status.c:1299
 msgid "The current patch is empty."
 msgstr ""
 
-#: wt-status.c:1306
+#: wt-status.c:1304
 msgid "  (fix conflicts and then run \"git am --continue\")"
 msgstr ""
 
-#: wt-status.c:1308
+#: wt-status.c:1306
 msgid "  (use \"git am --skip\" to skip this patch)"
 msgstr ""
 
-#: wt-status.c:1311
+#: wt-status.c:1309
 msgid ""
 "  (use \"git am --allow-empty\" to record this patch as an empty commit)"
 msgstr ""
 
-#: wt-status.c:1313
+#: wt-status.c:1311
 msgid "  (use \"git am --abort\" to restore the original branch)"
 msgstr ""
 
-#: wt-status.c:1548
+#: wt-status.c:1546
 msgid "git-rebase-todo is missing."
 msgstr ""
 
-#: wt-status.c:1550
+#: wt-status.c:1548
 msgid "No commands done."
 msgstr ""
 
-#: wt-status.c:1553
+#: wt-status.c:1551
 #, c-format
 msgid "Last command done (%<PRIuMAX> command done):"
 msgid_plural "Last commands done (%<PRIuMAX> commands done):"
 msgstr[0] ""
 msgstr[1] ""
 
-#: wt-status.c:1565
+#: wt-status.c:1563
 #, c-format
 msgid "  (see more in file %s)"
 msgstr ""
 
-#: wt-status.c:1572
+#: wt-status.c:1570
 msgid "No commands remaining."
 msgstr ""
 
-#: wt-status.c:1575
+#: wt-status.c:1573
 #, c-format
 msgid "Next command to do (%<PRIuMAX> remaining command):"
 msgid_plural "Next commands to do (%<PRIuMAX> remaining commands):"
 msgstr[0] ""
 msgstr[1] ""
 
-#: wt-status.c:1583
+#: wt-status.c:1581
 msgid "  (use \"git rebase --edit-todo\" to view and edit)"
 msgstr ""
 
-#: wt-status.c:1595
+#: wt-status.c:1593
 #, c-format
 msgid "You are currently rebasing branch '%s' on '%s'."
 msgstr ""
 
-#: wt-status.c:1600
+#: wt-status.c:1598
 msgid "You are currently rebasing."
 msgstr ""
 
-#: wt-status.c:1613
+#: wt-status.c:1611
 msgid "  (fix conflicts and then run \"git rebase --continue\")"
 msgstr ""
 
-#: wt-status.c:1615
+#: wt-status.c:1613
 msgid "  (use \"git rebase --skip\" to skip this patch)"
 msgstr ""
 
-#: wt-status.c:1617
+#: wt-status.c:1615
 msgid "  (use \"git rebase --abort\" to check out the original branch)"
 msgstr ""
 
-#: wt-status.c:1624
+#: wt-status.c:1622
 msgid "  (all conflicts fixed: run \"git rebase --continue\")"
 msgstr ""
 
-#: wt-status.c:1628
+#: wt-status.c:1626
 #, c-format
 msgid ""
 "You are currently splitting a commit while rebasing branch '%s' on '%s'."
 msgstr ""
 
-#: wt-status.c:1633
+#: wt-status.c:1631
 msgid "You are currently splitting a commit during a rebase."
 msgstr ""
 
-#: wt-status.c:1636
+#: wt-status.c:1634
 msgid "  (Once your working directory is clean, run \"git rebase --continue\")"
 msgstr ""
 
-#: wt-status.c:1640
+#: wt-status.c:1638
 #, c-format
 msgid "You are currently editing a commit while rebasing branch '%s' on '%s'."
 msgstr ""
 
-#: wt-status.c:1645
+#: wt-status.c:1643
 msgid "You are currently editing a commit during a rebase."
 msgstr ""
 
-#: wt-status.c:1648
+#: wt-status.c:1646
 msgid "  (use \"git commit --amend\" to amend the current commit)"
 msgstr ""
 
-#: wt-status.c:1650
+#: wt-status.c:1648
 msgid ""
 "  (use \"git rebase --continue\" once you are satisfied with your changes)"
 msgstr ""
 
-#: wt-status.c:1661
+#: wt-status.c:1659
 msgid "Cherry-pick currently in progress."
 msgstr ""
 
-#: wt-status.c:1664
+#: wt-status.c:1662
 #, c-format
 msgid "You are currently cherry-picking commit %s."
 msgstr ""
 
-#: wt-status.c:1671
+#: wt-status.c:1669
 msgid "  (fix conflicts and run \"git cherry-pick --continue\")"
 msgstr ""
 
-#: wt-status.c:1674
+#: wt-status.c:1672
 msgid "  (run \"git cherry-pick --continue\" to continue)"
 msgstr ""
 
-#: wt-status.c:1677
+#: wt-status.c:1675
 msgid "  (all conflicts fixed: run \"git cherry-pick --continue\")"
 msgstr ""
 
-#: wt-status.c:1679
+#: wt-status.c:1677
 msgid "  (use \"git cherry-pick --skip\" to skip this patch)"
 msgstr ""
 
-#: wt-status.c:1681
+#: wt-status.c:1679
 msgid "  (use \"git cherry-pick --abort\" to cancel the cherry-pick operation)"
 msgstr ""
 
-#: wt-status.c:1691
+#: wt-status.c:1689
 msgid "Revert currently in progress."
 msgstr ""
 
-#: wt-status.c:1694
+#: wt-status.c:1692
 #, c-format
 msgid "You are currently reverting commit %s."
 msgstr ""
 
-#: wt-status.c:1700
+#: wt-status.c:1698
 msgid "  (fix conflicts and run \"git revert --continue\")"
 msgstr ""
 
-#: wt-status.c:1703
+#: wt-status.c:1701
 msgid "  (run \"git revert --continue\" to continue)"
 msgstr ""
 
-#: wt-status.c:1706
+#: wt-status.c:1704
 msgid "  (all conflicts fixed: run \"git revert --continue\")"
 msgstr ""
 
-#: wt-status.c:1708
+#: wt-status.c:1706
 msgid "  (use \"git revert --skip\" to skip this patch)"
 msgstr ""
 
-#: wt-status.c:1710
+#: wt-status.c:1708
 msgid "  (use \"git revert --abort\" to cancel the revert operation)"
 msgstr ""
 
-#: wt-status.c:1720
+#: wt-status.c:1718
 #, c-format
 msgid "You are currently bisecting, started from branch '%s'."
 msgstr ""
 
-#: wt-status.c:1724
+#: wt-status.c:1722
 msgid "You are currently bisecting."
 msgstr ""
 
-#: wt-status.c:1727
+#: wt-status.c:1725
 msgid "  (use \"git bisect reset\" to get back to the original branch)"
 msgstr ""
 
-#: wt-status.c:1738
+#: wt-status.c:1736
 msgid "You are in a sparse checkout."
 msgstr ""
 
-#: wt-status.c:1741
+#: wt-status.c:1739
 #, c-format
 msgid "You are in a sparse checkout with %d%% of tracked files present."
 msgstr ""
 
-#: wt-status.c:2001
+#: wt-status.c:1999
 msgid "On branch "
 msgstr ""
 
-#: wt-status.c:2008
+#: wt-status.c:2006
 msgid "interactive rebase in progress; onto "
 msgstr ""
 
-#: wt-status.c:2010
+#: wt-status.c:2008
 msgid "rebase in progress; onto "
 msgstr ""
 
-#: wt-status.c:2015
+#: wt-status.c:2013
 msgid "HEAD detached at "
 msgstr ""
 
-#: wt-status.c:2017
+#: wt-status.c:2015
 msgid "HEAD detached from "
 msgstr ""
 
-#: wt-status.c:2020
+#: wt-status.c:2018
 msgid "Not currently on any branch."
 msgstr ""
 
-#: wt-status.c:2037
+#: wt-status.c:2035
 msgid "Initial commit"
 msgstr ""
 
-#: wt-status.c:2038
+#: wt-status.c:2036
 msgid "No commits yet"
 msgstr ""
 
-#: wt-status.c:2052
+#: wt-status.c:2050
 msgid "Untracked files"
 msgstr ""
 
-#: wt-status.c:2054
+#: wt-status.c:2052
 msgid "Ignored files"
 msgstr ""
 
-#: wt-status.c:2059
+#: wt-status.c:2057
 #, c-format
 msgid ""
 "It took %.2f seconds to enumerate untracked files,\n"
 "but the results were cached, and subsequent runs may be faster."
 msgstr ""
 
-#: wt-status.c:2064
+#: wt-status.c:2062
 #, c-format
 msgid "It took %.2f seconds to enumerate untracked files."
 msgstr ""
 
-#: wt-status.c:2068
+#: wt-status.c:2066
 msgid "See 'git help status' for information on how to improve this."
 msgstr ""
 
-#: wt-status.c:2072
+#: wt-status.c:2070
 #, c-format
 msgid "Untracked files not listed%s"
 msgstr ""
 
-#: wt-status.c:2074
+#: wt-status.c:2072
 msgid " (use -u option to show untracked files)"
 msgstr ""
 
-#: wt-status.c:2080
+#: wt-status.c:2078
 msgid "No changes"
 msgstr ""
 
-#: wt-status.c:2085
+#: wt-status.c:2083
 #, c-format
 msgid "no changes added to commit (use \"git add\" and/or \"git commit -a\")\n"
 msgstr ""
 
-#: wt-status.c:2089
+#: wt-status.c:2087
 #, c-format
 msgid "no changes added to commit\n"
 msgstr ""
 
-#: wt-status.c:2093
+#: wt-status.c:2091
 #, c-format
 msgid ""
 "nothing added to commit but untracked files present (use \"git add\" to "
 "track)\n"
 msgstr ""
 
-#: wt-status.c:2097
+#: wt-status.c:2095
 #, c-format
 msgid "nothing added to commit but untracked files present\n"
 msgstr ""
 
-#: wt-status.c:2101
+#: wt-status.c:2099
 #, c-format
 msgid "nothing to commit (create/copy files and use \"git add\" to track)\n"
 msgstr ""
 
-#: wt-status.c:2105 wt-status.c:2111
+#: wt-status.c:2103 wt-status.c:2109
 #, c-format
 msgid "nothing to commit\n"
 msgstr ""
 
-#: wt-status.c:2108
+#: wt-status.c:2106
 #, c-format
 msgid "nothing to commit (use -u to show untracked files)\n"
 msgstr ""
 
-#: wt-status.c:2113
+#: wt-status.c:2111
 #, c-format
 msgid "nothing to commit, working tree clean\n"
 msgstr ""
 
-#: wt-status.c:2218
+#: wt-status.c:2216
 msgid "No commits yet on "
 msgstr ""
 
-#: wt-status.c:2222
+#: wt-status.c:2220
 msgid "HEAD (no branch)"
 msgstr ""
 
-#: wt-status.c:2254
+#: wt-status.c:2252
 msgid "different"
 msgstr ""
 
-#: wt-status.c:2256 wt-status.c:2264
+#: wt-status.c:2254 wt-status.c:2262
 msgid "behind "
 msgstr ""
 
-#: wt-status.c:2259 wt-status.c:2262
+#: wt-status.c:2257 wt-status.c:2260
 msgid "ahead "
 msgstr ""
 
 #. TRANSLATORS: the action is e.g. "pull with rebase"
-#: wt-status.c:2804
+#: wt-status.c:2802
 #, c-format
 msgid "cannot %s: You have unstaged changes."
 msgstr ""
 
-#: wt-status.c:2810
+#: wt-status.c:2808
 msgid "additionally, your index contains uncommitted changes."
 msgstr ""
 
-#: wt-status.c:2812
+#: wt-status.c:2810
 #, c-format
 msgid "cannot %s: Your index contains uncommitted changes."
 msgstr ""
