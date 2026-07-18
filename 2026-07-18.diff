@@ -1,0 +1,88 @@
+
+
+#################### Sat, 18 Jul 2026 01:07:42 +0000 ####################
+
+--- po/git.pot.old	2026-07-18 01:07:42.701474932 +0000
++++ po/git.pot.new	2026-07-18 01:07:42.787475786 +0000
+@@ -1637,6 +1637,9 @@
+ msgid "'-%c' is incompatible with batch mode"
+ msgstr ""
+ 
++msgid "'--auto-reset' cannot be used with '--no-checkout'"
++msgstr ""
++
+ msgid "'--ref' cannot be used with multiple revision ranges"
+ msgstr ""
+ 
+@@ -9138,10 +9141,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "cannot open file '%s' for reading"
+-msgstr ""
+-
+-#, c-format
+ msgid "cannot open file '%s' for writing"
+ msgstr ""
+ 
+@@ -12787,6 +12786,9 @@
+ msgid "failed to read '%s'"
+ msgstr ""
+ 
++msgid "failed to read BISECT_RUN output"
++msgstr ""
++
+ msgid "failed to read index"
+ msgstr ""
+ 
+@@ -12857,6 +12859,9 @@
+ msgid "failed to resolve NOTES_MERGE_REF"
+ msgstr ""
+ 
++msgid "failed to rewind BISECT_RUN output"
++msgstr ""
++
+ #, c-format
+ msgid "failed to run '%s'"
+ msgstr ""
+@@ -13641,7 +13646,7 @@
+ msgid "git bisect reset [<commit>]"
+ msgstr ""
+ 
+-msgid "git bisect run <cmd> [<arg>...]"
++msgid "git bisect run [--auto-reset[=<where>]] <cmd> [<arg>...]"
+ msgstr ""
+ 
+ msgid "git bisect skip [(<rev>|<range>)...]"
+@@ -13649,7 +13654,7 @@
+ 
+ msgid ""
+ "git bisect start [--term-(bad|new)=<term-new> --term-(good|old)=<term-old>]\n"
+-"                 [--no-checkout] [--first-parent] [<bad> [<good>...]] [--] [<pathspec>...]"
++"                 [--no-checkout] [--first-parent] [--auto-reset[=<where>]] [<bad> [<good>...]] [--] [<pathspec>...]"
+ msgstr ""
+ 
+ msgid "git blame [<options>] [<rev-opts>] [<rev>] [--] <file>"
+@@ -15903,6 +15908,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "invalid value for '--auto-reset': '%s'"
++msgstr ""
++
++#, c-format
+ msgid "invalid value for -j: %d (use -1 for CPU count or a positive integer)"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-po po/git.pot --------------------
+
+❌ CamelCase config variables
+    ERROR   [git.pot]   entry at L17494 (msgid): should use "core.repositoryFormatVersion" in msgid: "core.repositoryformatversion to 1.\\nPlease set it for migration"
+    ERROR   [git.pot]   entry at L17494 (msgid): should use "core.repositoryFormatVersion" in msgid: "for example:\\ngit config core.repositoryformatversion 1"
+    ERROR   [git.pot]   entry at L23043 (msgid): should use "http.proactiveAuth" in msgid: "http.proactiveauth"
+    ERROR   [git.pot]   entry at L23067 (msgid): should use "http.cookieFile" in msgid: "ing to read cookies from http.cookiefile '-'"
+    ERROR   [git.pot]   entry at L23071 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
+ERROR: 6457 entries checked, 574 config variables, 5 mismatched
+ERROR: check-po command failed
