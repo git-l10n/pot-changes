@@ -1,0 +1,89 @@
+
+
+#################### Mon, 20 Jul 2026 15:40:31 +0000 ####################
+
+--- po/git.pot.old	2026-07-20 15:40:31.819765276 +0000
++++ po/git.pot.new	2026-07-20 15:40:31.886762528 +0000
+@@ -1637,10 +1637,10 @@
+ msgid "'-%c' is incompatible with batch mode"
+ msgstr ""
+ 
+-msgid "'--auto-reset' cannot be used with '--no-checkout'"
++msgid "'--ref' cannot be used with multiple revision ranges"
+ msgstr ""
+ 
+-msgid "'--ref' cannot be used with multiple revision ranges"
++msgid "'--reset-when-found' cannot be used with '--no-checkout'"
+ msgstr ""
+ 
+ msgid "'GIT_AUTHOR_DATE' already given"
+@@ -9141,6 +9141,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "cannot open file '%s' for reading"
++msgstr ""
++
++#, c-format
+ msgid "cannot open file '%s' for writing"
+ msgstr ""
+ 
+@@ -12786,9 +12790,6 @@
+ msgid "failed to read '%s'"
+ msgstr ""
+ 
+-msgid "failed to read BISECT_RUN output"
+-msgstr ""
+-
+ msgid "failed to read index"
+ msgstr ""
+ 
+@@ -12859,9 +12860,6 @@
+ msgid "failed to resolve NOTES_MERGE_REF"
+ msgstr ""
+ 
+-msgid "failed to rewind BISECT_RUN output"
+-msgstr ""
+-
+ #, c-format
+ msgid "failed to run '%s'"
+ msgstr ""
+@@ -13646,7 +13644,7 @@
+ msgid "git bisect reset [<commit>]"
+ msgstr ""
+ 
+-msgid "git bisect run [--auto-reset[=<where>]] <cmd> [<arg>...]"
++msgid "git bisect run [--reset-when-found[=<where>]] <cmd> [<arg>...]"
+ msgstr ""
+ 
+ msgid "git bisect skip [(<rev>|<range>)...]"
+@@ -13654,7 +13652,7 @@
+ 
+ msgid ""
+ "git bisect start [--term-(bad|new)=<term-new> --term-(good|old)=<term-old>]\n"
+-"                 [--no-checkout] [--first-parent] [--auto-reset[=<where>]] [<bad> [<good>...]] [--] [<pathspec>...]"
++"                 [--no-checkout] [--first-parent] [--reset-when-found[=<where>]] [<bad> [<good>...]] [--] [<pathspec>...]"
+ msgstr ""
+ 
+ msgid "git blame [<options>] [<rev-opts>] [<rev>] [--] <file>"
+@@ -15908,7 +15906,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "invalid value for '--auto-reset': '%s'"
++msgid "invalid value for '--reset-when-found': '%s'"
+ msgstr ""
+ 
+ #, c-format
+
+
+-------------------- git-po-helper check-po po/git.pot --------------------
+
+❌ CamelCase config variables
+    ERROR   [git.pot]   entry at L17491 (msgid): should use "core.repositoryFormatVersion" in msgid: "core.repositoryformatversion to 1.\\nPlease set it for migration"
+    ERROR   [git.pot]   entry at L17491 (msgid): should use "core.repositoryFormatVersion" in msgid: "for example:\\ngit config core.repositoryformatversion 1"
+    ERROR   [git.pot]   entry at L23040 (msgid): should use "http.proactiveAuth" in msgid: "http.proactiveauth"
+    ERROR   [git.pot]   entry at L23064 (msgid): should use "http.cookieFile" in msgid: "ing to read cookies from http.cookiefile '-'"
+    ERROR   [git.pot]   entry at L23068 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
+ERROR: 6456 entries checked, 532 config variables, 5 mismatched
+ERROR: check-po command failed
