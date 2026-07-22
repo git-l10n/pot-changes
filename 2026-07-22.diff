@@ -1,0 +1,57 @@
+
+
+#################### Wed, 22 Jul 2026 20:03:28 +0000 ####################
+
+--- po/git.pot.old	2026-07-22 20:03:28.526822738 +0000
++++ po/git.pot.new	2026-07-22 20:03:28.612824442 +0000
+@@ -1632,6 +1632,9 @@
+ msgid "'--ref' cannot be used with multiple revision ranges"
+ msgstr ""
+ 
++msgid "'--reset-when-found' cannot be used with '--no-checkout'"
++msgstr ""
++
+ msgid "'GIT_AUTHOR_DATE' already given"
+ msgstr ""
+ 
+@@ -13495,7 +13498,7 @@
+ msgid "git bisect reset [<commit>]"
+ msgstr ""
+ 
+-msgid "git bisect run <cmd> [<arg>...]"
++msgid "git bisect run [--reset-when-found[=<where>]] <cmd> [<arg>...]"
+ msgstr ""
+ 
+ msgid "git bisect skip [(<rev>|<range>)...]"
+@@ -13503,7 +13506,7 @@
+ 
+ msgid ""
+ "git bisect start [--term-(bad|new)=<term-new> --term-(good|old)=<term-old>]\n"
+-"                 [--no-checkout] [--first-parent] [<bad> [<good>...]] [--] [<pathspec>...]"
++"                 [--no-checkout] [--first-parent] [--reset-when-found[=<where>]] [<bad> [<good>...]] [--] [<pathspec>...]"
+ msgstr ""
+ 
+ msgid "git blame [<options>] [<rev-opts>] [<rev>] [--] <file>"
+@@ -15732,6 +15735,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "invalid value for '--reset-when-found': '%s'"
++msgstr ""
++
++#, c-format
+ msgid "invalid value for -j: %d (use -1 for CPU count or a positive integer)"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-po po/git.pot --------------------
+
+❌ CamelCase config variables
+    ERROR   [git.pot]   entry at L17132 (msgid): should use "core.repositoryFormatVersion" in msgid: "core.repositoryformatversion to 1.\\nPlease set it for migration"
+    ERROR   [git.pot]   entry at L17132 (msgid): should use "core.repositoryFormatVersion" in msgid: "for example:\\ngit config core.repositoryformatversion 1"
+    ERROR   [git.pot]   entry at L22672 (msgid): should use "http.proactiveAuth" in msgid: "http.proactiveauth"
+    ERROR   [git.pot]   entry at L22696 (msgid): should use "http.cookieFile" in msgid: "ing to read cookies from http.cookiefile '-'"
+    ERROR   [git.pot]   entry at L22700 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
+ERROR: 6375 entries checked, 573 config variables, 5 mismatched
+ERROR: check-po command failed
