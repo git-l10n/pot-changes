@@ -1,0 +1,231 @@
+
+
+#################### Fri, 24 Jul 2026 22:46:02 +0000 ####################
+
+--- po/git.pot.old	2026-07-24 22:46:02.036211824 +0000
++++ po/git.pot.new	2026-07-24 22:46:02.121213229 +0000
+@@ -1525,6 +1525,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "'%s' points into the squashed range"
++msgstr ""
++
++#, c-format
+ msgid "'%s' requires 0 arguments"
+ msgstr ""
+ 
+@@ -6867,6 +6871,9 @@
+ msgid "Use 'git am --show-current-patch=diff' to see the failed patch"
+ msgstr ""
+ 
++msgid "Use --update-refs=head to rewrite only the current branch and leave such refs untouched."
++msgstr ""
++
+ msgid "Use -f if you really want to add them."
+ msgstr ""
+ 
+@@ -9283,6 +9290,10 @@
+ msgid "cannot split up merge commit"
+ msgstr ""
+ 
++#, c-format
++msgid "cannot squash '%s': its target is not in the range"
++msgstr ""
++
+ msgid "cannot squash merge commit into another commit"
+ msgstr ""
+ 
+@@ -9611,6 +9622,9 @@
+ msgid "command expects a committish"
+ msgstr ""
+ 
++msgid "command expects a revision range"
++msgstr ""
++
+ msgid "command expects a single revision"
+ msgstr ""
+ 
+@@ -10057,6 +10071,9 @@
+ msgid "could not check out original HEAD '%s'. Try 'git bisect reset <commit>'."
+ msgstr ""
+ 
++msgid "could not check the range for fixups"
++msgstr ""
++
+ #, c-format
+ msgid "could not close '%s'"
+ msgstr ""
+@@ -10552,6 +10569,9 @@
+ msgid "could not parse transport.color.* config"
+ msgstr ""
+ 
++msgid "could not prepare the squash message"
++msgstr ""
++
+ #, c-format
+ msgid "could not push to %s"
+ msgstr ""
+@@ -12502,6 +12522,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "failed to get object info from the remote: %s"
++msgstr ""
++
++#, c-format
+ msgid "failed to get owner for '%s' (%ld)"
+ msgstr ""
+ 
+@@ -12920,6 +12944,9 @@
+ msgid "failed writing second commit"
+ msgstr ""
+ 
++msgid "failed writing squashed commit"
++msgstr ""
++
+ #, c-format
+ msgid "failed writing ssh signing key buffer to '%s'"
+ msgstr ""
+@@ -13827,6 +13854,9 @@
+ msgid "git history split <commit> [--dry-run] [--update-refs=(branches|head)] [--] [<pathspec>...]"
+ msgstr ""
+ 
++msgid "git history squash [--dry-run] [--update-refs=(branches|head)] [--reedit-message] <revision-range>"
++msgstr ""
++
+ msgid "git hook list [--allow-unknown-hook-name] [-z] [--show-scope] <hook-name>"
+ msgstr ""
+ 
+@@ -14954,6 +14984,9 @@
+ msgid "ignoring ref with broken name %s"
+ msgstr ""
+ 
++msgid "ignoring rev-list options that would change how the range is walked"
++msgstr ""
++
+ #, c-format
+ msgid "ignoring suspicious submodule name: %s"
+ msgstr ""
+@@ -16625,6 +16658,9 @@
+ msgid "must supply remote when using --negotiate-only"
+ msgstr ""
+ 
++msgid "must supply valid remote when using remote-object-info"
++msgstr ""
++
+ msgid "n"
+ msgstr ""
+ 
+@@ -17018,6 +17054,9 @@
+ msgid "not a %s (actually a %s): %s"
+ msgstr ""
+ 
++msgid "not a '<base>..<tip>' revision range"
++msgstr ""
++
+ #, c-format
+ msgid "not a blob (actually a %s): %s"
+ msgstr ""
+@@ -17121,6 +17160,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "not a valid object name '%s'"
++msgstr ""
++
++#, c-format
+ msgid "not a valid object name: %s"
+ msgstr ""
+ 
+@@ -17393,6 +17436,16 @@
+ msgid "object type mismatch at %s"
+ msgstr ""
+ 
++msgid "object-info capability is not enabled on the server"
++msgstr ""
++
++msgid "object-info requires protocol v2"
++msgstr ""
++
++#, c-format
++msgid "object-info: expected OID: %s, got %s"
++msgstr ""
++
+ msgid "object-info: expected flush after arguments"
+ msgstr ""
+ 
+@@ -18998,6 +19051,9 @@
+ msgid "remote did not send all necessary objects"
+ msgstr ""
+ 
++msgid "remote does not support object-info"
++msgstr ""
++
+ #, c-format
+ msgid "remote error: %s"
+ msgstr ""
+@@ -19050,6 +19106,24 @@
+ msgid "remote-helper doesn't support push; refspec needed"
+ msgstr ""
+ 
++msgid "remote-object-info command too long"
++msgstr ""
++
++#, c-format
++msgid "remote-object-info does not support short oids, %d characters required"
++msgstr ""
++
++msgid "remote-object-info requires objects"
++msgstr ""
++
++#, c-format
++msgid "remote-object-info supports at most %d objects"
++msgstr ""
++
++#, c-format
++msgid "remote-object-info: failed to parse command line: %s"
++msgstr ""
++
+ #, c-format
+ msgid "remote-tracking branch '%s' not found"
+ msgstr ""
+@@ -20913,6 +20987,15 @@
+ msgid "the requested upstream branch '%s' does not exist"
+ msgstr ""
+ 
++msgid "the revision range has more than one base; cannot squash"
++msgstr ""
++
++msgid "the revision range holds a single commit; nothing to squash"
++msgstr ""
++
++msgid "the revision range is empty"
++msgstr ""
++
+ msgid "the script was already rearranged."
+ msgstr ""
+ 
+@@ -21636,10 +21719,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unable to parse parent of %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "unable to parse remote unpack status: %s"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-po po/git.pot --------------------
+
+❌ CamelCase config variables
+    ERROR   [git.pot]   entry at L17225 (msgid): should use "core.repositoryFormatVersion" in msgid: "core.repositoryformatversion to 1.\\nPlease set it for migration"
+    ERROR   [git.pot]   entry at L17225 (msgid): should use "core.repositoryFormatVersion" in msgid: "for example:\\ngit config core.repositoryformatversion 1"
+    ERROR   [git.pot]   entry at L22778 (msgid): should use "http.proactiveAuth" in msgid: "http.proactiveauth"
+    ERROR   [git.pot]   entry at L22802 (msgid): should use "http.cookieFile" in msgid: "ing to read cookies from http.cookiefile '-'"
+    ERROR   [git.pot]   entry at L22806 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
+ERROR: 6399 entries checked, 574 config variables, 5 mismatched
+ERROR: check-po command failed
