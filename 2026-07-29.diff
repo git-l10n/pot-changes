@@ -27,3 +27,283 @@
     ERROR   [git.pot]   entry at L22850 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
 ERROR: 6407 entries checked, 574 config variables, 5 mismatched
 ERROR: check-po command failed
+
+
+#################### Wed, 29 Jul 2026 20:04:12 +0000 ####################
+
+--- po/git.pot.old	2026-07-29 20:04:12.290747259 +0000
++++ po/git.pot.new	2026-07-29 20:04:12.373746625 +0000
+@@ -1425,10 +1425,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "'%s' is not a valid branch or pattern"
+-msgstr ""
+-
+-#, c-format
+ msgid "'%s' is not a valid commit"
+ msgstr ""
+ 
+@@ -1529,10 +1525,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "'%s' points into the squashed range"
+-msgstr ""
+-
+-#, c-format
+ msgid "'%s' requires 0 arguments"
+ msgstr ""
+ 
+@@ -1640,9 +1632,6 @@
+ msgid "'--ref' cannot be used with multiple revision ranges"
+ msgstr ""
+ 
+-msgid "'--reset-when-found' cannot be used with '--no-checkout'"
+-msgstr ""
+-
+ msgid "'GIT_AUTHOR_DATE' already given"
+ msgstr ""
+ 
+@@ -1986,9 +1975,6 @@
+ msgid "--depth is ignored in local clones; use file:// instead."
+ msgstr ""
+ 
+-msgid "--dry-run requires --delete-merged"
+-msgstr ""
+-
+ msgid "--dump-aliases and --translate-aliases are mutually exclusive\n"
+ msgstr ""
+ 
+@@ -5815,10 +5801,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "Skipping '%s' (branch.%s.deleteMerged is false)\n"
+-msgstr ""
+-
+-#, c-format
+ msgid "Skipping repository %s\n"
+ msgstr ""
+ 
+@@ -6882,9 +6864,6 @@
+ msgid "Use 'git am --show-current-patch=diff' to see the failed patch"
+ msgstr ""
+ 
+-msgid "Use --update-refs=head to rewrite only the current branch and leave such refs untouched."
+-msgstr ""
+-
+ msgid "Use -f if you really want to add them."
+ msgstr ""
+ 
+@@ -7046,14 +7025,6 @@
+ msgid "Wonderful.\n"
+ msgstr ""
+ 
+-#, c-format
+-msgid "Would delete branch %s (was %s).\n"
+-msgstr ""
+-
+-#, c-format
+-msgid "Would delete remote-tracking branch %s (was %s).\n"
+-msgstr ""
+-
+ msgid "Would refuse to remove current working directory\n"
+ msgstr ""
+ 
+@@ -9313,10 +9284,6 @@
+ msgid "cannot split up merge commit"
+ msgstr ""
+ 
+-#, c-format
+-msgid "cannot squash '%s': its target is not in the range"
+-msgstr ""
+-
+ msgid "cannot squash merge commit into another commit"
+ msgstr ""
+ 
+@@ -9645,9 +9612,6 @@
+ msgid "command expects a committish"
+ msgstr ""
+ 
+-msgid "command expects a revision range"
+-msgstr ""
+-
+ msgid "command expects a single revision"
+ msgstr ""
+ 
+@@ -10094,9 +10058,6 @@
+ msgid "could not check out original HEAD '%s'. Try 'git bisect reset <commit>'."
+ msgstr ""
+ 
+-msgid "could not check the range for fixups"
+-msgstr ""
+-
+ #, c-format
+ msgid "could not close '%s'"
+ msgstr ""
+@@ -10592,9 +10553,6 @@
+ msgid "could not parse transport.color.* config"
+ msgstr ""
+ 
+-msgid "could not prepare the squash message"
+-msgstr ""
+-
+ #, c-format
+ msgid "could not push to %s"
+ msgstr ""
+@@ -11236,9 +11194,6 @@
+ msgid "delete fully merged branch"
+ msgstr ""
+ 
+-msgid "delete merged branches whose upstream matches <branch> (repeatable)"
+-msgstr ""
+-
+ msgid "delete refs"
+ msgstr ""
+ 
+@@ -12964,9 +12919,6 @@
+ msgid "failed writing second commit"
+ msgstr ""
+ 
+-msgid "failed writing squashed commit"
+-msgstr ""
+-
+ #, c-format
+ msgid "failed writing ssh signing key buffer to '%s'"
+ msgstr ""
+@@ -13545,7 +13497,7 @@
+ msgid "git bisect reset [<commit>]"
+ msgstr ""
+ 
+-msgid "git bisect run [--reset-when-found[=<where>]] <cmd> [<arg>...]"
++msgid "git bisect run <cmd> [<arg>...]"
+ msgstr ""
+ 
+ msgid "git bisect skip [(<rev>|<range>)...]"
+@@ -13553,15 +13505,12 @@
+ 
+ msgid ""
+ "git bisect start [--term-(bad|new)=<term-new> --term-(good|old)=<term-old>]\n"
+-"                 [--no-checkout] [--first-parent] [--reset-when-found[=<where>]] [<bad> [<good>...]] [--] [<pathspec>...]"
++"                 [--no-checkout] [--first-parent] [<bad> [<good>...]] [--] [<pathspec>...]"
+ msgstr ""
+ 
+ msgid "git blame [<options>] [<rev-opts>] [<rev>] [--] <file>"
+ msgstr ""
+ 
+-msgid "git branch [<options>] (--delete-merged <branch>)... [<pattern>...]"
+-msgstr ""
+-
+ msgid "git branch [<options>] (-c | -C) [<old-branch>] <new-branch>"
+ msgstr ""
+ 
+@@ -13577,7 +13526,7 @@
+ msgid "git branch [<options>] [-r | -a] [--format]"
+ msgstr ""
+ 
+-msgid "git branch [<options>] [-r | -a] [--merged] [--no-merged] [(--forked <branch>)...]"
++msgid "git branch [<options>] [-r | -a] [--merged] [--no-merged]"
+ msgstr ""
+ 
+ msgid "git branch [<options>] [-r | -a] [--points-at]"
+@@ -13877,9 +13826,6 @@
+ msgid "git history split <commit> [--dry-run] [--update-refs=(branches|head)] [--] [<pathspec>...]"
+ msgstr ""
+ 
+-msgid "git history squash [--dry-run] [--update-refs=(branches|head)] [--reedit-message] <revision-range>"
+-msgstr ""
+-
+ msgid "git hook list [--allow-unknown-hook-name] [-z] [--show-scope] <hook-name>"
+ msgstr ""
+ 
+@@ -15007,9 +14953,6 @@
+ msgid "ignoring ref with broken name %s"
+ msgstr ""
+ 
+-msgid "ignoring rev-list options that would change how the range is walked"
+-msgstr ""
+-
+ #, c-format
+ msgid "ignoring suspicious submodule name: %s"
+ msgstr ""
+@@ -15791,10 +15734,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "invalid value for '--reset-when-found': '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "invalid value for -j: %d (use -1 for CPU count or a positive integer)"
+ msgstr ""
+ 
+@@ -17077,9 +17016,6 @@
+ msgid "not a %s (actually a %s): %s"
+ msgstr ""
+ 
+-msgid "not a '<base>..<tip>' revision range"
+-msgstr ""
+-
+ #, c-format
+ msgid "not a blob (actually a %s): %s"
+ msgstr ""
+@@ -18360,9 +18296,6 @@
+ msgid "print only branches that don't contain the commit"
+ msgstr ""
+ 
+-msgid "print only branches whose upstream matches <branch> (repeatable)"
+-msgstr ""
+-
+ msgid "print only error messages"
+ msgstr ""
+ 
+@@ -21013,15 +20946,6 @@
+ msgid "the requested upstream branch '%s' does not exist"
+ msgstr ""
+ 
+-msgid "the revision range has more than one base; cannot squash"
+-msgstr ""
+-
+-msgid "the revision range holds a single commit; nothing to squash"
+-msgstr ""
+-
+-msgid "the revision range is empty"
+-msgstr ""
+-
+ msgid "the script was already rearranged."
+ msgstr ""
+ 
+@@ -21745,6 +21669,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unable to parse parent of %s"
++msgstr ""
++
++#, c-format
+ msgid "unable to parse remote unpack status: %s"
+ msgstr ""
+ 
+@@ -23187,9 +23115,6 @@
+ msgid "with --cruft, only repack cruft packs smaller than this"
+ msgstr ""
+ 
+-msgid "with --delete-merged, only print which branches would be deleted"
+-msgstr ""
+-
+ msgid "with --get, use default value when missing entry"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-po po/git.pot --------------------
+
+❌ CamelCase config variables
+    ERROR   [git.pot]   entry at L17161 (msgid): should use "core.repositoryFormatVersion" in msgid: "core.repositoryformatversion to 1.\\nPlease set it for migration"
+    ERROR   [git.pot]   entry at L17161 (msgid): should use "core.repositoryFormatVersion" in msgid: "for example:\\ngit config core.repositoryformatversion 1"
+    ERROR   [git.pot]   entry at L22714 (msgid): should use "http.proactiveAuth" in msgid: "http.proactiveauth"
+    ERROR   [git.pot]   entry at L22738 (msgid): should use "http.cookieFile" in msgid: "ing to read cookies from http.cookiefile '-'"
+    ERROR   [git.pot]   entry at L22742 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
+ERROR: 6384 entries checked, 574 config variables, 5 mismatched
+ERROR: check-po command failed
