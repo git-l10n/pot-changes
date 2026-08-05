@@ -1,0 +1,221 @@
+
+
+#################### Wed, 05 Aug 2026 22:00:18 +0000 ####################
+
+--- po/git.pot.old	2026-08-05 22:00:17.963518549 +0000
++++ po/git.pot.new	2026-08-05 22:00:18.049518172 +0000
+@@ -1529,10 +1529,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "'%s' points into the squashed range"
+-msgstr ""
+-
+-#, c-format
+ msgid "'%s' requires 0 arguments"
+ msgstr ""
+ 
+@@ -1935,6 +1931,9 @@
+ msgid "--author '%s' is not 'Name <email>' and matches no existing author"
+ msgstr ""
+ 
++msgid "--big-file-threshold: argument must be a non-negative integer"
++msgstr ""
++
+ msgid "--blob can only be used inside a git repository"
+ msgstr ""
+ 
+@@ -2062,6 +2061,9 @@
+ msgid "--max-pack-size cannot be used to build a pack for transfer"
+ msgstr ""
+ 
++msgid "--max-pack-size: argument must be a non-negative integer"
++msgstr ""
++
+ msgid "--merge requires one of the pseudorefs MERGE_HEAD, CHERRY_PICK_HEAD, REVERT_HEAD or REBASE_HEAD"
+ msgstr ""
+ 
+@@ -7681,6 +7683,9 @@
+ msgid "a branch named '%s' already exists"
+ msgstr ""
+ 
++msgid "a branch points to a commit that is being squashed"
++msgstr ""
++
+ #, c-format
+ msgid "a notes merge into %s is already in-progress at %s"
+ msgstr ""
+@@ -9206,6 +9211,9 @@
+ msgid "cannot parse color '%s'"
+ msgstr ""
+ 
++msgid "cannot parse commit"
++msgstr ""
++
+ #, c-format
+ msgid "cannot parse commit %s"
+ msgstr ""
+@@ -9383,7 +9391,14 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "cannot squash '%s': its target is not in the range"
++msgid "cannot squash %s (%s) that does not target base commit without '--edit'"
++msgstr ""
++
++#, c-format
++msgid "cannot squash %s (%s): its target is not being squashed"
++msgstr ""
++
++msgid "cannot squash down to root commit"
+ msgstr ""
+ 
+ msgid "cannot squash merge commit into another commit"
+@@ -10169,9 +10184,6 @@
+ msgid "could not check out original HEAD '%s'. Try 'git bisect reset <commit>'."
+ msgstr ""
+ 
+-msgid "could not check the range for fixups"
+-msgstr ""
+-
+ #, c-format
+ msgid "could not close '%s'"
+ msgstr ""
+@@ -10350,6 +10362,9 @@
+ msgid "could not figure out destination name from '%s'"
+ msgstr ""
+ 
++msgid "could not filter refs"
++msgstr ""
++
+ #, c-format
+ msgid "could not find '%s' in pack '%s' at offset %<PRIuMAX>"
+ msgstr ""
+@@ -13210,6 +13225,9 @@
+ "Set sendemail.forbidSendmailVariables to false to disable this check.\n"
+ msgstr ""
+ 
++msgid "fd"
++msgstr ""
++
+ #, c-format
+ msgid "feature '%s' forbidden in input without --allow-unsafe-features"
+ msgstr ""
+@@ -15151,6 +15169,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "ignoring %s (%s): message body is empty"
++msgstr ""
++
++#, c-format
+ msgid "ignoring %s because the protocol does not support it"
+ msgstr ""
+ 
+@@ -17699,6 +17721,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "object-info: expected %<PRIuMAX> attributes, got %<PRIuMAX>"
++msgstr ""
++
++#, c-format
+ msgid "object-info: expected %<PRIuMAX> objects, got %<PRIuMAX>"
+ msgstr ""
+ 
+@@ -17706,6 +17732,10 @@
+ msgid "object-info: expected OID: %s, got %s"
+ msgstr ""
+ 
++#, c-format
++msgid "object-info: expected flush after %<PRIuMAX> objects"
++msgstr ""
++
+ msgid "object-info: expected flush after arguments"
+ msgstr ""
+ 
+@@ -17713,6 +17743,10 @@
+ msgid "object-info: object %s has invalid type '%s'"
+ msgstr ""
+ 
++#, c-format
++msgid "object-info: unknown attribute '%s'"
++msgstr ""
++
+ msgid "object-info: unrequested 'size' attribute"
+ msgstr ""
+ 
+@@ -18194,6 +18228,10 @@
+ msgid "parent"
+ msgstr ""
+ 
++#, c-format
++msgid "parent %s of commit %s is outside the revision range"
++msgstr ""
++
+ msgid "parent-number"
+ msgstr ""
+ 
+@@ -20710,6 +20748,14 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "squashing %s (%s) would discard its message, please combine them using '--edit'"
++msgstr ""
++
++#, c-format
++msgid "squashing %s (%s) would overwrite 'squash!' message, please combine them using '--edit'"
++msgstr ""
++
++#, c-format
+ msgid "squelched %d whitespace error"
+ msgid_plural "squelched %d whitespace errors"
+ msgstr[0] ""
+@@ -21282,13 +21328,7 @@
+ msgid "the requested upstream branch '%s' does not exist"
+ msgstr ""
+ 
+-msgid "the revision range has more than one base; cannot squash"
+-msgstr ""
+-
+-msgid "the revision range has more than one tip; cannot squash"
+-msgstr ""
+-
+-msgid "the revision range has no base; cannot squash"
++msgid "the revision range contains more than one tip commit"
+ msgstr ""
+ 
+ msgid "the revision range holds a single commit; nothing to squash"
+@@ -21297,9 +21337,6 @@
+ msgid "the revision range is empty"
+ msgstr ""
+ 
+-msgid "the revision range reaches a root commit; cannot squash"
+-msgstr ""
+-
+ msgid "the script was already rearranged."
+ msgstr ""
+ 
+@@ -22623,10 +22660,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unknown option --%s"
+-msgstr ""
+-
+-#, c-format
+ msgid "unknown option `%s'"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-po po/git.pot --------------------
+
+❌ CamelCase config variables
+    ERROR   [git.pot]   entry at L17579 (msgid): should use "core.repositoryFormatVersion" in msgid: "core.repositoryformatversion to 1.\\nPlease set it for migration"
+    ERROR   [git.pot]   entry at L17579 (msgid): should use "core.repositoryFormatVersion" in msgid: "for example:\\ngit config core.repositoryformatversion 1"
+    ERROR   [git.pot]   entry at L23291 (msgid): should use "http.proactiveAuth" in msgid: "http.proactiveauth"
+    ERROR   [git.pot]   entry at L23315 (msgid): should use "http.cookieFile" in msgid: "ing to read cookies from http.cookiefile '-'"
+    ERROR   [git.pot]   entry at L23319 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
+ERROR: 6506 entries checked, 535 config variables, 5 mismatched
+ERROR: check-po command failed
