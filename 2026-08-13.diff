@@ -194,3 +194,97 @@ ERROR: check-po command failed
     ERROR   [git.pot]   entry at L23340 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
 ERROR: 6513 entries checked, 538 config variables, 5 mismatched
 ERROR: check-po command failed
+
+
+#################### Thu, 13 Aug 2026 21:30:34 +0000 ####################
+
+--- po/git.pot.old	2026-08-13 21:30:34.166328202 +0000
++++ po/git.pot.new	2026-08-13 21:30:34.254327979 +0000
+@@ -1992,6 +1992,24 @@
+ msgid "--depth is ignored in local clones; use file:// instead."
+ msgstr ""
+ 
++msgid "--drop-filtered cannot be used while another operation (merge, rebase, am, cherry-pick, revert, or bisect) is in progress"
++msgstr ""
++
++msgid "--drop-filtered only supports --filter=blob:limit=<n> for now"
++msgstr ""
++
++msgid "--drop-filtered requires --filter"
++msgstr ""
++
++msgid "--drop-filtered requires -a"
++msgstr ""
++
++msgid "--drop-filtered requires a promisor remote"
++msgstr ""
++
++msgid "--dry-run only takes effect with --drop-filtered"
++msgstr ""
++
+ msgid "--dry-run requires --delete-merged"
+ msgstr ""
+ 
+@@ -8970,6 +8988,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "cannot drop '%s' (%s): it is referenced by the current index"
++msgstr ""
++
++#, c-format
+ msgid "cannot drop merge commit: %s"
+ msgstr ""
+ 
+@@ -11354,6 +11376,9 @@
+ msgid "delete branch (even if not merged)"
+ msgstr ""
+ 
++msgid "delete filtered out objects (requires --filter)"
++msgstr ""
++
+ msgid "delete fully merged branch"
+ msgstr ""
+ 
+@@ -13352,6 +13377,9 @@
+ msgid "files '%s' and '%s' differ in contents"
+ msgstr ""
+ 
++msgid "filter_oidset: only blob:limit filters are supported"
++msgstr ""
++
+ #, c-format
+ msgid "final chunk has non-zero id %<PRIx32>"
+ msgstr ""
+@@ -14473,7 +14501,8 @@
+ msgid ""
+ "git repack [-a] [-A] [-d] [-f] [-F] [-l] [-n] [-q] [-b] [-m]\n"
+ "[--window=<n>] [--depth=<n>] [--threads=<n>] [--keep-pack=<pack-name>]\n"
+-"[--write-midx[=<mode>]] [--name-hash-version=<n>] [--path-walk]"
++"[--write-midx[=<mode>]] [--name-hash-version=<n>] [--path-walk]\n"
++"[--filter=<filter-spec>] [--drop-filtered [--dry-run]]"
+ msgstr ""
+ 
+ msgid "git replace -d <object>..."
+@@ -17912,6 +17941,9 @@
+ msgid "only show untracked files in the stash"
+ msgstr ""
+ 
++msgid "only show which objects would be dropped"
++msgstr ""
++
+ #, c-format
+ msgid "only two arguments allowed in <type> <object> mode, not %d"
+ msgstr ""
+
+
+-------------------- git-po-helper check-po po/git.pot --------------------
+
+❌ CamelCase config variables
+    ERROR   [git.pot]   entry at L17613 (msgid): should use "core.repositoryFormatVersion" in msgid: "core.repositoryformatversion to 1.\\nPlease set it for migration"
+    ERROR   [git.pot]   entry at L17613 (msgid): should use "core.repositoryFormatVersion" in msgid: "for example:\\ngit config core.repositoryformatversion 1"
+    ERROR   [git.pot]   entry at L23346 (msgid): should use "http.proactiveAuth" in msgid: "http.proactiveauth"
+    ERROR   [git.pot]   entry at L23376 (msgid): should use "http.cookieFile" in msgid: "ing to read cookies from http.cookiefile '-'"
+    ERROR   [git.pot]   entry at L23380 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
+ERROR: 6523 entries checked, 538 config variables, 5 mismatched
+ERROR: check-po command failed
