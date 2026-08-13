@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2026-08-13 18:41+0000\n"
+"POT-Creation-Date: 2026-08-13 20:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -864,7 +864,7 @@ msgstr ""
 msgid "unclosed quote"
 msgstr ""
 
-#: alias.c:123 builtin/cat-file.c:1359 builtin/name-rev.c:848
+#: alias.c:123 builtin/cat-file.c:1359 builtin/name-rev.c:868
 #: builtin/notes.c:453 builtin/notes.c:519 builtin/notes.c:601
 #: builtin/notes.c:613 builtin/notes.c:699 builtin/notes.c:776
 #: builtin/notes.c:930 builtin/notes.c:1093 builtin/notes.c:1117
@@ -2773,7 +2773,7 @@ msgstr ""
 #: builtin/cat-file.c:1225 builtin/cat-file.c:1229 builtin/cat-file.c:1236
 #: builtin/clone.c:984 builtin/diagnose.c:32 builtin/for-each-ref.c:37
 #: builtin/init-db.c:112 builtin/ls-files.c:663 builtin/ls-tree.c:372
-#: builtin/name-rev.c:829 builtin/refs.c:47 builtin/replace.c:571
+#: builtin/name-rev.c:844 builtin/refs.c:47 builtin/replace.c:571
 #: builtin/repo.c:406 builtin/repo.c:1074 builtin/submodule--helper.c:2060
 #: builtin/submodule--helper.c:3013 builtin/submodule--helper.c:3662
 #: builtin/tag.c:533 builtin/verify-tag.c:34
@@ -3736,7 +3736,7 @@ msgstr ""
 msgid "unset the upstream info"
 msgstr ""
 
-#: builtin/branch.c:1005
+#: builtin/branch.c:1005 builtin/name-rev.c:851
 msgid "use colored output"
 msgstr ""
 
@@ -3807,8 +3807,8 @@ msgstr ""
 #: builtin/branch.c:1032 builtin/clean.c:943 builtin/config.c:1087
 #: builtin/config.c:1144 builtin/config.c:1203 builtin/describe.c:623
 #: builtin/describe.c:625 builtin/grep.c:1142 builtin/log.c:295
-#: builtin/log.c:297 builtin/ls-files.c:636 builtin/name-rev.c:653
-#: builtin/name-rev.c:655 builtin/show-ref.c:330 pack-refs.c:31 pack-refs.c:33
+#: builtin/log.c:297 builtin/ls-files.c:636 builtin/name-rev.c:654
+#: builtin/name-rev.c:656 builtin/show-ref.c:330 pack-refs.c:31 pack-refs.c:33
 #: ref-filter.h:139
 msgid "pattern"
 msgstr ""
@@ -6234,7 +6234,7 @@ msgstr ""
 msgid "override author for commit"
 msgstr ""
 
-#: builtin/commit.c:1717 builtin/gc.c:606
+#: builtin/commit.c:1717 builtin/gc.c:606 builtin/name-rev.c:852
 msgid "date"
 msgstr ""
 
@@ -7034,7 +7034,7 @@ msgstr ""
 msgid "do not consider tags matching <pattern>"
 msgstr ""
 
-#: builtin/describe.c:628 builtin/name-rev.c:669
+#: builtin/describe.c:628 builtin/name-rev.c:670
 msgid "show abbreviated commit object as fallback"
 msgstr ""
 
@@ -12461,102 +12461,106 @@ msgstr ""
 msgid "renaming '%s' to '%s' failed"
 msgstr ""
 
-#: builtin/name-rev.c:564
+#: builtin/name-rev.c:565
 msgid "git name-rev [<options>] <commit>..."
 msgstr ""
 
-#: builtin/name-rev.c:565
+#: builtin/name-rev.c:566
 msgid "git name-rev [<options>] --all"
 msgstr ""
 
-#: builtin/name-rev.c:566
+#: builtin/name-rev.c:567
 msgid "git name-rev [<options>] --annotate-stdin"
 msgstr ""
 
-#: builtin/name-rev.c:651
+#: builtin/name-rev.c:652
 msgid "print only ref-based names (no object names)"
 msgstr ""
 
-#: builtin/name-rev.c:652
+#: builtin/name-rev.c:653
 msgid "only use tags to name the commits"
 msgstr ""
 
-#: builtin/name-rev.c:654
+#: builtin/name-rev.c:655
 msgid "only use refs matching <pattern>"
 msgstr ""
 
-#: builtin/name-rev.c:656
+#: builtin/name-rev.c:657
 msgid "ignore refs matching <pattern>"
 msgstr ""
 
-#: builtin/name-rev.c:658
+#: builtin/name-rev.c:659
 msgid "list all commits reachable from all refs"
 msgstr ""
 
-#: builtin/name-rev.c:663
+#: builtin/name-rev.c:664
 msgid "deprecated: use --annotate-stdin instead"
 msgstr ""
 
-#: builtin/name-rev.c:666
+#: builtin/name-rev.c:667
 msgid "annotate text from stdin"
 msgstr ""
 
-#: builtin/name-rev.c:667
+#: builtin/name-rev.c:668
 msgid "allow to print `undefined` names (default)"
 msgstr ""
 
-#: builtin/name-rev.c:671
+#: builtin/name-rev.c:672
 msgid "dereference tags in the input (internal use)"
 msgstr ""
 
-#: builtin/name-rev.c:800
+#: builtin/name-rev.c:817
 #, c-format
 msgid "'%s' needs to be either text, revs, or rev"
 msgstr ""
 
-#: builtin/name-rev.c:805
+#: builtin/name-rev.c:822
 msgid ""
-"(EXPERIMENTAL!) git format-rev --stdin-mode=<mode> --format=<pretty> [--"
-"[no-]notes=<ref>] [-z] [--[no-]null-output] [--[no-]null-input]"
+"(EXPERIMENTAL!) git format-rev [<options>] --stdin-mode=<mode> --"
+"format=<pretty>"
 msgstr ""
 
-#: builtin/name-rev.c:830
+#: builtin/name-rev.c:845
 msgid "pretty format to use"
 msgstr ""
 
-#: builtin/name-rev.c:831
+#: builtin/name-rev.c:846
 msgid "stdin-mode"
 msgstr ""
 
-#: builtin/name-rev.c:832
+#: builtin/name-rev.c:847
 msgid "how revs are processed"
 msgstr ""
 
-#: builtin/name-rev.c:833 builtin/range-diff.c:57
+#: builtin/name-rev.c:848 builtin/range-diff.c:57
 msgid "notes"
 msgstr ""
 
-#: builtin/name-rev.c:834
+#: builtin/name-rev.c:849
 msgid "display notes for pretty format"
 msgstr ""
 
-#: builtin/name-rev.c:835
+#: builtin/name-rev.c:853
+msgid "date format"
+msgstr ""
+
+#: builtin/name-rev.c:855
 msgid "z"
 msgstr ""
 
-#: builtin/name-rev.c:836
-msgid "Use NUL for input and output termination"
+#: builtin/name-rev.c:856
+msgid "use NUL for input and output termination"
 msgstr ""
 
-#: builtin/name-rev.c:839
-msgid "Use NUL for input termination"
+#: builtin/name-rev.c:859
+msgid "use NUL for input termination"
 msgstr ""
 
-#: builtin/name-rev.c:841
-msgid "Use NUL for output termination"
+#: builtin/name-rev.c:861
+msgid "use NUL for output termination"
 msgstr ""
 
-#: builtin/name-rev.c:853 builtin/name-rev.c:855
+#: builtin/name-rev.c:873 builtin/name-rev.c:875
 #, c-format
 msgid "'%s' is required"
 msgstr ""
