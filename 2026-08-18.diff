@@ -1,0 +1,94 @@
+
+
+#################### Tue, 18 Aug 2026 23:08:36 +0000 ####################
+
+--- po/git.pot.old	2026-08-18 23:08:35.967043607 +0000
++++ po/git.pot.new	2026-08-18 23:08:36.053043739 +0000
+@@ -1982,6 +1982,24 @@
+ msgid "--depth is ignored in local clones; use file:// instead."
+ msgstr ""
+ 
++msgid "--drop-filtered cannot be used while another operation (merge, rebase, am, cherry-pick, revert, or bisect) is in progress"
++msgstr ""
++
++msgid "--drop-filtered only supports --filter=blob:limit=<n> for now"
++msgstr ""
++
++msgid "--drop-filtered requires --filter"
++msgstr ""
++
++msgid "--drop-filtered requires -a"
++msgstr ""
++
++msgid "--drop-filtered requires a promisor remote"
++msgstr ""
++
++msgid "--dry-run only takes effect with --drop-filtered"
++msgstr ""
++
+ msgid "--dry-run requires --delete-merged"
+ msgstr ""
+ 
+@@ -8929,6 +8947,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "cannot drop '%s' (%s): it is referenced by the current index"
++msgstr ""
++
++#, c-format
+ msgid "cannot drop merge commit: %s"
+ msgstr ""
+ 
+@@ -11259,6 +11281,9 @@
+ msgid "delete branch (even if not merged)"
+ msgstr ""
+ 
++msgid "delete filtered out objects (requires --filter)"
++msgstr ""
++
+ msgid "delete fully merged branch"
+ msgstr ""
+ 
+@@ -13172,6 +13197,9 @@
+ msgid "files '%s' and '%s' differ in contents"
+ msgstr ""
+ 
++msgid "filter_oidset: only blob:limit filters are supported"
++msgstr ""
++
+ #, c-format
+ msgid "final chunk has non-zero id %<PRIx32>"
+ msgstr ""
+@@ -14284,7 +14312,8 @@
+ msgid ""
+ "git repack [-a] [-A] [-d] [-f] [-F] [-l] [-n] [-q] [-b] [-m]\n"
+ "[--window=<n>] [--depth=<n>] [--threads=<n>] [--keep-pack=<pack-name>]\n"
+-"[--write-midx[=<mode>]] [--name-hash-version=<n>] [--path-walk]"
++"[--write-midx[=<mode>]] [--name-hash-version=<n>] [--path-walk]\n"
++"[--filter=<filter-spec>] [--drop-filtered [--dry-run]]"
+ msgstr ""
+ 
+ msgid "git replace -d <object>..."
+@@ -17716,6 +17745,9 @@
+ msgid "only show untracked files in the stash"
+ msgstr ""
+ 
++msgid "only show which objects would be dropped"
++msgstr ""
++
+ #, c-format
+ msgid "only two arguments allowed in <type> <object> mode, not %d"
+ msgstr ""
+
+
+-------------------- git-po-helper check-po po/git.pot --------------------
+
+❌ CamelCase config variables
+    ERROR   [git.pot]   entry at L17412 (msgid): should use "core.repositoryFormatVersion" in msgid: "core.repositoryformatversion to 1.\\nPlease set it for migration"
+    ERROR   [git.pot]   entry at L17412 (msgid): should use "core.repositoryFormatVersion" in msgid: "for example:\\ngit config core.repositoryformatversion 1"
+    ERROR   [git.pot]   entry at L23007 (msgid): should use "http.proactiveAuth" in msgid: "http.proactiveauth"
+    ERROR   [git.pot]   entry at L23031 (msgid): should use "http.cookieFile" in msgid: "ing to read cookies from http.cookiefile '-'"
+    ERROR   [git.pot]   entry at L23035 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
+ERROR: 6453 entries checked, 532 config variables, 5 mismatched
+ERROR: check-po command failed
