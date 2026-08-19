@@ -1,0 +1,117 @@
+
+
+#################### Wed, 19 Aug 2026 21:14:52 +0000 ####################
+
+--- po/git.pot.old	2026-08-19 21:14:51.928622811 +0000
++++ po/git.pot.new	2026-08-19 21:14:52.022621769 +0000
+@@ -275,6 +275,10 @@
+ msgid "   or: %s"
+ msgstr ""
+ 
++#, c-format
++msgid "  %s"
++msgstr ""
++
+ #. #-#-#-#-#  branch.c.po  #-#-#-#-#
+ #. TRANSLATORS: This is a line listing a remote with duplicate
+ #. refspecs in the advice message below. For RTL languages you'll
+@@ -2843,6 +2847,9 @@
+ msgid "Branches"
+ msgstr ""
+ 
++msgid "Branches with the same name appears in multiple remotes:"
++msgstr ""
++
+ msgid "Build a tree-object from ls-tree formatted text"
+ msgstr ""
+ 
+@@ -4306,12 +4313,12 @@
+ 
+ #, c-format
+ msgid ""
+-"If you meant to check out a remote tracking branch on, e.g. 'origin',\n"
++"If you meant to check out a remote tracking branch on <remote>,\n"
+ "you can do so by fully qualifying the name with the --track option:\n"
+ "\n"
+-"    git %s --track origin/<name>\n"
++"    git %s --track <remote>/%s\n"
+ "\n"
+-"If you'd like to always have checkouts of an ambiguous <name> prefer\n"
++"If you'd like to always have checkouts of an ambiguous name prefer\n"
+ "one remote, e.g. the 'origin' remote, consider setting\n"
+ "checkout.defaultRemote=origin in your config."
+ msgstr ""
+@@ -4335,6 +4342,17 @@
+ msgstr ""
+ 
+ #, c-format
++msgid ""
++"If you meant to create a worktree from a remote tracking branch on\n"
++"<remote>, you can do so by:\n"
++"\n"
++"    git worktree add -b %s %s <remote>/%s\n"
++"\n"
++"If you'd like to always prefer some remote, e.g. 'origin',\n"
++"consider setting checkout.defaultRemote=origin in your config."
++msgstr ""
++
++#, c-format
+ msgid "If you prefer to skip this patch, run \"%s --skip\" instead.\n"
+ msgstr ""
+ 
+@@ -4697,21 +4715,6 @@
+ msgid "Marks"
+ msgstr ""
+ 
+-#, c-format
+-msgid ""
+-"Matched multiple remote tracking branches, you can list them by:\n"
+-"\n"
+-"    git branch -r --list \"*/%s\"\n"
+-"\n"
+-"If you meant to create a worktree from a remote tracking branch on,\n"
+-"e.g. 'origin', you can do so by:\n"
+-"\n"
+-"    git worktree add -b %s %s origin/%s\n"
+-"\n"
+-"If you'd like to always prefer some remote, e.g. 'origin',\n"
+-"consider setting checkout.defaultRemote=origin in your config."
+-msgstr ""
+-
+ msgid "Maximum entries"
+ msgstr ""
+ 
+@@ -16580,6 +16583,10 @@
+ msgid "merge failed while applying fixup"
+ msgstr ""
+ 
++#, c-format
++msgid "merge of %s onto %s failed"
++msgstr ""
++
+ msgid "merge strategy"
+ msgstr ""
+ 
+@@ -17651,6 +17658,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "object %s is corrupt"
++msgstr ""
++
++#, c-format
+ msgid "object %s not found"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-po po/git.pot --------------------
+
+❌ CamelCase config variables
+    ERROR   [git.pot]   entry at L17552 (msgid): should use "core.repositoryFormatVersion" in msgid: "core.repositoryformatversion to 1.\\nPlease set it for migration"
+    ERROR   [git.pot]   entry at L17552 (msgid): should use "core.repositoryFormatVersion" in msgid: "for example:\\ngit config core.repositoryformatversion 1"
+    ERROR   [git.pot]   entry at L23281 (msgid): should use "http.proactiveAuth" in msgid: "http.proactiveauth"
+    ERROR   [git.pot]   entry at L23312 (msgid): should use "http.cookieFile" in msgid: "ing to read cookies from http.cookiefile '-'"
+    ERROR   [git.pot]   entry at L23316 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
+ERROR: 6516 entries checked, 538 config variables, 5 mismatched
+ERROR: check-po command failed
