@@ -1,0 +1,133 @@
+
+
+#################### Thu, 20 Aug 2026 17:14:34 +0000 ####################
+
+--- po/git.pot.old	2026-08-20 17:14:34.304542894 +0000
++++ po/git.pot.new	2026-08-20 17:14:34.390542661 +0000
+@@ -1425,6 +1425,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "'%s' is not a valid branch or pattern"
++msgstr ""
++
++#, c-format
+ msgid "'%s' is not a valid commit"
+ msgstr ""
+ 
+@@ -1975,6 +1979,9 @@
+ msgid "--depth is ignored in local clones; use file:// instead."
+ msgstr ""
+ 
++msgid "--dry-run requires --delete-merged"
++msgstr ""
++
+ msgid "--dump-aliases and --translate-aliases are mutually exclusive\n"
+ msgstr ""
+ 
+@@ -2464,7 +2471,7 @@
+ msgid "Add or inspect object notes"
+ msgstr ""
+ 
+-msgid "Add or parse structured information in commit messages"
++msgid "Add or parse metadata in commit messages"
+ msgstr ""
+ 
+ msgid "Add untracked"
+@@ -5801,6 +5808,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Skipping '%s' (branch.%s.deleteMerged is false)\n"
++msgstr ""
++
++#, c-format
+ msgid "Skipping repository %s\n"
+ msgstr ""
+ 
+@@ -7025,6 +7036,14 @@
+ msgid "Wonderful.\n"
+ msgstr ""
+ 
++#, c-format
++msgid "Would delete branch %s (was %s).\n"
++msgstr ""
++
++#, c-format
++msgid "Would delete remote-tracking branch %s (was %s).\n"
++msgstr ""
++
+ msgid "Would refuse to remove current working directory\n"
+ msgstr ""
+ 
+@@ -11201,6 +11220,9 @@
+ msgid "delete fully merged branch"
+ msgstr ""
+ 
++msgid "delete merged branches whose upstream matches <pattern> (repeatable)"
++msgstr ""
++
+ msgid "delete refs"
+ msgstr ""
+ 
+@@ -12278,6 +12300,9 @@
+ msgid "extra command line parameter '%s'"
+ msgstr ""
+ 
++msgid "failed creating object database"
++msgstr ""
++
+ #, c-format
+ msgid "failed reading ssh signing data buffer from '%s'"
+ msgstr ""
+@@ -13524,6 +13549,9 @@
+ msgid "git blame [<options>] [<rev-opts>] [<rev>] [--] <file>"
+ msgstr ""
+ 
++msgid "git branch [<options>] (--delete-merged <pattern>)... [<branch-pattern>...]"
++msgstr ""
++
+ msgid "git branch [<options>] (-c | -C) [<old-branch>] <new-branch>"
+ msgstr ""
+ 
+@@ -13539,7 +13567,7 @@
+ msgid "git branch [<options>] [-r | -a] [--format]"
+ msgstr ""
+ 
+-msgid "git branch [<options>] [-r | -a] [--merged] [--no-merged]"
++msgid "git branch [<options>] [-r | -a] [--merged] [--no-merged] [(--forked <branch>)...]"
+ msgstr ""
+ 
+ msgid "git branch [<options>] [-r | -a] [--points-at]"
+@@ -18313,6 +18341,9 @@
+ msgid "print only branches that don't contain the commit"
+ msgstr ""
+ 
++msgid "print only branches whose upstream matches <branch> (repeatable)"
++msgstr ""
++
+ msgid "print only error messages"
+ msgstr ""
+ 
+@@ -23142,6 +23173,9 @@
+ msgid "with --cruft, only repack cruft packs smaller than this"
+ msgstr ""
+ 
++msgid "with --delete-merged, only print which branches would be deleted"
++msgstr ""
++
+ msgid "with --get, use default value when missing entry"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-po po/git.pot --------------------
+
+❌ CamelCase config variables
+    ERROR   [git.pot]   entry at L17240 (msgid): should use "core.repositoryFormatVersion" in msgid: "core.repositoryformatversion to 1.\\nPlease set it for migration"
+    ERROR   [git.pot]   entry at L17240 (msgid): should use "core.repositoryFormatVersion" in msgid: "for example:\\ngit config core.repositoryformatversion 1"
+    ERROR   [git.pot]   entry at L22793 (msgid): should use "http.proactiveAuth" in msgid: "http.proactiveauth"
+    ERROR   [git.pot]   entry at L22817 (msgid): should use "http.cookieFile" in msgid: "ing to read cookies from http.cookiefile '-'"
+    ERROR   [git.pot]   entry at L22821 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
+ERROR: 6401 entries checked, 532 config variables, 5 mismatched
+ERROR: check-po command failed
