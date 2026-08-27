@@ -39,3 +39,138 @@
     ERROR   [git.pot]   entry at L23303 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
 ERROR: 6521 entries checked, 538 config variables, 5 mismatched
 ERROR: check-po command failed
+
+
+#################### Thu, 27 Aug 2026 23:15:14 +0000 ####################
+
+--- po/git.pot.old	2026-08-27 23:15:14.001610833 +0000
++++ po/git.pot.new	2026-08-27 23:15:14.089613276 +0000
+@@ -1397,10 +1397,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "'%s' is nominated for removal.\n"
+-msgstr ""
+-
+-#, c-format
+ msgid "'%s' is not a .git file, error code %d"
+ msgstr ""
+ 
+@@ -1559,6 +1555,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "'%s' will be removed soon.\n"
++msgstr ""
++
++#, c-format
+ msgid "'%s', '%s', or '%s' cannot be used when checking out of a tree"
+ msgstr ""
+ 
+@@ -4353,23 +4353,23 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "If you prefer to skip this patch, run \"%s --skip\" instead.\n"
+-msgstr ""
+-
+-#, c-format
+ msgid ""
+-"If you still use this command, here's what you can do:\n"
++"If you need a replacement:\n"
++"\n"
++"- Read https://git-scm.com/docs/BreakingChanges.html.\n"
++"\n"
++"- Check what others on the mailing list suggest as a replacement:\n"
++"  https://lore.kernel.org/git/?q=%s\n"
+ "\n"
+-"- read https://git-scm.com/docs/BreakingChanges.html\n"
+-"- check if anyone has discussed this on the mailing\n"
+-"  list and if they came up with something that can\n"
+-"  help you: https://lore.kernel.org/git/?q=%s\n"
+-"- send an email to <git@vger.kernel.org> to let us\n"
+-"  know that you still use this command and were unable\n"
+-"  to determine a suitable replacement\n"
++"- Send an email to <git@vger.kernel.org> asking for help, only if\n"
++"  suggestions by others do not work for you.\n"
+ "\n"
+ msgstr ""
+ 
++#, c-format
++msgid "If you prefer to skip this patch, run \"%s --skip\" instead.\n"
++msgstr ""
++
+ msgid "If you want to detach HEAD at the commit, try again with the --detach option."
+ msgstr ""
+ 
+@@ -7217,9 +7217,6 @@
+ msgid "You are in the middle of a merge -- cannot reword."
+ msgstr ""
+ 
+-msgid "You are in the middle of a rebase -- cannot amend."
+-msgstr ""
+-
+ msgid "You are in the middle of a revert -- cannot amend."
+ msgstr ""
+ 
+@@ -7251,6 +7248,9 @@
+ "to update which remote branch."
+ msgstr ""
+ 
++msgid "You are resolving a commit that became empty -- cannot amend."
++msgstr ""
++
+ msgid "You are resolving conflicts during a rebase -- cannot amend."
+ msgstr ""
+ 
+@@ -8986,7 +8986,16 @@
+ msgid "cannot do a partial commit during a merge."
+ msgstr ""
+ 
+-msgid "cannot do a partial commit during a rebase."
++msgid "cannot do a partial commit during a revert."
++msgstr ""
++
++msgid "cannot do a partial commit during an am session."
++msgstr ""
++
++msgid "cannot do a partial commit while resolving a commit that became empty."
++msgstr ""
++
++msgid "cannot do a partial commit while resolving conflicts during a rebase."
+ msgstr ""
+ 
+ #, c-format
+@@ -9001,6 +9010,9 @@
+ msgid "cannot drop root commit %s: it has no parent to replay onto"
+ msgstr ""
+ 
++msgid "cannot drop the root commit"
++msgstr ""
++
+ msgid "cannot edit description of more than one branch"
+ msgstr ""
+ 
+@@ -11921,6 +11933,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "dropping %s %s -- squashing it in empties the commit\n"
++msgstr ""
++
++#, c-format
+ msgid "dropping %s since it would point to itself (i.e. to %s)"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-po po/git.pot --------------------
+
+❌ CamelCase config variables
+    ERROR   [git.pot]   entry at L17540 (msgid): should use "core.repositoryFormatVersion" in msgid: "core.repositoryformatversion to 1.\\nPlease set it for migration"
+    ERROR   [git.pot]   entry at L17540 (msgid): should use "core.repositoryFormatVersion" in msgid: "for example:\\ngit config core.repositoryformatversion 1"
+    ERROR   [git.pot]   entry at L23281 (msgid): should use "http.proactiveAuth" in msgid: "http.proactiveauth"
+    ERROR   [git.pot]   entry at L23312 (msgid): should use "http.cookieFile" in msgid: "ing to read cookies from http.cookiefile '-'"
+    ERROR   [git.pot]   entry at L23316 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
+ERROR: 6526 entries checked, 538 config variables, 5 mismatched
+ERROR: check-po command failed
