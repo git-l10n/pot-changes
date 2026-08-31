@@ -1,0 +1,120 @@
+
+
+#################### Mon, 31 Aug 2026 07:43:34 +0000 ####################
+
+--- po/git.pot.old	2026-08-31 07:43:34.730639445 +0000
++++ po/git.pot.new	2026-08-31 07:43:34.813639129 +0000
+@@ -275,6 +275,10 @@
+ msgid "   or: %s"
+ msgstr ""
+ 
++#, c-format
++msgid "  %s"
++msgstr ""
++
+ #. #-#-#-#-#  branch.c.po  #-#-#-#-#
+ #. TRANSLATORS: This is a line listing a remote with duplicate
+ #. refspecs in the advice message below. For RTL languages you'll
+@@ -1393,10 +1397,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "'%s' is nominated for removal.\n"
+-msgstr ""
+-
+-#, c-format
+ msgid "'%s' is not a .git file, error code %d"
+ msgstr ""
+ 
+@@ -1555,6 +1555,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "'%s' will be removed soon.\n"
++msgstr ""
++
++#, c-format
+ msgid "'%s', '%s', or '%s' cannot be used when checking out of a tree"
+ msgstr ""
+ 
+@@ -2827,6 +2831,10 @@
+ msgid "Blobs"
+ msgstr ""
+ 
++#, c-format
++msgid "Branch name '%s' appears in multiple remotes:"
++msgstr ""
++
+ msgid "Branches"
+ msgstr ""
+ 
+@@ -4293,12 +4301,12 @@
+ 
+ #, c-format
+ msgid ""
+-"If you meant to check out a remote tracking branch on, e.g. 'origin',\n"
++"If you meant to check out a remote tracking branch on <remote>,\n"
+ "you can do so by fully qualifying the name with the --track option:\n"
+ "\n"
+-"    git %s --track origin/<name>\n"
++"    git %s --track <remote>/%s\n"
+ "\n"
+-"If you'd like to always have checkouts of an ambiguous <name> prefer\n"
++"If you'd like to always have checkouts of an ambiguous name prefer\n"
+ "one remote, e.g. the 'origin' remote, consider setting\n"
+ "checkout.defaultRemote=origin in your config."
+ msgstr ""
+@@ -4322,21 +4330,32 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "If you prefer to skip this patch, run \"%s --skip\" instead.\n"
++msgid ""
++"If you meant to create a worktree from a remote tracking branch on\n"
++"<remote>, you can do so by:\n"
++"\n"
++"    git worktree add -b %s %s <remote>/%s\n"
++"\n"
++"If you'd like to always prefer some remote, e.g. 'origin',\n"
++"consider setting checkout.defaultRemote=origin in your config."
+ msgstr ""
+ 
+ #, c-format
+ msgid ""
+-"If you still use this command, here's what you can do:\n"
++"If you need a replacement:\n"
++"\n"
++"- Read https://git-scm.com/docs/BreakingChanges.html.\n"
+ "\n"
+-"- read https://git-scm.com/docs/BreakingChanges.html\n"
+-"- check if anyone has discussed this on the mailing\n"
+-"  list and if they came up with something that can\n"
+-"  help you: https://lore.kernel.org/git/?q=%s\n"
+-"- send an email to <git@vger.kernel.org> to let us\n"
+-"  know that you still use this command and were unable\n"
+-"  to determine a suitable replacement\n"
++"- Check what others on the mailing list suggest as a replacement:\n"
++"  https://lore.kernel.org/git/?q=%s\n"
+ "\n"
++"- Send an email to <git@vger.kernel.org> asking for help, only if\n"
++"  suggestions by others do not work for you.\n"
++"\n"
++msgstr ""
++
++#, c-format
++msgid "If you prefer to skip this patch, run \"%s --skip\" instead.\n"
+ msgstr ""
+ 
+ msgid "If you want to detach HEAD at the commit, try again with the --detach option."
+
+
+-------------------- git-po-helper check-po po/git.pot --------------------
+
+❌ CamelCase config variables
+    ERROR   [git.pot]   entry at L17418 (msgid): should use "core.repositoryFormatVersion" in msgid: "core.repositoryformatversion to 1.\\nPlease set it for migration"
+    ERROR   [git.pot]   entry at L17418 (msgid): should use "core.repositoryFormatVersion" in msgid: "for example:\\ngit config core.repositoryformatversion 1"
+    ERROR   [git.pot]   entry at L23025 (msgid): should use "http.proactiveAuth" in msgid: "http.proactiveauth"
+    ERROR   [git.pot]   entry at L23049 (msgid): should use "http.cookieFile" in msgid: "ing to read cookies from http.cookiefile '-'"
+    ERROR   [git.pot]   entry at L23053 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
+ERROR: 6462 entries checked, 532 config variables, 5 mismatched
+ERROR: check-po command failed
