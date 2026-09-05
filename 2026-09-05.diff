@@ -1,0 +1,58 @@
+
+
+#################### Sat, 05 Sep 2026 00:25:40 +0000 ####################
+
+--- po/git.pot.old	2026-09-05 00:25:40.036122369 +0000
++++ po/git.pot.new	2026-09-05 00:25:40.122122543 +0000
+@@ -1637,6 +1637,9 @@
+ msgid "'-%c' is incompatible with batch mode"
+ msgstr ""
+ 
++msgid "'--linearize' cannot be used with multiple branches"
++msgstr ""
++
+ msgid "'--ref' cannot be used with multiple revision ranges"
+ msgstr ""
+ 
+@@ -1767,7 +1770,7 @@
+ 
+ msgid ""
+ "(EXPERIMENTAL!) git replay ([--contained] --onto=<newbase> | --advance=<branch> | --revert=<branch>)\n"
+-"[--ref=<ref>] [--ref-action=<mode>] <revision-range>"
++"[--ref=<ref>] [--ref-action=<mode>] [--linearize] <revision-range>"
+ msgstr ""
+ 
+ #, c-format
+@@ -11789,6 +11792,9 @@
+ "Connecting to %s (port %s) ... "
+ msgstr ""
+ 
++msgid "drop merge commits, replaying only non-merge commits"
++msgstr ""
++
+ msgid "drop reflogs entirely during the migration"
+ msgstr ""
+ 
+@@ -16451,6 +16457,10 @@
+ msgid "merge failed while applying fixup"
+ msgstr ""
+ 
++#, c-format
++msgid "merge of %s onto %s failed"
++msgstr ""
++
+ msgid "merge strategy"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-po po/git.pot --------------------
+
+❌ CamelCase config variables
+    ERROR   [git.pot]   entry at L17430 (msgid): should use "core.repositoryFormatVersion" in msgid: "core.repositoryformatversion to 1.\\nPlease set it for migration"
+    ERROR   [git.pot]   entry at L17430 (msgid): should use "core.repositoryFormatVersion" in msgid: "for example:\\ngit config core.repositoryformatversion 1"
+    ERROR   [git.pot]   entry at L23037 (msgid): should use "http.proactiveAuth" in msgid: "http.proactiveauth"
+    ERROR   [git.pot]   entry at L23061 (msgid): should use "http.cookieFile" in msgid: "ing to read cookies from http.cookiefile '-'"
+    ERROR   [git.pot]   entry at L23065 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
+ERROR: 6467 entries checked, 532 config variables, 5 mismatched
+ERROR: check-po command failed

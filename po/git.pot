@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2026-08-31 21:07+0000\n"
+"POT-Creation-Date: 2026-09-05 00:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -902,13 +902,13 @@ msgstr ""
 #: builtin/rev-parse.c:966 builtin/rev-parse.c:977 builtin/show-branch.c:740
 #: builtin/show-branch.c:745 builtin/stash.c:1968 builtin/stash.c:1971
 #: builtin/submodule--helper.c:1330 builtin/submodule--helper.c:3302
-#: builtin/tag.c:590 builtin/tag.c:637 builtin/worktree.c:758
-#: builtin/worktree.c:761 builtin/worktree.c:871 builtin/worktree.c:874
-#: builtin/worktree.c:877 builtin/worktree.c:1154 parse-options.c:419
-#: parse-options.c:1564 range-diff.c:595 revision.c:2500 revision.c:2506
-#: revision.c:2511 revision.c:2520 revision.c:2525 revision.c:2765
-#: revision.c:2838 revision.c:2850 revision.c:2856 revision.c:2884
-#: revision.c:2898 revision.c:2912 revision.c:3201 revision.c:3216
+#: builtin/tag.c:590 builtin/tag.c:637 builtin/worktree.c:757
+#: builtin/worktree.c:760 builtin/worktree.c:868 builtin/worktree.c:871
+#: builtin/worktree.c:874 builtin/worktree.c:1149 parse-options.c:419
+#: parse-options.c:1564 range-diff.c:595 revision.c:2520 revision.c:2526
+#: revision.c:2531 revision.c:2540 revision.c:2545 revision.c:2785
+#: revision.c:2858 revision.c:2870 revision.c:2876 revision.c:2904
+#: revision.c:2918 revision.c:2932 revision.c:3221 revision.c:3236
 #, c-format
 msgid "options '%s' and '%s' cannot be used together"
 msgstr ""
@@ -1241,8 +1241,8 @@ msgid "%s has type %o, expected %o"
 msgstr ""
 
 #: apply.c:4060 apply.c:4062 builtin/fast-import.c:2491
-#: builtin/fast-import.c:2530 read-cache.c:868 read-cache.c:897
-#: read-cache.c:1302
+#: builtin/fast-import.c:2530 builtin/worktree.c:494 read-cache.c:868
+#: read-cache.c:897 read-cache.c:1302
 #, c-format
 msgid "invalid path '%s'"
 msgstr ""
@@ -1791,9 +1791,9 @@ msgstr ""
 #: builtin/reset.c:478 builtin/rm.c:292 builtin/stash.c:1980
 #: builtin/stash.c:1985 builtin/stash.c:1987 builtin/stash.c:1989
 #: builtin/stash.c:2061 builtin/stash.c:2063 builtin/stash.c:2065
-#: builtin/worktree.c:883 builtin/worktree.c:1156 fetch-pack.c:370
-#: http-fetch.c:159 http-fetch.c:168 revision.c:3219 revision.c:3222
-#: revision.c:3225
+#: builtin/worktree.c:880 builtin/worktree.c:1151 fetch-pack.c:370
+#: http-fetch.c:159 http-fetch.c:168 revision.c:3239 revision.c:3242
+#: revision.c:3245
 #, c-format
 msgid "the option '%s' requires '%s'"
 msgstr ""
@@ -2937,7 +2937,7 @@ msgid "Include blobs from boundary commits in the backfill"
 msgstr ""
 
 #: builtin/backfill.c:176 builtin/diff-pairs.c:69 builtin/log.c:320
-#: builtin/log.c:2219 builtin/replay.c:165 builtin/shortlog.c:458 bundle.c:524
+#: builtin/log.c:2219 builtin/replay.c:169 builtin/shortlog.c:458 bundle.c:524
 #, c-format
 msgid "unrecognized argument: %s"
 msgstr ""
@@ -3835,8 +3835,8 @@ msgstr ""
 #: builtin/checkout.c:2168 builtin/checkout.c:2170 builtin/clone.c:964
 #: builtin/remote.c:195 builtin/remote.c:197 builtin/replay.c:99
 #: builtin/replay.c:103 builtin/replay.c:107 builtin/submodule--helper.c:3285
-#: builtin/submodule--helper.c:3654 builtin/worktree.c:842
-#: builtin/worktree.c:844
+#: builtin/submodule--helper.c:3654 builtin/worktree.c:839
+#: builtin/worktree.c:841
 msgid "branch"
 msgstr ""
 
@@ -4400,7 +4400,7 @@ msgid "which tree-ish to check attributes at"
 msgstr ""
 
 #: builtin/check-ignore.c:23 builtin/checkout.c:1787 builtin/gc.c:601
-#: builtin/worktree.c:852
+#: builtin/worktree.c:849
 msgid "suppress progress reporting"
 msgstr ""
 
@@ -4466,8 +4466,8 @@ msgstr ""
 
 #: builtin/checkout--worker.c:127 builtin/checkout-index.c:245
 #: builtin/column.c:36 builtin/column.c:37 builtin/submodule--helper.c:2052
-#: builtin/submodule--helper.c:2055 builtin/worktree.c:850
-#: builtin/worktree.c:1190
+#: builtin/submodule--helper.c:2055 builtin/worktree.c:847
+#: builtin/worktree.c:1185
 msgid "string"
 msgstr ""
 
@@ -4711,12 +4711,12 @@ msgstr ""
 msgid "The following paths have local changes:\n"
 msgstr ""
 
-#: builtin/checkout.c:1366 builtin/worktree.c:772
+#: builtin/checkout.c:1366 builtin/worktree.c:771
 #, c-format
 msgid "Branch name '%s' appears in multiple remotes:"
 msgstr ""
 
-#: builtin/checkout.c:1368 builtin/worktree.c:774
+#: builtin/checkout.c:1368 builtin/worktree.c:773
 #, c-format
 msgid "  %s"
 msgstr ""
@@ -4741,7 +4741,7 @@ msgid ""
 "Please use -- (and optionally --no-guess) to disambiguate"
 msgstr ""
 
-#: builtin/checkout.c:1402 builtin/worktree.c:815 builtin/worktree.c:956
+#: builtin/checkout.c:1402 builtin/worktree.c:812 builtin/worktree.c:951
 #, c-format
 msgid "'%s' matched multiple (%d) remote tracking branches"
 msgstr ""
@@ -4755,7 +4755,7 @@ msgstr ""
 msgid "only one reference expected, %d given."
 msgstr ""
 
-#: builtin/checkout.c:1536 builtin/worktree.c:492 builtin/worktree.c:977
+#: builtin/checkout.c:1536 builtin/worktree.c:490 builtin/worktree.c:972
 #, c-format
 msgid "invalid reference: %s"
 msgstr ""
@@ -4876,7 +4876,7 @@ msgstr ""
 msgid "conflict style (merge, diff3, or zdiff3)"
 msgstr ""
 
-#: builtin/checkout.c:1807 builtin/worktree.c:847
+#: builtin/checkout.c:1807 builtin/worktree.c:844
 msgid "detach HEAD at named commit"
 msgstr ""
 
@@ -5488,7 +5488,7 @@ msgid "working tree '%s' already exists."
 msgstr ""
 
 #: builtin/clone.c:1111 builtin/clone.c:1131 builtin/difftool.c:282
-#: builtin/log.c:2279 builtin/worktree.c:504 builtin/worktree.c:536
+#: builtin/log.c:2279 builtin/worktree.c:502 builtin/worktree.c:534
 #, c-format
 msgid "could not create leading directories of '%s'"
 msgstr ""
@@ -6122,7 +6122,7 @@ msgid "version"
 msgstr ""
 
 #: builtin/commit.c:1559 builtin/commit.c:1758 builtin/fetch.c:2571
-#: builtin/push.c:717 builtin/worktree.c:1140
+#: builtin/push.c:717 builtin/worktree.c:1135
 msgid "machine-readable output"
 msgstr ""
 
@@ -9470,7 +9470,7 @@ msgid "'crontab' died"
 msgstr ""
 
 #: builtin/gc.c:2600 builtin/gc.c:2613 builtin/gc.c:2823 builtin/worktree.c:159
-#: builtin/worktree.c:1423
+#: builtin/worktree.c:1418
 #, c-format
 msgid "failed to delete '%s'"
 msgstr ""
@@ -10032,11 +10032,11 @@ msgstr ""
 msgid "%s expects one of 'branches' or 'head'"
 msgstr ""
 
-#: builtin/history.c:234 replay.c:420
+#: builtin/history.c:234 replay.c:442
 msgid "error preparing revisions"
 msgstr ""
 
-#: builtin/history.c:239 replay.c:434
+#: builtin/history.c:239 replay.c:455
 msgid "replaying merge commits is not supported yet!"
 msgstr ""
 
@@ -10053,17 +10053,17 @@ msgid ""
 "rewritten commit must be an ancestor of HEAD when using --update-refs=head"
 msgstr ""
 
-#: builtin/history.c:420 builtin/replay.c:219
+#: builtin/history.c:420 builtin/replay.c:223
 #, c-format
 msgid "failed to begin ref transaction: %s"
 msgstr ""
 
-#: builtin/history.c:432 builtin/replay.c:230
+#: builtin/history.c:432 builtin/replay.c:234
 #, c-format
 msgid "failed to update ref '%s': %s"
 msgstr ""
 
-#: builtin/history.c:439 builtin/replay.c:239
+#: builtin/history.c:439 builtin/replay.c:243
 #, c-format
 msgid "failed to commit ref transaction: %s"
 msgstr ""
@@ -12079,15 +12079,15 @@ msgstr ""
 msgid "unable to write tag file"
 msgstr ""
 
-#: builtin/mktree.c:168
+#: builtin/mktree.c:167
 msgid "input is NUL terminated"
 msgstr ""
 
-#: builtin/mktree.c:169 builtin/write-tree.c:31
+#: builtin/mktree.c:168 builtin/write-tree.c:31
 msgid "allow missing objects"
 msgstr ""
 
-#: builtin/mktree.c:170
+#: builtin/mktree.c:169
 msgid "allow creation of more than one tree"
 msgstr ""
 
@@ -15741,7 +15741,7 @@ msgstr ""
 msgid ""
 "(EXPERIMENTAL!) git replay ([--contained] --onto=<newbase> | --"
 "advance=<branch> | --revert=<branch>)\n"
-"[--ref=<ref>] [--ref-action=<mode>] <revision-range>"
+"[--ref=<ref>] [--ref-action=<mode>] [--linearize] <revision-range>"
 msgstr ""
 
 #: builtin/replay.c:93
@@ -15768,12 +15768,16 @@ msgstr ""
 msgid "control ref update behavior (update|print)"
 msgstr ""
 
-#: builtin/replay.c:122
+#: builtin/replay.c:115
+msgid "drop merge commits, replaying only non-merge commits"
+msgstr ""
+
+#: builtin/replay.c:124
 msgid "exactly one of --onto, --advance, or --revert is required"
 msgstr ""
 
-#: builtin/replay.c:174 builtin/replay.c:180 builtin/replay.c:186
-#: builtin/replay.c:192
+#: builtin/replay.c:178 builtin/replay.c:184 builtin/replay.c:190
+#: builtin/replay.c:196
 #, c-format
 msgid ""
 "some rev walking options will be overridden as '%s' bit in 'struct rev_info' "
@@ -18604,90 +18608,90 @@ msgstr ""
 msgid "prune missing working trees older than <time>"
 msgstr ""
 
-#: builtin/worktree.c:326
+#: builtin/worktree.c:323
 #, c-format
 msgid "'%s' already exists"
 msgstr ""
 
-#: builtin/worktree.c:335
+#: builtin/worktree.c:332
 #, c-format
 msgid "unusable worktree destination '%s'"
 msgstr ""
 
-#: builtin/worktree.c:340
+#: builtin/worktree.c:337
 #, c-format
 msgid ""
 "'%s' is a missing but locked worktree;\n"
 "use '%s -f -f' to override, or 'unlock' and 'prune' or 'remove' to clear"
 msgstr ""
 
-#: builtin/worktree.c:342
+#: builtin/worktree.c:339
 #, c-format
 msgid ""
 "'%s' is a missing but already registered worktree;\n"
 "use '%s -f' to override, or 'prune' or 'remove' to clear"
 msgstr ""
 
-#: builtin/worktree.c:353
+#: builtin/worktree.c:350
 #, c-format
 msgid "failed to copy '%s' to '%s'; sparse-checkout may not work correctly"
 msgstr ""
 
-#: builtin/worktree.c:372
+#: builtin/worktree.c:369
 #, c-format
 msgid "failed to copy worktree config from '%s' to '%s'"
 msgstr ""
 
-#: builtin/worktree.c:384 builtin/worktree.c:389
+#: builtin/worktree.c:381 builtin/worktree.c:386
 #, c-format
 msgid "failed to unset '%s' in '%s'"
 msgstr ""
 
-#: builtin/worktree.c:510
+#: builtin/worktree.c:508
 #, c-format
 msgid "could not create directory of '%s'"
 msgstr ""
 
-#: builtin/worktree.c:532
+#: builtin/worktree.c:530
 msgid "initializing"
 msgstr ""
 
-#: builtin/worktree.c:553
+#: builtin/worktree.c:551
 #, c-format
 msgid "could not find created worktree '%s'"
 msgstr ""
 
-#: builtin/worktree.c:644 builtin/worktree.c:650
+#: builtin/worktree.c:643 builtin/worktree.c:649
 #, c-format
 msgid "Preparing worktree (new branch '%s')"
 msgstr ""
 
-#: builtin/worktree.c:646
+#: builtin/worktree.c:645
 #, c-format
 msgid "Preparing worktree (resetting branch '%s'; was at %s)"
 msgstr ""
 
-#: builtin/worktree.c:655
+#: builtin/worktree.c:654
 #, c-format
 msgid "Preparing worktree (checking out '%s')"
 msgstr ""
 
-#: builtin/worktree.c:661
+#: builtin/worktree.c:660
 #, c-format
 msgid "Preparing worktree (detached HEAD %s)"
 msgstr ""
 
-#: builtin/worktree.c:697
+#: builtin/worktree.c:696
 msgid "HEAD points to an invalid (or orphaned) reference.\n"
 msgstr ""
 
-#: builtin/worktree.c:723
+#: builtin/worktree.c:722
 msgid ""
 "No local or remote refs exist despite at least one remote\n"
 "present, stopping; use 'add -f' to override or fetch a remote first"
 msgstr ""
 
-#: builtin/worktree.c:776
+#: builtin/worktree.c:775
 #, c-format
 msgid ""
 "If you meant to create a worktree from a remote tracking branch on\n"
@@ -18699,185 +18703,185 @@ msgid ""
 "consider setting checkout.defaultRemote=origin in your config."
 msgstr ""
 
-#: builtin/worktree.c:840
+#: builtin/worktree.c:837
 msgid "checkout <branch> even if already checked out in other worktree"
 msgstr ""
 
-#: builtin/worktree.c:843
+#: builtin/worktree.c:840
 msgid "create a new branch"
 msgstr ""
 
-#: builtin/worktree.c:845
+#: builtin/worktree.c:842
 msgid "create or reset a branch"
 msgstr ""
 
-#: builtin/worktree.c:846
+#: builtin/worktree.c:843
 msgid "create unborn branch"
 msgstr ""
 
-#: builtin/worktree.c:848
+#: builtin/worktree.c:845
 msgid "populate the new working tree"
 msgstr ""
 
-#: builtin/worktree.c:849
+#: builtin/worktree.c:846
 msgid "keep the new working tree locked"
 msgstr ""
 
-#: builtin/worktree.c:851 builtin/worktree.c:1191
+#: builtin/worktree.c:848 builtin/worktree.c:1186
 msgid "reason for locking"
 msgstr ""
 
-#: builtin/worktree.c:854
+#: builtin/worktree.c:851
 msgid "set up tracking mode (see git-branch(1))"
 msgstr ""
 
-#: builtin/worktree.c:857
+#: builtin/worktree.c:854
 msgid "try to match the new branch name with a remote-tracking branch"
 msgstr ""
 
-#: builtin/worktree.c:859 builtin/worktree.c:1306 builtin/worktree.c:1503
+#: builtin/worktree.c:856 builtin/worktree.c:1301 builtin/worktree.c:1498
 msgid "use relative paths for worktrees"
 msgstr ""
 
-#: builtin/worktree.c:869 diff.c:5243 parse-options.c:1560
+#: builtin/worktree.c:866 diff.c:5243 parse-options.c:1560
 #, c-format
 msgid "options '%s', '%s', and '%s' cannot be used together"
 msgstr ""
 
-#: builtin/worktree.c:880
+#: builtin/worktree.c:877
 #, c-format
 msgid "option '%s' and commit-ish cannot be used together"
 msgstr ""
 
-#: builtin/worktree.c:887
+#: builtin/worktree.c:884
 msgid "added with --lock"
 msgstr ""
 
-#: builtin/worktree.c:1003
+#: builtin/worktree.c:998
 msgid "--[no-]track can only be used if a new branch is created"
 msgstr ""
 
-#: builtin/worktree.c:1141
+#: builtin/worktree.c:1136
 msgid "show extended annotations and reasons, if available"
 msgstr ""
 
-#: builtin/worktree.c:1143
+#: builtin/worktree.c:1138
 msgid "add 'prunable' annotation to missing worktrees older than <time>"
 msgstr ""
 
-#: builtin/worktree.c:1145
+#: builtin/worktree.c:1140
 msgid "terminate records with a NUL character"
 msgstr ""
 
-#: builtin/worktree.c:1204 builtin/worktree.c:1241 builtin/worktree.c:1327
-#: builtin/worktree.c:1452
+#: builtin/worktree.c:1199 builtin/worktree.c:1236 builtin/worktree.c:1322
+#: builtin/worktree.c:1447
 #, c-format
 msgid "'%s' is not a working tree"
 msgstr ""
 
-#: builtin/worktree.c:1206 builtin/worktree.c:1243
+#: builtin/worktree.c:1201 builtin/worktree.c:1238
 msgid "The main working tree cannot be locked or unlocked"
 msgstr ""
 
-#: builtin/worktree.c:1211
+#: builtin/worktree.c:1206
 #, c-format
 msgid "'%s' is already locked, reason: %s"
 msgstr ""
 
-#: builtin/worktree.c:1213
+#: builtin/worktree.c:1208
 #, c-format
 msgid "'%s' is already locked"
 msgstr ""
 
-#: builtin/worktree.c:1245
+#: builtin/worktree.c:1240
 #, c-format
 msgid "'%s' is not locked"
 msgstr ""
 
-#: builtin/worktree.c:1294
+#: builtin/worktree.c:1289
 msgid "working trees containing submodules cannot be moved or removed"
 msgstr ""
 
-#: builtin/worktree.c:1303
+#: builtin/worktree.c:1298
 msgid "force move even if worktree is dirty or locked"
 msgstr ""
 
-#: builtin/worktree.c:1329 builtin/worktree.c:1454
+#: builtin/worktree.c:1324 builtin/worktree.c:1449
 #, c-format
 msgid "'%s' is a main working tree"
 msgstr ""
 
-#: builtin/worktree.c:1334
+#: builtin/worktree.c:1329
 #, c-format
 msgid "could not figure out destination name from '%s'"
 msgstr ""
 
-#: builtin/worktree.c:1347
+#: builtin/worktree.c:1342
 #, c-format
 msgid ""
 "cannot move a locked working tree, lock reason: %s\n"
 "use 'move -f -f' to override or unlock first"
 msgstr ""
 
-#: builtin/worktree.c:1349
+#: builtin/worktree.c:1344
 msgid ""
 "cannot move a locked working tree;\n"
 "use 'move -f -f' to override or unlock first"
 msgstr ""
 
-#: builtin/worktree.c:1352
+#: builtin/worktree.c:1347
 #, c-format
 msgid "validation failed, cannot move working tree: %s"
 msgstr ""
 
-#: builtin/worktree.c:1357
+#: builtin/worktree.c:1352
 #, c-format
 msgid "failed to move '%s' to '%s'"
 msgstr ""
 
-#: builtin/worktree.c:1403
+#: builtin/worktree.c:1398
 #, c-format
 msgid "failed to run 'git status' on '%s'"
 msgstr ""
 
-#: builtin/worktree.c:1407
+#: builtin/worktree.c:1402
 #, c-format
 msgid "'%s' contains modified or untracked files, use --force to delete it"
 msgstr ""
 
-#: builtin/worktree.c:1412
+#: builtin/worktree.c:1407
 #, c-format
 msgid "failed to run 'git status' on '%s', code %d"
 msgstr ""
 
-#: builtin/worktree.c:1436
+#: builtin/worktree.c:1431
 msgid "force removal even if worktree is dirty or locked"
 msgstr ""
 
-#: builtin/worktree.c:1459
+#: builtin/worktree.c:1454
 #, c-format
 msgid ""
 "cannot remove a locked working tree, lock reason: %s\n"
 "use 'remove -f -f' to override or unlock first"
 msgstr ""
 
-#: builtin/worktree.c:1461
+#: builtin/worktree.c:1456
 msgid ""
 "cannot remove a locked working tree;\n"
 "use 'remove -f -f' to override or unlock first"
 msgstr ""
 
-#: builtin/worktree.c:1464
+#: builtin/worktree.c:1459
 #, c-format
 msgid "validation failed, cannot remove working tree: %s"
 msgstr ""
 
-#: builtin/worktree.c:1488
+#: builtin/worktree.c:1483
 #, c-format
 msgid "repair: %s: %s"
 msgstr ""
 
-#: builtin/worktree.c:1491
+#: builtin/worktree.c:1486
 #, c-format
 msgid "error: %s: %s"
 msgstr ""
@@ -24453,7 +24457,7 @@ msgstr ""
 msgid "unable to create directory %s"
 msgstr ""
 
-#: odb/source-packed.c:95
+#: odb/source-packed.c:127
 #, c-format
 msgid "packed object %s (stored in %s) is corrupt"
 msgstr ""
@@ -26931,16 +26935,25 @@ msgstr ""
 msgid "all positive revisions given must be references"
 msgstr ""
 
-#: replay.c:342
+#: replay.c:340
+#, c-format
+msgid "merge of %s onto %s failed"
+msgstr ""
+
+#: replay.c:358
 #, c-format
 msgid "commit %s became empty after replay"
 msgstr ""
 
-#: replay.c:402
+#: replay.c:416
+msgid "'--linearize' cannot be used with multiple branches"
+msgstr ""
+
+#: replay.c:424
 msgid "'--ref' cannot be used with multiple revision ranges"
 msgstr ""
 
-#: replay.c:406 sequencer.c:2709
+#: replay.c:428 sequencer.c:2709
 #, c-format
 msgid "'%s' is not a valid refname"
 msgstr ""
@@ -27064,34 +27077,34 @@ msgid ""
 "REVERT_HEAD or REBASE_HEAD"
 msgstr ""
 
-#: revision.c:2426
+#: revision.c:2446
 #, c-format
 msgid "could not get commit for --ancestry-path argument %s"
 msgstr ""
 
-#: revision.c:2552
+#: revision.c:2572
 msgid "--unpacked=<packfile> no longer supported"
 msgstr ""
 
-#: revision.c:2989
+#: revision.c:3009
 #, c-format
 msgid "invalid option '%s' in --stdin mode"
 msgstr ""
 
-#: revision.c:3011
+#: revision.c:3031
 msgid "your current branch appears to be broken"
 msgstr ""
 
-#: revision.c:3014
+#: revision.c:3034
 #, c-format
 msgid "your current branch '%s' does not have any commits yet"
 msgstr ""
 
-#: revision.c:3203
+#: revision.c:3223
 msgid "object filtering requires --objects"
 msgstr ""
 
-#: revision.c:3233
+#: revision.c:3253
 msgid "-L does not yet support the requested diff format"
 msgstr ""
 
