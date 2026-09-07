@@ -1,0 +1,74 @@
+
+
+#################### Mon, 07 Sep 2026 23:49:23 +0000 ####################
+
+--- po/git.pot.old	2026-09-07 23:49:23.176859653 +0000
++++ po/git.pot.new	2026-09-07 23:49:23.263860693 +0000
+@@ -6459,6 +6459,9 @@
+ "The property has changed between %s and [%s].\n"
+ msgstr ""
+ 
++msgid "The now-empty commit has been dropped -- cannot amend."
++msgstr ""
++
+ #, c-format
+ msgid ""
+ "The permissions on your socket directory are too loose; other\n"
+@@ -7208,7 +7211,10 @@
+ msgid "You are in the middle of a merge -- cannot reword."
+ msgstr ""
+ 
+-msgid "You are in the middle of a rebase -- cannot amend."
++msgid "You are in the middle of a revert -- cannot amend."
++msgstr ""
++
++msgid "You are in the middle of an am session -- cannot amend."
+ msgstr ""
+ 
+ msgid "You are in the middle of an am session."
+@@ -7236,6 +7242,9 @@
+ "to update which remote branch."
+ msgstr ""
+ 
++msgid "You are resolving conflicts during a rebase -- cannot amend."
++msgstr ""
++
+ msgid ""
+ "You asked to amend the most recent commit, but doing so would make\n"
+ "it empty. You can repeat your command with --allow-empty, or you can\n"
+@@ -8965,7 +8974,13 @@
+ msgid "cannot do a partial commit during a merge."
+ msgstr ""
+ 
+-msgid "cannot do a partial commit during a rebase."
++msgid "cannot do a partial commit during a revert."
++msgstr ""
++
++msgid "cannot do a partial commit during an am session."
++msgstr ""
++
++msgid "cannot do a partial commit while resolving conflicts during a rebase."
+ msgstr ""
+ 
+ #, c-format
+@@ -14012,7 +14027,7 @@
+ "<hook-name> [-- <hook-args>]"
+ msgstr ""
+ 
+-msgid "git imap-send [-v] [-q] [--[no-]curl] [(--folder|-f) <folder>] < <mbox>"
++msgid "git imap-send [-v] [-q] [--[no-]curl] [--[no-]draft] [(--folder|-f) <folder>] < <mbox>"
+ msgstr ""
+ 
+ msgid ""
+
+
+-------------------- git-po-helper check-po po/git.pot --------------------
+
+❌ CamelCase config variables
+    ERROR   [git.pot]   entry at L17450 (msgid): should use "core.repositoryFormatVersion" in msgid: "core.repositoryformatversion to 1.\\nPlease set it for migration"
+    ERROR   [git.pot]   entry at L17450 (msgid): should use "core.repositoryFormatVersion" in msgid: "for example:\\ngit config core.repositoryformatversion 1"
+    ERROR   [git.pot]   entry at L23057 (msgid): should use "http.proactiveAuth" in msgid: "http.proactiveauth"
+    ERROR   [git.pot]   entry at L23081 (msgid): should use "http.cookieFile" in msgid: "ing to read cookies from http.cookiefile '-'"
+    ERROR   [git.pot]   entry at L23085 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
+ERROR: 6472 entries checked, 532 config variables, 5 mismatched
+ERROR: check-po command failed
