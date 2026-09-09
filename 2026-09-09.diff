@@ -1,0 +1,112 @@
+
+
+#################### Wed, 09 Sep 2026 23:33:23 +0000 ####################
+
+--- po/git.pot.old	2026-09-09 23:33:23.220306811 +0000
++++ po/git.pot.new	2026-09-09 23:33:23.308309434 +0000
+@@ -2530,6 +2530,9 @@
+ msgid "Advanced"
+ msgstr ""
+ 
++msgid "Advanced concepts related to packing in Git"
++msgstr ""
++
+ #, c-format
+ msgid "After fixing the above paths, you may want to run `git sparse-checkout reapply`.\n"
+ msgstr ""
+@@ -4174,6 +4177,9 @@
+ msgid "Git links cannot be specified 'inline': %s"
+ msgstr ""
+ 
++msgid "Git loose object format"
++msgstr ""
++
+ msgid "Git namespaces"
+ msgstr ""
+ 
+@@ -7420,7 +7426,7 @@
+ "migrate your repository to use the 'reftable' backend with the\n"
+ "following command:\n"
+ "\n"
+-"    git refs migrate --ref-format=reftable\n"
++"    git refs migrate --ref-storage-format=reftable\n"
+ "\n"
+ "Please keep in mind that not all implementations of Git support this\n"
+ "new format yet. So if you use tools other than Git to access this\n"
+@@ -8202,6 +8208,9 @@
+ msgid "attempt to reinitialize repository with different reference storage format"
+ msgstr ""
+ 
++msgid "attempt to reinitialize repository with different reference storage payload"
++msgstr ""
++
+ msgid "attempt to remove non-existent note is not an error"
+ msgstr ""
+ 
+@@ -14168,7 +14177,7 @@
+ msgid ""
+ "git init [-q | --quiet] [--bare] [--template=<template-directory>]\n"
+ "         [--separate-git-dir <git-dir>] [--object-format=<format>]\n"
+-"         [--ref-format=<format>]\n"
++"         [--ref-storage-format=<format>]\n"
+ "         [-b <branch-name> | --initial-branch=<branch-name>]\n"
+ "         [--shared[=<permissions>]] [<directory>]"
+ msgstr ""
+@@ -14433,7 +14442,7 @@
+ msgid "git refs list "
+ msgstr ""
+ 
+-msgid "git refs migrate --ref-format=<format> [--no-reflog] [--dry-run]"
++msgid "git refs migrate --ref-storage-format=<format> [--no-reflog] [--dry-run]"
+ msgstr ""
+ 
+ msgid "git refs optimize "
+@@ -16680,7 +16689,7 @@
+ msgid "missing --config=<config>"
+ msgstr ""
+ 
+-msgid "missing --ref-format=<format>"
++msgid "missing --ref-storage-format=<format>"
+ msgstr ""
+ 
+ #, c-format
+@@ -20784,10 +20793,10 @@
+ msgid "specify the name hash version to use for grouping similar objects by path"
+ msgstr ""
+ 
+-msgid "specify the reference format to convert to"
++msgid "specify the reference storage format to convert to"
+ msgstr ""
+ 
+-msgid "specify the reference format to use"
++msgid "specify the reference storage format to use"
+ msgstr ""
+ 
+ msgid "specifying a master branch makes no sense with --mirror"
+@@ -22762,6 +22771,14 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unknown ref storage format specified via %s: '%s'"
++msgstr ""
++
++#, c-format
++msgid "unknown ref storage format specified via command line: '%s'"
++msgstr ""
++
++#, c-format
+ msgid "unknown ref storage format: '%s'"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-po po/git.pot --------------------
+
+❌ CamelCase config variables
+    ERROR   [git.pot]   entry at L17573 (msgid): should use "core.repositoryFormatVersion" in msgid: "core.repositoryformatversion to 1.\\nPlease set it for migration"
+    ERROR   [git.pot]   entry at L17573 (msgid): should use "core.repositoryFormatVersion" in msgid: "for example:\\ngit config core.repositoryformatversion 1"
+    ERROR   [git.pot]   entry at L23314 (msgid): should use "http.proactiveAuth" in msgid: "http.proactiveauth"
+    ERROR   [git.pot]   entry at L23345 (msgid): should use "http.cookieFile" in msgid: "ing to read cookies from http.cookiefile '-'"
+    ERROR   [git.pot]   entry at L23349 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
+ERROR: 6534 entries checked, 538 config variables, 5 mismatched
+ERROR: check-po command failed
