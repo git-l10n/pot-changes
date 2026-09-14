@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2026-09-11 21:21+0000\n"
+"POT-Creation-Date: 2026-09-14 19:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -2250,7 +2250,7 @@ msgid "dry run"
 msgstr ""
 
 #: builtin/add.c:263 builtin/check-ignore.c:24 builtin/commit.c:1576
-#: builtin/count-objects.c:104 builtin/fsck.c:990 builtin/log.c:2752
+#: builtin/count-objects.c:104 builtin/fsck.c:853 builtin/log.c:2752
 #: builtin/mv.c:223 builtin/read-tree.c:129 builtin/refs.c:101
 msgid "be verbose"
 msgstr ""
@@ -7870,8 +7870,8 @@ msgstr ""
 msgid "parse_one_signature() returned unknown hash algo"
 msgstr ""
 
-#: builtin/fast-import.c:2894 builtin/fsck.c:79 builtin/fsck.c:141
-#: builtin/fsck.c:142
+#: builtin/fast-import.c:2894 builtin/fsck.c:67 builtin/fsck.c:129
+#: builtin/fsck.c:130
 msgid "unknown"
 msgstr ""
 
@@ -8847,193 +8847,155 @@ msgid "got bad config --config=%s"
 msgstr ""
 
 #. TRANSLATORS: e.g. error in tree 01bfda: <more explanation>
-#: builtin/fsck.c:88 builtin/fsck.c:113
+#: builtin/fsck.c:76 builtin/fsck.c:101
 #, c-format
 msgid "error in %s %s: %s"
 msgstr ""
 
 #. TRANSLATORS: e.g. warning in tree 01bfda: <more explanation>
-#: builtin/fsck.c:107
+#: builtin/fsck.c:95
 #, c-format
 msgid "warning in %s %s: %s"
 msgstr ""
 
-#: builtin/fsck.c:137 builtin/fsck.c:140
+#: builtin/fsck.c:125 builtin/fsck.c:128
 #, c-format
 msgid "broken link from %7s %s"
 msgstr ""
 
-#: builtin/fsck.c:149
+#: builtin/fsck.c:137
 msgid "wrong object type in link"
 msgstr ""
 
-#: builtin/fsck.c:166
+#: builtin/fsck.c:154
 #, c-format
 msgid ""
 "broken link from %7s %s\n"
 "              to %7s %s"
 msgstr ""
 
-#: builtin/fsck.c:204 builtin/prune.c:67 connected.c:135
+#: builtin/fsck.c:192 builtin/prune.c:67 connected.c:135
 msgid "Checking connectivity"
 msgstr ""
 
-#: builtin/fsck.c:270
+#: builtin/fsck.c:258
 #, c-format
 msgid "missing %s %s"
 msgstr ""
 
-#: builtin/fsck.c:297
+#: builtin/fsck.c:285
 #, c-format
 msgid "unreachable %s %s"
 msgstr ""
 
-#: builtin/fsck.c:317
+#: builtin/fsck.c:305
 #, c-format
 msgid "dangling %s %s"
 msgstr ""
 
-#: builtin/fsck.c:327
+#: builtin/fsck.c:315
 msgid "could not create lost-found"
 msgstr ""
 
-#: builtin/fsck.c:335 builtin/gc.c:2179 builtin/rebase.c:236
+#: builtin/fsck.c:323 builtin/gc.c:2179 builtin/rebase.c:236
 #: rebase-interactive.c:127 rerere.c:459 rerere.c:670 sequencer.c:4330
 #: sequencer.c:6776
 #, c-format
 msgid "could not write '%s'"
 msgstr ""
 
-#: builtin/fsck.c:339
+#: builtin/fsck.c:327
 #, c-format
 msgid "could not finish '%s'"
 msgstr ""
 
-#: builtin/fsck.c:356
+#: builtin/fsck.c:344
 #, c-format
 msgid "Checking %s"
 msgstr ""
 
-#: builtin/fsck.c:394
+#: builtin/fsck.c:382
 #, c-format
 msgid "Checking connectivity (%d objects)"
 msgstr ""
 
-#: builtin/fsck.c:414
-#, c-format
-msgid "Checking %s %s"
-msgstr ""
-
-#: builtin/fsck.c:419
-msgid "broken links"
-msgstr ""
-
-#: builtin/fsck.c:428
-#, c-format
-msgid "root %s"
-msgstr ""
-
-#: builtin/fsck.c:436
-#, c-format
-msgid "tagged %s %s (%s) in %s"
-msgstr ""
-
-#: builtin/fsck.c:463
+#: builtin/fsck.c:406
 #, c-format
 msgid "%s: object corrupt or missing"
 msgstr ""
 
-#: builtin/fsck.c:489
+#: builtin/fsck.c:415
+#, c-format
+msgid "Checking %s %s"
+msgstr ""
+
+#: builtin/fsck.c:420
+msgid "broken links"
+msgstr ""
+
+#: builtin/fsck.c:430
+#, c-format
+msgid "root %s"
+msgstr ""
+
+#: builtin/fsck.c:438
+#, c-format
+msgid "tagged %s %s (%s) in %s"
+msgstr ""
+
+#: builtin/fsck.c:470
 #, c-format
 msgid "%s: invalid reflog entry %s"
 msgstr ""
 
-#: builtin/fsck.c:508
+#: builtin/fsck.c:489
 #, c-format
 msgid "Checking reflog %s->%s"
 msgstr ""
 
-#: builtin/fsck.c:563
+#: builtin/fsck.c:544
 #, c-format
 msgid "%s: invalid sha1 pointer %s"
 msgstr ""
 
-#: builtin/fsck.c:570
+#: builtin/fsck.c:551
 #, c-format
 msgid "%s: not a commit"
 msgstr ""
 
-#: builtin/fsck.c:623
+#: builtin/fsck.c:604
 #, c-format
 msgid "invalid parameter: expected sha1, got '%s'"
 msgstr ""
 
-#: builtin/fsck.c:711
+#: builtin/fsck.c:692
 msgid "notice: No default references"
 msgstr ""
 
-#: builtin/fsck.c:739
-#, c-format
-msgid "%s: hash-path mismatch, found at: %s"
-msgstr ""
-
-#: builtin/fsck.c:742
-#, c-format
-msgid "%s: object corrupt or missing: %s"
-msgstr ""
-
-#: builtin/fsck.c:759
-#, c-format
-msgid "%s: object could not be parsed: %s"
-msgstr ""
-
-#: builtin/fsck.c:780
-#, c-format
-msgid "bad sha1 file: %s"
-msgstr ""
-
-#: builtin/fsck.c:801
-msgid "Checking object directory"
-msgstr ""
-
-#: builtin/fsck.c:805
-msgid "Checking object directories"
-msgstr ""
-
-#: builtin/fsck.c:819
+#: builtin/fsck.c:703
 #, c-format
 msgid "Checking cache tree of %s"
 msgstr ""
 
-#: builtin/fsck.c:824
+#: builtin/fsck.c:708
 #, c-format
 msgid "%s: invalid sha1 pointer in cache-tree of %s"
 msgstr ""
 
-#: builtin/fsck.c:833
+#: builtin/fsck.c:717
 msgid "non-tree in cache-tree"
 msgstr ""
 
-#: builtin/fsck.c:864
+#: builtin/fsck.c:748
 #, c-format
 msgid "%s: invalid sha1 pointer in resolve-undo of %s"
 msgstr ""
 
-#: builtin/fsck.c:940
-#, c-format
-msgid "unable to load rev-index for pack '%s'"
-msgstr ""
-
-#: builtin/fsck.c:945
-#, c-format
-msgid "invalid rev-index for pack '%s'"
-msgstr ""
-
-#: builtin/fsck.c:961 builtin/fsck.c:964
+#: builtin/fsck.c:811 builtin/fsck.c:814
 msgid "Checking ref database"
 msgstr ""
 
-#: builtin/fsck.c:982
+#: builtin/fsck.c:832
 msgid ""
 "git fsck [--tags] [--root] [--unreachable] [--cache] [--no-reflogs]\n"
 "         [--[no-]full] [--strict] [--verbose] [--lost-found]\n"
@@ -9041,60 +9003,56 @@ msgid ""
 "         [--[no-]name-objects] [--[no-]references] [<object>...]"
 msgstr ""
 
-#: builtin/fsck.c:991
+#: builtin/fsck.c:854
 msgid "show unreachable objects"
 msgstr ""
 
-#: builtin/fsck.c:992
+#: builtin/fsck.c:855
 msgid "show dangling objects"
 msgstr ""
 
-#: builtin/fsck.c:993
+#: builtin/fsck.c:856
 msgid "report tags"
 msgstr ""
 
-#: builtin/fsck.c:994
+#: builtin/fsck.c:857
 msgid "report root nodes"
 msgstr ""
 
-#: builtin/fsck.c:995
+#: builtin/fsck.c:858
 msgid "make index objects head nodes"
 msgstr ""
 
-#: builtin/fsck.c:996
+#: builtin/fsck.c:859
 msgid "make reflogs head nodes (default)"
 msgstr ""
 
-#: builtin/fsck.c:997
+#: builtin/fsck.c:861
 msgid "also consider packs and alternate objects"
 msgstr ""
 
-#: builtin/fsck.c:998
+#: builtin/fsck.c:862
 msgid "check only connectivity"
 msgstr ""
 
-#: builtin/fsck.c:999 builtin/mktag.c:82
+#: builtin/fsck.c:863 builtin/mktag.c:82
 msgid "enable more strict checking"
 msgstr ""
 
-#: builtin/fsck.c:1001
+#: builtin/fsck.c:865
 msgid "write dangling objects in .git/lost-found"
 msgstr ""
 
-#: builtin/fsck.c:1002 builtin/prune.c:163 builtin/repo.c:946
+#: builtin/fsck.c:866 builtin/prune.c:163 builtin/repo.c:946
 msgid "show progress"
 msgstr ""
 
-#: builtin/fsck.c:1003
+#: builtin/fsck.c:867
 msgid "show verbose names for reachable objects"
 msgstr ""
 
-#: builtin/fsck.c:1004
+#: builtin/fsck.c:868
 msgid "check reference database consistency"
-msgstr ""
-
-#: builtin/fsck.c:1088 builtin/index-pack.c:286
-msgid "Checking objects"
 msgstr ""
 
 #: builtin/fsmonitor--daemon.c:25
@@ -10336,6 +10294,10 @@ msgstr ""
 #: builtin/index-pack.c:268
 #, c-format
 msgid "object %s: expected type %s, found %s"
+msgstr ""
+
+#: builtin/index-pack.c:286 odb/source-packed.c:910
+msgid "Checking objects"
 msgstr ""
 
 #: builtin/index-pack.c:319
@@ -12896,7 +12858,7 @@ msgstr ""
 msgid "failed to stat %s"
 msgstr ""
 
-#: builtin/pack-objects.c:1449 odb/source-loose.c:825
+#: builtin/pack-objects.c:1449 odb/source-loose.c:826
 #, c-format
 msgid "failed utime() on %s"
 msgstr ""
@@ -24020,7 +23982,7 @@ msgstr ""
 msgid "Failed to convert object from %s to %s"
 msgstr ""
 
-#: object-file.c:167 odb/source-loose.c:140 odb/source-loose.c:276
+#: object-file.c:167 odb/source-loose.c:141 odb/source-loose.c:277
 #, c-format
 msgid "object file %s is empty"
 msgstr ""
@@ -24416,90 +24378,123 @@ msgstr ""
 msgid "error writing to pack-objects"
 msgstr ""
 
-#: odb/source-loose.c:127
+#: odb/source-loose.c:128
 #, c-format
 msgid "unable to open loose object %s"
 msgstr ""
 
-#: odb/source-loose.c:166
+#: odb/source-loose.c:167
 #, c-format
 msgid "unable to parse %s header"
 msgstr ""
 
-#: odb/source-loose.c:171
+#: odb/source-loose.c:172
 msgid "invalid object type"
 msgstr ""
 
-#: odb/source-loose.c:183
+#: odb/source-loose.c:184
 #, c-format
 msgid "unable to unpack %s header"
 msgstr ""
 
-#: odb/source-loose.c:187
+#: odb/source-loose.c:188
 #, c-format
 msgid "header for %s too long, exceeds %d bytes"
 msgstr ""
 
-#: odb/source-loose.c:196
+#: odb/source-loose.c:197
 #, c-format
 msgid "loose object %s (stored in %s) is corrupt"
 msgstr ""
 
-#: odb/source-loose.c:614
+#: odb/source-loose.c:615
 msgid "error when closing loose object file"
 msgstr ""
 
-#: odb/source-loose.c:692
+#: odb/source-loose.c:693
 #, c-format
 msgid "insufficient permission for adding an object to repository database %s"
 msgstr ""
 
-#: odb/source-loose.c:697
+#: odb/source-loose.c:698
 msgid "unable to create temporary file"
 msgstr ""
 
-#: odb/source-loose.c:739
+#: odb/source-loose.c:740
 msgid "unable to write loose object file"
 msgstr ""
 
-#: odb/source-loose.c:805
+#: odb/source-loose.c:806
 #, c-format
 msgid "unable to deflate new object %s (%d)"
 msgstr ""
 
-#: odb/source-loose.c:809
+#: odb/source-loose.c:810
 #, c-format
 msgid "deflateEnd on object %s failed (%d)"
 msgstr ""
 
-#: odb/source-loose.c:812
+#: odb/source-loose.c:813
 #, c-format
 msgid "confused by unstable object source data for %s"
 msgstr ""
 
-#: odb/source-loose.c:931
+#: odb/source-loose.c:932
 #, c-format
 msgid "write stream object %<PRIuMAX> != %<PRIuMAX>"
 msgstr ""
 
-#: odb/source-loose.c:942
+#: odb/source-loose.c:943
 #, c-format
 msgid "unable to stream deflate new object (%d)"
 msgstr ""
 
-#: odb/source-loose.c:945
+#: odb/source-loose.c:946
 #, c-format
 msgid "deflateEnd on stream object failed (%d)"
 msgstr ""
 
-#: odb/source-loose.c:962
+#: odb/source-loose.c:963
 #, c-format
 msgid "unable to create directory %s"
 msgstr ""
 
-#: odb/source-packed.c:127
+#: odb/source-loose.c:1067
+#, c-format
+msgid "%s: hash-path mismatch, found at: %s"
+msgstr ""
+
+#: odb/source-loose.c:1070
+#, c-format
+msgid "%s: object corrupt or missing: %s"
+msgstr ""
+
+#: odb/source-loose.c:1097
+#, c-format
+msgid "bad sha1 file: %s"
+msgstr ""
+
+#: odb/source-loose.c:1118
+msgid "Checking object directory"
+msgstr ""
+
+#: odb/source-loose.c:1122
+msgid "Checking object directories"
+msgstr ""
+
+#: odb/source-packed.c:132
 #, c-format
 msgid "packed object %s (stored in %s) is corrupt"
+msgstr ""
+
+#: odb/source-packed.c:946
+#, c-format
+msgid "unable to load rev-index for pack '%s'"
+msgstr ""
+
+#: odb/source-packed.c:951
+#, c-format
+msgid "invalid rev-index for pack '%s'"
 msgstr ""
 
 #: odb/transaction.c:13
