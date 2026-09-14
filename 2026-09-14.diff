@@ -1,0 +1,68 @@
+
+
+#################### Mon, 14 Sep 2026 19:37:53 +0000 ####################
+
+--- po/git.pot.old	2026-09-14 19:37:53.208997081 +0000
++++ po/git.pot.new	2026-09-14 19:37:53.297997821 +0000
+@@ -6918,13 +6918,6 @@
+ msgstr ""
+ 
+ msgid ""
+-"Updates were rejected because the tip of the remote-tracking branch\n"
+-"cannot be checked against a detached HEAD. If you want to push anyway,\n"
+-"specify the expected value with '--force-with-lease=<ref>:<expect>'\n"
+-"or use '--no-force-if-includes' to skip this check."
+-msgstr ""
+-
+-msgid ""
+ "Updates were rejected because the tip of the remote-tracking branch has\n"
+ "been updated since the last checkout. If you want to integrate the\n"
+ "remote changes, use 'git pull' before pushing again.\n"
+@@ -6938,6 +6931,14 @@
+ "See the 'Note about fast-forwards' in 'git push --help' for details."
+ msgstr ""
+ 
++msgid ""
++"Updates were rejected because what you are pushing is not a branch,\n"
++"so there is no reflog to check against the tip of the remote-tracking\n"
++"branch. If you want to push anyway, specify the expected value with\n"
++"'--force-with-lease=<ref>:<expect>' or use '--no-force-if-includes'\n"
++"to skip this check."
++msgstr ""
++
+ #, c-format
+ msgid "Updating %s"
+ msgstr ""
+@@ -19957,6 +19958,9 @@
+ msgid "root tree OID for commit %s in commit-graph is %s != %s"
+ msgstr ""
+ 
++msgid "run \"git rerere\" before resolving the conflict to record or replay its resolution"
++msgstr ""
++
+ msgid "run 'maintenance --auto' after fetching"
+ msgstr ""
+ 
+@@ -20694,6 +20698,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "skipping rerere, unable to create '%s.lock'"
++msgstr ""
++
++#, c-format
+ msgid "socket directory '%s' is incompatible with fsmonitor due to lack of Unix sockets support"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-po po/git.pot --------------------
+
+❌ CamelCase config variables
+    ERROR   [git.pot]   entry at L17574 (msgid): should use "core.repositoryFormatVersion" in msgid: "core.repositoryformatversion to 1.\\nPlease set it for migration"
+    ERROR   [git.pot]   entry at L17574 (msgid): should use "core.repositoryFormatVersion" in msgid: "for example:\\ngit config core.repositoryformatversion 1"
+    ERROR   [git.pot]   entry at L23327 (msgid): should use "http.proactiveAuth" in msgid: "http.proactiveauth"
+    ERROR   [git.pot]   entry at L23358 (msgid): should use "http.cookieFile" in msgid: "ing to read cookies from http.cookiefile '-'"
+    ERROR   [git.pot]   entry at L23362 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
+ERROR: 6538 entries checked, 538 config variables, 5 mismatched
+ERROR: check-po command failed
