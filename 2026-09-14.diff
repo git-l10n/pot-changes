@@ -1,0 +1,86 @@
+
+
+#################### Mon, 14 Sep 2026 19:38:01 +0000 ####################
+
+--- po/git.pot.old	2026-09-14 19:38:00.934022427 +0000
++++ po/git.pot.new	2026-09-14 19:38:01.022022093 +0000
+@@ -4186,6 +4186,9 @@
+ msgid "Git web interface (web frontend to Git repositories)"
+ msgstr ""
+ 
++msgid "Git's core data model"
++msgstr ""
++
+ msgid "Git's i18n setup code for shell scripts"
+ msgstr ""
+ 
+@@ -6459,6 +6462,9 @@
+ "The property has changed between %s and [%s].\n"
+ msgstr ""
+ 
++msgid "The now-empty commit has been dropped -- cannot amend."
++msgstr ""
++
+ #, c-format
+ msgid ""
+ "The permissions on your socket directory are too loose; other\n"
+@@ -7208,7 +7214,10 @@
+ msgid "You are in the middle of a merge -- cannot reword."
+ msgstr ""
+ 
+-msgid "You are in the middle of a rebase -- cannot amend."
++msgid "You are in the middle of a revert -- cannot amend."
++msgstr ""
++
++msgid "You are in the middle of an am session -- cannot amend."
+ msgstr ""
+ 
+ msgid "You are in the middle of an am session."
+@@ -7236,6 +7245,9 @@
+ "to update which remote branch."
+ msgstr ""
+ 
++msgid "You are resolving conflicts during a rebase -- cannot amend."
++msgstr ""
++
+ msgid ""
+ "You asked to amend the most recent commit, but doing so would make\n"
+ "it empty. You can repeat your command with --allow-empty, or you can\n"
+@@ -8965,7 +8977,13 @@
+ msgid "cannot do a partial commit during a merge."
+ msgstr ""
+ 
+-msgid "cannot do a partial commit during a rebase."
++msgid "cannot do a partial commit during a revert."
++msgstr ""
++
++msgid "cannot do a partial commit during an am session."
++msgstr ""
++
++msgid "cannot do a partial commit while resolving conflicts during a rebase."
+ msgstr ""
+ 
+ #, c-format
+@@ -21965,6 +21983,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unable to parse tree %s"
++msgstr ""
++
++#, c-format
+ msgid "unable to parse type from header '%s' of %s"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-po po/git.pot --------------------
+
+❌ CamelCase config variables
+    ERROR   [git.pot]   entry at L17455 (msgid): should use "core.repositoryFormatVersion" in msgid: "core.repositoryformatversion to 1.\\nPlease set it for migration"
+    ERROR   [git.pot]   entry at L17455 (msgid): should use "core.repositoryFormatVersion" in msgid: "for example:\\ngit config core.repositoryformatversion 1"
+    ERROR   [git.pot]   entry at L23066 (msgid): should use "http.proactiveAuth" in msgid: "http.proactiveauth"
+    ERROR   [git.pot]   entry at L23090 (msgid): should use "http.cookieFile" in msgid: "ing to read cookies from http.cookiefile '-'"
+    ERROR   [git.pot]   entry at L23094 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
+ERROR: 6474 entries checked, 532 config variables, 5 mismatched
+ERROR: check-po command failed
