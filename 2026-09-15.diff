@@ -1,0 +1,231 @@
+
+
+#################### Tue, 15 Sep 2026 23:12:38 +0000 ####################
+
+--- po/git.pot.old	2026-09-15 23:12:38.035792000 +0000
++++ po/git.pot.new	2026-09-15 23:12:38.082792030 +0000
+@@ -6941,6 +6941,9 @@
+ msgid "Use 'git am --show-current-patch=diff' to see the failed patch"
+ msgstr ""
+ 
++msgid "Use --update-refs=head to rewrite only the current branch and leave such branches untouched."
++msgstr ""
++
+ msgid "Use -f if you really want to add them."
+ msgstr ""
+ 
+@@ -9222,6 +9225,9 @@
+ msgid "cannot parse color '%s'"
+ msgstr ""
+ 
++msgid "cannot parse commit"
++msgstr ""
++
+ #, c-format
+ msgid "cannot parse commit %s"
+ msgstr ""
+@@ -9398,6 +9404,17 @@
+ msgid "cannot split up merge commit"
+ msgstr ""
+ 
++#, c-format
++msgid "cannot squash %s (%s) that does not target base commit without '--edit'"
++msgstr ""
++
++#, c-format
++msgid "cannot squash %s (%s): its target is not being squashed"
++msgstr ""
++
++msgid "cannot squash down to root commit"
++msgstr ""
++
+ msgid "cannot squash merge commit into another commit"
+ msgstr ""
+ 
+@@ -9726,6 +9743,9 @@
+ msgid "command expects a committish"
+ msgstr ""
+ 
++msgid "command expects a revision range"
++msgstr ""
++
+ msgid "command expects a single revision"
+ msgstr ""
+ 
+@@ -10356,6 +10376,9 @@
+ msgid "could not figure out destination name from '%s'"
+ msgstr ""
+ 
++msgid "could not filter refs"
++msgstr ""
++
+ #, c-format
+ msgid "could not find '%s' in pack '%s' at offset %<PRIuMAX>"
+ msgstr ""
+@@ -10679,6 +10702,9 @@
+ msgid "could not parse transport.color.* config"
+ msgstr ""
+ 
++msgid "could not prepare the squash message"
++msgstr ""
++
+ #, c-format
+ msgid "could not push to %s"
+ msgstr ""
+@@ -13099,6 +13125,9 @@
+ msgid "failed writing second commit"
+ msgstr ""
+ 
++msgid "failed writing squashed commit"
++msgstr ""
++
+ #, c-format
+ msgid "failed writing ssh signing key buffer to '%s'"
+ msgstr ""
+@@ -14024,6 +14053,9 @@
+ msgid "git history split <commit> [--dry-run] [--update-refs=(branches|head)] [--] [<pathspec>...]"
+ msgstr ""
+ 
++msgid "git history squash [--dry-run] [--update-refs=(branches|head)] [--[no-]edit] <revision-range>"
++msgstr ""
++
+ msgid "git hook list [--allow-unknown-hook-name] [-z] [--show-scope] <hook-name>"
+ msgstr ""
+ 
+@@ -15093,6 +15125,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "ignoring %s (%s): message body is empty"
++msgstr ""
++
++#, c-format
+ msgid "ignoring %s because the protocol does not support it"
+ msgstr ""
+ 
+@@ -15155,6 +15191,9 @@
+ msgid "ignoring ref with broken name %s"
+ msgstr ""
+ 
++msgid "ignoring rev-list options that would change how the range is walked"
++msgstr ""
++
+ #, c-format
+ msgid "ignoring suspicious submodule name: %s"
+ msgstr ""
+@@ -17251,6 +17290,9 @@
+ msgid "not a %s (actually a %s): %s"
+ msgstr ""
+ 
++msgid "not a '<base>..<tip>' revision range"
++msgstr ""
++
+ #, c-format
+ msgid "not a blob (actually a %s): %s"
+ msgstr ""
+@@ -18161,6 +18203,10 @@
+ msgid "parent"
+ msgstr ""
+ 
++#, c-format
++msgid "parent %s of commit %s is outside the revision range"
++msgstr ""
++
+ msgid "parent-number"
+ msgstr ""
+ 
+@@ -20674,6 +20720,14 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "squashing %s (%s) would discard its message, please combine them using '--edit'"
++msgstr ""
++
++#, c-format
++msgid "squashing %s (%s) would overwrite 'squash!' message, please combine them using '--edit'"
++msgstr ""
++
++#, c-format
+ msgid "squelched %d whitespace error"
+ msgid_plural "squelched %d whitespace errors"
+ msgstr[0] ""
+@@ -21149,6 +21203,10 @@
+ msgid "the editor exited uncleanly, aborting everything"
+ msgstr ""
+ 
++#, c-format
++msgid "the following branches cannot be rewritten as descendants of the squashed commit:%s"
++msgstr ""
++
+ msgid "the following file has changes staged in the index:"
+ msgid_plural "the following files have changes staged in the index:"
+ msgstr[0] ""
+@@ -21246,6 +21304,15 @@
+ msgid "the requested upstream branch '%s' does not exist"
+ msgstr ""
+ 
++msgid "the revision range contains more than one tip commit"
++msgstr ""
++
++msgid "the revision range holds a single commit; nothing to squash"
++msgstr ""
++
++msgid "the revision range is empty"
++msgstr ""
++
+ msgid "the script was already rearranged."
+ msgstr ""
+ 
+@@ -21573,6 +21640,9 @@
+ msgid "unable to checkout working tree"
+ msgstr ""
+ 
++msgid "unable to commit alternates file"
++msgstr ""
++
+ #, c-format
+ msgid "unable to compact stack: %s"
+ msgstr ""
+@@ -21849,9 +21919,6 @@
+ msgid "unable to move %s to %s"
+ msgstr ""
+ 
+-msgid "unable to move new alternates file into place"
+-msgstr ""
+-
+ #, c-format
+ msgid "unable to normalize alternate object path: %s"
+ msgstr ""
+@@ -21969,10 +22036,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unable to parse parent of %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "unable to parse remote unpack status: %s"
+ msgstr ""
+ 
+@@ -22222,6 +22285,9 @@
+ msgid "unable to write %s"
+ msgstr ""
+ 
++msgid "unable to write alternates file"
++msgstr ""
++
+ msgid "unable to write base commit"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-po po/git.pot --------------------
+
+❌ CamelCase config variables
+    ERROR   [git.pot]   entry at L17540 (msgid): should use "core.repositoryFormatVersion" in msgid: "core.repositoryformatversion to 1.\\nPlease set it for migration"
+    ERROR   [git.pot]   entry at L17540 (msgid): should use "core.repositoryFormatVersion" in msgid: "for example:\\ngit config core.repositoryformatversion 1"
+    ERROR   [git.pot]   entry at L23151 (msgid): should use "http.proactiveAuth" in msgid: "http.proactiveauth"
+    ERROR   [git.pot]   entry at L23175 (msgid): should use "http.cookieFile" in msgid: "ing to read cookies from http.cookiefile '-'"
+    ERROR   [git.pot]   entry at L23179 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
+ERROR: 6496 entries checked, 533 config variables, 5 mismatched
+ERROR: check-po command failed
