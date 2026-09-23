@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2026-09-16 20:27+0000\n"
+"POT-Creation-Date: 2026-09-23 00:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -1368,7 +1368,7 @@ msgstr[1] ""
 msgid "cannot open %s"
 msgstr ""
 
-#: apply.c:4774 rerere.c:1072
+#: apply.c:4774 rerere.c:1094
 #, c-format
 msgid "cannot unlink '%s'"
 msgstr ""
@@ -1873,7 +1873,7 @@ msgstr ""
 #: bisect.c:165 builtin/cat-file.c:257 builtin/cat-file.c:598
 #: builtin/index-pack.c:788 builtin/notes.c:730 builtin/pack-objects.c:367
 #: builtin/pack-objects.c:431 builtin/pack-objects.c:544 combine-diff.c:332
-#: object-file.c:355 object-file.c:361 rerere.c:977
+#: object-file.c:355 object-file.c:361 rerere.c:999
 #, c-format
 msgid "unable to read %s"
 msgstr ""
@@ -2405,7 +2405,7 @@ msgstr ""
 #: builtin/commit.c:393 builtin/diff-tree.c:134 builtin/grep.c:547
 #: builtin/mv.c:259 builtin/reset.c:481 builtin/rm.c:306
 #: builtin/submodule--helper.c:242 builtin/submodule--helper.c:3606
-#: read-cache.c:2028 read-cache.c:2344 rerere.c:539 rerere.c:573 rerere.c:1108
+#: read-cache.c:2028 read-cache.c:2344 rerere.c:542 rerere.c:576 rerere.c:1130
 #: submodule.c:1855
 msgid "index file corrupt"
 msgstr ""
@@ -2413,7 +2413,7 @@ msgstr ""
 #: builtin/add.c:693 builtin/am.c:2028 builtin/am.c:2062 builtin/checkout.c:702
 #: builtin/checkout.c:928 builtin/clone.c:724 builtin/commit.c:466
 #: builtin/commit.c:491 builtin/commit.c:551 builtin/history.c:819
-#: builtin/stash.c:371 builtin/stash.c:415 merge.c:111 rerere.c:699
+#: builtin/stash.c:371 builtin/stash.c:415 merge.c:111 rerere.c:702
 msgid "unable to write new index file"
 msgstr ""
 
@@ -2469,13 +2469,13 @@ msgid "fseek failed"
 msgstr ""
 
 #: builtin/am.c:764 builtin/am.c:857 builtin/rebase.c:711 sequencer.c:983
-#: wrapper.c:201 wrapper.c:449
+#: wrapper.c:201 wrapper.c:453
 #, c-format
 msgid "could not open '%s' for reading"
 msgstr ""
 
 #: builtin/am.c:773 builtin/rebase.c:661 editor.c:150 sequencer.c:4525
-#: wrapper.c:199 wrapper.c:447
+#: wrapper.c:199 wrapper.c:451
 #, c-format
 msgid "could not open '%s' for writing"
 msgstr ""
@@ -5054,7 +5054,7 @@ msgstr ""
 msgid "Would skip repository %s\n"
 msgstr ""
 
-#: builtin/clean.c:44 midx.c:779
+#: builtin/clean.c:44 midx.c:785
 #, c-format
 msgid "failed to remove %s"
 msgstr ""
@@ -5959,7 +5959,7 @@ msgid "could not read MERGE_MSG"
 msgstr ""
 
 #: builtin/commit.c:925 builtin/history.c:77 builtin/submodule--helper.c:1379
-#: bundle.c:164 rerere.c:454 rerere.c:668 sequencer.c:3006 sequencer.c:3838
+#: bundle.c:164 rerere.c:454 rerere.c:671 sequencer.c:3006 sequencer.c:3838
 #, c-format
 msgid "could not open '%s'"
 msgstr ""
@@ -8899,7 +8899,7 @@ msgid "could not create lost-found"
 msgstr ""
 
 #: builtin/fsck.c:323 builtin/gc.c:2179 builtin/rebase.c:236
-#: rebase-interactive.c:127 rerere.c:459 rerere.c:670 sequencer.c:4338
+#: rebase-interactive.c:127 rerere.c:459 rerere.c:673 sequencer.c:4338
 #: sequencer.c:6784
 #, c-format
 msgid "could not write '%s'"
@@ -9997,7 +9997,7 @@ msgstr ""
 
 #: builtin/history.c:83 builtin/history.c:90 editor.c:152 sequencer.c:583
 #: sequencer.c:3727 sequencer.c:3741 sequencer.c:4010 sequencer.c:6567
-#: wrapper.c:764
+#: wrapper.c:768
 #, c-format
 msgid "could not write to '%s'"
 msgstr ""
@@ -11290,7 +11290,7 @@ msgid "--remerge-diff does not make sense"
 msgstr ""
 
 #: builtin/log.c:2284 builtin/submodule--helper.c:1928
-#: builtin/submodule--helper.c:1989 rerere.c:871 submodule.c:2514
+#: builtin/submodule--helper.c:1989 rerere.c:893 submodule.c:2514
 #, c-format
 msgid "could not create directory '%s'"
 msgstr ""
@@ -12028,7 +12028,7 @@ msgid "Bad value '%s' in environment '%s'"
 msgstr ""
 
 #: builtin/merge.c:1246 editor.c:155 read-cache.c:3092
-#: t/helper/test-synthesize.c:394 t/helper/test-synthesize.c:477 wrapper.c:766
+#: t/helper/test-synthesize.c:394 t/helper/test-synthesize.c:477 wrapper.c:770
 #, c-format
 msgid "could not close '%s'"
 msgstr ""
@@ -23139,48 +23139,55 @@ msgstr ""
 msgid "argument to --packfile must be a valid hash (got '%s')"
 msgstr ""
 
-#: http.c:496
+#: http.c:501
 #, c-format
 msgid "negative value for http.postBuffer; defaulting to %d"
 msgstr ""
 
-#: http.c:517
+#: http.c:522
 msgid "Delegation control is not supported with cURL < 7.22.0"
 msgstr ""
 
-#: http.c:569
+#: http.c:574
 msgid "Unknown value for http.proactiveauth"
 msgstr ""
 
-#: http.c:1379 http.c:1381 parse.c:227
+#: http.c:1145
+#, c-format
+msgid ""
+"http.sslVerifyStatus is set, but could not enable OCSP status verification: "
+"%s"
+msgstr ""
+
+#: http.c:1393 http.c:1395 parse.c:227
 #, c-format
 msgid "failed to parse %s"
 msgstr ""
 
-#: http.c:1414
+#: http.c:1428
 #, c-format
 msgid "Unsupported SSL backend '%s'. Supported SSL backends:"
 msgstr ""
 
-#: http.c:1421
+#: http.c:1435
 #, c-format
 msgid "Could not set SSL backend to '%s': cURL was built without SSL backends"
 msgstr ""
 
-#: http.c:1425
+#: http.c:1439
 #, c-format
 msgid "Could not set SSL backend to '%s': already set"
 msgstr ""
 
-#: http.c:1624
+#: http.c:1638
 msgid "refusing to read cookies from http.cookiefile '-'"
 msgstr ""
 
-#: http.c:1630
+#: http.c:1644
 msgid "ignoring http.savecookies for empty http.cookiefile"
 msgstr ""
 
-#: http.c:2359
+#: http.c:2373
 #, c-format
 msgid ""
 "unable to update url base from redirection:\n"
@@ -23188,19 +23195,19 @@ msgid ""
 "   redirect: %s"
 msgstr ""
 
-#: http.c:2381
+#: http.c:2395
 #, c-format
 msgid ""
 "response requested a delay greater than http.maxRetryTime (%ld > %ld seconds)"
 msgstr ""
 
-#: http.c:2393
+#: http.c:2407
 #, c-format
 msgid ""
 "configured http.retryAfter exceeds http.maxRetryTime (%ld > %ld seconds)"
 msgstr ""
 
-#: http.c:2470
+#: http.c:2484
 #, c-format
 msgid "rate limited, waiting %ld seconds before retry"
 msgstr ""
@@ -23441,7 +23448,7 @@ msgstr ""
 msgid "quoted CRLF detected"
 msgstr ""
 
-#: mem-pool.c:128 strbuf.c:280 strbuf.c:428 wrapper.c:754
+#: mem-pool.c:128 strbuf.c:280 strbuf.c:428 wrapper.c:758
 #, c-format
 msgid "unable to format message: %s"
 msgstr ""
@@ -23742,7 +23749,7 @@ msgstr ""
 msgid "unable to link '%s' to '%s'"
 msgstr ""
 
-#: midx-write.c:1142 midx.c:850
+#: midx-write.c:1142 midx.c:856
 #, c-format
 msgid "failed to clear multi-pack-index at %s"
 msgstr ""
@@ -23967,55 +23974,60 @@ msgstr ""
 msgid "multi-pack-index large offset out of bounds"
 msgstr ""
 
-#: midx.c:876
+#: midx.c:592
+#, c-format
+msgid "bad pack-int-id: %<PRIu32> (%<PRIu32> total packs)"
+msgstr ""
+
+#: midx.c:882
 #, c-format
 msgid "failed to clear multi-pack-index chain at %s"
 msgstr ""
 
-#: midx.c:943
+#: midx.c:949
 msgid "multi-pack-index file exists, but failed to parse"
 msgstr ""
 
-#: midx.c:951
+#: midx.c:957
 msgid "incorrect checksum"
 msgstr ""
 
-#: midx.c:955
+#: midx.c:961
 msgid "Looking for referenced packfiles"
 msgstr ""
 
-#: midx.c:966
+#: midx.c:972
 msgid "the midx contains no oid"
 msgstr ""
 
-#: midx.c:976
+#: midx.c:982
 msgid "Verifying OID order in multi-pack-index"
 msgstr ""
 
-#: midx.c:987
+#: midx.c:993
 #, c-format
 msgid "oid lookup out of order: oid[%d] = %s >= %s = oid[%d]"
 msgstr ""
 
-#: midx.c:1009
+#: midx.c:1015
 msgid "Sorting objects by packfile"
 msgstr ""
 
-#: midx.c:1017
+#: midx.c:1023
 msgid "Verifying object offsets"
-msgstr ""
-
-#: midx.c:1036
-#, c-format
-msgid "failed to load pack entry for oid[%d] = %s"
 msgstr ""
 
 #: midx.c:1042
 #, c-format
+msgid "failed to load pack entry for oid[%d] = %s"
+msgstr ""
+
+#: midx.c:1048
+#, c-format
 msgid "failed to load pack-index for packfile %s"
 msgstr ""
 
-#: midx.c:1051
+#: midx.c:1057
 #, c-format
 msgid "incorrect object offset for oid[%d] = %s: %<PRIx64> != %<PRIx64>"
 msgstr ""
@@ -27129,67 +27141,72 @@ msgstr ""
 msgid "there were errors while writing '%s' (%s)"
 msgstr ""
 
-#: rerere.c:477 rerere.c:1034
+#: rerere.c:477 rerere.c:1056
 #, c-format
 msgid "could not parse conflict hunks in '%s'"
 msgstr ""
 
-#: rerere.c:662
+#: rerere.c:665
 #, c-format
 msgid "failed utime() on '%s'"
 msgstr ""
 
-#: rerere.c:672
+#: rerere.c:675
 #, c-format
 msgid "writing '%s' failed"
 msgstr ""
 
-#: rerere.c:693
+#: rerere.c:696
 #, c-format
 msgid "Staged '%s' using previous resolution."
 msgstr ""
 
-#: rerere.c:735
+#: rerere.c:750
+#, c-format
+msgid "could not copy resolution for '%s'"
+msgstr ""
+
+#: rerere.c:755
 #, c-format
 msgid "Recorded resolution for '%s'."
 msgstr ""
 
-#: rerere.c:770
+#: rerere.c:790
 #, c-format
 msgid "Resolved '%s' using previous resolution."
 msgstr ""
 
-#: rerere.c:785
+#: rerere.c:807
 #, c-format
 msgid "cannot unlink stray '%s'"
 msgstr ""
 
-#: rerere.c:789
+#: rerere.c:811
 #, c-format
 msgid "Recorded preimage for '%s'"
 msgstr ""
 
-#: rerere.c:1052
+#: rerere.c:1074
 #, c-format
 msgid "failed to update conflicted state in '%s'"
 msgstr ""
 
-#: rerere.c:1063 rerere.c:1070
+#: rerere.c:1085 rerere.c:1092
 #, c-format
 msgid "no remembered resolution for '%s'"
 msgstr ""
 
-#: rerere.c:1082
+#: rerere.c:1104
 #, c-format
 msgid "Updated preimage for '%s'"
 msgstr ""
 
-#: rerere.c:1091
+#: rerere.c:1113
 #, c-format
 msgid "Forgot resolution for '%s'\n"
 msgstr ""
 
-#: rerere.c:1292
+#: rerere.c:1314
 msgid "unable to open rr-cache directory"
 msgstr ""
 
@@ -29141,12 +29158,12 @@ msgstr ""
 msgid "toggle pruning of trees by sparse patterns"
 msgstr ""
 
-#: t/helper/test-reach.c:162
+#: t/helper/test-reach.c:163
 #, c-format
 msgid "commit %s is not marked reachable"
 msgstr ""
 
-#: t/helper/test-reach.c:172
+#: t/helper/test-reach.c:173
 msgid "too many commits marked reachable"
 msgstr ""
 
@@ -29155,7 +29172,11 @@ msgstr ""
 msgid "could not find MIDX with checksum %s"
 msgstr ""
 
-#: t/helper/test-read-midx.c:135
+#: t/helper/test-read-midx.c:95
+msgid "failed to load pack entry"
+msgstr ""
+
+#: t/helper/test-read-midx.c:139
 msgid "could not determine MIDX preferred pack"
 msgstr ""
 
@@ -29291,7 +29312,7 @@ msgstr ""
 msgid "invalid trailer '%s': missing key before separator"
 msgstr ""
 
-#: trailer.c:1266 wrapper.c:809 wrapper.c:822
+#: trailer.c:1266 wrapper.c:813 wrapper.c:826
 #, c-format
 msgid "could not stat %s"
 msgstr ""
@@ -30039,30 +30060,30 @@ msgstr ""
 msgid "unable to create '%s'"
 msgstr ""
 
-#: wrapper.c:197 wrapper.c:445
+#: wrapper.c:197 wrapper.c:449
 #, c-format
 msgid "could not open '%s' for reading and writing"
 msgstr ""
 
-#: wrapper.c:476 wrapper.c:732
+#: wrapper.c:480 wrapper.c:736
 #, c-format
 msgid "unable to access '%s'"
 msgstr ""
 
-#: wrapper.c:740
+#: wrapper.c:744
 msgid "unable to get current working directory"
 msgstr ""
 
-#: wrapper.c:938
+#: wrapper.c:942
 msgid "unable to get random bytes"
 msgstr ""
 
-#: wrapper.c:952
+#: wrapper.c:956
 #, c-format
 msgid "attempting to mmap %<PRIuMAX> over limit %<PRIuMAX>"
 msgstr ""
 
-#: wrapper.c:987
+#: wrapper.c:991
 #, c-format
 msgid "mmap failed%s"
 msgstr ""
