@@ -1,0 +1,92 @@
+
+
+#################### Mon, 28 Sep 2026 20:52:07 +0000 ####################
+
+--- po/git.pot.old	2026-09-28 20:52:07.594863930 +0000
++++ po/git.pot.new	2026-09-28 20:52:07.680864908 +0000
+@@ -1780,7 +1780,7 @@
+ 
+ msgid ""
+ "(EXPERIMENTAL!) git replay ([--contained] --onto=<newbase> | --advance=<branch> | --revert=<branch>)\n"
+-"[--ref=<ref>] [--ref-action=<mode>] [--linearize] <revision-range>"
++"[--ref=<ref>] [--ref-action=<mode>] [--linearize] [-S[<keyid>]] <revision-range>"
+ msgstr ""
+ 
+ #, c-format
+@@ -9023,9 +9023,6 @@
+ msgid "cannot drop root commit %s: it has no parent to replay onto"
+ msgstr ""
+ 
+-msgid "cannot drop the root commit"
+-msgstr ""
+-
+ msgid "cannot edit description of more than one branch"
+ msgstr ""
+ 
+@@ -11954,10 +11951,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "dropping %s %s -- squashing it in empties the commit\n"
+-msgstr ""
+-
+-#, c-format
+ msgid "dropping %s since it would point to itself (i.e. to %s)"
+ msgstr ""
+ 
+@@ -13205,11 +13198,11 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "failed utimensat() on %s"
++msgid "failed utime() on %s"
+ msgstr ""
+ 
+ #, c-format
+-msgid "failed utimensat() on '%s'"
++msgid "failed utime() on '%s'"
+ msgstr ""
+ 
+ msgid "failed write to rev-list"
+@@ -14538,7 +14531,7 @@
+ msgid "git replace [-f] <object> <replacement>"
+ msgstr ""
+ 
+-msgid "git rerere [clear | forget <pathspec>... | diff | status | remaining | gc]"
++msgid "git rerere [clear | forget <pathspec>... | diff | status | remaining | gc [--auto]]"
+ msgstr ""
+ 
+ msgid "git reset --patch [<tree-ish>] [--] [<pathspec>...]"
+@@ -18125,6 +18118,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "options '-%c', '-%c', and '%s' cannot be used together"
++msgstr ""
++
++#, c-format
+ msgid "ordered %u objects, expected %<PRIu32>"
+ msgstr ""
+ 
+@@ -20682,6 +20679,9 @@
+ msgid "skip files matching pattern"
+ msgstr ""
+ 
++msgid "skip gc while another process holds the lock"
++msgstr ""
++
+ msgid "skip maintenance tasks typically done in the foreground"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-po po/git.pot --------------------
+
+❌ CamelCase config variables
+    ERROR   [git.pot]   entry at L17573 (msgid): should use "core.repositoryFormatVersion" in msgid: "core.repositoryformatversion to 1.\\nPlease set it for migration"
+    ERROR   [git.pot]   entry at L17573 (msgid): should use "core.repositoryFormatVersion" in msgid: "for example:\\ngit config core.repositoryformatversion 1"
+    ERROR   [git.pot]   entry at L23326 (msgid): should use "http.proactiveAuth" in msgid: "http.proactiveauth"
+    ERROR   [git.pot]   entry at L23357 (msgid): should use "http.cookieFile" in msgid: "ing to read cookies from http.cookiefile '-'"
+    ERROR   [git.pot]   entry at L23361 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
+ERROR: 6542 entries checked, 538 config variables, 5 mismatched
+ERROR: check-po command failed
