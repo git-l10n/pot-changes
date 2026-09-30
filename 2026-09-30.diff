@@ -124,3 +124,139 @@
     ERROR   [git.pot]   entry at L23350 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
 ERROR: 6538 entries checked, 537 config variables, 5 mismatched
 ERROR: check-po command failed
+
+
+#################### Wed, 30 Sep 2026 21:02:58 +0000 ####################
+
+--- po/git.pot.old	2026-09-30 21:02:58.875496976 +0000
++++ po/git.pot.new	2026-09-30 21:02:58.964497223 +0000
+@@ -1217,6 +1217,16 @@
+ msgstr ""
+ 
+ #, c-format
++msgid ""
++"'%.*s' does not have that many ancestors locally.\n"
++"History stops at %s because this repository is a\n"
++"shallow clone, and might have more history upstream.\n"
++"To check, try:\n"
++"\n"
++"  %s"
++msgstr ""
++
++#, c-format
+ msgid "'%s' (mnemonic: '%c')"
+ msgstr ""
+ 
+@@ -1770,7 +1780,7 @@
+ 
+ msgid ""
+ "(EXPERIMENTAL!) git replay ([--contained] --onto=<newbase> | --advance=<branch> | --revert=<branch>)\n"
+-"[--ref=<ref>] [--ref-action=<mode>] [--linearize] <revision-range>"
++"[--ref=<ref>] [--ref-action=<mode>] [--linearize] [-S[<keyid>]] <revision-range>"
+ msgstr ""
+ 
+ #, c-format
+@@ -2464,9 +2474,6 @@
+ msgid "A tutorial introduction to Git"
+ msgstr ""
+ 
+-msgid "A tutorial introduction to Git: part two"
+-msgstr ""
+-
+ msgid "A useful minimum set of commands for Everyday Git"
+ msgstr ""
+ 
+@@ -10474,10 +10481,6 @@
+ msgid "could not freshen shared index '%s'"
+ msgstr ""
+ 
+-#, c-format
+-msgid "could not generate diff %s^!."
+-msgstr ""
+-
+ msgid "could not generate todo list"
+ msgstr ""
+ 
+@@ -10940,9 +10943,6 @@
+ msgid "could not run stash."
+ msgstr ""
+ 
+-msgid "could not save index tree"
+-msgstr ""
+-
+ #, c-format
+ msgid "could not send '%s' command to fsmonitor--daemon"
+ msgstr ""
+@@ -15116,6 +15116,10 @@
+ msgid "http transport does not support %s"
+ msgstr ""
+ 
++#, c-format
++msgid "http.sslVerifyStatus is set, but could not enable OCSP status verification: %s"
++msgstr ""
++
+ msgid "human-readable comment string (# will be prepended as needed)"
+ msgstr ""
+ 
+@@ -17580,6 +17584,9 @@
+ msgid "not updating %s (new tip %s does not contain %s)"
+ msgstr ""
+ 
++msgid "note"
++msgstr ""
++
+ msgid "note contents as a string"
+ msgstr ""
+ 
+@@ -18089,10 +18096,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "options '%s' and '%s:%s' cannot be used together"
+-msgstr ""
+-
+-#, c-format
+ msgid "options '%s', '%s', '%s', and '%s' cannot be used together"
+ msgstr ""
+ 
+@@ -18165,6 +18168,9 @@
+ msgid "override error message when patch failure occurs"
+ msgstr ""
+ 
++msgid "override notes behavior for the range diff"
++msgstr ""
++
+ msgid "override the executable bit of the listed files"
+ msgstr ""
+ 
+@@ -19301,10 +19307,18 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "refname %s changed while renaming"
++msgstr ""
++
++#, c-format
+ msgid "refname %s is a symbolic ref, copying it is not supported"
+ msgstr ""
+ 
+ #, c-format
++msgid "refname %s is at %s but expected %s"
++msgstr ""
++
++#, c-format
+ msgid "refname %s not found"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-po po/git.pot --------------------
+
+❌ CamelCase config variables
+    ERROR   [git.pot]   entry at L17565 (msgid): should use "core.repositoryFormatVersion" in msgid: "core.repositoryformatversion to 1.\\nPlease set it for migration"
+    ERROR   [git.pot]   entry at L17565 (msgid): should use "core.repositoryFormatVersion" in msgid: "for example:\\ngit config core.repositoryformatversion 1"
+    ERROR   [git.pot]   entry at L23314 (msgid): should use "http.proactiveAuth" in msgid: "http.proactiveauth"
+    ERROR   [git.pot]   entry at L23345 (msgid): should use "http.cookieFile" in msgid: "ing to read cookies from http.cookiefile '-'"
+    ERROR   [git.pot]   entry at L23349 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
+ERROR: 6540 entries checked, 538 config variables, 5 mismatched
+ERROR: check-po command failed
