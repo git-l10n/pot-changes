@@ -120,3 +120,204 @@
     ERROR   [git.pot]   entry at L23365 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
 ERROR: 6544 entries checked, 539 config variables, 5 mismatched
 ERROR: check-po command failed
+
+
+#################### Fri, 02 Oct 2026 22:37:28 +0000 ####################
+
+--- po/git.pot.old	2026-10-02 22:37:28.895118434 +0000
++++ po/git.pot.new	2026-10-02 22:37:28.985118661 +0000
+@@ -1780,7 +1780,7 @@
+ 
+ msgid ""
+ "(EXPERIMENTAL!) git replay ([--contained] --onto=<newbase> | --advance=<branch> | --revert=<branch>)\n"
+-"[--ref=<ref>] [--ref-action=<mode>] [--linearize] [-S[<keyid>]] <revision-range>"
++"[--ref=<ref>] [--ref-action=<mode>] [--linearize] <revision-range>"
+ msgstr ""
+ 
+ #, c-format
+@@ -4122,6 +4122,9 @@
+ msgid "GPG-sign commits"
+ msgstr ""
+ 
++msgid "GPG-sign rewritten commits"
++msgstr ""
++
+ msgid "General options"
+ msgstr ""
+ 
+@@ -5456,6 +5459,9 @@
+ msgid "ReadDirectoryChangedW failed on '%s' [GLE %ld]"
+ msgstr ""
+ 
++msgid "Reading references"
++msgstr ""
++
+ msgid "Reads tree information into the index"
+ msgstr ""
+ 
+@@ -5518,6 +5524,9 @@
+ msgid "Reduce your working tree to a subset of tracked files"
+ msgstr ""
+ 
++msgid "Reference database"
++msgstr ""
++
+ msgid "References"
+ msgstr ""
+ 
+@@ -7179,6 +7188,9 @@
+ msgstr[0] ""
+ msgstr[1] ""
+ 
++msgid "Writing references"
++msgstr ""
++
+ msgid "You appear to have cloned an empty repository."
+ msgstr ""
+ 
+@@ -9621,6 +9633,9 @@
+ msgid "check reference database consistency"
+ msgstr ""
+ 
++msgid "check whether a reference exists"
++msgstr ""
++
+ #, c-format
+ msgid "checking out '%s' failed. Try 'git bisect start <valid-branch>'."
+ msgstr ""
+@@ -11241,6 +11256,9 @@
+ msgid "create a new branch"
+ msgstr ""
+ 
++msgid "create a new reference"
++msgstr ""
++
+ msgid "create a reflog"
+ msgstr ""
+ 
+@@ -11385,6 +11403,9 @@
+ msgid "delete URLs"
+ msgstr ""
+ 
++msgid "delete a reference"
++msgstr ""
++
+ msgid "delete branch (even if not merged)"
+ msgstr ""
+ 
+@@ -14145,19 +14166,19 @@
+ msgid "git help [[-i|--info] [-m|--man] [-w|--web]] [<command>|<doc>]"
+ msgstr ""
+ 
+-msgid "git history drop <commit> [--dry-run] [--update-refs=(branches|head)] [--empty=(drop|keep|abort)]"
++msgid "git history drop <commit> [--dry-run] [--update-refs=(branches|head)] [--empty=(drop|keep|abort)] [--[no-]gpg-sign[=<key-id>]]"
+ msgstr ""
+ 
+-msgid "git history fixup <commit> [--dry-run] [--update-refs=(branches|head)] [--reedit-message] [--empty=(drop|keep|abort)]"
++msgid "git history fixup <commit> [--dry-run] [--update-refs=(branches|head)] [--reedit-message] [--empty=(drop|keep|abort)] [--[no-]gpg-sign[=<key-id>]]"
+ msgstr ""
+ 
+-msgid "git history reword <commit> [--dry-run] [--update-refs=(branches|head)]"
++msgid "git history reword <commit> [--dry-run] [--update-refs=(branches|head)] [--[no-]gpg-sign[=<key-id>]]"
+ msgstr ""
+ 
+-msgid "git history split <commit> [--dry-run] [--update-refs=(branches|head)] [--] [<pathspec>...]"
++msgid "git history split <commit> [--dry-run] [--update-refs=(branches|head)] [--[no-]gpg-sign[=<key-id>]] [--] [<pathspec>...]"
+ msgstr ""
+ 
+-msgid "git history squash [--dry-run] [--update-refs=(branches|head)] [--[no-]edit] <revision-range>"
++msgid "git history squash [--dry-run] [--update-refs=(branches|head)] [--[no-]edit] [--[no-]gpg-sign[=<key-id>]] <revision-range>"
+ msgstr ""
+ 
+ msgid "git hook list [--allow-unknown-hook-name] [-z] [--show-scope] <hook-name>"
+@@ -14530,7 +14551,7 @@
+ msgid "git replace [-f] <object> <replacement>"
+ msgstr ""
+ 
+-msgid "git rerere [clear | forget <pathspec>... | diff | status | remaining | gc [--auto]]"
++msgid "git rerere [clear | forget <pathspec>... | diff | status | remaining | gc]"
+ msgstr ""
+ 
+ msgid "git reset --patch [<tree-ish>] [--] [<pathspec>...]"
+@@ -16327,6 +16348,9 @@
+ msgid "list only objects"
+ msgstr ""
+ 
++msgid "list references"
++msgstr ""
++
+ msgid "list replace refs"
+ msgstr ""
+ 
+@@ -16659,6 +16683,9 @@
+ msgid "message-id"
+ msgstr ""
+ 
++msgid "migrate the reference database to a different format"
++msgstr ""
++
+ #, c-format
+ msgid "migrated refs can be found at '%s'"
+ msgstr ""
+@@ -18025,6 +18052,9 @@
+ msgid "opposite of --no-%s"
+ msgstr ""
+ 
++msgid "optimize the reference database"
++msgstr ""
++
+ msgid "option"
+ msgstr ""
+ 
+@@ -19596,6 +19626,9 @@
+ msgid "removed stale scalar.repo '%s'"
+ msgstr ""
+ 
++msgid "rename a reference"
++msgstr ""
++
+ msgid "rename requires old and new reference name"
+ msgstr ""
+ 
+@@ -21976,9 +22009,6 @@
+ msgid "unable to get graft file"
+ msgstr ""
+ 
+-msgid "unable to get index file"
+-msgstr ""
+-
+ #, c-format
+ msgid "unable to get object type for %s"
+ msgstr ""
+@@ -23102,6 +23132,9 @@
+ msgid "update all branches that point at commits in <revision-range>"
+ msgstr ""
+ 
++msgid "update an existing reference"
++msgstr ""
++
+ msgid "update branches that point to commits that are being rebased"
+ msgstr ""
+ 
+@@ -23557,6 +23590,9 @@
+ msgid "verify that the named commit has a valid GPG signature"
+ msgstr ""
+ 
++msgid "verify the consistency of the reference database"
++msgstr ""
++
+ msgid "version"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-po po/git.pot --------------------
+
+❌ CamelCase config variables
+    ERROR   [git.pot]   entry at L17634 (msgid): should use "core.repositoryFormatVersion" in msgid: "core.repositoryformatversion to 1.\\nPlease set it for migration"
+    ERROR   [git.pot]   entry at L17634 (msgid): should use "core.repositoryFormatVersion" in msgid: "for example:\\ngit config core.repositoryformatversion 1"
+    ERROR   [git.pot]   entry at L23383 (msgid): should use "http.proactiveAuth" in msgid: "http.proactiveauth"
+    ERROR   [git.pot]   entry at L23414 (msgid): should use "http.cookieFile" in msgid: "ing to read cookies from http.cookiefile '-'"
+    ERROR   [git.pot]   entry at L23418 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
+ERROR: 6556 entries checked, 539 config variables, 5 mismatched
+ERROR: check-po command failed
