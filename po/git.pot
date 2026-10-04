@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2026-10-03 01:29+0000\n"
+"POT-Creation-Date: 2026-10-04 08:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -1865,7 +1865,7 @@ msgstr ""
 msgid "bad --attr-source or GIT_ATTR_SOURCE"
 msgstr ""
 
-#: attr.c:1278 read-cache.c:824 refs/packed-backend.c:2120
+#: attr.c:1278 read-cache.c:824 refs/packed-backend.c:2144
 #, c-format
 msgid "unable to stat '%s'"
 msgstr ""
@@ -2412,7 +2412,7 @@ msgstr ""
 
 #: builtin/add.c:693 builtin/am.c:2029 builtin/am.c:2063 builtin/checkout.c:713
 #: builtin/checkout.c:939 builtin/clone.c:724 builtin/commit.c:466
-#: builtin/commit.c:491 builtin/commit.c:539 builtin/history.c:819
+#: builtin/commit.c:491 builtin/commit.c:539 builtin/history.c:855
 #: builtin/stash.c:370 builtin/stash.c:414 merge.c:112 rerere.c:706
 msgid "unable to write new index file"
 msgstr ""
@@ -2829,8 +2829,8 @@ msgid "use current timestamp for author date"
 msgstr ""
 
 #: builtin/am.c:2436 builtin/commit-tree.c:120 builtin/commit.c:1737
-#: builtin/merge.c:329 builtin/pull.c:943 builtin/rebase.c:1226
-#: builtin/revert.c:142 builtin/tag.c:507
+#: builtin/history.c:131 builtin/merge.c:329 builtin/pull.c:943
+#: builtin/rebase.c:1226 builtin/revert.c:142 builtin/tag.c:507
 msgid "key-id"
 msgstr ""
 
@@ -2937,7 +2937,7 @@ msgstr ""
 msgid "Include blobs from boundary commits in the backfill"
 msgstr ""
 
-#: builtin/backfill.c:176 builtin/diff-pairs.c:69 builtin/history.c:1293
+#: builtin/backfill.c:176 builtin/diff-pairs.c:69 builtin/history.c:1336
 #: builtin/log.c:321 builtin/log.c:2276 builtin/replay.c:169
 #: builtin/shortlog.c:458 bundle.c:524
 #, c-format
@@ -9961,29 +9961,31 @@ msgstr ""
 #: builtin/history.c:33
 msgid ""
 "git history drop <commit> [--dry-run] [--update-refs=(branches|head)] [--"
-"empty=(drop|keep|abort)]"
+"empty=(drop|keep|abort)] [--[no-]gpg-sign[=<key-id>]]"
 msgstr ""
 
 #: builtin/history.c:35
 msgid ""
 "git history fixup <commit> [--dry-run] [--update-refs=(branches|head)] [--"
-"reedit-message] [--empty=(drop|keep|abort)]"
+"reedit-message] [--empty=(drop|keep|abort)] [--[no-]gpg-sign[=<key-id>]]"
 msgstr ""
 
 #: builtin/history.c:37
-msgid "git history reword <commit> [--dry-run] [--update-refs=(branches|head)]"
+msgid ""
+"git history reword <commit> [--dry-run] [--update-refs=(branches|head)] [--"
+"[no-]gpg-sign[=<key-id>]]"
 msgstr ""
 
 #: builtin/history.c:39
 msgid ""
-"git history split <commit> [--dry-run] [--update-refs=(branches|head)] [--] "
-"[<pathspec>...]"
+"git history split <commit> [--dry-run] [--update-refs=(branches|head)] [--"
+"[no-]gpg-sign[=<key-id>]] [--] [<pathspec>...]"
 msgstr ""
 
 #: builtin/history.c:41
 msgid ""
 "git history squash [--dry-run] [--update-refs=(branches|head)] [--[no-]edit] "
-"<revision-range>"
+"[--[no-]gpg-sign[=<key-id>]] <revision-range>"
 msgstr ""
 
 #: builtin/history.c:59
@@ -10005,313 +10007,317 @@ msgstr ""
 msgid "Aborting commit as launching the editor failed.\n"
 msgstr ""
 
-#: builtin/history.c:189
+#: builtin/history.c:132
+msgid "GPG-sign rewritten commits"
+msgstr ""
+
+#: builtin/history.c:214
 #, c-format
 msgid "unable to parse parent commit %s"
 msgstr ""
 
-#: builtin/history.c:229
+#: builtin/history.c:256
 #, c-format
 msgid "%s expects one of 'branches' or 'head'"
 msgstr ""
 
-#: builtin/history.c:253 builtin/history.c:1352 replay.c:442
+#: builtin/history.c:280 builtin/history.c:1395 replay.c:444
 msgid "error preparing revisions"
 msgstr ""
 
-#: builtin/history.c:258 replay.c:455
+#: builtin/history.c:285 replay.c:457
 msgid "replaying merge commits is not supported yet!"
 msgstr ""
 
-#: builtin/history.c:307 builtin/history.c:588 builtin/history.c:1688
+#: builtin/history.c:334 builtin/history.c:620 builtin/history.c:1734
 msgid "cannot look up HEAD"
 msgstr ""
 
-#: builtin/history.c:316
+#: builtin/history.c:343
 msgid "cannot determine descendance"
 msgstr ""
 
-#: builtin/history.c:319
+#: builtin/history.c:346
 msgid ""
 "rewritten commit must be an ancestor of HEAD when using --update-refs=head"
 msgstr ""
 
-#: builtin/history.c:439 builtin/replay.c:223
+#: builtin/history.c:468 builtin/replay.c:223
 #, c-format
 msgid "failed to begin ref transaction: %s"
 msgstr ""
 
-#: builtin/history.c:451 builtin/replay.c:234
+#: builtin/history.c:480 builtin/replay.c:234
 #, c-format
 msgid "failed to update ref '%s': %s"
 msgstr ""
 
-#: builtin/history.c:458 builtin/replay.c:243
+#: builtin/history.c:487 builtin/replay.c:243
 #, c-format
 msgid "failed to commit ref transaction: %s"
 msgstr ""
 
-#: builtin/history.c:518
+#: builtin/history.c:548
 #, c-format
 msgid ""
 "unrecognized '--empty=' action '%s'; valid values are \"drop\", \"keep\", "
 "and \"abort\"."
 msgstr ""
 
-#: builtin/history.c:539 builtin/history.c:728 builtin/history.c:1586
-#: builtin/history.c:1734
+#: builtin/history.c:570 builtin/history.c:761 builtin/history.c:1630
+#: builtin/history.c:1781
 msgid "control which refs should be updated"
 msgstr ""
 
-#: builtin/history.c:542 builtin/history.c:731 builtin/history.c:955
-#: builtin/history.c:1589 builtin/history.c:1737
+#: builtin/history.c:573 builtin/history.c:764 builtin/history.c:996
+#: builtin/history.c:1633 builtin/history.c:1784
 msgid "perform a dry-run without updating any refs"
 msgstr ""
 
-#: builtin/history.c:544
+#: builtin/history.c:575
 msgid "open an editor to modify the commit message"
 msgstr ""
 
-#: builtin/history.c:547 builtin/rebase.c:1209 builtin/revert.c:159
+#: builtin/history.c:578 builtin/rebase.c:1209 builtin/revert.c:159
 msgid "how to handle commits that become empty"
 msgstr ""
 
-#: builtin/history.c:562 builtin/history.c:741 builtin/history.c:1753
+#: builtin/history.c:595 builtin/history.c:776 builtin/history.c:1802
 msgid "command expects a single revision"
 msgstr ""
 
-#: builtin/history.c:571
+#: builtin/history.c:603
 msgid "cannot run fixup in a bare repository"
 msgstr ""
 
-#: builtin/history.c:578 builtin/history.c:751 builtin/history.c:982
-#: builtin/history.c:1763
+#: builtin/history.c:610 builtin/history.c:785 builtin/history.c:1024
+#: builtin/history.c:1811
 #, c-format
 msgid "commit cannot be found: %s"
 msgstr ""
 
-#: builtin/history.c:594
+#: builtin/history.c:626
 msgid "cannot get tree for HEAD"
 msgstr ""
 
-#: builtin/history.c:599 builtin/show-index.c:64 builtin/show-index.c:68
+#: builtin/history.c:631 builtin/show-index.c:64 builtin/show-index.c:68
 msgid "unable to read index"
 msgstr ""
 
-#: builtin/history.c:604
+#: builtin/history.c:636
 msgid "nothing to fixup: no staged changes"
 msgstr ""
 
-#: builtin/history.c:614
+#: builtin/history.c:646
 msgid "unable to write index as a tree"
 msgstr ""
 
-#: builtin/history.c:620
+#: builtin/history.c:652
 #, c-format
 msgid "cannot get tree for commit %s"
 msgstr ""
 
-#: builtin/history.c:638
+#: builtin/history.c:670
 msgid "merge failed while applying fixup"
 msgstr ""
 
-#: builtin/history.c:643
+#: builtin/history.c:675
 msgid "fixup would produce conflicts; aborting"
 msgstr ""
 
-#: builtin/history.c:666 builtin/history.c:1768
+#: builtin/history.c:698 builtin/history.c:1816
 #, c-format
 msgid "cannot drop root commit %s: it has no parent to replay onto"
 msgstr ""
 
-#: builtin/history.c:678
+#: builtin/history.c:710
 #, c-format
 msgid "fixup makes commit %s empty"
 msgstr ""
 
-#: builtin/history.c:692
+#: builtin/history.c:724
 msgid "failed writing fixed-up commit"
 msgstr ""
 
-#: builtin/history.c:702 builtin/history.c:770 builtin/history.c:1004
-#: builtin/history.c:1643 builtin/history.c:1786
+#: builtin/history.c:734 builtin/history.c:806 builtin/history.c:1047
+#: builtin/history.c:1689 builtin/history.c:1834
 msgid "failed replaying descendants"
 msgstr ""
 
-#: builtin/history.c:761
+#: builtin/history.c:796
 msgid "failed writing reworded commit"
 msgstr ""
 
-#: builtin/history.c:801
+#: builtin/history.c:837
 #, c-format
 msgid "unable to parse tree %s"
 msgstr ""
 
-#: builtin/history.c:807
+#: builtin/history.c:843
 msgid "unable to populate index with tree"
 msgstr ""
 
-#: builtin/history.c:814
+#: builtin/history.c:850
 msgid "unable to acquire index lock"
 msgstr ""
 
-#: builtin/history.c:867
+#: builtin/history.c:904
 msgid "failed reading temporary index"
 msgstr ""
 
-#: builtin/history.c:879
+#: builtin/history.c:916
 msgid "failed split tree"
 msgstr ""
 
-#: builtin/history.c:892
+#: builtin/history.c:929
 msgid "split commit is empty"
 msgstr ""
 
-#: builtin/history.c:895
+#: builtin/history.c:932
 msgid "split commit tree matches original commit"
 msgstr ""
 
-#: builtin/history.c:906
+#: builtin/history.c:945
 msgid "failed writing first commit"
 msgstr ""
 
-#: builtin/history.c:923
+#: builtin/history.c:963
 msgid "failed writing second commit"
 msgstr ""
 
-#: builtin/history.c:952
+#: builtin/history.c:993
 msgid "control ref update behavior"
 msgstr ""
 
-#: builtin/history.c:966
+#: builtin/history.c:1009
 msgid "command expects a committish"
 msgstr ""
 
-#: builtin/history.c:991
+#: builtin/history.c:1033
 msgid "cannot split up merge commit"
 msgstr ""
 
-#: builtin/history.c:1078
+#: builtin/history.c:1121
 #, c-format
 msgid "ignoring %s (%s): message body is empty"
 msgstr ""
 
-#: builtin/history.c:1089
+#: builtin/history.c:1132
 #, c-format
 msgid ""
 "squashing %s (%s) would overwrite 'squash!' message, please combine them "
 "using '--edit'"
 msgstr ""
 
-#: builtin/history.c:1107 builtin/history.c:1147
+#: builtin/history.c:1150 builtin/history.c:1190
 #, c-format
 msgid "cannot squash %s (%s) that does not target base commit without '--edit'"
 msgstr ""
 
-#: builtin/history.c:1138
+#: builtin/history.c:1181
 #, c-format
 msgid ""
 "squashing %s (%s) would discard its message, please combine them using '--"
 "edit'"
 msgstr ""
 
-#: builtin/history.c:1233
+#: builtin/history.c:1276
 #, c-format
 msgid "cannot squash %s (%s): its target is not being squashed"
 msgstr ""
 
-#: builtin/history.c:1300
+#: builtin/history.c:1343
 msgid "ignoring rev-list options that would change how the range is walked"
 msgstr ""
 
-#: builtin/history.c:1321
+#: builtin/history.c:1364
 msgid "not a '<base>..<tip>' revision range"
 msgstr ""
 
-#: builtin/history.c:1364
+#: builtin/history.c:1407
 msgid "cannot squash down to root commit"
 msgstr ""
 
-#: builtin/history.c:1373
+#: builtin/history.c:1416
 msgid "cannot parse commit"
 msgstr ""
 
-#: builtin/history.c:1389
+#: builtin/history.c:1432
 #, c-format
 msgid "parent %s of commit %s is outside the revision range"
 msgstr ""
 
-#: builtin/history.c:1420
+#: builtin/history.c:1463
 msgid "the revision range is empty"
 msgstr ""
 
-#: builtin/history.c:1423
+#: builtin/history.c:1466
 msgid "the revision range contains more than one tip commit"
 msgstr ""
 
-#: builtin/history.c:1427
+#: builtin/history.c:1470
 msgid "the revision range holds a single commit; nothing to squash"
 msgstr ""
 
-#: builtin/history.c:1438
+#: builtin/history.c:1481
 msgid "could not filter refs"
 msgstr ""
 
-#: builtin/history.c:1464
+#: builtin/history.c:1507
 #, c-format
 msgid ""
 "the following branches cannot be rewritten as descendants of the squashed "
 "commit:%s"
 msgstr ""
 
-#: builtin/history.c:1467
+#: builtin/history.c:1510
 msgid ""
 "Use --update-refs=head to rewrite only the current branch and leave such "
 "branches untouched."
 msgstr ""
 
-#: builtin/history.c:1524
+#: builtin/history.c:1567
 msgid "could not prepare the squash message"
 msgstr ""
 
-#: builtin/history.c:1591 builtin/revert.c:128
+#: builtin/history.c:1635 builtin/revert.c:128
 msgid "edit the commit message"
 msgstr ""
 
-#: builtin/history.c:1604
+#: builtin/history.c:1650
 msgid "command expects a revision range"
 msgstr ""
 
-#: builtin/history.c:1635
+#: builtin/history.c:1680
 msgid "failed writing squashed commit"
 msgstr ""
 
-#: builtin/history.c:1703
+#: builtin/history.c:1749
 msgid "cannot resolve HEAD commit"
 msgstr ""
 
-#: builtin/history.c:1708
+#: builtin/history.c:1754
 msgid "cannot resolve tree for HEAD"
 msgstr ""
 
-#: builtin/history.c:1739
+#: builtin/history.c:1786
 msgid "how to handle descendants that become empty"
 msgstr ""
 
-#: builtin/history.c:1773
+#: builtin/history.c:1821
 #, c-format
 msgid "cannot drop merge commit: %s"
 msgstr ""
 
-#: builtin/history.c:1806
+#: builtin/history.c:1854
 msgid "dropping this commit would overwrite local changes; aborting"
 msgstr ""
 
-#: builtin/history.c:1815
+#: builtin/history.c:1863
 msgid "failed to update references"
 msgstr ""
 
-#: builtin/history.c:1820
+#: builtin/history.c:1868
 #, c-format
 msgid "could not update working tree to new commit %s"
 msgstr ""
@@ -26647,7 +26653,7 @@ msgstr ""
 msgid "cannot open directory %s"
 msgstr ""
 
-#: refs/packed-backend.c:2117
+#: refs/packed-backend.c:2141
 #, c-format
 msgid "unable to open '%s'"
 msgstr ""
@@ -27357,25 +27363,25 @@ msgstr ""
 msgid "all positive revisions given must be references"
 msgstr ""
 
-#: replay.c:340
+#: replay.c:341
 #, c-format
 msgid "merge of %s onto %s failed"
 msgstr ""
 
-#: replay.c:358
+#: replay.c:359
 #, c-format
 msgid "commit %s became empty after replay"
 msgstr ""
 
-#: replay.c:416
+#: replay.c:418
 msgid "'--linearize' cannot be used with multiple branches"
 msgstr ""
 
-#: replay.c:424
+#: replay.c:426
 msgid "'--ref' cannot be used with multiple revision ranges"
 msgstr ""
 
-#: replay.c:428 sequencer.c:2746
+#: replay.c:430 sequencer.c:2746
 #, c-format
 msgid "'%s' is not a valid refname"
 msgstr ""
