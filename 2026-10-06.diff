@@ -1,0 +1,146 @@
+
+
+#################### Tue, 06 Oct 2026 21:54:58 +0000 ####################
+
+--- po/git.pot.old	2026-10-06 21:54:58.557179868 +0000
++++ po/git.pot.new	2026-10-06 21:54:58.622180449 +0000
+@@ -312,7 +312,7 @@
+ msgid "  (fix conflicts and run \"git cherry-pick --continue\")"
+ msgstr ""
+ 
+-msgid "  (fix conflicts and run \"git commit\")"
++msgid "  (fix conflicts and run \"git merge --continue\")"
+ msgstr ""
+ 
+ msgid "  (fix conflicts and run \"git revert --continue\")"
+@@ -378,10 +378,10 @@
+ msgid "  (use \"git commit --amend\" to amend the current commit)"
+ msgstr ""
+ 
+-msgid "  (use \"git commit\" to conclude merge)"
++msgid "  (use \"git merge --abort\" to abort the merge)"
+ msgstr ""
+ 
+-msgid "  (use \"git merge --abort\" to abort the merge)"
++msgid "  (use \"git merge --continue\" to conclude merge)"
+ msgstr ""
+ 
+ #, c-format
+@@ -398,6 +398,9 @@
+ msgid "  (use \"git pull\" to update your local branch)\n"
+ msgstr ""
+ 
++msgid "  (use \"git push --force-with-lease\" to publish your local commits)\n"
++msgstr ""
++
+ msgid "  (use \"git push\" to publish your local commits)\n"
+ msgstr ""
+ 
+@@ -2474,6 +2477,9 @@
+ msgid "A tutorial introduction to Git"
+ msgstr ""
+ 
++msgid "A tutorial introduction to Git: part two"
++msgstr ""
++
+ msgid "A useful minimum set of commands for Everyday Git"
+ msgstr ""
+ 
+@@ -2534,9 +2540,6 @@
+ msgid "Advanced"
+ msgstr ""
+ 
+-msgid "Advanced concepts related to packing in Git"
+-msgstr ""
+-
+ #, c-format
+ msgid "After fixing the above paths, you may want to run `git sparse-checkout reapply`.\n"
+ msgstr ""
+@@ -4184,9 +4187,6 @@
+ msgid "Git links cannot be specified 'inline': %s"
+ msgstr ""
+ 
+-msgid "Git loose object format"
+-msgstr ""
+-
+ msgid "Git namespaces"
+ msgstr ""
+ 
+@@ -5157,9 +5157,6 @@
+ "while '%s' points to a replacement object of type '%s'."
+ msgstr ""
+ 
+-msgid "Obsolete tutorial"
+-msgstr ""
+-
+ msgid "On branch "
+ msgstr ""
+ 
+@@ -6915,6 +6912,28 @@
+ "%s"
+ msgstr ""
+ 
++#, c-format
++msgid ""
++"Updates were rejected because '%s' has diverged\n"
++"from your current branch, which was rebased cleanly on '%s'.\n"
++"Use 'git push --force-with-lease %s %s' to replace it."
++msgstr ""
++
++#, c-format
++msgid ""
++"Updates were rejected because '%s' has diverged\n"
++"from your current branch. Use 'git pull %s %s'\n"
++"to integrate the remote changes, or replace them with\n"
++"'git push --force-with-lease %s %s'."
++msgstr ""
++
++#, c-format
++msgid ""
++"Updates were rejected because '%s' has diverged\n"
++"from your current branch. Use 'git pull %s %s'\n"
++"to integrate the remote changes."
++msgstr ""
++
+ msgid ""
+ "Updates were rejected because a pushed branch tip is behind its remote\n"
+ "counterpart. If you want to integrate the remote changes, use 'git pull'\n"
+@@ -7463,6 +7482,26 @@
+ 
+ #, c-format
+ msgid ""
++"Your branch and '%s' have diverged,\n"
++"and have %d and %d different commit each (%d and %d not in '%s').\n"
++msgid_plural ""
++"Your branch and '%s' have diverged,\n"
++"and have %d and %d different commits each (%d and %d not in '%s').\n"
++msgstr[0] ""
++msgstr[1] ""
++
++#, c-format
++msgid ""
++"Your branch and '%s' have diverged,\n"
++"and have %d and %d different commit each (rebased cleanly on '%s').\n"
++msgid_plural ""
++"Your branch and '%s' have diverged,\n"
++"and have %d and %d different commits each (rebased cleanly on '%s').\n"
++msgstr[0] ""
++msgstr[1] ""
++
++#, c-format
++msgid ""
+ "Your branch and '%s' have diverged,\n"
+ "and have %d and %d different commit each, respectively.\n"
+ msgid_plural ""
+
+
+-------------------- git-po-helper check-po po/git.pot --------------------
+
+❌ CamelCase config variables
+    ERROR   [git.pot]   entry at L17651 (msgid): should use "core.repositoryFormatVersion" in msgid: "core.repositoryformatversion to 1.\\nPlease set it for migration"
+    ERROR   [git.pot]   entry at L17651 (msgid): should use "core.repositoryFormatVersion" in msgid: "for example:\\ngit config core.repositoryformatversion 1"
+    ERROR   [git.pot]   entry at L23396 (msgid): should use "http.proactiveAuth" in msgid: "http.proactiveauth"
+    ERROR   [git.pot]   entry at L23427 (msgid): should use "http.cookieFile" in msgid: "ing to read cookies from http.cookiefile '-'"
+    ERROR   [git.pot]   entry at L23431 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
+ERROR: 6559 entries checked, 538 config variables, 5 mismatched
+ERROR: check-po command failed
