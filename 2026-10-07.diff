@@ -1,0 +1,141 @@
+
+
+#################### Wed, 07 Oct 2026 07:50:16 +0000 ####################
+
+--- po/git.pot.old	2026-10-07 07:50:16.535129291 +0000
++++ po/git.pot.new	2026-10-07 07:50:16.607130557 +0000
+@@ -312,7 +312,7 @@
+ msgid "  (fix conflicts and run \"git cherry-pick --continue\")"
+ msgstr ""
+ 
+-msgid "  (fix conflicts and run \"git merge --continue\")"
++msgid "  (fix conflicts and run \"git commit\")"
+ msgstr ""
+ 
+ msgid "  (fix conflicts and run \"git revert --continue\")"
+@@ -378,10 +378,10 @@
+ msgid "  (use \"git commit --amend\" to amend the current commit)"
+ msgstr ""
+ 
+-msgid "  (use \"git merge --abort\" to abort the merge)"
++msgid "  (use \"git commit\" to conclude merge)"
+ msgstr ""
+ 
+-msgid "  (use \"git merge --continue\" to conclude merge)"
++msgid "  (use \"git merge --abort\" to abort the merge)"
+ msgstr ""
+ 
+ #, c-format
+@@ -398,9 +398,6 @@
+ msgid "  (use \"git pull\" to update your local branch)\n"
+ msgstr ""
+ 
+-msgid "  (use \"git push --force-with-lease\" to publish your local commits)\n"
+-msgstr ""
+-
+ msgid "  (use \"git push\" to publish your local commits)\n"
+ msgstr ""
+ 
+@@ -4119,9 +4116,6 @@
+ msgid "GPG-sign commits"
+ msgstr ""
+ 
+-msgid "GPG-sign rewritten commits"
+-msgstr ""
+-
+ msgid "General options"
+ msgstr ""
+ 
+@@ -6912,28 +6906,6 @@
+ "%s"
+ msgstr ""
+ 
+-#, c-format
+-msgid ""
+-"Updates were rejected because '%s' has diverged\n"
+-"from your current branch, which was rebased cleanly on '%s'.\n"
+-"Use 'git push --force-with-lease %s %s' to replace it."
+-msgstr ""
+-
+-#, c-format
+-msgid ""
+-"Updates were rejected because '%s' has diverged\n"
+-"from your current branch. Use 'git pull %s %s'\n"
+-"to integrate the remote changes, or replace them with\n"
+-"'git push --force-with-lease %s %s'."
+-msgstr ""
+-
+-#, c-format
+-msgid ""
+-"Updates were rejected because '%s' has diverged\n"
+-"from your current branch. Use 'git pull %s %s'\n"
+-"to integrate the remote changes."
+-msgstr ""
+-
+ msgid ""
+ "Updates were rejected because a pushed branch tip is behind its remote\n"
+ "counterpart. If you want to integrate the remote changes, use 'git pull'\n"
+@@ -7483,26 +7455,6 @@
+ #, c-format
+ msgid ""
+ "Your branch and '%s' have diverged,\n"
+-"and have %d and %d different commit each (%d and %d not in '%s').\n"
+-msgid_plural ""
+-"Your branch and '%s' have diverged,\n"
+-"and have %d and %d different commits each (%d and %d not in '%s').\n"
+-msgstr[0] ""
+-msgstr[1] ""
+-
+-#, c-format
+-msgid ""
+-"Your branch and '%s' have diverged,\n"
+-"and have %d and %d different commit each (rebased cleanly on '%s').\n"
+-msgid_plural ""
+-"Your branch and '%s' have diverged,\n"
+-"and have %d and %d different commits each (rebased cleanly on '%s').\n"
+-msgstr[0] ""
+-msgstr[1] ""
+-
+-#, c-format
+-msgid ""
+-"Your branch and '%s' have diverged,\n"
+ "and have %d and %d different commit each, respectively.\n"
+ msgid_plural ""
+ "Your branch and '%s' have diverged,\n"
+@@ -14199,19 +14151,19 @@
+ msgid "git help [[-i|--info] [-m|--man] [-w|--web]] [<command>|<doc>]"
+ msgstr ""
+ 
+-msgid "git history drop <commit> [--dry-run] [--update-refs=(branches|head)] [--empty=(drop|keep|abort)] [--[no-]gpg-sign[=<key-id>]]"
++msgid "git history drop <commit> [--dry-run] [--update-refs=(branches|head)] [--empty=(drop|keep|abort)]"
+ msgstr ""
+ 
+-msgid "git history fixup <commit> [--dry-run] [--update-refs=(branches|head)] [--reedit-message] [--empty=(drop|keep|abort)] [--[no-]gpg-sign[=<key-id>]]"
++msgid "git history fixup <commit> [--dry-run] [--update-refs=(branches|head)] [--reedit-message] [--empty=(drop|keep|abort)]"
+ msgstr ""
+ 
+-msgid "git history reword <commit> [--dry-run] [--update-refs=(branches|head)] [--[no-]gpg-sign[=<key-id>]]"
++msgid "git history reword <commit> [--dry-run] [--update-refs=(branches|head)]"
+ msgstr ""
+ 
+-msgid "git history split <commit> [--dry-run] [--update-refs=(branches|head)] [--[no-]gpg-sign[=<key-id>]] [--] [<pathspec>...]"
++msgid "git history split <commit> [--dry-run] [--update-refs=(branches|head)] [--] [<pathspec>...]"
+ msgstr ""
+ 
+-msgid "git history squash [--dry-run] [--update-refs=(branches|head)] [--[no-]edit] [--[no-]gpg-sign[=<key-id>]] <revision-range>"
++msgid "git history squash [--dry-run] [--update-refs=(branches|head)] [--[no-]edit] <revision-range>"
+ msgstr ""
+ 
+ msgid "git hook list [--allow-unknown-hook-name] [-z] [--show-scope] <hook-name>"
+
+
+-------------------- git-po-helper check-po po/git.pot --------------------
+
+❌ CamelCase config variables
+    ERROR   [git.pot]   entry at L17615 (msgid): should use "core.repositoryFormatVersion" in msgid: "core.repositoryformatversion to 1.\\nPlease set it for migration"
+    ERROR   [git.pot]   entry at L17615 (msgid): should use "core.repositoryFormatVersion" in msgid: "for example:\\ngit config core.repositoryformatversion 1"
+    ERROR   [git.pot]   entry at L23360 (msgid): should use "http.proactiveAuth" in msgid: "http.proactiveauth"
+    ERROR   [git.pot]   entry at L23391 (msgid): should use "http.cookieFile" in msgid: "ing to read cookies from http.cookiefile '-'"
+    ERROR   [git.pot]   entry at L23395 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
+ERROR: 6552 entries checked, 538 config variables, 5 mismatched
+ERROR: check-po command failed
