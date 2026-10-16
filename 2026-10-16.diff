@@ -1,0 +1,66 @@
+
+
+#################### Fri, 16 Oct 2026 17:00:45 +0000 ####################
+
+--- po/git.pot.old	2026-10-16 17:00:45.812506209 +0000
++++ po/git.pot.new	2026-10-16 17:00:45.912505478 +0000
+@@ -4103,6 +4103,9 @@
+ msgid "GPG-sign commits"
+ msgstr ""
+ 
++msgid "GPG-sign rewritten commits"
++msgstr ""
++
+ msgid "General options"
+ msgstr ""
+ 
+@@ -4695,8 +4698,10 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "Marked %d islands, done.\n"
+-msgstr ""
++msgid "Marked %d island, done.\n"
++msgid_plural "Marked %d islands, done.\n"
++msgstr[0] ""
++msgstr[1] ""
+ 
+ #, c-format
+ msgid "Marking %s as complete"
+@@ -14055,19 +14060,19 @@
+ msgid "git help [[-i|--info] [-m|--man] [-w|--web]] [<command>|<doc>]"
+ msgstr ""
+ 
+-msgid "git history drop <commit> [--dry-run] [--update-refs=(branches|head)] [--empty=(drop|keep|abort)]"
++msgid "git history drop <commit> [--dry-run] [--update-refs=(branches|head)] [--empty=(drop|keep|abort)] [--[no-]gpg-sign[=<key-id>]]"
+ msgstr ""
+ 
+-msgid "git history fixup <commit> [--dry-run] [--update-refs=(branches|head)] [--reedit-message] [--empty=(drop|keep|abort)]"
++msgid "git history fixup <commit> [--dry-run] [--update-refs=(branches|head)] [--reedit-message] [--empty=(drop|keep|abort)] [--[no-]gpg-sign[=<key-id>]]"
+ msgstr ""
+ 
+-msgid "git history reword <commit> [--dry-run] [--update-refs=(branches|head)]"
++msgid "git history reword <commit> [--dry-run] [--update-refs=(branches|head)] [--[no-]gpg-sign[=<key-id>]]"
+ msgstr ""
+ 
+-msgid "git history split <commit> [--dry-run] [--update-refs=(branches|head)] [--] [<pathspec>...]"
++msgid "git history split <commit> [--dry-run] [--update-refs=(branches|head)] [--[no-]gpg-sign[=<key-id>]] [--] [<pathspec>...]"
+ msgstr ""
+ 
+-msgid "git history squash [--dry-run] [--update-refs=(branches|head)] [--[no-]edit] <revision-range>"
++msgid "git history squash [--dry-run] [--update-refs=(branches|head)] [--[no-]edit] [--[no-]gpg-sign[=<key-id>]] <revision-range>"
+ msgstr ""
+ 
+ msgid "git hook list [--allow-unknown-hook-name] [-z] [--show-scope] <hook-name>"
+
+
+-------------------- git-po-helper check-po po/git.pot --------------------
+
+❌ CamelCase config variables
+    ERROR   [git.pot]   entry at L17587 (msgid): should use "core.repositoryFormatVersion" in msgid: "core.repositoryformatversion to 1.\\nPlease set it for migration"
+    ERROR   [git.pot]   entry at L17587 (msgid): should use "core.repositoryFormatVersion" in msgid: "for example:\\ngit config core.repositoryformatversion 1"
+    ERROR   [git.pot]   entry at L23212 (msgid): should use "http.proactiveAuth" in msgid: "http.proactiveauth"
+    ERROR   [git.pot]   entry at L23236 (msgid): should use "http.cookieFile" in msgid: "ing to read cookies from http.cookiefile '-'"
+    ERROR   [git.pot]   entry at L23240 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
+ERROR: 6517 entries checked, 534 config variables, 5 mismatched
+ERROR: check-po command failed
