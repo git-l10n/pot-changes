@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2026-10-16 23:03+0000\n"
+"POT-Creation-Date: 2026-10-17 23:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -870,7 +870,7 @@ msgstr ""
 #: builtin/notes.c:613 builtin/notes.c:699 builtin/notes.c:776
 #: builtin/notes.c:930 builtin/notes.c:1093 builtin/notes.c:1117
 #: builtin/prune-packed.c:29 builtin/receive-pack.c:2565 builtin/refs.c:64
-#: builtin/tag.c:656 t/helper/test-pkt-line.c:89
+#: builtin/repo.c:1105 builtin/tag.c:656 t/helper/test-pkt-line.c:89
 msgid "too many arguments"
 msgstr ""
 
@@ -899,7 +899,7 @@ msgstr ""
 #: builtin/merge-base.c:186 builtin/merge-tree.c:621 builtin/merge.c:1505
 #: builtin/merge.c:1507 builtin/rebase.c:1331 builtin/rebase.c:1333
 #: builtin/rebase.c:1342 builtin/repack.c:313 builtin/repack.c:485
-#: builtin/reset.c:393 builtin/reset.c:438 builtin/rev-parse.c:959
+#: builtin/reset.c:394 builtin/reset.c:439 builtin/rev-parse.c:959
 #: builtin/rev-parse.c:966 builtin/rev-parse.c:977 builtin/show-branch.c:740
 #: builtin/show-branch.c:745 builtin/stash.c:1913 builtin/stash.c:1916
 #: builtin/submodule--helper.c:1335 builtin/submodule--helper.c:3309
@@ -1788,8 +1788,8 @@ msgstr ""
 #: builtin/clone.c:1299 builtin/clone.c:1302 builtin/commit.c:385
 #: builtin/commit.c:437 builtin/commit.c:439 builtin/fast-export.c:1389
 #: builtin/index-pack.c:2024 builtin/log.c:2449 builtin/rerere.c:76
-#: builtin/reset.c:402 builtin/reset.c:445 builtin/reset.c:447
-#: builtin/reset.c:449 builtin/reset.c:478 builtin/rm.c:292
+#: builtin/reset.c:403 builtin/reset.c:446 builtin/reset.c:448
+#: builtin/reset.c:450 builtin/reset.c:479 builtin/rm.c:292
 #: builtin/stash.c:1925 builtin/stash.c:1930 builtin/stash.c:1932
 #: builtin/stash.c:1934 builtin/stash.c:2006 builtin/stash.c:2008
 #: builtin/stash.c:2010 builtin/worktree.c:880 builtin/worktree.c:1151
@@ -2260,11 +2260,11 @@ msgstr ""
 msgid "interactive picking"
 msgstr ""
 
-#: builtin/add.c:266 builtin/checkout.c:1884 builtin/reset.c:373
+#: builtin/add.c:266 builtin/checkout.c:1884 builtin/reset.c:374
 msgid "select hunks interactively"
 msgstr ""
 
-#: builtin/add.c:268 builtin/checkout.c:2172 builtin/reset.c:375
+#: builtin/add.c:268 builtin/checkout.c:2172 builtin/reset.c:376
 #: builtin/stash.c:1870 builtin/stash.c:1977
 msgid "auto advance to the next file when selecting hunks interactively"
 msgstr ""
@@ -2375,7 +2375,7 @@ msgstr ""
 
 #: builtin/add.c:485 builtin/add.c:487 builtin/checkout.c:1962
 #: builtin/checkout.c:1964 builtin/commit.c:361 builtin/commit.c:363
-#: builtin/reset.c:429 builtin/reset.c:431 builtin/stash.c:1938
+#: builtin/reset.c:430 builtin/reset.c:432 builtin/stash.c:1938
 #: builtin/stash.c:1940 builtin/stash.c:2000 builtin/stash.c:2002
 #, c-format
 msgid "'%s' cannot be negative"
@@ -2387,7 +2387,7 @@ msgid "--chmod param '%s' must be either -x or +x"
 msgstr ""
 
 #: builtin/add.c:549 builtin/checkout.c:2104 builtin/commit.c:379
-#: builtin/reset.c:396 builtin/rm.c:286 builtin/stash.c:1919
+#: builtin/reset.c:397 builtin/rm.c:286 builtin/stash.c:1919
 #, c-format
 msgid "'%s' and pathspec arguments cannot be used together"
 msgstr ""
@@ -2404,7 +2404,7 @@ msgstr ""
 #: builtin/add.c:579 builtin/check-ignore.c:188 builtin/checkout.c:667
 #: builtin/checkout.c:886 builtin/checkout.c:1310 builtin/clean.c:1017
 #: builtin/commit.c:395 builtin/diff-tree.c:134 builtin/grep.c:547
-#: builtin/mv.c:259 builtin/reset.c:481 builtin/rm.c:306
+#: builtin/mv.c:259 builtin/reset.c:485 builtin/rm.c:306
 #: builtin/submodule--helper.c:243 builtin/submodule--helper.c:3608
 #: read-cache.c:2030 read-cache.c:2346 rerere.c:545 rerere.c:579 rerere.c:1152
 #: submodule.c:1883
@@ -2670,8 +2670,8 @@ msgid ""
 "You might run `git rm` on a file to accept \"deleted by them\" for it."
 msgstr ""
 
-#: builtin/am.c:2078 builtin/am.c:2082 builtin/am.c:2096 builtin/reset.c:416
-#: builtin/reset.c:424
+#: builtin/am.c:2078 builtin/am.c:2082 builtin/am.c:2096 builtin/reset.c:417
+#: builtin/reset.c:425
 #, c-format
 msgid "Could not parse object '%s'."
 msgstr ""
@@ -2775,7 +2775,7 @@ msgstr ""
 #: builtin/clone.c:1009 builtin/diagnose.c:32 builtin/for-each-ref.c:37
 #: builtin/init-db.c:111 builtin/ls-files.c:666 builtin/ls-tree.c:372
 #: builtin/name-rev.c:845 builtin/refs.c:47 builtin/replace.c:571
-#: builtin/repo.c:424 builtin/repo.c:1098 builtin/submodule--helper.c:2065
+#: builtin/repo.c:424 builtin/repo.c:1092 builtin/submodule--helper.c:2065
 #: builtin/submodule--helper.c:3019 builtin/submodule--helper.c:3670
 #: builtin/tag.c:533 builtin/verify-tag.c:34
 msgid "format"
@@ -2940,7 +2940,7 @@ msgstr ""
 
 #: builtin/backfill.c:176 builtin/diff-pairs.c:69 builtin/history.c:1336
 #: builtin/log.c:321 builtin/log.c:2264 builtin/replay.c:169
-#: builtin/repo.c:1119 builtin/shortlog.c:458 bundle.c:524
+#: builtin/shortlog.c:458 bundle.c:524
 #, c-format
 msgid "unrecognized argument: %s"
 msgstr ""
@@ -9032,7 +9032,7 @@ msgstr ""
 msgid "write dangling objects in .git/lost-found"
 msgstr ""
 
-#: builtin/fsck.c:866 builtin/prune.c:163 builtin/repo.c:1105
+#: builtin/fsck.c:866 builtin/prune.c:163 builtin/repo.c:1099
 msgid "show progress"
 msgstr ""
 
@@ -10772,7 +10772,7 @@ msgstr ""
 msgid "could not read input file '%s'"
 msgstr ""
 
-#: builtin/interpret-trailers.c:103 builtin/mktag.c:95 imap-send.c:1817
+#: builtin/interpret-trailers.c:103 builtin/mktag.c:95 imap-send.c:1847
 msgid "could not read from stdin"
 msgstr ""
 
@@ -13012,7 +13012,7 @@ msgstr ""
 msgid "delta base offset out of bound for %s"
 msgstr ""
 
-#: builtin/pack-objects.c:2611 builtin/repo.c:1078
+#: builtin/pack-objects.c:2611 builtin/repo.c:1073
 msgid "Counting objects"
 msgstr ""
 
@@ -16031,11 +16031,11 @@ msgstr ""
 msgid "invalid format '%s'"
 msgstr ""
 
-#: builtin/repo.c:425 builtin/repo.c:1099
+#: builtin/repo.c:425 builtin/repo.c:1093
 msgid "output format"
 msgstr ""
 
-#: builtin/repo.c:428 builtin/repo.c:1102
+#: builtin/repo.c:428 builtin/repo.c:1096
 msgid "synonym for --format=nul"
 msgstr ""
 
@@ -16132,7 +16132,7 @@ msgstr ""
 msgid "Value"
 msgstr ""
 
-#: builtin/repo.c:950
+#: builtin/repo.c:945
 msgid "Counting references"
 msgstr ""
 
@@ -16219,76 +16219,76 @@ msgstr ""
 msgid "Cannot do a %s reset in the middle of a merge."
 msgstr ""
 
-#: builtin/reset.c:351 builtin/stash.c:732 builtin/stash.c:814
+#: builtin/reset.c:352 builtin/stash.c:732 builtin/stash.c:814
 #: builtin/stash.c:838
 msgid "be quiet, only report errors"
 msgstr ""
 
-#: builtin/reset.c:353
+#: builtin/reset.c:354
 msgid "skip refreshing the index after reset"
 msgstr ""
 
-#: builtin/reset.c:355
+#: builtin/reset.c:356
 msgid "reset HEAD and index"
 msgstr ""
 
-#: builtin/reset.c:358
+#: builtin/reset.c:359
 msgid "reset only HEAD"
 msgstr ""
 
-#: builtin/reset.c:361 builtin/reset.c:364
+#: builtin/reset.c:362 builtin/reset.c:365
 msgid "reset HEAD, index and working tree"
 msgstr ""
 
-#: builtin/reset.c:367
+#: builtin/reset.c:368
 msgid "reset HEAD but keep local changes"
 msgstr ""
 
-#: builtin/reset.c:379
+#: builtin/reset.c:380
 msgid "record only the fact that removed paths will be added later"
 msgstr ""
 
-#: builtin/reset.c:413
+#: builtin/reset.c:414
 #, c-format
 msgid "Failed to resolve '%s' as a valid revision."
 msgstr ""
 
-#: builtin/reset.c:421
+#: builtin/reset.c:422
 #, c-format
 msgid "Failed to resolve '%s' as a valid tree."
 msgstr ""
 
-#: builtin/reset.c:457
+#: builtin/reset.c:458
 msgid "--mixed with paths is deprecated; use 'git reset -- <paths>' instead."
 msgstr ""
 
-#: builtin/reset.c:459
+#: builtin/reset.c:460
 #, c-format
 msgid "Cannot do %s reset with paths."
 msgstr ""
 
-#: builtin/reset.c:474
+#: builtin/reset.c:475
 #, c-format
 msgid "%s reset is not allowed in a bare repository"
 msgstr ""
 
-#: builtin/reset.c:505
+#: builtin/reset.c:506
 msgid "Unstaged changes after reset:"
 msgstr ""
 
-#: builtin/reset.c:508
+#: builtin/reset.c:509
 #, c-format
 msgid ""
 "It took %.2f seconds to refresh the index after reset.  You can use\n"
 "'--no-refresh' to avoid this."
 msgstr ""
 
-#: builtin/reset.c:526
+#: builtin/reset.c:527
 #, c-format
 msgid "Could not reset index file to revision '%s'."
 msgstr ""
 
-#: builtin/reset.c:531
+#: builtin/reset.c:532
 msgid "Could not write new index file."
 msgstr ""
 
@@ -18133,7 +18133,7 @@ msgstr ""
 msgid "'%s' already exists in the index and is not a submodule"
 msgstr ""
 
-#: builtin/submodule--helper.c:3646 object-file.c:1013
+#: builtin/submodule--helper.c:3646 object-file.c:1014
 #, c-format
 msgid "'%s' does not have a commit checked out"
 msgstr ""
@@ -23530,21 +23530,21 @@ msgid ""
 "<folder>] < <mbox>"
 msgstr ""
 
-#: imap-send.c:1786
+#: imap-send.c:1816
 msgid "no IMAP host specified"
 msgstr ""
 
-#: imap-send.c:1787
+#: imap-send.c:1817
 msgid ""
 "set the IMAP host with 'git config imap.host <host>'.\n"
 "(e.g., 'git config imap.host imaps://imap.example.com')"
 msgstr ""
 
-#: imap-send.c:1808
+#: imap-send.c:1838
 msgid "no IMAP folder specified"
 msgstr ""
 
-#: imap-send.c:1809
+#: imap-send.c:1839
 msgid ""
 "set the target folder with 'git config imap.folder <folder>'.\n"
 "(e.g., 'git config imap.folder Drafts')"
@@ -23676,7 +23676,7 @@ msgstr ""
 msgid "Unable to create '%s.lock': %s"
 msgstr ""
 
-#: log-tree.c:1048 object-file.c:515
+#: log-tree.c:1048 object-file.c:516
 msgid "unable to create temporary object directory"
 msgstr ""
 
@@ -24370,17 +24370,17 @@ msgstr ""
 msgid "object file %s is empty"
 msgstr ""
 
-#: object-file.c:248 object-file.c:1168
+#: object-file.c:248 object-file.c:1169
 #, c-format
 msgid "corrupt loose object '%s'"
 msgstr ""
 
-#: object-file.c:251 object-file.c:1173
+#: object-file.c:251 object-file.c:1174
 #, c-format
 msgid "garbage at end of loose object '%s'"
 msgstr ""
 
-#: object-file.c:337 object-file.c:344 object-file.c:1062
+#: object-file.c:337 object-file.c:344 object-file.c:1063
 #, c-format
 msgid "unable to open %s"
 msgstr ""
@@ -24400,74 +24400,93 @@ msgstr ""
 msgid "unable to set permission to '%s'"
 msgstr ""
 
-#: object-file.c:540
+#: object-file.c:541
 msgid "core.fsyncMethod = batch is unsupported on this platform"
 msgstr ""
 
-#: object-file.c:557
+#: object-file.c:558
 #, c-format
 msgid "object fails fsck: %s"
 msgstr ""
 
-#: object-file.c:591
+#: object-file.c:592
 msgid "refusing to create malformed object"
 msgstr ""
 
-#: object-file.c:660
+#: object-file.c:661
 #, c-format
 msgid "read error while indexing %s"
 msgstr ""
 
-#: object-file.c:663
+#: object-file.c:664
 #, c-format
 msgid "short read while indexing %s"
 msgstr ""
 
-#: object-file.c:998 object-file.c:1008
+#: object-file.c:999 object-file.c:1009
 #, c-format
 msgid "%s: failed to insert into database"
 msgstr ""
 
-#: object-file.c:1015
+#: object-file.c:1016
 msgid "cannot add a submodule of a different hash algorithm"
 msgstr ""
 
-#: object-file.c:1018
+#: object-file.c:1019
 #, c-format
 msgid "%s: unsupported file type"
 msgstr ""
 
-#: object-file.c:1181
+#: object-file.c:1182
 #, c-format
 msgid "hash mismatch for %s (expected %s)"
 msgstr ""
 
-#: object-file.c:1208
+#: object-file.c:1209
 #, c-format
 msgid "unable to mmap %s"
 msgstr ""
 
-#: object-file.c:1213
+#: object-file.c:1214
 #, c-format
 msgid "unable to unpack header of %s"
 msgstr ""
 
-#: object-file.c:1218
+#: object-file.c:1219
 #, c-format
 msgid "unable to parse header of %s"
 msgstr ""
 
-#: object-file.c:1223
+#: object-file.c:1224
 #, c-format
 msgid "unable to parse type from header '%s' of %s"
 msgstr ""
 
-#: object-file.c:1236
+#: object-file.c:1237
 #, c-format
 msgid "unable to unpack contents of %s"
 msgstr ""
 
-#: object-file.c:1289
+#: object-file.c:1272 wrapper.c:195
+#, c-format
+msgid "unable to create '%s'"
+msgstr ""
+
+#: object-file.c:1277
+#, c-format
+msgid "unable to write '%s'"
+msgstr ""
+
+#: object-file.c:1284
+#, c-format
+msgid "unable to close '%s'"
+msgstr ""
+
+#: object-file.c:1362
+msgid "unable to lock packfiles"
+msgstr ""
+
+#: object-file.c:1369
 msgid "unable to migrate temporary objects"
 msgstr ""
 
@@ -25184,7 +25203,7 @@ msgstr ""
 msgid "failed to make %s readable"
 msgstr ""
 
-#: pack-write.c:614
+#: pack-write.c:644
 #, c-format
 msgid "could not write '%s' promisor file"
 msgstr ""
@@ -25627,7 +25646,7 @@ msgstr ""
 msgid "protocol error: bad line length %d"
 msgstr ""
 
-#: pkt-line.c:510 sideband.c:355
+#: pkt-line.c:510 sideband.c:360
 #, c-format
 msgid "remote error: %s"
 msgstr ""
@@ -29067,9 +29086,9 @@ msgstr ""
 msgid "%s already exists"
 msgstr ""
 
-#: sideband.c:76
+#: sideband.c:78
 #, c-format
-msgid "unrecognized value for '%s': '%s'"
+msgid "unrecognized value for '%s': '%.*s'"
 msgstr ""
 
 #: sparse-index.c:425
@@ -30278,118 +30297,113 @@ msgstr ""
 msgid "'%s' does not point back to '%s'"
 msgstr ""
 
-#: worktree.c:675
+#: worktree.c:705
 msgid "not a directory"
 msgstr ""
 
-#: worktree.c:698
+#: worktree.c:728
 msgid ".git is not a file"
 msgstr ""
 
-#: worktree.c:700
+#: worktree.c:730
 msgid ".git file broken"
 msgstr ""
 
-#: worktree.c:702
+#: worktree.c:733
 msgid "unrelated .git file"
 msgstr ""
 
-#: worktree.c:704
+#: worktree.c:735
 msgid ".git file incorrect"
 msgstr ""
 
-#: worktree.c:706
+#: worktree.c:737
 msgid ".git file absolute/relative path mismatch"
 msgstr ""
 
-#: worktree.c:860
+#: worktree.c:894
 msgid "not a valid path"
 msgstr ""
 
-#: worktree.c:868
+#: worktree.c:902
 msgid "unable to locate repository; .git is not a file"
 msgstr ""
 
-#: worktree.c:873
+#: worktree.c:907
 msgid "unable to locate repository; .git file broken"
 msgstr ""
 
-#: worktree.c:893
+#: worktree.c:927
 msgid "unable to locate repository; .git file does not reference a repository"
 msgstr ""
 
-#: worktree.c:899
+#: worktree.c:933
 msgid "unable to locate repository; .git file is not for a linked worktree"
 msgstr ""
 
-#: worktree.c:925
+#: worktree.c:959
 msgid "gitdir unreadable"
 msgstr ""
 
-#: worktree.c:927
+#: worktree.c:961
 msgid "gitdir absolute/relative path mismatch"
 msgstr ""
 
-#: worktree.c:935
+#: worktree.c:969
 msgid "gitdir incorrect"
 msgstr ""
 
-#: worktree.c:977
+#: worktree.c:1011
 msgid "not a valid directory"
 msgstr ""
 
-#: worktree.c:986
+#: worktree.c:1020
 msgid "gitdir file does not exist"
 msgstr ""
 
-#: worktree.c:992 worktree.c:1003
+#: worktree.c:1026 worktree.c:1037
 #, c-format
 msgid "unable to read gitdir file (%s)"
 msgstr ""
 
-#: worktree.c:1009
+#: worktree.c:1043
 #, c-format
 msgid "short read (expected %<PRIuMAX> bytes, read %<PRIuMAX>)"
 msgstr ""
 
-#: worktree.c:1017
+#: worktree.c:1051
 msgid "invalid gitdir file"
 msgstr ""
 
-#: worktree.c:1032
+#: worktree.c:1066
 msgid "gitdir file points to non-existent location"
 msgstr ""
 
-#: worktree.c:1052
+#: worktree.c:1086
 #, c-format
 msgid "unable to set %s in '%s'"
 msgstr ""
 
-#: worktree.c:1054
+#: worktree.c:1088
 #, c-format
 msgid "unable to unset %s in '%s'"
 msgstr ""
 
-#: worktree.c:1074
+#: worktree.c:1108
 msgid "failed to set extensions.worktreeConfig setting"
 msgstr ""
 
-#: worktree.c:1137
+#: worktree.c:1171
 msgid "unable to upgrade repository format to support relative worktrees"
 msgstr ""
 
-#: worktree.c:1139
+#: worktree.c:1173
 msgid "unable to set extensions.relativeWorktrees setting"
 msgstr ""
 
 #: wrapper.c:165
 #, c-format
 msgid "could not setenv '%s'"
-msgstr ""
-
-#: wrapper.c:195
-#, c-format
-msgid "unable to create '%s'"
 msgstr ""
 
 #: wrapper.c:197 wrapper.c:459
