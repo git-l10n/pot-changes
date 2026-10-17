@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2026-10-16 17:00+0000\n"
+"POT-Creation-Date: 2026-10-17 23:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -1710,8 +1710,8 @@ msgstr ""
 msgid "prepend prefix to each pathname in the archive"
 msgstr ""
 
-#: archive.c:657 archive.c:671 builtin/blame.c:997 builtin/blame.c:1003
-#: builtin/blame.c:1004 builtin/commit-tree.c:112 builtin/config.c:73
+#: archive.c:657 archive.c:671 builtin/blame.c:1101 builtin/blame.c:1107
+#: builtin/blame.c:1108 builtin/commit-tree.c:112 builtin/config.c:73
 #: builtin/fast-export.c:1338 builtin/fast-export.c:1340
 #: builtin/fast-export.c:1344 builtin/fast-import.c:4155
 #: builtin/fast-import.c:4158 builtin/fast-import.c:4161
@@ -2422,8 +2422,8 @@ msgstr ""
 msgid "bad action '%s' for '%s'"
 msgstr ""
 
-#: builtin/am.c:217 builtin/am.c:2285 builtin/am.c:2307 builtin/blame.c:786
-#: builtin/blame.c:806 builtin/fetch.c:175 builtin/pack-objects.c:4483
+#: builtin/am.c:217 builtin/am.c:2285 builtin/am.c:2307 builtin/blame.c:787
+#: builtin/blame.c:807 builtin/fetch.c:175 builtin/pack-objects.c:4483
 #: builtin/pack-objects.c:5108 builtin/pull.c:49 builtin/pull.c:51
 #: builtin/pull.c:188 builtin/revert.c:69 diff-merges.c:94 diff.c:6004
 #: environment.c:343 gpg-interface.c:759 gpg-interface.c:774 ls-refs.c:38
@@ -3285,171 +3285,181 @@ msgstr ""
 msgid "unknown command: '%s'"
 msgstr ""
 
-#: builtin/blame.c:38
+#: builtin/blame.c:39
 msgid "git blame [<options>] [<rev-opts>] [<rev>] [--] <file>"
 msgstr ""
 
-#: builtin/blame.c:39
+#: builtin/blame.c:40
 msgid "git annotate [<options>] [<rev-opts>] [<rev>] [--] <file>"
 msgstr ""
 
-#: builtin/blame.c:44 builtin/blame.c:51
+#: builtin/blame.c:45 builtin/blame.c:52
 msgid "<rev-opts> are documented in git-rev-list(1)"
 msgstr ""
 
-#: builtin/blame.c:428
+#: builtin/blame.c:429
 #, c-format
 msgid "expecting a color: %s"
 msgstr ""
 
-#: builtin/blame.c:435
+#: builtin/blame.c:436
 msgid "must end with a color"
 msgstr ""
 
-#: builtin/blame.c:818 diff.c:467 diff.c:507 merge-ort.c:5506 transport.c:1127
+#: builtin/blame.c:819 diff.c:467 diff.c:507 merge-ort.c:5506 transport.c:1127
 #, c-format
 msgid "unknown value for config '%s': %s"
 msgstr ""
 
-#: builtin/blame.c:893 builtin/merge-file.c:54 diff.c:5660
+#: builtin/blame.c:894 builtin/merge-file.c:54 diff.c:5660
 msgid ""
 "option diff-algorithm accepts \"myers\", \"minimal\", \"patience\" and "
 "\"histogram\""
 msgstr ""
 
-#: builtin/blame.c:952
+#: builtin/blame.c:971
+#, c-format
+msgid "ignoring overly large ignore-revs blob '%s'"
+msgstr ""
+
+#: builtin/blame.c:1004
+#, c-format
+msgid "ignoring overly large ignore-revs file '%s'"
+msgstr ""
+
+#: builtin/blame.c:1056
 #, c-format
 msgid "cannot find revision %s to ignore"
 msgstr ""
 
-#: builtin/blame.c:977
+#: builtin/blame.c:1081
 msgid "show blame entries as we find them, incrementally"
 msgstr ""
 
-#: builtin/blame.c:978
+#: builtin/blame.c:1082
 msgid "do not show object names of boundary commits (Default: off)"
 msgstr ""
 
-#: builtin/blame.c:979
+#: builtin/blame.c:1083
 msgid "do not treat root commits as boundaries (Default: off)"
 msgstr ""
 
-#: builtin/blame.c:980
+#: builtin/blame.c:1084
 msgid "show work cost statistics"
 msgstr ""
 
-#: builtin/blame.c:981 builtin/checkout.c:1838 builtin/clone.c:950
+#: builtin/blame.c:1085 builtin/checkout.c:1838 builtin/clone.c:950
 #: builtin/commit-graph.c:86 builtin/commit-graph.c:263 builtin/fetch.c:2612
 #: builtin/merge.c:323 builtin/multi-pack-index.c:103 builtin/pull.c:881
 #: builtin/push.c:732 builtin/remote.c:861 builtin/send-pack.c:201
 msgid "force progress reporting"
 msgstr ""
 
-#: builtin/blame.c:982
+#: builtin/blame.c:1086
 msgid "show output score for blame entries"
 msgstr ""
 
-#: builtin/blame.c:983
+#: builtin/blame.c:1087
 msgid "show original filename (Default: auto)"
 msgstr ""
 
-#: builtin/blame.c:984
+#: builtin/blame.c:1088
 msgid "show original linenumber (Default: off)"
 msgstr ""
 
-#: builtin/blame.c:985
+#: builtin/blame.c:1089
 msgid "show in a format designed for machine consumption"
 msgstr ""
 
-#: builtin/blame.c:986
+#: builtin/blame.c:1090
 msgid "show porcelain format with per-line commit information"
 msgstr ""
 
-#: builtin/blame.c:987
+#: builtin/blame.c:1091
 msgid "use the same output mode as git-annotate (Default: off)"
 msgstr ""
 
-#: builtin/blame.c:988
+#: builtin/blame.c:1092
 msgid "show raw timestamp (Default: off)"
 msgstr ""
 
-#: builtin/blame.c:989
+#: builtin/blame.c:1093
 msgid "show long commit SHA1 (Default: off)"
 msgstr ""
 
-#: builtin/blame.c:990
+#: builtin/blame.c:1094
 msgid "suppress author name and timestamp (Default: off)"
 msgstr ""
 
-#: builtin/blame.c:991
+#: builtin/blame.c:1095
 msgid "show author email instead of name (Default: off)"
 msgstr ""
 
-#: builtin/blame.c:992
+#: builtin/blame.c:1096
 msgid "ignore whitespace differences"
 msgstr ""
 
-#: builtin/blame.c:993 builtin/merge-file.c:83 diff.c:6204
+#: builtin/blame.c:1097 builtin/merge-file.c:83 diff.c:6204
 msgid "<algorithm>"
 msgstr ""
 
-#: builtin/blame.c:994 builtin/merge-file.c:84 diff.c:6205
+#: builtin/blame.c:1098 builtin/merge-file.c:84 diff.c:6205
 msgid "choose a diff algorithm"
 msgstr ""
 
-#: builtin/blame.c:996 builtin/clone.c:991 builtin/log.c:2121
+#: builtin/blame.c:1100 builtin/clone.c:991 builtin/log.c:2121
 msgid "rev"
 msgstr ""
 
-#: builtin/blame.c:996
+#: builtin/blame.c:1100
 msgid "ignore <rev> when blaming"
 msgstr ""
 
-#: builtin/blame.c:997
+#: builtin/blame.c:1101
 msgid "ignore revisions from <file>"
 msgstr ""
 
-#: builtin/blame.c:998
+#: builtin/blame.c:1102
 msgid "color redundant metadata from previous line differently"
 msgstr ""
 
-#: builtin/blame.c:999
+#: builtin/blame.c:1103
 msgid "color lines by age"
 msgstr ""
 
-#: builtin/blame.c:1001
+#: builtin/blame.c:1105
 msgid "spend extra cycles to find a better match"
 msgstr ""
 
-#: builtin/blame.c:1003
+#: builtin/blame.c:1107
 msgid "use revisions from <file> instead of calling git-rev-list"
 msgstr ""
 
-#: builtin/blame.c:1004
+#: builtin/blame.c:1108
 msgid "use <file>'s contents as the final image"
 msgstr ""
 
-#: builtin/blame.c:1005 builtin/blame.c:1006
+#: builtin/blame.c:1109 builtin/blame.c:1110
 msgid "score"
 msgstr ""
 
-#: builtin/blame.c:1005
+#: builtin/blame.c:1109
 msgid "find line copies within and across files"
 msgstr ""
 
-#: builtin/blame.c:1006
+#: builtin/blame.c:1110
 msgid "find line movements within and across files"
 msgstr ""
 
-#: builtin/blame.c:1007
+#: builtin/blame.c:1111
 msgid "range"
 msgstr ""
 
-#: builtin/blame.c:1008
+#: builtin/blame.c:1112
 msgid "process only line range <start>,<end> or function :<funcname>"
 msgstr ""
 
-#: builtin/blame.c:1072
+#: builtin/blame.c:1182
 msgid "--progress can't be used with --incremental or porcelain formats"
 msgstr ""
 
@@ -3461,18 +3471,18 @@ msgstr ""
 #. your language may need more or fewer display
 #. columns.
 #.
-#: builtin/blame.c:1120
+#: builtin/blame.c:1230
 msgid "4 years, 11 months ago"
 msgstr ""
 
-#: builtin/blame.c:1236
+#: builtin/blame.c:1346
 #, c-format
 msgid "file %s has only %lu line"
 msgid_plural "file %s has only %lu lines"
 msgstr[0] ""
 msgstr[1] ""
 
-#: builtin/blame.c:1285
+#: builtin/blame.c:1395
 msgid "Blaming lines"
 msgstr ""
 
@@ -10661,7 +10671,7 @@ msgstr ""
 msgid "bad %s"
 msgstr ""
 
-#: builtin/index-pack.c:2005 builtin/init-db.c:173 setup.c:2762 setup.c:2827
+#: builtin/index-pack.c:2005 builtin/init-db.c:165 setup.c:2762 setup.c:2827
 #, c-format
 msgid "unknown hash algorithm '%s'"
 msgstr ""
@@ -10715,48 +10725,48 @@ msgstr ""
 msgid "specify the hash algorithm to use"
 msgstr ""
 
-#: builtin/init-db.c:150 builtin/init-db.c:155
+#: builtin/init-db.c:142 builtin/init-db.c:147
 #, c-format
 msgid "cannot mkdir %s"
 msgstr ""
 
-#: builtin/init-db.c:159 builtin/init-db.c:214
+#: builtin/init-db.c:151 builtin/init-db.c:203
 #, c-format
 msgid "cannot chdir to %s"
 msgstr ""
 
-#: builtin/init-db.c:186
+#: builtin/init-db.c:175
 #, c-format
 msgid ""
 "%s (or --work-tree=<directory>) not allowed without specifying %s (or --git-"
 "dir=<directory>)"
 msgstr ""
 
-#: builtin/init-db.c:239
+#: builtin/init-db.c:228
 #, c-format
 msgid "Cannot access work tree '%s'"
 msgstr ""
 
-#: builtin/init-db.c:241
+#: builtin/init-db.c:230
 msgid "--separate-git-dir incompatible with bare repository"
 msgstr ""
 
-#: builtin/init-db.c:255
+#: builtin/init-db.c:244
 #, c-format
 msgid "Reinitialized existing shared Git repository in %s%s\n"
 msgstr ""
 
-#: builtin/init-db.c:256
+#: builtin/init-db.c:245
 #, c-format
 msgid "Reinitialized existing Git repository in %s%s\n"
 msgstr ""
 
-#: builtin/init-db.c:260
+#: builtin/init-db.c:249
 #, c-format
 msgid "Initialized empty shared Git repository in %s%s\n"
 msgstr ""
 
-#: builtin/init-db.c:261
+#: builtin/init-db.c:250
 #, c-format
 msgid "Initialized empty Git repository in %s%s\n"
 msgstr ""
@@ -28812,7 +28822,7 @@ msgid ""
 "attempt to reinitialize repository with different reference storage payload"
 msgstr ""
 
-#: setup.c:2934 setup.c:2937
+#: setup.c:2937 setup.c:2940
 #, c-format
 msgid "%s already exists"
 msgstr ""
