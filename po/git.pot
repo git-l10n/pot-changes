@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2026-10-18 01:34+0000\n"
+"POT-Creation-Date: 2026-10-19 23:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -906,10 +906,10 @@ msgstr ""
 #: builtin/tag.c:590 builtin/tag.c:637 builtin/worktree.c:757
 #: builtin/worktree.c:760 builtin/worktree.c:868 builtin/worktree.c:871
 #: builtin/worktree.c:874 builtin/worktree.c:1149 parse-options.c:419
-#: parse-options.c:1794 revision.c:2548 revision.c:2554 revision.c:2559
-#: revision.c:2568 revision.c:2573 revision.c:2816 revision.c:2889
-#: revision.c:2901 revision.c:2907 revision.c:2935 revision.c:2949
-#: revision.c:2963 revision.c:3252 revision.c:3267
+#: parse-options.c:1794 revision.c:2520 revision.c:2526 revision.c:2531
+#: revision.c:2540 revision.c:2545 revision.c:2788 revision.c:2861
+#: revision.c:2873 revision.c:2879 revision.c:2907 revision.c:2921
+#: revision.c:2935 revision.c:3224 revision.c:3239
 #, c-format
 msgid "options '%s' and '%s' cannot be used together"
 msgstr ""
@@ -1793,8 +1793,8 @@ msgstr ""
 #: builtin/stash.c:1925 builtin/stash.c:1930 builtin/stash.c:1932
 #: builtin/stash.c:1934 builtin/stash.c:2006 builtin/stash.c:2008
 #: builtin/stash.c:2010 builtin/worktree.c:880 builtin/worktree.c:1151
-#: fetch-pack.c:370 http-fetch.c:159 http-fetch.c:168 revision.c:3270
-#: revision.c:3273 revision.c:3276
+#: fetch-pack.c:370 http-fetch.c:159 http-fetch.c:168 revision.c:3242
+#: revision.c:3245 revision.c:3248
 #, c-format
 msgid "the option '%s' requires '%s'"
 msgstr ""
@@ -2251,7 +2251,7 @@ msgid "dry run"
 msgstr ""
 
 #: builtin/add.c:263 builtin/check-ignore.c:24 builtin/commit.c:1546
-#: builtin/count-objects.c:104 builtin/fsck.c:853 builtin/log.c:2809
+#: builtin/count-objects.c:104 builtin/fsck.c:856 builtin/log.c:2809
 #: builtin/mv.c:223 builtin/read-tree.c:129 builtin/refs.c:102
 msgid "be verbose"
 msgstr ""
@@ -8905,86 +8905,88 @@ msgstr ""
 
 #: builtin/fsck.c:382
 #, c-format
-msgid "Checking connectivity (%d objects)"
-msgstr ""
+msgid "Checking connectivity (%d object)"
+msgid_plural "Checking connectivity (%d objects)"
+msgstr[0] ""
+msgstr[1] ""
 
-#: builtin/fsck.c:406
+#: builtin/fsck.c:409
 #, c-format
 msgid "%s: object corrupt or missing"
 msgstr ""
 
-#: builtin/fsck.c:415
+#: builtin/fsck.c:418
 #, c-format
 msgid "Checking %s %s"
 msgstr ""
 
-#: builtin/fsck.c:420
+#: builtin/fsck.c:423
 msgid "broken links"
 msgstr ""
 
-#: builtin/fsck.c:430
+#: builtin/fsck.c:433
 #, c-format
 msgid "root %s"
 msgstr ""
 
-#: builtin/fsck.c:438
+#: builtin/fsck.c:441
 #, c-format
 msgid "tagged %s %s (%s) in %s"
 msgstr ""
 
-#: builtin/fsck.c:470
+#: builtin/fsck.c:473
 #, c-format
 msgid "%s: invalid reflog entry %s"
 msgstr ""
 
-#: builtin/fsck.c:489
+#: builtin/fsck.c:492
 #, c-format
 msgid "Checking reflog %s->%s"
 msgstr ""
 
-#: builtin/fsck.c:544
+#: builtin/fsck.c:547
 #, c-format
 msgid "%s: invalid sha1 pointer %s"
 msgstr ""
 
-#: builtin/fsck.c:551
+#: builtin/fsck.c:554
 #, c-format
 msgid "%s: not a commit"
 msgstr ""
 
-#: builtin/fsck.c:604
+#: builtin/fsck.c:607
 #, c-format
 msgid "invalid parameter: expected sha1, got '%s'"
 msgstr ""
 
-#: builtin/fsck.c:692
+#: builtin/fsck.c:695
 msgid "notice: No default references"
 msgstr ""
 
-#: builtin/fsck.c:703
+#: builtin/fsck.c:706
 #, c-format
 msgid "Checking cache tree of %s"
 msgstr ""
 
-#: builtin/fsck.c:708
+#: builtin/fsck.c:711
 #, c-format
 msgid "%s: invalid sha1 pointer in cache-tree of %s"
 msgstr ""
 
-#: builtin/fsck.c:717
+#: builtin/fsck.c:720
 msgid "non-tree in cache-tree"
 msgstr ""
 
-#: builtin/fsck.c:748
+#: builtin/fsck.c:751
 #, c-format
 msgid "%s: invalid sha1 pointer in resolve-undo of %s"
 msgstr ""
 
-#: builtin/fsck.c:811 builtin/fsck.c:814
+#: builtin/fsck.c:814 builtin/fsck.c:817
 msgid "Checking ref database"
 msgstr ""
 
-#: builtin/fsck.c:832
+#: builtin/fsck.c:835
 msgid ""
 "git fsck [--tags] [--root] [--unreachable] [--cache] [--no-reflogs]\n"
 "         [--[no-]full] [--strict] [--verbose] [--lost-found]\n"
@@ -8992,55 +8994,55 @@ msgid ""
 "         [--[no-]name-objects] [--[no-]references] [<object>...]"
 msgstr ""
 
-#: builtin/fsck.c:854
+#: builtin/fsck.c:857
 msgid "show unreachable objects"
 msgstr ""
 
-#: builtin/fsck.c:855
+#: builtin/fsck.c:858
 msgid "show dangling objects"
 msgstr ""
 
-#: builtin/fsck.c:856
+#: builtin/fsck.c:859
 msgid "report tags"
 msgstr ""
 
-#: builtin/fsck.c:857
+#: builtin/fsck.c:860
 msgid "report root nodes"
 msgstr ""
 
-#: builtin/fsck.c:858
+#: builtin/fsck.c:861
 msgid "make index objects head nodes"
 msgstr ""
 
-#: builtin/fsck.c:859
+#: builtin/fsck.c:862
 msgid "make reflogs head nodes (default)"
 msgstr ""
 
-#: builtin/fsck.c:861
+#: builtin/fsck.c:864
 msgid "also consider packs and alternate objects"
 msgstr ""
 
-#: builtin/fsck.c:862
+#: builtin/fsck.c:865
 msgid "check only connectivity"
 msgstr ""
 
-#: builtin/fsck.c:863 builtin/mktag.c:82
+#: builtin/fsck.c:866 builtin/mktag.c:82
 msgid "enable more strict checking"
 msgstr ""
 
-#: builtin/fsck.c:865
+#: builtin/fsck.c:868
 msgid "write dangling objects in .git/lost-found"
 msgstr ""
 
-#: builtin/fsck.c:866 builtin/prune.c:163 builtin/repo.c:1099
+#: builtin/fsck.c:869 builtin/prune.c:163 builtin/repo.c:1099
 msgid "show progress"
 msgstr ""
 
-#: builtin/fsck.c:867
+#: builtin/fsck.c:870
 msgid "show verbose names for reachable objects"
 msgstr ""
 
-#: builtin/fsck.c:868
+#: builtin/fsck.c:871
 msgid "check reference database consistency"
 msgstr ""
 
@@ -10842,39 +10844,39 @@ msgstr ""
 msgid "no input file given for in-place editing"
 msgstr ""
 
-#: builtin/last-modified.c:153
+#: builtin/last-modified.c:150
 msgid "last-modified can only operate on one commit at a time"
 msgstr ""
 
-#: builtin/last-modified.c:158
+#: builtin/last-modified.c:155
 #, c-format
 msgid "revision argument '%s' is a %s, not a commit-ish"
 msgstr ""
 
-#: builtin/last-modified.c:529
+#: builtin/last-modified.c:501
 #, c-format
 msgid "unknown last-modified argument: %s"
 msgstr ""
 
-#: builtin/last-modified.c:555
+#: builtin/last-modified.c:527
 msgid ""
 "git last-modified [--recursive] [--show-trees] [--max-depth=<depth>] [-z]\n"
 "                  [<revision-range>] [[--] <pathspec>...]"
 msgstr ""
 
-#: builtin/last-modified.c:562 builtin/ls-tree.c:354
+#: builtin/last-modified.c:534 builtin/ls-tree.c:354
 msgid "recurse into subtrees"
 msgstr ""
 
-#: builtin/last-modified.c:564
+#: builtin/last-modified.c:536
 msgid "show tree entries when recursing into subtrees"
 msgstr ""
 
-#: builtin/last-modified.c:566 diff.c:6511
+#: builtin/last-modified.c:538 diff.c:6511
 msgid "maximum tree depth to recurse"
 msgstr ""
 
-#: builtin/last-modified.c:568
+#: builtin/last-modified.c:540
 msgid "lines are separated with NUL character"
 msgstr ""
 
@@ -22560,7 +22562,7 @@ msgstr ""
 msgid "must be one of nothing, matching, simple, upstream or current"
 msgstr ""
 
-#: exec-cmd.c:416
+#: exec-cmd.c:392
 #, c-format
 msgid "too many args to run %s"
 msgstr ""
@@ -23676,7 +23678,7 @@ msgstr ""
 msgid "Unable to create '%s.lock': %s"
 msgstr ""
 
-#: log-tree.c:1048 object-file.c:516
+#: log-tree.c:1049 object-file.c:516
 msgid "unable to create temporary object directory"
 msgstr ""
 
@@ -27552,59 +27554,59 @@ msgstr ""
 msgid "failed to find tree of %s"
 msgstr ""
 
-#: revision.c:1641
+#: revision.c:1613
 #, c-format
 msgid "unsupported section for hidden refs: %s"
 msgstr ""
 
-#: revision.c:1644
+#: revision.c:1616
 msgid "--exclude-hidden= passed more than once"
 msgstr ""
 
-#: revision.c:1822
+#: revision.c:1794
 #, c-format
 msgid "resolve-undo records `%s` which is missing"
 msgstr ""
 
-#: revision.c:2027
+#: revision.c:1999
 #, c-format
 msgid "%s exists but is a symbolic ref"
 msgstr ""
 
-#: revision.c:2031
+#: revision.c:2003
 msgid ""
 "--merge requires one of the pseudorefs MERGE_HEAD, CHERRY_PICK_HEAD, "
 "REVERT_HEAD or REBASE_HEAD"
 msgstr ""
 
-#: revision.c:2474
+#: revision.c:2446
 #, c-format
 msgid "could not get commit for --ancestry-path argument %s"
 msgstr ""
 
-#: revision.c:2600
+#: revision.c:2572
 msgid "--unpacked=<packfile> no longer supported"
 msgstr ""
 
-#: revision.c:3040
+#: revision.c:3012
 #, c-format
 msgid "invalid option '%s' in --stdin mode"
 msgstr ""
 
-#: revision.c:3062
+#: revision.c:3034
 msgid "your current branch appears to be broken"
 msgstr ""
 
-#: revision.c:3065
+#: revision.c:3037
 #, c-format
 msgid "your current branch '%s' does not have any commits yet"
 msgstr ""
 
-#: revision.c:3254
+#: revision.c:3226
 msgid "object filtering requires --objects"
 msgstr ""
 
-#: revision.c:3286
+#: revision.c:3258
 msgid "-L does not support the requested diff format"
 msgstr ""
 
