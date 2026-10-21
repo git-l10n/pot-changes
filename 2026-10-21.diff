@@ -1,0 +1,156 @@
+
+
+#################### Wed, 21 Oct 2026 17:42:14 +0000 ####################
+
+--- po/git.pot.old	2026-10-21 17:42:14.813924195 +0000
++++ po/git.pot.new	2026-10-21 17:42:14.902924424 +0000
+@@ -366,7 +366,7 @@
+ msgid "  (use \"git bisect reset\" to get back to the original branch)"
+ msgstr ""
+ 
+-msgid "  (use \"git branch --unset-upstream\" to fixup)\n"
++msgid "  (use \"git branch --unset-upstream\" to stop tracking it)\n"
+ msgstr ""
+ 
+ msgid "  (use \"git cherry-pick --abort\" to cancel the cherry-pick operation)"
+@@ -401,6 +401,9 @@
+ msgid "  (use \"git push --force-with-lease\" to publish your local commits)\n"
+ msgstr ""
+ 
++msgid "  (use \"git push\" to create it)\n"
++msgstr ""
++
+ msgid "  (use \"git push\" to publish your local commits)\n"
+ msgstr ""
+ 
+@@ -7534,16 +7537,16 @@
+ msgstr[1] ""
+ 
+ #, c-format
+-msgid "Your branch is based on '%s', but the upstream is gone.\n"
+-msgstr ""
+-
+-#, c-format
+ msgid "Your branch is behind '%s' by %d commit, and can be fast-forwarded.\n"
+ msgid_plural "Your branch is behind '%s' by %d commits, and can be fast-forwarded.\n"
+ msgstr[0] ""
+ msgstr[1] ""
+ 
+ #, c-format
++msgid "Your branch is set up to track '%s', which does not exist.\n"
++msgstr ""
++
++#, c-format
+ msgid "Your branch is up to date with '%s'.\n"
+ msgstr ""
+ 
+@@ -8879,6 +8882,10 @@
+ msgid "can't load tree %s"
+ msgstr ""
+ 
++#, c-format
++msgid "can't map object %s while writing pack"
++msgstr ""
++
+ #, perl-format
+ msgid "can't open file %s"
+ msgstr ""
+@@ -10064,6 +10071,9 @@
+ msgid "confusion beyond insanity in parse_pack_objects()"
+ msgstr ""
+ 
++msgid "connectivity check failed"
++msgstr ""
++
+ msgid "consider <n> most recent tags (default: 10)"
+ msgstr ""
+ 
+@@ -10326,6 +10336,12 @@
+ msgid "could not configure remote in '%s'"
+ msgstr ""
+ 
++msgid "could not convert object"
++msgstr ""
++
++msgid "could not convert object from delta"
++msgstr ""
++
+ #, c-format
+ msgid ""
+ "could not convert the following graft(s):\n"
+@@ -15967,6 +15983,10 @@
+ msgid "invalid object name '%.*s'."
+ msgstr ""
+ 
++#, c-format
++msgid "invalid object position in pack index for %s (corrupt index?)"
++msgstr ""
++
+ msgid "invalid object type"
+ msgstr ""
+ 
+@@ -16775,6 +16795,10 @@
+ msgid "missing %s %s"
+ msgstr ""
+ 
++#, c-format
++msgid "missing %s object %s"
++msgstr ""
++
+ msgid "missing 'GIT_AUTHOR_DATE'"
+ msgstr ""
+ 
+@@ -16811,10 +16835,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "missing blob object '%s'"
+-msgstr ""
+-
+-#, c-format
+ msgid "missing branch name; try -%c"
+ msgstr ""
+ 
+@@ -22326,6 +22346,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unable to read %s object %s"
++msgstr ""
++
++#, c-format
+ msgid "unable to read 32b offset %u/%u"
+ msgstr ""
+ 
+@@ -22728,6 +22752,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unknown --connectivity-check mode '%s'"
++msgstr ""
++
++#, c-format
+ msgid "unknown --date-format argument %s"
+ msgstr ""
+ 
+@@ -22955,7 +22983,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "unknown transfer.connectivityCheck algorithm '%s'"
++msgid "unknown transfer.connectivityCheck algorithm '%s', using 'full'"
+ msgstr ""
+ 
+ #, c-format
+
+
+-------------------- git-po-helper check-po po/git.pot --------------------
+
+❌ CamelCase config variables
+    ERROR   [git.pot]   entry at L17678 (msgid): should use "core.repositoryFormatVersion" in msgid: "core.repositoryformatversion to 1.\\nPlease set it for migration"
+    ERROR   [git.pot]   entry at L17678 (msgid): should use "core.repositoryFormatVersion" in msgid: "for example:\\ngit config core.repositoryformatversion 1"
+    ERROR   [git.pot]   entry at L23443 (msgid): should use "http.proactiveAuth" in msgid: "http.proactiveauth"
+    ERROR   [git.pot]   entry at L23467 (msgid): should use "http.cookieFile" in msgid: "ing to read cookies from http.cookiefile '-'"
+    ERROR   [git.pot]   entry at L23471 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
+ERROR: 6578 entries checked, 540 config variables, 5 mismatched
+ERROR: check-po command failed
