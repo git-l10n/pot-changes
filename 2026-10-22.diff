@@ -135,3 +135,81 @@ ERROR: check-po command failed
     ERROR   [git.pot]   entry at L23498 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
 ERROR: 6584 entries checked, 541 config variables, 5 mismatched
 ERROR: check-po command failed
+
+
+#################### Thu, 22 Oct 2026 22:48:16 +0000 ####################
+
+--- po/git.pot.old	2026-10-22 22:48:16.235687501 +0000
++++ po/git.pot.new	2026-10-22 22:48:16.283687956 +0000
+@@ -2107,7 +2107,7 @@
+ msgid "--max-pack-size: argument must be a non-negative integer"
+ msgstr ""
+ 
+-msgid "--merge requires one of the pseudorefs MERGE_HEAD, CHERRY_PICK_HEAD, REVERT_HEAD or REBASE_HEAD"
++msgid "--merge requires one of MERGE_HEAD, CHERRY_PICK_HEAD, REVERT_HEAD or REBASE_HEAD"
+ msgstr ""
+ 
+ msgid "--merge-base does not work with ranges"
+@@ -2229,6 +2229,9 @@
+ msgid "--show-origin is only applicable to --get, --get-all, --get-regexp, and --list"
+ msgstr ""
+ 
++msgid "--squashed requires --delete-merged"
++msgstr ""
++
+ msgid "--stdin can only be used when fetching from one remote"
+ msgstr ""
+ 
+@@ -3588,6 +3591,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Deleted branch %s (was %s, landed as %s).\n"
++msgstr ""
++
++#, c-format
+ msgid "Deleted remote-tracking branch %s (was %s).\n"
+ msgstr ""
+ 
+@@ -7181,6 +7188,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "Would delete branch %s (was %s, landed as %s).\n"
++msgstr ""
++
++#, c-format
+ msgid "Would delete remote-tracking branch %s (was %s).\n"
+ msgstr ""
+ 
+@@ -8094,7 +8105,7 @@
+ msgid "also consider packs and alternate objects"
+ msgstr ""
+ 
+-msgid "also include HEAD ref and pseudorefs"
++msgid "also include root refs"
+ msgstr ""
+ 
+ msgid "also read contacts from stdin"
+@@ -23835,6 +23846,9 @@
+ msgid "with --cruft, only repack cruft packs smaller than this"
+ msgstr ""
+ 
++msgid "with --delete-merged, also find branches merged after upstream changed their files"
++msgstr ""
++
+ msgid "with --delete-merged, only print which branches would be deleted"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-po po/git.pot --------------------
+
+❌ CamelCase config variables
+    ERROR   [git.pot]   entry at L17732 (msgid): should use "core.repositoryFormatVersion" in msgid: "core.repositoryformatversion to 1.\\nPlease set it for migration"
+    ERROR   [git.pot]   entry at L17732 (msgid): should use "core.repositoryFormatVersion" in msgid: "for example:\\ngit config core.repositoryformatversion 1"
+    ERROR   [git.pot]   entry at L23491 (msgid): should use "http.proactiveAuth" in msgid: "http.proactiveauth"
+    ERROR   [git.pot]   entry at L23515 (msgid): should use "http.cookieFile" in msgid: "ing to read cookies from http.cookiefile '-'"
+    ERROR   [git.pot]   entry at L23519 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
+ERROR: 6588 entries checked, 541 config variables, 5 mismatched
+ERROR: check-po command failed
