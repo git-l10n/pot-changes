@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2026-10-23 17:30+0000\n"
+"POT-Creation-Date: 2026-10-23 20:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -210,7 +210,7 @@ msgstr ""
 
 #: add-interactive.c:1123 apply.c:5218 apply.c:5221 builtin/am.c:2372
 #: builtin/am.c:2375 builtin/bugreport.c:115 builtin/clone.c:1018
-#: builtin/diagnose.c:30 builtin/fetch.c:2741 builtin/hook.c:134
+#: builtin/diagnose.c:30 builtin/fetch.c:2741 builtin/hook.c:136
 #: builtin/merge.c:307 builtin/pull.c:958 builtin/submodule--helper.c:2057
 #: builtin/submodule--helper.c:2060
 msgid "path"
@@ -1369,7 +1369,7 @@ msgstr[1] ""
 msgid "cannot open %s"
 msgstr ""
 
-#: apply.c:4775 rerere.c:1116
+#: apply.c:4775 rerere.c:1134
 #, c-format
 msgid "cannot unlink '%s'"
 msgstr ""
@@ -1874,7 +1874,7 @@ msgstr ""
 #: bisect.c:165 builtin/cat-file.c:257 builtin/cat-file.c:598
 #: builtin/index-pack.c:837 builtin/notes.c:730 builtin/pack-objects.c:371
 #: builtin/pack-objects.c:435 builtin/pack-objects.c:548 combine-diff.c:332
-#: object-file.c:355 object-file.c:361 rerere.c:1022
+#: object-file.c:355 object-file.c:361 rerere.c:1038
 #, c-format
 msgid "unable to read %s"
 msgstr ""
@@ -2407,7 +2407,7 @@ msgstr ""
 #: builtin/commit.c:395 builtin/diff-tree.c:134 builtin/grep.c:547
 #: builtin/mv.c:259 builtin/reset.c:485 builtin/rm.c:306
 #: builtin/submodule--helper.c:243 builtin/submodule--helper.c:3640
-#: read-cache.c:2030 read-cache.c:2346 rerere.c:545 rerere.c:579 rerere.c:1152
+#: read-cache.c:2030 read-cache.c:2346 rerere.c:539 rerere.c:574 rerere.c:1171
 #: submodule.c:1883
 msgid "index file corrupt"
 msgstr ""
@@ -2415,7 +2415,7 @@ msgstr ""
 #: builtin/add.c:693 builtin/am.c:2028 builtin/am.c:2062 builtin/checkout.c:738
 #: builtin/checkout.c:964 builtin/clone.c:743 builtin/commit.c:464
 #: builtin/commit.c:487 builtin/commit.c:534 builtin/history.c:855
-#: builtin/stash.c:365 builtin/stash.c:406 merge.c:110 rerere.c:705
+#: builtin/stash.c:365 builtin/stash.c:406 merge.c:110 rerere.c:707
 msgid "unable to write new index file"
 msgstr ""
 
@@ -6018,7 +6018,7 @@ msgid "could not read MERGE_MSG"
 msgstr ""
 
 #: builtin/commit.c:914 builtin/history.c:77 builtin/submodule--helper.c:1380
-#: bundle.c:164 rerere.c:457 rerere.c:674 sequencer.c:3028 sequencer.c:3860
+#: bundle.c:164 rerere.c:451 rerere.c:676 sequencer.c:3028 sequencer.c:3860
 #, c-format
 msgid "could not open '%s'"
 msgstr ""
@@ -8941,7 +8941,7 @@ msgid "could not create lost-found"
 msgstr ""
 
 #: builtin/fsck.c:323 builtin/gc.c:2182 builtin/rebase.c:237
-#: rebase-interactive.c:127 rerere.c:462 rerere.c:676 sequencer.c:4362
+#: rebase-interactive.c:127 rerere.c:456 rerere.c:678 sequencer.c:4362
 #: sequencer.c:6812
 #, c-format
 msgid "could not write '%s'"
@@ -9498,7 +9498,7 @@ msgstr ""
 msgid "failed to delete '%s'"
 msgstr ""
 
-#: builtin/gc.c:2669 builtin/gc.c:2731 rerere.c:475
+#: builtin/gc.c:2669 builtin/gc.c:2731 rerere.c:469
 #, c-format
 msgid "failed to flush '%s'"
 msgstr ""
@@ -10388,7 +10388,7 @@ msgstr ""
 msgid "show the config scope that defined each hook"
 msgstr ""
 
-#: builtin/hook.c:48 builtin/hook.c:131
+#: builtin/hook.c:48 builtin/hook.c:133
 msgid "allow running a hook with a non-native hook name"
 msgstr ""
 
@@ -10396,7 +10396,7 @@ msgstr ""
 msgid "you must specify a hook event name to list"
 msgstr ""
 
-#: builtin/hook.c:66 builtin/hook.c:176
+#: builtin/hook.c:66 builtin/hook.c:178
 #, c-format
 msgid ""
 "unknown hook event '%s';\n"
@@ -10408,23 +10408,23 @@ msgstr ""
 msgid "no hooks found for event '%s'"
 msgstr ""
 
-#: builtin/hook.c:85
+#: builtin/hook.c:87
 msgid "hook from hookdir"
 msgstr ""
 
-#: builtin/hook.c:133
+#: builtin/hook.c:135
 msgid "silently ignore missing requested <hook-name>"
 msgstr ""
 
-#: builtin/hook.c:135
+#: builtin/hook.c:137
 msgid "file to read into hooks' stdin"
 msgstr ""
 
-#: builtin/hook.c:137
+#: builtin/hook.c:139
 msgid "run up to <n> hooks simultaneously (-1 for CPU count)"
 msgstr ""
 
-#: builtin/hook.c:149
+#: builtin/hook.c:151
 #, c-format
 msgid "invalid value for -j: %d (use -1 for CPU count or a positive integer)"
 msgstr ""
@@ -11356,7 +11356,7 @@ msgid "--remerge-diff does not make sense"
 msgstr ""
 
 #: builtin/log.c:2340 builtin/submodule--helper.c:1931
-#: builtin/submodule--helper.c:1995 rerere.c:898 submodule.c:2542
+#: builtin/submodule--helper.c:1995 rerere.c:900 submodule.c:2542
 #, c-format
 msgid "could not create directory '%s'"
 msgstr ""
@@ -16222,7 +16222,7 @@ msgstr ""
 msgid "'git rerere forget' without paths is deprecated"
 msgstr ""
 
-#: builtin/rerere.c:133
+#: builtin/rerere.c:140
 #, c-format
 msgid "unable to generate diff for '%s'"
 msgstr ""
@@ -21769,7 +21769,7 @@ msgstr[1] ""
 msgid "unable to create directory for %s"
 msgstr ""
 
-#: diff-hunks.c:965
+#: diff-hunks.c:965 loose.c:262
 #, c-format
 msgid "unable to lock %s"
 msgstr ""
@@ -23398,46 +23398,46 @@ msgid ""
 "You can disable this warning with `git config set advice.ignoredHook false`."
 msgstr ""
 
-#: hook.c:171
+#: hook.c:174
 #, c-format
 msgid "hook.jobs must be an integer, ignoring: '%s'"
 msgstr ""
 
-#: hook.c:177
+#: hook.c:180
 #, c-format
 msgid "hook.jobs must be a positive integer or -1, ignoring: '%s'"
 msgstr ""
 
-#: hook.c:202
+#: hook.c:206
 #, c-format
 msgid ""
 "hook friendly-name '%s' collides with a known event name; please choose a "
 "different friendly-name"
 msgstr ""
 
-#: hook.c:208
+#: hook.c:212
 #, c-format
 msgid ""
 "hook friendly-name '%s' is the same as its event; this may cause ambiguity "
 "with hook.%s.enabled"
 msgstr ""
 
-#: hook.c:263
+#: hook.c:267
 #, c-format
 msgid "hook.%s.parallel must be a boolean, ignoring: '%s'"
 msgstr ""
 
-#: hook.c:269
+#: hook.c:273
 #, c-format
 msgid "hook.%s.jobs must be an integer, ignoring: '%s'"
 msgstr ""
 
-#: hook.c:279
+#: hook.c:283
 #, c-format
 msgid "hook.%s.jobs must be a positive integer or -1, ignoring: '%s'"
 msgstr ""
 
-#: hook.c:346
+#: hook.c:350
 #, c-format
 msgid ""
 "hook.%s.jobs is set but '%s' looks like a hook friendly-name, not an event "
@@ -23445,26 +23445,26 @@ msgid ""
 "so this setting will be ignored"
 msgstr ""
 
-#: hook.c:411
+#: hook.c:415
 #, c-format
 msgid "disabled hook '%s' has no command configured"
 msgstr ""
 
-#: hook.c:414
+#: hook.c:418
 #, c-format
 msgid ""
 "'hook.%s.command' must be configured or 'hook.%s.event' must be removed; "
 "aborting."
 msgstr ""
 
-#: hook.c:694
+#: hook.c:699
 #, c-format
 msgid ""
 "hook '%s' is not marked as parallel=true, running in parallel anyway due to -"
 "j%u"
 msgstr ""
 
-#: hook.c:715
+#: hook.c:720
 #, c-format
 msgid "%s must be a positive integer or -1, ignoring: %d"
 msgstr ""
@@ -23757,9 +23757,34 @@ msgstr ""
 msgid "unable to create temporary object directory"
 msgstr ""
 
-#: loose.c:158
+#: loose.c:158 loose.c:285
 #, c-format
 msgid "failed to write loose object index %s"
+msgstr ""
+
+#: loose.c:253 loose.c:268 object-file.c:337 object-file.c:344
+#: object-file.c:1077
+#, c-format
+msgid "unable to open %s"
+msgstr ""
+
+#: loose.c:257
+#, c-format
+msgid "invalid loose object index %s"
+msgstr ""
+
+#: loose.c:272
+#, c-format
+msgid "unable to stat %s"
+msgstr ""
+
+#: loose.c:279
+msgid "failed to write loose object index header"
+msgstr ""
+
+#: loose.c:294 merge-ll.c:184
+#, c-format
+msgid "unable to close %s"
 msgstr ""
 
 #: ls-refs.c:188
@@ -23778,11 +23803,6 @@ msgstr ""
 #: mem-pool.c:128 strbuf.c:280 strbuf.c:428 wrapper.c:768
 #, c-format
 msgid "unable to format message: %s"
-msgstr ""
-
-#: merge-ll.c:184
-#, c-format
-msgid "unable to close %s"
 msgstr ""
 
 #: merge-ll.c:438 merge-ll.c:468
@@ -24450,11 +24470,6 @@ msgstr ""
 #: object-file.c:251 object-file.c:1188
 #, c-format
 msgid "garbage at end of loose object '%s'"
-msgstr ""
-
-#: object-file.c:337 object-file.c:344 object-file.c:1077
-#, c-format
-msgid "unable to open %s"
 msgstr ""
 
 #: object-file.c:366
@@ -27539,93 +27554,93 @@ msgstr ""
 msgid "'--ref' cannot be used with multiple revision ranges"
 msgstr ""
 
-#: repository.c:208
+#: repository.c:209
 msgid "compatibility hash algorithm support requires Rust"
 msgstr ""
 
-#: rerere.c:219 rerere.c:228 rerere.c:231
+#: rerere.c:213 rerere.c:222 rerere.c:225
 msgid "corrupt MERGE_RR"
 msgstr ""
 
-#: rerere.c:271 rerere.c:276
+#: rerere.c:264 rerere.c:269
 msgid "unable to write rerere record"
 msgstr ""
 
-#: rerere.c:472
+#: rerere.c:466
 #, c-format
 msgid "there were errors while writing '%s' (%s)"
 msgstr ""
 
-#: rerere.c:480 rerere.c:1079
+#: rerere.c:474 rerere.c:1097
 #, c-format
 msgid "could not parse conflict hunks in '%s'"
 msgstr ""
 
-#: rerere.c:668
+#: rerere.c:670
 #, c-format
 msgid "failed utime() on '%s'"
 msgstr ""
 
-#: rerere.c:678
+#: rerere.c:680
 #, c-format
 msgid "writing '%s' failed"
 msgstr ""
 
-#: rerere.c:699
+#: rerere.c:701
 #, c-format
 msgid "Staged '%s' using previous resolution."
 msgstr ""
 
-#: rerere.c:753
+#: rerere.c:756
 #, c-format
 msgid "could not copy resolution for '%s'"
 msgstr ""
 
-#: rerere.c:758
+#: rerere.c:761
 #, c-format
 msgid "Recorded resolution for '%s'."
 msgstr ""
 
-#: rerere.c:793
+#: rerere.c:796
 #, c-format
 msgid "Resolved '%s' using previous resolution."
 msgstr ""
 
-#: rerere.c:810
+#: rerere.c:813
 #, c-format
 msgid "cannot unlink stray '%s'"
 msgstr ""
 
-#: rerere.c:814
+#: rerere.c:817
 #, c-format
 msgid "Recorded preimage for '%s'"
 msgstr ""
 
-#: rerere.c:1096
+#: rerere.c:1114
 #, c-format
 msgid "failed to update conflicted state in '%s'"
 msgstr ""
 
-#: rerere.c:1107 rerere.c:1114
+#: rerere.c:1125 rerere.c:1132
 #, c-format
 msgid "no remembered resolution for '%s'"
 msgstr ""
 
-#: rerere.c:1126
+#: rerere.c:1144
 #, c-format
 msgid "Updated preimage for '%s'"
 msgstr ""
 
-#: rerere.c:1135
+#: rerere.c:1153
 #, c-format
 msgid "Forgot resolution for '%s'\n"
 msgstr ""
 
-#: rerere.c:1336
+#: rerere.c:1362
 msgid "unable to open rr-cache directory"
 msgstr ""
 
-#: rerere.h:51
+#: rerere.h:70
 msgid "update the index with reused conflict resolution if possible"
 msgstr ""
 
