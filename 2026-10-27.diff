@@ -1,0 +1,162 @@
+
+
+#################### Tue, 27 Oct 2026 00:06:59 +0000 ####################
+
+--- po/git.pot.old	2026-10-27 00:06:59.069430897 +0000
++++ po/git.pot.new	2026-10-27 00:06:59.158431205 +0000
+@@ -2028,7 +2028,7 @@
+ msgid "--dry-run only takes effect with --drop-filtered"
+ msgstr ""
+ 
+-msgid "--dry-run requires --delete-merged"
++msgid "--dry-run requires --delete-merged or --delete-integrated"
+ msgstr ""
+ 
+ msgid "--dump-aliases and --translate-aliases are mutually exclusive\n"
+@@ -2229,9 +2229,6 @@
+ msgid "--show-origin is only applicable to --get, --get-all, --get-regexp, and --list"
+ msgstr ""
+ 
+-msgid "--squashed requires --delete-merged"
+-msgstr ""
+-
+ msgid "--stdin can only be used when fetching from one remote"
+ msgstr ""
+ 
+@@ -2488,9 +2485,6 @@
+ msgid "A tool for managing large Git repositories"
+ msgstr ""
+ 
+-msgid "A tutorial introduction to Git: part two"
+-msgstr ""
+-
+ msgid "A useful minimum set of commands for Everyday Git"
+ msgstr ""
+ 
+@@ -9203,10 +9197,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "cannot keep pack '%s': its name contains a newline"
+-msgstr ""
+-
+-#, c-format
+ msgid "cannot lock ref '%s': dangling symref already exists"
+ msgstr ""
+ 
+@@ -9458,6 +9448,10 @@
+ msgid "cannot repack to clean up"
+ msgstr ""
+ 
++#, c-format
++msgid "cannot resolve '%s' without a remote url that has a host"
++msgstr ""
++
+ msgid "cannot resolve 'simple' push to a single destination"
+ msgstr ""
+ 
+@@ -10322,7 +10316,7 @@
+ msgid "could not close '%s'"
+ msgstr ""
+ 
+-msgid "could not close kept packs snapshot tempfile"
++msgid "could not close non-kept packs tempfile"
+ msgstr ""
+ 
+ msgid "could not close refs snapshot tempfile"
+@@ -14394,7 +14388,7 @@
+ "                 [--no-reuse-delta] [--delta-base-offset] [--non-empty]\n"
+ "                 [--local] [--incremental] [--window=<n>] [--depth=<n>]\n"
+ "                 [--revs [--unpacked | --all]] [--keep-pack=<pack-name>]\n"
+-"                 [--keep-pack-from-file=<file>]\n"
++"                 [--ignore-pack-keep-from=<file>]\n"
+ "                 [--cruft] [--cruft-expiration=<time>]\n"
+ "                 [--stdout [--filter=<filter-spec>] | <base-name>]\n"
+ "                 [--shallow] [--keep-true-parents] [--[no-]sparse]\n"
+@@ -15190,6 +15184,9 @@
+ msgid "if the commit-graph is split, only verify the tip file"
+ msgstr ""
+ 
++msgid "ignore .keep files of the packs named in <file>"
++msgstr ""
++
+ msgid "ignore <rev> when blaming"
+ msgstr ""
+ 
+@@ -15253,9 +15250,6 @@
+ msgid "ignore revisions from <file>"
+ msgstr ""
+ 
+-msgid "ignore the packs named in <file>"
+-msgstr ""
+-
+ msgid "ignore this pack"
+ msgstr ""
+ 
+@@ -16305,6 +16299,9 @@
+ msgid "like --batch, but don't emit <contents>"
+ msgstr ""
+ 
++msgid "like --delete-merged, but also delete branches whose changes landed upstream (repeatable)"
++msgstr ""
++
+ msgid "like --refresh, but ignore assume-unchanged setting"
+ msgstr ""
+ 
+@@ -18577,8 +18574,10 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "path too long (%d chars, SHA1: %s): %s"
+-msgstr ""
++msgid "path too long (%d char, SHA1: %s): %s"
++msgid_plural "path too long (%d chars, SHA1: %s): %s"
++msgstr[0] ""
++msgstr[1] ""
+ 
+ msgid "path:content"
+ msgstr ""
+@@ -19766,7 +19765,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "repo URL: '%s' must be absolute or begin with ./|../"
++msgid "repo URL: '%s' must be absolute or begin with ./|../|^/"
+ msgstr ""
+ 
+ msgid "repo version is 0, but v1-only extension found:"
+@@ -20047,6 +20046,10 @@
+ msgid "root tree OID for commit %s in commit-graph is %s != %s"
+ msgstr ""
+ 
++#, c-format
++msgid "root-relative url '%s' must not start with '^//' or '^/:'"
++msgstr ""
++
+ msgid "run 'maintenance --auto' after fetching"
+ msgstr ""
+ 
+@@ -23770,10 +23773,7 @@
+ msgid "with --cruft, only repack cruft packs smaller than this"
+ msgstr ""
+ 
+-msgid "with --delete-merged, also find branches merged after upstream changed their files"
+-msgstr ""
+-
+-msgid "with --delete-merged, only print which branches would be deleted"
++msgid "with --delete-merged or --delete-integrated, only print which branches would be deleted"
+ msgstr ""
+ 
+ msgid "with --get, use default value when missing entry"
+
+
+-------------------- git-po-helper check-po po/git.pot --------------------
+
+❌ CamelCase config variables
+    ERROR   [git.pot]   entry at L17729 (msgid): should use "core.repositoryFormatVersion" in msgid: "core.repositoryformatversion to 1.\\nPlease set it for migration"
+    ERROR   [git.pot]   entry at L17729 (msgid): should use "core.repositoryFormatVersion" in msgid: "for example:\\ngit config core.repositoryformatversion 1"
+    ERROR   [git.pot]   entry at L23357 (msgid): should use "http.proactiveAuth" in msgid: "http.proactiveauth"
+    ERROR   [git.pot]   entry at L23381 (msgid): should use "http.cookieFile" in msgid: "ing to read cookies from http.cookiefile '-'"
+    ERROR   [git.pot]   entry at L23385 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
+ERROR: 6567 entries checked, 539 config variables, 5 mismatched
+ERROR: check-po command failed
