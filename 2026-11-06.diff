@@ -36,3 +36,148 @@
     ERROR   [git.pot]   entry at L23429 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
 ERROR: 6576 entries checked, 540 config variables, 5 mismatched
 ERROR: check-po command failed
+
+
+#################### Fri, 06 Nov 2026 07:27:12 +0000 ####################
+
+--- po/git.pot.old	2026-11-06 07:27:12.497479872 +0000
++++ po/git.pot.new	2026-11-06 07:27:12.586480268 +0000
+@@ -1225,16 +1225,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid ""
+-"'%.*s' does not have that many ancestors locally.\n"
+-"History stops at %s because this repository is a\n"
+-"shallow clone, and might have more history upstream.\n"
+-"To check, try:\n"
+-"\n"
+-"  %s"
+-msgstr ""
+-
+-#, c-format
+ msgid "'%s' (mnemonic: '%c')"
+ msgstr ""
+ 
+@@ -1783,7 +1773,7 @@
+ msgid "(%s) failed to close pipe to '%s'"
+ msgstr ""
+ 
+-msgid "(EXPERIMENTAL!) git format-rev [<options>] --stdin-mode=<mode> --format=<pretty>"
++msgid "(EXPERIMENTAL!) git format-rev --stdin-mode=<mode> --format=<pretty> [--[no-]notes=<ref>] [-z] [--[no-]null-output] [--[no-]null-input]"
+ msgstr ""
+ 
+ msgid ""
+@@ -1818,9 +1808,6 @@
+ msgid "(enable|disable|keep)"
+ msgstr ""
+ 
+-msgid "(fail|warn)"
+-msgstr ""
+-
+ msgid "(for porcelains) forget saved unresolved conflicts"
+ msgstr ""
+ 
+@@ -2277,7 +2264,7 @@
+ msgid "-G requires a non-empty argument"
+ msgstr ""
+ 
+-msgid "-L does not support the requested diff format"
++msgid "-L does not yet support the requested diff format"
+ msgstr ""
+ 
+ msgid "-L<range>:<file> cannot be used with pathspec"
+@@ -7035,6 +7022,15 @@
+ msgid "Use -f if you really want to add them."
+ msgstr ""
+ 
++msgid "Use NUL for input and output termination"
++msgstr ""
++
++msgid "Use NUL for input termination"
++msgstr ""
++
++msgid "Use NUL for output termination"
++msgstr ""
++
+ msgid "Use binary search to find the commit that introduced a bug"
+ msgstr ""
+ 
+@@ -10118,9 +10114,6 @@
+ msgid "control for recursive fetching of submodules"
+ msgstr ""
+ 
+-msgid "control how submodule fetch errors are handled"
+-msgstr ""
+-
+ msgid "control recursive fetching of submodules"
+ msgstr ""
+ 
+@@ -11448,9 +11441,6 @@
+ msgid "date"
+ msgstr ""
+ 
+-msgid "date format"
+-msgstr ""
+-
+ #, c-format
+ msgid "date in ident must be 'now': %s"
+ msgstr ""
+@@ -14788,7 +14778,7 @@
+ msgid "git submodule--helper clone [--prefix=<path>] [--quiet] [--reference <repository>] [--name <name>] [--depth <depth>] [--single-branch] [--filter <filter-spec>] --url <url> --path <path>"
+ msgstr ""
+ 
+-msgid "git submodule--helper create-branch [-f|--force] [--create-reflog] [-q|--quiet] [-t|--track] [-n|--dry-run] <name> <start-oid> [<start-name>]"
++msgid "git submodule--helper create-branch [-f|--force] [--create-reflog] [-q|--quiet] [-t|--track] [-n|--dry-run] <name> <start-oid> <start-name>"
+ msgstr ""
+ 
+ msgid "git submodule--helper get-default-remote <path>"
+@@ -18011,9 +18001,6 @@
+ msgid "only download metadata for the branch that will be checked out"
+ msgstr ""
+ 
+-msgid "only emit commits that have a corresponding commit in the other range"
+-msgstr ""
+-
+ msgid "only emit output related to the first range"
+ msgstr ""
+ 
+@@ -18211,10 +18198,6 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "options '%s', '%s', or '%s' cannot be used together"
+-msgstr ""
+-
+-#, c-format
+ msgid "options '-%c', '-%c', and '%s' cannot be used together"
+ msgstr ""
+ 
+@@ -23375,15 +23358,6 @@
+ msgid "use NUL as line terminator"
+ msgstr ""
+ 
+-msgid "use NUL for input and output termination"
+-msgstr ""
+-
+-msgid "use NUL for input termination"
+-msgstr ""
+-
+-msgid "use NUL for output termination"
+-msgstr ""
+-
+ msgid "use OFS_DELTA objects"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-po po/git.pot --------------------
+
+❌ CamelCase config variables
+    ERROR   [git.pot]   entry at L17745 (msgid): should use "core.repositoryFormatVersion" in msgid: "core.repositoryformatversion to 1.\\nPlease set it for migration"
+    ERROR   [git.pot]   entry at L17745 (msgid): should use "core.repositoryFormatVersion" in msgid: "for example:\\ngit config core.repositoryformatversion 1"
+    ERROR   [git.pot]   entry at L23385 (msgid): should use "http.proactiveAuth" in msgid: "http.proactiveauth"
+    ERROR   [git.pot]   entry at L23409 (msgid): should use "http.cookieFile" in msgid: "ing to read cookies from http.cookiefile '-'"
+    ERROR   [git.pot]   entry at L23413 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
+ERROR: 6570 entries checked, 540 config variables, 5 mismatched
+ERROR: check-po command failed
