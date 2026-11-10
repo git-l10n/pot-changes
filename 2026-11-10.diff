@@ -1,0 +1,104 @@
+
+
+#################### Tue, 10 Nov 2026 00:54:19 +0000 ####################
+
+--- po/git.pot.old	2026-11-10 00:54:19.379770624 +0000
++++ po/git.pot.new	2026-11-10 00:54:19.427772877 +0000
+@@ -8195,6 +8195,12 @@
+ msgid "attempt to reinitialize repository with different hash"
+ msgstr ""
+ 
++msgid "attempt to reinitialize repository with different object storage format"
++msgstr ""
++
++msgid "attempt to reinitialize repository with different object storage payload"
++msgstr ""
++
+ msgid "attempt to reinitialize repository with different reference storage format"
+ msgstr ""
+ 
+@@ -9257,6 +9263,9 @@
+ msgid "cannot perform MIDX compaction with v1 format"
+ msgstr ""
+ 
++msgid "cannot perform local clone with non-default object storage format"
++msgstr ""
++
+ msgid "cannot perform queued object checks outside of a repository"
+ msgstr ""
+ 
+@@ -11133,10 +11142,6 @@
+ msgid "could not write lock pid file '%s'"
+ msgstr ""
+ 
+-#, c-format
+-msgid "could not write loose object index %s"
+-msgstr ""
+-
+ msgid "could not write multi-pack bitmap"
+ msgstr ""
+ 
+@@ -13178,6 +13183,9 @@
+ msgid "fake a tagger when tags lack one"
+ msgstr ""
+ 
++msgid "falling back to non-local clone because of non-default object storage format"
++msgstr ""
++
+ msgid "fast-forwardable"
+ msgstr ""
+ 
+@@ -14102,7 +14110,7 @@
+ msgid ""
+ "git init [-q | --quiet] [--bare] [--template=<template-directory>]\n"
+ "         [--separate-git-dir <git-dir>] [--object-format=<format>]\n"
+-"         [--ref-storage-format=<format>]\n"
++"         [--ref-storage-format=<format>] [--object-storage-format=<format>]\n"
+ "         [-b <branch-name> | --initial-branch=<branch-name>]\n"
+ "         [--shared[=<permissions>]] [<directory>]"
+ msgstr ""
+@@ -20774,6 +20782,9 @@
+ msgid "specify the name hash version to use for grouping similar objects by path"
+ msgstr ""
+ 
++msgid "specify the object storage format to use"
++msgstr ""
++
+ msgid "specify the reference storage format to convert to"
+ msgstr ""
+ 
+@@ -22717,6 +22728,22 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "unknown object storage format '%s'"
++msgstr ""
++
++#, c-format
++msgid "unknown object storage format specified via %s: '%s'"
++msgstr ""
++
++#, c-format
++msgid "unknown object storage format specified via command line: '%s'"
++msgstr ""
++
++#, c-format
++msgid "unknown object storage format: '%s'"
++msgstr ""
++
++#, c-format
+ msgid "unknown object type %d"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-po po/git.pot --------------------
+
+❌ CamelCase config variables
+    ERROR   [git.pot]   entry at L17642 (msgid): should use "core.repositoryFormatVersion" in msgid: "core.repositoryformatversion to 1.\\nPlease set it for migration"
+    ERROR   [git.pot]   entry at L17642 (msgid): should use "core.repositoryFormatVersion" in msgid: "for example:\\ngit config core.repositoryformatversion 1"
+    ERROR   [git.pot]   entry at L23272 (msgid): should use "http.proactiveAuth" in msgid: "http.proactiveauth"
+    ERROR   [git.pot]   entry at L23296 (msgid): should use "http.cookieFile" in msgid: "ing to read cookies from http.cookiefile '-'"
+    ERROR   [git.pot]   entry at L23300 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
+ERROR: 6538 entries checked, 537 config variables, 5 mismatched
+ERROR: check-po command failed
