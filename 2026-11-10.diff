@@ -27,3 +27,69 @@
     ERROR   [git.pot]   entry at L23310 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
 ERROR: 6542 entries checked, 537 config variables, 5 mismatched
 ERROR: check-po command failed
+
+
+#################### Tue, 10 Nov 2026 22:33:57 +0000 ####################
+
+--- po/git.pot.old	2026-11-10 22:33:57.441034154 +0000
++++ po/git.pot.new	2026-11-10 22:33:57.519033375 +0000
+@@ -15407,6 +15407,10 @@
+ msgid "index entry is a directory, but not sparse (%08x)"
+ msgstr ""
+ 
++#, c-format
++msgid "index entry path is too long (%<PRIuMAX> bytes)"
++msgstr ""
++
+ msgid "index file corrupt"
+ msgstr ""
+ 
+@@ -18011,6 +18015,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "option '%s' forbidden in input without --allow-unsafe-features"
++msgstr ""
++
++#, c-format
+ msgid "option '%s' must come before non-option arguments"
+ msgstr ""
+ 
+@@ -19428,6 +19436,14 @@
+ msgid "remote URLs cannot be configured in file directly or indirectly included by includeIf.hasconfig:remote.*.url"
+ msgstr ""
+ 
++#, c-format
++msgid "remote advertised invalid ref name '%s', ignoring"
++msgstr ""
++
++#, c-format
++msgid "remote advertised invalid symref-target '%s', ignoring"
++msgstr ""
++
+ msgid "remote did not send all necessary objects"
+ msgstr ""
+ 
+@@ -23493,6 +23509,10 @@
+ msgid "value for %s exceeds %<PRIdMAX>"
+ msgstr ""
+ 
++#, c-format
++msgid "value for '%s' exceeds maximum of %d"
++msgstr ""
++
+ msgid "value is \"true\" or \"false\""
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-po po/git.pot --------------------
+
+❌ CamelCase config variables
+    ERROR   [git.pot]   entry at L17648 (msgid): should use "core.repositoryFormatVersion" in msgid: "core.repositoryformatversion to 1.\\nPlease set it for migration"
+    ERROR   [git.pot]   entry at L17648 (msgid): should use "core.repositoryFormatVersion" in msgid: "for example:\\ngit config core.repositoryformatversion 1"
+    ERROR   [git.pot]   entry at L23302 (msgid): should use "http.proactiveAuth" in msgid: "http.proactiveauth"
+    ERROR   [git.pot]   entry at L23326 (msgid): should use "http.cookieFile" in msgid: "ing to read cookies from http.cookiefile '-'"
+    ERROR   [git.pot]   entry at L23330 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
+ERROR: 6547 entries checked, 538 config variables, 5 mismatched
+ERROR: check-po command failed
