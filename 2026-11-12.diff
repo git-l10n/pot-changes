@@ -1,0 +1,72 @@
+
+
+#################### Thu, 12 Nov 2026 01:03:24 +0000 ####################
+
+--- po/git.pot.old	2026-11-12 01:03:24.309121910 +0000
++++ po/git.pot.new	2026-11-12 01:03:24.398121359 +0000
+@@ -3151,6 +3151,14 @@
+ msgstr[0] ""
+ msgstr[1] ""
+ 
++#, c-format
++msgid ""
++"Checking for orphaned commits took %.2f seconds.\n"
++"You can use 'git config set checkout.orphanedCommitWarning false'\n"
++"to skip this check, but you will no longer be warned when leaving\n"
++"commits behind that are not connected to any of your branches."
++msgstr ""
++
+ msgid "Checking object directories"
+ msgstr ""
+ 
+@@ -5144,7 +5152,7 @@
+ "\n"
+ "  git switch -\n"
+ "\n"
+-"Run 'git help detached-head' to learn more.\n"
++"Run `git help detached-head` to learn more.\n"
+ "Turn off this advice by setting config variable advice.detachedHead to false\n"
+ "\n"
+ msgstr ""
+@@ -14774,7 +14782,7 @@
+ msgid "git submodule--helper clone [--prefix=<path>] [--quiet] [--reference <repository>] [--name <name>] [--depth <depth>] [--single-branch] [--filter <filter-spec>] --url <url> --path <path>"
+ msgstr ""
+ 
+-msgid "git submodule--helper create-branch [-f|--force] [--create-reflog] [-q|--quiet] [-t|--track] [-n|--dry-run] <name> <start-oid> [<start-name>]"
++msgid "git submodule--helper create-branch [-f|--force] [--create-reflog] [-q|--quiet] [-t|--track] [-n|--dry-run] <name> <start-oid> <start-name>"
+ msgstr ""
+ 
+ msgid "git submodule--helper get-default-remote <path>"
+@@ -16886,6 +16894,9 @@
+ msgid "missing value for '%s'"
+ msgstr ""
+ 
++msgid "missing value for option rebase.missingCommitsCheck. Ignoring."
++msgstr ""
++
+ #, c-format
+ msgid "missing value to set to a variable with an invalid name '%s'"
+ msgstr ""
+@@ -18198,6 +18209,10 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "options '%s' and '%s:%s' cannot be used together"
++msgstr ""
++
++#, c-format
+ msgid "options '%s', '%s', '%s', and '%s' cannot be used together"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-po po/git.pot --------------------
+
+❌ CamelCase config variables
+    ERROR   [git.pot]   entry at L17759 (msgid): should use "core.repositoryFormatVersion" in msgid: "core.repositoryformatversion to 1.\\nPlease set it for migration"
+    ERROR   [git.pot]   entry at L17759 (msgid): should use "core.repositoryFormatVersion" in msgid: "for example:\\ngit config core.repositoryformatversion 1"
+    ERROR   [git.pot]   entry at L23414 (msgid): should use "http.proactiveAuth" in msgid: "http.proactiveauth"
+    ERROR   [git.pot]   entry at L23438 (msgid): should use "http.cookieFile" in msgid: "ing to read cookies from http.cookiefile '-'"
+    ERROR   [git.pot]   entry at L23442 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
+ERROR: 6577 entries checked, 541 config variables, 5 mismatched
+ERROR: check-po command failed
