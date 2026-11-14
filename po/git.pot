@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2026-11-13 03:39+0000\n"
+"POT-Creation-Date: 2026-11-14 07:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -5486,12 +5486,12 @@ msgstr ""
 msgid "set config inside the new repository"
 msgstr ""
 
-#: builtin/clone.c:1042 builtin/fetch.c:2751 builtin/ls-remote.c:92
+#: builtin/clone.c:1042 builtin/fetch.c:2751 builtin/ls-remote.c:96
 #: builtin/pull.c:998 builtin/push.c:819 builtin/send-pack.c:204
 msgid "server-specific"
 msgstr ""
 
-#: builtin/clone.c:1042 builtin/fetch.c:2751 builtin/ls-remote.c:92
+#: builtin/clone.c:1042 builtin/fetch.c:2751 builtin/ls-remote.c:96
 #: builtin/pull.c:999 builtin/push.c:819 builtin/send-pack.c:205
 msgid "option to transmit"
 msgstr ""
@@ -10735,7 +10735,7 @@ msgstr ""
 msgid "bad %s"
 msgstr ""
 
-#: builtin/index-pack.c:2094 builtin/init-db.c:168 setup.c:2821 setup.c:2905
+#: builtin/index-pack.c:2094 builtin/init-db.c:168 setup.c:2821 setup.c:2906
 #, c-format
 msgid "unknown hash algorithm '%s'"
 msgstr ""
@@ -11548,47 +11548,52 @@ msgstr ""
 msgid ""
 "git ls-remote [--branches] [--tags] [--refs] [--upload-pack=<exec>]\n"
 "              [-q | --quiet] [--exit-code] [--get-url] [--sort=<key>]\n"
-"              [--symref] [<repository> [<patterns>...]]"
+"              [--symref] [--show-object-format]\n"
+"              [<repository> [<patterns>...]]"
 msgstr ""
 
-#: builtin/ls-remote.c:67
+#: builtin/ls-remote.c:69
 msgid "do not print remote URL"
 msgstr ""
 
-#: builtin/ls-remote.c:68 builtin/ls-remote.c:74 builtin/rebase.c:1233
+#: builtin/ls-remote.c:70 builtin/ls-remote.c:76 builtin/rebase.c:1233
 msgid "exec"
 msgstr ""
 
-#: builtin/ls-remote.c:69 builtin/ls-remote.c:75
+#: builtin/ls-remote.c:71 builtin/ls-remote.c:77
 msgid "path of git-upload-pack on the remote host"
 msgstr ""
 
-#: builtin/ls-remote.c:78
+#: builtin/ls-remote.c:80
 msgid "limit to tags"
 msgstr ""
 
-#: builtin/ls-remote.c:79
+#: builtin/ls-remote.c:81
 msgid "limit to branches"
 msgstr ""
 
-#: builtin/ls-remote.c:81 builtin/show-ref.c:313
+#: builtin/ls-remote.c:83 builtin/show-ref.c:313
 msgid "deprecated synonym for --branches"
 msgstr ""
 
-#: builtin/ls-remote.c:83
+#: builtin/ls-remote.c:85
 msgid "do not show peeled tags"
 msgstr ""
 
-#: builtin/ls-remote.c:85
+#: builtin/ls-remote.c:87
 msgid "take url.<base>.insteadOf into account"
 msgstr ""
 
-#: builtin/ls-remote.c:88
+#: builtin/ls-remote.c:90
 msgid "exit with exit code 2 if no matching refs are found"
 msgstr ""
 
-#: builtin/ls-remote.c:91
+#: builtin/ls-remote.c:93
 msgid "show underlying ref in addition to the object pointed by it"
+msgstr ""
+
+#: builtin/ls-remote.c:95
+msgid "show the object format used by the remote repository"
 msgstr ""
 
 #: builtin/ls-tree.c:22
@@ -26496,37 +26501,37 @@ msgstr ""
 msgid "(no branch)"
 msgstr ""
 
-#: ref-filter.c:2340 ref-filter.c:2557
+#: ref-filter.c:2341 ref-filter.c:2558
 #, c-format
 msgid "missing object %s for %s"
 msgstr ""
 
-#: ref-filter.c:2879
+#: ref-filter.c:2880
 #, c-format
 msgid "malformed object at '%s'"
 msgstr ""
 
-#: ref-filter.c:2965
+#: ref-filter.c:2966
 #, c-format
 msgid "ignoring ref with broken name %s"
 msgstr ""
 
-#: ref-filter.c:2970 refs.c:899
+#: ref-filter.c:2971 refs.c:899
 #, c-format
 msgid "ignoring broken ref %s"
 msgstr ""
 
-#: ref-filter.c:3633
+#: ref-filter.c:3634
 #, c-format
 msgid "format: %%(end) atom missing"
 msgstr ""
 
-#: ref-filter.c:3754
+#: ref-filter.c:3755
 #, c-format
 msgid "malformed object name %s"
 msgstr ""
 
-#: ref-filter.c:3759
+#: ref-filter.c:3760
 #, c-format
 msgid "option `%s' must point to a commit"
 msgstr ""
@@ -29113,50 +29118,50 @@ msgstr ""
 msgid "unable to move %s to %s"
 msgstr ""
 
-#: setup.c:2899
-msgid "attempt to reinitialize repository with different hash"
-msgstr ""
-
-#: setup.c:2946
+#: setup.c:2945
 #, c-format
 msgid "unknown ref storage format specified via command line: '%s'"
 msgstr ""
 
-#: setup.c:2951 setup.c:2956 setup.c:2964 setup.c:2969
+#: setup.c:2950 setup.c:2955 setup.c:2963 setup.c:2968
 #, c-format
 msgid "unknown ref storage format specified via %s: '%s'"
 msgstr ""
 
-#: setup.c:3001
+#: setup.c:3000
 #, c-format
 msgid "unknown object storage format specified via command line: '%s'"
 msgstr ""
 
-#: setup.c:3006 setup.c:3014
+#: setup.c:3005 setup.c:3013
 #, c-format
 msgid "unknown object storage format specified via %s: '%s'"
 msgstr ""
 
-#: setup.c:3030
+#: setup.c:3029
+msgid "attempt to reinitialize repository with different hash"
+msgstr ""
+
+#: setup.c:3031
 msgid ""
 "attempt to reinitialize repository with different reference storage format"
 msgstr ""
 
-#: setup.c:3034
+#: setup.c:3035
 msgid ""
 "attempt to reinitialize repository with different reference storage payload"
 msgstr ""
 
-#: setup.c:3036
+#: setup.c:3037
 msgid "attempt to reinitialize repository with different object storage format"
 msgstr ""
 
-#: setup.c:3040
+#: setup.c:3041
 msgid ""
 "attempt to reinitialize repository with different object storage payload"
 msgstr ""
 
-#: setup.c:3077 setup.c:3080
+#: setup.c:3079 setup.c:3082
 #, c-format
 msgid "%s already exists"
 msgstr ""
