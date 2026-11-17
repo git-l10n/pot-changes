@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Git\n"
 "Report-Msgid-Bugs-To: Git Mailing List <git@vger.kernel.org>\n"
-"POT-Creation-Date: 2026-11-16 22:33+0000\n"
+"POT-Creation-Date: 2026-11-17 22:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: make by the Makefile\n"
 "Language-Team: Git Mailing List <git@vger.kernel.org>\n"
@@ -8842,7 +8842,7 @@ msgid "read reference patterns from stdin"
 msgstr ""
 
 #: builtin/for-each-ref.c:51
-msgid "also include HEAD ref and pseudorefs"
+msgid "also include root refs"
 msgstr ""
 
 #: builtin/for-each-ref.c:75
@@ -13032,7 +13032,7 @@ msgstr ""
 msgid "failed to stat %s"
 msgstr ""
 
-#: builtin/pack-objects.c:1450 odb/source-loose.c:814
+#: builtin/pack-objects.c:1450 odb/source-loose.c:837
 #, c-format
 msgid "failed utime() on %s"
 msgstr ""
@@ -24258,7 +24258,7 @@ msgstr ""
 msgid "Failed to convert object from %s to %s"
 msgstr ""
 
-#: object-file.c:167 odb/source-loose.c:141 odb/source-loose.c:267
+#: object-file.c:167 odb/source-loose.c:164 odb/source-loose.c:290
 #, c-format
 msgid "object file %s is empty"
 msgstr ""
@@ -24677,107 +24677,107 @@ msgstr ""
 msgid "error writing to pack-objects"
 msgstr ""
 
-#: odb/source-loose.c:128
+#: odb/source-loose.c:151
 #, c-format
 msgid "unable to open loose object %s"
 msgstr ""
 
-#: odb/source-loose.c:167
+#: odb/source-loose.c:190
 #, c-format
 msgid "unable to parse %s header"
 msgstr ""
 
-#: odb/source-loose.c:172
+#: odb/source-loose.c:195
 msgid "invalid object type"
 msgstr ""
 
-#: odb/source-loose.c:184
+#: odb/source-loose.c:207
 #, c-format
 msgid "unable to unpack %s header"
 msgstr ""
 
-#: odb/source-loose.c:188
+#: odb/source-loose.c:211
 #, c-format
 msgid "header for %s too long, exceeds %d bytes"
 msgstr ""
 
-#: odb/source-loose.c:197
+#: odb/source-loose.c:220
 #, c-format
 msgid "loose object %s (stored in %s) is corrupt"
 msgstr ""
 
-#: odb/source-loose.c:603
+#: odb/source-loose.c:626
 msgid "error when closing loose object file"
 msgstr ""
 
-#: odb/source-loose.c:681
+#: odb/source-loose.c:704
 #, c-format
 msgid "insufficient permission for adding an object to repository database %s"
 msgstr ""
 
-#: odb/source-loose.c:686
+#: odb/source-loose.c:709
 msgid "unable to create temporary file"
 msgstr ""
 
-#: odb/source-loose.c:728
+#: odb/source-loose.c:751
 msgid "unable to write loose object file"
 msgstr ""
 
-#: odb/source-loose.c:794
+#: odb/source-loose.c:817
 #, c-format
 msgid "unable to deflate new object %s (%d)"
 msgstr ""
 
-#: odb/source-loose.c:798
+#: odb/source-loose.c:821
 #, c-format
 msgid "deflateEnd on object %s failed (%d)"
 msgstr ""
 
-#: odb/source-loose.c:801
+#: odb/source-loose.c:824
 #, c-format
 msgid "confused by unstable object source data for %s"
 msgstr ""
 
-#: odb/source-loose.c:920
+#: odb/source-loose.c:948
 #, c-format
 msgid "write stream object %<PRIuMAX> != %<PRIuMAX>"
 msgstr ""
 
-#: odb/source-loose.c:931
+#: odb/source-loose.c:959
 #, c-format
 msgid "unable to stream deflate new object (%d)"
 msgstr ""
 
-#: odb/source-loose.c:934
+#: odb/source-loose.c:962
 #, c-format
 msgid "deflateEnd on stream object failed (%d)"
 msgstr ""
 
-#: odb/source-loose.c:951
+#: odb/source-loose.c:979
 #, c-format
 msgid "unable to create directory %s"
 msgstr ""
 
-#: odb/source-loose.c:1043
+#: odb/source-loose.c:1077
 #, c-format
 msgid "%s: hash-path mismatch, found at: %s"
 msgstr ""
 
-#: odb/source-loose.c:1046
+#: odb/source-loose.c:1080
 #, c-format
 msgid "%s: object corrupt or missing: %s"
 msgstr ""
 
-#: odb/source-loose.c:1073
+#: odb/source-loose.c:1107
 #, c-format
 msgid "bad sha1 file: %s"
 msgstr ""
 
-#: odb/source-loose.c:1094
+#: odb/source-loose.c:1128
 msgid "Checking object directory"
 msgstr ""
 
-#: odb/source-loose.c:1098
+#: odb/source-loose.c:1132
 msgid "Checking object directories"
 msgstr ""
 
@@ -27428,9 +27428,7 @@ msgid "%s exists but is a symbolic ref"
 msgstr ""
 
 #: revision.c:2003
-msgid ""
-"--merge requires one of the pseudorefs MERGE_HEAD, CHERRY_PICK_HEAD, "
-"REVERT_HEAD or REBASE_HEAD"
+msgid "--merge requires an ongoing merge, cherry-pick, revert or rebase"
 msgstr ""
 
 #: revision.c:2446
