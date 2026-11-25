@@ -1,0 +1,70 @@
+
+
+#################### Wed, 25 Nov 2026 23:49:17 +0000 ####################
+
+--- po/git.pot.old	2026-11-25 23:49:17.271824463 +0000
++++ po/git.pot.new	2026-11-25 23:49:17.334824939 +0000
+@@ -2036,7 +2036,16 @@
+ msgid "--drop-filtered requires a promisor remote"
+ msgstr ""
+ 
+-msgid "--dry-run can only be used when deleting branches"
++msgid "--dry-run is not supported for branch copying"
++msgstr ""
++
++msgid "--dry-run is not supported for branch creation"
++msgstr ""
++
++msgid "--dry-run is not supported for branch renaming"
++msgstr ""
++
++msgid "--dry-run is not supported for this operation"
+ msgstr ""
+ 
+ msgid "--dry-run only takes effect with --drop-filtered"
+@@ -10278,6 +10287,10 @@
+ msgid "corrupt patch for submodule %s"
+ msgstr ""
+ 
++#, c-format
++msgid "corrupt patch: empty \"diff --git\" header at %s:%d"
++msgstr ""
++
+ msgid "corrupted bitmap index (too small)"
+ msgstr ""
+ 
+@@ -14119,6 +14132,22 @@
+ msgstr ""
+ 
+ #, c-format
++msgid "git diff header has \"+++\" before \"deleted file mode\" (line %d)"
++msgstr ""
++
++#, c-format
++msgid "git diff header has \"+++\" before \"deleted file mode\" at %s:%d"
++msgstr ""
++
++#, c-format
++msgid "git diff header has \"---\" before \"new file mode\" (line %d)"
++msgstr ""
++
++#, c-format
++msgid "git diff header has \"---\" before \"new file mode\" at %s:%d"
++msgstr ""
++
++#, c-format
+ msgid "git diff header lacks filename information (line %d)"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-po po/git.pot --------------------
+
+❌ CamelCase config variables
+    ERROR   [git.pot]   entry at L17820 (msgid): should use "core.repositoryFormatVersion" in msgid: "core.repositoryformatversion to 1.\\nPlease set it for migration"
+    ERROR   [git.pot]   entry at L17820 (msgid): should use "core.repositoryFormatVersion" in msgid: "for example:\\ngit config core.repositoryformatversion 1"
+    ERROR   [git.pot]   entry at L23509 (msgid): should use "http.proactiveAuth" in msgid: "http.proactiveauth"
+    ERROR   [git.pot]   entry at L23533 (msgid): should use "http.cookieFile" in msgid: "ing to read cookies from http.cookiefile '-'"
+    ERROR   [git.pot]   entry at L23537 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
+ERROR: 6602 entries checked, 543 config variables, 5 mismatched
+ERROR: check-po command failed
