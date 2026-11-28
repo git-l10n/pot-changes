@@ -1,0 +1,71 @@
+
+
+#################### Sat, 28 Nov 2026 10:56:47 +0000 ####################
+
+--- po/git.pot.old	2026-11-28 10:56:47.041946847 +0000
++++ po/git.pot.new	2026-11-28 10:56:47.132947032 +0000
+@@ -6601,7 +6601,7 @@
+ "the name of your current branch.  To push to the upstream branch\n"
+ "on the remote, use\n"
+ "\n"
+-"    git push %s HEAD:%s\n"
++"    git push %s %s\n"
+ "\n"
+ "To push to the branch of the same name on the remote, use\n"
+ "\n"
+@@ -9498,10 +9498,6 @@
+ msgid "cannot repack to clean up"
+ msgstr ""
+ 
+-#, c-format
+-msgid "cannot resolve '%s' without a remote url that has a host"
+-msgstr ""
+-
+ msgid "cannot resolve 'simple' push to a single destination"
+ msgstr ""
+ 
+@@ -19885,7 +19881,7 @@
+ msgstr ""
+ 
+ #, c-format
+-msgid "repo URL: '%s' must be absolute or begin with ./|../|^/"
++msgid "repo URL: '%s' must be absolute or begin with ./|../"
+ msgstr ""
+ 
+ msgid "repo version is 0, but v1-only extension found:"
+@@ -20166,10 +20162,6 @@
+ msgid "root tree OID for commit %s in commit-graph is %s != %s"
+ msgstr ""
+ 
+-#, c-format
+-msgid "root-relative url '%s' must not start with '^//' or '^/:'"
+-msgstr ""
+-
+ msgid "run 'maintenance --auto' after fetching"
+ msgstr ""
+ 
+@@ -21242,6 +21234,12 @@
+ msgstr ""
+ 
+ #, c-format
++msgid ""
++"submodule '%s' has a different URL in .git/config than in .gitmodules\n"
++"  run 'git submodule sync' to update it"
++msgstr ""
++
++#, c-format
+ msgid "submodule '%s' has dirty index"
+ msgstr ""
+ 
+
+
+-------------------- git-po-helper check-po po/git.pot --------------------
+
+❌ CamelCase config variables
+    ERROR   [git.pot]   entry at L17809 (msgid): should use "core.repositoryFormatVersion" in msgid: "core.repositoryformatversion to 1.\\nPlease set it for migration"
+    ERROR   [git.pot]   entry at L17809 (msgid): should use "core.repositoryFormatVersion" in msgid: "for example:\\ngit config core.repositoryformatversion 1"
+    ERROR   [git.pot]   entry at L23498 (msgid): should use "http.proactiveAuth" in msgid: "http.proactiveauth"
+    ERROR   [git.pot]   entry at L23522 (msgid): should use "http.cookieFile" in msgid: "ing to read cookies from http.cookiefile '-'"
+    ERROR   [git.pot]   entry at L23526 (msgid): should use "http.cookieFile" in msgid: "tp.savecookies for empty http.cookiefile"
+ERROR: 6601 entries checked, 543 config variables, 5 mismatched
+ERROR: check-po command failed
